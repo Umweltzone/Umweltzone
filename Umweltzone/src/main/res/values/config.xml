@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        ** You need to add your own key below. **
+        Each key is linked to a certificate which is used to sign an application.
+        See: https://developers.google.com/maps/documentation/android/start
+        for instructions on how to get your own key.
+     -->
+    <string name="config_google_maps_v2_api_key">ENTER_YOUR_GOOGLE_MAPS_V2_API_KEY_HERE</string>
+
+</resources>

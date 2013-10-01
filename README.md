@@ -5,6 +5,12 @@ This application enables people to look up the areas of cities
 which are restricted for being used by cars.
 
 
+Configuration
+---------------
+* Please mind you need to add your own API key for Google Maps v2 before running the app.
+  Add the key here: `/Umweltzone/src/main/res/values/config.xml`
+
+
 References
 ----------
 * [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][1]
