@@ -1,9 +1,13 @@
 package de.avpptr.umweltzone.activities;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Menu;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 
@@ -28,11 +32,26 @@ public class MainActivity extends FragmentActivity {
 
     private void setUpMapIfNeeded() {
         if (mMap == null) {
-            mMap = ((SupportMapFragment) getSupportFragmentManager()
-                    .findFragmentById(R.id.map)).getMap();
-            if (mMap != null) {
-                // TODO: Add map content
+            int connectionResult = GooglePlayServicesUtil
+                    .isGooglePlayServicesAvailable(getApplicationContext());
+            if (connectionResult != ConnectionResult.SUCCESS) {
+                showGooglePlayServicesErrorDialog(connectionResult);
+            } else {
+                mMap = ((SupportMapFragment) getSupportFragmentManager()
+                        .findFragmentById(R.id.map)).getMap();
+                if (mMap != null) {
+                    // TODO: Add map content
+                }
             }
+        }
+    }
+
+    private void showGooglePlayServicesErrorDialog(int errorCode) {
+        final Dialog dialog = GooglePlayServicesUtil.getErrorDialog(errorCode, this, 0);
+        if (dialog == null) {
+            Log.e(getClass().getName(), "GooglePlayServicesErrorDialog is null.");
+        } else {
+            dialog.show();
         }
     }
 
