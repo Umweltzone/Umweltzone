@@ -12,10 +12,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.utils.MapDrawer;
 
 public class MainActivity extends FragmentActivity {
 
     private GoogleMap mMap;
+    private MapDrawer mMapDrawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +42,7 @@ public class MainActivity extends FragmentActivity {
                 mMap = ((SupportMapFragment) getSupportFragmentManager()
                         .findFragmentById(R.id.map)).getMap();
                 if (mMap != null) {
-                    // TODO: Add map content
+                    onMapIsSetUp();
                 }
             }
         }
@@ -53,6 +55,11 @@ public class MainActivity extends FragmentActivity {
         } else {
             dialog.show();
         }
+    }
+
+    protected void onMapIsSetUp() {
+        mMapDrawer = new MapDrawer(mMap);
+        // TODO Draw polygon on map
     }
 
     @Override
