@@ -12,6 +12,7 @@ public class MapDrawer {
 
     public MapDrawer(GoogleMap map) {
         mMap = map;
+        mMap.setMyLocationEnabled(true);
     }
 
     public void drawPolygon(Iterable<LatLng> points, int fillColor, int strokeColor, int strokeWidth) {
