@@ -69,6 +69,7 @@ public class MainActivity extends FragmentActivity {
     protected void onMapIsSetUp() {
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
+        mMap.setMyLocationEnabled(true);
     }
 
 
