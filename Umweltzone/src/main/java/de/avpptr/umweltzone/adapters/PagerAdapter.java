@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import de.avpptr.umweltzone.fragments.CityInfoFragment;
 import de.avpptr.umweltzone.fragments.MapFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
@@ -17,6 +18,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
         switch (itemIndex) {
             case 0:
                 return new MapFragment();
+            case 1:
+                return new CityInfoFragment();
             default:
                 throw new IllegalStateException("Unsupported item index");
         }
@@ -24,7 +27,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 1;
+        return 2;
     }
 
 }
