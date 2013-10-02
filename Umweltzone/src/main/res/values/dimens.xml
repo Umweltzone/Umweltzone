@@ -1,3 +1,4 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <integer name="shape_stroke_width">5</integer>
 </resources>

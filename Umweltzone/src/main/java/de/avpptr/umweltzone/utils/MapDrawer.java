@@ -12,10 +12,12 @@ public class MapDrawer {
         mMap = map;
     }
 
-    public void drawPolygon(Iterable<LatLng> points, int color) {
+    public void drawPolygon(Iterable<LatLng> points, int fillColor, int strokeColor, int strokeWidth) {
         mMap.addPolygon(new PolygonOptions()
                 .addAll(points)
-                .strokeColor(color));
+                .strokeWidth(strokeWidth)
+                .fillColor(fillColor)
+                .strokeColor(strokeColor));
     }
 
 }
