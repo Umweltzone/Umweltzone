@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_action_settings_dark"
+        android:orderInCategory="102"
+        umweltzone:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/action_about"
+        android:icon="@drawable/ic_action_about_dark"
+        android:orderInCategory="103"
+        umweltzone:showAsAction="ifRoom" />
+
+</menu>

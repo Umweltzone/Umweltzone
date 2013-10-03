@@ -1,16 +1,17 @@
 package de.avpptr.umweltzone.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.PagerAdapter;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends BaseActivity {
 
     private ViewPager mViewPager;
     private ActionBar mActionBar;
@@ -37,9 +38,24 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_cities:
+                Intent intent = new Intent(this, CitiesActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_faq:
+                // TODO Implement FAQ options menu
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     class TabListener implements ActionBar.TabListener {
