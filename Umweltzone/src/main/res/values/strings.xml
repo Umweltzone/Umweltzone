@@ -2,8 +2,8 @@
 <resources>
 
     <string name="app_name">Umweltzone</string>
-    <string name="action_settings">Settings</string>
-    <string name="city_info_title">City Info</string>
+
+    <string name="city_info_title">Stadt Infos</string>
     <string name="cities_no_content">Keine Städte</string>
 
     <!-- City names  -->
@@ -12,5 +12,11 @@
     <string name="city_name_bremen">Bremen</string>
     <string name="city_name_mannheim">Mannheim</string>
     <string name="city_name_munich">München</string>
+
+    <!--Action Bar items-->
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_cities">Städte</string>
+    <string name="action_faq">FAQ</string>
+    <string name="action_about">Über</string>
 
 </resources>
