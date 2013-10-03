@@ -4,5 +4,13 @@
     <string name="app_name">Umweltzone</string>
     <string name="action_settings">Settings</string>
     <string name="city_info_title">City Info</string>
+    <string name="cities_no_content">Keine Städte</string>
+
+    <!-- City names  -->
+    <string name="city_name_hamburg">Hamburg</string>
+    <string name="city_name_berlin">Berlin</string>
+    <string name="city_name_bremen">Bremen</string>
+    <string name="city_name_mannheim">Mannheim</string>
+    <string name="city_name_munich">München</string>
 
 </resources>
