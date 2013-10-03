@@ -4,11 +4,10 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.ActionBarActivity;
 
 import de.avpptr.umweltzone.fragments.CitiesFragment;
 
-public class CitiesActivity extends ActionBarActivity {
+public class CitiesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
