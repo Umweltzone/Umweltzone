@@ -2,9 +2,9 @@
 <resources>
     <string-array name="city_names_display_names">
         <item>@string/city_name_berlin</item>
-        <item>@string/city_name_bremen</item>
-        <item>@string/city_name_hamburg</item>
-        <item>@string/city_name_mannheim</item>
+        <item>@string/city_name_cologne</item>
+        <item>@string/city_name_frankfurt_main</item>
         <item>@string/city_name_munich</item>
+        <item>@string/city_name_stuttgart</item>
     </string-array>
 </resources>

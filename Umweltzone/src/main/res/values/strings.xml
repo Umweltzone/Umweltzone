@@ -7,11 +7,11 @@
     <string name="cities_no_content">Keine Städte</string>
 
     <!-- City names  -->
-    <string name="city_name_hamburg">Hamburg</string>
     <string name="city_name_berlin">Berlin</string>
-    <string name="city_name_bremen">Bremen</string>
-    <string name="city_name_mannheim">Mannheim</string>
+    <string name="city_name_cologne">Köln</string>
+    <string name="city_name_frankfurt_main">Frankfurt am Main</string>
     <string name="city_name_munich">München</string>
+    <string name="city_name_stuttgart">Stuttgart</string>
 
     <!--Action Bar items-->
     <string name="action_settings">Einstellungen</string>
