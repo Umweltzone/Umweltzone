@@ -7,4 +7,18 @@
         <item>@string/city_name_munich</item>
         <item>@string/city_name_stuttgart</item>
     </string-array>
+    <string-array name="city_names_values">
+        <item>@string/city_name_value_berlin</item>
+        <item>@string/city_name_value_cologne</item>
+        <item>@string/city_name_value_frankfurt_main</item>
+        <item>@string/city_name_value_munich</item>
+        <item>@string/city_name_value_stuttgart</item>
+    </string-array>
+    <array name="geographic_locations">
+        <item>@array/geographic_location_berlin</item>
+        <item>@array/geographic_location_cologne</item>
+        <item>@array/geographic_location_frankfurt_am_main</item>
+        <item>@array/geographic_location_munich</item>
+        <item>@array/geographic_location_stuttgart</item>
+    </array>
 </resources>

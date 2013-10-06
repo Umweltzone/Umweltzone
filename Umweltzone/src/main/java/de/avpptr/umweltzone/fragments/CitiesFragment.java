@@ -1,5 +1,6 @@
 package de.avpptr.umweltzone.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.activities.MainActivity;
+import de.avpptr.umweltzone.contract.BundleKeys;
 
 public class CitiesFragment extends ListFragment {
 
@@ -32,6 +35,12 @@ public class CitiesFragment extends ListFragment {
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         String message = listView.getItemAtPosition(position).toString();
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+
+        String[] cityNameValues = getResources().getStringArray(R.array.city_names_values);
+
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValues[position]);
+        startActivity(intent);
     }
 
 }

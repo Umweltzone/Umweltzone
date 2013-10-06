@@ -10,8 +10,9 @@ import android.view.MenuItem;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.PagerAdapter;
+import de.avpptr.umweltzone.contract.CityChangeListener;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements CityChangeListener {
 
     private ViewPager mViewPager;
     private ActionBar mActionBar;
@@ -67,6 +68,11 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    public void cityChanged() {
+        mViewPager.setCurrentItem(0);
+    }
+
     class TabListener implements ActionBar.TabListener {
 
         @Override
@@ -84,7 +90,8 @@ public class MainActivity extends BaseActivity {
     }
 
     class OnPageChangeListener extends ViewPager.SimpleOnPageChangeListener {
-        @Override public void onPageSelected(int position) {
+        @Override
+        public void onPageSelected(int position) {
             mActionBar.setSelectedNavigationItem(position);
         }
     }
