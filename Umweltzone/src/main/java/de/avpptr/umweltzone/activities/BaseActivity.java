@@ -1,5 +1,6 @@
 package de.avpptr.umweltzone.activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,7 +23,8 @@ public abstract class BaseActivity extends ActionBarActivity {
                 // TODO Implement settings
                 return true;
             case R.id.action_about:
-                // TODO Implement about
+                Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

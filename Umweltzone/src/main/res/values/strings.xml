@@ -2,21 +2,26 @@
 <resources>
 
     <string name="app_name">Umweltzone</string>
-
     <string name="city_info_title">Stadt Infos</string>
     <string name="cities_no_content">Keine Städte</string>
 
-    <!-- City names  -->
+    <!-- City names -->
     <string name="city_name_berlin">Berlin</string>
     <string name="city_name_cologne">Köln</string>
     <string name="city_name_frankfurt_main">Frankfurt am Main</string>
     <string name="city_name_munich">München</string>
     <string name="city_name_stuttgart">Stuttgart</string>
 
-    <!--Action Bar items-->
+    <!-- Action Bar items -->
     <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>
     <string name="action_faq">FAQ</string>
     <string name="action_about">Über</string>
+
+    <!-- About activity items -->
+    <string name="about_activity_title">über</string>
+    <string name="about_title">Umweltzone</string>
+    <string name="about_subtitle">Ein Android App für Umweltzonen in Deutschland</string>
+    <string name="about_desc">(c) Tobias Preuß, Peter Vasil, 2013</string>
 
 </resources>
