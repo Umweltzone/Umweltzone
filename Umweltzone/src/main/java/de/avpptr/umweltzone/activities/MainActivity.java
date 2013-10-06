@@ -51,7 +51,8 @@ public class MainActivity extends BaseActivity implements CityChangeListener {
                 startActivity(intent);
                 return true;
             case R.id.action_faq:
-                // TODO Implement FAQ options menu
+                Intent faqIntent = new Intent(this, FaqActivity.class);
+                startActivity(faqIntent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

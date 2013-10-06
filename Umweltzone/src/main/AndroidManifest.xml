@@ -33,7 +33,7 @@
             android:value="@string/config_google_maps_v2_api_key" />
 
         <activity
-            android:name="de.avpptr.umweltzone.activities.MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,10 +43,14 @@
         </activity>
         <activity
             android:name=".activities.CitiesActivity"
-            android:label="@string/app_name"></activity>
+            android:label="@string/app_name" />
         <activity
             android:name=".activities.AboutActivity"
-            android:label="@string/about_activity_title"></activity>
+            android:label="@string/about_activity_title" />
+        <activity
+            android:name=".activities.FaqActivity"
+            android:label="@string/title_activity_faq">
+        </activity>
     </application>
 
 </manifest>
