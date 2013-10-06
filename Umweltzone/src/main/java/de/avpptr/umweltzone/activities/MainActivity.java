@@ -58,6 +58,15 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (mViewPager.getCurrentItem() == 1) {
+            mViewPager.setCurrentItem(0);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
     class TabListener implements ActionBar.TabListener {
 
         @Override
