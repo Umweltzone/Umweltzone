@@ -12,7 +12,14 @@
     <string name="city_name_munich">München</string>
     <string name="city_name_stuttgart">Stuttgart</string>
 
-    <!-- Action Bar items -->
+    <!-- City name values  -->
+    <string name="city_name_value_berlin">Berlin</string>
+    <string name="city_name_value_cologne">Cologne</string>
+    <string name="city_name_value_frankfurt_main">Frankfurt</string>
+    <string name="city_name_value_munich">Munich</string>
+    <string name="city_name_value_stuttgart">Stuttgart</string>
+
+    <!--Action Bar items-->
     <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>
     <string name="action_faq">FAQ</string>

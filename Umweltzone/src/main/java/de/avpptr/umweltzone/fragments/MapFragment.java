@@ -3,18 +3,25 @@ package de.avpptr.umweltzone.fragments;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.contract.CityChangeListener;
+import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
 
@@ -28,13 +35,47 @@ public class MapFragment extends BaseFragment {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
     }
 
-    @Override public int getLayoutResource() {
+    @Override
+    public int getLayoutResource() {
         return R.layout.fragment_map;
     }
 
-    @Override public void onResume() {
+    @Override
+    public void onResume() {
         super.onResume();
         setUpMapIfNeeded();
+
+        FragmentActivity activity = getActivity();
+        if (activity == null) {
+            return;
+        }
+        Intent intent = activity.getIntent();
+        if (intent == null) {
+            return;
+        }
+        Bundle extras = intent.getExtras();
+        if (extras == null) {
+            return;
+        }
+        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
+        if (cityName != null) {
+            CityChangeListener cityChangeListener = (CityChangeListener) activity;
+            cityChangeListener.cityChanged();
+
+            LatLng newLatLng = Converter.cityNameToLatLng(activity.getResources(), cityName);
+            if (newLatLng != null) {
+                zoomToPosition(newLatLng);
+            }
+        }
+    }
+
+    private void zoomToPosition(LatLng latLng) {
+        if (mMap == null) {
+            throw new IllegalStateException("Map is null");
+        } else {
+            CameraUpdate center = CameraUpdateFactory.newLatLng(latLng);
+            mMap.moveCamera(center);
+        }
     }
 
     private void setUpMapIfNeeded() {
@@ -81,9 +122,9 @@ public class MapFragment extends BaseFragment {
     }
 
     class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
-        @Override public void onCameraChange(CameraPosition cameraPosition) {
+        @Override
+        public void onCameraChange(CameraPosition cameraPosition) {
             drawPolygonOverlay();
         }
     }
-
 }

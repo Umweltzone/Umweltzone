@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="geographic_location_berlin">
+        <item>52518611</item>
+        <item>13408056</item>
+    </integer-array>
+    <integer-array name="geographic_location_munich">
+        <item>48154900</item>
+        <item>11542200</item>
+    </integer-array>
+    <integer-array name="geographic_location_cologne">
+        <item>50937490</item>
+        <item>6958020</item>
+    </integer-array>
+    <integer-array name="geographic_location_frankfurt_am_main">
+        <item>50121400</item>
+        <item>8636100</item>
+    </integer-array>
+    <integer-array name="geographic_location_stuttgart">
+        <item>48776350</item>
+        <item>9182900</item>
+    </integer-array>
+</resources>
