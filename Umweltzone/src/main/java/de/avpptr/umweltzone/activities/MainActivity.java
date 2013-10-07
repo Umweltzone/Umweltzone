@@ -15,7 +15,6 @@ import de.avpptr.umweltzone.contract.CityChangeListener;
 public class MainActivity extends BaseActivity implements CityChangeListener {
 
     private ViewPager mViewPager;
-    private ActionBar mActionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,8 @@ public class MainActivity extends BaseActivity implements CityChangeListener {
         PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(pagerAdapter);
         mViewPager.setOnPageChangeListener(new OnPageChangeListener());
-        mActionBar = getSupportActionBar();
         mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        mActionBar.setDisplayHomeAsUpEnabled(false);
         final ActionBar.TabListener tabListener = new TabListener();
 
         for (int tabIndex = 0; tabIndex < pagerAdapter.getCount(); ++tabIndex) {

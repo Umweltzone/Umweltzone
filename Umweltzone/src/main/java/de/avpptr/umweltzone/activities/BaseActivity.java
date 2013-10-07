@@ -1,6 +1,8 @@
 package de.avpptr.umweltzone.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -8,6 +10,16 @@ import android.view.MenuItem;
 import de.avpptr.umweltzone.R;
 
 public abstract class BaseActivity extends ActionBarActivity {
+
+    protected ActionBar mActionBar;
+
+    @Override protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActionBar = getSupportActionBar();
+        // TODO Review issue #58007
+        // http://code.google.com/p/android/issues/detail?id=58007
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -19,6 +31,13 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case android.R.id.home: {
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                startActivityIfNeeded(intent, 0);
+                return true;
+            }
             case R.id.action_settings:
                 // TODO Implement settings
                 return true;
