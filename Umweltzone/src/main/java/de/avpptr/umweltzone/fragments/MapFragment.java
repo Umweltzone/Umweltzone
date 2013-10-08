@@ -22,8 +22,10 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.contract.CityChangeListener;
 import de.avpptr.umweltzone.utils.Converter;
+import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
+import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class MapFragment extends BaseFragment {
 
@@ -75,6 +77,7 @@ public class MapFragment extends BaseFragment {
         } else {
             CameraUpdate center = CameraUpdateFactory.newLatLng(latLng);
             mMap.moveCamera(center);
+            storeLastKnownLocation();
         }
     }
 
@@ -121,10 +124,18 @@ public class MapFragment extends BaseFragment {
         mMapDrawer.drawPolygon(points, fillColor, strokeColor, strokeWidth);
     }
 
+    private void storeLastKnownLocation() {
+        if (mMap != null) {
+            GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
+            PreferencesHelper.storeLastKnownLocation(getActivity(), mapCenter);
+        }
+    }
+
     class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
         @Override
         public void onCameraChange(CameraPosition cameraPosition) {
             drawPolygonOverlay();
+            storeLastKnownLocation();
         }
     }
 }
