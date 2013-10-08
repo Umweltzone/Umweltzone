@@ -46,7 +46,7 @@ public class Converter {
                         cityCentres[i][0],
                         cityCentres[i][1]
                 );
-                return cityCentre.latLng;
+                return cityCentre.toLatLng();
             }
         }
         return null;

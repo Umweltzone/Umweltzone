@@ -4,9 +4,16 @@ import com.google.android.gms.maps.model.LatLng;
 
 public final class GeoPoint {
 
-    public LatLng latLng;
+    protected double mLatitude;
+    protected double mLongitude;
 
     public GeoPoint(int latitudeE6, int longitudeE6) {
-        latLng = new LatLng(latitudeE6 / 1e6, longitudeE6 / 1e6);
+        mLatitude = latitudeE6 / 1e6;
+        mLongitude = longitudeE6 / 1e6;
     }
+
+    public LatLng toLatLng() {
+        return new LatLng(mLatitude, mLongitude);
+    }
+
 }
