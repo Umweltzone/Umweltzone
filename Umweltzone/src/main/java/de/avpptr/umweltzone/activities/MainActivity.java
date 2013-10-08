@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.PagerAdapter;
 import de.avpptr.umweltzone.contract.CityChangeListener;
+import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class MainActivity extends BaseActivity implements CityChangeListener {
 
@@ -47,11 +48,11 @@ public class MainActivity extends BaseActivity implements CityChangeListener {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_cities:
-                Intent intent = new Intent(this, CitiesActivity.class);
+                Intent intent = IntentHelper.getCitiesIntent(this);
                 startActivity(intent);
                 return true;
             case R.id.action_faq:
-                Intent faqIntent = new Intent(this, FaqActivity.class);
+                Intent faqIntent = IntentHelper.getFaqsIntent(this);
                 startActivity(faqIntent);
                 return true;
             default:

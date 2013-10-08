@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.utils.IntentHelper;
 
 public abstract class BaseActivity extends ActionBarActivity {
 
@@ -32,9 +33,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home: {
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                Intent intent = IntentHelper.getHomeIntent(this);
                 startActivityIfNeeded(intent, 0);
                 return true;
             }
@@ -42,7 +41,7 @@ public abstract class BaseActivity extends ActionBarActivity {
                 // TODO Implement settings
                 return true;
             case R.id.action_about:
-                Intent intent = new Intent(this, AboutActivity.class);
+                Intent intent = IntentHelper.getAboutIntent(this);
                 startActivity(intent);
                 return true;
             default:

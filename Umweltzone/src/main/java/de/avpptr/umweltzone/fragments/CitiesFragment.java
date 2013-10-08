@@ -11,8 +11,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.activities.MainActivity;
-import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class CitiesFragment extends ListFragment {
 
@@ -35,14 +34,9 @@ public class CitiesFragment extends ListFragment {
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         String message = listView.getItemAtPosition(position).toString();
         Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-
         String[] cityNameValues = getResources().getStringArray(R.array.city_names_values);
-
-        Intent intent = new Intent(getActivity(), MainActivity.class);
-        intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValues[position]);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        String cityNameValue = cityNameValues[position];
+        Intent intent = IntentHelper.getChangeCityIntent(getActivity(), cityNameValue);
         startActivity(intent);
     }
 
