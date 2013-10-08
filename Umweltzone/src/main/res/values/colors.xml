@@ -2,4 +2,10 @@
 <resources>
     <color name="shape_fill_color">#4400ff00</color>
     <color name="shape_stroke_color">#88ff0000</color>
+
+    <!-- FAQ list group and item colors -->
+    <color name="faq_question_foreground">#ffffffff</color>
+    <color name="faq_question_background">#000000</color>
+    <color name="faq_answer_foreground">#000000</color>
+    <color name="faq_answer_background">#ffffffff</color>
 </resources>
