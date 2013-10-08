@@ -12,6 +12,7 @@ public class FaqDataProvider {
         mFaqQuestions = new ArrayList<String>();
         mFaqAnswers = new ArrayList<String>();
 
+        // TODO Add real FAQ content
         mFaqQuestions.add("Frage 1");
         mFaqQuestions.add("Frage 2");
 
