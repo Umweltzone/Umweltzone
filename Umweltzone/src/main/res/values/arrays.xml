@@ -21,4 +21,11 @@
         <item>@array/geographic_location_munich</item>
         <item>@array/geographic_location_stuttgart</item>
     </array>
+    <array name="low_emmision_zone_bboxes">
+        <item>@array/low_emmision_zone_bbox_berlin</item>
+        <item>@array/low_emmision_zone_bbox_cologne</item>
+        <item>@array/low_emmision_zone_bbox_frankfurt_am_main</item>
+        <item>@array/low_emmision_zone_bbox_munich</item>
+        <item>@array/low_emmision_zone_bbox_stuttgart</item>
+    </array>
 </resources>

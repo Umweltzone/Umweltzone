@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.DisplayMetrics;
 import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -17,10 +18,12 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.contract.CityChangeListener;
+import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
@@ -64,20 +67,23 @@ public class MapFragment extends BaseFragment {
             CityChangeListener cityChangeListener = (CityChangeListener) activity;
             cityChangeListener.cityChanged();
 
-            LatLng newLatLng = Converter.cityNameToLatLng(activity.getResources(), cityName);
-            if (newLatLng != null) {
-                zoomToPosition(newLatLng);
+            BoundingBox boundingBox = Converter.cityNameToBoundingBox(activity.getResources(), cityName);
+            if (boundingBox != null) {
+                zoomToBounds(boundingBox.toLatLngBounds());
             }
         }
     }
 
-    private void zoomToPosition(LatLng latLng) {
+    private void zoomToBounds(LatLngBounds latLngBounds) {
         if (mMap == null) {
             throw new IllegalStateException("Map is null");
         } else {
-            CameraUpdate center = CameraUpdateFactory.newLatLng(latLng);
-            mMap.moveCamera(center);
-            storeLastKnownLocation();
+            DisplayMetrics displaymetrics = new DisplayMetrics();
+            getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+            int height = displaymetrics.heightPixels;
+            int width = displaymetrics.widthPixels;
+            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, 50);
+            mMap.moveCamera(zoneBounds);
         }
     }
 
