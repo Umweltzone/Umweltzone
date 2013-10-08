@@ -40,6 +40,9 @@ public class CitiesFragment extends ListFragment {
 
         Intent intent = new Intent(getActivity(), MainActivity.class);
         intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValues[position]);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
 
