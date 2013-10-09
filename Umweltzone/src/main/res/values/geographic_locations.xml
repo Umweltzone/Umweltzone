@@ -50,9 +50,9 @@
     </integer-array>
     <integer-array name="low_emmision_zone_bbox_stuttgart">
         <item>48696175</item>
-        <item>904089</item>
+        <item>9040890</item>
         <item>48858391</item>
-        <item>930748</item>
+        <item>9307480</item>
     </integer-array>
 
 </resources>
