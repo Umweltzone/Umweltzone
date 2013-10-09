@@ -10,22 +10,21 @@ import android.widget.TextView;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.models.Faq;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
-    private final List<String> mListDataHeader;
-    private final List<String> mListDataChildren;
+    private final List<Faq> mFaqs;
 
-    public ExpandableListAdapter(Context context, List<String> listDataHeader, List<String> listDataChildren) {
+    public FaqsAdapter(Context context, List<Faq> faqs) {
         mContext = context;
-        mListDataHeader = listDataHeader;
-        mListDataChildren = listDataChildren;
+        mFaqs = faqs;
     }
 
     @Override
     public int getGroupCount() {
-        return mListDataHeader.size();
+        return mFaqs.size();
     }
 
     @Override
@@ -35,12 +34,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public Object getGroup(int groupPosition) {
-        return mListDataHeader.get(groupPosition);
+        return mFaqs.get(groupPosition).question;
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosition) {
-        return mListDataChildren.get(groupPosition);
+        return mFaqs.get(groupPosition).answer;
     }
 
     @Override
