@@ -11,13 +11,13 @@ import java.util.List;
 
 import de.avpptr.umweltzone.R;
 
-public class ExpandableListAdapter extends BaseExpandableListAdapter {
+public class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
     private final List<String> mListDataHeader;
     private final List<String> mListDataChildren;
 
-    public ExpandableListAdapter(Context context, List<String> listDataHeader, List<String> listDataChildren) {
+    public FaqsAdapter(Context context, List<String> listDataHeader, List<String> listDataChildren) {
         mContext = context;
         mListDataHeader = listDataHeader;
         mListDataChildren = listDataChildren;

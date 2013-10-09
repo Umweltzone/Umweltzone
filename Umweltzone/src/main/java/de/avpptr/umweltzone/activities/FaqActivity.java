@@ -5,7 +5,7 @@ import android.view.Menu;
 import android.widget.ExpandableListView;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.adapters.ExpandableListAdapter;
+import de.avpptr.umweltzone.adapters.FaqsAdapter;
 import de.avpptr.umweltzone.utils.FaqDataProvider;
 
 public class FaqActivity extends BaseActivity {
@@ -19,7 +19,7 @@ public class FaqActivity extends BaseActivity {
 
         FaqDataProvider faqDataProvider = new FaqDataProvider();
 
-        expListView.setAdapter(new ExpandableListAdapter(this,
+        expListView.setAdapter(new FaqsAdapter(this,
                 faqDataProvider.getFaqQuestions(),
                 faqDataProvider.getFaqAnswers()));
     }
