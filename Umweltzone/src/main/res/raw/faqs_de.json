@@ -1,0 +1,14 @@
+[
+    {
+        "position" : 1,
+        "question" : "Was ist Feinstaub?",
+        "answer" : "Feinstaub ist nichts anderes als feiner Staub, also feste Partikel in der Atmosphäre die kleiner als 15 µm sind. Für die Emissionsreduktionsziele der europäischen Union erfolgt die Definition des Feinstaubs gemäß den im Jahre 1987 eingeführten National Air Quality Standard for Particulate Matter (kurz als PM-Standard bezeichnet) der US-amerikanischen Umweltschutzbehörde EPA (Environmental Protection Agency). In der ersten Fassung der amerikanischen Richtlinie wurde der Standard PM10 definiert, für den seit Anfang 2005 auch in der EU ein Grenzwert einzuhalten ist. Im Gegensatz zu der üblicherweise genannten Definition stellt PM10 keine scharfe Aufteilung der Immissionen bei einem aerodynamischen Durchmesser von 10 Mikrometern (10 µm) dar; vielmehr wurde versucht, das Abscheideverhalten der oberen Atemwege nachzubilden: Partikel mit einem aerodynamischen Durchmesser von weniger als 1 µm werden vollständig einbezogen, bei größeren Partikeln wird ein gewisser Prozentsatz gewertet, der mit zunehmender Partikelgröße abnimmt und bei ca. 15 µm schließlich 0 % erreicht. Technisch gesehen entspricht dies der Anwendung einer Gewichtungsfunktion (in der Fachsprache Trennkurve bzw. Trennfunktion) auf die Immissionen (in der Praxis wird dies durch einen größenselektiven Einlass an den Messgeräten erreicht). Aus dem Verlauf dieser Gewichtungsfunktion leitet sich letztendlich auch die Bezeichnung PM10 ab, da bei ca. 10 µm genau die Hälfte der Partikel in die Gewichtung eingehen. Weiter Informationen zum Thema Feinstaub finden Sie bei Wikipedia? ( http://de.wikipedia.org/wiki/Feinstaub)",
+        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#10"
+    },
+    {
+        "position" : 2,
+        "question" : "Wieso ist Feinstaub schädlich?",
+        "answer" : "Es gibt keine unschädliche Feinstaubkonzentration. Für die Bevölkerung der europäischen Union ergibt sich im Durchschnitt eine um mindestens ein Jahr reduzierte Lebens-erwartung durch die Gesamtfeinstaubbelastung. Die von der EU festgelegten Grenzwerte sind mehr oder weniger willkürlich gegriffen und folgen eher dem als politisch machbar Erachteten, als wissenschaftlich relevanten Informationen. Zu den Auswirkungen von Feinstaub gehören die Verstärkung von Allergiesymptomen, die Zunahme von asthmatischen Anfällen, Atemwegsbeschwerden und Lungenkrebs, sowie ein gesteigertes Risiko von Mittelohrentzündungen bei Kindern. Daneben werden auch Auswirkungen auf Herz-Kreislauf-Erkrankungen (z.B. Herzinfarkt) angenommen. Das Ausmaß der Auswirkung von Partikeln auf die Atemwege hängt, neben der Toxizität der Partikel u.a. Blei, Vanadium, Beryllium und Quecksilber, auch von der Größe der Partikel ab: je kleiner ein Partikel ist, desto tiefer kann es in die Lunge eindringen.",
+        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#11"
+    }
+]

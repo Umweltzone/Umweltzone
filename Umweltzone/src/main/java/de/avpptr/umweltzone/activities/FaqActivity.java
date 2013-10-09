@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ExpandableListView;
 
+import java.util.List;
+
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.FaqsAdapter;
-import de.avpptr.umweltzone.utils.FaqDataProvider;
+import de.avpptr.umweltzone.models.Faq;
+import de.avpptr.umweltzone.utils.ContentProvider;
 
 public class FaqActivity extends BaseActivity {
 
@@ -14,14 +17,9 @@ public class FaqActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
-
-        ExpandableListView expListView = (ExpandableListView) findViewById(R.id.faq_list);
-
-        FaqDataProvider faqDataProvider = new FaqDataProvider();
-
-        expListView.setAdapter(new FaqsAdapter(this,
-                faqDataProvider.getFaqQuestions(),
-                faqDataProvider.getFaqAnswers()));
+        ExpandableListView faqsList = (ExpandableListView) findViewById(R.id.faq_list);
+        List<Faq> faqs = ContentProvider.getFaqs(this);
+        faqsList.setAdapter(new FaqsAdapter(this, faqs));
     }
 
     @Override
