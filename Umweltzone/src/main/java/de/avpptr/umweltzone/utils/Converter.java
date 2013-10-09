@@ -53,4 +53,20 @@ public class Converter {
         }
         return null;
     }
+
+    public static PointsProvider.Location cityNameToLocation(String cityName) {
+        PointsProvider.Location location = null;
+        if (cityName.equalsIgnoreCase("Berlin")) {
+            location = PointsProvider.Location.Berlin;
+        } else if (cityName.equalsIgnoreCase("Frankfurt")) {
+            location = PointsProvider.Location.Frankfurt;
+        } else if (cityName.equalsIgnoreCase("Munich")) {
+            location = PointsProvider.Location.Munich;
+        } else if (cityName.equalsIgnoreCase("Stuttgart")) {
+            location = PointsProvider.Location.Stuttgart;
+        } else if (cityName.equalsIgnoreCase("Cologne")) {
+            location = PointsProvider.Location.Cologne;
+        }
+        return location;
+    }
 }
