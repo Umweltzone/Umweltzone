@@ -3,8 +3,6 @@ package de.avpptr.umweltzone.utils;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 
-import com.google.android.gms.maps.model.LatLng;
-
 import de.avpptr.umweltzone.R;
 
 public class Converter {
@@ -51,28 +49,6 @@ public class Converter {
                         zoneBounds[i][3]
                 );
                 return new BoundingBox(southwest, northeast);
-            }
-        }
-        return null;
-    }
-
-    public static LatLng cityNameToLatLng(Resources resources, String cityName) {
-        String[] cityNames = resources.getStringArray(R.array.city_names_values);
-        int[][] cityCentres = getGeographicLocations(resources, R.array.geographic_locations);
-        if (cityCentres.length != cityNames.length) {
-            throw new IllegalArgumentException("City names and geographic location sizes differ.");
-        }
-
-        for (int i = 0; i < cityNames.length; i++) {
-            if (cityName.equalsIgnoreCase(cityNames[i])) {
-                if (cityCentres[i].length != 2) {
-                    throw new IllegalArgumentException("A geographic location should have 2 values.");
-                }
-                GeoPoint cityCentre = new GeoPoint(
-                        cityCentres[i][0],
-                        cityCentres[i][1]
-                );
-                return cityCentre.toLatLng();
             }
         }
         return null;
