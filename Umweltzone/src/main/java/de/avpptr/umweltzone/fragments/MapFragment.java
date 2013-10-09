@@ -36,6 +36,8 @@ public class MapFragment extends BaseFragment {
     private MapDrawer mMapDrawer;
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
 
+    private PointsProvider.Location mCurrentLocation = PointsProvider.Location.Berlin;
+
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
     }
@@ -64,6 +66,7 @@ public class MapFragment extends BaseFragment {
         }
         String cityName = extras.getString(BundleKeys.CITY_CHANGE);
         if (cityName != null) {
+            mCurrentLocation = Converter.cityNameToLocation(cityName);
             CityChangeListener cityChangeListener = (CityChangeListener) activity;
             cityChangeListener.cityChanged();
 
@@ -122,7 +125,7 @@ public class MapFragment extends BaseFragment {
 
 
     private void drawPolygonOverlay() {
-        Iterable<LatLng> points = PointsProvider.getPoints(PointsProvider.Location.Berlin);
+        Iterable<LatLng> points = PointsProvider.getPoints(mCurrentLocation);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
