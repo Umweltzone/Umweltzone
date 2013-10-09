@@ -11,8 +11,8 @@ public class Converter {
 
     // Tip for how to obtain an array of arrays from an android resource:
     // http://stackoverflow.com/a/5931094/464831
-    private static int[][] getGeographicLocations(Resources resources) {
-        TypedArray ta = resources.obtainTypedArray(R.array.geographic_locations);
+    private static int[][] getGeographicLocations(Resources resources, int resourceId) {
+        TypedArray ta = resources.obtainTypedArray(resourceId);
         int n = ta.length();
         int[][] geographicLocations = new int[n][];
 
@@ -30,9 +30,35 @@ public class Converter {
         return geographicLocations;
     }
 
+    public static BoundingBox cityNameToBoundingBox(Resources resources, String cityName) {
+        String[] cityNames = resources.getStringArray(R.array.city_names_values);
+        int[][] zoneBounds = getGeographicLocations(resources, R.array.low_emmision_zone_bboxes);
+        if (zoneBounds.length != cityNames.length) {
+            throw new IllegalArgumentException("City names and zone bboxes sizes differ.");
+        }
+
+        for (int i = 0; i < cityNames.length; i++) {
+            if (cityName.equalsIgnoreCase(cityNames[i])) {
+                if (zoneBounds[i].length != 4) {
+                    throw new IllegalArgumentException("A bounding box should have 4 values.");
+                }
+                GeoPoint southwest = new GeoPoint(
+                        zoneBounds[i][0],
+                        zoneBounds[i][1]
+                );
+                GeoPoint northeast = new GeoPoint(
+                        zoneBounds[i][2],
+                        zoneBounds[i][3]
+                );
+                return new BoundingBox(southwest, northeast);
+            }
+        }
+        return null;
+    }
+
     public static LatLng cityNameToLatLng(Resources resources, String cityName) {
         String[] cityNames = resources.getStringArray(R.array.city_names_values);
-        int[][] cityCentres = getGeographicLocations(resources);
+        int[][] cityCentres = getGeographicLocations(resources, R.array.geographic_locations);
         if (cityCentres.length != cityNames.length) {
             throw new IllegalArgumentException("City names and geographic location sizes differ.");
         }
