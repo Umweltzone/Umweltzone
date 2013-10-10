@@ -18,6 +18,13 @@
     <string name="city_name_value_munich">Munich</string>
     <string name="city_name_value_stuttgart">Stuttgart</string>
 
+    <!-- City name values  -->
+    <integer name="city_zone_value_berlin">4</integer>
+    <integer name="city_zone_value_cologne">4</integer>
+    <integer name="city_zone_value_frankfurt_main">3</integer>
+    <integer name="city_zone_value_munich">2</integer>
+    <integer name="city_zone_value_stuttgart">4</integer>
+
     <!--Action Bar items-->
     <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>

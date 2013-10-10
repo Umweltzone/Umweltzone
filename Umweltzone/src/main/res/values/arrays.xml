@@ -14,6 +14,13 @@
         <item>@string/city_name_value_munich</item>
         <item>@string/city_name_value_stuttgart</item>
     </string-array>
+    <integer-array name="city_zone_value">
+        <item>@integer/city_zone_value_berlin</item>
+        <item>@integer/city_zone_value_cologne</item>
+        <item>@integer/city_zone_value_frankfurt_main</item>
+        <item>@integer/city_zone_value_munich</item>
+        <item>@integer/city_zone_value_stuttgart</item>
+    </integer-array>
     <array name="geographic_locations">
         <item>@array/geographic_location_berlin</item>
         <item>@array/geographic_location_cologne</item>

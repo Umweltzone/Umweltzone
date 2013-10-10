@@ -24,4 +24,19 @@
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
+    <style name="ZoneBadge" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">@dimen/city_zone_badge_width</item>
+        <item name="android:layout_height">@dimen/city_zone_badge_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/zone_layer</item>
+        <item name="android:text">0</item>
+    </style>
+
+    <style name="ZoneName" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/big_spacer</item>
+    </style>
+
 </resources>

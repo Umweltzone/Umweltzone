@@ -13,5 +13,8 @@
 
     <dimen name="activity_horizontal_margin">@dimen/large_spacer</dimen>
     <dimen name="activity_vertical_margin">@dimen/large_spacer</dimen>
+    <dimen name="city_zone_badge_stroke_width">2dp</dimen>
+    <dimen name="city_zone_badge_width">50dp</dimen>
+    <dimen name="city_zone_badge_height">@dimen/city_zone_badge_width</dimen>
 
 </resources>
