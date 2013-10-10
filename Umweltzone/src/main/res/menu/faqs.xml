@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_city_info"
+        android:title="@string/action_city_info"
+        android:icon="@drawable/ic_action_error_dark"
+        android:orderInCategory="101"
+        umweltzone:showAsAction="ifRoom" />
+
+</menu>

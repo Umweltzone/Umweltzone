@@ -22,6 +22,7 @@
     <!--Action Bar items-->
     <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>
+    <string name="action_city_info">Stadt Infos</string>
     <string name="action_faq">@string/faq_activity_title</string>
     <string name="action_about">@string/about_activity_title</string>
 

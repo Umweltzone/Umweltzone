@@ -37,6 +37,9 @@ public abstract class BaseActivity extends ActionBarActivity {
                 startActivityIfNeeded(intent, 0);
                 return true;
             }
+            case R.id.action_city_info:
+                // TODO Start CityInfoActivity
+                return true;
             case R.id.action_settings:
                 // TODO Implement settings
                 return true;
