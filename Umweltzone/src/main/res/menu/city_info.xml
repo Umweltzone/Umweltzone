@@ -7,12 +7,6 @@
         android:orderInCategory="100"
         umweltzone:showAsAction="ifRoom" />
     <item
-        android:id="@+id/action_city_info"
-        android:title="@string/action_city_info"
-        android:icon="@drawable/ic_action_error_dark"
-        android:orderInCategory="101"
-        umweltzone:showAsAction="ifRoom" />
-    <item
         android:id="@+id/action_faq"
         android:title="@string/action_faq"
         android:icon="@drawable/ic_action_help_dark"

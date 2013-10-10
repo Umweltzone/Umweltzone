@@ -51,10 +51,6 @@ public class MainActivity extends BaseActivity implements CityChangeListener {
                 Intent intent = IntentHelper.getCitiesIntent(this);
                 startActivity(intent);
                 return true;
-            case R.id.action_faq:
-                Intent faqIntent = IntentHelper.getFaqsIntent(this);
-                startActivity(faqIntent);
-                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
