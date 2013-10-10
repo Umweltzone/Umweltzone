@@ -49,7 +49,7 @@
             android:label="@string/about_activity_title" />
         <activity
             android:name=".activities.FaqActivity"
-            android:label="@string/title_activity_faq">
+            android:label="@string/faq_activity_title">
         </activity>
     </application>
 

@@ -31,6 +31,7 @@
     <string name="about_subtitle">Ein Android App für Umweltzonen in Deutschland</string>
     <string name="about_desc">(&#169;) Tobias Preuß, Peter Vasil, 2013</string>
 
-    <string name="title_activity_faq">FAQ</string>
+    <!-- FaqActivity -->
+    <string name="faq_activity_title">FAQ</string>
 
 </resources>
