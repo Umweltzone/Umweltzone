@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Umweltzone</string>
-    <string name="city_info_title">Stadt Infos</string>
     <string name="cities_no_content">Keine Städte</string>
 
     <!-- City names -->
@@ -22,7 +21,7 @@
     <!--Action Bar items-->
     <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>
-    <string name="action_city_info">Stadt Infos</string>
+    <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>
     <string name="action_about">@string/about_activity_title</string>
 
@@ -31,6 +30,10 @@
     <string name="about_title">@string/app_name</string>
     <string name="about_subtitle">Ein Android App für Umweltzonen in Deutschland</string>
     <string name="about_desc">(&#169;) Tobias Preuß, Peter Vasil, 2013</string>
+
+    <!-- CityInfoActivity -->
+    <string name="city_info_activity_title">Stadtinfos</string>
+    <string name="city_info_title">Stadtinfos</string>
 
     <!-- FaqActivity -->
     <string name="faq_activity_title">FAQ</string>
