@@ -5,13 +5,13 @@
         android:title="@string/action_settings"
         android:icon="@drawable/ic_action_settings_dark"
         android:orderInCategory="110"
-        umweltzone:showAsAction="ifRoom" />
+        umweltzone:showAsAction="never" />
 
     <item
         android:id="@+id/action_about"
         android:title="@string/action_about"
         android:icon="@drawable/ic_action_about_dark"
         android:orderInCategory="111"
-        umweltzone:showAsAction="ifRoom" />
+        umweltzone:showAsAction="never" />
 
 </menu>
