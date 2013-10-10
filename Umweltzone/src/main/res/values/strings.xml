@@ -25,7 +25,7 @@
     <string name="action_faq">FAQ</string>
     <string name="action_about">Über</string>
 
-    <!-- About activity items -->
+    <!-- AboutActivity -->
     <string name="about_activity_title">Über</string>
     <string name="about_title">@string/app_name</string>
     <string name="about_subtitle">Ein Android App für Umweltzonen in Deutschland</string>
