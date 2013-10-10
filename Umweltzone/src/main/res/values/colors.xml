@@ -8,4 +8,12 @@
     <color name="faq_question_background">#000000</color>
     <color name="faq_answer_foreground">#000000</color>
     <color name="faq_answer_background">#ffffffff</color>
+
+    <color name="city_zone_none">@android:color/white</color>
+    <color name="city_zone_2">#D81B15</color>
+    <color name="city_zone_3">#E5CC15</color>
+    <color name="city_zone_4">#108434</color>
+    <color name="city_zone_badge_default_fill_color">#888888</color>
+    <color name="city_zone_badge_default_stroke_color">@android:color/black</color>
+
 </resources>
