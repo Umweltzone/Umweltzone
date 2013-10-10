@@ -27,7 +27,7 @@
 
     <!-- About activity items -->
     <string name="about_activity_title">über</string>
-    <string name="about_title">Umweltzone</string>
+    <string name="about_title">@string/app_name</string>
     <string name="about_subtitle">Ein Android App für Umweltzonen in Deutschland</string>
     <string name="about_desc">(&#169;) Tobias Preuß, Peter Vasil, 2013</string>
 
