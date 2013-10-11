@@ -55,6 +55,7 @@ public class CitiesFragment extends ListFragment {
     private void storeSelectedLocation(String cityNameValue) {
         BoundingBox boundingBox = Converter.cityNameToBoundingBox(getResources(), cityNameValue);
         PreferencesHelper.storeLastKnownLocation(getActivity(), boundingBox);
+        PreferencesHelper.storeLastKnownLocation(getActivity(), cityNameValue);
     }
 
 }

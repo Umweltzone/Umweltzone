@@ -15,6 +15,10 @@ public class PreferencesHelper {
         storeLastKnownLocation(getEditor(context), boundingBox);
     }
 
+    public static void storeLastKnownLocation(Context context, String cityName) {
+        storeLastKnownLocation(getEditor(context), cityName);
+    }
+
     public static void storeZoomLevel(Context context, float zoomLevel) {
         storeZoomLevel(getEditor(context), zoomLevel);
     }
@@ -41,6 +45,11 @@ public class PreferencesHelper {
         return new BoundingBox(southWest, northEast);
     }
 
+    public static String restoreLastKnownLocationAsString(Context context) {
+        SharedPreferences sharedPreferences = getSharedPreferences(context);
+        return sharedPreferences.getString(Preferences.KEY_CITY_NAME, "");
+    }
+
     public static float restoreZoomLevel(Context context) {
         SharedPreferences sharedPreferences = getSharedPreferences(context);
         return sharedPreferences.getFloat(Preferences.KEY_ZOOM_LEVEL, 0);
@@ -63,6 +72,11 @@ public class PreferencesHelper {
                 Double.doubleToLongBits(northEast.getLatitude()));
         editor.putLong(Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE,
                 Double.doubleToLongBits(northEast.getLongitude()));
+        editor.commit();
+    }
+
+    private static void storeLastKnownLocation(SharedPreferences.Editor editor, String cityName) {
+        editor.putString(Preferences.KEY_CITY_NAME, cityName);
         editor.commit();
     }
 

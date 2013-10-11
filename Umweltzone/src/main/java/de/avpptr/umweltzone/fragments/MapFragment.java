@@ -23,6 +23,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
@@ -33,8 +34,6 @@ public class MapFragment extends SupportMapFragment {
     private GoogleMap mMap;
     private MapDrawer mMapDrawer;
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
-
-    private PointsProvider.Location mCurrentLocation = PointsProvider.Location.Berlin;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
@@ -120,7 +119,12 @@ public class MapFragment extends SupportMapFragment {
 
 
     private void drawPolygonOverlay() {
-        Iterable<LatLng> points = PointsProvider.getPoints(mCurrentLocation);
+        String cityName = PreferencesHelper.restoreLastKnownLocationAsString(getActivity());
+        if (cityName == null || cityName.length() < 1) {
+            return;
+        }
+        PointsProvider.Location location = Converter.cityNameToLocation(cityName);
+        Iterable<LatLng> points = PointsProvider.getPoints(location);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
