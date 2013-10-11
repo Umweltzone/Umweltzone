@@ -3,9 +3,7 @@ package de.avpptr.umweltzone.fragments;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.Intent;
 import android.content.res.Resources;
-import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -21,16 +19,12 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.contract.BundleKeys;
-import de.avpptr.umweltzone.contract.CityChangeListener;
-import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
 import de.avpptr.umweltzone.utils.PreferencesHelper;
 
-public class MapFragment extends BaseFragment {
+public class MapFragment extends SupportMapFragment {
 
     private GoogleMap mMap;
     private MapDrawer mMapDrawer;
@@ -43,38 +37,33 @@ public class MapFragment extends BaseFragment {
     }
 
     @Override
-    public int getLayoutResource() {
-        return R.layout.fragment_map;
-    }
-
-    @Override
     public void onResume() {
         super.onResume();
         setUpMapIfNeeded();
 
-        FragmentActivity activity = getActivity();
-        if (activity == null) {
-            return;
-        }
-        Intent intent = activity.getIntent();
-        if (intent == null) {
-            return;
-        }
-        Bundle extras = intent.getExtras();
-        if (extras == null) {
-            return;
-        }
-        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
-        if (cityName != null) {
-            mCurrentLocation = Converter.cityNameToLocation(cityName);
-            CityChangeListener cityChangeListener = (CityChangeListener) activity;
-            cityChangeListener.cityChanged();
-
-            BoundingBox boundingBox = Converter.cityNameToBoundingBox(activity.getResources(), cityName);
-            if (boundingBox != null) {
-                zoomToBounds(boundingBox.toLatLngBounds());
-            }
-        }
+//        FragmentActivity activity = getActivity();
+//        if (activity == null) {
+//            return;
+//        }
+//        Intent intent = activity.getIntent();
+//        if (intent == null) {
+//            return;
+//        }
+//        Bundle extras = intent.getExtras();
+//        if (extras == null) {
+//            return;
+//        }
+//        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
+//        if (cityName != null) {
+//            mCurrentLocation = Converter.cityNameToLocation(cityName);
+//            CityChangeListener cityChangeListener = (CityChangeListener) activity;
+//            cityChangeListener.cityChanged();
+//
+//            BoundingBox boundingBox = Converter.cityNameToBoundingBox(activity.getResources(), cityName);
+//            if (boundingBox != null) {
+//                zoomToBounds(boundingBox.toLatLngBounds());
+//            }
+//        }
     }
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
