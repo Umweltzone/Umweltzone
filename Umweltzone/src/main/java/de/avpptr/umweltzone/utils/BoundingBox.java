@@ -17,6 +17,18 @@ public class BoundingBox {
         this.northEast = northEast;
     }
 
+    public GeoPoint getSouthWest() {
+        return southWest;
+    }
+
+    public GeoPoint getNorthEast() {
+        return northEast;
+    }
+
+    public boolean isValid() {
+        return (southWest.isValid() && northEast.isValid());
+    }
+
     public LatLngBounds toLatLngBounds() {
         return new LatLngBounds(southWest.toLatLng(), northEast.toLatLng());
     }

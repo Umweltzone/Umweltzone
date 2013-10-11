@@ -3,7 +3,9 @@ package de.avpptr.umweltzone.fragments;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -19,6 +21,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
@@ -40,30 +44,6 @@ public class MapFragment extends SupportMapFragment {
     public void onResume() {
         super.onResume();
         setUpMapIfNeeded();
-
-//        FragmentActivity activity = getActivity();
-//        if (activity == null) {
-//            return;
-//        }
-//        Intent intent = activity.getIntent();
-//        if (intent == null) {
-//            return;
-//        }
-//        Bundle extras = intent.getExtras();
-//        if (extras == null) {
-//            return;
-//        }
-//        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
-//        if (cityName != null) {
-//            mCurrentLocation = Converter.cityNameToLocation(cityName);
-//            CityChangeListener cityChangeListener = (CityChangeListener) activity;
-//            cityChangeListener.cityChanged();
-//
-//            BoundingBox boundingBox = Converter.cityNameToBoundingBox(activity.getResources(), cityName);
-//            if (boundingBox != null) {
-//                zoomToBounds(boundingBox.toLatLngBounds());
-//            }
-//        }
     }
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
@@ -91,7 +71,7 @@ public class MapFragment extends SupportMapFragment {
                 mMap = ((SupportMapFragment) activity.getSupportFragmentManager()
                         .findFragmentById(R.id.map)).getMap();
                 if (mMap != null) {
-                    onMapIsSetUp();
+                    onMapIsSetUp(activity);
                 }
             }
         }
@@ -106,10 +86,36 @@ public class MapFragment extends SupportMapFragment {
         }
     }
 
-    protected void onMapIsSetUp() {
+    protected void onMapIsSetUp(Activity activity) {
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
+
+        Intent intent = activity.getIntent();
+        if (intent == null) {
+            return;
+        }
+        Bundle extras = intent.getExtras();
+        if (extras == null) {
+            return;
+        }
+        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
+        if (cityName != null) {
+            // City has been selected from the list
+            BoundingBox lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsBoundingBox(activity);
+            if (lastKnownPosition.isValid()) {
+                zoomToBounds(lastKnownPosition.toLatLngBounds());
+            }
+        } else {
+            // Home button has been selected
+            GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
+            if (lastKnownPosition.isValid()) {
+                // TODO Restore zoom level
+                CameraUpdate cameraUpdate =
+                        CameraUpdateFactory.newLatLng(lastKnownPosition.toLatLng());
+                mMap.moveCamera(cameraUpdate);
+            }
+        }
     }
 
 
@@ -126,6 +132,8 @@ public class MapFragment extends SupportMapFragment {
         if (mMap != null) {
             GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
             PreferencesHelper.storeLastKnownLocation(getActivity(), mapCenter);
+            float zoomLevel = mMap.getCameraPosition().zoom;
+            PreferencesHelper.storeZoomLevel(getActivity(), zoomLevel);
         }
     }
 
