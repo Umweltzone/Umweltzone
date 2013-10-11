@@ -37,6 +37,9 @@ public abstract class BaseActivity extends ActionBarActivity {
                 startActivityIfNeeded(intent, 0);
                 return true;
             }
+            case R.id.action_cities:
+                startActivity(IntentHelper.getCitiesIntent(this));
+                return true;
             case R.id.action_city_info:
                 startActivity(IntentHelper.getCityInfoIntent(this));
                 return true;

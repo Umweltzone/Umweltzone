@@ -1,17 +1,14 @@
 package de.avpptr.umweltzone.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.view.Menu;
-import android.view.MenuItem;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.PagerAdapter;
 import de.avpptr.umweltzone.contract.CityChangeListener;
-import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class MainActivity extends BaseActivity implements CityChangeListener {
 
@@ -42,18 +39,6 @@ public class MainActivity extends BaseActivity implements CityChangeListener {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_cities:
-                Intent intent = IntentHelper.getCitiesIntent(this);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
     }
 
     @Override
