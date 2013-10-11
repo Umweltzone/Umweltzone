@@ -12,4 +12,5 @@ public interface Preferences {
             "de.avpptr.umweltzone.BOUNDING_BOX_NORTHEAST_LATITUDE";
     public static final String KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE =
             "de.avpptr.umweltzone.BOUNDING_BOX_NORTHEAST_LONGITUDE";
+    public static final String KEY_ZOOM_LEVEL = "de.avpptr.umweltzone.ZOOM_LEVEL";
 }

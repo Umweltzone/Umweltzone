@@ -109,10 +109,10 @@ public class MapFragment extends SupportMapFragment {
         } else {
             // Home button has been selected
             GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
-            if (lastKnownPosition.isValid()) {
-                // TODO Restore zoom level
+            float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
+            if (lastKnownPosition.isValid() && zoomLevel > 0) {
                 CameraUpdate cameraUpdate =
-                        CameraUpdateFactory.newLatLng(lastKnownPosition.toLatLng());
+                        CameraUpdateFactory.newLatLngZoom(lastKnownPosition.toLatLng(), zoomLevel);
                 mMap.moveCamera(cameraUpdate);
             }
         }
