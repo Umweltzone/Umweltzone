@@ -36,6 +36,10 @@ public final class GeoPoint {
         return mLongitude;
     }
 
+    public boolean isValid() {
+        return (mLatitude != 0.0 && mLongitude != 0.0);
+    }
+
     public LatLng toLatLng() {
         return new LatLng(mLatitude, mLongitude);
     }

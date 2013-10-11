@@ -22,8 +22,8 @@ public class IntentHelper {
 
     public static Intent getHomeIntent(Activity activity) {
         Intent intent = getIntent(activity, MainActivity.class);
+        intent.putExtra(BundleKeys.HOME, BundleKeys.HOME);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         return intent;
     }
 

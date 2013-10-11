@@ -10,7 +10,10 @@ import android.widget.ListView;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.CityListAdapter;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class CitiesFragment extends ListFragment {
 
@@ -44,8 +47,15 @@ public class CitiesFragment extends ListFragment {
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         String[] cityNameValues = getResources().getStringArray(R.array.city_names_values);
         String cityNameValue = cityNameValues[position];
+        storeSelectedLocation(cityNameValue);
         Intent intent = IntentHelper.getChangeCityIntent(getActivity(), cityNameValue);
         startActivity(intent);
+    }
+
+    private void storeSelectedLocation(String cityNameValue) {
+        BoundingBox boundingBox = Converter.cityNameToBoundingBox(getResources(), cityNameValue);
+        PreferencesHelper.storeLastKnownLocation(getActivity(), boundingBox);
+        PreferencesHelper.storeLastKnownLocation(getActivity(), cityNameValue);
     }
 
 }
