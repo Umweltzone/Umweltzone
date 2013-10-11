@@ -16,7 +16,6 @@ public class IntentHelper {
         Intent intent = getIntent(activity, MainActivity.class);
         intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValue);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
