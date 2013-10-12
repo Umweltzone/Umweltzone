@@ -12,7 +12,6 @@
         android:id="@+id/faq_question"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
         android:textSize="17sp"
         android:textColor="@color/faq_question_foreground" />
 
