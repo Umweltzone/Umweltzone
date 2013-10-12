@@ -57,13 +57,16 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         return true;
     }
 
+    private View getNewView(int resourceId) {
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        return inflater.inflate(resourceId, null);
+    }
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
 
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.faq_list_group, null);
+            convertView = getNewView(R.layout.faq_list_group);
         }
 
         TextView textView = (TextView) convertView.findViewById(R.id.faq_question);
@@ -77,8 +80,7 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         final String childText = (String) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.faq_list_item, null);
+            convertView = getNewView(R.layout.faq_list_item);
         }
 
         TextView textView = (TextView) convertView.findViewById(R.id.faq_answer);
