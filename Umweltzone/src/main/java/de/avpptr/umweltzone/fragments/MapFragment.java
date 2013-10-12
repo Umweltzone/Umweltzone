@@ -53,7 +53,11 @@ public class MapFragment extends SupportMapFragment {
             getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
             int height = displaymetrics.heightPixels;
             int width = displaymetrics.widthPixels;
-            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, 50);
+            int padding = 50;
+            if (width > height) {
+                padding *= 2;
+            }
+            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, padding);
             mMap.moveCamera(zoneBounds);
         }
     }
