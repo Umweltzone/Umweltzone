@@ -13,6 +13,10 @@ public final class GeoPoint {
     protected double mLatitude;
     protected double mLongitude;
 
+    public GeoPoint() {
+        // Required by Jackson to de-serialize JSON content
+    }
+
     public GeoPoint(int latitudeE6, int longitudeE6) {
         mLatitude = latitudeE6 / 1e6;
         mLongitude = longitudeE6 / 1e6;
@@ -25,6 +29,16 @@ public final class GeoPoint {
 
     public GeoPoint(double latitude, double longitude) {
         mLatitude = latitude;
+        mLongitude = longitude;
+    }
+
+    // Required by Jackson to de-serialize JSON content
+    public void setLatitude(double latitude) {
+        mLatitude = latitude;
+    }
+
+    // Required by Jackson to de-serialize JSON content
+    public void setLongitude(double longitude) {
         mLongitude = longitude;
     }
 

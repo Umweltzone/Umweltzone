@@ -10,4 +10,12 @@ public class LowEmissionZone {
     public BoundingBox boundingBox;
     public int zoneNumber;
 
+    @Override public String toString() {
+        return "name: " + name +
+                ", displayName: " + displayName +
+                ", center: " + center +
+                ", boundingBox: " + boundingBox +
+                ", zoneNumber: " + zoneNumber;
+    }
+
 }

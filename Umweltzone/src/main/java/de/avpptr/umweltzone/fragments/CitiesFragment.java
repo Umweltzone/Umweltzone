@@ -4,13 +4,17 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+
+import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.adapters.CityListAdapter;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.Converter;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.PreferencesHelper;
@@ -20,6 +24,9 @@ public class CitiesFragment extends ListFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(getActivity());
+        Log.d(getClass().getName(), "LowEmissionZones ==> " + lowEmissionZones);
 
         Resources resources = getResources();
         String[] cityNames = resources.getStringArray(R.array.city_names_values);

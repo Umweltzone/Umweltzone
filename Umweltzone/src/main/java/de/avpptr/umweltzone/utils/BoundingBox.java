@@ -12,6 +12,10 @@ public class BoundingBox {
     private GeoPoint northEast;
     private static final DecimalFormat df = new DecimalFormat(".#####", new DecimalFormatSymbols(Locale.US));
 
+    public BoundingBox() {
+        // Required by Jackson to de-serialize JSON content
+    }
+
     public BoundingBox(GeoPoint southWest, GeoPoint northEast) {
         this.southWest = southWest;
         this.northEast = northEast;

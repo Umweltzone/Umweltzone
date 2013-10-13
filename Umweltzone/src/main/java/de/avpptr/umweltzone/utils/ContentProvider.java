@@ -12,11 +12,16 @@ import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.models.Faq;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
     public static List<Faq> getFaqs(Context context) {
         return getContent(context, R.raw.faqs_de, Faq.class);
+    }
+
+    public static List<LowEmissionZone> getLowEmissionZones(Context context) {
+        return getContent(context, R.raw.zones_de, LowEmissionZone.class);
     }
 
     private static <T> List<T> getContent(Context context, int rawResourceId, Class<T> contentType) {
