@@ -5,7 +5,6 @@
     <string name="cities_no_content">Keine Städte</string>
 
     <!--Action Bar items-->
-    <string name="action_settings">Einstellungen</string>
     <string name="action_cities">Städte</string>
     <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>

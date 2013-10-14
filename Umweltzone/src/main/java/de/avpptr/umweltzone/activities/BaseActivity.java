@@ -49,9 +49,6 @@ public abstract class BaseActivity extends ActionBarActivity {
             case R.id.action_faq:
                 startActivity(IntentHelper.getFaqsIntent(this));
                 return true;
-            case R.id.action_settings:
-                // TODO Implement settings
-                return true;
             case R.id.action_about:
                 Intent intent = IntentHelper.getAboutIntent(this);
                 startActivity(intent);
