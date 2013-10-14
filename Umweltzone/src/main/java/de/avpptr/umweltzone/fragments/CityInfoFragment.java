@@ -58,6 +58,17 @@ public class CityInfoFragment extends BaseFragment {
             nextZoneNumberAsOfTextView.setVisibility(View.VISIBLE);
             nextZoneNumberAsOfTextView.setText(nextZoneNumberAsOfText);
         }
+
+        // Abroad licenced vehicle zone number info
+        TextView abroadLicensedVehicleZoneNumberTextView =
+                (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
+        String abroadLicensedVehicleZoneNumberText =
+                StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
+        if (abroadLicensedVehicleZoneNumberText == null) {
+            abroadLicensedVehicleZoneNumberTextView.setVisibility(View.GONE);
+        } else {
+            abroadLicensedVehicleZoneNumberTextView.setVisibility(View.VISIBLE);
+            abroadLicensedVehicleZoneNumberTextView.setText(abroadLicensedVehicleZoneNumberText);
         }
     }
 

@@ -42,6 +42,23 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
+    public static String getAbroadLicensedVehicleZoneNumberText(Context context, LowEmissionZone lowEmissionZone) {
+        if (lowEmissionZone.abroadLicensedVehicleZoneNumberUntil == null) {
+            return null;
+        }
+        String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.abroadLicensedVehicleZoneNumber);
+        if (zoneNumberColor == null) {
+            Log.e(StringHelper.class.getName(), "Abroad licensed vehicle zone number '" +
+                    lowEmissionZone.abroadLicensedVehicleZoneNumber +
+                    "' cannot be converted into color text fragment.");
+            return null;
+        }
+        return getZoneNumberInfoString(context,
+                R.string.city_info_abroad_licensed_vehicle_zone_info,
+                lowEmissionZone.abroadLicensedVehicleZoneNumberUntil,
+                zoneNumberColor);
+    }
+
     // Compile date and colors into sentence
     private static String getZoneNumberInfoString(Context context, int resourceId, Date date, String color) {
         String datePattern = context.getString(R.string.city_info_zone_number_since_date_format);

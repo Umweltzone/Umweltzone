@@ -5,6 +5,8 @@
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
         "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
         "center" : {
             "latitude" : 52.518611,
             "longitude" : 13.408056
@@ -26,6 +28,8 @@
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-01-01",
         "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
         "center" : {
             "latitude" : 50.937490,
             "longitude" : 6.958020
@@ -47,6 +51,8 @@
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
         "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
         "center" : {
             "latitude" : 50.121400,
             "longitude" : 8.636100
@@ -68,6 +74,8 @@
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-10-01",
         "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
         "center" : {
             "latitude" : 48.154900,
             "longitude" : 11.542200
@@ -89,6 +97,8 @@
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
         "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
         "center" : {
             "latitude" : 48.776350,
             "longitude" : 9.182900
