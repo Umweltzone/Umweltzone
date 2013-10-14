@@ -3,6 +3,11 @@
         "name" : "berlin",
         "displayName" : "Berlin",
         "zoneNumber" : 4,
+        "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20berlin.php",
         "center" : {
             "latitude" : 52.518611,
             "longitude" : 13.408056
@@ -22,6 +27,11 @@
         "name" : "cologne",
         "displayName" : "Köln",
         "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
         "center" : {
             "latitude" : 50.937490,
             "longitude" : 6.958020
@@ -41,6 +51,11 @@
         "name" : "frankfurt",
         "displayName" : "Frankfurt am Main",
         "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20frankfurt%20main.php",
         "center" : {
             "latitude" : 50.121400,
             "longitude" : 8.636100
@@ -60,6 +75,11 @@
         "name" : "munich",
         "displayName" : "München",
         "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenchen.php",
         "center" : {
             "latitude" : 48.154900,
             "longitude" : 11.542200
@@ -79,6 +99,11 @@
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20stuttgart.php",
         "center" : {
             "latitude" : 48.776350,
             "longitude" : 9.182900

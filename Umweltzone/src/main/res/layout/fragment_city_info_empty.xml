@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CityInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city_info_empty_title"
+            style="@style/ZoneInfoEmpty.Title"
+            android:text="@string/city_info_empty_title" />
+
+        <TextView
+            android:id="@+id/city_info_empty_status_desc"
+            style="@style/ZoneInfoEmpty.StatusDesc"
+            android:text="@string/city_info_empty_status_desc" />
+
+        <Button
+            android:id="@+id/city_info_empty_select_zone"
+            style="@style/ZoneInfoEmpty.SelectZone"
+            android:onClick="onSelectZoneClick"
+            android:text="@string/city_info_empty_select_zone" />
+
+    </LinearLayout>
+</ScrollView>

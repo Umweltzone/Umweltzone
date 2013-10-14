@@ -2,14 +2,51 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CityInfoFragment">
 
-    <TextView
-        style="?android:textAppearanceLarge"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/city_info_title"
-        android:gravity="center" />
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/city_info_title"
+            style="@style/ZoneInfo.Title"
+            android:text="@string/city_info_title" />
+
+        <TextView
+            android:id="@+id/city_info_zone_number_since"
+            style="@style/ZoneInfo.Content"
+            android:text="@string/city_info_zone_number_since" />
+
+        <TextView
+            android:id="@+id/city_info_next_zone_number_as_of"
+            style="@style/ZoneInfo.Content"
+            android:text="@string/city_info_next_zone_number_as_of" />
+
+        <TextView
+            android:id="@+id/city_info_abroad_licensed_vehicle_zone_info"
+            style="@style/ZoneInfo.Content"
+            android:text="@string/city_info_abroad_licensed_vehicle_zone_info" />
+
+        <Button
+            android:id="@+id/city_info_show_on_map"
+            style="@style/ZoneInfo.ShowOnMap"
+            android:onClick="onShowOnMapClick"
+            android:text="@string/city_info_show_on_map" />
+
+        <Button
+            android:id="@+id/city_info_further_information"
+            style="@style/ZoneInfo.FurtherInformation"
+            android:onClick="onFurtherInformationClick"
+            android:text="@string/city_info_further_information" />
+
+    </LinearLayout>
 
 </ScrollView>
