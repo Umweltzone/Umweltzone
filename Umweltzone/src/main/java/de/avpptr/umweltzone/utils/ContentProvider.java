@@ -24,6 +24,10 @@ public abstract class ContentProvider {
         return getContent(context, R.raw.zones_de, LowEmissionZone.class);
     }
 
+    public static List<GeoPoint> getCircuitPoints(Context context, int resourceId) {
+        return getContent(context, resourceId, GeoPoint.class);
+    }
+
     private static <T> List<T> getContent(Context context, int rawResourceId, Class<T> contentType) {
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
