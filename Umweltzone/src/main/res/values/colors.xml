@@ -8,6 +8,7 @@
     <color name="faq_question_background">#000000</color>
     <color name="faq_answer_foreground">#000000</color>
     <color name="faq_answer_background">#ffffffff</color>
+    <color name="faq_answer_source_url">#0000ffff</color>
 
     <color name="city_zone_none">@android:color/white</color>
     <color name="city_zone_2">#D81B15</color>
