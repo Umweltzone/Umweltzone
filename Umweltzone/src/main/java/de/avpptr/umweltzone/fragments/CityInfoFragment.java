@@ -1,16 +1,11 @@
 package de.avpptr.umweltzone.fragments;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.View;
 import android.widget.TextView;
 
-import java.util.List;
-
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.models.LowEmissionZone;
-import de.avpptr.umweltzone.utils.ContentProvider;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 public class CityInfoFragment extends BaseFragment {
@@ -18,7 +13,7 @@ public class CityInfoFragment extends BaseFragment {
     LowEmissionZone mLowEmissionZone;
 
     @Override public int getLayoutResource() {
-        mLowEmissionZone = getLowEmissionZone(getActivity());
+        mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
         if (mLowEmissionZone == null) {
             return R.layout.fragment_city_info_empty;
         } else {
@@ -29,7 +24,7 @@ public class CityInfoFragment extends BaseFragment {
     @Override public void onResume() {
         super.onResume();
         Activity activity = getActivity();
-        mLowEmissionZone = getLowEmissionZone(activity);
+        mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
         if (mLowEmissionZone != null) {
             setUpCityInfo(activity, mLowEmissionZone);
         }
@@ -70,20 +65,6 @@ public class CityInfoFragment extends BaseFragment {
             abroadLicensedVehicleZoneNumberTextView.setVisibility(View.VISIBLE);
             abroadLicensedVehicleZoneNumberTextView.setText(abroadLicensedVehicleZoneNumberText);
         }
-    }
-
-    private LowEmissionZone getLowEmissionZone(Context context) {
-        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
-        if (lowEmissionZones == null) {
-            throw new IllegalStateException("Parsing zones from JSON failed.");
-        }
-        String zoneName = PreferencesHelper.restoreLastKnownLocationAsString(context);
-        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
-            if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
-                return lowEmissionZone;
-            }
-        }
-        return null;
     }
 
 }
