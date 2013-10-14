@@ -9,4 +9,7 @@
      -->
     <string name="config_google_maps_v2_api_key">ENTER_YOUR_GOOGLE_MAPS_V2_API_KEY_HERE</string>
 
+    <!-- Date format used in .json files/response -->
+    <string name="config_zone_number_since_date_format">yyyy-MM-dd</string>
+
 </resources>

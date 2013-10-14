@@ -10,6 +10,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.PreferencesHelper;
+import de.avpptr.umweltzone.utils.StringHelper;
 
 public class CityInfoFragment extends BaseFragment {
 
@@ -29,9 +30,21 @@ public class CityInfoFragment extends BaseFragment {
         Activity activity = getActivity();
         mLowEmissionZone = getLowEmissionZone(activity);
         if (mLowEmissionZone != null) {
-            TextView cityInfoTitle = (TextView) activity.findViewById(R.id.city_info_title);
-            cityInfoTitle.setText(mLowEmissionZone.displayName);
+            setUpCityInfo(activity, mLowEmissionZone);
         }
+    }
+
+    private void setUpCityInfo(Activity activity, LowEmissionZone lowEmissionZone) {
+        // Title
+        TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
+        titleTextView.setText(lowEmissionZone.displayName);
+
+        // Zone number since
+        TextView zoneNumberSinceTextView =
+                (TextView) activity.findViewById(R.id.city_info_zone_number_since);
+        String zoneNumberSinceText =
+                StringHelper.getZoneNumberSinceText(activity, lowEmissionZone);
+        zoneNumberSinceTextView.setText(zoneNumberSinceText);
     }
 
     private LowEmissionZone getLowEmissionZone(Context context) {

@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.type.TypeFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
@@ -31,6 +32,8 @@ public abstract class ContentProvider {
     private static <T> List<T> getContent(Context context, int rawResourceId, Class<T> contentType) {
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
+        String datePattern = context.getString(R.string.config_zone_number_since_date_format);
+        objectMapper.setDateFormat(new SimpleDateFormat(datePattern));
         try {
             TypeFactory typeFactory = objectMapper.getTypeFactory();
             CollectionType collectionType = typeFactory.constructCollectionType(List.class, contentType);

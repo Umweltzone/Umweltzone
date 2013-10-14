@@ -74,6 +74,10 @@
 
     <style name="ZoneInfo.Title" parent="TextView.Title" />
 
+    <style name="ZoneInfo.Content" parent="TextView.Base">
+        <item name="android:layout_marginBottom">@dimen/big_spacer</item>
+    </style>
+
     <style name="ZoneInfo.ShowOnMap" parent="Button.Base">
         <item name="android:layout_marginTop">@dimen/large_spacer</item>
     </style>

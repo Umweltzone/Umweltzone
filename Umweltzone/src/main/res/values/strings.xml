@@ -21,6 +21,18 @@
     <string name="city_info_activity_title">Stadtinfos</string>
 
     <string name="city_info_title">Stadtinfos</string>
+    <string name="city_info_zone_number_since">
+        Seit dem %1$s dürfen nur Fahrzeuge %2$s
+        Umweltplakette in die Umweltzone fahren.
+    </string>
+    <string name="city_info_zone_number_since_date_format">d. MMMM yyyy</string>
+    <string name="city_info_zone_number_since_text_fragment_green">mit grüner</string>
+    <string name="city_info_zone_number_since_text_fragment_yellow">mit gelber oder grüner</string>
+    <string name="city_info_zone_number_since_text_fragment_red">mit roter, gelber oder grüner</string>
+    <string name="city_info_zone_number_none">
+        Fahrzeuge aller Schadstoffklassen dürfen in die Umweltzone fahren.
+    </string>
+
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>
 
