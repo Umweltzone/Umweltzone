@@ -6,6 +6,7 @@ import android.view.View;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.fragments.CityInfoFragment;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class CityInfoActivity extends BaseActivity {
@@ -32,6 +33,8 @@ public class CityInfoActivity extends BaseActivity {
     }
 
     public void onFurtherInformationClick(View view) {
-        // TODO Open browser
+        LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(this);
+        startActivity(IntentHelper.getUriIntent(lowEmissionZone.urlUmweltPlaketteDe));
     }
+
 }

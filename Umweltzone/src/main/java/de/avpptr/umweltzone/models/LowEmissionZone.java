@@ -20,6 +20,7 @@ public class LowEmissionZone {
     public Date nextZoneNumberAsOf;
     public int abroadLicensedVehicleZoneNumber;
     public Date abroadLicensedVehicleZoneNumberUntil;
+    public String urlUmweltPlaketteDe;
 
     // TODO Parser should not be called more often then needed
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
@@ -45,7 +46,8 @@ public class LowEmissionZone {
                 ", zoneNumberSince: " + zoneNumberSince +
                 ", nextZoneNumberAsOf: " + nextZoneNumberAsOf +
                 ", abroadLicensedVehicleZoneNumber: " + abroadLicensedVehicleZoneNumber +
-                ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil;
+                ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
+                ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe;
     }
 
 }

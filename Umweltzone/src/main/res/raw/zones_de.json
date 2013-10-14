@@ -7,6 +7,7 @@
         "nextZoneNumberAsOf" : "",
         "abroadLicensedVehicleZoneNumber" : 3,
         "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20berlin.php",
         "center" : {
             "latitude" : 52.518611,
             "longitude" : 13.408056
@@ -30,6 +31,7 @@
         "nextZoneNumberAsOf" : "2014-07-01",
         "abroadLicensedVehicleZoneNumber" : 3,
         "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
         "center" : {
             "latitude" : 50.937490,
             "longitude" : 6.958020
@@ -53,6 +55,7 @@
         "nextZoneNumberAsOf" : "",
         "abroadLicensedVehicleZoneNumber" : 4,
         "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20frankfurt%20main.php",
         "center" : {
             "latitude" : 50.121400,
             "longitude" : 8.636100
@@ -76,6 +79,7 @@
         "nextZoneNumberAsOf" : "",
         "abroadLicensedVehicleZoneNumber" : 4,
         "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenchen.php",
         "center" : {
             "latitude" : 48.154900,
             "longitude" : 11.542200
@@ -99,6 +103,7 @@
         "nextZoneNumberAsOf" : "",
         "abroadLicensedVehicleZoneNumber" : 4,
         "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20stuttgart.php",
         "center" : {
             "latitude" : 48.776350,
             "longitude" : 9.182900

@@ -2,6 +2,7 @@ package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 
 import de.avpptr.umweltzone.activities.AboutActivity;
 import de.avpptr.umweltzone.activities.CitiesActivity;
@@ -41,6 +42,12 @@ public class IntentHelper {
 
     public static Intent getFaqsIntent(Activity activity) {
         return getIntent(activity, FaqActivity.class);
+    }
+
+    public static Intent getUriIntent(String uri) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(uri));
+        return intent;
     }
 
     private static Intent getIntent(Activity activity, Class<?> clazz) {
