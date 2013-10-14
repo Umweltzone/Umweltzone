@@ -25,6 +25,11 @@
             style="@style/ZoneInfo.Content"
             android:text="@string/city_info_zone_number_since" />
 
+        <TextView
+            android:id="@+id/city_info_next_zone_number_as_of"
+            style="@style/ZoneInfo.Content"
+            android:text="@string/city_info_next_zone_number_as_of" />
+
         <Button
             android:id="@+id/city_info_show_on_map"
             style="@style/ZoneInfo.ShowOnMap"

@@ -12,6 +12,7 @@ public class LowEmissionZone {
     public BoundingBox boundingBox;
     public int zoneNumber;
     public Date zoneNumberSince;
+    public Date nextZoneNumberAsOf;
 
     @Override public String toString() {
         return "name: " + name +
@@ -19,7 +20,8 @@ public class LowEmissionZone {
                 ", center: " + center +
                 ", boundingBox: " + boundingBox +
                 ", zoneNumber: " + zoneNumber +
-                ", zoneNumberSince: " + zoneNumberSince;
+                ", zoneNumberSince: " + zoneNumberSince +
+                ", nextZoneNumberAsOf: " + nextZoneNumberAsOf;
     }
 
 }

@@ -1,6 +1,7 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,6 +22,23 @@ public class StringHelper {
         return getZoneNumberInfoString(context,
                 R.string.city_info_zone_number_since,
                 lowEmissionZone.zoneNumberSince,
+                zoneNumberColor);
+    }
+
+    public static String getNextZoneNumberAsOfText(Context context, LowEmissionZone lowEmissionZone) {
+        if (lowEmissionZone.nextZoneNumberAsOf == null) {
+            return null;
+        }
+        int nextZoneNumber = lowEmissionZone.zoneNumber + 1;
+        String zoneNumberColor = zoneNumberToColor(context, nextZoneNumber);
+        if (zoneNumberColor == null) {
+            Log.e(StringHelper.class.getName(), "Next zone number '" + nextZoneNumber +
+                    "' cannot be converted into color text fragment.");
+            return null;
+        }
+        return getZoneNumberInfoString(context,
+                R.string.city_info_next_zone_number_as_of,
+                lowEmissionZone.nextZoneNumberAsOf,
                 zoneNumberColor);
     }
 

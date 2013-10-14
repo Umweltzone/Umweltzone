@@ -32,6 +32,9 @@
     <string name="city_info_zone_number_none">
         Fahrzeuge aller Schadstoffklassen dürfen in die Umweltzone fahren.
     </string>
+    <string name="city_info_next_zone_number_as_of">
+        Ab dem %1$s dürfen nur noch Fahrzeuge %2$s Plakette in die Umweltzone fahren.
+    </string>
 
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>

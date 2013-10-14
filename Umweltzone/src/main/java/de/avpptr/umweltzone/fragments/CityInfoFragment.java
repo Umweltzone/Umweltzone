@@ -2,6 +2,7 @@ package de.avpptr.umweltzone.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -45,6 +46,19 @@ public class CityInfoFragment extends BaseFragment {
         String zoneNumberSinceText =
                 StringHelper.getZoneNumberSinceText(activity, lowEmissionZone);
         zoneNumberSinceTextView.setText(zoneNumberSinceText);
+
+        // Next zone number as of
+        TextView nextZoneNumberAsOfTextView =
+                (TextView) activity.findViewById(R.id.city_info_next_zone_number_as_of);
+        String nextZoneNumberAsOfText =
+                StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
+        if (nextZoneNumberAsOfText == null) {
+            nextZoneNumberAsOfTextView.setVisibility(View.GONE);
+        } else {
+            nextZoneNumberAsOfTextView.setVisibility(View.VISIBLE);
+            nextZoneNumberAsOfTextView.setText(nextZoneNumberAsOfText);
+        }
+        }
     }
 
     private LowEmissionZone getLowEmissionZone(Context context) {

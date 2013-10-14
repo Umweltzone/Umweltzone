@@ -4,6 +4,7 @@
         "displayName" : "Berlin",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
         "center" : {
             "latitude" : 52.518611,
             "longitude" : 13.408056
@@ -24,6 +25,7 @@
         "displayName" : "Köln",
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
         "center" : {
             "latitude" : 50.937490,
             "longitude" : 6.958020
@@ -44,6 +46,7 @@
         "displayName" : "Frankfurt am Main",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
+        "nextZoneNumberAsOf" : "",
         "center" : {
             "latitude" : 50.121400,
             "longitude" : 8.636100
@@ -64,6 +67,7 @@
         "displayName" : "München",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
         "center" : {
             "latitude" : 48.154900,
             "longitude" : 11.542200
@@ -84,6 +88,7 @@
         "displayName" : "Stuttgart",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
+        "nextZoneNumberAsOf" : "",
         "center" : {
             "latitude" : 48.776350,
             "longitude" : 9.182900
