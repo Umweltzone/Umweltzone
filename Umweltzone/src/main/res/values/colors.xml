@@ -17,4 +17,6 @@
     <color name="city_zone_badge_default_fill_color">#888888</color>
     <color name="city_zone_badge_default_stroke_color">@android:color/black</color>
 
+    <color name="zone_info_empty_status_desc_background">#E5CC15</color>
+
 </resources>

@@ -17,12 +17,33 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
+
+    <!-- Base styles -->
+
+    <style name="TextView.Base" parent="@android:style/TextAppearance.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="TextView.Title" parent="TextView.Base">
+        <item name="android:textSize">@dimen/fragment_title</item>
+        <item name="android:layout_marginBottom">@dimen/huge_spacer</item>
+    </style>
+
+    <style name="Button.Base" parent="TextView.Base" />
+
+    <!-- AboutActivity -->
+
     <style name="AboutText" parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
+
+    <!-- CitiesActivity -->
 
     <style name="ZoneBadge" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_width">@dimen/city_zone_badge_width</item>
@@ -38,5 +59,25 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_marginLeft">@dimen/big_spacer</item>
     </style>
+
+    <!-- CityInfoActivity -->
+
+    <style name="ZoneInfoEmpty.Title" parent="TextView.Title" />
+
+    <style name="ZoneInfoEmpty.StatusDesc" parent="TextView.Base">
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+        <item name="android:padding">@dimen/big_spacer</item>
+        <item name="android:background">@color/zone_info_empty_status_desc_background</item>
+    </style>
+
+    <style name="ZoneInfoEmpty.SelectZone" parent="Button.Base" />
+
+    <style name="ZoneInfo.Title" parent="TextView.Title" />
+
+    <style name="ZoneInfo.ShowOnMap" parent="Button.Base">
+        <item name="android:layout_marginTop">@dimen/large_spacer</item>
+    </style>
+
+    <style name="ZoneInfo.FurtherInformation" parent="Button.Base" />
 
 </resources>

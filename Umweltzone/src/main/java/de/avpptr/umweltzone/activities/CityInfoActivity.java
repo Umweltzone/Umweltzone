@@ -2,15 +2,18 @@ package de.avpptr.umweltzone.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.fragments.CityInfoFragment;
+import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class CityInfoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_city_info);
+        initFragment(new CityInfoFragment());
     }
 
     @Override
@@ -20,4 +23,15 @@ public class CityInfoActivity extends BaseActivity {
         return true;
     }
 
+    public void onSelectZoneClick(View view) {
+        startActivity(IntentHelper.getCitiesIntent(this));
+    }
+
+    public void onShowOnMapClick(View view) {
+        startActivity(IntentHelper.getChangeCityIntent(this, "Unevaluated"));
+    }
+
+    public void onFurtherInformationClick(View view) {
+        // TODO Open browser
+    }
 }
