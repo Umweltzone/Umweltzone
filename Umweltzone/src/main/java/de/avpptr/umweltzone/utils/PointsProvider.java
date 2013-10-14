@@ -1,11 +1,18 @@
 package de.avpptr.umweltzone.utils;
 
+import android.content.Context;
+
 import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import de.avpptr.umweltzone.R;
+
 public class PointsProvider {
+
+    private static Location currentLocation = null;
+    private static List<LatLng> currentPoints = null;
 
     public enum Location {
         Berlin,
@@ -15,51 +22,41 @@ public class PointsProvider {
         Stuttgart
     }
 
-    public static List<LatLng> getPoints(Location location) {
-        switch (location) {
-            case Berlin:
-                return getPointsForBerlin();
-            case Cologne:
-                return getPointsForCologne();
-            case Frankfurt:
-                return getPointsForFrankfurt();
-            case Munich:
-                return getPointsForMunich();
-            case Stuttgart:
-                return getPointsForStuttgart();
-            default:
+    public static List<LatLng> getCircuitPoints(Context context, String cityName) {
+        Location location = Converter.cityNameToLocation(cityName);
+        if (location != currentLocation || currentPoints == null) {
+            currentLocation = location;
+            int resourceId = 0;
+            switch (location) {
+                case Berlin:
+                    resourceId = R.raw.zone_berlin;
+                    break;
+                case Cologne:
+                    resourceId = R.raw.zone_cologne;
+                    break;
+                case Frankfurt:
+                    resourceId = R.raw.zone_frankfurt_am_main;
+                    break;
+                case Munich:
+                    resourceId = R.raw.zone_munich;
+                    break;
+                case Stuttgart:
+                    resourceId = R.raw.zone_stuttgart;
+                    break;
+            }
+            if (resourceId == 0) {
                 throw new IllegalStateException("Location " + location + " is not supported");
+            }
+            List<GeoPoint> points = ContentProvider.getCircuitPoints(context, resourceId);
+            currentPoints = new ArrayList<LatLng>();
+            for (int i = 0; i < points.size(); i++) {
+                currentPoints.add(points.get(i).toLatLng());
+            }
+            if (currentPoints.size() == 0) {
+                throw new IllegalStateException("There are no circuit points available");
+            }
         }
-    }
-
-    public static List<LatLng> getPointsForBerlin() {
-        List<LatLng> points = new ArrayList<LatLng>();
-        // TODO Add GPS coordinates here
-        return points;
-    }
-
-    public static List<LatLng> getPointsForCologne() {
-        List<LatLng> points = new ArrayList<LatLng>();
-        // TODO Add GPS coordinates here
-        return points;
-    }
-
-    public static List<LatLng> getPointsForFrankfurt() {
-        List<LatLng> points = new ArrayList<LatLng>();
-        // TODO Add GPS coordinates here
-        return points;
-    }
-
-    public static List<LatLng> getPointsForMunich() {
-        List<LatLng> points = new ArrayList<LatLng>();
-        // TODO Add GPS coordinates here
-        return points;
-    }
-
-    public static List<LatLng> getPointsForStuttgart() {
-        List<LatLng> points = new ArrayList<LatLng>();
-        // TODO Add GPS coordinates here
-        return points;
+        return currentPoints;
     }
 
 }

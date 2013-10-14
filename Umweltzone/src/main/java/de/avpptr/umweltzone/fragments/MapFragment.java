@@ -22,10 +22,10 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
+import de.avpptr.umweltzone.utils.PointsProvider;
 import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class MapFragment extends SupportMapFragment {
@@ -122,11 +122,12 @@ public class MapFragment extends SupportMapFragment {
 
 
     private void drawPolygonOverlay() {
-        String cityName = PreferencesHelper.restoreLastKnownLocationAsString(getActivity());
+        Activity activity = getActivity();
+        String cityName = PreferencesHelper.restoreLastKnownLocationAsString(activity);
         if (cityName == null || cityName.length() < 1) {
             return;
         }
-        Iterable<LatLng> points = LowEmissionZone.getCircuitPoints(cityName);
+        Iterable<LatLng> points = PointsProvider.getCircuitPoints(activity, cityName);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
