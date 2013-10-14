@@ -21,7 +21,7 @@
     {
         "name" : "cologne",
         "displayName" : "Köln",
-        "zoneNumber" : 4,
+        "zoneNumber" : 3,
         "center" : {
             "latitude" : 50.937490,
             "longitude" : 6.958020
@@ -40,7 +40,7 @@
     {
         "name" : "frankfurt",
         "displayName" : "Frankfurt am Main",
-        "zoneNumber" : 3,
+        "zoneNumber" : 4,
         "center" : {
             "latitude" : 50.121400,
             "longitude" : 8.636100
@@ -59,7 +59,7 @@
     {
         "name" : "munich",
         "displayName" : "München",
-        "zoneNumber" : 2,
+        "zoneNumber" : 4,
         "center" : {
             "latitude" : 48.154900,
             "longitude" : 11.542200
