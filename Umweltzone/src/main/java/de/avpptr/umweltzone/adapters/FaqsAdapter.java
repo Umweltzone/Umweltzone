@@ -38,8 +38,13 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public Object getChild(int groupPosition, int childPosition) {
-        return mFaqs.get(groupPosition).answer;
+    public Object getChild(final int groupPosition, int childPosition) {
+        final String faqAnswer = mFaqs.get(groupPosition).answer;
+        final String faqSourceUrl = mFaqs.get(groupPosition).sourceUrl;
+        return new FaqAnswer() {{
+            text = faqAnswer;
+            sourceUrl = faqSourceUrl;
+        }};
     }
 
     @Override
@@ -78,14 +83,19 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
-        final String childText = (String) getChild(groupPosition, childPosition);
+        final FaqAnswer faqAnswer = (FaqAnswer) getChild(groupPosition, childPosition);
 
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
         }
 
+        final String childText = faqAnswer.text;
         TextView textView = (TextView) convertView.findViewById(R.id.faq_answer);
         textView.setText(childText);
+
+        final String sourceUrlText = faqAnswer.sourceUrl;
+        TextView sourceUrlView = (TextView) convertView.findViewById(R.id.faq_source_url);
+        sourceUrlView.setText(sourceUrlText);
 
         return convertView;
     }
@@ -93,5 +103,10 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
         return false;
+    }
+
+    private static class FaqAnswer extends Object {
+        String text;
+        String sourceUrl;
     }
 }
