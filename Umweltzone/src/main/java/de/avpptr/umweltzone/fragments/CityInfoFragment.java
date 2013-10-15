@@ -2,10 +2,12 @@ package de.avpptr.umweltzone.fragments;
 
 import android.app.Activity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 public class CityInfoFragment extends BaseFragment {
@@ -27,10 +29,12 @@ public class CityInfoFragment extends BaseFragment {
         mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
         if (mLowEmissionZone != null) {
             setUpCityInfo(activity, mLowEmissionZone);
+        } else {
+            setUpCityInfoEmpty(activity);
         }
     }
 
-    private void setUpCityInfo(Activity activity, LowEmissionZone lowEmissionZone) {
+    private void setUpCityInfo(final Activity activity, LowEmissionZone lowEmissionZone) {
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
@@ -65,6 +69,32 @@ public class CityInfoFragment extends BaseFragment {
             abroadLicensedVehicleZoneNumberTextView.setVisibility(View.VISIBLE);
             abroadLicensedVehicleZoneNumberTextView.setText(abroadLicensedVehicleZoneNumberText);
         }
+
+        // Show on map button
+        Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
+        showOnMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                startActivity(IntentHelper.getChangeCityIntent(activity, mLowEmissionZone.name));
+            }
+        });
+
+        // Further information button
+        Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
+        furtherInfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
+            }
+        });
+    }
+
+    private void setUpCityInfoEmpty(final Activity activity) {
+        // Select zone button
+        Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_empty_select_zone);
+        showOnMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                startActivity(IntentHelper.getCitiesIntent(activity));
+            }
+        });
     }
 
 }

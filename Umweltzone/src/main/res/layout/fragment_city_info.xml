@@ -38,13 +38,11 @@
         <Button
             android:id="@+id/city_info_show_on_map"
             style="@style/ZoneInfo.ShowOnMap"
-            android:onClick="onShowOnMapClick"
             android:text="@string/city_info_show_on_map" />
 
         <Button
             android:id="@+id/city_info_further_information"
             style="@style/ZoneInfo.FurtherInformation"
-            android:onClick="onFurtherInformationClick"
             android:text="@string/city_info_further_information" />
 
     </LinearLayout>
