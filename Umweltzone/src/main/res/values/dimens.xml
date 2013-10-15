@@ -11,7 +11,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <integer name="shape_stroke_width">5</integer>
 
-    <dimen name="fragment_title">32dp</dimen>
+    <dimen name="fragment_title">32sp</dimen>
     <dimen name="activity_horizontal_margin">@dimen/large_spacer</dimen>
     <dimen name="activity_vertical_margin">@dimen/large_spacer</dimen>
     <dimen name="city_zone_badge_stroke_width">2dp</dimen>
