@@ -92,6 +92,7 @@ public class MapFragment extends SupportMapFragment {
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
+        drawPolygonOverlay();
 
         Intent intent = activity.getIntent();
         if (intent == null) {
@@ -147,7 +148,6 @@ public class MapFragment extends SupportMapFragment {
     class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
         @Override
         public void onCameraChange(CameraPosition cameraPosition) {
-            drawPolygonOverlay();
             storeLastKnownLocation();
         }
     }
