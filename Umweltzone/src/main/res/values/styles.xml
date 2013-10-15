@@ -20,19 +20,19 @@
 
     <!-- Base styles -->
 
-    <style name="TextView.Base" parent="@android:style/TextAppearance.Small">
+    <style name="TextView.Base.Small" parent="@android:style/TextAppearance.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
-    <style name="TextView.Title" parent="TextView.Base">
+    <style name="TextView.Title" parent="TextView.Base.Small">
         <item name="android:textSize">@dimen/fragment_title</item>
         <item name="android:layout_marginBottom">@dimen/huge_spacer</item>
     </style>
 
-    <style name="Button.Base" parent="TextView.Base" />
+    <style name="Button.Base" parent="TextView.Base.Small" />
 
     <!-- AboutActivity -->
 
@@ -64,7 +64,7 @@
 
     <style name="ZoneInfoEmpty.Title" parent="TextView.Title" />
 
-    <style name="ZoneInfoEmpty.StatusDesc" parent="TextView.Base">
+    <style name="ZoneInfoEmpty.StatusDesc" parent="TextView.Base.Small">
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
         <item name="android:padding">@dimen/big_spacer</item>
         <item name="android:background">@color/zone_info_empty_status_desc_background</item>
@@ -74,7 +74,7 @@
 
     <style name="ZoneInfo.Title" parent="TextView.Title" />
 
-    <style name="ZoneInfo.Content" parent="TextView.Base">
+    <style name="ZoneInfo.Content" parent="TextView.Base.Small">
         <item name="android:layout_marginBottom">@dimen/big_spacer</item>
     </style>
 
