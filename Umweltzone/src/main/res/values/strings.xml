@@ -50,6 +50,21 @@
         sofern diese von Dritten übernommen wurden.
     </string>
 
+    <!-- AboutActivity / Libraries -->
+    <string name="about_references_libraries_title">Bibliotheken</string>
+    <string name="about_references_libraries_content">
+        Im Folgenden wird auf Software-Projekte verwiesen, die in
+        der Anwendung genutzt werden.
+    </string>
+    <string name="about_references_name_googleplayservices">Google Play Services</string>
+    <string name="about_references_url_googleplayservices">http://developer.android.com/google/play-services</string>
+    <string name="about_references_name_googlesupportlibrary">Google Support Library v4</string>
+    <string name="about_references_url_googlesupportlibrary">http://developer.android.com/tools/support-library</string>
+    <string name="about_references_name_actionbarcompat">Google ActionBarCompat, Google Support Library v7</string>
+    <string name="about_references_url_actionbarcompat">http://developer.android.com/tools/support-library</string>
+    <string name="about_references_name_jackson">Jackson JSON processor</string>
+    <string name="about_references_url_jackson">http://jackson.codehaus.org</string>
+
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
