@@ -66,11 +66,17 @@
 
     <!-- AboutActivity -->
 
-    <style name="AboutText" parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="About.Logo" parent="TextView.Base.Small">
+        <item name="android:src">@drawable/umweltzone_logo_bordered_256</item>
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
+    <style name="About.ContentTitle" parent="TextView.Base.Medium">
         <item name="android:gravity">center</item>
-        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="About.TextContent" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/about_text_content_foreground</item>
     </style>
 
     <!-- CitiesActivity -->
