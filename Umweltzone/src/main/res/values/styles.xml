@@ -20,6 +20,14 @@
 
     <!-- Base styles -->
 
+    <style name="HorizontalLine">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/horizontal_line_height</item>
+        <item name="android:background">@color/horizontal_line_fill_color</item>
+        <item name="android:layout_marginTop">@dimen/large_spacer</item>
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
     <style name="TextView.Base.Small" parent="@android:style/TextAppearance.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

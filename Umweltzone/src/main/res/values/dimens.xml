@@ -8,6 +8,8 @@
     <dimen name="large_spacer">16dp</dimen>
     <dimen name="huge_spacer">32dp</dimen>
 
+    <dimen name="horizontal_line_height">1dp</dimen>
+
     <!-- Default screen margins, per the Android Design guidelines. -->
     <integer name="shape_stroke_width">5</integer>
 
