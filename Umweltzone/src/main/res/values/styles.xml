@@ -27,6 +27,20 @@
         <item name="android:layout_centerHorizontal">true</item>
     </style>
 
+    <style name="TextView.Base.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="TextView.Base.Large" parent="@android:style/TextAppearance.Large">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
     <style name="TextView.Title" parent="TextView.Base.Small">
         <item name="android:textSize">@dimen/fragment_title</item>
         <item name="android:layout_marginBottom">@dimen/huge_spacer</item>
