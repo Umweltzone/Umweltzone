@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/About.ContentTitle"
+        android:text="@string/about_disclaimer_title" />
+
+    <TextView
+        style="@style/About.TextContent"
+        android:text="@string/about_disclaimer_content" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_umweltbundesamt" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_umweltbundesamt" />
+
+</merge>

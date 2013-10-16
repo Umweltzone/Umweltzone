@@ -27,5 +27,11 @@
         <include
             layout="@layout/about_copyright" />
 
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_data" />
+
     </LinearLayout>
 </ScrollView>

@@ -20,6 +20,21 @@
     <string name="about_copyright_title">Idee und Umsetzung</string>
     <string name="about_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013</string>
 
+    <!-- AboutActivity / Disclaimer -->
+    <string name="about_disclaimer_title">Daten und Qualität</string>
+    <string name="about_disclaimer_content">
+        Die Daten und Koordinaten der Umweltzonen wurden manuell erstellt.
+        Grundlage sind die offiziellen Publikationen des Umweltbundesamts.
+        Da der Verlauf der Umweltzone meist nur als analoge Grafik
+        (eingescanntes Kartenmaterial) veröffentlicht wird, kann die Genauigkeit
+        der in der Anwendung dargestellten Zonengrenze von der Realität
+        abweichen. Daher können wir keine Haftung/Garantie für die korrekte
+        Darstellung der Umweltzonen und etwaige Kosten oder Strafen übernehmen.
+    </string>
+    <string name="about_references_name_umweltbundesamt">Umweltbundesamt</string>
+    <string name="about_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
+
+
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
 
