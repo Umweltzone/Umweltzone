@@ -33,5 +33,11 @@
         <include
             layout="@layout/about_data" />
 
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_graphics" />
+
     </LinearLayout>
 </ScrollView>

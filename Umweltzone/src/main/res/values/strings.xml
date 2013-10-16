@@ -34,6 +34,15 @@
     <string name="about_references_name_umweltbundesamt">Umweltbundesamt</string>
     <string name="about_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
 
+    <!-- AboutActivity / Graphics -->
+    <string name="about_references_graphics_title">Grafiken</string>
+    <string name="about_references_graphics_content">
+        Die verwendeten Grafiken stammen aus Wikimedia Commons. Dies
+        betrifft das Logo sowie die Plaketten der Schadstoffgruppen.
+    </string>
+    <string name="about_references_name_wikimedia_commons">Wikimedia Commons</string>
+    <string name="about_references_url_wikimedia_commons">http://commons.wikimedia.org</string>
+
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
