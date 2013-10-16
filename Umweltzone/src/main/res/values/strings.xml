@@ -43,6 +43,13 @@
     <string name="about_references_name_wikimedia_commons">Wikimedia Commons</string>
     <string name="about_references_url_wikimedia_commons">http://commons.wikimedia.org</string>
 
+    <!-- AboutActivity / Texts -->
+    <string name="about_references_texts_title">Texte</string>
+    <string name="about_references_texts_content">
+        Den verwendeten Texten ist ein Quellenverweis zugeordnet,
+        sofern diese von Dritten übernommen wurden.
+    </string>
+
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>

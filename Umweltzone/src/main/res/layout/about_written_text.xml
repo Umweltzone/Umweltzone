@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/About.ContentTitle"
+        android:text="@string/about_references_texts_title" />
+
+    <TextView
+        style="@style/About.TextContent"
+        android:text="@string/about_references_texts_content" />
+
+</merge>
