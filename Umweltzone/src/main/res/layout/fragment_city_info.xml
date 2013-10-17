@@ -21,6 +21,11 @@
             android:text="@string/city_info_title" />
 
         <TextView
+            style="@style/ZoneInfo.ZoneStatus"
+            android:id="@+id/city_info_zone_status"
+            android:text="@string/city_info_zone_status" />
+
+        <TextView
             android:id="@+id/city_info_zone_number_since"
             style="@style/ZoneInfo.Content"
             android:text="@string/city_info_zone_number_since" />
