@@ -20,6 +20,7 @@
     <string name="city_info_activity_title">Stadtinfos</string>
 
     <string name="city_info_title">Stadtinfos</string>
+    <string name="city_info_zone_status">frei</string>
     <string name="city_info_zone_number_since">
         Seit dem %1$s dürfen nur Fahrzeuge %2$s
         Umweltplakette in die Umweltzone fahren.

@@ -96,6 +96,12 @@
 
     <style name="ZoneInfo.Title" parent="TextView.Title" />
 
+    <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:padding">@dimen/big_spacer</item>
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
     <style name="ZoneInfo.Content" parent="TextView.Base.Small">
         <item name="android:layout_marginBottom">@dimen/big_spacer</item>
     </style>

@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
@@ -38,6 +39,16 @@ public class CityInfoFragment extends BaseFragment {
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
+
+        // Zone status image
+        TextView zoneStatus = (TextView) activity.findViewById(R.id.city_info_zone_status);
+        int zoneStatusId = zoneNumberToStatusDrawableResourceId(lowEmissionZone.zoneNumber);
+        if (zoneStatusId == INVALID_RESOURCE_ID) {
+            zoneStatus.setVisibility(View.GONE);
+        } else {
+            zoneStatus.setVisibility(View.VISIBLE);
+            zoneStatus.setBackgroundResource(zoneStatusId);
+        }
 
         // Zone number since
         TextView zoneNumberSinceTextView =
@@ -95,6 +106,18 @@ public class CityInfoFragment extends BaseFragment {
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }
         });
+    }
+
+    private int zoneNumberToStatusDrawableResourceId(int zoneNumber) {
+        switch (zoneNumber) {
+            case LowEmissionZoneNumbers.RED:
+                return R.drawable.umweltzone_status_2;
+            case LowEmissionZoneNumbers.YELLOW:
+                return R.drawable.umweltzone_status_3;
+            case LowEmissionZoneNumbers.GREEN:
+                return R.drawable.umweltzone_status_4;
+        }
+        return INVALID_RESOURCE_ID;
     }
 
 }
