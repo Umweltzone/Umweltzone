@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -94,8 +95,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         textView.setText(childText);
 
         final String sourceUrlText = faqAnswer.sourceUrl;
-        TextView sourceUrlView = (TextView) convertView.findViewById(R.id.faq_source_url);
-        sourceUrlView.setText(sourceUrlText);
+        Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
+        sourceUrlButton.setText(sourceUrlText);
 
         return convertView;
     }

@@ -54,7 +54,15 @@
         <item name="android:layout_marginBottom">@dimen/huge_spacer</item>
     </style>
 
-    <style name="Button.Base" parent="TextView.Base.Small" />
+    <style name="Button.Base" parent="android:Widget.Holo.Light.Button.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Button.Web" parent="Button.Base">
+        <item name="android:autoLink">web</item>
+        <item name="android:textColorLink">@color/button_web_text_color_link</item>
+    </style>
 
     <!-- AboutActivity -->
 
@@ -111,5 +119,33 @@
     </style>
 
     <style name="ZoneInfo.FurtherInformation" parent="Button.Base" />
+
+    <!-- FaqActivity -->
+
+    <style name="Faq.ExpandableListView" parent="android:style/Widget.ListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/medium_spacer</item>
+        <item name="android:divider">@color/list_divider</item>
+        <item name="android:dividerHeight">@dimen/tiny_spacer</item>
+    </style>
+
+    <style name="Faq.Content.SourceUrlTitle" parent="TextView.Base.Small">
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/faq_answer_source_title</item>
+    </style>
+
+    <style name="Faq.Content.SourceUrl" parent="Button.Web" />
+
+    <style name="Faq.Content.Question" parent="TextView.Base.Medium">
+        <item name="android:textColor">@color/faq_question_foreground</item>
+        <item name="android:paddingLeft">@dimen/huge_spacer</item>
+    </style>
+
+    <style name="Faq.Content.Answer" parent="TextView.Base.Medium">
+        <item name="android:layout_marginBottom">@dimen/medium_spacer</item>
+        <item name="android:textColor">@color/faq_answer_foreground</item>
+    </style>
+
 
 </resources>
