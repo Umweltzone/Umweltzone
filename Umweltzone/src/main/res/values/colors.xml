@@ -5,6 +5,10 @@
 
     <color name="horizontal_line_fill_color">#fefefe</color>
 
+    <!-- About colors -->
+    <color name="about_text_content_foreground">@android:color/secondary_text_light</color>
+    <color name="about_button_web_title_foreground">@android:color/primary_text_light</color>
+
     <!-- FAQ list group and item colors -->
     <color name="list_divider">#c3c3c3</color>
     <color name="faq_question_foreground">@android:color/primary_text_light</color>

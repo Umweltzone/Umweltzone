@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/About.ContentTitle"
+        android:text="@string/about_references_libraries_title" />
+
+    <TextView
+        style="@style/About.TextContent"
+        android:text="@string/about_references_libraries_content" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_googleplayservices" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_googleplayservices" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_googlesupportlibrary" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_googlesupportlibrary" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_actionbarcompat" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_actionbarcompat" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_jackson" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_jackson" />
+
+</merge>

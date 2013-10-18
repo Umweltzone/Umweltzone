@@ -64,13 +64,38 @@
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
     </style>
 
+    <style name="TextView.Email" parent="TextView.Base.Small">
+        <item name="android:autoLink">email</item>
+        <item name="android:textColorLink">@color/email_text_color_link</item>
+    </style>
+
     <!-- AboutActivity -->
 
-    <style name="AboutText" parent="TextAppearance.AppCompat.Base.Widget.PopupMenu.Small">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="About.Logo" parent="TextView.Base.Small">
+        <item name="android:src">@drawable/umweltzone_logo_bordered_256</item>
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
+    <style name="About.ContentTitle" parent="TextView.Base.Medium">
         <item name="android:gravity">center</item>
-        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="About.TextContent" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/about_text_content_foreground</item>
+    </style>
+
+    <style name="About.Contact.Email" parent="TextView.Email">
+        <item name="android:layout_marginTop">@dimen/large_spacer</item>
+    </style>
+
+    <style name="About.ButtonWebTitle" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/about_button_web_title_foreground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/big_spacer</item>
+    </style>
+
+    <style name="About.ButtonWeb" parent="Button.Web">
+        <item name="android:layout_marginTop">@dimen/medium_spacer</item>
     </style>
 
     <!-- CitiesActivity -->

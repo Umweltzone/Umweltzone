@@ -3,45 +3,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin">
+        android:paddingBottom="@dimen/huge_spacer">
 
         <ImageView
-            android:id="@+id/applicationLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/umweltzone_logo_bordered_256" />
+            android:contentDescription="@string/about_application_logo_description"
+            style="@style/About.Logo" />
 
         <TextView
-            android:id="@+id/textViewAboutTitle"
-            style="@style/AboutText"
-            android:layout_marginTop="16dp"
-            android:layout_below="@id/applicationLogo"
-            android:text="@string/about_title"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewAboutSubtitle"
-            style="@style/AboutText"
-            android:layout_below="@id/textViewAboutTitle"
-            android:layout_marginTop="3dp"
+            style="@style/About.TextContent"
             android:text="@string/about_subtitle" />
 
-        <TextView
-            android:id="@+id/textViewAboutDesc"
-            style="@style/AboutText"
-            android:layout_below="@id/textViewAboutSubtitle"
-            android:layout_marginTop="40dp"
-            android:text="@string/about_desc"
-            android:textSize="16sp" />
+        <include
+            layout="@layout/horizontal_line" />
 
-    </RelativeLayout>
+        <include
+            layout="@layout/about_copyright" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_description" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_data" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_graphics" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_written_text" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_libraries" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_contact" />
+
+    </LinearLayout>
 </ScrollView>
