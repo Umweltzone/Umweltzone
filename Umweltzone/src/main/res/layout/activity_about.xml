@@ -31,6 +31,12 @@
             layout="@layout/horizontal_line" />
 
         <include
+            layout="@layout/about_description" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
             layout="@layout/about_data" />
 
         <include

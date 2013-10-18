@@ -20,6 +20,22 @@
     <string name="about_copyright_title">Idee und Umsetzung</string>
     <string name="about_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013</string>
 
+    <!-- AboutActivity / Description -->
+    <string name="about_description_title">Beschreibung</string>
+    <string name="about_description_content">
+        Diese Anwendung informiert über den Verlauf von Umweltzonen und führt
+        weiterführende Daten und Fakten zum Thema auf. Die Umweltzonen dürfen
+        nur von Fahrzeugen befahren werden, die mit einer entsprechenden Plakette
+        (Schadstoffgruppe) gekennzeichnet sind. Ausgesprochenes Ziel dieser
+        Beschränkung ist es, die Luftqualität zu verbessern. Die Belastung
+        durch Feinstaub soll reduziert und somit die Gesundheit der Bevölkerung
+        geschützt werden. &#8212; Neben der Karte und der Umweltzonen-Liste bietet
+        die Detailansicht weiterführende Informationen zur ausgewählten Zone.
+        Eine Auswahl von häufig gestellten Fragen ist über den Menüpunkt \"FAQ\"
+        erreichbar. Für weitere Themen wird an verschiedenen Stellen auf
+        Informationsangebote im Internet verwiesen.
+    </string>
+
     <!-- AboutActivity / Disclaimer -->
     <string name="about_disclaimer_title">Daten und Qualität</string>
     <string name="about_disclaimer_content">
