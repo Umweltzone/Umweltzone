@@ -57,5 +57,11 @@
         <include
             layout="@layout/about_libraries" />
 
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_contact" />
+
     </LinearLayout>
 </ScrollView>

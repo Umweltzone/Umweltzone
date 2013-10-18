@@ -81,6 +81,15 @@
     <string name="about_references_name_jackson">Jackson JSON processor</string>
     <string name="about_references_url_jackson">http://jackson.codehaus.org</string>
 
+    <!-- AboutActivity / Contact -->
+    <string name="about_contact_title">Kontakt</string>
+    <string name="about_contact_content">
+        Jede Art von Rückmeldung wie z.B. Verbesserungsvorschläge,
+        Fehlermeldungen oder der Wunsch nach neuen Funktionen
+        kann an folgende Adresse gerichtet werden:
+    </string>
+    <string name="about_contact_email">umweltzone.android@gmail.com</string>
+
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
