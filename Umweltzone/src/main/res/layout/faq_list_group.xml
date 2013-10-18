@@ -4,15 +4,10 @@
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:padding="8dp"
-              android:background="@color/faq_question_background">
-
+              android:padding="@dimen/big_spacer">
 
     <TextView
         android:id="@+id/faq_question"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:textColor="@color/faq_question_foreground" />
+        style="@style/Faq.Content.Question" />
 
 </LinearLayout>

@@ -1,38 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="55dip"
+              android:layout_height="wrap_content"
               android:orientation="vertical"
-              android:background="@color/faq_answer_background">
+              android:padding="@dimen/big_spacer">
 
     <TextView
         android:id="@+id/faq_answer"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="17sp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:textColor="@color/faq_answer_foreground" />
+        style="@style/Faq.Content.Answer" />
 
     <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/faq_source_url_title_text"
-            android:id="@+id/faq_source_url_title" />
+            android:id="@+id/faq_source_url_title"
+            style="@style/Faq.Content.SourceUrlTitle"
+            android:text="@string/faq_source_url_title_text" />
 
-        <TextView
+        <Button
             android:id="@+id/faq_source_url"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:textColor="@color/faq_answer_source_url"
-            android:autoLink="web" />
+            style="@style/Faq.Content.SourceUrl" />
 
     </LinearLayout>
 
