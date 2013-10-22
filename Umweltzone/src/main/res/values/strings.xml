@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="app_name">Umweltzone</string>
     <string name="cities_no_content">Keine Städte</string>
@@ -97,7 +97,8 @@
     <string name="city_info_title">Stadtinfos</string>
     <string name="city_info_zone_status">frei</string>
     <string name="city_info_zone_number_since">
-        Seit dem %1$s dürfen nur Fahrzeuge %2$s
+        Seit dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
+        Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
         Umweltplakette in die Umweltzone fahren.
     </string>
     <string name="city_info_zone_number_since_date_format">d. MMMM yyyy</string>
@@ -108,10 +109,14 @@
         Fahrzeuge aller Schadstoffklassen dürfen in die Umweltzone fahren.
     </string>
     <string name="city_info_next_zone_number_as_of">
-        Ab dem %1$s dürfen nur noch Fahrzeuge %2$s Plakette in die Umweltzone fahren.
+        Ab dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
+        noch Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
+        Plakette in die Umweltzone fahren.
     </string>
     <string name="city_info_abroad_licensed_vehicle_zone_info">
-        Im Ausland zugelassene Fahrzeuge dürfen bis %1$s %2$s
+        Im Ausland zugelassene Fahrzeuge dürfen
+        bis <xliff:g id="date">%1$s</xliff:g>
+        <xliff:g id="with_colors">%2$s</xliff:g>
         Umweltplakette in die Umweltzone einfahren.
     </string>
 
