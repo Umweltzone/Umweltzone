@@ -54,9 +54,15 @@ public class MapFragment extends SupportMapFragment {
     private GoogleMap mMap;
     private MapDrawer mMapDrawer;
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
+    private boolean fragmentCreated;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
+    }
+
+    @Override public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        fragmentCreated = true;
     }
 
     @Override
@@ -79,6 +85,14 @@ public class MapFragment extends SupportMapFragment {
             }
             CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, padding);
             mMap.moveCamera(zoneBounds);
+        }
+    }
+
+    private void zoomToLocation(GeoPoint location, float zoomLevel) {
+        if (location.isValid() && zoomLevel > 0) {
+            CameraUpdate cameraUpdate =
+                    CameraUpdateFactory.newLatLngZoom(location.toLatLng(), zoomLevel);
+            mMap.moveCamera(cameraUpdate);
         }
     }
 
@@ -130,24 +144,25 @@ public class MapFragment extends SupportMapFragment {
                     zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
                     storeLastMapState();
                 }
-            }
-            return;
-        }
-        String cityName = extras.getString(BundleKeys.CITY_CHANGE);
-        if (cityName != null) {
-            // City has been selected from the list
-            BoundingBox lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsBoundingBox(activity);
-            if (lastKnownPosition.isValid()) {
-                zoomToBounds(lastKnownPosition.toLatLngBounds());
+            } else if (fragmentCreated) {
+                // MapFragment gets created after app start
+                fragmentCreated = false;
+                float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
+                zoomToLocation(lastKnownPosition, zoomLevel);
             }
         } else {
-            // Home button has been selected
-            GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
-            float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
-            if (lastKnownPosition.isValid() && zoomLevel > 0) {
-                CameraUpdate cameraUpdate =
-                        CameraUpdateFactory.newLatLngZoom(lastKnownPosition.toLatLng(), zoomLevel);
-                mMap.moveCamera(cameraUpdate);
+            String cityName = extras.getString(BundleKeys.CITY_CHANGE);
+            if (cityName != null) {
+                // City has been selected from the list
+                BoundingBox lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsBoundingBox(activity);
+                if (lastKnownPosition.isValid()) {
+                    zoomToBounds(lastKnownPosition.toLatLngBounds());
+                }
+            } else {
+                // Home button has been selected
+                GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
+                float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
+                zoomToLocation(lastKnownPosition, zoomLevel);
             }
         }
     }
