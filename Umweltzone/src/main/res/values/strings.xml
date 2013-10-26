@@ -28,7 +28,7 @@
     <string name="action_about">@string/about_activity_title</string>
 
     <!-- AboutActivity -->
-    <string name="about_application_logo_description">Logo der Anwendung "Umweltzone"</string>
+    <string name="about_application_logo_description">Logo der Anwendung &#8220;Umweltzone&#8221;</string>
     <string name="about_activity_title">Über</string>
     <string name="about_title">@string/app_name</string>
     <string name="about_subtitle">Eine Android App für Umweltzonen in Deutschland</string>
@@ -48,7 +48,7 @@
         durch Feinstaub soll reduziert und somit die Gesundheit der Bevölkerung
         geschützt werden. &#8212; Neben der Karte und der Umweltzonen-Liste bietet
         die Detailansicht weiterführende Informationen zur ausgewählten Zone.
-        Eine Auswahl von häufig gestellten Fragen ist über den Menüpunkt \"FAQ\"
+        Eine Auswahl von häufig gestellten Fragen ist über den Menüpunkt &#8220;FAQ&#8221;
         erreichbar. Für weitere Themen wird an verschiedenen Stellen auf
         Informationsangebote im Internet verwiesen.
     </string>
