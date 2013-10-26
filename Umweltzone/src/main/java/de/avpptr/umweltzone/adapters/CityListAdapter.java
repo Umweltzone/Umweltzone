@@ -82,6 +82,7 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
             // Replaces the round badge with a colored square.
             ColorDrawable colorDrawable = new ColorDrawable(badgeColor);
+            //noinspection deprecation
             viewHolder.zoneBadge.setBackgroundDrawable(colorDrawable);
         } else {
             viewHolder.zoneShape.setColor(badgeColor);
