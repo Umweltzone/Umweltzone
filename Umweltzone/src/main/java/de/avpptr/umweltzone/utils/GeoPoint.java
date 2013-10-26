@@ -27,8 +27,8 @@ public final class GeoPoint {
 
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));
-    protected double mLatitude;
-    protected double mLongitude;
+    protected double mLatitude = Double.NaN;
+    protected double mLongitude = Double.NaN;
 
     private final double MAX_LATITUDE = 90.0;
     private final double MIN_LATITUDE = -90.0;
