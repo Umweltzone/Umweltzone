@@ -37,9 +37,13 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
+import java.util.List;
+
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
@@ -117,6 +121,16 @@ public class MapFragment extends SupportMapFragment {
         }
         Bundle extras = intent.getExtras();
         if (extras == null) {
+            GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
+            if (!lastKnownPosition.isValid()) {
+                LowEmissionZone defaultLowEmissionZone = getDefaultLowEmissionZone(activity);
+                if (defaultLowEmissionZone != null) {
+                    storeLastLowEmmisionZone(defaultLowEmissionZone);
+                    drawPolygonOverlay();
+                    zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
+                    storeLastMapState();
+                }
+            }
             return;
         }
         String cityName = extras.getString(BundleKeys.CITY_CHANGE);
@@ -138,6 +152,15 @@ public class MapFragment extends SupportMapFragment {
         }
     }
 
+    private LowEmissionZone getDefaultLowEmissionZone(Context context) {
+        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
+        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
+            if (lowEmissionZone.name.equalsIgnoreCase("Berlin")) {
+                return lowEmissionZone;
+            }
+        }
+        return null;
+    }
 
     private void drawPolygonOverlay() {
         Activity activity = getActivity();
@@ -153,7 +176,13 @@ public class MapFragment extends SupportMapFragment {
         mMapDrawer.drawPolygon(points, fillColor, strokeColor, strokeWidth);
     }
 
-    private void storeLastKnownLocation() {
+    private void storeLastLowEmmisionZone(LowEmissionZone defaultLowEmissionZone) {
+        Activity activity = getActivity();
+        PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.name);
+        PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.boundingBox);
+    }
+
+    private void storeLastMapState() {
         if (mMap != null) {
             GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
             PreferencesHelper.storeLastKnownLocation(getActivity(), mapCenter);
@@ -165,7 +194,7 @@ public class MapFragment extends SupportMapFragment {
     class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
         @Override
         public void onCameraChange(CameraPosition cameraPosition) {
-            storeLastKnownLocation();
+            storeLastMapState();
         }
     }
 }
