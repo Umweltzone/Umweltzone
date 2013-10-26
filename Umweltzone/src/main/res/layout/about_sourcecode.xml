@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="@style/About.ContentTitle"
+        android:text="@string/about_sourcecode_title" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_sourcecode_url" />
+
+</merge>

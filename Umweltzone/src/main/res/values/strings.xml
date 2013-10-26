@@ -90,6 +90,21 @@
     </string>
     <string name="about_contact_email">umweltzone.android@gmail.com</string>
 
+    <!-- AboutActivity / Sourcecode -->
+    <string name="about_sourcecode_title">Quellcode</string>
+    <string name="about_sourcecode_url">https://bitbucket.org/tbsprs/umweltzone</string>
+
+    <!-- AboutActivity / License -->
+    <string name="about_license_title">Lizenz</string>
+    <string name="about_license_content">
+        Der Quellcode der Umweltzone App unterliegt der GPLv3 Lizenz.
+        Kartenmaterial, Bilder und Texte unterliegen, soweit nicht anders genannt,
+        der Creative Commons Lizenz.
+    </string>
+    <string name="about_license_name_gpl">GPLv3</string>
+    <string name="about_license_url_gpl">http://www.gnu.org/licenses/gpl-3.0.txt</string>
+    <string name="about_license_name_cc">Creative Commons</string>
+    <string name="about_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed.de</string>
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>

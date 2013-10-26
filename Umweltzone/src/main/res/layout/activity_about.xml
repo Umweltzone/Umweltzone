@@ -63,5 +63,17 @@
         <include
             layout="@layout/about_contact" />
 
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_sourcecode" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_license" />
+
     </LinearLayout>
 </ScrollView>
