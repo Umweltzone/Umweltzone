@@ -66,8 +66,8 @@ public class PointsProvider {
             }
             List<GeoPoint> points = ContentProvider.getCircuitPoints(context, resourceId);
             currentPoints = new ArrayList<LatLng>();
-            for (int i = 0; i < points.size(); i++) {
-                currentPoints.add(points.get(i).toLatLng());
+            for (GeoPoint point : points) {
+                currentPoints.add(point.toLatLng());
             }
             if (currentPoints.size() == 0) {
                 throw new IllegalStateException("There are no circuit points available");
