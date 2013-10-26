@@ -123,7 +123,7 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         return false;
     }
 
-    private static class FaqAnswer extends Object {
+    private static class FaqAnswer {
         String text;
         String sourceUrl;
     }
