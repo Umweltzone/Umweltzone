@@ -30,6 +30,11 @@ public final class GeoPoint {
     protected double mLatitude;
     protected double mLongitude;
 
+    private final double MAX_LATITUDE = 90.0;
+    private final double MIN_LATITUDE = -90.0;
+    private final double MAX_LONGITUDE = 180.0;
+    private final double MIN_LONGITUDE = -180.0;
+
     public GeoPoint() {
         // Required by Jackson to de-serialize JSON content
     }
@@ -68,7 +73,8 @@ public final class GeoPoint {
     }
 
     public boolean isValid() {
-        return (mLatitude != 0.0 && mLongitude != 0.0);
+        return (mLatitude > MIN_LATITUDE && mLatitude <= MAX_LATITUDE
+                && mLongitude > MIN_LONGITUDE && mLongitude <= MAX_LONGITUDE);
     }
 
     public LatLng toLatLng() {
