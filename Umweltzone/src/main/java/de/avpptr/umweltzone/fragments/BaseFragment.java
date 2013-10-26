@@ -25,7 +25,7 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragment extends Fragment {
 
-    int INVALID_RESOURCE_ID = 0;
+    final int INVALID_RESOURCE_ID = 0;
 
     public abstract int getLayoutResource();
 
