@@ -37,13 +37,10 @@ import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
-import java.util.List;
-
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
@@ -137,7 +134,7 @@ public class MapFragment extends SupportMapFragment {
         if (extras == null) {
             GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
             if (!lastKnownPosition.isValid()) {
-                LowEmissionZone defaultLowEmissionZone = getDefaultLowEmissionZone(activity);
+                LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmmisionZone(defaultLowEmissionZone);
                     drawPolygonOverlay();
@@ -165,16 +162,6 @@ public class MapFragment extends SupportMapFragment {
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }
         }
-    }
-
-    private LowEmissionZone getDefaultLowEmissionZone(Context context) {
-        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
-        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
-            if (lowEmissionZone.name.equalsIgnoreCase("Berlin")) {
-                return lowEmissionZone;
-            }
-        }
-        return null;
     }
 
     private void drawPolygonOverlay() {
