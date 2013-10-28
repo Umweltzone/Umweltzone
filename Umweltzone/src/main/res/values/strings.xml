@@ -147,7 +147,7 @@
     </string>
     <string name="city_info_abroad_licensed_vehicle_zone_info">
         Im Ausland zugelassene Fahrzeuge dürfen
-        bis <xliff:g id="date">%1$s</xliff:g>
+        bis <xliff:g id="date">%1$s</xliff:g>&#160;
         <xliff:g id="with_colors">%2$s</xliff:g>
         Umweltplakette in die Umweltzone einfahren.
     </string>
