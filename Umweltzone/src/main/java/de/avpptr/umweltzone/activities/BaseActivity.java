@@ -85,7 +85,7 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     // http://stackoverflow.com/a/17998802/356895
     // http://code.google.com/p/android/issues/detail?id=58108
-    public static int getContentViewCompat() {
+    private static int getContentViewCompat() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH ?
                 android.R.id.content : R.id.action_bar_activity_content;
     }

@@ -27,7 +27,7 @@ public abstract class BaseFragment extends Fragment {
 
     final int INVALID_RESOURCE_ID = 0;
 
-    public abstract int getLayoutResource();
+    protected abstract int getLayoutResource();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

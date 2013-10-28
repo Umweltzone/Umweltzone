@@ -162,7 +162,7 @@ public class MapFragment extends SupportMapFragment {
         }
     }
 
-    class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
+    private class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
         @Override
         public void onCameraChange(CameraPosition cameraPosition) {
             storeLastKnownLocation();
