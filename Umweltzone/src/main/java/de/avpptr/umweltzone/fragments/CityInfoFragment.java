@@ -30,7 +30,7 @@ import de.avpptr.umweltzone.utils.StringHelper;
 
 public class CityInfoFragment extends BaseFragment {
 
-    LowEmissionZone mLowEmissionZone;
+    private LowEmissionZone mLowEmissionZone;
 
     @Override public int getLayoutResource() {
         mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());

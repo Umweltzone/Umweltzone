@@ -35,7 +35,7 @@ import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class CitiesFragment extends ListFragment {
 
-    List<LowEmissionZone> mLowEmissionZones;
+    private List<LowEmissionZone> mLowEmissionZones;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {

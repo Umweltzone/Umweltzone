@@ -30,12 +30,10 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/city_info_empty_title"
             style="@style/ZoneInfoEmpty.Title"
             android:text="@string/city_info_empty_title" />
 
         <TextView
-            android:id="@+id/city_info_empty_status_desc"
             style="@style/ZoneInfoEmpty.StatusDesc"
             android:text="@string/city_info_empty_status_desc" />
 

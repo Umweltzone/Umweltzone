@@ -25,14 +25,13 @@ import android.view.ViewGroup;
 
 public abstract class BaseFragment extends Fragment {
 
-    int INVALID_RESOURCE_ID = 0;
+    final int INVALID_RESOURCE_ID = 0;
 
-    public abstract int getLayoutResource();
+    protected abstract int getLayoutResource();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(getLayoutResource(), container, false);
-        return rootView;
+        return inflater.inflate(getLayoutResource(), container, false);
     }
 
 }

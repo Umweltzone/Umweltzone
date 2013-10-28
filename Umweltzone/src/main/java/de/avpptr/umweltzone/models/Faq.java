@@ -17,7 +17,7 @@
 
 package de.avpptr.umweltzone.models;
 
-public class Faq extends Object {
+public class Faq {
 
     public int position;
     public String question;

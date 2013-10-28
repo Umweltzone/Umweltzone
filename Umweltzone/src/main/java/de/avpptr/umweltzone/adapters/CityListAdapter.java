@@ -36,9 +36,9 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
 
-    protected Context mContext;
-    protected int mResourceId;
-    protected LowEmissionZone[] mLowEmissionZones;
+    protected final Context mContext;
+    protected final int mResourceId;
+    protected final LowEmissionZone[] mLowEmissionZones;
 
     public CityListAdapter(Context context, int resource, LowEmissionZone[] lowEmissionZones) {
         super(context, resource, lowEmissionZones);
@@ -82,6 +82,7 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
             // Replaces the round badge with a colored square.
             ColorDrawable colorDrawable = new ColorDrawable(badgeColor);
+            //noinspection deprecation
             viewHolder.zoneBadge.setBackgroundDrawable(colorDrawable);
         } else {
             viewHolder.zoneShape.setColor(badgeColor);
