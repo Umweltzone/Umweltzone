@@ -25,6 +25,8 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
 
+    <supports-screens android:anyDensity="true" />
+
     <!-- Copied from Google Maps Library/AndroidManifest.xml. -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
