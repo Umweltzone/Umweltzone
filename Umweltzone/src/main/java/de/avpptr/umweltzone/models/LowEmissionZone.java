@@ -39,13 +39,21 @@ public class LowEmissionZone {
     public Date abroadLicensedVehicleZoneNumberUntil;
     public String urlUmweltPlaketteDe;
 
-    // TODO Parser should not be called more often then needed
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
+        String zoneName = PreferencesHelper.restoreLastKnownLocationAsString(context);
+        return getLowEmissionZone(context, zoneName);
+    }
+
+    public static LowEmissionZone getDefaultLowEmissionZone(Context context) {
+        return getLowEmissionZone(context, "Berlin");
+    }
+
+    // TODO Parser should not be called more often then needed
+    private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
         List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
         if (lowEmissionZones == null) {
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
-        String zoneName = PreferencesHelper.restoreLastKnownLocationAsString(context);
         for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
             if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
                 return lowEmissionZone;

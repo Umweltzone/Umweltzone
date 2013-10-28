@@ -25,10 +25,19 @@ import java.util.Locale;
 
 public final class GeoPoint {
 
+    public static final double MAX_LATITUDE = 90.0;
+    public static final double MIN_LATITUDE = -90.0;
+    public static final double MAX_LONGITUDE = 180.0;
+    public static final double MIN_LONGITUDE = -180.0;
+
+    public static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
+    public static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
+
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));
-    protected double mLatitude;
-    protected double mLongitude;
+
+    protected double mLatitude = INVALID_LATITUDE;
+    protected double mLongitude = INVALID_LONGITUDE;
 
     public GeoPoint() {
         // Required by Jackson to de-serialize JSON content
@@ -68,7 +77,8 @@ public final class GeoPoint {
     }
 
     public boolean isValid() {
-        return (mLatitude != 0.0 && mLongitude != 0.0);
+        return (mLatitude > MIN_LATITUDE && mLatitude <= MAX_LATITUDE
+                && mLongitude > MIN_LONGITUDE && mLongitude <= MAX_LONGITUDE);
     }
 
     public LatLng toLatLng() {
@@ -77,7 +87,11 @@ public final class GeoPoint {
 
     @Override
     public String toString() {
-        return "latitude = " + df.format(mLatitude) + ", longitude = " + df.format(mLongitude);
+        if (isValid()) {
+            return "latitude = " + df.format(mLatitude) + ", longitude = " + df.format(mLongitude);
+        } else {
+            return "INVALID GeoPoint";
+        }
     }
 
 }
