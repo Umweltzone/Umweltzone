@@ -44,10 +44,10 @@ public class PreferencesHelper {
         SharedPreferences sharedPreferences = getSharedPreferences(context);
         double lat = Double.longBitsToDouble(sharedPreferences.getLong(
                 Preferences.KEY_CENTER_LATITUDE,
-                Double.doubleToLongBits(Double.NaN)));
+                Double.doubleToLongBits(GeoPoint.INVALID_LATITUDE)));
         double lon = Double.longBitsToDouble(sharedPreferences.getLong(
                 Preferences.KEY_CENTER_LONGITUDE,
-                Double.doubleToLongBits(Double.NaN)));
+                Double.doubleToLongBits(GeoPoint.INVALID_LONGITUDE)));
         return new GeoPoint(lat, lon);
     }
 
@@ -55,16 +55,16 @@ public class PreferencesHelper {
         SharedPreferences sharedPreferences = getSharedPreferences(context);
         double southWestLatitude = Double.longBitsToDouble(
                 sharedPreferences.getLong(Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE,
-                        Double.doubleToLongBits(Double.NaN)));
+                        Double.doubleToLongBits(GeoPoint.INVALID_LATITUDE)));
         double southWestLongitude = Double.longBitsToDouble(
                 sharedPreferences.getLong(Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE,
-                        Double.doubleToLongBits(Double.NaN)));
+                        Double.doubleToLongBits(GeoPoint.INVALID_LONGITUDE)));
         double northEastLatitude = Double.longBitsToDouble(
                 sharedPreferences.getLong(Preferences.KEY_BOUNDING_BOX_NORTHEAST_LATITUDE,
-                        Double.doubleToLongBits(Double.NaN)));
+                        Double.doubleToLongBits(GeoPoint.INVALID_LATITUDE)));
         double northEastLongitude = Double.longBitsToDouble(
                 sharedPreferences.getLong(Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE,
-                        Double.doubleToLongBits(Double.NaN)));
+                        Double.doubleToLongBits(GeoPoint.INVALID_LONGITUDE)));
         GeoPoint southWest = new GeoPoint(southWestLatitude, southWestLongitude);
         GeoPoint northEast = new GeoPoint(northEastLatitude, northEastLongitude);
         return new BoundingBox(southWest, northEast);
