@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.contract.Resources;
 
 public class PointsProvider {
 
@@ -43,7 +44,7 @@ public class PointsProvider {
         Location location = Converter.cityNameToLocation(cityName);
         if (location != currentLocation || currentPoints == null) {
             currentLocation = location;
-            int resourceId = 0;
+            int resourceId = Resources.INVALID_RESOURCE_ID;
             switch (location) {
                 case Berlin:
                     resourceId = R.raw.zone_berlin;
@@ -61,7 +62,7 @@ public class PointsProvider {
                     resourceId = R.raw.zone_stuttgart;
                     break;
             }
-            if (resourceId == 0) {
+            if (resourceId == Resources.INVALID_RESOURCE_ID) {
                 throw new IllegalStateException("Location " + location + " is not supported");
             }
             List<GeoPoint> points = ContentProvider.getCircuitPoints(context, resourceId);

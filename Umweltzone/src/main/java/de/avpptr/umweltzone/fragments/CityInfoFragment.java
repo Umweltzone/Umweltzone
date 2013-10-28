@@ -24,6 +24,7 @@ import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
@@ -60,7 +61,7 @@ public class CityInfoFragment extends BaseFragment {
         // Zone status image
         TextView zoneStatus = (TextView) activity.findViewById(R.id.city_info_zone_status);
         int zoneStatusId = zoneNumberToStatusDrawableResourceId(lowEmissionZone.zoneNumber);
-        if (zoneStatusId == INVALID_RESOURCE_ID) {
+        if (zoneStatusId == Resources.INVALID_RESOURCE_ID) {
             zoneStatus.setVisibility(View.GONE);
         } else {
             zoneStatus.setVisibility(View.VISIBLE);
@@ -134,7 +135,7 @@ public class CityInfoFragment extends BaseFragment {
             case LowEmissionZoneNumbers.GREEN:
                 return R.drawable.umweltzone_status_4;
         }
-        return INVALID_RESOURCE_ID;
+        return Resources.INVALID_RESOURCE_ID;
     }
 
 }
