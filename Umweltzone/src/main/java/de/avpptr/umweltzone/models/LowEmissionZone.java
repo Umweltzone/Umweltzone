@@ -22,6 +22,7 @@ import android.content.Context;
 import java.util.Date;
 import java.util.List;
 
+import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -45,7 +46,8 @@ public class LowEmissionZone {
     }
 
     public static LowEmissionZone getDefaultLowEmissionZone(Context context) {
-        return getLowEmissionZone(context, "Berlin");
+        String defaultZone = context.getString(R.string.config_default_zone_name);
+        return getLowEmissionZone(context, defaultZone);
     }
 
     // TODO Parser should not be called more often then needed

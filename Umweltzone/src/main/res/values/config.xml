@@ -29,4 +29,7 @@
     <!-- Date format used in .json files/response -->
     <string name="config_zone_number_since_date_format">yyyy-MM-dd</string>
 
+    <!-- Default zone -->
+    <string name="config_default_zone_name">Berlin</string>
+
 </resources>
