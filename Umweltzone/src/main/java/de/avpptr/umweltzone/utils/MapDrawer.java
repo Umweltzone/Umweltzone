@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.PolygonOptions;
 
 public class MapDrawer {
 
-    protected GoogleMap mMap;
+    protected final GoogleMap mMap;
     protected Polygon mZonePolygon;
 
     public MapDrawer(GoogleMap map) {
