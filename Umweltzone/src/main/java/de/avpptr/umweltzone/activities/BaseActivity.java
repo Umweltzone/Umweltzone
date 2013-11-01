@@ -38,9 +38,8 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActionBar = getSupportActionBar();
-        // TODO Review issue #58007
-        // http://code.google.com/p/android/issues/detail?id=58007
         mActionBar.setDisplayHomeAsUpEnabled(true);
+        mActionBar.setHomeButtonEnabled(true);
     }
 
     @Override
