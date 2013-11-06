@@ -122,6 +122,11 @@
     <string name="about_license_name_cc">Creative Commons</string>
     <string name="about_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed.de</string>
 
+    <!-- AboutActivity / Build Info -->
+    <string name="about_build_info_title">Build Informationen</string>
+    <string name="about_build_info_time">Build Zeit</string>
+    <string name="about_build_info_hash">Build Hash</string>
+
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
 
