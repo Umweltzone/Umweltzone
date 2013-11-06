@@ -102,6 +102,11 @@
         <item name="android:textColor">@color/about_text_content_foreground</item>
     </style>
 
+    <style name="About.SingleLineTextContent" parent="About.TextContent">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
     <style name="About.Contact.Email" parent="TextView.Email">
         <item name="android:layout_marginTop">@dimen/large_spacer</item>
     </style>

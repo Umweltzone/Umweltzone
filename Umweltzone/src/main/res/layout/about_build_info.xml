@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/buildTime"
-        style="@style/About.TextContent" />
+        style="@style/About.SingleLineTextContent" />
 
     <TextView
         style="@style/About.SubTitle"
@@ -36,6 +36,6 @@
 
     <TextView
         android:id="@+id/buildHash"
-        style="@style/About.TextContent" />
+        style="@style/About.SingleLineTextContent" />
 
 </merge>
