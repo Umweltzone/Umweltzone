@@ -4,8 +4,10 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:0.6.3'
+        classpath 'net.sf.proguard:proguard-gradle:4.10'
     }
 }
+
 apply plugin: 'android'
 
 repositories {
@@ -58,6 +60,8 @@ android {
             zipAlign = true
         }
         release {
+            runProguard true
+            proguardFile 'proguard.cfg'
             signingConfig signingConfigs.release
         }
     }
