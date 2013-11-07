@@ -39,6 +39,10 @@
             style="@style/About.TextContent"
             android:text="@string/about_subtitle" />
 
+        <TextView
+            android:id="@+id/buildVersion"
+            style="@style/About.TextContent" />
+
         <include
             layout="@layout/horizontal_line" />
 
@@ -92,6 +96,12 @@
 
         <include
             layout="@layout/about_license" />
+
+        <include
+            layout="@layout/horizontal_line" />
+
+        <include
+            layout="@layout/about_build_info" />
 
     </LinearLayout>
 </ScrollView>

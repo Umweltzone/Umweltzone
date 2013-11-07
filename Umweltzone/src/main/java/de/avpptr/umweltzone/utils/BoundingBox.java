@@ -38,6 +38,16 @@ public class BoundingBox {
         this.northEast = northEast;
     }
 
+    // Required by Jackson and ProGuard to de-serialize JSON content
+    public void setSouthWest(GeoPoint southWest) {
+        this.southWest = southWest;
+    }
+
+    // Required by Jackson and ProGuard to de-serialize JSON content
+    public void setNorthEast(GeoPoint northEast) {
+        this.northEast = northEast;
+    }
+
     public GeoPoint getSouthWest() {
         return southWest;
     }

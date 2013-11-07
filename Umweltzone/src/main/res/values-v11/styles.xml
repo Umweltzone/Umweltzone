@@ -26,6 +26,17 @@
         <!-- API 11 theme customizations can go here. -->
     </style>
 
+    <style name="About.TextContent" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/about_text_content_foreground</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="About.SingleLineTextContent" parent="About.TextContent">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
     <style name="Faq.ExpandableListView" parent="@android:style/Widget.Holo.Light.ExpandableListView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>

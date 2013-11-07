@@ -102,6 +102,11 @@
         <item name="android:textColor">@color/about_text_content_foreground</item>
     </style>
 
+    <style name="About.SingleLineTextContent" parent="About.TextContent">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
     <style name="About.Contact.Email" parent="TextView.Email">
         <item name="android:layout_marginTop">@dimen/large_spacer</item>
     </style>
@@ -114,6 +119,12 @@
 
     <style name="About.ButtonWeb" parent="Button.Web">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
+    </style>
+
+    <style name="About.SubTitle" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/about_sub_title_foreground</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/big_spacer</item>
     </style>
 
     <!-- CitiesActivity -->

@@ -19,7 +19,9 @@ package de.avpptr.umweltzone.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.TextView;
 
+import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 
 public class AboutActivity extends BaseActivity {
@@ -28,6 +30,12 @@ public class AboutActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
+        TextView buildVersionTextView = (TextView) findViewById(R.id.buildVersion);
+        buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);
+        TextView buildTimeTextView = (TextView) findViewById(R.id.buildTime);
+        buildTimeTextView.setText(BuildConfig.BUILD_TIME);
+        TextView buildHashTextView = (TextView) findViewById(R.id.buildHash);
+        buildHashTextView.setText(BuildConfig.GIT_SHA);
     }
 
     @Override

@@ -1,0 +1,4 @@
+signing.release.keystoreFilePath=
+signing.release.keystorePassword=
+signing.release.keyAlias=
+signing.release.keyPassword=
