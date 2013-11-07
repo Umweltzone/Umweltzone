@@ -46,7 +46,7 @@ public class CitiesFragment extends ListFragment {
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         CityListAdapter adapter = new CityListAdapter(activity, R.layout.cities_row,
-                mLowEmissionZones.toArray(new LowEmissionZone[0]));
+                mLowEmissionZones.toArray(new LowEmissionZone[mLowEmissionZones.size()]));
         setListAdapter(adapter);
     }
 
