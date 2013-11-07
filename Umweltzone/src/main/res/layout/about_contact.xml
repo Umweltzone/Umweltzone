@@ -30,4 +30,16 @@
         style="@style/About.Contact.Email"
         android:text="@string/about_contact_email" />
 
+    <TextView
+        style="@style/About.TextContent"
+        android:text="@string/about_uservoice_content" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_uservoice_title" />
+
+    <Button
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_uservoice_url" />
+
 </merge>
