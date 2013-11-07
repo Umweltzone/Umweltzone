@@ -24,6 +24,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 
@@ -102,8 +103,10 @@ public class MapFragment extends SupportMapFragment {
             if (connectionResult != ConnectionResult.SUCCESS) {
                 showGooglePlayServicesErrorDialog(activity, connectionResult);
             } else {
-                mMap = ((SupportMapFragment) activity.getSupportFragmentManager()
-                        .findFragmentById(R.id.map)).getMap();
+                FragmentManager fragmentManager = activity.getSupportFragmentManager();
+                SupportMapFragment mapFragment =
+                        (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
+                mMap = mapFragment.getMap();
                 if (mMap != null) {
                     onMapIsSetUp(activity);
                 }
