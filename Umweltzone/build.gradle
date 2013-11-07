@@ -57,6 +57,7 @@ android {
 
     buildTypes {
         debug {
+            packageNameSuffix ".debug"
             zipAlign = true
         }
         release {
