@@ -23,6 +23,8 @@ import java.util.Date;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -54,6 +56,7 @@ public class LowEmissionZone {
     private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
         List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
         if (lowEmissionZones == null) {
+            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         for (LowEmissionZone lowEmissionZone : lowEmissionZones) {

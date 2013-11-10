@@ -19,12 +19,16 @@ package de.avpptr.umweltzone.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.ExpandableListView;
 
+import java.util.HashMap;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.adapters.FaqsAdapter;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ContentProvider;
 
@@ -35,6 +39,17 @@ public class FaqActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
         ExpandableListView faqsList = (ExpandableListView) findViewById(R.id.faq_list);
+        faqsList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                if (!parent.isGroupExpanded(groupPosition)) {
+                    HashMap<String, String> parameters = new HashMap<String, String>();
+                    parameters.put("position", Integer.toString(groupPosition));
+                    mTracking.track(TrackingPoint.FaqItemClick, parameters);
+                }
+                return false;
+            }
+        });
         List<Faq> faqs = ContentProvider.getFaqs(this);
         faqsList.setAdapter(new FaqsAdapter(this, faqs));
     }

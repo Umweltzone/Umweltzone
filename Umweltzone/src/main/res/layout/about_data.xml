@@ -31,6 +31,7 @@
         android:text="@string/about_references_name_umweltbundesamt" />
 
     <Button
+        android:id="@+id/aboutButtonEnvironmentAgency"
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_umweltbundesamt" />
 

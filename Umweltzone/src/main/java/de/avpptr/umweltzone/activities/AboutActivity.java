@@ -19,10 +19,16 @@ package de.avpptr.umweltzone.activities;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.HashMap;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public class AboutActivity extends BaseActivity {
 
@@ -36,6 +42,104 @@ public class AboutActivity extends BaseActivity {
         buildTimeTextView.setText(BuildConfig.BUILD_TIME);
         TextView buildHashTextView = (TextView) findViewById(R.id.buildHash);
         buildHashTextView.setText(BuildConfig.GIT_SHA);
+
+        Button userVoiceButton = (Button) findViewById(R.id.aboutButtonUserVoice);
+        userVoiceButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                mTracking.track(TrackingPoint.UserVoiceClick);
+            }
+        });
+
+        TextView contactEmailTextView = (TextView) findViewById(R.id.aboutContactEmail);
+        contactEmailTextView.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                mTracking.track(TrackingPoint.SupportMailClick);
+            }
+        });
+
+        Button environmentAgencyButton = (Button) findViewById(R.id.aboutButtonEnvironmentAgency);
+        environmentAgencyButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_item", "environment_agency");
+                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+            }
+        });
+
+        Button wikimediaButton = (Button) findViewById(R.id.aboutButtonWikimedia);
+        wikimediaButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_item", "wikimedia_commons");
+                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+            }
+        });
+
+        Button libraryGooglePlayButton = (Button) findViewById(R.id.aboutButtonGooglePlay);
+        libraryGooglePlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_library", "google_play_services");
+                mTracking.track(TrackingPoint.AboutLibraryClick, parameters);
+            }
+        });
+        Button libraryGoogleSupportButton = (Button) findViewById(R.id.aboutButtonGoogleSupportLibrary);
+        libraryGoogleSupportButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_library", "google_support_library");
+                mTracking.track(TrackingPoint.AboutLibraryClick, parameters);
+            }
+        });
+        Button libraryActionBarCompatButton = (Button) findViewById(R.id.aboutButtonActionBarCompat);
+        libraryActionBarCompatButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_library", "action_bat_compat");
+                mTracking.track(TrackingPoint.AboutLibraryClick, parameters);
+            }
+        });
+        Button libraryJacksonButton = (Button) findViewById(R.id.aboutButtonJackson);
+        libraryJacksonButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_library", "jackson");
+                mTracking.track(TrackingPoint.AboutLibraryClick, parameters);
+            }
+        });
+        Button libraryGoogleAnalyticsButton = (Button) findViewById(R.id.aboutButtonGoogleAnalytics);
+        libraryGoogleAnalyticsButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_library", "google_analytics");
+                mTracking.track(TrackingPoint.AboutLibraryClick, parameters);
+            }
+        });
+        Button gplButton = (Button) findViewById(R.id.aboutButtonGpl);
+        gplButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_item", "gpl_url");
+                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+            }
+        });
+        Button ccButton = (Button) findViewById(R.id.aboutButtonCC);
+        ccButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_item", "cc_url");
+                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+            }
+        });
+        Button sourceButton = (Button) findViewById(R.id.aboutButtonSourceCode);
+        sourceButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                HashMap<String, String> parameters = new HashMap<String, String>();
+                parameters.put("about_item", "source_code_url");
+                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+            }
+        });
+
     }
 
     @Override

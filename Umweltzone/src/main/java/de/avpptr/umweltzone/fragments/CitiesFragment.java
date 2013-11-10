@@ -24,10 +24,14 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListView;
 
+import java.util.HashMap;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.adapters.CityListAdapter;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.IntentHelper;
@@ -35,7 +39,12 @@ import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class CitiesFragment extends ListFragment {
 
+    protected final Tracking mTracking;
     private List<LowEmissionZone> mLowEmissionZones;
+
+    public CitiesFragment() {
+        mTracking = Umweltzone.getTracker();
+    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -43,6 +52,8 @@ public class CitiesFragment extends ListFragment {
         Activity activity = getActivity();
         mLowEmissionZones = ContentProvider.getLowEmissionZones(activity);
         if (mLowEmissionZones == null) {
+            mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
+
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         CityListAdapter adapter = new CityListAdapter(activity, R.layout.cities_row,
@@ -53,6 +64,11 @@ public class CitiesFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         LowEmissionZone lowEmissionZone = mLowEmissionZones.get(position);
+
+        HashMap<String, String> parameters = new HashMap<String, String>();
+        parameters.put("zone_name", lowEmissionZone.name);
+        mTracking.track(TrackingPoint.CityListItemClick, parameters);
+
         storeSelectedLocation(lowEmissionZone);
         Intent intent = IntentHelper.getChangeCityIntent(getActivity(), lowEmissionZone.name);
         startActivity(intent);

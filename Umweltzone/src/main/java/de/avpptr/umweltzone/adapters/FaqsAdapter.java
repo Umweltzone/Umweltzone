@@ -25,19 +25,25 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.HashMap;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 
 public class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
     private final List<Faq> mFaqs;
+    protected final Tracking mTracking;
 
     public FaqsAdapter(Context context, List<Faq> faqs) {
         mContext = context;
         mFaqs = faqs;
+        mTracking = Umweltzone.getTracker();
     }
 
     @Override
@@ -105,6 +111,15 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
+            Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
+            final int groupPos = groupPosition;
+            sourceUrlButton.setOnClickListener(new View.OnClickListener() {
+                @Override public void onClick(View v) {
+                    HashMap<String, String> parameters = new HashMap<String, String>();
+                    parameters.put("position", Integer.toString(groupPos));
+                    mTracking.track(TrackingPoint.FaqSourceClick, parameters);
+                }
+            });
         }
 
         final String childText = faqAnswer.text;

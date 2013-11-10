@@ -17,6 +17,7 @@
 
 package de.avpptr.umweltzone.activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,12 +29,23 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.IntentHelper;
 
 public abstract class BaseActivity extends ActionBarActivity {
 
     protected ActionBar mActionBar;
+    protected final Tracking mTracking;
+
+    public BaseActivity() {
+        mTracking = Umweltzone.getTracker();
+    }
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +99,22 @@ public abstract class BaseActivity extends ActionBarActivity {
     private static int getContentViewCompat() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH ?
                 android.R.id.content : R.id.action_bar_activity_content;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Map<String, Activity> parameters = new HashMap<String, Activity>();
+        parameters.put("activity", this);
+        mTracking.track(TrackingPoint.ActivityStart, parameters);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Map<String, Activity> parameters = new HashMap<String, Activity>();
+        parameters.put("activity", this);
+        mTracking.track(TrackingPoint.ActivityStop, parameters);
     }
 
 }

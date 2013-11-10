@@ -25,6 +25,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.Resources;
 
 public class PointsProvider {
@@ -63,6 +65,7 @@ public class PointsProvider {
                     break;
             }
             if (resourceId == Resources.INVALID_RESOURCE_ID) {
+                Umweltzone.getTracker().trackError(TrackingPoint.LocationNotSupportedError);
                 throw new IllegalStateException("Location " + location + " is not supported");
             }
             List<GeoPoint> points = ContentProvider.getCircuitPoints(context, resourceId);
@@ -71,6 +74,7 @@ public class PointsProvider {
                 currentPoints.add(point.toLatLng());
             }
             if (currentPoints.size() == 0) {
+                Umweltzone.getTracker().trackError(TrackingPoint.NoCircuitPointsAvailableError);
                 throw new IllegalStateException("There are no circuit points available");
             }
         }
