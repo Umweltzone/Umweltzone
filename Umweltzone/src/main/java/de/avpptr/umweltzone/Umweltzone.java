@@ -15,30 +15,24 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.fragments;
+package de.avpptr.umweltzone;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.app.Application;
 
-import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
 import de.avpptr.umweltzone.analytics.Tracking;
 
-public abstract class BaseFragment extends Fragment {
+public class Umweltzone extends Application {
 
-    protected final Tracking mTracking;
+    private static GoogleAnalyticsTracking mGa;
 
-    public BaseFragment() {
-        mTracking = Umweltzone.getTracker();
+    public void onCreate() {
+        super.onCreate();
+
+        mGa = new GoogleAnalyticsTracking(getApplicationContext());
     }
 
-    protected abstract int getLayoutResource();
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(getLayoutResource(), container, false);
+    public static Tracking getTracker() {
+        return mGa;
     }
-
 }

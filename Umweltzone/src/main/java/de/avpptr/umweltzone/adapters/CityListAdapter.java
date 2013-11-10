@@ -31,6 +31,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
@@ -39,12 +42,14 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
     protected final Context mContext;
     protected final int mResourceId;
     protected final LowEmissionZone[] mLowEmissionZones;
+    protected final Tracking mTracking;
 
     public CityListAdapter(Context context, int resource, LowEmissionZone[] lowEmissionZones) {
         super(context, resource, lowEmissionZones);
         mContext = context;
         mResourceId = resource;
         mLowEmissionZones = lowEmissionZones;
+        mTracking = Umweltzone.getTracker();
     }
 
 
@@ -67,6 +72,7 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
                 }
                 view.setTag(viewHolder);
             } else {
+                mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError);
                 throw new IllegalStateException("City row could be inflated.");
             }
         } else {

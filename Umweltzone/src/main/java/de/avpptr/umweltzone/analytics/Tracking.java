@@ -15,30 +15,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.fragments;
+package de.avpptr.umweltzone.analytics;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import java.util.Map;
 
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
+public interface Tracking {
+    void track(TrackingPoint eventName);
 
-public abstract class BaseFragment extends Fragment {
+    void track(TrackingPoint eventName, Map parameters);
 
-    protected final Tracking mTracking;
+    void trackError(TrackingPoint eventName);
 
-    public BaseFragment() {
-        mTracking = Umweltzone.getTracker();
-    }
-
-    protected abstract int getLayoutResource();
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(getLayoutResource(), container, false);
-    }
-
+    void trackError(TrackingPoint eventName, Map parameters);
 }

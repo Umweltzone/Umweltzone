@@ -31,6 +31,7 @@
         android:text="@string/about_references_name_googleplayservices" />
 
     <Button
+        android:id="@+id/aboutButtonGooglePlay"
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_googleplayservices" />
 
@@ -39,6 +40,7 @@
         android:text="@string/about_references_name_googlesupportlibrary" />
 
     <Button
+        android:id="@+id/aboutButtonGoogleSupportLibrary"
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_googlesupportlibrary" />
 
@@ -47,6 +49,7 @@
         android:text="@string/about_references_name_actionbarcompat" />
 
     <Button
+        android:id="@+id/aboutButtonActionBarCompat"
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_actionbarcompat" />
 
@@ -55,7 +58,17 @@
         android:text="@string/about_references_name_jackson" />
 
     <Button
+        android:id="@+id/aboutButtonJackson"
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_jackson" />
+
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_ga" />
+
+    <Button
+        android:id="@+id/aboutButtonGoogleAnalytics"
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_ga" />
 
 </merge>

@@ -39,6 +39,9 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
@@ -53,9 +56,11 @@ public class MapFragment extends SupportMapFragment {
     private MapDrawer mMapDrawer;
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
     private boolean fragmentCreated;
+    protected final Tracking mTracking;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
+        mTracking = Umweltzone.getTracker();
     }
 
     @Override public void onCreate(Bundle savedInstanceState) {
@@ -71,6 +76,7 @@ public class MapFragment extends SupportMapFragment {
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
         if (mMap == null) {
+            mTracking.trackError(TrackingPoint.MapIsNullError);
             throw new IllegalStateException("Map is null");
         } else {
             DisplayMetrics displaymetrics = new DisplayMetrics();

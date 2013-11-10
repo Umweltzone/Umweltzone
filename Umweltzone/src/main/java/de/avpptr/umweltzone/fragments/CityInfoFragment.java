@@ -23,6 +23,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
@@ -103,6 +105,7 @@ public class CityInfoFragment extends BaseFragment {
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
+                mTracking.track(TrackingPoint.CityInfoShowOnMapClick);
                 startActivity(IntentHelper.getChangeCityIntent(activity, mLowEmissionZone.name));
             }
         });
@@ -111,6 +114,7 @@ public class CityInfoFragment extends BaseFragment {
         Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
         furtherInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
+                mTracking.track(TrackingPoint.CityInfoFurtherInfoClick);
                 startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
             }
         });
