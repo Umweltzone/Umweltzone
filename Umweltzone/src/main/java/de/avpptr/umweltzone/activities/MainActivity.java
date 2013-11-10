@@ -28,8 +28,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_map);
-        mActionBar.setDisplayHomeAsUpEnabled(false);
-        mActionBar.setHomeButtonEnabled(false);
     }
 
     @Override

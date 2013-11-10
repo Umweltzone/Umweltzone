@@ -35,6 +35,8 @@ public class AboutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+        mActionBar.setHomeButtonEnabled(true);
         setContentView(R.layout.activity_about);
         TextView buildVersionTextView = (TextView) findViewById(R.id.buildVersion);
         buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);

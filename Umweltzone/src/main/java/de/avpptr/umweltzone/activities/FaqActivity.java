@@ -38,6 +38,8 @@ public class FaqActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+        mActionBar.setHomeButtonEnabled(true);
         ExpandableListView faqsList = (ExpandableListView) findViewById(R.id.faq_list);
         faqsList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
