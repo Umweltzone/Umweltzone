@@ -27,7 +27,6 @@ import java.util.HashMap;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public class AboutActivity extends BaseActivity {
