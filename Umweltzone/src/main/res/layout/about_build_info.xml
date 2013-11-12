@@ -32,6 +32,14 @@
 
     <TextView
         style="@style/About.SubTitle"
+        android:text="@string/about_build_info_version_code" />
+
+    <TextView
+        android:id="@+id/buildVersionCode"
+        style="@style/About.SingleLineTextContent" />
+
+    <TextView
+        style="@style/About.SubTitle"
         android:text="@string/about_build_info_hash" />
 
     <TextView

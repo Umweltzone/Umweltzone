@@ -137,6 +137,7 @@
     <!-- AboutActivity / Build Info -->
     <string name="about_build_info_title">Build Informationen</string>
     <string name="about_build_info_time">Build Zeit</string>
+    <string name="about_build_info_version_code">Version Code</string>
     <string name="about_build_info_hash">Build Hash</string>
 
     <!-- CityInfoActivity -->

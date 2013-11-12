@@ -39,6 +39,8 @@ public class AboutActivity extends BaseActivity {
         buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);
         TextView buildTimeTextView = (TextView) findViewById(R.id.buildTime);
         buildTimeTextView.setText(BuildConfig.BUILD_TIME);
+        TextView buildVersionCodeTextView = (TextView) findViewById(R.id.buildVersionCode);
+        buildVersionCodeTextView.setText("" + BuildConfig.BUILD_VERSION_CODE);
         TextView buildHashTextView = (TextView) findViewById(R.id.buildHash);
         buildHashTextView.setText(BuildConfig.GIT_SHA);
 

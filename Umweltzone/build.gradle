@@ -41,6 +41,7 @@ android {
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfig """\
           public static final String BUILD_VERSION = "${versionName}";
+          public static final int BUILD_VERSION_CODE = ${versionCode};
           public static final String BUILD_TIME = "${buildTime()}";
           public static final String GIT_SHA = "${gitSha()}";
         """
