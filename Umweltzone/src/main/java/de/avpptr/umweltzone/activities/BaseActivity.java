@@ -19,7 +19,6 @@ package de.avpptr.umweltzone.activities;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -50,6 +49,8 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActionBar = getSupportActionBar();
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+        mActionBar.setHomeButtonEnabled(true);
     }
 
     @Override
@@ -88,15 +89,9 @@ public abstract class BaseActivity extends ActionBarActivity {
     protected void initFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(getContentViewCompat(), fragment);
+        // Must use appcompat-v7:19.0.0 and newer to work on Android 2.3. See issue 58108
+        fragmentTransaction.replace(android.R.id.content, fragment);
         fragmentTransaction.commit();
-    }
-
-    // http://stackoverflow.com/a/17998802/356895
-    // http://code.google.com/p/android/issues/detail?id=58108
-    private static int getContentViewCompat() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH ?
-                android.R.id.content : R.id.action_bar_activity_content;
     }
 
     @Override
