@@ -41,38 +41,38 @@ public class GoogleAnalyticsTracking implements Tracking {
     @Override public void track(TrackingPoint eventName, Map parameters) {
         switch (eventName) {
             case ActivityStart:
-                trackActivityStart((Activity) parameters.get("activity"));
+                trackActivityStart((Activity) parameters.get(TrackingParameter.ACTIVITY_INSTANCE));
                 break;
             case ActivityStop:
-                trackActivityStop((Activity) parameters.get("activity"));
+                trackActivityStop((Activity) parameters.get(TrackingParameter.ACTIVITY_INSTANCE));
                 break;
             case FaqItemClick:
-                trackEvent("faq_list_action", "group_item_click", (String) parameters.get("position"));
+                trackEvent("faq_list_action", "list_item_click",
+                        "faq_" + parameters.get(TrackingParameter.LIST_POSITION));
                 break;
             case FaqSourceClick:
-                trackEvent("faq_list_action", "item_source_button_push",
-                        (String) parameters.get("position"));
+                trackEvent("faq_list_action", "button_push",
+                        "faq_source_" + parameters.get(TrackingParameter.LIST_POSITION));
                 break;
             case CityListItemClick:
-                trackEvent("city_list_action", "item_click", (String) parameters.get("zone_name"));
+                trackEvent("city_list_action", "list_item_click",
+                        "city_list_" + parameters.get(TrackingParameter.ZONE_NAME));
                 break;
             case CityInfoShowOnMapClick:
-                trackEvent("city_info_action", "button_click", "show_on_map");
+                trackEvent("city_info_action", "button_push", "show_on_map");
                 break;
             case CityInfoFurtherInfoClick:
-                trackEvent("city_info_action", "button_click", "further_info");
+                trackEvent("city_info_action", "button_push", "further_info");
                 break;
             case AboutItemClick:
-                trackEvent("about_action", "item_click", (String) parameters.get("about_item"));
+                trackEvent("about_action", "button_push",
+                        "about_item_" + parameters.get(TrackingParameter.ABOUT_ITEM));
                 break;
             case SupportMailClick:
-                trackEvent("about_action", "item_click", "support_mail");
+                trackEvent("about_action", "url_click", "support_mail");
                 break;
             case UserVoiceClick:
-                trackEvent("about_action", "item_click", "uservoice");
-                break;
-            case AboutLibraryClick:
-                trackEvent("about_action", "item_click", (String) parameters.get("about_library"));
+                trackEvent("about_action", "url_click", "user_voice");
                 break;
         }
     }

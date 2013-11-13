@@ -34,6 +34,7 @@ import java.util.Map;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingParameter;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.IntentHelper;
 
@@ -97,16 +98,16 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     public void onStart() {
         super.onStart();
-        Map<String, Activity> parameters = new HashMap<String, Activity>();
-        parameters.put("activity", this);
+        Map<TrackingParameter, Activity> parameters = new HashMap<TrackingParameter, Activity>();
+        parameters.put(TrackingParameter.ACTIVITY_INSTANCE, this);
         mTracking.track(TrackingPoint.ActivityStart, parameters);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        Map<String, Activity> parameters = new HashMap<String, Activity>();
-        parameters.put("activity", this);
+        Map<TrackingParameter, Activity> parameters = new HashMap<TrackingParameter, Activity>();
+        parameters.put(TrackingParameter.ACTIVITY_INSTANCE, this);
         mTracking.track(TrackingPoint.ActivityStop, parameters);
     }
 
