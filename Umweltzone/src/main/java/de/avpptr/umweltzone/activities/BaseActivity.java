@@ -105,10 +105,10 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     @Override
     public void onStop() {
-        super.onStop();
         Map<TrackingParameter, Activity> parameters = new HashMap<TrackingParameter, Activity>();
         parameters.put(TrackingParameter.ACTIVITY_INSTANCE, this);
         mTracking.track(TrackingPoint.ActivityStop, parameters);
+        super.onStop();
     }
 
 }
