@@ -17,14 +17,12 @@
 
 package de.avpptr.umweltzone.analytics;
 
-import java.util.Map;
-
 public interface Tracking {
     void track(TrackingPoint eventName);
 
-    void track(TrackingPoint eventName, Map parameters);
+    void track(TrackingPoint eventName, Object parameter);
 
     void trackError(TrackingPoint eventName);
 
-    void trackError(TrackingPoint eventName, Map parameters);
+    void trackError(TrackingPoint eventName, Object parameter);
 }

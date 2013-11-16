@@ -24,8 +24,6 @@ import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.MapBuilder;
 
-import java.util.Map;
-
 public class GoogleAnalyticsTracking implements Tracking {
 
     private EasyTracker mTracker;
@@ -38,25 +36,22 @@ public class GoogleAnalyticsTracking implements Tracking {
         track(eventName, null);
     }
 
-    @Override public void track(TrackingPoint eventName, Map parameters) {
+    @Override public void track(TrackingPoint eventName, final Object parameter) {
         switch (eventName) {
             case ActivityStart:
-                trackActivityStart((Activity) parameters.get(TrackingParameter.ACTIVITY_INSTANCE));
+                trackActivityStart((Activity) parameter);
                 break;
             case ActivityStop:
-                trackActivityStop((Activity) parameters.get(TrackingParameter.ACTIVITY_INSTANCE));
+                trackActivityStop((Activity) parameter);
                 break;
             case FaqItemClick:
-                trackEvent("faq_list_action", "list_item_click",
-                        "faq_" + parameters.get(TrackingParameter.LIST_POSITION));
+                trackEvent("faq_list_action", "list_item_click", "faq_" + parameter);
                 break;
             case FaqSourceClick:
-                trackEvent("faq_list_action", "button_push",
-                        "faq_source_" + parameters.get(TrackingParameter.LIST_POSITION));
+                trackEvent("faq_list_action", "button_push", "faq_source_" + parameter);
                 break;
             case CityListItemClick:
-                trackEvent("city_list_action", "list_item_click",
-                        "city_list_" + parameters.get(TrackingParameter.ZONE_NAME));
+                trackEvent("city_list_action", "list_item_click", "city_list_" + parameter);
                 break;
             case CityInfoShowOnMapClick:
                 trackEvent("city_info_action", "button_push", "show_on_map");
@@ -65,8 +60,7 @@ public class GoogleAnalyticsTracking implements Tracking {
                 trackEvent("city_info_action", "button_push", "further_info");
                 break;
             case AboutItemClick:
-                trackEvent("about_action", "button_push",
-                        "about_item_" + parameters.get(TrackingParameter.ABOUT_ITEM));
+                trackEvent("about_action", "button_push", "about_item_" + parameter);
                 break;
             case SupportMailClick:
                 trackEvent("about_action", "url_click", "support_mail");
@@ -81,7 +75,7 @@ public class GoogleAnalyticsTracking implements Tracking {
         trackError(eventName, null);
     }
 
-    @Override public void trackError(TrackingPoint eventName, Map parameters) {
+    @Override public void trackError(TrackingPoint eventName, Object parameter) {
         boolean errorIsFatal = false;
         String eventDescription = eventName.toString();
         switch (eventName) {

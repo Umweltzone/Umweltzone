@@ -24,14 +24,12 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ListView;
 
-import java.util.HashMap;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.adapters.CityListAdapter;
 import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingParameter;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -66,9 +64,7 @@ public class CitiesFragment extends ListFragment {
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         LowEmissionZone lowEmissionZone = mLowEmissionZones.get(position);
 
-        HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-        parameters.put(TrackingParameter.ZONE_NAME, lowEmissionZone.name);
-        mTracking.track(TrackingPoint.CityListItemClick, parameters);
+        mTracking.track(TrackingPoint.CityListItemClick, lowEmissionZone.name);
 
         storeSelectedLocation(lowEmissionZone);
         Intent intent = IntentHelper.getChangeCityIntent(getActivity(), lowEmissionZone.name);
