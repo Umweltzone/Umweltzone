@@ -23,11 +23,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.HashMap;
-
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.analytics.TrackingParameter;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public class AboutActivity extends BaseActivity {
@@ -62,83 +59,70 @@ public class AboutActivity extends BaseActivity {
         Button environmentAgencyButton = (Button) findViewById(R.id.aboutButtonEnvironmentAgency);
         environmentAgencyButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "environment_agency");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("environment_agency");
             }
         });
 
         Button wikimediaButton = (Button) findViewById(R.id.aboutButtonWikimedia);
         wikimediaButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "wikimedia_commons");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("wikimedia_commons");
             }
         });
 
         Button libraryGooglePlayButton = (Button) findViewById(R.id.aboutButtonGooglePlay);
         libraryGooglePlayButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "google_play_services_library");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("google_play_services_library");
             }
         });
+
         Button libraryGoogleSupportButton = (Button) findViewById(R.id.aboutButtonGoogleSupportLibrary);
         libraryGoogleSupportButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "google_support_library");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("google_support_library");
             }
         });
+
         Button libraryActionBarCompatButton = (Button) findViewById(R.id.aboutButtonActionBarCompat);
         libraryActionBarCompatButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "action_bat_compat_library");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("action_bat_compat_library");
             }
         });
+
         Button libraryJacksonButton = (Button) findViewById(R.id.aboutButtonJackson);
         libraryJacksonButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "jackson_library");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("jackson_library");
             }
         });
+
         Button libraryGoogleAnalyticsButton = (Button) findViewById(R.id.aboutButtonGoogleAnalytics);
         libraryGoogleAnalyticsButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "google_analytics");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("google_analytics");
             }
         });
+
         Button gplButton = (Button) findViewById(R.id.aboutButtonGpl);
         gplButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "gpl_url");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("gpl_url");
             }
         });
+
         Button ccButton = (Button) findViewById(R.id.aboutButtonCC);
         ccButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "cc_url");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("cc_url");
             }
         });
+
         Button sourceButton = (Button) findViewById(R.id.aboutButtonSourceCode);
         sourceButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                HashMap<TrackingParameter, String> parameters = new HashMap<TrackingParameter, String>();
-                parameters.put(TrackingParameter.ABOUT_ITEM, "source_code_url");
-                mTracking.track(TrackingPoint.AboutItemClick, parameters);
+                trackAboutItemClick("source_code_url");
             }
         });
 
@@ -147,6 +131,10 @@ public class AboutActivity extends BaseActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
+    }
+
+    protected void trackAboutItemClick(final String itemName) {
+        mTracking.track(TrackingPoint.AboutItemClick, itemName);
     }
 
 }

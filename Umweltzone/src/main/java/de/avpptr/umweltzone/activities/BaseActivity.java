@@ -17,7 +17,6 @@
 
 package de.avpptr.umweltzone.activities;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,13 +27,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingParameter;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.IntentHelper;
 
@@ -98,16 +93,12 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     public void onStart() {
         super.onStart();
-        Map<TrackingParameter, Activity> parameters = new HashMap<TrackingParameter, Activity>();
-        parameters.put(TrackingParameter.ACTIVITY_INSTANCE, this);
-        mTracking.track(TrackingPoint.ActivityStart, parameters);
+        mTracking.track(TrackingPoint.ActivityStart, this);
     }
 
     @Override
     public void onStop() {
-        Map<TrackingParameter, Activity> parameters = new HashMap<TrackingParameter, Activity>();
-        parameters.put(TrackingParameter.ACTIVITY_INSTANCE, this);
-        mTracking.track(TrackingPoint.ActivityStop, parameters);
+        mTracking.track(TrackingPoint.ActivityStop, this);
         super.onStop();
     }
 
