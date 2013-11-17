@@ -25,7 +25,6 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.HashMap;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
@@ -112,12 +111,11 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
             Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
-            final int groupPos = groupPosition;
+
+            final String itemDescription = getFaqDescription(groupPosition);
             sourceUrlButton.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
-                    HashMap<String, String> parameters = new HashMap<String, String>();
-                    parameters.put("position", Integer.toString(groupPos));
-                    mTracking.track(TrackingPoint.FaqSourceClick, parameters);
+                    mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
                 }
             });
         }
@@ -141,5 +139,9 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     private static class FaqAnswer {
         String text;
         String sourceUrl;
+    }
+
+    public String getFaqDescription(int position) {
+        return mFaqs.get(position).toStringShort();
     }
 }

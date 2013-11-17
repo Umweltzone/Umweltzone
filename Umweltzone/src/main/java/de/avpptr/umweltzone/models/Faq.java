@@ -23,13 +23,18 @@ public class Faq {
     public String question;
     public String answer;
     public String sourceUrl;
+    public String label;
 
     @Override
     public String toString() {
         return "Position: " + position +
                 ", Question: " + question +
                 ", Answer: " + answer +
-                ", SourceUrl: " + sourceUrl;
+                ", SourceUrl: " + sourceUrl +
+                ", Label: " + label;
     }
 
+    public String toStringShort() {
+        return String.valueOf(position) + "_" + label;
+    }
 }

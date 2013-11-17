@@ -37,17 +37,22 @@ public class FaqActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
         ExpandableListView faqsList = (ExpandableListView) findViewById(R.id.faq_list);
+        List<Faq> faqs = ContentProvider.getFaqs(this);
+        faqsList.setAdapter(new FaqsAdapter(this, faqs));
+
         faqsList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
                 if (!parent.isGroupExpanded(groupPosition)) {
-                    mTracking.track(TrackingPoint.FaqItemClick, String.valueOf(groupPosition));
+                    FaqsAdapter faqsAdapter = (FaqsAdapter) parent.getExpandableListAdapter();
+                    if (faqsAdapter != null) {
+                        String itemDescription = faqsAdapter.getFaqDescription(groupPosition);
+                        mTracking.track(TrackingPoint.FaqItemClick, itemDescription);
+                    }
                 }
                 return false;
             }
         });
-        List<Faq> faqs = ContentProvider.getFaqs(this);
-        faqsList.setAdapter(new FaqsAdapter(this, faqs));
     }
 
     @Override
