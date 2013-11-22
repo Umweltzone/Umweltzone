@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
-import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -37,6 +36,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+
+import org.ligi.tracedroid.logging.Log;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
@@ -123,7 +124,7 @@ public class MapFragment extends SupportMapFragment {
     private void showGooglePlayServicesErrorDialog(Activity activity, int errorCode) {
         final Dialog dialog = GooglePlayServicesUtil.getErrorDialog(errorCode, activity, 0);
         if (dialog == null) {
-            Log.e(activity.getClass().getName(), "GooglePlayServicesErrorDialog is null.");
+            Log.e("GooglePlayServicesErrorDialog is null.");
         } else {
             dialog.show();
         }

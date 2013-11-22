@@ -19,6 +19,8 @@ package de.avpptr.umweltzone;
 
 import android.app.Application;
 
+import org.ligi.tracedroid.TraceDroid;
+
 import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
 import de.avpptr.umweltzone.analytics.Tracking;
 
@@ -30,6 +32,8 @@ public class Umweltzone extends Application {
         super.onCreate();
 
         mGa = new GoogleAnalyticsTracking(getApplicationContext());
+
+        TraceDroid.init(this);
     }
 
     public static Tracking getTracker() {
