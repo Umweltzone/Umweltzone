@@ -23,7 +23,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
