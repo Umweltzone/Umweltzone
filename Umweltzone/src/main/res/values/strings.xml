@@ -106,7 +106,7 @@
         Fehlermeldungen oder der Wunsch nach neuen Funktionen
         kann an folgende Adresse gerichtet werden:
     </string>
-    <string name="about_contact_email">umweltzone.android@gmail.com</string>
+    <string name="about_contact_email">@string/config_contact_email_address</string>
 
     <!-- AboutActivity / Contact / Uservoice -->
     <string name="about_uservoice_content">
