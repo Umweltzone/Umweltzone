@@ -52,7 +52,6 @@ public class CitiesFragment extends ListFragment {
         mLowEmissionZones = ContentProvider.getLowEmissionZones(activity);
         if (mLowEmissionZones == null) {
             mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
-
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         CityListAdapter adapter = new CityListAdapter(activity, R.layout.cities_row,
@@ -63,9 +62,7 @@ public class CitiesFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView listView, View view, int position, long rowId) {
         LowEmissionZone lowEmissionZone = mLowEmissionZones.get(position);
-
         mTracking.track(TrackingPoint.CityListItemClick, lowEmissionZone.name);
-
         storeSelectedLocation(lowEmissionZone);
         Intent intent = IntentHelper.getChangeCityIntent(getActivity(), lowEmissionZone.name);
         startActivity(intent);
