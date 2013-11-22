@@ -20,6 +20,8 @@ package de.avpptr.umweltzone.activities;
 import android.os.Bundle;
 import android.view.Menu;
 
+import org.ligi.tracedroid.sending.TraceDroidEmailSender;
+
 import de.avpptr.umweltzone.R;
 
 public class MainActivity extends BaseActivity {
@@ -30,6 +32,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.fragment_map);
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
+        TraceDroidEmailSender.sendStackTraces(getString(R.string.config_tracedroid_email_address), this);
     }
 
     @Override

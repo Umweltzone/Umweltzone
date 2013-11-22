@@ -26,6 +26,9 @@
      -->
     <string name="config_google_maps_v2_api_key">ENTER_YOUR_GOOGLE_MAPS_V2_API_KEY_HERE</string>
 
+    <!-- TraceDroid e-mail address -->
+    <string name="config_tracedroid_email_address">ENTER_TRACEDROID_EMAIL_ADDRESS_HERE</string>
+
     <!-- Contact e-mail address -->
     <string name="config_contact_email_address">ENTER_CONTACT_EMAIL_ADDRESS_HERE</string>
 

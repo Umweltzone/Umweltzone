@@ -18,7 +18,8 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
-import android.util.Log;
+
+import org.ligi.tracedroid.logging.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,7 +50,7 @@ public class StringHelper {
         int nextZoneNumber = lowEmissionZone.zoneNumber + 1;
         String zoneNumberColor = zoneNumberToColor(context, nextZoneNumber);
         if (zoneNumberColor == null) {
-            Log.e(StringHelper.class.getName(), "Next zone number '" + nextZoneNumber +
+            Log.e("Next zone number '" + nextZoneNumber +
                     "' cannot be converted into color text fragment.");
             return null;
         }
@@ -65,7 +66,7 @@ public class StringHelper {
         }
         String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.abroadLicensedVehicleZoneNumber);
         if (zoneNumberColor == null) {
-            Log.e(StringHelper.class.getName(), "Abroad licensed vehicle zone number '" +
+            Log.e("Abroad licensed vehicle zone number '" +
                     lowEmissionZone.abroadLicensedVehicleZoneNumber +
                     "' cannot be converted into color text fragment.");
             return null;
