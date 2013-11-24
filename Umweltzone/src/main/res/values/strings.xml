@@ -98,6 +98,9 @@
     <string name="about_references_url_jackson">http://jackson.codehaus.org</string>
     <string name="about_references_name_ga">Google Analytics Services 3.01</string>
     <string name="about_references_url_ga">https://developers.google.com/analytics/devguides/collection/android/resources</string>
+    <string name="about_references_name_tracdroid">TraceDroid</string>
+    <string name="about_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
+
 
     <!-- AboutActivity / Contact -->
     <string name="about_contact_title">Kontakt</string>

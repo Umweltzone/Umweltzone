@@ -71,4 +71,13 @@
         style="@style/About.ButtonWeb"
         android:text="@string/about_references_url_ga" />
 
+    <TextView
+        style="@style/About.ButtonWebTitle"
+        android:text="@string/about_references_name_tracdroid" />
+
+    <Button
+        android:id="@+id/aboutButtonTraceDroid"
+        style="@style/About.ButtonWeb"
+        android:text="@string/about_references_url_tracedroid" />
+
 </merge>
