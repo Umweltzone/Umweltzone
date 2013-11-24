@@ -96,8 +96,8 @@
     <string name="about_references_url_actionbarcompat">http://developer.android.com/tools/support-library</string>
     <string name="about_references_name_jackson">Jackson JSON processor</string>
     <string name="about_references_url_jackson">http://jackson.codehaus.org</string>
-    <string name="about_references_name_ga">Google Analytics Services 3.01</string>
-    <string name="about_references_url_ga">https://developers.google.com/analytics/devguides/collection/android/resources</string>
+    <string name="about_references_name_ga">Google Analytics</string>
+    <string name="about_references_url_ga">http://developers.google.com/analytics/devguides/collection/android/</string>
     <string name="about_references_name_tracdroid">TraceDroid</string>
     <string name="about_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
 
