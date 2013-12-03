@@ -85,6 +85,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     protected void initFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
         // Must use appcompat-v7:19.0.0 and newer to work on Android 2.3. See issue 58108
         fragmentTransaction.replace(android.R.id.content, fragment);
         fragmentTransaction.commit();
