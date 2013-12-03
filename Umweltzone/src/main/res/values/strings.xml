@@ -147,6 +147,17 @@
     </string>
     <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
 
+    <!-- FeedbackActivity / Rating -->
+    <string name="appinfo_rating_title">Bewerten</string>
+    <string name="appinfo_rating_content">
+        Natürlich freuen wir uns auch darüber, wenn wir eine gute
+        Bewertung im Google PlayStore bekommen.
+    </string>
+    <string name="appinfo_rating_url">
+        http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+    </string>
+
+
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
 

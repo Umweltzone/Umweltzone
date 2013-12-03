@@ -29,6 +29,7 @@ public enum TrackingPoint {
     AboutItemClick("about_item_click"),
     SupportMailClick("support_mail_click"),
     UserVoiceClick("user_voice_click"),
+    RatingClick("rating_click"),
 
     // Errors
     LocationNotSupportedError("location_not_supported"),

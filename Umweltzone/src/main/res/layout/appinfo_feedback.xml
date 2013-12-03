@@ -47,4 +47,20 @@
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_uservoice_url" />
 
+    <include
+        layout="@layout/horizontal_line" />
+
+    <TextView
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_rating_title" />
+
+    <TextView
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_rating_content" />
+
+    <Button
+        android:id="@+id/appInfoButtonRating"
+        style="@style/AppInfo.ButtonWeb"
+        android:text="@string/appinfo_rating_url" />
+
 </merge>

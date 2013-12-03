@@ -33,6 +33,13 @@ public class FeedbackActivity extends BaseActivity {
             }
         });
 
+        Button ratingButton = (Button) findViewById(R.id.appInfoButtonRating);
+        ratingButton.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                mTracking.track(TrackingPoint.RatingClick);
+            }
+        });
+
     }
 
     @Override
