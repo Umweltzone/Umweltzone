@@ -31,7 +31,7 @@ import de.avpptr.umweltzone.contract.BundleKeys;
 public class IntentHelper {
 
     public static Intent getChangeCityIntent(Activity activity, String cityNameValue) {
-        Intent intent = getIntent(activity, MainActivity.class);
+        final Intent intent = getIntent(activity, MainActivity.class);
         intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValue);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -39,7 +39,7 @@ public class IntentHelper {
     }
 
     public static Intent getHomeIntent(Activity activity) {
-        Intent intent = getIntent(activity, MainActivity.class);
+        final Intent intent = getIntent(activity, MainActivity.class);
         intent.putExtra(BundleKeys.HOME, BundleKeys.HOME);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
@@ -62,7 +62,7 @@ public class IntentHelper {
     }
 
     public static Intent getUriIntent(String uri) {
-        Intent intent = new Intent(Intent.ACTION_VIEW);
+        final Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(uri));
         return intent;
     }
