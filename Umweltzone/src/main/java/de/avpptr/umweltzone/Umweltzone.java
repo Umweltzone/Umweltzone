@@ -18,25 +18,34 @@
 package de.avpptr.umweltzone;
 
 import android.app.Application;
+import android.content.Context;
 
 import org.ligi.tracedroid.TraceDroid;
 
 import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
+import de.avpptr.umweltzone.analytics.NoTracking;
 import de.avpptr.umweltzone.analytics.Tracking;
 
 public class Umweltzone extends Application {
 
-    private static GoogleAnalyticsTracking mGa;
+    private static Tracking mTracking;
 
     public void onCreate() {
         super.onCreate();
-
-        mGa = new GoogleAnalyticsTracking(getApplicationContext());
-
+        mTracking = getTracking(getApplicationContext());
         TraceDroid.init(this);
     }
 
-    public static Tracking getTracker() {
-        return mGa;
+    private Tracking getTracking(Context context) {
+        if (BuildConfig.DEBUG) {
+            return new NoTracking();
+        } else {
+            return new GoogleAnalyticsTracking(context);
+        }
     }
+
+    public static Tracking getTracker() {
+        return mTracking;
+    }
+
 }
