@@ -20,10 +20,16 @@
       xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_feedback"
+        android:title="@string/action_feedback"
+        android:orderInCategory="111"
+        umweltzone:showAsAction="never" />
+
+    <item
         android:id="@+id/action_about"
         android:title="@string/action_about"
         android:icon="@drawable/ic_action_about_dark"
-        android:orderInCategory="111"
+        android:orderInCategory="112"
         umweltzone:showAsAction="never" />
 
 </menu>

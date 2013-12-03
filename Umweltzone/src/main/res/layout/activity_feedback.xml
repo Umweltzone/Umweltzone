@@ -47,55 +47,7 @@
             layout="@layout/horizontal_line" />
 
         <include
-            layout="@layout/about_copyright" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_description" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_data" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_graphics" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_written_text" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_libraries" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_sourcecode" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_license" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/about_build_info" />
+            layout="@layout/about_contact" />
 
     </LinearLayout>
 </ScrollView>

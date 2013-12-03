@@ -42,20 +42,6 @@ public class AboutActivity extends BaseActivity {
         TextView buildHashTextView = (TextView) findViewById(R.id.buildHash);
         buildHashTextView.setText(BuildConfig.GIT_SHA);
 
-        Button userVoiceButton = (Button) findViewById(R.id.aboutButtonUserVoice);
-        userVoiceButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mTracking.track(TrackingPoint.UserVoiceClick);
-            }
-        });
-
-        TextView contactEmailTextView = (TextView) findViewById(R.id.aboutContactEmail);
-        contactEmailTextView.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mTracking.track(TrackingPoint.SupportMailClick);
-            }
-        });
-
         Button environmentAgencyButton = (Button) findViewById(R.id.aboutButtonEnvironmentAgency);
         environmentAgencyButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
