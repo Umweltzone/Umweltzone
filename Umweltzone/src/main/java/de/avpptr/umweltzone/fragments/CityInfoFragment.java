@@ -124,6 +124,7 @@ public class CityInfoFragment extends BaseFragment {
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_empty_select_zone);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
+                mTracking.track(TrackingPoint.CityInfoEmptySelectZoneClick);
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }
         });

@@ -21,6 +21,7 @@ public enum TrackingPoint {
     ActivityStart("activity_start"),
     ActivityStop("activity_stop"),
     CityListItemClick("city_list"),
+    CityInfoEmptySelectZoneClick("city_info_empty_select_zone_click"),
     CityInfoShowOnMapClick("city_info_show_on_map_click"),
     CityInfoFurtherInfoClick("city_info_further_info_click"),
     FaqItemClick("faq_item_click"),
