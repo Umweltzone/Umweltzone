@@ -47,7 +47,7 @@
             layout="@layout/horizontal_line" />
 
         <include
-            layout="@layout/about_contact" />
+            layout="@layout/appinfo_feedback" />
 
     </LinearLayout>
 </ScrollView>
