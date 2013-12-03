@@ -31,13 +31,16 @@
         style="@style/AppInfo.Contact.Email"
         android:text="@string/appinfo_contact_email" />
 
+    <include
+        layout="@layout/horizontal_line" />
+
+    <TextView
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_uservoice_title" />
+
     <TextView
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_uservoice_content" />
-
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_uservoice_title" />
 
     <Button
         android:id="@+id/appInfoButtonUserVoice"
