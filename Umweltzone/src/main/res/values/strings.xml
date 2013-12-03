@@ -105,26 +105,6 @@
     <string name="about_references_name_tracdroid">TraceDroid</string>
     <string name="about_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
 
-
-    <!-- AboutActivity / Contact -->
-    <string name="about_contact_title">Kontakt</string>
-    <string name="about_contact_content">
-        Jede Art von Rückmeldung wie z.B. Verbesserungsvorschläge,
-        Fehlermeldungen oder der Wunsch nach neuen Funktionen
-        kann an folgende Adresse gerichtet werden:
-    </string>
-    <string name="about_contact_email">@string/config_contact_email_address</string>
-
-    <!-- AboutActivity / Contact / Uservoice -->
-    <string name="about_uservoice_content">
-        Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
-        eingetragen werden. Auf der Seite kann man auch jeden anderen
-        Eintrag bewerten. Dadurch sehen wir gleich, was die Mehrzahl
-        der Nutzer gerne möchte.
-    </string>
-    <string name="about_uservoice_title">UserVoice</string>
-    <string name="about_uservoice_url">http://umweltzone.uservoice.com</string>
-
     <!-- AboutActivity / Sourcecode -->
     <string name="about_sourcecode_title">Quellcode</string>
     <string name="about_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
@@ -146,6 +126,26 @@
     <string name="about_build_info_time">Build Zeit</string>
     <string name="about_build_info_version_code">Version Code</string>
     <string name="about_build_info_hash">Build Hash</string>
+
+
+    <!-- FeedbackActivity / Contact -->
+    <string name="appinfo_contact_title">Kontakt</string>
+    <string name="appinfo_contact_content">
+        Jede Art von Rückmeldung wie z.B. Verbesserungsvorschläge,
+        Fehlermeldungen oder der Wunsch nach neuen Funktionen
+        kann an folgende Adresse gerichtet werden:
+    </string>
+    <string name="appinfo_contact_email">@string/config_contact_email_address</string>
+
+    <!-- FeedbackActivity / Contact / Uservoice -->
+    <string name="appinfo_uservoice_title">UserVoice</string>
+    <string name="appinfo_uservoice_content">
+        Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
+        eingetragen werden. Auf der Seite kann man auch jeden anderen
+        Eintrag bewerten. Dadurch sehen wir gleich, was die Mehrzahl
+        der Nutzer gerne möchte.
+    </string>
+    <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>

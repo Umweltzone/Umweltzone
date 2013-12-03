@@ -19,14 +19,14 @@ public class FeedbackActivity extends BaseActivity {
         TextView buildVersionTextView = (TextView) findViewById(R.id.buildVersion);
         buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);
 
-        Button userVoiceButton = (Button) findViewById(R.id.aboutButtonUserVoice);
+        Button userVoiceButton = (Button) findViewById(R.id.appInfoButtonUserVoice);
         userVoiceButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 mTracking.track(TrackingPoint.UserVoiceClick);
             }
         });
 
-        TextView contactEmailTextView = (TextView) findViewById(R.id.aboutContactEmail);
+        TextView contactEmailTextView = (TextView) findViewById(R.id.appInfoContactEmail);
         contactEmailTextView.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 mTracking.track(TrackingPoint.SupportMailClick);
