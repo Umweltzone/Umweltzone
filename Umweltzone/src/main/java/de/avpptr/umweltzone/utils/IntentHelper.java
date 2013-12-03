@@ -33,7 +33,6 @@ public class IntentHelper {
     public static Intent getChangeCityIntent(Activity activity, String cityNameValue) {
         final Intent intent = getIntent(activity, MainActivity.class);
         intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValue);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
@@ -41,7 +40,6 @@ public class IntentHelper {
     public static Intent getHomeIntent(Activity activity) {
         final Intent intent = getIntent(activity, MainActivity.class);
         intent.putExtra(BundleKeys.HOME, BundleKeys.HOME);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
     }
 
@@ -68,7 +66,9 @@ public class IntentHelper {
     }
 
     private static Intent getIntent(Activity activity, Class<?> clazz) {
-        return new Intent(activity, clazz);
+        final Intent intent = new Intent(activity, clazz);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        return intent;
     }
 
 }
