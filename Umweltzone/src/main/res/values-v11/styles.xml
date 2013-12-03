@@ -26,12 +26,12 @@
         <!-- API 11 theme customizations can go here. -->
     </style>
 
-    <style name="About.TextContent" parent="TextView.Base.Small">
+    <style name="AppInfo.TextContent" parent="TextView.Base.Small">
         <item name="android:textColor">@color/about_text_content_foreground</item>
         <item name="android:textIsSelectable">true</item>
     </style>
 
-    <style name="About.SingleLineTextContent" parent="About.TextContent">
+    <style name="AppInfo.SingleLineTextContent" parent="AppInfo.TextContent">
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
         <item name="android:textIsSelectable">true</item>

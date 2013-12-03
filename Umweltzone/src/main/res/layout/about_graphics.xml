@@ -19,20 +19,20 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/About.ContentTitle"
+        style="@style/AppInfo.ContentTitle"
         android:text="@string/about_references_graphics_title" />
 
     <TextView
-        style="@style/About.TextContent"
+        style="@style/AppInfo.TextContent"
         android:text="@string/about_references_graphics_content" />
 
     <TextView
-        style="@style/About.ButtonWebTitle"
+        style="@style/AppInfo.ButtonWebTitle"
         android:text="@string/about_references_name_wikimedia_commons" />
 
     <Button
         android:id="@+id/aboutButtonWikimedia"
-        style="@style/About.ButtonWeb"
+        style="@style/AppInfo.ButtonWeb"
         android:text="@string/about_references_url_wikimedia_commons" />
 
 </merge>

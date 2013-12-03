@@ -33,15 +33,15 @@
 
         <ImageView
             android:contentDescription="@string/about_application_logo_description"
-            style="@style/About.Logo" />
+            style="@style/AppInfo.Logo" />
 
         <TextView
-            style="@style/About.TextContent"
+            style="@style/AppInfo.TextContent"
             android:text="@string/about_subtitle" />
 
         <TextView
             android:id="@+id/buildVersion"
-            style="@style/About.TextContent" />
+            style="@style/AppInfo.TextContent" />
 
         <include
             layout="@layout/horizontal_line" />
