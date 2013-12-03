@@ -31,17 +31,8 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingBottom="@dimen/huge_spacer">
 
-        <ImageView
-            android:contentDescription="@string/appinfo_application_logo_description"
-            style="@style/AppInfo.Logo" />
-
-        <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_subtitle" />
-
-        <TextView
-            android:id="@+id/buildVersion"
-            style="@style/AppInfo.TextContent" />
+        <include
+            layout="@layout/appinfo_header" />
 
         <include
             layout="@layout/horizontal_line" />
