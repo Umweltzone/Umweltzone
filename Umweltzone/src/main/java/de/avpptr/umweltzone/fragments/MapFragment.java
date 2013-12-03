@@ -146,7 +146,7 @@ public class MapFragment extends SupportMapFragment {
             if (!lastKnownPosition.isValid()) {
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
-                    storeLastLowEmmisionZone(defaultLowEmissionZone);
+                    storeLastLowEmissionZone(defaultLowEmissionZone);
                     drawPolygonOverlay();
                     zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
                     storeLastMapState();
@@ -188,7 +188,7 @@ public class MapFragment extends SupportMapFragment {
         mMapDrawer.drawPolygon(points, fillColor, strokeColor, strokeWidth);
     }
 
-    private void storeLastLowEmmisionZone(LowEmissionZone defaultLowEmissionZone) {
+    private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
         Activity activity = getActivity();
         PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.name);
         PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.boundingBox);
