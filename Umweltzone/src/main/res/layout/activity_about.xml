@@ -32,12 +32,12 @@
         android:paddingBottom="@dimen/huge_spacer">
 
         <ImageView
-            android:contentDescription="@string/about_application_logo_description"
+            android:contentDescription="@string/appinfo_application_logo_description"
             style="@style/AppInfo.Logo" />
 
         <TextView
             style="@style/AppInfo.TextContent"
-            android:text="@string/about_subtitle" />
+            android:text="@string/appinfo_subtitle" />
 
         <TextView
             android:id="@+id/buildVersion"

@@ -20,11 +20,11 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/about_build_info_title" />
+        android:text="@string/appinfo_build_info_title" />
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/about_build_info_time" />
+        android:text="@string/appinfo_build_info_time" />
 
     <TextView
         android:id="@+id/buildTime"
@@ -32,7 +32,7 @@
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/about_build_info_version_code" />
+        android:text="@string/appinfo_build_info_version_code" />
 
     <TextView
         android:id="@+id/buildVersionCode"
@@ -40,7 +40,7 @@
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/about_build_info_hash" />
+        android:text="@string/appinfo_build_info_hash" />
 
     <TextView
         android:id="@+id/buildHash"
