@@ -44,6 +44,10 @@ public class PointsProvider {
 
     public static List<LatLng> getCircuitPoints(Context context, String cityName) {
         Location location = Converter.cityNameToLocation(cityName);
+        if (location == null) {
+            throw new IllegalStateException("City name `" + cityName + "` " +
+                    "has not been converted into location.");
+        }
         if (location != currentLocation || currentPoints == null) {
             currentLocation = location;
             int resourceId = Resources.INVALID_RESOURCE_ID;
