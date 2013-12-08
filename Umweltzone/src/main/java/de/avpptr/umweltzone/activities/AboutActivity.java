@@ -34,7 +34,7 @@ public class AboutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         TextView buildVersionTextView = (TextView) findViewById(R.id.buildVersion);
-        buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);
+        buildVersionTextView.setText("v." + getBuildVersionName());
         TextView buildTimeTextView = (TextView) findViewById(R.id.buildTime);
         buildTimeTextView.setText(BuildConfig.BUILD_TIME);
         TextView buildVersionCodeTextView = (TextView) findViewById(R.id.buildVersionCode);

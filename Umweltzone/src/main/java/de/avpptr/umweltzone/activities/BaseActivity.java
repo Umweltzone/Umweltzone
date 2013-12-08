@@ -18,6 +18,8 @@
 package de.avpptr.umweltzone.activities;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -104,6 +106,17 @@ public abstract class BaseActivity extends ActionBarActivity {
     public void onStop() {
         mTracking.track(TrackingPoint.ActivityStop, this);
         super.onStop();
+    }
+
+    protected String getBuildVersionName() {
+        final PackageManager packageManager = getPackageManager();
+        try {
+            assert packageManager != null;
+            final PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);
+            return packageInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            throw new IllegalStateException(e.getMessage());
+        }
     }
 
 }

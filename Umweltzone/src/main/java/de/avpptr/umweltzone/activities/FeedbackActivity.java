@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 
@@ -17,7 +16,7 @@ public class FeedbackActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
         TextView buildVersionTextView = (TextView) findViewById(R.id.buildVersion);
-        buildVersionTextView.setText("v." + BuildConfig.BUILD_VERSION);
+        buildVersionTextView.setText("v." + getBuildVersionName());
 
         Button userVoiceButton = (Button) findViewById(R.id.appInfoButtonUserVoice);
         userVoiceButton.setOnClickListener(new View.OnClickListener() {

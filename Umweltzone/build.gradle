@@ -59,6 +59,7 @@ android {
     buildTypes {
         debug {
             packageNameSuffix ".debug"
+            versionNameSuffix "-DEBUG"
             zipAlign = true
         }
         release {
