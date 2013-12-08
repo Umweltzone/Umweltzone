@@ -19,20 +19,20 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/About.ContentTitle"
-        android:text="@string/about_disclaimer_title" />
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_references_graphics_title" />
 
     <TextView
-        style="@style/About.TextContent"
-        android:text="@string/about_disclaimer_content" />
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_references_graphics_content" />
 
     <TextView
-        style="@style/About.ButtonWebTitle"
-        android:text="@string/about_references_name_umweltbundesamt" />
+        style="@style/AppInfo.ButtonWebTitle"
+        android:text="@string/appinfo_references_name_wikimedia_commons" />
 
     <Button
-        android:id="@+id/aboutButtonEnvironmentAgency"
-        style="@style/About.ButtonWeb"
-        android:text="@string/about_references_url_umweltbundesamt" />
+        android:id="@+id/appInfoButtonWikimedia"
+        style="@style/AppInfo.ButtonWeb"
+        android:text="@string/appinfo_references_url_wikimedia_commons" />
 
 </merge>

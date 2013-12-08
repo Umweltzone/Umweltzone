@@ -19,12 +19,11 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/About.ContentTitle"
-        android:text="@string/about_sourcecode_title" />
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_description_title" />
 
-    <Button
-        android:id="@+id/aboutButtonSourceCode"
-        style="@style/About.ButtonWeb"
-        android:text="@string/about_sourcecode_url" />
+    <TextView
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_description_content" />
 
 </merge>

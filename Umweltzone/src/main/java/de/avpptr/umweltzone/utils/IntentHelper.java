@@ -25,6 +25,7 @@ import de.avpptr.umweltzone.activities.AboutActivity;
 import de.avpptr.umweltzone.activities.CitiesActivity;
 import de.avpptr.umweltzone.activities.CityInfoActivity;
 import de.avpptr.umweltzone.activities.FaqActivity;
+import de.avpptr.umweltzone.activities.FeedbackActivity;
 import de.avpptr.umweltzone.activities.MainActivity;
 import de.avpptr.umweltzone.contract.BundleKeys;
 
@@ -45,6 +46,10 @@ public class IntentHelper {
 
     public static Intent getCityInfoIntent(Activity activity) {
         return getIntent(activity, CityInfoActivity.class);
+    }
+
+    public static Intent getFeedbackIntent(Activity activity) {
+        return getIntent(activity, FeedbackActivity.class);
     }
 
     public static Intent getAboutIntent(Activity activity) {

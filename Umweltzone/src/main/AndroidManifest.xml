@@ -66,6 +66,9 @@
             android:name=".activities.CityInfoActivity"
             android:label="@string/city_info_activity_title" />
         <activity
+            android:name=".activities.FeedbackActivity"
+            android:label="@string/feedback_activity_title" />
+        <activity
             android:name=".activities.AboutActivity"
             android:label="@string/about_activity_title" />
         <activity

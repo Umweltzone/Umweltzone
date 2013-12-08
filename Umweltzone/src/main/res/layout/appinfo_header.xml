@@ -18,21 +18,16 @@
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        style="@style/About.ContentTitle"
-        android:text="@string/about_references_graphics_title" />
+    <ImageView
+        android:contentDescription="@string/appinfo_application_logo_description"
+        style="@style/AppInfo.Logo" />
 
     <TextView
-        style="@style/About.TextContent"
-        android:text="@string/about_references_graphics_content" />
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_subtitle" />
 
     <TextView
-        style="@style/About.ButtonWebTitle"
-        android:text="@string/about_references_name_wikimedia_commons" />
-
-    <Button
-        android:id="@+id/aboutButtonWikimedia"
-        style="@style/About.ButtonWeb"
-        android:text="@string/about_references_url_wikimedia_commons" />
+        android:id="@+id/buildVersion"
+        style="@style/AppInfo.TextContent" />
 
 </merge>

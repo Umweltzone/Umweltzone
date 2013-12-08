@@ -25,20 +25,24 @@
     <string name="action_cities">Städte</string>
     <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>
+    <string name="action_feedback">@string/feedback_activity_title</string>
     <string name="action_about">@string/about_activity_title</string>
 
+    <!-- FeedbackActivity -->
+    <string name="feedback_activity_title">Feedback</string>
+
     <!-- AboutActivity -->
-    <string name="about_application_logo_description">Logo der Anwendung &#8220;Umweltzone&#8221;</string>
+    <string name="appinfo_application_logo_description">Logo der Anwendung &#8220;Umweltzone&#8221;</string>
     <string name="about_activity_title">Über</string>
-    <string name="about_subtitle">Eine Android App für Umweltzonen in Deutschland</string>
+    <string name="appinfo_subtitle">Eine Android App für Umweltzonen in Deutschland</string>
 
     <!-- AboutActivity / Copyright -->
-    <string name="about_copyright_title">Idee und Umsetzung</string>
-    <string name="about_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013</string>
+    <string name="appinfo_copyright_title">Idee und Umsetzung</string>
+    <string name="appinfo_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013</string>
 
     <!-- AboutActivity / Description -->
-    <string name="about_description_title">Beschreibung</string>
-    <string name="about_description_content">
+    <string name="appinfo_description_title">Beschreibung</string>
+    <string name="appinfo_description_content">
         Diese Anwendung informiert über den Verlauf von Umweltzonen und führt
         weiterführende Daten und Fakten zum Thema auf. Die Umweltzonen dürfen
         nur von Fahrzeugen befahren werden, die mit einer entsprechenden Plakette
@@ -53,8 +57,8 @@
     </string>
 
     <!-- AboutActivity / Disclaimer -->
-    <string name="about_disclaimer_title">Daten und Qualität</string>
-    <string name="about_disclaimer_content">
+    <string name="appinfo_disclaimer_title">Daten und Qualität</string>
+    <string name="appinfo_disclaimer_content">
         Die Daten und Koordinaten der Umweltzonen wurden manuell erstellt.
         Grundlage sind die offiziellen Publikationen des Umweltbundesamts.
         Da der Verlauf der Umweltzone meist nur als analoge Grafik
@@ -63,85 +67,96 @@
         abweichen. Daher können wir keine Haftung/Garantie für die korrekte
         Darstellung der Umweltzonen und etwaige Kosten oder Strafen übernehmen.
     </string>
-    <string name="about_references_name_umweltbundesamt">Umweltbundesamt</string>
-    <string name="about_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
+    <string name="appinfo_references_name_umweltbundesamt">Umweltbundesamt</string>
+    <string name="appinfo_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
 
     <!-- AboutActivity / Graphics -->
-    <string name="about_references_graphics_title">Grafiken</string>
-    <string name="about_references_graphics_content">
+    <string name="appinfo_references_graphics_title">Grafiken</string>
+    <string name="appinfo_references_graphics_content">
         Die verwendeten Grafiken stammen aus Wikimedia Commons. Dies
         betrifft das Logo sowie die Plaketten der Schadstoffgruppen.
     </string>
-    <string name="about_references_name_wikimedia_commons">Wikimedia Commons</string>
-    <string name="about_references_url_wikimedia_commons">http://commons.wikimedia.org</string>
+    <string name="appinfo_references_name_wikimedia_commons">Wikimedia Commons</string>
+    <string name="appinfo_references_url_wikimedia_commons">http://commons.wikimedia.org</string>
 
     <!-- AboutActivity / Texts -->
-    <string name="about_references_texts_title">Texte</string>
-    <string name="about_references_texts_content">
+    <string name="appinfo_references_texts_title">Texte</string>
+    <string name="appinfo_references_texts_content">
         Den verwendeten Texten ist ein Quellenverweis zugeordnet,
         sofern diese von Dritten übernommen wurden.
     </string>
 
     <!-- AboutActivity / Libraries -->
-    <string name="about_references_libraries_title">Bibliotheken</string>
-    <string name="about_references_libraries_content">
+    <string name="appinfo_references_libraries_title">Bibliotheken</string>
+    <string name="appinfo_references_libraries_content">
         Im Folgenden wird auf Software-Projekte verwiesen, die in
         der Anwendung genutzt werden.
     </string>
-    <string name="about_references_name_googleplayservices">Google Play Services</string>
-    <string name="about_references_url_googleplayservices">http://developer.android.com/google/play-services</string>
-    <string name="about_references_name_googlesupportlibrary">Google Support Library v4</string>
-    <string name="about_references_url_googlesupportlibrary">http://developer.android.com/tools/support-library</string>
-    <string name="about_references_name_actionbarcompat">Google ActionBarCompat, Google Support Library v7</string>
-    <string name="about_references_url_actionbarcompat">http://developer.android.com/tools/support-library</string>
-    <string name="about_references_name_jackson">Jackson JSON processor</string>
-    <string name="about_references_url_jackson">http://jackson.codehaus.org</string>
-    <string name="about_references_name_ga">Google Analytics</string>
-    <string name="about_references_url_ga">http://developers.google.com/analytics/devguides/collection/android/</string>
-    <string name="about_references_name_tracdroid">TraceDroid</string>
-    <string name="about_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
+    <string name="appinfo_references_name_googleplayservices">Google Play Services</string>
+    <string name="appinfo_references_url_googleplayservices">http://developer.android.com/google/play-services</string>
+    <string name="appinfo_references_name_googlesupportlibrary">Google Support Library v4</string>
+    <string name="appinfo_references_url_googlesupportlibrary">http://developer.android.com/tools/support-library</string>
+    <string name="appinfo_references_name_actionbarcompat">Google ActionBarCompat, Google Support Library v7</string>
+    <string name="appinfo_references_url_actionbarcompat">http://developer.android.com/tools/support-library</string>
+    <string name="appinfo_references_name_jackson">Jackson JSON processor</string>
+    <string name="appinfo_references_url_jackson">http://jackson.codehaus.org</string>
+    <string name="appinfo_references_name_ga">Google Analytics</string>
+    <string name="appinfo_references_url_ga">http://developers.google.com/analytics/devguides/collection/android/</string>
+    <string name="appinfo_references_name_tracdroid">TraceDroid</string>
+    <string name="appinfo_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
+
+    <!-- AboutActivity / Sourcecode -->
+    <string name="appinfo_sourcecode_title">Quellcode</string>
+    <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
+
+    <!-- AboutActivity / License -->
+    <string name="appinfo_license_title">Lizenz</string>
+    <string name="appinfo_license_content">
+        Der Quellcode der Umweltzone App unterliegt der GPLv3 Lizenz.
+        Kartenmaterial, Bilder und Texte unterliegen, soweit nicht anders genannt,
+        der Creative Commons Lizenz.
+    </string>
+    <string name="appinfo_license_name_gpl">GPLv3</string>
+    <string name="appinfo_license_url_gpl">http://www.gnu.org/licenses/gpl-3.0.txt</string>
+    <string name="appinfo_license_name_cc">Creative Commons</string>
+    <string name="appinfo_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed.de</string>
+
+    <!-- AboutActivity / Build Info -->
+    <string name="appinfo_build_info_title">Build Informationen</string>
+    <string name="appinfo_build_info_time">Build Zeit</string>
+    <string name="appinfo_build_info_version_code">Version Code</string>
+    <string name="appinfo_build_info_hash">Build Hash</string>
 
 
-    <!-- AboutActivity / Contact -->
-    <string name="about_contact_title">Kontakt</string>
-    <string name="about_contact_content">
+    <!-- FeedbackActivity / Contact -->
+    <string name="appinfo_contact_title">Kontakt</string>
+    <string name="appinfo_contact_content">
         Jede Art von Rückmeldung wie z.B. Verbesserungsvorschläge,
         Fehlermeldungen oder der Wunsch nach neuen Funktionen
         kann an folgende Adresse gerichtet werden:
     </string>
-    <string name="about_contact_email">@string/config_contact_email_address</string>
+    <string name="appinfo_contact_email">@string/config_contact_email_address</string>
 
-    <!-- AboutActivity / Contact / Uservoice -->
-    <string name="about_uservoice_content">
+    <!-- FeedbackActivity / Contact / Uservoice -->
+    <string name="appinfo_uservoice_title">UserVoice</string>
+    <string name="appinfo_uservoice_content">
         Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
         eingetragen werden. Auf der Seite kann man auch jeden anderen
         Eintrag bewerten. Dadurch sehen wir gleich, was die Mehrzahl
         der Nutzer gerne möchte.
     </string>
-    <string name="about_uservoice_title">UserVoice</string>
-    <string name="about_uservoice_url">http://umweltzone.uservoice.com</string>
+    <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
 
-    <!-- AboutActivity / Sourcecode -->
-    <string name="about_sourcecode_title">Quellcode</string>
-    <string name="about_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
-
-    <!-- AboutActivity / License -->
-    <string name="about_license_title">Lizenz</string>
-    <string name="about_license_content">
-        Der Quellcode der Umweltzone App unterliegt der GPLv3 Lizenz.
-        Kartenmaterial, Bilder und Texte unterliegen, soweit nicht anders genannt,
-        der Creative Commons Lizenz.
+    <!-- FeedbackActivity / Rating -->
+    <string name="appinfo_rating_title">Bewerten</string>
+    <string name="appinfo_rating_content">
+        Natürlich freuen wir uns auch darüber, wenn wir eine gute
+        Bewertung im Google PlayStore bekommen.
     </string>
-    <string name="about_license_name_gpl">GPLv3</string>
-    <string name="about_license_url_gpl">http://www.gnu.org/licenses/gpl-3.0.txt</string>
-    <string name="about_license_name_cc">Creative Commons</string>
-    <string name="about_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed.de</string>
+    <string name="appinfo_rating_url">
+        http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+    </string>
 
-    <!-- AboutActivity / Build Info -->
-    <string name="about_build_info_title">Build Informationen</string>
-    <string name="about_build_info_time">Build Zeit</string>
-    <string name="about_build_info_version_code">Version Code</string>
-    <string name="about_build_info_hash">Build Hash</string>
 
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>

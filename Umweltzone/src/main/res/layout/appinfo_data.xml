@@ -19,29 +19,20 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/About.ContentTitle"
-        android:text="@string/about_contact_title" />
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_disclaimer_title" />
 
     <TextView
-        style="@style/About.TextContent"
-        android:text="@string/about_contact_content" />
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_disclaimer_content" />
 
     <TextView
-        android:id="@+id/aboutContactEmail"
-        style="@style/About.Contact.Email"
-        android:text="@string/about_contact_email" />
-
-    <TextView
-        style="@style/About.TextContent"
-        android:text="@string/about_uservoice_content" />
-
-    <TextView
-        style="@style/About.ButtonWebTitle"
-        android:text="@string/about_uservoice_title" />
+        style="@style/AppInfo.ButtonWebTitle"
+        android:text="@string/appinfo_references_name_umweltbundesamt" />
 
     <Button
-        android:id="@+id/aboutButtonUserVoice"
-        style="@style/About.ButtonWeb"
-        android:text="@string/about_uservoice_url" />
+        android:id="@+id/appInfoButtonEnvironmentAgency"
+        style="@style/AppInfo.ButtonWeb"
+        android:text="@string/appinfo_references_url_umweltbundesamt" />
 
 </merge>

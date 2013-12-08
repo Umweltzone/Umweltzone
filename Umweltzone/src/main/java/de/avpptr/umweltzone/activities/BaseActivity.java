@@ -73,6 +73,9 @@ public abstract class BaseActivity extends ActionBarActivity {
             case R.id.action_faq:
                 startActivity(IntentHelper.getFaqsIntent(this));
                 return true;
+            case R.id.action_feedback:
+                startActivity(IntentHelper.getFeedbackIntent(this));
+                return true;
             case R.id.action_about:
                 Intent intent = IntentHelper.getAboutIntent(this);
                 startActivity(intent);

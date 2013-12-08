@@ -42,84 +42,70 @@ public class AboutActivity extends BaseActivity {
         TextView buildHashTextView = (TextView) findViewById(R.id.buildHash);
         buildHashTextView.setText(BuildConfig.GIT_SHA);
 
-        Button userVoiceButton = (Button) findViewById(R.id.aboutButtonUserVoice);
-        userVoiceButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mTracking.track(TrackingPoint.UserVoiceClick);
-            }
-        });
-
-        TextView contactEmailTextView = (TextView) findViewById(R.id.aboutContactEmail);
-        contactEmailTextView.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mTracking.track(TrackingPoint.SupportMailClick);
-            }
-        });
-
-        Button environmentAgencyButton = (Button) findViewById(R.id.aboutButtonEnvironmentAgency);
+        Button environmentAgencyButton = (Button) findViewById(R.id.appInfoButtonEnvironmentAgency);
         environmentAgencyButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("environment_agency");
             }
         });
 
-        Button wikimediaButton = (Button) findViewById(R.id.aboutButtonWikimedia);
+        Button wikimediaButton = (Button) findViewById(R.id.appInfoButtonWikimedia);
         wikimediaButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("wikimedia_commons");
             }
         });
 
-        Button libraryGooglePlayButton = (Button) findViewById(R.id.aboutButtonGooglePlay);
+        Button libraryGooglePlayButton = (Button) findViewById(R.id.appInfoButtonGooglePlay);
         libraryGooglePlayButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_play_services_library");
             }
         });
 
-        Button libraryGoogleSupportButton = (Button) findViewById(R.id.aboutButtonGoogleSupportLibrary);
+        Button libraryGoogleSupportButton = (Button) findViewById(R.id.appInfoButtonGoogleSupportLibrary);
         libraryGoogleSupportButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_support_library");
             }
         });
 
-        Button libraryActionBarCompatButton = (Button) findViewById(R.id.aboutButtonActionBarCompat);
+        Button libraryActionBarCompatButton = (Button) findViewById(R.id.appInfoButtonActionBarCompat);
         libraryActionBarCompatButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("action_bat_compat_library");
             }
         });
 
-        Button libraryJacksonButton = (Button) findViewById(R.id.aboutButtonJackson);
+        Button libraryJacksonButton = (Button) findViewById(R.id.appInfoButtonJackson);
         libraryJacksonButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("jackson_library");
             }
         });
 
-        Button libraryGoogleAnalyticsButton = (Button) findViewById(R.id.aboutButtonGoogleAnalytics);
+        Button libraryGoogleAnalyticsButton = (Button) findViewById(R.id.appInfoButtonGoogleAnalytics);
         libraryGoogleAnalyticsButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_analytics");
             }
         });
 
-        Button gplButton = (Button) findViewById(R.id.aboutButtonGpl);
+        Button gplButton = (Button) findViewById(R.id.appInfoButtonGpl);
         gplButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("gpl_url");
             }
         });
 
-        Button ccButton = (Button) findViewById(R.id.aboutButtonCC);
+        Button ccButton = (Button) findViewById(R.id.appInfoButtonCreativeCommons);
         ccButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("cc_url");
             }
         });
 
-        Button sourceButton = (Button) findViewById(R.id.aboutButtonSourceCode);
+        Button sourceButton = (Button) findViewById(R.id.appInfoButtonSourceCode);
         sourceButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("source_code_url");

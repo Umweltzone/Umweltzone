@@ -38,55 +38,7 @@
             layout="@layout/horizontal_line" />
 
         <include
-            layout="@layout/appinfo_copyright" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_description" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_data" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_graphics" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_written_text" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_libraries" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_sourcecode" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_license" />
-
-        <include
-            layout="@layout/horizontal_line" />
-
-        <include
-            layout="@layout/appinfo_build_info" />
+            layout="@layout/appinfo_feedback" />
 
     </LinearLayout>
 </ScrollView>
