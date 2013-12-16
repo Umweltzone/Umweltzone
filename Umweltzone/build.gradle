@@ -28,7 +28,14 @@ def buildTime() {
 }
 
 Properties props = new Properties()
-props.load(new FileInputStream(file("gradle.properties")))
+File gradlePropertiesFile = file("gradle.properties")
+if (!gradlePropertiesFile.exists()) {
+    throw new IllegalStateException(
+            "Please create the file 'gradle.properties' before" +
+                    "importing the project. Do not forget to add custom values!"
+    )
+}
+props.load(new FileInputStream(gradlePropertiesFile))
 
 android {
     compileSdkVersion 19
