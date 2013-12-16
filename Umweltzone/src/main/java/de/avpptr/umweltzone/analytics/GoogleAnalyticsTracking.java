@@ -84,6 +84,9 @@ public class GoogleAnalyticsTracking implements Tracking {
             case CityRowCouldNotBeInflatedError:
                 errorIsFatal = true;
                 break;
+            case GooglePlayServicesNotAvailableError:
+                eventDescription += ", " + parameter;
+                break;
         }
         trackException(eventDescription, errorIsFatal);
     }
