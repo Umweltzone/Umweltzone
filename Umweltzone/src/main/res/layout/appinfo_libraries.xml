@@ -80,4 +80,13 @@
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_tracedroid" />
 
+    <TextView
+        style="@style/AppInfo.ButtonWebTitle"
+        android:text="@string/appinfo_references_name_ckchangelog" />
+
+    <Button
+        android:id="@+id/appInfoButtonCkChangeLog"
+        style="@style/AppInfo.ButtonWeb"
+        android:text="@string/appinfo_references_url_ckchangelog" />
+
 </merge>

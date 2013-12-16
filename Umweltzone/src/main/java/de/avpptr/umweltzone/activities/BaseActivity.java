@@ -34,6 +34,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.cketti.library.changelog.ChangeLog;
 
 public abstract class BaseActivity extends ActionBarActivity {
 
@@ -78,6 +79,9 @@ public abstract class BaseActivity extends ActionBarActivity {
             case R.id.action_feedback:
                 startActivity(IntentHelper.getFeedbackIntent(this));
                 return true;
+            case R.id.action_changelog:
+                showChangeLogDialog(true);
+                return true;
             case R.id.action_about:
                 Intent intent = IntentHelper.getAboutIntent(this);
                 startActivity(intent);
@@ -116,6 +120,13 @@ public abstract class BaseActivity extends ActionBarActivity {
             return packageInfo.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             throw new IllegalStateException(e.getMessage());
+        }
+    }
+
+    public void showChangeLogDialog(boolean ignoreFirstRun) {
+        final ChangeLog changeLog = new ChangeLog(this);
+        if (ignoreFirstRun || changeLog.isFirstRun()) {
+            changeLog.getLogDialog().show();
         }
     }
 

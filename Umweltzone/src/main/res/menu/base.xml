@@ -26,10 +26,17 @@
         umweltzone:showAsAction="never" />
 
     <item
+        android:id="@+id/action_changelog"
+        android:title="@string/action_changelog"
+        android:icon="@drawable/ic_action_about_dark"
+        android:orderInCategory="112"
+        umweltzone:showAsAction="never" />
+
+    <item
         android:id="@+id/action_about"
         android:title="@string/action_about"
         android:icon="@drawable/ic_action_about_dark"
-        android:orderInCategory="112"
+        android:orderInCategory="113"
         umweltzone:showAsAction="never" />
 
 </menu>
