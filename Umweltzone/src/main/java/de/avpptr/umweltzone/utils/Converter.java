@@ -32,6 +32,8 @@ public class Converter {
             location = PointsProvider.Location.Duesseldorf;
         } else if (cityName.equalsIgnoreCase("Frankfurt")) {
             location = PointsProvider.Location.Frankfurt;
+        } else if (cityName.equalsIgnoreCase("Leipzig")) {
+            location = PointsProvider.Location.Leipzig;
         } else if (cityName.equalsIgnoreCase("Munich")) {
             location = PointsProvider.Location.Munich;
         } else if (cityName.equalsIgnoreCase("Stuttgart")) {

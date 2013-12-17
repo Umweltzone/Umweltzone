@@ -120,6 +120,30 @@
         }
     },
     {
+        "name" : "leipzig",
+        "displayName" : "Leipzig",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2011-03-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leipzig.php",
+        "center" : {
+            "latitude" : 51.338624,
+            "longitude" : 12.3733505
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.256458,
+                "longitude" : 12.237564
+            },
+            "northEast" : {
+                "latitude" : 51.420790,
+                "longitude" : 12.509137
+            }
+        }
+    },
+    {
         "name" : "munich",
         "displayName" : "München",
         "zoneNumber" : 4,
