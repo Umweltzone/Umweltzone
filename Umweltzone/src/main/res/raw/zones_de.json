@@ -96,6 +96,30 @@
         }
     },
     {
+        "name" : "hannover",
+        "displayName" : "Hannover",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hannover.php",
+        "center" : {
+            "latitude" : 52.37511,
+            "longitude" : 9.7399755
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.336039,
+                "longitude" : 9.686785
+            },
+            "northEast" : {
+                "latitude" : 52.414181,
+                "longitude" : 9.793166
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "zoneNumber" : 3,
