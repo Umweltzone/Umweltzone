@@ -26,6 +26,8 @@ public class Converter {
             location = PointsProvider.Location.Berlin;
         } else if (cityName.equalsIgnoreCase("Cologne")) {
             location = PointsProvider.Location.Cologne;
+        } else if (cityName.equalsIgnoreCase("Duesseldorf")) {
+            location = PointsProvider.Location.Duesseldorf;
         } else if (cityName.equalsIgnoreCase("Frankfurt")) {
             location = PointsProvider.Location.Frankfurt;
         } else if (cityName.equalsIgnoreCase("Munich")) {

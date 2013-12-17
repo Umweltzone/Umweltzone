@@ -37,6 +37,7 @@ public class PointsProvider {
     public enum Location {
         Berlin,
         Cologne,
+        Duesseldorf,
         Frankfurt,
         Munich,
         Stuttgart
@@ -57,6 +58,9 @@ public class PointsProvider {
                     break;
                 case Cologne:
                     resourceId = R.raw.zone_cologne;
+                    break;
+                case Duesseldorf:
+                    resourceId = R.raw.zone_duesseldorf;
                     break;
                 case Frankfurt:
                     resourceId = R.raw.zone_frankfurt_am_main;

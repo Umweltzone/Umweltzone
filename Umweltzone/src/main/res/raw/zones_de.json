@@ -24,6 +24,30 @@
         }
     },
     {
+        "name" : "duesseldorf",
+        "displayName" : "Düsseldorf",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20duesseldorf.php",
+        "center" : {
+            "latitude" : 51.2297875,
+            "longitude" : 6.787429
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.168374,
+                "longitude" : 6.688548
+            },
+            "northEast" : {
+                "latitude" : 51.291201,
+                "longitude" : 6.886310
+            }
+        }
+    },
+    {
         "name" : "frankfurt",
         "displayName" : "Frankfurt am Main",
         "zoneNumber" : 4,
