@@ -42,6 +42,7 @@ public class PointsProvider {
         Frankfurt,
         Hannover,
         Leipzig,
+        Muenster,
         Munich,
         Stuttgart
     }
@@ -76,6 +77,9 @@ public class PointsProvider {
                     break;
                 case Leipzig:
                     resourceId = R.raw.zone_leipzig;
+                    break;
+                case Muenster:
+                    resourceId = R.raw.zone_muenster;
                     break;
                 case Munich:
                     resourceId = R.raw.zone_munich;

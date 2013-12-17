@@ -192,6 +192,30 @@
         }
     },
     {
+        "name" : "muenster",
+        "displayName" : "Münster",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenster_1.php",
+        "center" : {
+            "latitude" : 51.960028,
+            "longitude" : 7.6246965
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.952674,
+                "longitude" : 7.614015
+            },
+            "northEast" : {
+                "latitude" : 51.967382,
+                "longitude" : 7.635378
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "zoneNumber" : 4,
