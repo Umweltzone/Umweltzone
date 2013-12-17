@@ -24,6 +24,30 @@
         }
     },
     {
+        "name" : "bremen",
+        "displayName" : "Bremen",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2011-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bremen.php",
+        "center" : {
+            "latitude" : 53.072005,
+            "longitude" : 8.808606
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 53.055835,
+                "longitude" : 8.779687
+            },
+            "northEast" : {
+                "latitude" : 53.088175,
+                "longitude" : 8.837525
+            }
+        }
+    },
+    {
         "name" : "duesseldorf",
         "displayName" : "Düsseldorf",
         "zoneNumber" : 3,
