@@ -24,30 +24,6 @@
         }
     },
     {
-        "name" : "cologne",
-        "displayName" : "Köln",
-        "zoneNumber" : 3,
-        "zoneNumberSince" : "2013-01-01",
-        "nextZoneNumberAsOf" : "2014-07-01",
-        "abroadLicensedVehicleZoneNumber" : 3,
-        "abroadLicensedVehicleZoneNumberUntil" : "",
-        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
-        "center" : {
-            "latitude" : 50.937490,
-            "longitude" : 6.958020
-        },
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 50.892475,
-                "longitude" : 6.808446
-            },
-            "northEast" : {
-                "latitude" : 51.000023,
-                "longitude" : 7.033452
-            }
-        }
-    },
-    {
         "name" : "frankfurt",
         "displayName" : "Frankfurt am Main",
         "zoneNumber" : 4,
@@ -68,6 +44,30 @@
             "northEast" : {
                 "latitude" : 50.200628,
                 "longitude" : 8.740518
+            }
+        }
+    },
+    {
+        "name" : "cologne",
+        "displayName" : "Köln",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
+        "center" : {
+            "latitude" : 50.937490,
+            "longitude" : 6.958020
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.892475,
+                "longitude" : 6.808446
+            },
+            "northEast" : {
+                "latitude" : 51.000023,
+                "longitude" : 7.033452
             }
         }
     },
