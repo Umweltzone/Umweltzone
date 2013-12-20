@@ -17,6 +17,39 @@
 -->
 <changelog>
     <release
+        version="1.1.0"
+        versioncode="10001">
+        <change>
+            Bugfix: Endlosschleife beim Wechsel zwischen
+            FAQs und Zoneninfo beseitigt
+        </change>
+        <change>
+            Bugfix: Fehler bei der Darstellung des Logos behoben
+        </change>
+        <change>
+            Bugfix: Fehler bei der Darstellung des Zonenplakette behoben
+        </change>
+        <change>
+            Neu: Fünf Städte kommen dazu (Düsseldorf, Bremen,
+            Leipzig, Hannover und Münster)
+        </change>
+        <change>
+            Neu: Versionsinformationen geben Auskunft über
+            neue Funktionen oder behobene Fehler
+        </change>
+        <change>
+            Neu: Feedback als separater Menü-Eintrag
+        </change>
+        <change>
+            Neu: Erweiterte Fehlerprotokollierung, wenn
+            Google Play Services nicht installiert ist
+        </change>
+        <change>
+            Neu: Erweiterte Protokollierung, wenn noch
+            keine Stadt gewählt wurde
+        </change>
+    </release>
+    <release
         version="1.0.0"
         versioncode="10000">
         <change>
