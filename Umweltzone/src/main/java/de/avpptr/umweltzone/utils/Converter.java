@@ -24,14 +24,24 @@ public class Converter {
         PointsProvider.Location location = null;
         if (cityName.equalsIgnoreCase("Berlin")) {
             location = PointsProvider.Location.Berlin;
+        } else if (cityName.equalsIgnoreCase("Bremen")) {
+            location = PointsProvider.Location.Bremen;
+        } else if (cityName.equalsIgnoreCase("Cologne")) {
+            location = PointsProvider.Location.Cologne;
+        } else if (cityName.equalsIgnoreCase("Duesseldorf")) {
+            location = PointsProvider.Location.Duesseldorf;
         } else if (cityName.equalsIgnoreCase("Frankfurt")) {
             location = PointsProvider.Location.Frankfurt;
+        } else if (cityName.equalsIgnoreCase("Hannover")) {
+            location = PointsProvider.Location.Hannover;
+        } else if (cityName.equalsIgnoreCase("Leipzig")) {
+            location = PointsProvider.Location.Leipzig;
+        } else if (cityName.equalsIgnoreCase("Muenster")) {
+            location = PointsProvider.Location.Muenster;
         } else if (cityName.equalsIgnoreCase("Munich")) {
             location = PointsProvider.Location.Munich;
         } else if (cityName.equalsIgnoreCase("Stuttgart")) {
             location = PointsProvider.Location.Stuttgart;
-        } else if (cityName.equalsIgnoreCase("Cologne")) {
-            location = PointsProvider.Location.Cologne;
         }
         return location;
     }

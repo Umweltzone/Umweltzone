@@ -24,26 +24,50 @@
         }
     },
     {
-        "name" : "cologne",
-        "displayName" : "Köln",
-        "zoneNumber" : 3,
-        "zoneNumberSince" : "2013-01-01",
-        "nextZoneNumberAsOf" : "2014-07-01",
-        "abroadLicensedVehicleZoneNumber" : 3,
+        "name" : "bremen",
+        "displayName" : "Bremen",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2011-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
         "abroadLicensedVehicleZoneNumberUntil" : "",
-        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bremen.php",
         "center" : {
-            "latitude" : 50.937490,
-            "longitude" : 6.958020
+            "latitude" : 53.072005,
+            "longitude" : 8.808606
         },
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.892475,
-                "longitude" : 6.808446
+                "latitude" : 53.055835,
+                "longitude" : 8.779687
             },
             "northEast" : {
-                "latitude" : 51.000023,
-                "longitude" : 7.033452
+                "latitude" : 53.088175,
+                "longitude" : 8.837525
+            }
+        }
+    },
+    {
+        "name" : "duesseldorf",
+        "displayName" : "Düsseldorf",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20duesseldorf.php",
+        "center" : {
+            "latitude" : 51.2297875,
+            "longitude" : 6.787429
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.168374,
+                "longitude" : 6.688548
+            },
+            "northEast" : {
+                "latitude" : 51.291201,
+                "longitude" : 6.886310
             }
         }
     },
@@ -72,6 +96,78 @@
         }
     },
     {
+        "name" : "hannover",
+        "displayName" : "Hannover",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hannover.php",
+        "center" : {
+            "latitude" : 52.37511,
+            "longitude" : 9.7399755
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.336039,
+                "longitude" : 9.686785
+            },
+            "northEast" : {
+                "latitude" : 52.414181,
+                "longitude" : 9.793166
+            }
+        }
+    },
+    {
+        "name" : "cologne",
+        "displayName" : "Köln",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
+        "center" : {
+            "latitude" : 50.937490,
+            "longitude" : 6.958020
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.892475,
+                "longitude" : 6.808446
+            },
+            "northEast" : {
+                "latitude" : 51.000023,
+                "longitude" : 7.033452
+            }
+        }
+    },
+    {
+        "name" : "leipzig",
+        "displayName" : "Leipzig",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2011-03-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leipzig.php",
+        "center" : {
+            "latitude" : 51.338624,
+            "longitude" : 12.3733505
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.256458,
+                "longitude" : 12.237564
+            },
+            "northEast" : {
+                "latitude" : 51.420790,
+                "longitude" : 12.509137
+            }
+        }
+    },
+    {
         "name" : "munich",
         "displayName" : "München",
         "zoneNumber" : 4,
@@ -92,6 +188,30 @@
             "northEast" : {
                 "latitude" : 48.177864,
                 "longitude" : 11.620583
+            }
+        }
+    },
+    {
+        "name" : "muenster",
+        "displayName" : "Münster",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2010-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenster_1.php",
+        "center" : {
+            "latitude" : 51.960028,
+            "longitude" : 7.6246965
+        },
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.952674,
+                "longitude" : 7.614015
+            },
+            "northEast" : {
+                "latitude" : 51.967382,
+                "longitude" : 7.635378
             }
         }
     },
