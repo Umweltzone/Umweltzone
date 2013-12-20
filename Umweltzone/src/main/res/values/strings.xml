@@ -26,6 +26,7 @@
     <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>
     <string name="action_feedback">@string/feedback_activity_title</string>
+    <string name="action_changelog">Versionsinformationen</string>
     <string name="action_about">@string/about_activity_title</string>
 
     <!-- FeedbackActivity -->
@@ -104,6 +105,8 @@
     <string name="appinfo_references_url_ga">http://developers.google.com/analytics/devguides/collection/android/</string>
     <string name="appinfo_references_name_tracdroid">TraceDroid</string>
     <string name="appinfo_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
+    <string name="appinfo_references_name_ckchangelog">ckChangeLog</string>
+    <string name="appinfo_references_url_ckchangelog">http://github.com/cketti/ckChangeLog</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Quellcode</string>

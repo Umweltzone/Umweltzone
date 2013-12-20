@@ -33,6 +33,7 @@ public class MainActivity extends BaseActivity {
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
         TraceDroidEmailSender.sendStackTraces(getString(R.string.config_tracedroid_email_address), this);
+        showChangeLogDialog(false);
     }
 
     @Override
