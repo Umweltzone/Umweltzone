@@ -34,6 +34,7 @@ public enum TrackingPoint {
     // Errors
     LocationNotSupportedError("location_not_supported"),
     NoCircuitPointsAvailableError("no_circuit_points_available"),
+    GooglePlayServicesNotAvailableError("google_play_services_not_available"),
     MapIsNullError("map_is_null"),
     ParsingZonesFromJSONFailedError("parsing_zones_from_json_failed"),
     CityRowCouldNotBeInflatedError("city_row_could_not_be_inflated");

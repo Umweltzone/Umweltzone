@@ -46,6 +46,7 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
@@ -108,6 +109,11 @@ public class MapFragment extends SupportMapFragment {
             int connectionResult = GooglePlayServicesUtil
                     .isGooglePlayServicesAvailable(context);
             if (connectionResult != ConnectionResult.SUCCESS) {
+                final String connectionResultString =
+                        ConnectionResultHelper.connectionResultToString(connectionResult);
+                mTracking.trackError(
+                        TrackingPoint.GooglePlayServicesNotAvailableError,
+                        connectionResultString);
                 showGooglePlayServicesErrorDialog(activity, connectionResult);
             } else {
                 FragmentManager fragmentManager = activity.getSupportFragmentManager();
