@@ -90,7 +90,7 @@
     <!-- Generic styles for application information -->
 
     <style name="AppInfo.Logo" parent="TextView.Base.Small">
-        <item name="android:src">@drawable/umweltzone_logo_bordered_256</item>
+        <item name="android:src">@drawable/umweltzone_logo_bordered</item>
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
     </style>
 
