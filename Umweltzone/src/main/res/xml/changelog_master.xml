@@ -18,7 +18,7 @@
 <changelog>
     <release
         version="1.1.0"
-        versioncode="10001">
+        versioncode="11000">
         <change>
             Bugfix: Endlosschleife beim Wechsel zwischen
             FAQs und Zoneninfo beseitigt
