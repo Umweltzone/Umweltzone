@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.3'
+        classpath 'com.android.tools.build:gradle:0.7.+'
         classpath 'net.sf.proguard:proguard-gradle:4.10'
     }
 }
@@ -46,12 +46,10 @@ android {
         targetSdkVersion 19
         versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        buildConfig """\
-          public static final String BUILD_VERSION = "${versionName}";
-          public static final int BUILD_VERSION_CODE = ${versionCode};
-          public static final String BUILD_TIME = "${buildTime()}";
-          public static final String GIT_SHA = "${gitSha()}";
-        """
+        buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
+        buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
+        buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
     }
 
     signingConfigs {
@@ -74,6 +72,11 @@ android {
             proguardFile 'proguard.cfg'
             signingConfig signingConfigs.release
         }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
     }
 }
 
