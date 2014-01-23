@@ -83,12 +83,10 @@
     </style>
 
     <style name="Button.Web" parent="Button.Base">
-        <item name="android:autoLink">web</item>
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
-        <item name="android:autoLink">email</item>
         <item name="android:textColorLink">@color/email_text_color_link</item>
     </style>
 

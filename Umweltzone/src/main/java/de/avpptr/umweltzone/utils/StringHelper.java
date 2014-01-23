@@ -18,6 +18,8 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.text.Html;
+import android.text.Spanned;
 
 import org.ligi.tracedroid.logging.Log;
 
@@ -97,6 +99,23 @@ public class StringHelper {
             return context.getString(R.string.city_info_zone_number_since_text_fragment_red);
         }
         return null;
+    }
+
+    public static Spanned spannedLinkForString(final Context context, final int stringResourceId) {
+        final String url = context.getString(stringResourceId);
+        return Html.fromHtml(linkifiedString(url));
+    }
+
+    public static Spanned spannedLinkForString(final String string) {
+        return Html.fromHtml(linkifiedString(string));
+    }
+
+    public static String linkifiedString(final String string) {
+        if (string.startsWith("http")) {
+            return "<a href=\"" + string + "\">" + string + "</a>";
+        } else {
+            return "<a href=\"mailto:" + string + "\">" + string + "</a>";
+        }
     }
 
 }

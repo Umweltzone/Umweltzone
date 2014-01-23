@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.activities;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import android.widget.TextView;
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.utils.StringHelper;
 
 public class AboutActivity extends BaseActivity {
 
@@ -43,6 +45,10 @@ public class AboutActivity extends BaseActivity {
         buildHashTextView.setText(BuildConfig.GIT_SHA);
 
         Button environmentAgencyButton = (Button) findViewById(R.id.appInfoButtonEnvironmentAgency);
+        environmentAgencyButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_umweltbundesamt),
+                TextView.BufferType.SPANNABLE);
+        environmentAgencyButton.setMovementMethod(LinkMovementMethod.getInstance());
         environmentAgencyButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("environment_agency");
@@ -50,6 +56,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button wikimediaButton = (Button) findViewById(R.id.appInfoButtonWikimedia);
+        wikimediaButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_wikimedia_commons),
+                TextView.BufferType.SPANNABLE);
+        wikimediaButton.setMovementMethod(LinkMovementMethod.getInstance());
         wikimediaButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("wikimedia_commons");
@@ -57,6 +67,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button libraryGooglePlayButton = (Button) findViewById(R.id.appInfoButtonGooglePlay);
+        libraryGooglePlayButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_googleplayservices),
+                TextView.BufferType.SPANNABLE);
+        libraryGooglePlayButton.setMovementMethod(LinkMovementMethod.getInstance());
         libraryGooglePlayButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_play_services_library");
@@ -64,6 +78,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button libraryGoogleSupportButton = (Button) findViewById(R.id.appInfoButtonGoogleSupportLibrary);
+        libraryGoogleSupportButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_googlesupportlibrary),
+                TextView.BufferType.SPANNABLE);
+        libraryGoogleSupportButton.setMovementMethod(LinkMovementMethod.getInstance());
         libraryGoogleSupportButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_support_library");
@@ -71,6 +89,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button libraryActionBarCompatButton = (Button) findViewById(R.id.appInfoButtonActionBarCompat);
+        libraryActionBarCompatButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_actionbarcompat),
+                TextView.BufferType.SPANNABLE);
+        libraryActionBarCompatButton.setMovementMethod(LinkMovementMethod.getInstance());
         libraryActionBarCompatButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("action_bat_compat_library");
@@ -78,6 +100,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button libraryJacksonButton = (Button) findViewById(R.id.appInfoButtonJackson);
+        libraryJacksonButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_jackson),
+                TextView.BufferType.SPANNABLE);
+        libraryJacksonButton.setMovementMethod(LinkMovementMethod.getInstance());
         libraryJacksonButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("jackson_library");
@@ -85,6 +111,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button libraryGoogleAnalyticsButton = (Button) findViewById(R.id.appInfoButtonGoogleAnalytics);
+        libraryGoogleAnalyticsButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_references_url_ga),
+                TextView.BufferType.SPANNABLE);
+        libraryGoogleAnalyticsButton.setMovementMethod(LinkMovementMethod.getInstance());
         libraryGoogleAnalyticsButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("google_analytics");
@@ -92,6 +122,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button gplButton = (Button) findViewById(R.id.appInfoButtonGpl);
+        gplButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_license_url_gpl),
+                TextView.BufferType.SPANNABLE);
+        gplButton.setMovementMethod(LinkMovementMethod.getInstance());
         gplButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("gpl_url");
@@ -99,6 +133,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button ccButton = (Button) findViewById(R.id.appInfoButtonCreativeCommons);
+        ccButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_license_url_cc),
+                TextView.BufferType.SPANNABLE);
+        ccButton.setMovementMethod(LinkMovementMethod.getInstance());
         ccButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("cc_url");
@@ -106,6 +144,10 @@ public class AboutActivity extends BaseActivity {
         });
 
         Button sourceButton = (Button) findViewById(R.id.appInfoButtonSourceCode);
+        sourceButton.setText(
+                StringHelper.spannedLinkForString(this, R.string.appinfo_sourcecode_url),
+                TextView.BufferType.SPANNABLE);
+        sourceButton.setMovementMethod(LinkMovementMethod.getInstance());
         sourceButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 trackAboutItemClick("source_code_url");
