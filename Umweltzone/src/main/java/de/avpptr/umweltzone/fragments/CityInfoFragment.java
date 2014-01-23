@@ -104,7 +104,7 @@ public class CityInfoFragment extends BaseFragment {
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoShowOnMapClick);
+                mTracking.track(TrackingPoint.CityInfoShowOnMapClick, mLowEmissionZone.name);
                 startActivity(IntentHelper.getChangeCityIntent(activity, mLowEmissionZone.name));
             }
         });
@@ -113,7 +113,7 @@ public class CityInfoFragment extends BaseFragment {
         Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
         furtherInfoButton.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoFurtherInfoClick);
+                mTracking.track(TrackingPoint.CityInfoFurtherInfoClick, mLowEmissionZone.name);
                 startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
             }
         });
