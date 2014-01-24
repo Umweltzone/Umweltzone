@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
@@ -29,25 +30,39 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
-    public static List<Faq> getFaqs(Context context) {
-        return getContent(context, R.raw.faqs_de, Faq.class);
+    public static List<Faq> getFaqs(final Context context) {
+        return getContent(context, "faqs_de", Faq.class);
     }
 
-    public static List<LowEmissionZone> getLowEmissionZones(Context context) {
-        return getContent(context, R.raw.zones_de, LowEmissionZone.class);
+    public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
+        return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
-    public static List<GeoPoint> getCircuitPoints(Context context, int resourceId) {
-        return getContent(context, resourceId, GeoPoint.class);
+    public static List<GeoPoint> getCircuitPoints(final Context context, final String fileName) {
+        return getContent(context, fileName, GeoPoint.class);
     }
 
-    private static <T> List<T> getContent(Context context, int rawResourceId, Class<T> contentType) {
-        InputStream inputStream = context.getResources().openRawResource(rawResourceId);
+    private static <T> List<T> getContent(final Context context, final String fileName, Class<T> contentType) {
+        return getContent(context, fileName, "raw", contentType);
+    }
+
+    private static <T> List<T> getContent(final Context context, final String fileName, final String folderName, Class<T> contentType) {
+        final Resources resources = context.getResources();
+        // TODO: Caching recommended. Reflection is used to look-up identifier.
+        int rawResourceId = resources.getIdentifier(fileName, folderName, context.getPackageName());
+        if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
+            final String filePath = folderName + "/" + fileName;
+            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
+            throw new IllegalStateException("Resource for file path '" + filePath + "' not found.");
+        }
+        InputStream inputStream = resources.openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);
         objectMapper.setDateFormat(new SimpleDateFormat(datePattern));
