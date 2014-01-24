@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.support.v4.util.LruCache;
 
 import com.google.android.gms.maps.model.LatLng;
 
@@ -29,27 +30,44 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public class PointsProvider {
 
-    private static String currentZoneName = null;
-    private static List<LatLng> currentPoints = null;
+    private static LruCache<String, List<LatLng>> zoneNamePointsCache;
 
     public static List<LatLng> getCircuitPoints(final Context context, final String zoneName) {
         if (zoneName == null) {
             throw new NullPointerException("Zone name is null.");
         }
-        if (!zoneName.equals(currentZoneName) || currentPoints == null) {
-            currentZoneName = zoneName;
-            final String zoneFileName = "zone_" + zoneName;
-            List<GeoPoint> points = ContentProvider.getCircuitPoints(context, zoneFileName);
-            currentPoints = new ArrayList<LatLng>();
-            for (GeoPoint point : points) {
-                currentPoints.add(point.toLatLng());
+        if (zoneNamePointsCache == null) {
+            // Initialize cache
+            zoneNamePointsCache = new LruCache<String, List<LatLng>>(6);
+            return getAndCachePointsForZoneName(context, zoneName);
+        } else {
+            // Try loading from cache
+            List<LatLng> points = zoneNamePointsCache.get(zoneName);
+            if (points == null) {
+                points = getAndCachePointsForZoneName(context, zoneName);
             }
-            if (currentPoints.size() == 0) {
-                Umweltzone.getTracker().trackError(TrackingPoint.NoCircuitPointsAvailableError);
-                throw new IllegalStateException("There are no circuit points available");
-            }
+            return points;
         }
-        return currentPoints;
+    }
+
+    private static List<LatLng> getAndCachePointsForZoneName(final Context context, final String zoneName) {
+        final String zoneFileName = "zone_" + zoneName;
+        List<GeoPoint> geoPoints = ContentProvider.getCircuitPoints(context, zoneFileName);
+        if (geoPoints.size() == 0) {
+            Umweltzone.getTracker().trackError(TrackingPoint.NoCircuitPointsAvailableError);
+            throw new IllegalStateException("There are no circuit points available");
+        }
+        List<LatLng> latLngPoints = getLatLngPoints(geoPoints);
+        zoneNamePointsCache.put(zoneName, latLngPoints);
+        return latLngPoints;
+    }
+
+    private static List<LatLng> getLatLngPoints(final List<GeoPoint> geoPoints) {
+        final List<LatLng> latLngPoints = new ArrayList<LatLng>(geoPoints.size());
+        for (final GeoPoint point : geoPoints) {
+            latLngPoints.add(point.toLatLng());
+        }
+        return latLngPoints;
     }
 
 }
