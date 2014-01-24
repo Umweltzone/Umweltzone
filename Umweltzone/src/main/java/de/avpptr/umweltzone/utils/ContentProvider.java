@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.v4.util.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
@@ -37,6 +38,8 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
+    private static LruCache<String, Integer> filePathResourceIdCache = null;
+
     public static List<Faq> getFaqs(final Context context) {
         return getContent(context, "faqs_de", Faq.class);
     }
@@ -54,15 +57,14 @@ public abstract class ContentProvider {
     }
 
     private static <T> List<T> getContent(final Context context, final String fileName, final String folderName, Class<T> contentType) {
-        final Resources resources = context.getResources();
-        // TODO: Caching recommended. Reflection is used to look-up identifier.
-        int rawResourceId = resources.getIdentifier(fileName, folderName, context.getPackageName());
+        // Invoke cache
+        int rawResourceId = getResourceIdForFileName(context, fileName, folderName);
         if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
             final String filePath = folderName + "/" + fileName;
             Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
             throw new IllegalStateException("Resource for file path '" + filePath + "' not found.");
         }
-        InputStream inputStream = resources.openRawResource(rawResourceId);
+        InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);
         objectMapper.setDateFormat(new SimpleDateFormat(datePattern));
@@ -75,6 +77,39 @@ public abstract class ContentProvider {
             e.printStackTrace();
         }
         return null;
+    }
+
+    // Returns a valid resource id or 0 if the resource cannot be found
+    private static int getResourceIdForFileName(final Context context, final String fileName, final String folderName) {
+        final String filePath = getFilePath(fileName, folderName);
+        if (filePathResourceIdCache == null) {
+            // Initialize cache
+            filePathResourceIdCache = new LruCache<String, Integer>(6);
+            return getAndCacheResourceIdForFileName(context, fileName, folderName);
+        } else {
+            // Try loading from cache
+            Integer rawResourceId = filePathResourceIdCache.get(filePath);
+            if (rawResourceId == null) {
+                rawResourceId = getAndCacheResourceIdForFileName(context, fileName, folderName);
+            }
+            return rawResourceId;
+        }
+    }
+
+    private static int getAndCacheResourceIdForFileName(final Context context, final String fileName, final String folderName) {
+        final Resources resources = context.getResources();
+        final String filePath = getFilePath(fileName, folderName);
+        // Look-up identifier using reflection (expensive)
+        int rawResourceId = resources.getIdentifier(fileName, folderName, context.getPackageName());
+        // Store in cache if not 0
+        if (rawResourceId != de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
+            filePathResourceIdCache.put(filePath, rawResourceId);
+        }
+        return rawResourceId;
+    }
+
+    private static String getFilePath(final String fileName, final String folderName) {
+        return folderName + "/" + fileName;
     }
 
 }
