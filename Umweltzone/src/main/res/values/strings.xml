@@ -60,13 +60,19 @@
     <!-- AboutActivity / Disclaimer -->
     <string name="appinfo_disclaimer_title">Daten und Qualität</string>
     <string name="appinfo_disclaimer_content">
-        Die Daten und Koordinaten der Umweltzonen wurden manuell erstellt.
-        Grundlage sind die offiziellen Publikationen des Umweltbundesamts.
-        Da der Verlauf der Umweltzone meist nur als analoge Grafik
+        Die Daten und Koordinaten der Umweltzonen wurden, soweit vorhanden,
+        in digitaler Form von offiziellen Stellen übernommen. Eine primäre
+        Quelle ist weiterhin OpenStreetMap. Dort können die Geodaten vieler
+        Umweltzonen abgerufen werden. Außerdem wurden einige der Daten und
+        Koordinaten der Umweltzonen manuell erstellt. Grundlage sind die
+        offiziellen Publikationen des Umweltbundesamts.
+        Da der Verlauf der Umweltzone von den Behörden meist nur als analoge Grafik
         (eingescanntes Kartenmaterial) veröffentlicht wird, kann die Genauigkeit
         der in der Anwendung dargestellten Zonengrenze von der Realität
-        abweichen. Daher können wir keine Haftung/Garantie für die korrekte
-        Darstellung der Umweltzonen und etwaige Kosten oder Strafen übernehmen.
+        abweichen. Bedingt durch die unterschiedliche Herkunft, Qualität sowie
+        den manuellen Digitalisierungsprozess können wir nicht für die korrekte
+        Darstellung garantieren und keine Haftung und etwaige Kosten oder
+        Strafen übernehmen.
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Umweltbundesamt</string>
     <string name="appinfo_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
