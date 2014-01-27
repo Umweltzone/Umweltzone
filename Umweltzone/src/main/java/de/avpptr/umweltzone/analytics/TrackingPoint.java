@@ -24,6 +24,7 @@ public enum TrackingPoint {
     CityInfoEmptySelectZoneClick("city_info_empty_select_zone_click"),
     CityInfoShowOnMapClick("city_info_show_on_map_click"),
     CityInfoFurtherInfoClick("city_info_further_info_click"),
+    CityInfoBadgeOnlineClick("city_info_badge_online_click"),
     FaqItemClick("faq_item_click"),
     FaqSourceClick("faq_source_click"),
     AboutItemClick("about_item_click"),

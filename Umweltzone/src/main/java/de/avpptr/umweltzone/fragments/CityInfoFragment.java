@@ -100,6 +100,7 @@ public class CityInfoFragment extends BaseFragment {
             abroadLicensedVehicleZoneNumberTextView.setText(abroadLicensedVehicleZoneNumberText);
         }
 
+
         // Show on map button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +116,24 @@ public class CityInfoFragment extends BaseFragment {
             @Override public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoFurtherInfoClick, mLowEmissionZone.name);
                 startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
+            }
+        });
+
+        // Badge online
+        TextView badgeOnlineTitle = (TextView) activity.findViewById(R.id.city_info_badge_online_title);
+        Button badgeOnline = (Button) activity.findViewById(R.id.city_info_badge_online);
+        final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
+        if (urlBadgeOnline == null || urlBadgeOnline.length() < 1) {
+            badgeOnlineTitle.setVisibility(View.GONE);
+            badgeOnline.setVisibility(View.GONE);
+        } else {
+            badgeOnlineTitle.setVisibility(View.VISIBLE);
+            badgeOnline.setVisibility(View.VISIBLE);
+            badgeOnline.setText(urlBadgeOnline);
+        }
+        badgeOnline.setOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View view) {
+                mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);
             }
         });
     }

@@ -198,6 +198,7 @@
 
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>
+    <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>
 
     <string name="city_info_empty_title">Stadtinfos</string>
     <string name="city_info_empty_status_desc">
