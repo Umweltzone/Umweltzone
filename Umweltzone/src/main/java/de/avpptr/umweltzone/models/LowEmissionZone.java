@@ -41,6 +41,7 @@ public class LowEmissionZone {
     public int abroadLicensedVehicleZoneNumber;
     public Date abroadLicensedVehicleZoneNumberUntil;
     public String urlUmweltPlaketteDe;
+    public String urlBadgeOnline;
 
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
         String zoneName = PreferencesHelper.restoreLastKnownLocationAsString(context);
@@ -77,7 +78,8 @@ public class LowEmissionZone {
                 ", nextZoneNumberAsOf: " + nextZoneNumberAsOf +
                 ", abroadLicensedVehicleZoneNumber: " + abroadLicensedVehicleZoneNumber +
                 ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
-                ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe;
+                ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe +
+                ", urlBadgeOnline: " + urlBadgeOnline;
     }
 
 }

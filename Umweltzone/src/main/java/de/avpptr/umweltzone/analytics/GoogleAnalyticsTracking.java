@@ -59,6 +59,9 @@ public class GoogleAnalyticsTracking implements Tracking {
             case CityInfoFurtherInfoClick:
                 trackEvent("city_info_action", "button_push", "further_info_" + parameter);
                 break;
+            case CityInfoBadgeOnlineClick:
+                trackEvent("city_info_action", "button_push", "badge_online_" + parameter);
+                break;
             case AboutItemClick:
                 trackEvent("about_action", "button_push", "about_item_" + parameter);
                 break;
