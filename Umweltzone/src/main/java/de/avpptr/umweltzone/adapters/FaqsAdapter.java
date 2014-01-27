@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.adapters;
 
 import android.content.Context;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
+import de.avpptr.umweltzone.utils.StringHelper;
 
 public class FaqsAdapter extends BaseExpandableListAdapter {
 
@@ -126,7 +128,10 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
         final String sourceUrlText = faqAnswer.sourceUrl;
         Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
-        sourceUrlButton.setText(sourceUrlText);
+        sourceUrlButton.setText(
+                StringHelper.spannedLinkForString(sourceUrlText),
+                TextView.BufferType.SPANNABLE);
+        sourceUrlButton.setMovementMethod(LinkMovementMethod.getInstance());
 
         return convertView;
     }
