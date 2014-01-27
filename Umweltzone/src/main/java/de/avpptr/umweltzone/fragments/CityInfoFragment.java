@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.fragments;
 
 import android.app.Activity;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -129,7 +130,10 @@ public class CityInfoFragment extends BaseFragment {
         } else {
             badgeOnlineTitle.setVisibility(View.VISIBLE);
             badgeOnline.setVisibility(View.VISIBLE);
-            badgeOnline.setText(urlBadgeOnline);
+            badgeOnline.setText(
+                    StringHelper.spannedLinkForString(urlBadgeOnline),
+                    TextView.BufferType.SPANNABLE);
+            badgeOnline.setMovementMethod(LinkMovementMethod.getInstance());
         }
         badgeOnline.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
