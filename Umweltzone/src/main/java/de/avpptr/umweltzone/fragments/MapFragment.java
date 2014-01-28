@@ -43,6 +43,8 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.caching.CircuitPointsCache;
+import de.avpptr.umweltzone.caching.GenericCache;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -50,7 +52,6 @@ import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
-import de.avpptr.umweltzone.utils.PointsProvider;
 
 public class MapFragment extends SupportMapFragment {
 
@@ -60,10 +61,12 @@ public class MapFragment extends SupportMapFragment {
     private boolean fragmentCreated;
     protected final Tracking mTracking;
     private PreferencesHelper mPreferencesHelper;
+    protected final GenericCache mCircuitPointsCache;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
         mTracking = Umweltzone.getTracker();
+        mCircuitPointsCache = new CircuitPointsCache(6);
     }
 
     @Override public void onCreate(Bundle savedInstanceState) {
@@ -189,7 +192,9 @@ public class MapFragment extends SupportMapFragment {
         if (cityName == null || cityName.length() < 1) {
             return;
         }
-        Iterable<LatLng> points = PointsProvider.getCircuitPoints(activity, cityName);
+        @SuppressWarnings("unchecked")
+        Iterable<LatLng> points = (Iterable<LatLng>) mCircuitPointsCache
+                .readObject(activity, cityName);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
