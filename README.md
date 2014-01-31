@@ -13,11 +13,14 @@ pointing to external websites which serve more information to
 read through.
 
 
+[![Available for Android at Google Play][1]][2]
+
+
 Screenshot
 ------------------
 The map screen of the app shows the outline of the low-emission zone
 
-![Umweltzone][1]
+![Umweltzone][3]
 
 
 Android versions
@@ -31,7 +34,7 @@ Feedback
 Users can leave there feature request on a special website which not
 only allows to post own wishes but also to vote on ideas of others.
 
-* [http://umweltzone.uservoice.com][2]
+* [http://umweltzone.uservoice.com][4]
 
 
 Configuration
@@ -55,23 +58,25 @@ example included which contains the properties which are referenced in the build
 
 References
 ----------
-* [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][3]
+* [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][5]
 
 
 License
 -------
 
-The source code is licensed under [GPLv3][4].
+The source code is licensed under [GPLv3][6].
 
 This content is licensed, if not stated otherwise, under a
-[Creative Commons Attribution-ShareAlike 3.0 Unported License][5].
+[Creative Commons Attribution-ShareAlike 3.0 Unported License][7].
 
-![Creative Commons Attribution-ShareAlike 3.0 Unported License][6]
+![Creative Commons Attribution-ShareAlike 3.0 Unported License][8]
 
 
-[1]: http://bitbucket.org/tbsprs/umweltzone/raw/18d887e823828af217156f3b68690445b3ba6129/screenshot.png
-[2]: http://umweltzone.uservoice.com
-[3]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
-[4]: http://www.gnu.org/licenses/gpl-3.0.txt
-[5]: http://creativecommons.org/licenses/by-sa/3.0/
-[6]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
+[1]: http://bitbucket.org/tbsprs/umweltzone/raw/9ae472a8cc7ad0ef09179e57ca911a46ecd8abb8/google-play-badge.png
+[2]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+[3]: http://bitbucket.org/tbsprs/umweltzone/raw/18d887e823828af217156f3b68690445b3ba6129/screenshot.png
+[4]: http://umweltzone.uservoice.com
+[5]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
+[6]: http://www.gnu.org/licenses/gpl-3.0.txt
+[7]: http://creativecommons.org/licenses/by-sa/3.0/
+[8]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
