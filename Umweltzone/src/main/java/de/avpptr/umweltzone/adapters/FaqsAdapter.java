@@ -18,13 +18,11 @@
 package de.avpptr.umweltzone.adapters;
 
 import android.content.Context;
-import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -33,7 +31,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
-import de.avpptr.umweltzone.utils.StringHelper;
+import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class FaqsAdapter extends BaseExpandableListAdapter {
 
@@ -100,8 +98,7 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
             convertView = getNewView(R.layout.faq_list_group);
         }
 
-        TextView textView = (TextView) convertView.findViewById(R.id.faq_question);
-        textView.setText(headerTitle);
+        ViewHelper.setupTextViewSimple(convertView, R.id.faq_question, headerTitle);
 
         return convertView;
     }
@@ -110,11 +107,12 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
         final FaqAnswer faqAnswer = (FaqAnswer) getChild(groupPosition, childPosition);
 
+        final String itemDescription = getFaqDescription(groupPosition);
+
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
             Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
 
-            final String itemDescription = getFaqDescription(groupPosition);
             sourceUrlButton.setOnClickListener(new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
@@ -123,15 +121,11 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         }
 
         final String childText = faqAnswer.text;
-        TextView textView = (TextView) convertView.findViewById(R.id.faq_answer);
-        textView.setText(childText);
+        ViewHelper.setupTextViewSimple(convertView, R.id.faq_answer, childText);
 
         final String sourceUrlText = faqAnswer.sourceUrl;
-        Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
-        sourceUrlButton.setText(
-                StringHelper.spannedLinkForString(sourceUrlText),
-                TextView.BufferType.SPANNABLE);
-        sourceUrlButton.setMovementMethod(LinkMovementMethod.getInstance());
+        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlText,
+                TrackingPoint.FaqSourceUrlClick, itemDescription);
 
         return convertView;
     }

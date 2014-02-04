@@ -27,6 +27,7 @@ public enum TrackingPoint {
     CityInfoBadgeOnlineClick("city_info_badge_online_click"),
     FaqItemClick("faq_item_click"),
     FaqSourceClick("faq_source_click"),
+    FaqSourceUrlClick("faq_source_url_click"),
     AboutItemClick("about_item_click"),
     SupportMailClick("support_mail_click"),
     UserVoiceClick("user_voice_click"),
