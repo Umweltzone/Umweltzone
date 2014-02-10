@@ -15,12 +15,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.utils;
+package de.avpptr.umweltzone.prefs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import de.avpptr.umweltzone.contract.Preferences;
+import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.GeoPoint;
 
 public class PreferencesHelper {
 

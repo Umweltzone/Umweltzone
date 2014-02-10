@@ -34,7 +34,7 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.IntentHelper;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class CitiesFragment extends ListFragment {
 

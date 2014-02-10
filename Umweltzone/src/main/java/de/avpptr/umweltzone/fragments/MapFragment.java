@@ -50,7 +50,7 @@ import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class MapFragment extends SupportMapFragment {
 

@@ -28,7 +28,7 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class LowEmissionZone {
     public String name;
