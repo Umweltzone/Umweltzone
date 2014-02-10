@@ -25,10 +25,10 @@ import java.util.List;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class LowEmissionZone {
     public String name;
@@ -44,7 +44,9 @@ public class LowEmissionZone {
     public String urlBadgeOnline;
 
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
-        String zoneName = PreferencesHelper.restoreLastKnownLocationAsString(context);
+        Umweltzone application = (Umweltzone) context.getApplicationContext();
+        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        String zoneName = preferencesHelper.restoreLastKnownLocationAsString();
         return getLowEmissionZone(context, zoneName);
     }
 

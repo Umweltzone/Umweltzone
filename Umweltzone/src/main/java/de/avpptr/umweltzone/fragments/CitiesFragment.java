@@ -32,9 +32,9 @@ import de.avpptr.umweltzone.adapters.CityListAdapter;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.IntentHelper;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class CitiesFragment extends ListFragment {
 
@@ -69,8 +69,10 @@ public class CitiesFragment extends ListFragment {
     }
 
     private void storeSelectedLocation(LowEmissionZone lowEmissionZone) {
-        PreferencesHelper.storeLastKnownLocation(getActivity(), lowEmissionZone.boundingBox);
-        PreferencesHelper.storeLastKnownLocation(getActivity(), lowEmissionZone.name);
+        final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
+        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        preferencesHelper.storeLastKnownLocation(lowEmissionZone.boundingBox);
+        preferencesHelper.storeLastKnownLocation(lowEmissionZone.name);
     }
 
 }

@@ -45,12 +45,12 @@ import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 import de.avpptr.umweltzone.utils.PointsProvider;
-import de.avpptr.umweltzone.utils.PreferencesHelper;
 
 public class MapFragment extends SupportMapFragment {
 
@@ -59,6 +59,7 @@ public class MapFragment extends SupportMapFragment {
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
     private boolean fragmentCreated;
     protected final Tracking mTracking;
+    private PreferencesHelper mPreferencesHelper;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
@@ -67,6 +68,8 @@ public class MapFragment extends SupportMapFragment {
 
     @Override public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
+        mPreferencesHelper = application.getPreferencesHelper();
         fragmentCreated = true;
     }
 
@@ -148,7 +151,7 @@ public class MapFragment extends SupportMapFragment {
         }
         Bundle extras = intent.getExtras();
         if (extras == null) {
-            GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
+            GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
             if (!lastKnownPosition.isValid()) {
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
@@ -160,21 +163,21 @@ public class MapFragment extends SupportMapFragment {
             } else if (fragmentCreated) {
                 // MapFragment gets created after app start
                 fragmentCreated = false;
-                float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
+                float zoomLevel = mPreferencesHelper.restoreZoomLevel();
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }
         } else {
             String cityName = extras.getString(BundleKeys.CITY_CHANGE);
             if (cityName != null) {
                 // City has been selected from the list
-                BoundingBox lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsBoundingBox(activity);
+                BoundingBox lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsBoundingBox();
                 if (lastKnownPosition.isValid()) {
                     zoomToBounds(lastKnownPosition.toLatLngBounds());
                 }
             } else {
                 // Home button has been selected
-                GeoPoint lastKnownPosition = PreferencesHelper.restoreLastKnownLocationAsGeoPoint(activity);
-                float zoomLevel = PreferencesHelper.restoreZoomLevel(activity);
+                GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
+                float zoomLevel = mPreferencesHelper.restoreZoomLevel();
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }
         }
@@ -182,7 +185,7 @@ public class MapFragment extends SupportMapFragment {
 
     private void drawPolygonOverlay() {
         Activity activity = getActivity();
-        String cityName = PreferencesHelper.restoreLastKnownLocationAsString(activity);
+        String cityName = mPreferencesHelper.restoreLastKnownLocationAsString();
         if (cityName == null || cityName.length() < 1) {
             return;
         }
@@ -195,17 +198,16 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
-        Activity activity = getActivity();
-        PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.name);
-        PreferencesHelper.storeLastKnownLocation(activity, defaultLowEmissionZone.boundingBox);
+        mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.name);
+        mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.boundingBox);
     }
 
     private void storeLastMapState() {
         if (mMap != null) {
             GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
-            PreferencesHelper.storeLastKnownLocation(getActivity(), mapCenter);
+            mPreferencesHelper.storeLastKnownLocation(mapCenter);
             float zoomLevel = mMap.getCameraPosition().zoom;
-            PreferencesHelper.storeZoomLevel(getActivity(), zoomLevel);
+            mPreferencesHelper.storeZoomLevel(zoomLevel);
         }
     }
 
