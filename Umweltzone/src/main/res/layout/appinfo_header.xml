@@ -30,8 +30,4 @@
         android:id="@+id/buildVersion"
         style="@style/AppInfo.TextContent" />
 
-    <TextView
-        style="@style/AppInfo.TextContent"
-        android:text="&quot;Steffi W. Christmas Edition&quot;" />
-
 </merge>
