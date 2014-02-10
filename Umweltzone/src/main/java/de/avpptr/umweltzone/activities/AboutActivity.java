@@ -58,6 +58,12 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGoogleAnalytics,
                 R.string.appinfo_references_url_ga, TrackingPoint.AboutItemClick,
                 "google_analytics");
+        ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonTraceDroid,
+                R.string.appinfo_references_url_tracedroid, TrackingPoint.AboutItemClick,
+                "trace_droid_library");
+        ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCkChangeLog,
+                R.string.appinfo_references_url_ckchangelog, TrackingPoint.AboutItemClick,
+                "ck_changelog_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGpl,
                 R.string.appinfo_license_url_gpl, TrackingPoint.AboutItemClick,
                 "gpl_url");
