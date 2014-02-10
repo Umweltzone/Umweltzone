@@ -30,4 +30,6 @@ public interface Preferences {
             "de.avpptr.umweltzone.BOUNDING_BOX_NORTHEAST_LONGITUDE";
     public static final String KEY_CITY_NAME = "de.avpptr.umweltzone.CITY_NAME";
     public static final String KEY_ZOOM_LEVEL = "de.avpptr.umweltzone.ZOOM_LEVEL";
+    public static final String KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED =
+            "de.avpptr.umweltzone.CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED";
 }

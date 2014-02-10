@@ -23,6 +23,8 @@ import android.view.Menu;
 import org.ligi.tracedroid.sending.TraceDroidEmailSender;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class MainActivity extends BaseActivity {
 
@@ -33,6 +35,7 @@ public class MainActivity extends BaseActivity {
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
         TraceDroidEmailSender.sendStackTraces(getString(R.string.config_tracedroid_email_address), this);
+        migrateCityNameFrankfurtInPreferences();
         showChangeLogDialog(false);
     }
 
@@ -41,6 +44,26 @@ public class MainActivity extends BaseActivity {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    // Renames the stored city name in the preferences
+    // according to file name in the "res/raw" folder.
+    // This avoid a potential IllegalStateException in the ContentProvider
+    // when "frankfurt" has been selected before the update.
+    private void migrateCityNameFrankfurtInPreferences() {
+        final Umweltzone application = (Umweltzone) getApplication();
+        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        if (preferencesHelper.restoreCityNameFrankfurtInPreferencesFixed()) {
+            return;
+        }
+
+        if (preferencesHelper.storesLastKnownLocation()) {
+            final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
+            if (cityName.equals("frankfurt")) {
+                preferencesHelper.storeLastKnownLocation("frankfurt_main");
+            }
+        }
+        preferencesHelper.storeCityNameFrankfurtInPreferencesFixed(true);
     }
 
 }
