@@ -80,7 +80,7 @@ public abstract class BaseActivity extends ActionBarActivity {
                 startActivity(IntentHelper.getFeedbackIntent(this));
                 return true;
             case R.id.action_changelog:
-                showChangeLogDialog(true);
+                showFullChangeLogDialog();
                 return true;
             case R.id.action_about:
                 Intent intent = IntentHelper.getAboutIntent(this);
@@ -123,11 +123,16 @@ public abstract class BaseActivity extends ActionBarActivity {
         }
     }
 
-    public void showChangeLogDialog(boolean ignoreFirstRun) {
+    public void showChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
-        if (ignoreFirstRun || changeLog.isFirstRun()) {
+        if (changeLog.isFirstRun()) {
             changeLog.getLogDialog().show();
         }
+    }
+
+    public void showFullChangeLogDialog() {
+        final ChangeLog changeLog = new ChangeLog(this);
+        changeLog.getFullLogDialog().show();
     }
 
 }
