@@ -72,6 +72,12 @@ public class PreferencesHelper {
         return zoomLevelPreference.get();
     }
 
+    public boolean restoreCityNameFrankfurtInPreferencesFixed() {
+        BooleanPreference preference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
+        return preference.get();
+    }
+
     public void storeLastKnownLocation(final GeoPoint center) {
         DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
                 Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
@@ -105,10 +111,22 @@ public class PreferencesHelper {
         cityNamePreference.set(cityName);
     }
 
+    public boolean storesLastKnownLocation() {
+        StringPreference cityNamePreference = new StringPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME);
+        return cityNamePreference.isSet();
+    }
+
     public void storeZoomLevel(float zoomLevel) {
         FloatPreference zoomLevelPreference = new FloatPreference(
                 mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
         zoomLevelPreference.set(zoomLevel);
+    }
+
+    public void storeCityNameFrankfurtInPreferencesFixed(boolean flag) {
+        BooleanPreference preference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
+        preference.set(flag);
     }
 
 }

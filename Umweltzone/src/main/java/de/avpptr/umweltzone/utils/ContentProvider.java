@@ -29,24 +29,41 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.caching.GenericCache;
+import de.avpptr.umweltzone.caching.ResourceIdCache;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
-    public static List<Faq> getFaqs(Context context) {
-        return getContent(context, R.raw.faqs_de, Faq.class);
+    private static final GenericCache mResourceIdCache = new ResourceIdCache(6);
+
+    public static List<Faq> getFaqs(final Context context) {
+        return getContent(context, "faqs_de", Faq.class);
     }
 
-    public static List<LowEmissionZone> getLowEmissionZones(Context context) {
-        return getContent(context, R.raw.zones_de, LowEmissionZone.class);
+    public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
+        return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
-    public static List<GeoPoint> getCircuitPoints(Context context, int resourceId) {
-        return getContent(context, resourceId, GeoPoint.class);
+    public static List<GeoPoint> getCircuitPoints(final Context context, final String fileName) {
+        return getContent(context, fileName, GeoPoint.class);
     }
 
-    private static <T> List<T> getContent(Context context, int rawResourceId, Class<T> contentType) {
+    private static <T> List<T> getContent(final Context context, final String fileName, Class<T> contentType) {
+        return getContent(context, fileName, "raw", contentType);
+    }
+
+    private static <T> List<T> getContent(final Context context, final String fileName, final String folderName, Class<T> contentType) {
+        // Invoke cache
+        int rawResourceId = (Integer) mResourceIdCache.readObject(context, fileName, folderName);
+        if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
+            final String filePath = folderName + "/" + fileName;
+            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
+            throw new IllegalStateException("Resource for file path '" + filePath + "' not found.");
+        }
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);

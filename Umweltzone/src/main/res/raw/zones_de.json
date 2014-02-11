@@ -75,7 +75,7 @@
         }
     },
     {
-        "name" : "frankfurt",
+        "name" : "frankfurt_main",
         "displayName" : "Frankfurt am Main",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",

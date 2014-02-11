@@ -39,7 +39,8 @@ import de.avpptr.umweltzone.utils.IntentHelper;
 public class CitiesFragment extends ListFragment {
 
     protected final Tracking mTracking;
-    private List<LowEmissionZone> mLowEmissionZones;
+    // Used for caching
+    private static List<LowEmissionZone> mLowEmissionZones;
 
     public CitiesFragment() {
         mTracking = Umweltzone.getTracker();
@@ -49,7 +50,9 @@ public class CitiesFragment extends ListFragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         Activity activity = getActivity();
-        mLowEmissionZones = ContentProvider.getLowEmissionZones(activity);
+        if (mLowEmissionZones == null) {
+            mLowEmissionZones = ContentProvider.getLowEmissionZones(activity);
+        }
         if (mLowEmissionZones == null) {
             mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
             throw new IllegalStateException("Parsing zones from JSON failed.");

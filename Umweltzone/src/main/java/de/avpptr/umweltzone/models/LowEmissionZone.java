@@ -43,6 +43,9 @@ public class LowEmissionZone {
     public String urlUmweltPlaketteDe;
     public String urlBadgeOnline;
 
+    // Used for caching
+    private static List<LowEmissionZone> mLowEmissionZones;
+
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
         Umweltzone application = (Umweltzone) context.getApplicationContext();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
@@ -57,12 +60,14 @@ public class LowEmissionZone {
 
     // TODO Parser should not be called more often then needed
     private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
-        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(context);
-        if (lowEmissionZones == null) {
+        if (mLowEmissionZones == null) {
+            mLowEmissionZones = ContentProvider.getLowEmissionZones(context);
+        }
+        if (mLowEmissionZones == null) {
             Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
-        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
+        for (LowEmissionZone lowEmissionZone : mLowEmissionZones) {
             if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
                 return lowEmissionZone;
             }
