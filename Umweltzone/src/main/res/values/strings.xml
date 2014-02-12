@@ -39,7 +39,7 @@
 
     <!-- AboutActivity / Copyright -->
     <string name="appinfo_copyright_title">Idee und Umsetzung</string>
-    <string name="appinfo_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013</string>
+    <string name="appinfo_copyright_content">(&#169;) Tobias Preuß und Peter Vasil, 2013 - 2014</string>
 
     <!-- AboutActivity / Description -->
     <string name="appinfo_description_title">Beschreibung</string>
