@@ -9,10 +9,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20berlin.php",
         "urlBadgeOnline" : "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php",
-        "center" : {
-            "latitude" : 52.518611,
-            "longitude" : 13.408056
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.464874,
@@ -34,10 +30,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bremen.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 53.072005,
-            "longitude" : 8.808606
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 53.055835,
@@ -59,10 +51,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20duesseldorf.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 51.2297875,
-            "longitude" : 6.787429
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.168374,
@@ -84,10 +72,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20frankfurt%20main.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 50.121400,
-            "longitude" : 8.636100
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.055418,
@@ -109,10 +93,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hannover.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 52.37511,
-            "longitude" : 9.7399755
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.336039,
@@ -134,10 +114,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 50.937490,
-            "longitude" : 6.958020
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.892475,
@@ -159,10 +135,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leipzig.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 51.338624,
-            "longitude" : 12.3733505
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.256458,
@@ -184,10 +156,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenchen.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 48.154900,
-            "longitude" : 11.542200
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.104701,
@@ -209,10 +177,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenster_1.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 51.960028,
-            "longitude" : 7.6246965
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.952674,
@@ -234,10 +198,6 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20stuttgart.php",
         "urlBadgeOnline" : "",
-        "center" : {
-            "latitude" : 48.776350,
-            "longitude" : 9.182900
-        },
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.696175,
