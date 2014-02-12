@@ -252,6 +252,27 @@
         }
     },
     {
+        "name" : "ruhrregion",
+        "displayName" : "Ruhrgebiet",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ruhrgebiet.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.332849,
+                "longitude" : 6.625488
+            },
+            "northEast" : {
+                "latitude" : 51.634730,
+                "longitude" : 7.527284
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "zoneNumber" : 4,
