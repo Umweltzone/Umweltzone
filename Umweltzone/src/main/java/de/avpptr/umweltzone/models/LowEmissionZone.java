@@ -32,6 +32,7 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 public class LowEmissionZone {
     public String name;
     public String displayName;
+    public String description;
     public BoundingBox boundingBox;
     public int zoneNumber;
     public Date zoneNumberSince;
@@ -76,6 +77,7 @@ public class LowEmissionZone {
     @Override public String toString() {
         return "name: " + name +
                 ", displayName: " + displayName +
+                ", description: " + description +
                 ", boundingBox: " + boundingBox +
                 ", zoneNumber: " + zoneNumber +
                 ", zoneNumberSince: " + zoneNumberSince +

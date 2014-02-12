@@ -71,6 +71,17 @@ public class CityInfoFragment extends BaseFragment {
             zoneStatus.setBackgroundResource(zoneStatusId);
         }
 
+        // Zone description
+        TextView zoneDescriptionTextView =
+                (TextView) activity.findViewById(R.id.city_info_zone_description);
+        String zoneDescription = lowEmissionZone.description;
+        if (TextUtils.isEmpty(zoneDescription)) {
+            zoneDescriptionTextView.setVisibility(View.GONE);
+        } else {
+            zoneDescriptionTextView.setText(zoneDescription);
+            zoneDescriptionTextView.setVisibility(View.VISIBLE);
+        }
+
         // Zone number since
         TextView zoneNumberSinceTextView =
                 (TextView) activity.findViewById(R.id.city_info_zone_number_since);
