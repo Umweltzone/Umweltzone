@@ -1,5 +1,26 @@
 [
     {
+        "name" : "augsburg",
+        "displayName" : "Augsburg",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2011-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20augsburg.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.352110,
+                "longitude" : 10.878228
+            },
+            "northEast" : {
+                "latitude" : 48.385831,
+                "longitude" : 10.912288
+            }
+        }
+    },
+    {
         "name" : "berlin",
         "displayName" : "Berlin",
         "zoneNumber" : 4,
