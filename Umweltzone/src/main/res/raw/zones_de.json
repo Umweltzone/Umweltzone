@@ -105,6 +105,27 @@
         }
     },
     {
+        "name" : "hagen",
+        "displayName" : "Hagen",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hagen.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.339934,
+                "longitude" : 7.447151
+            },
+            "northEast" : {
+                "latitude" : 51.383404,
+                "longitude" : 7.506469
+            }
+        }
+    },
+    {
         "name" : "hannover",
         "displayName" : "Hannover",
         "zoneNumber" : 4,
