@@ -271,5 +271,26 @@
                 "longitude" : 9.307480
             }
         }
+    },
+    {
+        "name" : "ulm",
+        "displayName" : "Ulm",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ulm.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.373231,
+                "longitude" : 9.933629
+            },
+            "northEast" : {
+                "latitude" : 48.436947,
+                "longitude" : 10.037466
+            }
+        }
     }
 ]
