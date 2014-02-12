@@ -231,6 +231,27 @@
         }
     },
     {
+        "name" : "neuss",
+        "displayName" : "Neuss",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2011-03-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20neuss.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.189347,
+                "longitude" : 6.679642
+            },
+            "northEast" : {
+                "latitude" : 51.206659,
+                "longitude" : 6.708177
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "zoneNumber" : 4,
