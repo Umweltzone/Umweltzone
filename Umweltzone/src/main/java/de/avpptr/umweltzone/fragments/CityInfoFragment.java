@@ -31,6 +31,7 @@ import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
+import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class CityInfoFragment extends BaseFragment {
 
@@ -75,12 +76,7 @@ public class CityInfoFragment extends BaseFragment {
         TextView zoneDescriptionTextView =
                 (TextView) activity.findViewById(R.id.city_info_zone_description);
         String zoneDescription = lowEmissionZone.description;
-        if (TextUtils.isEmpty(zoneDescription)) {
-            zoneDescriptionTextView.setVisibility(View.GONE);
-        } else {
-            zoneDescriptionTextView.setText(zoneDescription);
-            zoneDescriptionTextView.setVisibility(View.VISIBLE);
-        }
+        ViewHelper.setTextOrHideView(zoneDescriptionTextView, zoneDescription);
 
         // Zone number since
         TextView zoneNumberSinceTextView =
@@ -94,24 +90,14 @@ public class CityInfoFragment extends BaseFragment {
                 (TextView) activity.findViewById(R.id.city_info_next_zone_number_as_of);
         String nextZoneNumberAsOfText =
                 StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
-        if (TextUtils.isEmpty(nextZoneNumberAsOfText)) {
-            nextZoneNumberAsOfTextView.setVisibility(View.GONE);
-        } else {
-            nextZoneNumberAsOfTextView.setVisibility(View.VISIBLE);
-            nextZoneNumberAsOfTextView.setText(nextZoneNumberAsOfText);
-        }
+        ViewHelper.setTextOrHideView(nextZoneNumberAsOfTextView, nextZoneNumberAsOfText);
 
         // Abroad licenced vehicle zone number info
         TextView abroadLicensedVehicleZoneNumberTextView =
                 (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
                 StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
-        if (TextUtils.isEmpty(abroadLicensedVehicleZoneNumberText)) {
-            abroadLicensedVehicleZoneNumberTextView.setVisibility(View.GONE);
-        } else {
-            abroadLicensedVehicleZoneNumberTextView.setVisibility(View.VISIBLE);
-            abroadLicensedVehicleZoneNumberTextView.setText(abroadLicensedVehicleZoneNumberText);
-        }
+        ViewHelper.setTextOrHideView(abroadLicensedVehicleZoneNumberTextView, abroadLicensedVehicleZoneNumberText);
 
 
         // Show on map button

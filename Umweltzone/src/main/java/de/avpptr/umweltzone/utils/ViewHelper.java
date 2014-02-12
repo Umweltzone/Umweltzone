@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
@@ -27,6 +28,15 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public abstract class ViewHelper {
+
+    public static void setTextOrHideView(final TextView textView, final String text) {
+        if (TextUtils.isEmpty(text)) {
+            textView.setVisibility(View.GONE);
+        } else {
+            textView.setVisibility(View.VISIBLE);
+            textView.setText(text);
+        }
+    }
 
     public static void setupTextViewSimple(final Activity activity, int textViewId,
                                            final String text) {
@@ -76,4 +86,5 @@ public abstract class ViewHelper {
             }
         });
     }
+
 }
