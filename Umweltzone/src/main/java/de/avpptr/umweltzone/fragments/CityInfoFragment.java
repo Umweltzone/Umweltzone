@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.fragments;
 
 import android.app.Activity;
+import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -82,7 +83,7 @@ public class CityInfoFragment extends BaseFragment {
                 (TextView) activity.findViewById(R.id.city_info_next_zone_number_as_of);
         String nextZoneNumberAsOfText =
                 StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
-        if (nextZoneNumberAsOfText == null) {
+        if (TextUtils.isEmpty(nextZoneNumberAsOfText)) {
             nextZoneNumberAsOfTextView.setVisibility(View.GONE);
         } else {
             nextZoneNumberAsOfTextView.setVisibility(View.VISIBLE);
@@ -94,7 +95,7 @@ public class CityInfoFragment extends BaseFragment {
                 (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
                 StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
-        if (abroadLicensedVehicleZoneNumberText == null) {
+        if (TextUtils.isEmpty(abroadLicensedVehicleZoneNumberText)) {
             abroadLicensedVehicleZoneNumberTextView.setVisibility(View.GONE);
         } else {
             abroadLicensedVehicleZoneNumberTextView.setVisibility(View.VISIBLE);
@@ -124,7 +125,7 @@ public class CityInfoFragment extends BaseFragment {
         TextView badgeOnlineTitle = (TextView) activity.findViewById(R.id.city_info_badge_online_title);
         Button badgeOnline = (Button) activity.findViewById(R.id.city_info_badge_online);
         final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
-        if (urlBadgeOnline == null || urlBadgeOnline.length() < 1) {
+        if (TextUtils.isEmpty(urlBadgeOnline)) {
             badgeOnlineTitle.setVisibility(View.GONE);
             badgeOnline.setVisibility(View.GONE);
         } else {
