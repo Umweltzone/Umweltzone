@@ -1,7 +1,30 @@
 [
     {
+        "name" : "augsburg",
+        "displayName" : "Augsburg",
+        "description" : "",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2011-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20augsburg.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.352110,
+                "longitude" : 10.878228
+            },
+            "northEast" : {
+                "latitude" : 48.385831,
+                "longitude" : 10.912288
+            }
+        }
+    },
+    {
         "name" : "berlin",
         "displayName" : "Berlin",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
         "nextZoneNumberAsOf" : "",
@@ -23,6 +46,7 @@
     {
         "name" : "bremen",
         "displayName" : "Bremen",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2011-07-01",
         "nextZoneNumberAsOf" : "",
@@ -44,6 +68,7 @@
     {
         "name" : "duesseldorf",
         "displayName" : "Düsseldorf",
+        "description" : "",
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-02-01",
         "nextZoneNumberAsOf" : "2014-07-01",
@@ -65,6 +90,7 @@
     {
         "name" : "frankfurt_main",
         "displayName" : "Frankfurt am Main",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
         "nextZoneNumberAsOf" : "",
@@ -84,8 +110,31 @@
         }
     },
     {
+        "name" : "hagen",
+        "displayName" : "Hagen",
+        "description" : "",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hagen.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.339934,
+                "longitude" : 7.447151
+            },
+            "northEast" : {
+                "latitude" : 51.383404,
+                "longitude" : 7.506469
+            }
+        }
+    },
+    {
         "name" : "hannover",
         "displayName" : "Hannover",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
         "nextZoneNumberAsOf" : "",
@@ -107,6 +156,7 @@
     {
         "name" : "cologne",
         "displayName" : "Köln",
+        "description" : "",
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-01-01",
         "nextZoneNumberAsOf" : "2014-07-01",
@@ -128,6 +178,7 @@
     {
         "name" : "leipzig",
         "displayName" : "Leipzig",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2011-03-01",
         "nextZoneNumberAsOf" : "",
@@ -149,6 +200,7 @@
     {
         "name" : "munich",
         "displayName" : "München",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-10-01",
         "nextZoneNumberAsOf" : "",
@@ -170,6 +222,7 @@
     {
         "name" : "muenster",
         "displayName" : "Münster",
+        "description" : "",
         "zoneNumber" : 3,
         "zoneNumberSince" : "2010-01-01",
         "nextZoneNumberAsOf" : "",
@@ -189,8 +242,53 @@
         }
     },
     {
+        "name" : "neuss",
+        "displayName" : "Neuss",
+        "description" : "",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2011-03-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20neuss.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.189347,
+                "longitude" : 6.679642
+            },
+            "northEast" : {
+                "latitude" : 51.206659,
+                "longitude" : 6.708177
+            }
+        }
+    },
+    {
+        "name" : "ruhrregion",
+        "displayName" : "Ruhrgebiet",
+        "description" : "Die Umweltzone beinhaltet die folgenden Städte bzw. Teile der Städte: Bochum, Bottrop, Castrop-Rauxel, Dortmund, Essen, Gelsenkirchen, Gladbeck, Herne, Herten, Mülheim/Ruhr, Oberhausen und Recklinghausen",
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ruhrgebiet.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.332849,
+                "longitude" : 6.625488
+            },
+            "northEast" : {
+                "latitude" : 51.634730,
+                "longitude" : 7.527284
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
+        "description" : "",
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
         "nextZoneNumberAsOf" : "",
@@ -206,6 +304,28 @@
             "northEast" : {
                 "latitude" : 48.858391,
                 "longitude" : 9.307480
+            }
+        }
+    },
+    {
+        "name" : "ulm",
+        "displayName" : "Ulm",
+        "description" : "",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ulm.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.373231,
+                "longitude" : 9.933629
+            },
+            "northEast" : {
+                "latitude" : 48.436947,
+                "longitude" : 10.037466
             }
         }
     }
