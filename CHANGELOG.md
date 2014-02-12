@@ -2,6 +2,26 @@
 
 
 
+## v.1.2.0
+
+* Published: 2013-02-13
+
+### Bug fixes
+
+* Changelog is displayed correctly now thanks to [cketti][cketti], [a9113](https://bitbucket.org/tbsprs/umweltzone/commits/a91136801ce9748a758bd603206625c2da54c535)
+* Fix [HTC bug][htcbug]. This let's us finally publish the application for these devices, too, [81744](https://bitbucket.org/tbsprs/umweltzone/commits/81744dfb42353c9ab39e5316e7fecb3f68c5b1bb)
+
+### Features
+
+* Added new zones for Augsburg, Hagen, Neuss, Ulm and the Ruhr region, [ef60b](https://bitbucket.org/tbsprs/umweltzone/commits/ef60b3a56dfd7bbe804d15264f32e482b6b67884)
+* Improve resource loading times, use caching to avoid reparsing raw JSON data [ab545](https://bitbucket.org/tbsprs/umweltzone/commits/ab545646076c49dd51aa92645fc35f2b140788b8)
+* Add badge online link to city info, [b0794](https://bitbucket.org/tbsprs/umweltzone/commits/b079478ab873f1c15a5edbe33dd2d8c88a7a616f)
+* Append city name to tracking parameter for more detailed analytics, [ace71](https://bitbucket.org/tbsprs/umweltzone/commits/ace710c403c951951a19f680aa823169643a0376)
+* Mention OpenStreetMap as a data source, [44e7e](https://bitbucket.org/tbsprs/umweltzone/commits/44e7ee7714bda4f061b0e50ddb6ab513b1c587d2)
+* Update build tools to v.19.0.1., [8d63b](https://bitbucket.org/tbsprs/umweltzone/commits/8d63b6686d6dfd767bb4d2c60783d5b73d250491)
+* Upgrade Gradle to v.0.7.+ to use Android Studio 0.4.2., [685d0](https://bitbucket.org/tbsprs/umweltzone/commits/685d0a3ef26f174ea50e8a09bf72c959514c245d)
+
+
 ## [v.1.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.1.1.0)
 
 * Published: 2013-12-25

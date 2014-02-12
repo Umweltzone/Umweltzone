@@ -17,6 +17,31 @@
 -->
 <changelog>
     <release
+        version="1.2.0"
+        versioncode="12000">
+        <change>
+            Bugfix: HTC-Geräte freigeschaltet, Absturz bei bei Weblinks behoben
+        </change>
+        <change>
+            Neu: Weitere Zonen: Augsburg, Hagen, Neuss, Ulm und das Ruhrgebiet
+        </change>
+        <change>
+            Bugfix: Fehler bei der Darstellung der Versionsinformationen behoben
+        </change>
+        <change>
+            Neu: Ladenzeiten für Städteliste und Infos reduziert (Caching)
+        </change>
+        <change>
+            Neu: Link zu Feinstaubplakette online (Berlin)
+        </change>
+        <change>
+            Neu: OpenStreetMap als Datenquelle referenziert
+        </change>
+        <change>
+            Neu: Stadtspezifische Protokollierung für Buttons
+        </change>
+    </release>
+    <release
         version="1.1.0"
         versioncode="11000">
         <change>
