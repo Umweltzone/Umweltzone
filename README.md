@@ -61,6 +61,19 @@ References
 * [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][5]
 
 
+Authors
+-------
+
+* [Tobias Preuss](https://bitbucket.org/tbsprs)
+* [Peter Vasil](https://github.com/ptrv)
+
+
+Contributors
+------------
+
+* [cketti](https://github.com/cketti)
+
+
 License
 -------
 
