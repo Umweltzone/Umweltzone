@@ -89,4 +89,13 @@
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_ckchangelog"/>
 
+    <TextView
+        style="@style/AppInfo.ButtonWebTitle"
+        android:text="@string/appinfo_references_name_typedpreferences"/>
+
+    <Button
+        android:id="@+id/appInfoButtonTypedPreferences"
+        style="@style/AppInfo.ButtonWeb"
+        android:text="@string/appinfo_references_url_typedpreferences"/>
+
 </merge>

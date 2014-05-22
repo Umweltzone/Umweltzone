@@ -113,6 +113,8 @@
     <string name="appinfo_references_url_tracedroid">http://github.com/ligi/tracedroid</string>
     <string name="appinfo_references_name_ckchangelog">ckChangeLog</string>
     <string name="appinfo_references_url_ckchangelog">http://github.com/cketti/ckChangeLog</string>
+    <string name="appinfo_references_name_typedpreferences">Typed Preferences</string>
+    <string name="appinfo_references_url_typedpreferences">http://github.com/johnjohndoe/TypedPreferences</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Quellcode</string>
