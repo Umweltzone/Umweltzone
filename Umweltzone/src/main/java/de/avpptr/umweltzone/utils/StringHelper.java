@@ -96,7 +96,7 @@ public class StringHelper {
     private static String getZoneNumberInfoString(Context context, int resourceId, Date date, String color) {
         String datePattern = context.getString(R.string.city_info_zone_number_since_date_format);
         // TODO Move locale into XML configuration
-        SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.GERMAN);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.getDefault());
         String formattedDate = dateFormat.format(date);
         return context.getString(resourceId, formattedDate, color);
     }
