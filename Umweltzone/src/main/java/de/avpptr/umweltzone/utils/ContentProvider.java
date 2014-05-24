@@ -42,7 +42,11 @@ public abstract class ContentProvider {
     private static final GenericCache mResourceIdCache = new ResourceIdCache(6);
 
     public static List<Faq> getFaqs(final Context context) {
-        return getContent(context, "faqs_de", Faq.class);
+        // Do not accidentally compare with Locale.GERMAN
+        if (Locale.getDefault().equals(Locale.GERMANY)) {
+            return getContent(context, "faqs_de", Faq.class);
+        }
+        return getContent(context, "faqs_en", Faq.class);
     }
 
     public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
