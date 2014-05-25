@@ -20,11 +20,13 @@ package de.avpptr.umweltzone.utils;
 import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.TextUtils;
 
 import org.ligi.tracedroid.logging.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import de.avpptr.umweltzone.R;
@@ -32,6 +34,17 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
+
+    public static String getListOfCitiesText(Context context, LowEmissionZone lowEmissionZone) {
+        List<String> listOfCities = lowEmissionZone.listOfCities;
+        if (listOfCities == null || listOfCities.isEmpty()) {
+            return null;
+        }
+        int lastCityIndex = listOfCities.size() - 1;
+        String citiesString = TextUtils.join(", ", listOfCities.subList(0, lastCityIndex));
+        String lastCity = listOfCities.get(lastCityIndex);
+        return context.getString(R.string.city_info_list_of_cities, citiesString, lastCity);
+    }
 
     public static String getZoneNumberSinceText(Context context, LowEmissionZone lowEmissionZone) {
         String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.zoneNumber);
