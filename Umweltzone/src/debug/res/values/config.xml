@@ -18,24 +18,14 @@
 
 <resources>
 
-    <!-- TraceDroid e-mail address -->
-    <string name="config_tracedroid_email_address">
-        ENTER_TRACEDROID_EMAIL_ADDRESS_HERE
-    </string>
-
-    <!-- Contact e-mail address -->
-    <string name="config_contact_email_address">
-        ENTER_CONTACT_EMAIL_ADDRESS_HERE
-    </string>
-
-    <!-- Date format used in .json files/response -->
-    <string name="config_zone_number_since_date_format">
-        yyyy-MM-dd
-    </string>
-
-    <!-- Default zone -->
-    <string name="config_default_zone_name">
-        Berlin
+    <!--
+        ** You need to add your own key below. **
+        Each key is linked to a certificate which is used to sign an application.
+        See: https://developers.google.com/maps/documentation/android/start
+        for instructions on how to get your own key.
+     -->
+    <string name="config_google_maps_v2_api_key">
+        ENTER_YOUR_GOOGLE_MAPS_V2_DEBUG_API_KEY_HERE
     </string>
 
 </resources>

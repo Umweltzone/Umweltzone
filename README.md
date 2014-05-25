@@ -45,7 +45,11 @@ Before the app can be built a bunch of values have to be set.
 * TraceDroid email address
 * Contact email address
 
-These settings can be found in `/Umweltzone/src/main/res/values/config.xml`.
+These settings can be found in following places:
+
+* `/Umweltzone/src/debug/res/values/config.xml`
+* `/Umweltzone/src/main/res/values/config.xml`
+* `/Umweltzone/src/release/res/values/config.xml`
 
 * Google Analytics tracking id
 
