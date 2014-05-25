@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.fragments;
+package de.avpptr.umweltzone.base;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

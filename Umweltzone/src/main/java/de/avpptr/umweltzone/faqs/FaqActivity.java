@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.faqs;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,7 +25,7 @@ import android.widget.ExpandableListView;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.adapters.FaqsAdapter;
+import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ContentProvider;

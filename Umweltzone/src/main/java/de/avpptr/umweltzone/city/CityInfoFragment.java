@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.fragments;
+package de.avpptr.umweltzone.city;
 
 import android.app.Activity;
 import android.text.TextUtils;
@@ -28,6 +28,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;

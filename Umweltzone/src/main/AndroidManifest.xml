@@ -51,7 +51,7 @@
             android:value="@string/config_google_maps_v2_api_key" />
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".map.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,19 +60,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CitiesActivity"
+            android:name=".cities.CitiesActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".activities.CityInfoActivity"
+            android:name=".city.CityInfoActivity"
             android:label="@string/city_info_activity_title" />
         <activity
-            android:name=".activities.FeedbackActivity"
+            android:name=".feedback.FeedbackActivity"
             android:label="@string/feedback_activity_title" />
         <activity
-            android:name=".activities.AboutActivity"
+            android:name=".about.AboutActivity"
             android:label="@string/about_activity_title" />
         <activity
-            android:name=".activities.FaqActivity"
+            android:name=".faqs.FaqActivity"
             android:label="@string/faq_activity_title">
         </activity>
     </application>

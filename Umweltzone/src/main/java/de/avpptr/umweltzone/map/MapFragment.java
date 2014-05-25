@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.fragments;
+package de.avpptr.umweltzone.map;
 
 import android.app.Activity;
 import android.app.Dialog;

@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.map;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +24,7 @@ import org.ligi.tracedroid.sending.TraceDroidEmailSender;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class MainActivity extends BaseActivity {

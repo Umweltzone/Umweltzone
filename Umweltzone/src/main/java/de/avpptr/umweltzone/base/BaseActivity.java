@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.base;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
