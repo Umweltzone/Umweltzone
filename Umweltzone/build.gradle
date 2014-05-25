@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.android.tools.build:gradle:0.10.+'
         classpath 'net.sf.proguard:proguard-gradle:4.10'
     }
 }
