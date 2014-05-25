@@ -196,6 +196,11 @@
         Umweltplakette in die Umweltzone einfahren.
     </string>
 
+    <string name="city_info_list_of_cities">
+        Die Umweltzone beinhaltet die folgenden Städte bzw. Teile
+        der Städte: <xliff:g id="cities">%1$s</xliff:g> und <xliff:g id="last_city">%2$s</xliff:g>.
+    </string>
+
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>
     <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>

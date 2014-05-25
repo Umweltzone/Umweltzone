@@ -81,6 +81,12 @@ public class CityInfoFragment extends BaseFragment {
         String zoneDescription = lowEmissionZone.description;
         ViewHelper.setTextOrHideView(zoneDescriptionTextView, zoneDescription);
 
+        // List of cities
+        TextView listOfCitiesTextView =
+                (TextView) activity.findViewById(R.id.city_info_zone_list_of_cities);
+        String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
+        ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
+
         // Zone number since
         TextView zoneNumberSinceTextView =
                 (TextView) activity.findViewById(R.id.city_info_zone_number_since);
