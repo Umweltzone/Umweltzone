@@ -72,7 +72,7 @@ android {
         debug {
             packageNameSuffix ".debug"
             versionNameSuffix "-DEBUG"
-            zipAlign = true
+            zipAlign true
         }
         release {
             runProguard true
