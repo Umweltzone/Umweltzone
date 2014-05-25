@@ -2,7 +2,6 @@
     {
         "name" : "augsburg",
         "displayName" : "Augsburg",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2011-01-01",
@@ -25,7 +24,6 @@
     {
         "name" : "berlin",
         "displayName" : "Berlin",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
@@ -48,7 +46,6 @@
     {
         "name" : "bremen",
         "displayName" : "Bremen",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2011-07-01",
@@ -71,7 +68,6 @@
     {
         "name" : "duesseldorf",
         "displayName" : "Düsseldorf",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-02-01",
@@ -94,7 +90,6 @@
     {
         "name" : "frankfurt_main",
         "displayName" : "Frankfurt am Main",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
@@ -117,7 +112,6 @@
     {
         "name" : "hagen",
         "displayName" : "Hagen",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-01-01",
@@ -140,7 +134,6 @@
     {
         "name" : "hannover",
         "displayName" : "Hannover",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2010-01-01",
@@ -163,7 +156,6 @@
     {
         "name" : "cologne",
         "displayName" : "Köln",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2013-01-01",
@@ -186,7 +178,6 @@
     {
         "name" : "leipzig",
         "displayName" : "Leipzig",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2011-03-01",
@@ -209,7 +200,6 @@
     {
         "name" : "munich",
         "displayName" : "München",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-10-01",
@@ -232,7 +222,6 @@
     {
         "name" : "muenster",
         "displayName" : "Münster",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2010-01-01",
@@ -255,7 +244,6 @@
     {
         "name" : "neuss",
         "displayName" : "Neuss",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 3,
         "zoneNumberSince" : "2011-03-01",
@@ -278,7 +266,6 @@
     {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
-        "description" : "Die Umweltzone beinhaltet die folgenden Städte bzw. Teile der Städte: Bochum, Bottrop, Castrop-Rauxel, Dortmund, Essen, Gelsenkirchen, Gladbeck, Herne, Herten, Mülheim/Ruhr, Oberhausen und Recklinghausen",
         "listOfCities" : [
                 "Bochum",
                 "Bottrop",
@@ -314,7 +301,6 @@
     {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2012-01-01",
@@ -337,7 +323,6 @@
     {
         "name" : "ulm",
         "displayName" : "Ulm",
-        "description" : "",
         "listOfCities" : [],
         "zoneNumber" : 4,
         "zoneNumberSince" : "2013-01-01",
