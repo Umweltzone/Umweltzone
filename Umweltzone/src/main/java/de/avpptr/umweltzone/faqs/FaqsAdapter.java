@@ -114,7 +114,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
             Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
 
             sourceUrlButton.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
                 }
             });

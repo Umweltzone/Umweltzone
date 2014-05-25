@@ -150,7 +150,7 @@
 
     <!-- CityInfoActivity -->
 
-    <style name="ZoneInfoEmpty.Title" parent="TextView.Title" />
+    <style name="ZoneInfoEmpty.Title" parent="TextView.Title"/>
 
     <style name="ZoneInfoEmpty.StatusDesc" parent="TextView.Base.Small">
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
@@ -158,9 +158,9 @@
         <item name="android:background">@color/zone_info_empty_status_desc_background</item>
     </style>
 
-    <style name="ZoneInfoEmpty.SelectZone" parent="Button.Base" />
+    <style name="ZoneInfoEmpty.SelectZone" parent="Button.Base"/>
 
-    <style name="ZoneInfo.Title" parent="TextView.Title" />
+    <style name="ZoneInfo.Title" parent="TextView.Title"/>
 
     <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
         <item name="android:gravity">bottom|center_horizontal</item>
@@ -187,7 +187,7 @@
         <item name="android:textColor">@color/faq_answer_source_title</item>
     </style>
 
-    <style name="Faq.Content.SourceUrl" parent="Button.Web" />
+    <style name="Faq.Content.SourceUrl" parent="Button.Web"/>
 
     <style name="Faq.Content.Question" parent="TextView.Base.Medium">
         <item name="android:textColor">@color/faq_question_foreground</item>

@@ -32,11 +32,13 @@ public class GoogleAnalyticsTracking implements Tracking {
         mTracker = EasyTracker.getInstance(context);
     }
 
-    @Override public void track(TrackingPoint eventName) {
+    @Override
+    public void track(TrackingPoint eventName) {
         track(eventName, null);
     }
 
-    @Override public void track(TrackingPoint eventName, final Object parameter) {
+    @Override
+    public void track(TrackingPoint eventName, final Object parameter) {
         switch (eventName) {
             case ActivityStart:
                 trackActivityStart((Activity) parameter);
@@ -74,11 +76,13 @@ public class GoogleAnalyticsTracking implements Tracking {
         }
     }
 
-    @Override public void trackError(TrackingPoint eventName) {
+    @Override
+    public void trackError(TrackingPoint eventName) {
         trackError(eventName, null);
     }
 
-    @Override public void trackError(TrackingPoint eventName, Object parameter) {
+    @Override
+    public void trackError(TrackingPoint eventName, Object parameter) {
         boolean errorIsFatal = false;
         String eventDescription = eventName.toString();
         switch (eventName) {

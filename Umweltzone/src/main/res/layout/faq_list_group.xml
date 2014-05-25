@@ -24,6 +24,6 @@
 
     <TextView
         android:id="@+id/faq_question"
-        style="@style/Faq.Content.Question" />
+        style="@style/Faq.Content.Question"/>
 
 </LinearLayout>

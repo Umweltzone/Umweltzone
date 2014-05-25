@@ -10,13 +10,15 @@ public class ResourceIdCache extends GenericCache {
         mMaxSize = maxSize;
     }
 
-    @Override protected void initialize() {
+    @Override
+    protected void initialize() {
         mCache = new LruCache<String, Integer>(mMaxSize);
     }
 
     // Returns an integer, the resource id associated with the string resource
     // Expects two arguments: the file and the folder name
-    @Override protected Object readObject(String... objectData) {
+    @Override
+    protected Object readObject(String... objectData) {
         if (objectData.length != 2) {
             throw new IllegalArgumentException(
                     "Expecting two arguments: file and folder name.");
@@ -28,7 +30,8 @@ public class ResourceIdCache extends GenericCache {
 
     // Returns an integer, the resource id associated with the string resource
     // Expects three arguments: the context, the file and the folder name
-    @Override protected Object writeObject(Context context, String... objectData) {
+    @Override
+    protected Object writeObject(Context context, String... objectData) {
         if (objectData.length != 2) {
             throw new IllegalArgumentException(
                     "Expecting three arguments: context, file and folder name.");

@@ -25,8 +25,10 @@ public abstract class GenericCache {
 
     // Initialize the data type specific cache.
     protected abstract void initialize();
+
     // Returns the object from cache or null.
     protected abstract Object readObject(final String... objectData);
+
     // Stores the data to the cache and returns the object or null.
     protected abstract Object writeObject(final Context context, final String... objectData);
 

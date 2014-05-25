@@ -20,14 +20,14 @@
 
     <ImageView
         android:contentDescription="@string/appinfo_application_logo_description"
-        style="@style/AppInfo.Logo" />
+        style="@style/AppInfo.Logo"/>
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_subtitle" />
+        android:text="@string/appinfo_subtitle"/>
 
     <TextView
         android:id="@+id/buildVersion"
-        style="@style/AppInfo.TextContent" />
+        style="@style/AppInfo.TextContent"/>
 
 </merge>

@@ -19,20 +19,23 @@ public class CircuitPointsCache extends GenericCache {
         mMaxSize = maxSize;
     }
 
-    @Override protected void initialize() {
+    @Override
+    protected void initialize() {
         mCache = new LruCache<String, List<LatLng>>(mMaxSize);
     }
 
     // Returns a list of points from the cache.
     // Expects one arguments: the zone name
-    @Override protected Object readObject(String... objectData) {
+    @Override
+    protected Object readObject(String... objectData) {
         final String zoneName = objectData[0];
         return mCache.get(zoneName);
     }
 
     // Returns a list of points representing the zone or null.
     // Expects two arguments: the context and the zone name
-    @Override protected Object writeObject(final Context context, final String... objectData) {
+    @Override
+    protected Object writeObject(final Context context, final String... objectData) {
         if (objectData.length != 1) {
             throw new IllegalArgumentException(
                     "Expecting two arguments: context and zone name.");

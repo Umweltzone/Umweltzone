@@ -25,10 +25,10 @@
 
     <TextView
         android:id="@+id/city_row_badge"
-        style="@style/ZoneBadge" />
+        style="@style/ZoneBadge"/>
 
     <TextView
         android:id="@+id/city_row_name"
-        style="@style/ZoneName" />
+        style="@style/ZoneName"/>
 
 </LinearLayout>

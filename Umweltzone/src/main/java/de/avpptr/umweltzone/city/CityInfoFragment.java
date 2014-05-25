@@ -26,9 +26,9 @@ import android.widget.TextView;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
-import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
@@ -38,7 +38,8 @@ public class CityInfoFragment extends BaseFragment {
 
     private LowEmissionZone mLowEmissionZone;
 
-    @Override public int getLayoutResource() {
+    @Override
+    public int getLayoutResource() {
         mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
         if (mLowEmissionZone == null) {
             return R.layout.fragment_city_info_empty;
@@ -47,7 +48,8 @@ public class CityInfoFragment extends BaseFragment {
         }
     }
 
-    @Override public void onResume() {
+    @Override
+    public void onResume() {
         super.onResume();
         Activity activity = getActivity();
         mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
@@ -104,7 +106,8 @@ public class CityInfoFragment extends BaseFragment {
         // Show on map button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoShowOnMapClick, mLowEmissionZone.name);
                 startActivity(IntentHelper.getChangeCityIntent(activity, mLowEmissionZone.name));
             }
@@ -113,7 +116,8 @@ public class CityInfoFragment extends BaseFragment {
         // Further information button
         Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
         furtherInfoButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoFurtherInfoClick, mLowEmissionZone.name);
                 startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
             }
@@ -135,7 +139,8 @@ public class CityInfoFragment extends BaseFragment {
             badgeOnline.setMovementMethod(LinkMovementMethod.getInstance());
         }
         badgeOnline.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);
             }
         });
@@ -145,7 +150,8 @@ public class CityInfoFragment extends BaseFragment {
         // Select zone button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_empty_select_zone);
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoEmptySelectZoneClick);
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }

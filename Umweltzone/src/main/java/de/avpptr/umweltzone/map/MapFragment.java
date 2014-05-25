@@ -69,7 +69,8 @@ public class MapFragment extends SupportMapFragment {
         mCircuitPointsCache = new CircuitPointsCache(6);
     }
 
-    @Override public void onCreate(Bundle savedInstanceState) {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();

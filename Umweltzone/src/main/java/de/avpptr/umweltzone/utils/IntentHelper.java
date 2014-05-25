@@ -24,10 +24,10 @@ import android.net.Uri;
 import de.avpptr.umweltzone.about.AboutActivity;
 import de.avpptr.umweltzone.cities.CitiesActivity;
 import de.avpptr.umweltzone.city.CityInfoActivity;
+import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
-import de.avpptr.umweltzone.contract.BundleKeys;
 
 public class IntentHelper {
 

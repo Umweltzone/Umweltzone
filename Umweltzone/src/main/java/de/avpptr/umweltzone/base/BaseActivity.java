@@ -45,7 +45,8 @@ public abstract class BaseActivity extends ActionBarActivity {
         mTracking = Umweltzone.getTracker();
     }
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);

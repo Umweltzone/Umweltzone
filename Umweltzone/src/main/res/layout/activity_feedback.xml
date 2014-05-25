@@ -32,13 +32,13 @@
         android:paddingBottom="@dimen/huge_spacer">
 
         <include
-            layout="@layout/appinfo_header" />
+            layout="@layout/appinfo_header"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_feedback" />
+            layout="@layout/appinfo_feedback"/>
 
     </LinearLayout>
 </ScrollView>
