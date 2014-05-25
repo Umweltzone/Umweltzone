@@ -57,6 +57,12 @@ android {
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
+
+        applicationVariants.all { variant ->
+            def file = variant.outputFile
+            def fileName = file.name.replace(".apk", "-" + versionName + ".apk")
+            variant.outputFile = new File(file.parent, fileName)
+        }
     }
 
     signingConfigs {
