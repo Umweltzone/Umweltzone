@@ -23,12 +23,12 @@
         android:title="@string/action_cities"
         android:icon="@drawable/ic_action_view_as_list_dark"
         android:orderInCategory="100"
-        umweltzone:showAsAction="ifRoom" />
+        umweltzone:showAsAction="ifRoom"/>
     <item
         android:id="@+id/action_faq"
         android:title="@string/action_faq"
         android:icon="@drawable/ic_action_help_dark"
         android:orderInCategory="102"
-        umweltzone:showAsAction="ifRoom" />
+        umweltzone:showAsAction="ifRoom"/>
 
 </menu>

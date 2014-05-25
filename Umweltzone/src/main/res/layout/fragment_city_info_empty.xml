@@ -31,16 +31,16 @@
 
         <TextView
             style="@style/ZoneInfoEmpty.Title"
-            android:text="@string/city_info_empty_title" />
+            android:text="@string/city_info_empty_title"/>
 
         <TextView
             style="@style/ZoneInfoEmpty.StatusDesc"
-            android:text="@string/city_info_empty_status_desc" />
+            android:text="@string/city_info_empty_status_desc"/>
 
         <Button
             android:id="@+id/city_info_empty_select_zone"
             style="@style/ZoneInfoEmpty.SelectZone"
-            android:text="@string/city_info_empty_select_zone" />
+            android:text="@string/city_info_empty_select_zone"/>
 
     </LinearLayout>
 </ScrollView>

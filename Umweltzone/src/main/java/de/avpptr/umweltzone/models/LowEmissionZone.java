@@ -74,7 +74,8 @@ public class LowEmissionZone {
         return null;
     }
 
-    @Override public String toString() {
+    @Override
+    public String toString() {
         return "name: " + name +
                 ", displayName: " + displayName +
                 ", description: " + description +

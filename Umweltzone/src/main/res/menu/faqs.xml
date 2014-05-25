@@ -23,6 +23,6 @@
         android:title="@string/action_city_info"
         android:icon="@drawable/ic_action_error_dark"
         android:orderInCategory="101"
-        umweltzone:showAsAction="ifRoom" />
+        umweltzone:showAsAction="ifRoom"/>
 
 </menu>

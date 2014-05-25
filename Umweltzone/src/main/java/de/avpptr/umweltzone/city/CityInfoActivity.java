@@ -15,18 +15,27 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.city;
 
 import android.os.Bundle;
+import android.view.Menu;
 
-import de.avpptr.umweltzone.fragments.CitiesFragment;
+import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.base.BaseActivity;
 
-public class CitiesActivity extends BaseActivity {
+public class CityInfoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initFragment(new CitiesFragment());
+        initFragment(new CityInfoFragment());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.city_info, menu);
+        return true;
     }
 
 }

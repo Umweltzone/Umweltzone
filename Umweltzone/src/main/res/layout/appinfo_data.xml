@@ -20,19 +20,19 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_disclaimer_title" />
+        android:text="@string/appinfo_disclaimer_title"/>
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_disclaimer_content" />
+        android:text="@string/appinfo_disclaimer_content"/>
 
     <TextView
         style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_umweltbundesamt" />
+        android:text="@string/appinfo_references_name_umweltbundesamt"/>
 
     <Button
         android:id="@+id/appInfoButtonEnvironmentAgency"
         style="@style/AppInfo.ButtonWeb"
-        android:text="@string/appinfo_references_url_umweltbundesamt" />
+        android:text="@string/appinfo_references_url_umweltbundesamt"/>
 
 </merge>

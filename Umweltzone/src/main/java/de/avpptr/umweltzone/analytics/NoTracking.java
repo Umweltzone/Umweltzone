@@ -19,19 +19,23 @@ package de.avpptr.umweltzone.analytics;
 
 public class NoTracking implements Tracking {
 
-    @Override public void track(TrackingPoint eventName) {
+    @Override
+    public void track(TrackingPoint eventName) {
         // Do nothing.
     }
 
-    @Override public void track(TrackingPoint eventName, Object parameter) {
+    @Override
+    public void track(TrackingPoint eventName, Object parameter) {
         // Do nothing.
     }
 
-    @Override public void trackError(TrackingPoint eventName) {
+    @Override
+    public void trackError(TrackingPoint eventName) {
         // Do nothing.
     }
 
-    @Override public void trackError(TrackingPoint eventName, Object parameter) {
+    @Override
+    public void trackError(TrackingPoint eventName, Object parameter) {
         // Do nothing.
     }
 }

@@ -21,13 +21,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 
-import de.avpptr.umweltzone.activities.AboutActivity;
-import de.avpptr.umweltzone.activities.CitiesActivity;
-import de.avpptr.umweltzone.activities.CityInfoActivity;
-import de.avpptr.umweltzone.activities.FaqActivity;
-import de.avpptr.umweltzone.activities.FeedbackActivity;
-import de.avpptr.umweltzone.activities.MainActivity;
+import de.avpptr.umweltzone.about.AboutActivity;
+import de.avpptr.umweltzone.cities.CitiesActivity;
+import de.avpptr.umweltzone.city.CityInfoActivity;
 import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.faqs.FaqActivity;
+import de.avpptr.umweltzone.feedback.FeedbackActivity;
+import de.avpptr.umweltzone.map.MainActivity;
 
 public class IntentHelper {
 

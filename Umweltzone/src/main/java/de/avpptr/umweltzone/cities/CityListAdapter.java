@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.adapters;
+package de.avpptr.umweltzone.cities;
 
 
 import android.content.Context;

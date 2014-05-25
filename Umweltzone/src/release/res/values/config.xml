@@ -16,19 +16,16 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:gravity="center_vertical"
-              android:padding="@dimen/big_spacer">
+<resources>
 
-    <TextView
-        android:id="@+id/city_row_badge"
-        style="@style/ZoneBadge"/>
+    <!--
+        ** You need to add your own key below. **
+        Each key is linked to a certificate which is used to sign an application.
+        See: https://developers.google.com/maps/documentation/android/start
+        for instructions on how to get your own key.
+     -->
+    <string name="config_google_maps_v2_api_key">
+        ENTER_YOUR_GOOGLE_MAPS_V2_RELEASE_API_KEY_HERE
+    </string>
 
-    <TextView
-        android:id="@+id/city_row_name"
-        style="@style/ZoneName"/>
-
-</LinearLayout>
+</resources>

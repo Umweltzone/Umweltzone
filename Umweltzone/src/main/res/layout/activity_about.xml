@@ -32,61 +32,61 @@
         android:paddingBottom="@dimen/huge_spacer">
 
         <include
-            layout="@layout/appinfo_header" />
+            layout="@layout/appinfo_header"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_copyright" />
+            layout="@layout/appinfo_copyright"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_description" />
+            layout="@layout/appinfo_description"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_data" />
+            layout="@layout/appinfo_data"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_graphics" />
+            layout="@layout/appinfo_graphics"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_written_text" />
+            layout="@layout/appinfo_written_text"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_libraries" />
+            layout="@layout/appinfo_libraries"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_sourcecode" />
+            layout="@layout/appinfo_sourcecode"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_license" />
+            layout="@layout/appinfo_license"/>
 
         <include
-            layout="@layout/horizontal_line" />
+            layout="@layout/horizontal_line"/>
 
         <include
-            layout="@layout/appinfo_build_info" />
+            layout="@layout/appinfo_build_info"/>
 
     </LinearLayout>
 </ScrollView>

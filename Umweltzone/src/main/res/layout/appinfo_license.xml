@@ -20,28 +20,28 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_license_title" />
+        android:text="@string/appinfo_license_title"/>
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_license_content" />
+        android:text="@string/appinfo_license_content"/>
 
     <TextView
         style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_license_name_gpl" />
+        android:text="@string/appinfo_license_name_gpl"/>
 
     <Button
         android:id="@+id/appInfoButtonGpl"
         style="@style/AppInfo.ButtonWeb"
-        android:text="@string/appinfo_license_url_gpl" />
+        android:text="@string/appinfo_license_url_gpl"/>
 
     <TextView
         style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_license_name_cc" />
+        android:text="@string/appinfo_license_name_cc"/>
 
     <Button
         android:id="@+id/appInfoButtonCreativeCommons"
         style="@style/AppInfo.ButtonWeb"
-        android:text="@string/appinfo_license_url_cc" />
+        android:text="@string/appinfo_license_url_cc"/>
 
 </merge>

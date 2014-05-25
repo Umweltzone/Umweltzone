@@ -34,54 +34,54 @@
         <TextView
             android:id="@+id/city_info_title"
             style="@style/ZoneInfo.Title"
-            android:text="@string/city_info_title" />
+            android:text="@string/city_info_title"/>
 
         <TextView
             style="@style/ZoneInfo.ZoneStatus"
             android:id="@+id/city_info_zone_status"
-            android:text="@string/city_info_zone_status" />
+            android:text="@string/city_info_zone_status"/>
 
         <TextView
             android:id="@+id/city_info_zone_description"
-            style="@style/ZoneInfo.Content" />
+            style="@style/ZoneInfo.Content"/>
 
         <TextView
             android:id="@+id/city_info_zone_number_since"
             style="@style/ZoneInfo.Content"
-            android:text="@string/city_info_zone_number_since" />
+            android:text="@string/city_info_zone_number_since"/>
 
         <TextView
             android:id="@+id/city_info_next_zone_number_as_of"
             style="@style/ZoneInfo.Content"
-            android:text="@string/city_info_next_zone_number_as_of" />
+            android:text="@string/city_info_next_zone_number_as_of"/>
 
         <TextView
             android:id="@+id/city_info_abroad_licensed_vehicle_zone_info"
             style="@style/ZoneInfo.Content"
-            android:text="@string/city_info_abroad_licensed_vehicle_zone_info" />
+            android:text="@string/city_info_abroad_licensed_vehicle_zone_info"/>
 
-        <TextView style="@style/VerticalSpacerLarge" />
+        <TextView style="@style/VerticalSpacerLarge"/>
 
         <Button
             android:id="@+id/city_info_show_on_map"
             style="@style/Button.Base"
-            android:text="@string/city_info_show_on_map" />
+            android:text="@string/city_info_show_on_map"/>
 
         <Button
             android:id="@+id/city_info_further_information"
             style="@style/Button.Base"
-            android:text="@string/city_info_further_information" />
+            android:text="@string/city_info_further_information"/>
 
         <TextView
             android:id="@+id/city_info_badge_online_title"
             style="@style/AppInfo.ButtonWebTitle"
-            android:text="@string/city_info_badge_online_title" />
+            android:text="@string/city_info_badge_online_title"/>
 
         <Button
             android:id="@+id/city_info_badge_online"
-            style="@style/Button.Web" />
+            style="@style/Button.Web"/>
 
-        <TextView style="@style/VerticalSpacerLarge" />
+        <TextView style="@style/VerticalSpacerLarge"/>
 
     </LinearLayout>
 

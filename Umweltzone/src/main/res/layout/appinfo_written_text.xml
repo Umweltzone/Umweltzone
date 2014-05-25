@@ -20,10 +20,10 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_references_texts_title" />
+        android:text="@string/appinfo_references_texts_title"/>
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_references_texts_content" />
+        android:text="@string/appinfo_references_texts_content"/>
 
 </merge>

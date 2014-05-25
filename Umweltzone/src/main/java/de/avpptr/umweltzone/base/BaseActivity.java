@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.base;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -45,7 +45,8 @@ public abstract class BaseActivity extends ActionBarActivity {
         mTracking = Umweltzone.getTracker();
     }
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActionBar = getSupportActionBar();
         mActionBar.setDisplayHomeAsUpEnabled(true);

@@ -1,10 +1,11 @@
-package de.avpptr.umweltzone.activities;
+package de.avpptr.umweltzone.feedback;
 
 import android.os.Bundle;
 import android.view.Menu;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class FeedbackActivity extends BaseActivity {

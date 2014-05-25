@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.adapters;
+package de.avpptr.umweltzone.faqs;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -114,7 +114,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
             Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
 
             sourceUrlButton.setOnClickListener(new View.OnClickListener() {
-                @Override public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
                     mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
                 }
             });
