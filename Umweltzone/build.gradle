@@ -91,5 +91,6 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.2.+'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.2.+'
     compile 'de.cketti.library.changelog:ckchangelog:1.2.+'
+    compile 'info.metadude.android:typed-preferences:1.1.+'
     compile fileTree(dir: 'libs', include: '*.jar')
 }

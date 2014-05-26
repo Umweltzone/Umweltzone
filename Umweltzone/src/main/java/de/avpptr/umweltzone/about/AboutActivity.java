@@ -65,6 +65,9 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCkChangeLog,
                 R.string.appinfo_references_url_ckchangelog, TrackingPoint.AboutItemClick,
                 "ck_changelog_library");
+        ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonTypedPreferences,
+                R.string.appinfo_references_url_typedpreferences, TrackingPoint.AboutItemClick,
+                "typed_preferences_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGpl,
                 R.string.appinfo_license_url_gpl, TrackingPoint.AboutItemClick,
                 "gpl_url");
@@ -74,7 +77,6 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonSourceCode,
                 R.string.appinfo_sourcecode_url, TrackingPoint.AboutItemClick,
                 "source_code_url");
-
     }
 
     @Override
