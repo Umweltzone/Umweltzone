@@ -39,6 +39,7 @@
         <TextView
             style="@style/ZoneInfo.ZoneStatus"
             android:id="@+id/city_info_zone_status"
+            tools:background="@drawable/umweltzone_status_2"
             android:text="@string/city_info_zone_status"/>
 
         <TextView
@@ -80,6 +81,7 @@
 
         <Button
             android:id="@+id/city_info_badge_online"
+            tools:text="Badge online URL"
             style="@style/Button.Web"/>
 
         <TextView style="@style/VerticalSpacerLarge"/>

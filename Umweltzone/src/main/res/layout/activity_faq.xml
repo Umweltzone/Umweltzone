@@ -24,6 +24,7 @@
 
     <ExpandableListView
         android:id="@+id/faq_list"
+        tools:listitem="@layout/faq_list_item"
         style="@style/Faq.ExpandableListView"/>
 
 </RelativeLayout>
