@@ -20,69 +20,70 @@
         version="1.2.0"
         versioncode="12000">
         <change>
-            Bugfix: Unlock HTC devices, resolved crash with web links
+            Bugfix: HTC-Geräte freigeschaltet, Absturz bei bei Weblinks behoben
         </change>
         <change>
-            New: More zones: Augsburg, Hagen, Neuss, Ulm and the Ruhrgebiet
+            Neu: Weitere Zonen: Augsburg, Hagen, Neuss, Ulm und das Ruhrgebiet
         </change>
         <change>
-            Bugfix: Resolved rendering error of the version information
+            Bugfix: Fehler bei der Darstellung der Versionsinformationen behoben
         </change>
         <change>
-            New: Decreased loading time for city list and info through caching
+            Neu: Ladenzeiten für Städteliste und Infos reduziert (Caching)
         </change>
         <change>
-            New: Added link to online sticker application form (Berlin)
+            Neu: Link zu Feinstaubplakette online (Berlin)
         </change>
         <change>
-            New: Mention OpenStreetMap as a data source
+            Neu: OpenStreetMap als Datenquelle referenziert
         </change>
         <change>
-            New: City-specific logging for buttons
+            Neu: Stadtspezifische Protokollierung für Buttons
         </change>
     </release>
     <release
         version="1.1.0"
         versioncode="11000">
         <change>
-            Bugfix: Removed endless loop when changing between
-            FAQs and zone info
+            Bugfix: Endlosschleife beim Wechsel zwischen
+            FAQs und Zoneninfo beseitigt
         </change>
         <change>
-            Bugfix: Resolved rendering error of the logo
+            Bugfix: Fehler bei der Darstellung des Logos behoben
         </change>
         <change>
-            Bugfix: Resolved rendering error of zone stickers
+            Bugfix: Fehler bei der Darstellung der Zonenplakette behoben
         </change>
         <change>
-            New: Five more cities: Düsseldorf, Bremen,
-            Leipzig, Hannover and Münster
+            Neu: Fünf Städte kommen dazu (Düsseldorf, Bremen,
+            Leipzig, Hannover und Münster)
         </change>
         <change>
-            New: Version information tell about new features
-            and bug fixes
+            Neu: Versionsinformationen geben Auskunft über
+            neue Funktionen oder behobene Fehler
         </change>
         <change>
-            New: Feedback becomes a separate menu item
+            Neu: Feedback als separater Menü-Eintrag
         </change>
         <change>
-            New: Advanced error logging when
-            Google Play Services is not installed
+            Neu: Erweiterte Fehlerprotokollierung, wenn
+            Google Play Services nicht installiert ist
         </change>
         <change>
-            New: Advanced logging when no city has been selected
+            Neu: Erweiterte Protokollierung, wenn noch
+            keine Stadt gewählt wurde
         </change>
     </release>
     <release
         version="1.0.0"
         versioncode="10000">
         <change>
-            We launch with the 5 largest German cities:
-            Berlin, Frankfurt, Köln, München and Stuttgart
+            Wir starten mit den 5 größten deutschen Städten:
+            Berlin, Frankfurt, Köln, München und Stuttgart
         </change>
         <change>
-            Since the application still crashed on HTC devices
-            we decided to exclude these devices for the moment
+            Leider müssen wir noch einen Fehler bei HTC-Geräten beheben.
+            Daher ist die App für diese Geräte derzeit nicht verfügbar.
         </change>
     </release>
 </changelog>
