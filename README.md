@@ -7,7 +7,7 @@ specific emission profile. The app shows the outline of the low-emision
 zones and provides additional information about dates or special
 regulations such as for vehicles registered abroad. Moreover, the
 user can use the FAQs to read about emission groups, fine particles,
-badges for cars or motorbikes, punishments, exception permits and
+stickers for cars or motorbikes, punishments, exception permits and
 many more. Further, there are several links included
 pointing to external websites which serve more information to
 read through.

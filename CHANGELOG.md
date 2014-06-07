@@ -15,7 +15,7 @@
 
 * Added new zones for Augsburg, Hagen, Neuss, Ulm and the Ruhr region, [ef60b](https://bitbucket.org/tbsprs/umweltzone/commits/ef60b3a56dfd7bbe804d15264f32e482b6b67884)
 * Improve resource loading times, use caching to avoid reparsing raw JSON data [ab545](https://bitbucket.org/tbsprs/umweltzone/commits/ab545646076c49dd51aa92645fc35f2b140788b8)
-* Add badge online link to city info, [b0794](https://bitbucket.org/tbsprs/umweltzone/commits/b079478ab873f1c15a5edbe33dd2d8c88a7a616f)
+* Add sticker online link to city info, [b0794](https://bitbucket.org/tbsprs/umweltzone/commits/b079478ab873f1c15a5edbe33dd2d8c88a7a616f)
 * Append city name to tracking parameter for more detailed analytics, [ace71](https://bitbucket.org/tbsprs/umweltzone/commits/ace710c403c951951a19f680aa823169643a0376)
 * Mention OpenStreetMap as a data source, [44e7e](https://bitbucket.org/tbsprs/umweltzone/commits/44e7ee7714bda4f061b0e50ddb6ab513b1c587d2)
 * Update build tools to v.19.0.1., [8d63b](https://bitbucket.org/tbsprs/umweltzone/commits/8d63b6686d6dfd767bb4d2c60783d5b73d250491)
@@ -28,7 +28,7 @@
 
 ### Bug fixes
 
-* Fixed image size and densities for the emission badge, [18e36](https://bitbucket.org/tbsprs/umweltzone/commits/18e364f427fb58fd5c8aafc60b3bc8faa81262bd)
+* Fixed image size and densities for the emission sticker, [18e36](https://bitbucket.org/tbsprs/umweltzone/commits/18e364f427fb58fd5c8aafc60b3bc8faa81262bd)
 * Fixed image size and densities for the application logo, [bba5b](https://bitbucket.org/tbsprs/umweltzone/commits/bba5ba4c033a0f66b3fa6895e70356f95e60974b)
 * Removed endless loop when changing screens between Zoneinfo and FAQs, [e4726](https://bitbucket.org/tbsprs/umweltzone/commits/e4726f597efc53366957d335d2a48d9e1f2f4b92)
 
