@@ -114,14 +114,12 @@ public class CityInfoFragment extends BaseFragment {
         });
 
         // Further information button
-        Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
-        furtherInfoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoFurtherInfoClick, mLowEmissionZone.name);
-                startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
-            }
-        });
+        ViewHelper.setupTextViewExtended(activity,
+                R.id.city_info_further_information,
+                R.string.city_info_further_information,
+                mLowEmissionZone.urlUmweltPlaketteDe,
+                TrackingPoint.CityInfoFurtherInfoClick,
+                mLowEmissionZone.name);
 
         // Badge online
         TextView badgeOnlineTextView = (TextView) activity.findViewById(R.id.city_info_badge_online);

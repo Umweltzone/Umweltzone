@@ -69,9 +69,9 @@
             style="@style/Button.Base"
             android:text="@string/city_info_show_on_map"/>
 
-        <Button
+        <TextView
             android:id="@+id/city_info_further_information"
-            style="@style/Button.Base"
+            style="@style/AppInfo.WebLink"
             android:text="@string/city_info_further_information"/>
 
         <TextView
