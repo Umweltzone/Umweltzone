@@ -18,10 +18,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.avpptr.umweltzone">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="19" />
-
     <supports-screens android:anyDensity="true" />
 
     <!-- Copied from Google Maps Library/AndroidManifest.xml. -->
