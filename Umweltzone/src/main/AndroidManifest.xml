@@ -68,7 +68,7 @@
             android:label="@string/about_activity_title" />
         <activity
             android:name=".faqs.FaqActivity"
-            android:label="@string/faq_activity_title"></activity>
+            android:label="@string/faq_activity_title" />
     </application>
 
 </manifest>
