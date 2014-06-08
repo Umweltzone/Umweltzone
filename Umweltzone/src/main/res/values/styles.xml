@@ -176,8 +176,8 @@
         <item name="android:paddingLeft">@dimen/huge_spacer</item>
     </style>
 
-    <style name="Faq.Content.Answer" parent="TextView.Base.Medium">
-        <item name="android:layout_marginBottom">@dimen/medium_spacer</item>
+    <style name="Faq.Content.Answer" parent="TextView.Base.Small">
+        <item name="android:gravity">left</item>
         <item name="android:textColor">@color/faq_answer_foreground</item>
     </style>
 
