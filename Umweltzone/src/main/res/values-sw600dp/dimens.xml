@@ -20,4 +20,11 @@
     <!-- Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw600dp devices (e.g. 7" tablets) here. -->
     <dimen name="activity_horizontal_margin">128dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="body_text_size">20sp</dimen>
+    <dimen name="headline_text_size">22sp</dimen>
+
+    <!-- Line spacing -->
+    <item name="text_line_spacing" format="float" type="dimen">1.2</item>
 </resources>

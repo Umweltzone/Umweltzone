@@ -34,6 +34,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
     </style>
 
 
@@ -57,6 +58,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
     </style>
 
     <style name="TextView.Base.Medium" parent="@android:style/TextAppearance.Medium">
@@ -64,6 +66,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">left</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/headline_text_size</item>
     </style>
 
     <style name="TextView.Title" parent="TextView.Base.Small">
@@ -74,6 +77,7 @@
     <style name="Button.Base" parent="android:Widget.Holo.Light.Button.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
@@ -143,6 +147,7 @@
     <style name="ZoneInfo.Title" parent="TextView.Title"/>
 
     <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
+        <item name="android:textSize">18sp</item>
         <item name="android:gravity">bottom|center_horizontal</item>
         <item name="android:padding">@dimen/big_spacer</item>
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
