@@ -33,6 +33,7 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:textColorLink">@color/button_web_text_color_link</item>
     </style>
 
 
@@ -83,7 +84,6 @@
     </style>
 
     <style name="Button.Web" parent="TextView.Base.Small">
-        <item name="android:textColorLink">@color/button_web_text_color_link</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
