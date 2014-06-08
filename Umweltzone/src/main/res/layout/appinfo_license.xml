@@ -28,12 +28,12 @@
 
     <TextView
         android:id="@+id/appInfoButtonGpl"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_license_url_gpl"/>
 
     <TextView
         android:id="@+id/appInfoButtonCreativeCommons"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_license_url_cc"/>
 
 </merge>

@@ -44,7 +44,7 @@
 
     <TextView
         android:id="@+id/appInfoButtonUserVoice"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_uservoice_url"/>
 
     <include
@@ -60,7 +60,7 @@
 
     <TextView
         android:id="@+id/appInfoButtonRating"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_rating_url"/>
 
 </merge>

@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/appInfoButtonEnvironmentAgency"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_umweltbundesamt"/>
 
 </merge>

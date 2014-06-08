@@ -83,9 +83,6 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="Button.Web" parent="TextView.Base.Small">
-    </style>
-
     <style name="TextView.Email" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
         <item name="android:textColorLink">@color/email_text_color_link</item>
@@ -111,7 +108,7 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="AppInfo.ButtonWeb" parent="Button.Web">
+    <style name="AppInfo.WebLink" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
     </style>
 
@@ -172,7 +169,7 @@
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
     </style>
 
-    <style name="Faq.Content.SourceUrl" parent="Button.Web"/>
+    <style name="Faq.Content.SourceUrl" parent="TextView.Base.Small"/>
 
     <style name="Faq.Content.Question" parent="TextView.Base.Medium">
         <item name="android:textColor">@color/faq_question_foreground</item>

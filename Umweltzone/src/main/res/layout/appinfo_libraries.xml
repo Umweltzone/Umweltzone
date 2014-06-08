@@ -28,42 +28,42 @@
 
     <TextView
         android:id="@+id/appInfoButtonGooglePlay"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_googleplayservices"/>
 
     <TextView
         android:id="@+id/appInfoButtonGoogleSupportLibrary"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_googlesupportlibrary"/>
 
     <TextView
         android:id="@+id/appInfoButtonActionBarCompat"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_actionbarcompat"/>
 
     <TextView
         android:id="@+id/appInfoButtonJackson"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_jackson"/>
 
     <TextView
         android:id="@+id/appInfoButtonGoogleAnalytics"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_ga"/>
 
     <TextView
         android:id="@+id/appInfoButtonTraceDroid"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_tracedroid"/>
 
     <TextView
         android:id="@+id/appInfoButtonCkChangeLog"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_ckchangelog"/>
 
     <TextView
         android:id="@+id/appInfoButtonTypedPreferences"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_references_url_typedpreferences"/>
 
 </merge>
