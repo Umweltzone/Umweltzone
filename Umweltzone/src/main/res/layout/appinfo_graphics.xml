@@ -26,7 +26,7 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_references_graphics_content"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonWikimedia"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_wikimedia_commons"/>

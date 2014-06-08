@@ -26,12 +26,12 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_license_content"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonGpl"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_license_url_gpl"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonCreativeCommons"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_license_url_cc"/>

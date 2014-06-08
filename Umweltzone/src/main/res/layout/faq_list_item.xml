@@ -29,7 +29,7 @@
         tools:background="@android:color/holo_blue_light"
         tools:text="FAQ answer"/>
 
-    <Button
+    <TextView
         android:id="@+id/faq_source_url"
         style="@style/Faq.Content.SourceUrl"
         tools:text="FAQ source URL"/>

@@ -26,42 +26,42 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_references_libraries_content"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonGooglePlay"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_googleplayservices"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonGoogleSupportLibrary"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_googlesupportlibrary"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonActionBarCompat"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_actionbarcompat"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonJackson"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_jackson"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonGoogleAnalytics"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_ga"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonTraceDroid"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_tracedroid"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonCkChangeLog"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_ckchangelog"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonTypedPreferences"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_typedpreferences"/>

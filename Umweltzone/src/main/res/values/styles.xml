@@ -82,11 +82,12 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="Button.Web" parent="Button.Base">
+    <style name="Button.Web" parent="TextView.Base.Small">
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
+        <item name="android:layout_marginTop">@dimen/medium_spacer</item>
         <item name="android:textColorLink">@color/email_text_color_link</item>
     </style>
 
@@ -108,11 +109,6 @@
     <style name="AppInfo.SingleLineTextContent" parent="AppInfo.TextContent">
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
-    </style>
-
-    <style name="AppInfo.Contact.Email" parent="TextView.Email">
-        <item name="android:layout_marginTop">@dimen/large_spacer</item>
-        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
     </style>
 
     <style name="AppInfo.ButtonWeb" parent="Button.Web">

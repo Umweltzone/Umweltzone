@@ -22,7 +22,7 @@
         style="@style/AppInfo.ContentTitle"
         android:text="@string/appinfo_sourcecode_title"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonSourceCode"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_sourcecode_url"/>
