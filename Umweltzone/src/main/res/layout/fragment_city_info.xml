@@ -74,11 +74,6 @@
             style="@style/Button.Base"
             android:text="@string/city_info_further_information"/>
 
-        <TextView
-            android:id="@+id/city_info_badge_online_title"
-            style="@style/AppInfo.ButtonWebTitle"
-            android:text="@string/city_info_badge_online_title"/>
-
         <Button
             android:id="@+id/city_info_badge_online"
             tools:text="Badge online URL"

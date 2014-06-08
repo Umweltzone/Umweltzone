@@ -26,72 +26,40 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_references_libraries_content"/>
 
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_googleplayservices"/>
-
     <Button
         android:id="@+id/appInfoButtonGooglePlay"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_googleplayservices"/>
-
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_googlesupportlibrary"/>
 
     <Button
         android:id="@+id/appInfoButtonGoogleSupportLibrary"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_googlesupportlibrary"/>
 
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_actionbarcompat"/>
-
     <Button
         android:id="@+id/appInfoButtonActionBarCompat"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_actionbarcompat"/>
-
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_jackson"/>
 
     <Button
         android:id="@+id/appInfoButtonJackson"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_jackson"/>
 
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_ga"/>
-
     <Button
         android:id="@+id/appInfoButtonGoogleAnalytics"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_ga"/>
-
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_tracdroid"/>
 
     <Button
         android:id="@+id/appInfoButtonTraceDroid"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_tracedroid"/>
 
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_ckchangelog"/>
-
     <Button
         android:id="@+id/appInfoButtonCkChangeLog"
         style="@style/AppInfo.ButtonWeb"
         android:text="@string/appinfo_references_url_ckchangelog"/>
-
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_typedpreferences"/>
 
     <Button
         android:id="@+id/appInfoButtonTypedPreferences"

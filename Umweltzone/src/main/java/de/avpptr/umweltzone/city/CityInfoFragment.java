@@ -124,14 +124,11 @@ public class CityInfoFragment extends BaseFragment {
         });
 
         // Badge online
-        TextView badgeOnlineTextView = (TextView) activity.findViewById(R.id.city_info_badge_online_title);
         Button badgeOnline = (Button) activity.findViewById(R.id.city_info_badge_online);
         final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
-            badgeOnlineTextView.setVisibility(View.GONE);
             badgeOnline.setVisibility(View.GONE);
         } else {
-            badgeOnlineTextView.setVisibility(View.VISIBLE);
             badgeOnline.setVisibility(View.VISIBLE);
             String urlBadgeOnlineTitle = activity.getString(R.string.city_info_badge_online_title);
             badgeOnline.setText(

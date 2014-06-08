@@ -115,12 +115,6 @@
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
     </style>
 
-    <style name="AppInfo.ButtonWebTitle" parent="TextView.Base.Small">
-        <item name="android:textColor">@color/appinfo_button_web_title_foreground</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginTop">@dimen/big_spacer</item>
-    </style>
-
     <style name="AppInfo.ButtonWeb" parent="Button.Web">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
     </style>
@@ -180,11 +174,6 @@
         <item name="android:layout_margin">@dimen/medium_spacer</item>
         <item name="android:divider">@color/list_divider</item>
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
-    </style>
-
-    <style name="Faq.Content.SourceUrlTitle" parent="TextView.Base.Small">
-        <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/faq_answer_source_title</item>
     </style>
 
     <style name="Faq.Content.SourceUrl" parent="Button.Web"/>

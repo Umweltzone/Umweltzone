@@ -26,10 +26,6 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_disclaimer_content"/>
 
-    <TextView
-        style="@style/AppInfo.ButtonWebTitle"
-        android:text="@string/appinfo_references_name_umweltbundesamt"/>
-
     <Button
         android:id="@+id/appInfoButtonEnvironmentAgency"
         style="@style/AppInfo.ButtonWeb"
