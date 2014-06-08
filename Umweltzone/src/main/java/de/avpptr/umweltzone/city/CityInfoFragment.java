@@ -133,8 +133,9 @@ public class CityInfoFragment extends BaseFragment {
         } else {
             badgeOnlineTextView.setVisibility(View.VISIBLE);
             badgeOnline.setVisibility(View.VISIBLE);
+            String urlBadgeOnlineTitle = activity.getString(R.string.city_info_badge_online_title);
             badgeOnline.setText(
-                    StringHelper.spannedLinkForString(urlBadgeOnline),
+                    StringHelper.spannedLinkForString(urlBadgeOnlineTitle, urlBadgeOnline),
                     TextView.BufferType.SPANNABLE);
             badgeOnline.setMovementMethod(LinkMovementMethod.getInstance());
         }

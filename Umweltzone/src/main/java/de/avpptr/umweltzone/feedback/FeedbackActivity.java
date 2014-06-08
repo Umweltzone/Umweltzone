@@ -18,12 +18,15 @@ public class FeedbackActivity extends BaseActivity {
         ViewHelper.setupTextViewSimple(this, R.id.buildVersion, "v." + getBuildVersionName());
 
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonUserVoice,
+                R.string.appinfo_uservoice_url_title,
                 R.string.appinfo_uservoice_url, TrackingPoint.UserVoiceClick, null);
 
         ViewHelper.setupTextViewExtended(this, R.id.appInfoContactEmail,
+                R.string.appinfo_contact_email,
                 R.string.appinfo_contact_email, TrackingPoint.SupportMailClick, null);
 
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonRating,
+                R.string.appinfo_rating_url_title,
                 R.string.appinfo_rating_url, TrackingPoint.RatingClick, null);
 
     }

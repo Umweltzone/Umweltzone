@@ -151,6 +151,7 @@
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Source code</string>
+    <string name="appinfo_sourcecode_url_title">Application source code</string>
     <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
 
     <!-- AboutActivity / License -->
@@ -161,8 +162,10 @@
         Attribution 3.0 Unported license.
     </string>
     <string name="appinfo_license_name_gpl">GPLv3</string>
+    <string name="appinfo_license_url_title_gpl">GPLv3 License</string>
     <string name="appinfo_license_url_gpl">http://www.gnu.org/licenses/gpl-3.0.txt</string>
     <string name="appinfo_license_name_cc">Creative Commons</string>
+    <string name="appinfo_license_url_title_cc">Creative Commons License</string>
     <string name="appinfo_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed</string>
 
     <!-- AboutActivity / Build Info -->
@@ -187,12 +190,16 @@
         other people can be rated which allows us to see which improvements
         the majority of users want.
     </string>
+    <string name="appinfo_uservoice_url_title">UserVoice website</string>
     <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
 
     <!-- FeedbackActivity / Rating -->
     <string name="appinfo_rating_title">Rating</string>
     <string name="appinfo_rating_content">
         We are happy to get your positive rating in the Google PlayStore.
+    </string>
+    <string name="appinfo_rating_url_title">
+        Umweltzone in the Google Play Store
     </string>
     <string name="appinfo_rating_url">
         http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
@@ -253,6 +260,6 @@
 
     <!-- FaqActivity -->
     <string name="faq_activity_title">FAQ</string>
-    <string name="faq_source_url_title_text">Source: </string>
+    <string name="faq_source_url_title_text">Source</string>
 
 </resources>

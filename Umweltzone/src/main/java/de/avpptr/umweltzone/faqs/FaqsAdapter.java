@@ -125,7 +125,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         ViewHelper.setupTextViewSimple(convertView, R.id.faq_answer, childText);
 
         final String sourceUrlText = faqAnswer.sourceUrl;
-        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlText,
+        final String sourceUrlTitle = mContext.getString(R.string.faq_source_url_title_text);
+        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlTitle, sourceUrlText,
                 TrackingPoint.FaqSourceUrlClick, itemDescription);
 
         return convertView;
