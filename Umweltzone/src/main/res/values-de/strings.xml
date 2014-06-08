@@ -160,6 +160,9 @@
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Quellcode</string>
+    <string name="appinfo_sourcecode_content">
+        Der Quellcode der Anwendung ist online abrufbar.
+    </string>
     <string name="appinfo_sourcecode_url_title">Quellcode der Anwendung</string>
     <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
 

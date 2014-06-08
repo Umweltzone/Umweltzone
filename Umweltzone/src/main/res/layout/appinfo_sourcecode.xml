@@ -23,6 +23,10 @@
         android:text="@string/appinfo_sourcecode_title"/>
 
     <TextView
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_sourcecode_content"/>
+
+    <TextView
         android:id="@+id/appInfoButtonSourceCode"
         style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_sourcecode_url"/>

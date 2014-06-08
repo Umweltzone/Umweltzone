@@ -151,6 +151,9 @@
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Source code</string>
+    <string name="appinfo_sourcecode_content">
+        The source code of the application is available online.
+    </string>
     <string name="appinfo_sourcecode_url_title">Application source code</string>
     <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
 
