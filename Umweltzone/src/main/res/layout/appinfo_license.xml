@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -20,20 +19,20 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_license_title"/>
+        android:text="@string/appinfo_license_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_license_content"/>
+        android:text="@string/appinfo_license_content" />
 
     <TextView
         android:id="@+id/appInfoButtonGpl"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_license_url_gpl"/>
+        android:text="@string/appinfo_license_url_gpl" />
 
     <TextView
         android:id="@+id/appInfoButtonCreativeCommons"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_license_url_cc"/>
+        android:text="@string/appinfo_license_url_cc" />
 
 </merge>

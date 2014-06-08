@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -20,50 +19,50 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_references_libraries_title"/>
+        android:text="@string/appinfo_references_libraries_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_references_libraries_content"/>
+        android:text="@string/appinfo_references_libraries_content" />
 
     <TextView
         android:id="@+id/appInfoButtonGooglePlay"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_googleplayservices"/>
+        android:text="@string/appinfo_references_url_googleplayservices" />
 
     <TextView
         android:id="@+id/appInfoButtonGoogleSupportLibrary"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_googlesupportlibrary"/>
+        android:text="@string/appinfo_references_url_googlesupportlibrary" />
 
     <TextView
         android:id="@+id/appInfoButtonActionBarCompat"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_actionbarcompat"/>
+        android:text="@string/appinfo_references_url_actionbarcompat" />
 
     <TextView
         android:id="@+id/appInfoButtonJackson"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_jackson"/>
+        android:text="@string/appinfo_references_url_jackson" />
 
     <TextView
         android:id="@+id/appInfoButtonGoogleAnalytics"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_ga"/>
+        android:text="@string/appinfo_references_url_ga" />
 
     <TextView
         android:id="@+id/appInfoButtonTraceDroid"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_tracedroid"/>
+        android:text="@string/appinfo_references_url_tracedroid" />
 
     <TextView
         android:id="@+id/appInfoButtonCkChangeLog"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_ckchangelog"/>
+        android:text="@string/appinfo_references_url_ckchangelog" />
 
     <TextView
         android:id="@+id/appInfoButtonTypedPreferences"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_typedpreferences"/>
+        android:text="@string/appinfo_references_url_typedpreferences" />
 
 </merge>

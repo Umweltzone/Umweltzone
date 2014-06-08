@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -17,21 +16,21 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="@dimen/big_spacer">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/big_spacer">
 
     <TextView
         android:id="@+id/faq_answer"
         style="@style/Faq.Content.Answer"
         tools:background="@android:color/holo_blue_light"
-        tools:text="FAQ answer"/>
+        tools:text="FAQ answer" />
 
     <TextView
         android:id="@+id/faq_source_url"
         style="@style/Faq.Content.SourceUrl"
-        tools:text="FAQ source URL"/>
+        tools:text="FAQ source URL" />
 
 </LinearLayout>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -20,30 +19,30 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_build_info_title"/>
+        android:text="@string/appinfo_build_info_title" />
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_time"/>
+        android:text="@string/appinfo_build_info_time" />
 
     <TextView
         android:id="@+id/buildTime"
-        style="@style/AppInfo.SingleLineTextContent"/>
+        style="@style/AppInfo.SingleLineTextContent" />
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_version_code"/>
+        android:text="@string/appinfo_build_info_version_code" />
 
     <TextView
         android:id="@+id/buildVersionCode"
-        style="@style/AppInfo.SingleLineTextContent"/>
+        style="@style/AppInfo.SingleLineTextContent" />
 
     <TextView
         style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_hash"/>
+        android:text="@string/appinfo_build_info_hash" />
 
     <TextView
         android:id="@+id/buildHash"
-        style="@style/AppInfo.SingleLineTextContent"/>
+        style="@style/AppInfo.SingleLineTextContent" />
 
 </merge>

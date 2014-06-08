@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -17,26 +16,26 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
+    xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/action_feedback"
         android:title="@string/action_feedback"
         android:orderInCategory="111"
-        umweltzone:showAsAction="never"/>
+        umweltzone:showAsAction="never" />
 
     <item
         android:id="@+id/action_changelog"
         android:title="@string/action_changelog"
         android:icon="@drawable/ic_action_about_dark"
         android:orderInCategory="112"
-        umweltzone:showAsAction="never"/>
+        umweltzone:showAsAction="never" />
 
     <item
         android:id="@+id/action_about"
         android:title="@string/action_about"
         android:icon="@drawable/ic_action_about_dark"
         android:orderInCategory="113"
-        umweltzone:showAsAction="never"/>
+        umweltzone:showAsAction="never" />
 
 </menu>

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -17,15 +16,15 @@
   -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:tools="http://schemas.android.com/tools"
-       tools:showIn="@layout/activity_about">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_about">
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_copyright_title"/>
+        android:text="@string/appinfo_copyright_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_copyright_content"/>
+        android:text="@string/appinfo_copyright_content" />
 
 </merge>

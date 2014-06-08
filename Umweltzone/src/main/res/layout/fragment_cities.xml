@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -17,12 +16,12 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:paddingLeft="8dp"
-              android:paddingRight="8dp">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
 
     <ListView
         android:id="@android:id/list"
@@ -30,7 +29,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:drawSelectorOnTop="false"
-        tools:listitem="@layout/cities_row"/>
+        tools:listitem="@layout/cities_row" />
 
     <TextView
         android:id="@android:id/empty"
@@ -39,6 +38,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:text="@string/cities_no_content"
-        tools:background="@android:color/holo_red_light"/>
+        tools:background="@android:color/holo_red_light" />
 
 </LinearLayout>

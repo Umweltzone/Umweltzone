@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -20,15 +19,15 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_references_graphics_title"/>
+        android:text="@string/appinfo_references_graphics_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_references_graphics_content"/>
+        android:text="@string/appinfo_references_graphics_content" />
 
     <TextView
         android:id="@+id/appInfoButtonWikimedia"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_wikimedia_commons"/>
+        android:text="@string/appinfo_references_url_wikimedia_commons" />
 
 </merge>

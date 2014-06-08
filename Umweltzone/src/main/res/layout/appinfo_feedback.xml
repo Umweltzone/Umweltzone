@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   Copyright (C) 2013  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
@@ -20,47 +19,45 @@
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_contact_title"/>
+        android:text="@string/appinfo_contact_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_contact_content"/>
+        android:text="@string/appinfo_contact_content" />
 
     <TextView
         android:id="@+id/appInfoContactEmail"
         style="@style/TextView.Email"
-        android:text="@string/appinfo_contact_email"/>
+        android:text="@string/appinfo_contact_email" />
 
-    <include
-        layout="@layout/horizontal_line"/>
+    <include layout="@layout/horizontal_line" />
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_uservoice_title"/>
+        android:text="@string/appinfo_uservoice_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_uservoice_content"/>
+        android:text="@string/appinfo_uservoice_content" />
 
     <TextView
         android:id="@+id/appInfoButtonUserVoice"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_uservoice_url"/>
+        android:text="@string/appinfo_uservoice_url" />
 
-    <include
-        layout="@layout/horizontal_line"/>
+    <include layout="@layout/horizontal_line" />
 
     <TextView
         style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_rating_title"/>
+        android:text="@string/appinfo_rating_title" />
 
     <TextView
         style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_rating_content"/>
+        android:text="@string/appinfo_rating_content" />
 
     <TextView
         android:id="@+id/appInfoButtonRating"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_rating_url"/>
+        android:text="@string/appinfo_rating_url" />
 
 </merge>
