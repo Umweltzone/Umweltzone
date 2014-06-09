@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Umweltzone</string>
+    <string name="cities_no_content">Keine Städte</string>
+
+    <!--Action Bar items-->
+    <string name="action_cities">Städte</string>
+    <string name="action_city_info">@string/city_info_activity_title</string>
+    <string name="action_faq">@string/faq_activity_title</string>
+    <string name="action_feedback">@string/feedback_activity_title</string>
+    <string name="action_changelog">Versionsinformationen</string>
+    <string name="action_about">@string/about_activity_title</string>
+
+    <!-- FeedbackActivity -->
+    <string name="feedback_activity_title">Feedback</string>
+
+    <!-- AboutActivity -->
+    <string name="appinfo_application_logo_description">
+        Logo der Anwendung &#8220;Umweltzone&#8221;
+    </string>
+    <string name="about_activity_title">Über</string>
+    <string name="appinfo_subtitle">
+        Eine Android App für Umweltzonen in Deutschland
+    </string>
+
+    <!-- AboutActivity / Copyright -->
+    <string name="appinfo_copyright_title">Idee und Umsetzung</string>
+    <string name="appinfo_copyright_content">
+        (&#169;) Tobias Preuß und Peter Vasil, 2013 &#8211; 2014
+    </string>
+
+    <!-- AboutActivity / Description -->
+    <string name="appinfo_description_title">Beschreibung</string>
+    <string name="appinfo_description_content">
+        Diese Anwendung informiert über den Verlauf von Umweltzonen und führt
+        weiterführende Daten und Fakten zum Thema auf. Die Umweltzonen dürfen
+        nur von Fahrzeugen befahren werden, die mit einer entsprechenden Plakette
+        (Schadstoffgruppe) gekennzeichnet sind. Ausgesprochenes Ziel dieser
+        Beschränkung ist es, die Luftqualität zu verbessern. Die Belastung
+        durch Feinstaub soll reduziert und somit die Gesundheit der Bevölkerung
+        geschützt werden. &#8212; Neben der Karte und der Umweltzonen-Liste bietet
+        die Detailansicht weiterführende Informationen zur ausgewählten Zone.
+        Eine Auswahl von häufig gestellten Fragen ist über den Menüpunkt
+        &#8220;FAQ&#8221; erreichbar. Für weitere Themen wird an verschiedenen
+        Stellen auf Informationsangebote im Internet verwiesen.
+    </string>
+
+    <!-- AboutActivity / Disclaimer -->
+    <string name="appinfo_disclaimer_title">Daten und Qualität</string>
+    <string name="appinfo_disclaimer_content">
+        Die Daten und Koordinaten der Umweltzonen wurden, soweit vorhanden,
+        in digitaler Form von offiziellen Stellen übernommen. Eine primäre
+        Quelle ist weiterhin OpenStreetMap. Dort können die Geodaten vieler
+        Umweltzonen abgerufen werden. Außerdem wurden einige der Daten und
+        Koordinaten der Umweltzonen manuell erstellt. Grundlage sind die
+        offiziellen Publikationen des Umweltbundesamts.
+        Da der Verlauf der Umweltzone von den Behörden meist nur als analoge Grafik
+        (eingescanntes Kartenmaterial) veröffentlicht wird, kann die Genauigkeit
+        der in der Anwendung dargestellten Zonengrenze von der Realität
+        abweichen. Bedingt durch die unterschiedliche Herkunft, Qualität sowie
+        den manuellen Digitalisierungsprozess können wir nicht für die korrekte
+        Darstellung garantieren und keine Haftung und etwaige Kosten oder
+        Strafen übernehmen.
+    </string>
+    <string name="appinfo_references_name_umweltbundesamt">Umweltbundesamt</string>
+    <string name="appinfo_references_url_umweltbundesamt">
+        http://www.umweltbundesamt.de
+    </string>
+
+    <!-- AboutActivity / Graphics -->
+    <string name="appinfo_references_graphics_title">Grafiken</string>
+    <string name="appinfo_references_graphics_content">
+        Die verwendeten Grafiken stammen aus Wikimedia Commons. Dies
+        betrifft das Logo sowie die Plaketten der Schadstoffgruppen.
+    </string>
+    <string name="appinfo_references_name_wikimedia_commons">Wikimedia Commons</string>
+    <string name="appinfo_references_url_wikimedia_commons">
+        http://commons.wikimedia.org
+    </string>
+
+    <!-- AboutActivity / Texts -->
+    <string name="appinfo_references_texts_title">Texte</string>
+    <string name="appinfo_references_texts_content">
+        Den verwendeten Texten ist ein Quellenverweis zugeordnet,
+        sofern diese von Dritten übernommen wurden.
+    </string>
+
+    <!-- AboutActivity / Libraries -->
+    <string name="appinfo_references_libraries_title">Bibliotheken</string>
+    <string name="appinfo_references_libraries_content">
+        Im Folgenden wird auf Software-Projekte verwiesen, die in
+        der Anwendung genutzt werden.
+    </string>
+    <string name="appinfo_references_name_googleplayservices">
+        Google Play Services
+    </string>
+    <string name="appinfo_references_url_googleplayservices">
+        http://developer.android.com/google/play-services
+    </string>
+    <string name="appinfo_references_name_googlesupportlibrary">
+        Google Support Library v4
+    </string>
+    <string name="appinfo_references_url_googlesupportlibrary">
+        http://developer.android.com/tools/support-library
+    </string>
+    <string name="appinfo_references_name_actionbarcompat">
+        Google ActionBarCompat, Google Support Library v7
+    </string>
+    <string name="appinfo_references_url_actionbarcompat">
+        http://developer.android.com/tools/support-library
+    </string>
+    <string name="appinfo_references_name_jackson">
+        Jackson JSON processor
+    </string>
+    <string name="appinfo_references_url_jackson">
+        http://jackson.codehaus.org
+    </string>
+    <string name="appinfo_references_name_ga">
+        Google Analytics
+    </string>
+    <string name="appinfo_references_url_ga">
+        http://developers.google.com/analytics/devguides/collection/android/
+    </string>
+    <string name="appinfo_references_name_tracdroid">
+        TraceDroid
+    </string>
+    <string name="appinfo_references_url_tracedroid">
+        http://github.com/ligi/tracedroid
+    </string>
+    <string name="appinfo_references_name_ckchangelog">
+        ckChangeLog
+    </string>
+    <string name="appinfo_references_url_ckchangelog">
+        http://github.com/cketti/ckChangeLog
+    </string>
+    <string name="appinfo_references_name_typedpreferences">
+        Typed Preferences
+    </string>
+    <string name="appinfo_references_url_typedpreferences">
+        http://github.com/johnjohndoe/TypedPreferences
+    </string>
+
+    <!-- AboutActivity / Sourcecode -->
+    <string name="appinfo_sourcecode_title">Quellcode</string>
+    <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
+
+    <!-- AboutActivity / License -->
+    <string name="appinfo_license_title">Lizenz</string>
+    <string name="appinfo_license_content">
+        Der Quellcode der Umweltzone App unterliegt der GPLv3 Lizenz.
+        Kartenmaterial, Bilder und Texte unterliegen, soweit nicht anders genannt,
+        der Creative Commons Namensnennung 3.0 Unported Lizenz.
+    </string>
+    <string name="appinfo_license_name_gpl">GPLv3</string>
+    <string name="appinfo_license_url_gpl">
+        http://www.gnu.org/licenses/gpl-3.0.txt
+    </string>
+    <string name="appinfo_license_name_cc">Creative Commons</string>
+    <string name="appinfo_license_url_cc">
+        http://creativecommons.org/licenses/by/3.0/deed.de
+    </string>
+
+    <!-- AboutActivity / Build Info -->
+    <string name="appinfo_build_info_title">Build Informationen</string>
+    <string name="appinfo_build_info_time">Build Zeit</string>
+    <string name="appinfo_build_info_version_code">Version Code</string>
+    <string name="appinfo_build_info_hash">Build Hash</string>
+
+
+    <!-- FeedbackActivity / Contact -->
+    <string name="appinfo_contact_title">Kontakt</string>
+    <string name="appinfo_contact_content">
+        Jede Art von Rückmeldung wie z.B. Verbesserungsvorschläge,
+        Fehlermeldungen oder der Wunsch nach neuen Funktionen
+        kann an folgende Adresse gerichtet werden:
+    </string>
+    <string name="appinfo_contact_email">@string/config_contact_email_address</string>
+
+    <!-- FeedbackActivity / Contact / Uservoice -->
+    <string name="appinfo_uservoice_title">UserVoice</string>
+    <string name="appinfo_uservoice_content">
+        Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
+        eingetragen werden. Auf der Seite kann man auch jeden anderen
+        Eintrag bewerten. Dadurch sehen wir gleich, was die Mehrzahl
+        der Nutzer gerne möchte.
+    </string>
+    <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
+
+    <!-- FeedbackActivity / Rating -->
+    <string name="appinfo_rating_title">Bewerten</string>
+    <string name="appinfo_rating_content">
+        Natürlich freuen wir uns auch darüber, wenn wir eine gute
+        Bewertung im Google PlayStore bekommen.
+    </string>
+    <string name="appinfo_rating_url">
+        http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+    </string>
+
+
+    <!-- CityInfoActivity -->
+    <string name="city_info_activity_title">Stadtinfos</string>
+
+    <string name="city_info_title">Stadtinfos</string>
+    <string name="city_info_zone_status">frei</string>
+    <string name="city_info_zone_number_since">
+        Seit dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
+        Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
+        Umweltplakette in die Umweltzone fahren.
+    </string>
+    <string name="city_info_zone_number_since_date_format">
+        d. MMMM yyyy
+    </string>
+    <string name="city_info_zone_number_since_text_fragment_green">
+        mit grüner
+    </string>
+    <string name="city_info_zone_number_since_text_fragment_yellow">
+        mit gelber oder grüner
+    </string>
+    <string name="city_info_zone_number_since_text_fragment_red">
+        mit roter, gelber oder grüner
+    </string>
+    <string name="city_info_zone_number_none">
+        Fahrzeuge aller Schadstoffklassen dürfen in die Umweltzone fahren.
+    </string>
+    <string name="city_info_next_zone_number_as_of">
+        Ab dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
+        noch Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
+        Plakette in die Umweltzone fahren.
+    </string>
+    <string name="city_info_abroad_licensed_vehicle_zone_info">
+        Im Ausland zugelassene Fahrzeuge dürfen
+        bis <xliff:g id="date">%1$s</xliff:g>&#160;
+        <xliff:g id="with_colors">%2$s</xliff:g>
+        Umweltplakette in die Umweltzone einfahren.
+    </string>
+
+    <string name="city_info_list_of_cities">
+        Die Umweltzone beinhaltet die folgenden Städte bzw. Teile
+        der Städte: <xliff:g id="cities">%1$s</xliff:g> und
+        <xliff:g id="last_city">%2$s</xliff:g>.
+    </string>
+
+    <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
+    <string name="city_info_further_information">Weiterführende Informationen im Web</string>
+    <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>
+
+    <string name="city_info_empty_title">Stadtinfos</string>
+    <string name="city_info_empty_status_desc">
+        Die Detail-Informationen zur Umweltzone können nicht angezeigt werden,
+        da aktuell keine Umweltzone ausgewählt ist.
+    </string>
+    <string name="city_info_empty_select_zone">Umweltzone auswählen</string>
+
+    <!-- FaqActivity -->
+    <string name="faq_activity_title">FAQ</string>
+    <string name="faq_source_url_title_text">Quelle: </string>
+
+</resources>

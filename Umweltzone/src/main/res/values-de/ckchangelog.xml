@@ -21,9 +21,9 @@
         Will be removed when this application will be localized.
     -->
     <string name="changelog_full_title">@string/action_changelog</string>
-    <string name="changelog_title">This is new</string>
+    <string name="changelog_title">Das ist neu</string>
     <string name="changelog_ok_button">OK</string>
-    <string name="changelog_show_full">More &#8230;</string>
+    <string name="changelog_show_full">Mehr &#8230;</string>
 
     <string name="changelog_version_format">
         Version <xliff:g id="version_name">%s</xliff:g>

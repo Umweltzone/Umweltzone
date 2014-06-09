@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.Locale;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
@@ -41,7 +42,11 @@ public abstract class ContentProvider {
     private static final GenericCache mResourceIdCache = new ResourceIdCache(6);
 
     public static List<Faq> getFaqs(final Context context) {
-        return getContent(context, "faqs_de", Faq.class);
+        // Do not accidentally compare with Locale.GERMAN
+        if (Locale.getDefault().equals(Locale.GERMANY)) {
+            return getContent(context, "faqs_de", Faq.class);
+        }
+        return getContent(context, "faqs_en", Faq.class);
     }
 
     public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
@@ -67,7 +72,7 @@ public abstract class ContentProvider {
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         ObjectMapper objectMapper = new ObjectMapper();
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);
-        objectMapper.setDateFormat(new SimpleDateFormat(datePattern));
+        objectMapper.setDateFormat(new SimpleDateFormat(datePattern, Locale.getDefault()));
         try {
             TypeFactory typeFactory = objectMapper.getTypeFactory();
             CollectionType collectionType = typeFactory.constructCollectionType(List.class, contentType);
