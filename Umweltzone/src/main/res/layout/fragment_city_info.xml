@@ -64,7 +64,7 @@
 
         <Button
             android:id="@+id/city_info_show_on_map"
-            style="@style/Button.Base"
+            style="@style/ZoneInfo.ShowZoneOnMap"
             android:text="@string/city_info_show_on_map" />
 
         <TextView

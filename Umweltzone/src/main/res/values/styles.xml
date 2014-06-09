@@ -143,6 +143,10 @@
 
     <style name="ZoneInfoEmpty.SelectZone" parent="Button.Base" />
 
+    <style name="ZoneInfo.ShowZoneOnMap" parent="Button.Base">
+        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
     <style name="ZoneInfo.Title" parent="TextView.Title" />
 
     <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
