@@ -50,22 +50,42 @@ public abstract class ViewHelper {
         textView.setText(text);
     }
 
-    public static void setupTextViewExtended(final View view, int textViewId, final String text,
+    public static void setupTextViewExtended(final View view,
+                                             int textViewId,
+                                             final String title,
+                                             final String url,
                                              final TrackingPoint trackingPoint,
                                              final String trackingString) {
         TextView textView = (TextView) view.findViewById(textViewId);
         setupTextViewExtended(textView,
-                StringHelper.spannedLinkForString(text),
+                StringHelper.spannedLinkForString(title, url),
                 trackingPoint, trackingString);
     }
 
-    public static void setupTextViewExtended(final Activity activity, int textViewId, int textId,
+    public static void setupTextViewExtended(final Activity activity,
+                                             int textViewId,
+                                             int titleResourceId,
+                                             final String url,
+                                             final TrackingPoint trackingPoint,
+                                             final String trackingString) {
+
+        TextView textView = (TextView) activity.findViewById(textViewId);
+        String title = activity.getString(titleResourceId);
+        setupTextViewExtended(textView,
+                StringHelper.spannedLinkForString(title, url),
+                trackingPoint, trackingString);
+    }
+
+    public static void setupTextViewExtended(final Activity activity,
+                                             int textViewId,
+                                             int titleResourceId,
+                                             int urlResourceId,
                                              final TrackingPoint trackingPoint,
                                              final String trackingString) {
 
         TextView textView = (TextView) activity.findViewById(textViewId);
         setupTextViewExtended(textView,
-                StringHelper.spannedLinkForString(activity.getApplicationContext(), textId),
+                StringHelper.spannedLinkForString(activity.getApplicationContext(), titleResourceId, urlResourceId),
                 trackingPoint, trackingString);
     }
 

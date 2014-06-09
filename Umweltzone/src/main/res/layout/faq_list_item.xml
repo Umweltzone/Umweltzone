@@ -25,25 +25,13 @@
 
     <TextView
         android:id="@+id/faq_answer"
+        style="@style/Faq.Content.Answer"
         tools:background="@android:color/holo_blue_light"
-        tools:text="FAQ answer"
-        style="@style/Faq.Content.Answer"/>
+        tools:text="FAQ answer"/>
 
-    <LinearLayout
-        tools:background="@android:color/holo_orange_light"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical">
-
-        <TextView
-            style="@style/Faq.Content.SourceUrlTitle"
-            android:text="@string/faq_source_url_title_text"/>
-
-        <Button
-            android:id="@+id/faq_source_url"
-            tools:text="FAQ source URL"
-            style="@style/Faq.Content.SourceUrl"/>
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/faq_source_url"
+        style="@style/Faq.Content.SourceUrl"
+        tools:text="FAQ source URL"/>
 
 </LinearLayout>

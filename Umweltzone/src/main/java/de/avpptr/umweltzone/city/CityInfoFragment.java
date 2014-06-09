@@ -114,31 +114,27 @@ public class CityInfoFragment extends BaseFragment {
         });
 
         // Further information button
-        Button furtherInfoButton = (Button) activity.findViewById(R.id.city_info_further_information);
-        furtherInfoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoFurtherInfoClick, mLowEmissionZone.name);
-                startActivity(IntentHelper.getUriIntent(mLowEmissionZone.urlUmweltPlaketteDe));
-            }
-        });
+        ViewHelper.setupTextViewExtended(activity,
+                R.id.city_info_further_information,
+                R.string.city_info_further_information,
+                mLowEmissionZone.urlUmweltPlaketteDe,
+                TrackingPoint.CityInfoFurtherInfoClick,
+                mLowEmissionZone.name);
 
         // Badge online
-        TextView badgeOnlineTitle = (TextView) activity.findViewById(R.id.city_info_badge_online_title);
-        Button badgeOnline = (Button) activity.findViewById(R.id.city_info_badge_online);
+        TextView badgeOnlineTextView = (TextView) activity.findViewById(R.id.city_info_badge_online);
         final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
-            badgeOnlineTitle.setVisibility(View.GONE);
-            badgeOnline.setVisibility(View.GONE);
+            badgeOnlineTextView.setVisibility(View.GONE);
         } else {
-            badgeOnlineTitle.setVisibility(View.VISIBLE);
-            badgeOnline.setVisibility(View.VISIBLE);
-            badgeOnline.setText(
-                    StringHelper.spannedLinkForString(urlBadgeOnline),
+            badgeOnlineTextView.setVisibility(View.VISIBLE);
+            String urlBadgeOnlineTitle = activity.getString(R.string.city_info_badge_online_title);
+            badgeOnlineTextView.setText(
+                    StringHelper.spannedLinkForString(urlBadgeOnlineTitle, urlBadgeOnline),
                     TextView.BufferType.SPANNABLE);
-            badgeOnline.setMovementMethod(LinkMovementMethod.getInstance());
+            badgeOnlineTextView.setMovementMethod(LinkMovementMethod.getInstance());
         }
-        badgeOnline.setOnClickListener(new View.OnClickListener() {
+        badgeOnlineTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);

@@ -33,6 +33,8 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:textColorLink">@color/button_web_text_color_link</item>
+        <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
     </style>
 
 
@@ -56,6 +58,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
     </style>
 
     <style name="TextView.Base.Medium" parent="@android:style/TextAppearance.Medium">
@@ -63,13 +66,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">left</item>
         <item name="android:layout_centerHorizontal">true</item>
-    </style>
-
-    <style name="TextView.Base.Large" parent="@android:style/TextAppearance.Large">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textSize">@dimen/headline_text_size</item>
     </style>
 
     <style name="TextView.Title" parent="TextView.Base.Small">
@@ -80,13 +77,11 @@
     <style name="Button.Base" parent="android:Widget.Holo.Light.Button.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-    </style>
-
-    <style name="Button.Web" parent="Button.Base">
-        <item name="android:textColorLink">@color/button_web_text_color_link</item>
+        <item name="android:textSize">@dimen/body_text_size</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
+        <item name="android:layout_marginTop">@dimen/medium_spacer</item>
         <item name="android:textColorLink">@color/email_text_color_link</item>
     </style>
 
@@ -110,18 +105,7 @@
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="AppInfo.Contact.Email" parent="TextView.Email">
-        <item name="android:layout_marginTop">@dimen/large_spacer</item>
-        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
-    </style>
-
-    <style name="AppInfo.ButtonWebTitle" parent="TextView.Base.Small">
-        <item name="android:textColor">@color/appinfo_button_web_title_foreground</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginTop">@dimen/big_spacer</item>
-    </style>
-
-    <style name="AppInfo.ButtonWeb" parent="Button.Web">
+    <style name="AppInfo.WebLink" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
     </style>
 
@@ -163,6 +147,7 @@
     <style name="ZoneInfo.Title" parent="TextView.Title"/>
 
     <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
+        <item name="android:textSize">18sp</item>
         <item name="android:gravity">bottom|center_horizontal</item>
         <item name="android:padding">@dimen/big_spacer</item>
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
@@ -182,20 +167,15 @@
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
     </style>
 
-    <style name="Faq.Content.SourceUrlTitle" parent="TextView.Base.Small">
-        <item name="android:gravity">left</item>
-        <item name="android:textColor">@color/faq_answer_source_title</item>
-    </style>
-
-    <style name="Faq.Content.SourceUrl" parent="Button.Web"/>
+    <style name="Faq.Content.SourceUrl" parent="TextView.Base.Small"/>
 
     <style name="Faq.Content.Question" parent="TextView.Base.Medium">
         <item name="android:textColor">@color/faq_question_foreground</item>
         <item name="android:paddingLeft">@dimen/huge_spacer</item>
     </style>
 
-    <style name="Faq.Content.Answer" parent="TextView.Base.Medium">
-        <item name="android:layout_marginBottom">@dimen/medium_spacer</item>
+    <style name="Faq.Content.Answer" parent="TextView.Base.Small">
+        <item name="android:gravity">left</item>
         <item name="android:textColor">@color/faq_answer_foreground</item>
     </style>
 

@@ -22,9 +22,13 @@
         style="@style/AppInfo.ContentTitle"
         android:text="@string/appinfo_sourcecode_title"/>
 
-    <Button
+    <TextView
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_sourcecode_content"/>
+
+    <TextView
         android:id="@+id/appInfoButtonSourceCode"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_sourcecode_url"/>
 
 </merge>

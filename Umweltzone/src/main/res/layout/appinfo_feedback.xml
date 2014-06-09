@@ -28,7 +28,7 @@
 
     <TextView
         android:id="@+id/appInfoContactEmail"
-        style="@style/AppInfo.Contact.Email"
+        style="@style/TextView.Email"
         android:text="@string/appinfo_contact_email"/>
 
     <include
@@ -42,9 +42,9 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_uservoice_content"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonUserVoice"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_uservoice_url"/>
 
     <include
@@ -58,9 +58,9 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_rating_content"/>
 
-    <Button
+    <TextView
         android:id="@+id/appInfoButtonRating"
-        style="@style/AppInfo.ButtonWeb"
+        style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_rating_url"/>
 
 </merge>

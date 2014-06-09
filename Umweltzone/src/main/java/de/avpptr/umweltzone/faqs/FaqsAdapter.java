@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -111,9 +112,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
-            Button sourceUrlButton = (Button) convertView.findViewById(R.id.faq_source_url);
-
-            sourceUrlButton.setOnClickListener(new View.OnClickListener() {
+            TextView sourceUrlTextView = (TextView) convertView.findViewById(R.id.faq_source_url);
+            sourceUrlTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
@@ -125,7 +125,8 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
         ViewHelper.setupTextViewSimple(convertView, R.id.faq_answer, childText);
 
         final String sourceUrlText = faqAnswer.sourceUrl;
-        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlText,
+        final String sourceUrlTitle = mContext.getString(R.string.faq_source_url_title_text);
+        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlTitle, sourceUrlText,
                 TrackingPoint.FaqSourceUrlClick, itemDescription);
 
         return convertView;

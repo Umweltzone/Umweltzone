@@ -114,20 +114,28 @@ public class StringHelper {
         return null;
     }
 
-    public static Spanned spannedLinkForString(final Context context, final int stringResourceId) {
-        final String url = context.getString(stringResourceId);
-        return Html.fromHtml(linkifiedString(url));
+    public static Spanned spannedLinkForString(final Context context, int titleResourceId, int urlResourceId) {
+        final String title = context.getString(titleResourceId);
+        final String url = context.getString(urlResourceId);
+        return Html.fromHtml(linkifiedString(title, url));
     }
 
-    public static Spanned spannedLinkForString(final String string) {
-        return Html.fromHtml(linkifiedString(string));
+    public static Spanned spannedLinkForString(final String title, final String url) {
+        return Html.fromHtml(linkifiedString(title, url));
     }
 
-    public static String linkifiedString(final String string) {
-        if (string.startsWith("http")) {
-            return "<a href=\"" + string + "\">" + string + "</a>";
+    public static String linkifiedString(final String title, final String url) {
+        if (url == null || TextUtils.isEmpty(url)) {
+            throw new IllegalArgumentException("URL cannot be null nor empty.");
+        }
+        String titleText = title;
+        if (title == null || TextUtils.isEmpty(title)) {
+            titleText = url;
+        }
+        if (url.startsWith("http")) {
+            return "<a href=\"" + url + "\">" + titleText + "</a>";
         } else {
-            return "<a href=\"mailto:" + string + "\">" + string + "</a>";
+            return "<a href=\"mailto:" + url + "\">" + titleText + "</a>";
         }
     }
 

@@ -39,42 +39,55 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewSimple(this, R.id.buildHash, BuildConfig.GIT_SHA);
 
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonEnvironmentAgency,
+                R.string.appinfo_references_name_umweltbundesamt,
                 R.string.appinfo_references_url_umweltbundesamt, TrackingPoint.AboutItemClick,
                 "environment_agency");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonWikimedia,
+                R.string.appinfo_references_name_wikimedia_commons,
                 R.string.appinfo_references_url_wikimedia_commons, TrackingPoint.AboutItemClick,
                 "wikimedia_commons");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGooglePlay,
+                R.string.appinfo_references_name_googleplayservices,
                 R.string.appinfo_references_url_googleplayservices, TrackingPoint.AboutItemClick,
                 "google_play_services_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGoogleSupportLibrary,
+                R.string.appinfo_references_name_googlesupportlibrary,
                 R.string.appinfo_references_url_googlesupportlibrary, TrackingPoint.AboutItemClick,
                 "google_support_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonActionBarCompat,
+                R.string.appinfo_references_name_actionbarcompat,
                 R.string.appinfo_references_url_actionbarcompat, TrackingPoint.AboutItemClick,
                 "action_bat_compat_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonJackson,
+                R.string.appinfo_references_name_jackson,
                 R.string.appinfo_references_url_jackson, TrackingPoint.AboutItemClick,
                 "jackson_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGoogleAnalytics,
+                R.string.appinfo_references_name_ga,
                 R.string.appinfo_references_url_ga, TrackingPoint.AboutItemClick,
                 "google_analytics");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonTraceDroid,
+                R.string.appinfo_references_name_tracdroid,
                 R.string.appinfo_references_url_tracedroid, TrackingPoint.AboutItemClick,
                 "trace_droid_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCkChangeLog,
+                R.string.appinfo_references_name_ckchangelog,
                 R.string.appinfo_references_url_ckchangelog, TrackingPoint.AboutItemClick,
                 "ck_changelog_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonTypedPreferences,
+                R.string.appinfo_references_name_typedpreferences,
                 R.string.appinfo_references_url_typedpreferences, TrackingPoint.AboutItemClick,
                 "typed_preferences_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonGpl,
+                R.string.appinfo_license_url_title_gpl,
                 R.string.appinfo_license_url_gpl, TrackingPoint.AboutItemClick,
                 "gpl_url");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCreativeCommons,
+                R.string.appinfo_license_url_title_cc,
                 R.string.appinfo_license_url_cc, TrackingPoint.AboutItemClick,
                 "cc_url");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonSourceCode,
+                R.string.appinfo_sourcecode_url_title,
                 R.string.appinfo_sourcecode_url, TrackingPoint.AboutItemClick,
                 "source_code_url");
     }
