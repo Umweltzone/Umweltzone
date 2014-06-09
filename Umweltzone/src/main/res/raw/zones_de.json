@@ -110,6 +110,28 @@
         }
     },
     {
+        "name" : "freiburg_breisgau",
+        "displayName" : "Freiburg im Breisgau",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20freiburg.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 47.973486,
+                "longitude" : 7.797172
+            },
+            "northEast" : {
+                "latitude" : 48.033086,
+                "longitude" : 7.919812
+            }
+        }
+    },
+    {
         "name" : "hagen",
         "displayName" : "Hagen",
         "listOfCities" : [],
