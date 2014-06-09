@@ -34,12 +34,12 @@
         "urlBadgeOnline" : "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 52.464874,
-                "longitude" : 13.282100
+                "latitude" : 52.464504,
+                "longitude" : 13.282079
             },
             "northEast" : {
-                "latitude" : 52.549507,
-                "longitude" : 13.475547
+                "latitude" : 52.549808,
+                "longitude" : 13.475550
             }
         }
     },
