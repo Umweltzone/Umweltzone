@@ -198,6 +198,28 @@
         }
     },
     {
+        "name" : "moenchengladbach",
+        "displayName" : "Mönchengladbach",
+        "listOfCities" : [],
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "2014-07-01",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20moenchengladbach.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.141438,
+                "longitude" : 6.387882
+            },
+            "northEast" : {
+                "latitude" : 51.212348,
+                "longitude" : 6.465831
+            }
+        }
+    },
+    {
         "name" : "munich",
         "displayName" : "München",
         "listOfCities" : [],
