@@ -308,6 +308,28 @@
         }
     },
     {
+        "name" : "neuulm",
+        "displayName" : "Neu-Ulm",
+        "listOfCities" : [],
+        "zoneNumber" : 3,
+        "zoneNumberSince" : "2012-11-05",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 3,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/unweltzone%20neu%20ulm.php",
+        "urlBadgeOnline" : "",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.385776,
+                "longitude" : 9.988370
+            },
+            "northEast" : {
+                "latitude" : 48.400408,
+                "longitude" : 10.027063
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
