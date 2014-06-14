@@ -3,7 +3,7 @@ Umweltzone
 
 This application enables people to look up the areas of cities
 which are restricted for being used by cars limited by their
-specific emission profile. The app shows the outline of the low-emision
+specific emission profile. The app shows the outline of the low emission
 zones and provides additional information about dates or special
 regulations such as for vehicles registered abroad. Moreover, the
 user can use the FAQs to read about emission groups, fine particles,
