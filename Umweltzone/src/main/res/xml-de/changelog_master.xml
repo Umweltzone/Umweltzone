@@ -16,6 +16,25 @@
 -->
 <changelog>
     <release
+        version="2.0.0"
+        versioncode="20000">
+        <change>
+            Neu: Englische Übersetzung der App
+        </change>
+        <change>
+            Neu: Neugestaltung der Textlinks in vielen Bereichen der App
+        </change>
+        <change>
+            Neu: Neugestaltung für 10" Tablets
+        </change>
+        <change>
+            Neu: Aktualisierung der folgenden Zonen: Berlin, Neuss
+        </change>
+        <change>
+            Neu: Weitere Zonen: Freiburg im Breisgau, Mönchengladbach, Neu-Ulm
+        </change>
+    </release>
+    <release
         version="1.2.0"
         versioncode="12000">
         <change>

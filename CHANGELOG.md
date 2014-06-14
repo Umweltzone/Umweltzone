@@ -1,6 +1,36 @@
 # Umweltzone changelog
 
 
+## [v.2.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.0.0)
+
+* Published: 2014-06-14
+
+### Bug fixes
+
+* Update zone data for Neuss, [217c0](https://bitbucket.org/tbsprs/umweltzone/commits/217c07706614ec5b9334864618a75f0a7105046e)
+* Update zone data for Berlin, [4be0d](https://bitbucket.org/tbsprs/umweltzone/commits/4be0d21270fa9f47f411a230fe80c22316626777)
+* Suppress lint warnings for untranslated configuration properties, [b6f73](https://bitbucket.org/tbsprs/umweltzone/commits/b6f73cbfdaf099378cfe568971587de29965c42d)
+
+### Features
+
+* Update SDK build tools to v.19.1.0., [fd5d6](https://bitbucket.org/tbsprs/umweltzone/commits/fd5d6e1235f4cdf464bc7c8f0c50fe3a35cc2c1e)
+* Add zone data for Neu-Ulm, [a0d58](https://bitbucket.org/tbsprs/umweltzone/commits/a0d58befa7ea3bc36980b9fb4392e73a4f9467d0)
+* Add zone data for Freiburg im Breisgau, [41586](https://bitbucket.org/tbsprs/umweltzone/commits/41586213f99ac894e65143a85bc6f8db11b50eac)
+* Add zone data for Mönchengladbach, [c1bbd](https://bitbucket.org/tbsprs/umweltzone/commits/c1bbd30444971c245d4b2af8f581eab003b86831)
+* Increase text size for tablets, [1d977](https://bitbucket.org/tbsprs/umweltzone/commits/1d977b72759944394e6a207ae302b811a277c97a)
+* Replace button links with text links, [0e279](https://bitbucket.org/tbsprs/umweltzone/commits/0e2799000736294b536d164ba9a460960df620d9)
+* Translate whole application to English, [fb4cb](https://bitbucket.org/tbsprs/umweltzone/commits/fb4cb183e82b07f6f55e44379fb1cea100a8cd3c)
+* Use [TypedPreferences library][typedpreferences], [bace4](https://bitbucket.org/tbsprs/umweltzone/commits/bace4b4324914263eb5c56c2e206b0d3ae23835c)
+* Add debug layouts, colors and placeholder texts, [d24a1](https://bitbucket.org/tbsprs/umweltzone/commits/d24a13b1560d6f6254b3448f4c3fe9b86cacf015)
+* Use modified application name for DEBUG build, [1ae20](https://bitbucket.org/tbsprs/umweltzone/commits/1ae2041a4614e5834fba0d53765ed86a638874a2)
+* Replace `description` with `listOfCities` attribute, [75195](https://bitbucket.org/tbsprs/umweltzone/commits/75195be4877cc1fc44c005397fc3d4a811c793a8)
+* Use meaningful package names, [f07516](https://bitbucket.org/tbsprs/umweltzone/commits/f07516245bfe36607a7b6af579d96d70685d290f)
+* Allow individual Google Maps API Key for each build type, [925da](https://bitbucket.org/tbsprs/umweltzone/commits/925da992355ccf5206f1b7e9d6e3c91a6cbc5784)
+* Append version name to APK, [80632](https://bitbucket.org/tbsprs/umweltzone/commits/806320ca33f1d8262048ac43a09eea1f1223a9f7)
+* Shorten Git hash and optionally append "-dirty" suffix, [170b1](https://bitbucket.org/tbsprs/umweltzone/commits/170b132af780ae53d752cc859c65db7b66fbd181)
+* Update Google Support libraries to v.19.1.+, [60a4e](https://bitbucket.org/tbsprs/umweltzone/commits/60a4efa69edf049fc6f2bdc8886065c6c947b811)
+* Update Gradle plug-in to v.0.10.+, [51635](https://bitbucket.org/tbsprs/umweltzone/commits/51635d46d85b4861b075eb0a7cf5c3fb4c398b9b)
+
 
 ## [v.1.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.1.2.0)
 
@@ -58,3 +88,4 @@
 [htcbug]: http://commonsware.com/blog/2012/07/23/linkify-problem-patent-behavior.html
 [ckchanglog]: https://github.com/cketti/ckChangeLog
 [cketti]: https://github.com/cketti
+[typedpreferences]: https://github.com/johnjohndoe/TypedPreferences

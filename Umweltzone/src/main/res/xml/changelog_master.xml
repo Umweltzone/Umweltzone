@@ -16,6 +16,25 @@
 -->
 <changelog>
     <release
+        version="2.0.0"
+        versioncode="20000">
+        <change>
+            New: English translation of the app
+        </change>
+        <change>
+            New: Redesign of text links in various screens
+        </change>
+        <change>
+            New: Redesign for 10" tablets
+        </change>
+        <change>
+            New: Update for the following zones: Berlin, Neuss
+        </change>
+        <change>
+            New: More zones: Freiburg im Breisgau, Mönchengladbach, Neu-Ulm
+        </change>
+    </release>
+    <release
         version="1.2.0"
         versioncode="12000">
         <change>
