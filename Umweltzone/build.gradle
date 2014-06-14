@@ -34,6 +34,15 @@ if (!gradlePropertiesFile.exists()) {
 }
 props.load(new FileInputStream(gradlePropertiesFile))
 
+allprojects {
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            // Verbose Lint output
+            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+        }
+    }
+}
+
 android {
     compileSdkVersion 19
     buildToolsVersion "19.1.0"
