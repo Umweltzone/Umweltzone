@@ -2,7 +2,7 @@
 
 
 
-## v.1.2.0
+## [v.1.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.1.2.0)
 
 * Published: 2013-02-13
 
