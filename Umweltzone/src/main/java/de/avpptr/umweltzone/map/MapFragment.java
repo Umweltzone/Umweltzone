@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -34,18 +34,20 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
+
+import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.caching.CircuitPointsCache;
+import de.avpptr.umweltzone.caching.CircuitsCache;
 import de.avpptr.umweltzone.caching.GenericCache;
 import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
@@ -61,12 +63,12 @@ public class MapFragment extends SupportMapFragment {
     private boolean fragmentCreated;
     protected final Tracking mTracking;
     private PreferencesHelper mPreferencesHelper;
-    protected final GenericCache mCircuitPointsCache;
+    protected final GenericCache mCircuitsCache;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
         mTracking = Umweltzone.getTracker();
-        mCircuitPointsCache = new CircuitPointsCache(6);
+        mCircuitsCache = new CircuitsCache(6);
     }
 
     @Override
@@ -194,13 +196,13 @@ public class MapFragment extends SupportMapFragment {
             return;
         }
         @SuppressWarnings("unchecked")
-        Iterable<LatLng> points = (Iterable<LatLng>) mCircuitPointsCache
+        List<Circuit> circuits = (List<Circuit>) mCircuitsCache
                 .readObject(activity, cityName);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
         int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
-        mMapDrawer.drawPolygon(points, fillColor, strokeColor, strokeWidth);
+        mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
     }
 
     private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
