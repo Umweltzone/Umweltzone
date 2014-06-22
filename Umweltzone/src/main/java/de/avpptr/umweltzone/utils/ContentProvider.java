@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,11 @@ package de.avpptr.umweltzone.utils;
 import android.content.Context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
+
+import org.ligi.tracedroid.logging.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,6 +37,8 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.caching.GenericCache;
 import de.avpptr.umweltzone.caching.ResourceIdCache;
+import de.avpptr.umweltzone.models.Circuit;
+import de.avpptr.umweltzone.models.CircuitDeserializer;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
@@ -53,8 +58,8 @@ public abstract class ContentProvider {
         return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
-    public static List<GeoPoint> getCircuitPoints(final Context context, final String fileName) {
-        return getContent(context, fileName, GeoPoint.class);
+    public static List<Circuit> getCircuits(final Context context, final String fileName) {
+        return getContent(context, fileName, Circuit.class);
     }
 
     private static <T> List<T> getContent(final Context context, final String fileName, Class<T> contentType) {
@@ -70,7 +75,10 @@ public abstract class ContentProvider {
             throw new IllegalStateException("Resource for file path '" + filePath + "' not found.");
         }
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
+        SimpleModule module = new SimpleModule();
+        module.addDeserializer(Circuit.class, new CircuitDeserializer());
         ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(module);
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);
         objectMapper.setDateFormat(new SimpleDateFormat(datePattern, Locale.getDefault()));
         try {
@@ -81,6 +89,7 @@ public abstract class ContentProvider {
             // TODO Aware that app will crash when JSON is mis-structured.
             e.printStackTrace();
         }
+        Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
         return null;
     }
 

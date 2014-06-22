@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,8 @@ import com.google.android.gms.maps.model.LatLng;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public final class GeoPoint {
@@ -83,6 +85,14 @@ public final class GeoPoint {
 
     public LatLng toLatLng() {
         return new LatLng(mLatitude, mLongitude);
+    }
+
+    public static List<LatLng> getLatLngPoints(final List<GeoPoint> geoPoints) {
+        final List<LatLng> latLngPoints = new ArrayList<LatLng>(geoPoints.size());
+        for (final GeoPoint point : geoPoints) {
+            latLngPoints.add(point.toLatLng());
+        }
+        return latLngPoints;
     }
 
     @Override
