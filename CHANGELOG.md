@@ -1,6 +1,15 @@
 # Umweltzone changelog
 
 
+## [v.2.0.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.0.1)
+
+* Published: 2014-07-07
+
+### Features
+
+* Support zones with multiple circuits (no such zone has been added though), [5eb38](https://bitbucket.org/tbsprs/umweltzone/commits/5eb38fecca17722641a84929ee04f2da71c74e9c)
+
+
 ## [v.2.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.0.0)
 
 * Published: 2014-06-14

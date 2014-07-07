@@ -16,6 +16,14 @@
 -->
 <changelog>
     <release
+        version="2.0.1"
+        versioncode="20100">
+        <change>
+            New: Update zone for Düsseldorf, Hagen, Köln,
+            Mönchengladbach, Neuss and Ruhrgebiet.
+        </change>
+    </release>
+    <release
         version="2.0.0"
         versioncode="20000">
         <change>
