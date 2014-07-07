@@ -7,6 +7,7 @@
 
 ### Features
 
+* Update zones which changed by July 01, 2014, [7e4ec](https://bitbucket.org/tbsprs/umweltzone/commits/7e4ec06b346c791666b4a0abe5070c1f94e19c3c)
 * Support zones with multiple circuits (no such zone has been added though), [5eb38](https://bitbucket.org/tbsprs/umweltzone/commits/5eb38fecca17722641a84929ee04f2da71c74e9c)
 
 
