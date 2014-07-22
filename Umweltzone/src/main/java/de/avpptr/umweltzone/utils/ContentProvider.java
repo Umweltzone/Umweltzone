@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.support.v4.util.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -43,7 +44,7 @@ import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
-
+    private static final LruCache<String, List<Circuit>> CIRCUITS_CACHE = new LruCache<String, List<Circuit>>(6);
     private static final GenericCache mResourceIdCache = new ResourceIdCache(6);
 
     public static List<Faq> getFaqs(final Context context) {
@@ -58,10 +59,18 @@ public abstract class ContentProvider {
         return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
-    public static List<Circuit> getCircuits(final Context context, final String fileName) {
-        return getContent(context, fileName, Circuit.class);
+    public static List<Circuit> getCircuits(final Context context, final String zoneName) {
+        String keyForZone = generateKeyForZoneWith(zoneName);
+        List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
+        if(circuits ==null) {
+            CIRCUITS_CACHE.put(keyForZone, circuits = getContent(context, keyForZone, Circuit.class));
+        }
+            return circuits;
     }
 
+    private static String generateKeyForZoneWith(String zoneName) {
+        return "zone_" + zoneName;
+    }
     private static <T> List<T> getContent(final Context context, final String fileName, Class<T> contentType) {
         return getContent(context, fileName, "raw", contentType);
     }
