@@ -18,6 +18,8 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.support.v4.util.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -35,16 +37,14 @@ import java.util.Locale;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.caching.GenericCache;
-import de.avpptr.umweltzone.caching.ResourceIdCache;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.CircuitDeserializer;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
-
-    private static final GenericCache mResourceIdCache = new ResourceIdCache(6);
+    private static final LruCache<String, List<Circuit>> CIRCUITS_CACHE = new LruCache<String, List<Circuit>>(6);
+    private static final LruCache<String, Integer> RESOURCE_ID_CACHE = new LruCache<String, Integer>(6);
 
     public static List<Faq> getFaqs(final Context context) {
         // Do not accidentally compare with Locale.GERMAN
@@ -58,8 +58,17 @@ public abstract class ContentProvider {
         return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
-    public static List<Circuit> getCircuits(final Context context, final String fileName) {
-        return getContent(context, fileName, Circuit.class);
+    public static List<Circuit> getCircuits(final Context context, final String zoneName) {
+        String keyForZone = generateKeyForZoneWith(zoneName);
+        List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
+        if (circuits == null) {
+            CIRCUITS_CACHE.put(keyForZone, circuits = getContent(context, keyForZone, Circuit.class));
+        }
+        return circuits;
+    }
+
+    private static String generateKeyForZoneWith(String zoneName) {
+        return "zone_" + zoneName;
     }
 
     private static <T> List<T> getContent(final Context context, final String fileName, Class<T> contentType) {
@@ -67,13 +76,8 @@ public abstract class ContentProvider {
     }
 
     private static <T> List<T> getContent(final Context context, final String fileName, final String folderName, Class<T> contentType) {
-        // Invoke cache
-        int rawResourceId = (Integer) mResourceIdCache.readObject(context, fileName, folderName);
-        if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
-            final String filePath = folderName + "/" + fileName;
-            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
-            throw new IllegalStateException("Resource for file path '" + filePath + "' not found.");
-        }
+        int rawResourceId = getResourceId(context, fileName, folderName);
+
         InputStream inputStream = context.getResources().openRawResource(rawResourceId);
         SimpleModule module = new SimpleModule();
         module.addDeserializer(Circuit.class, new CircuitDeserializer());
@@ -91,6 +95,32 @@ public abstract class ContentProvider {
         }
         Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
         return null;
+    }
+
+    static Integer getResourceId(Context context, String fileName, String folderName) {
+        String resourceKey = getFilePath(folderName, fileName);
+        Integer rawResourceId = RESOURCE_ID_CACHE.get(resourceKey);
+        if (rawResourceId == null) {
+            // Invoke cache
+            rawResourceId = getRawResourceId(context, fileName, folderName);
+            RESOURCE_ID_CACHE.put(resourceKey, rawResourceId);
+        }
+        return rawResourceId;
+    }
+
+    private static int getRawResourceId(Context context, String fileName, String folderName) {
+        final Resources resources = context.getResources();
+        // Look-up identifier using reflection (expensive)
+        int rawResourceId = resources.getIdentifier(fileName, folderName, context.getPackageName());
+        if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
+            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, getFilePath(folderName, fileName));
+            throw new IllegalStateException("Resource for file path '" + getFilePath(folderName, fileName) + "' not found.");
+        }
+        return rawResourceId;
+    }
+
+    private static String getFilePath(final String folderName, final String fileName) {
+        return folderName + "/" + fileName;
     }
 
 }

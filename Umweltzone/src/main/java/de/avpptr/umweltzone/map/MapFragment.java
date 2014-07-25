@@ -44,14 +44,13 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.caching.CircuitsCache;
-import de.avpptr.umweltzone.caching.GenericCache;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
+import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 
@@ -63,12 +62,10 @@ public class MapFragment extends SupportMapFragment {
     private boolean fragmentCreated;
     protected final Tracking mTracking;
     private PreferencesHelper mPreferencesHelper;
-    protected final GenericCache mCircuitsCache;
 
     public MapFragment() {
         this.mOnCameraChangeListener = new OnCameraChangeListener();
         mTracking = Umweltzone.getTracker();
-        mCircuitsCache = new CircuitsCache(6);
     }
 
     @Override
@@ -196,8 +193,7 @@ public class MapFragment extends SupportMapFragment {
             return;
         }
         @SuppressWarnings("unchecked")
-        List<Circuit> circuits = (List<Circuit>) mCircuitsCache
-                .readObject(activity, cityName);
+        List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
         Resources resources = getResources();
         int fillColor = resources.getColor(R.color.shape_fill_color);
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
