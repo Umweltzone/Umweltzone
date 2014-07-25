@@ -9,12 +9,8 @@ import de.avpptr.umweltzone.models.Circuit;
 public class ContentProviderTest extends InstrumentationTestCase {
 
     public void testGetCircuits_worksAtAll() throws Exception {
-
         assertNotNull(getCircuitsOfBerlin());
-
-
     }
-
 
     public void testGetCircuits_usesCaches() throws Exception {
         List<Circuit> circuitsOfBerlin = getCircuitsOfBerlin();
@@ -22,7 +18,8 @@ public class ContentProviderTest extends InstrumentationTestCase {
     }
 
     private List<Circuit> getCircuitsOfBerlin() {
-        return ContentProvider.getCircuits(getInstrumentation().getTargetContext(), "berlin");
+        return ContentProvider.getCircuits(
+                getInstrumentation().getTargetContext(), "berlin");
     }
 
     public void testGetResourceId_worksAtAll() throws Exception {
@@ -35,6 +32,8 @@ public class ContentProviderTest extends InstrumentationTestCase {
     }
 
     private Integer getResourceIdOfBerlin_JSON() {
-        return ContentProvider.getResourceId(getInstrumentation().getTargetContext(), "zone_berlin", "raw");
+        return ContentProvider.getResourceId(
+                getInstrumentation().getTargetContext(), "zone_berlin", "raw");
     }
+
 }
