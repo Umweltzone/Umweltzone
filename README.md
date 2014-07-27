@@ -42,6 +42,11 @@ Configuration
 Before the app can be built a bunch of values have to be set.
 
 * Google Maps v2 API key
+
+Please make sure to provide two API keys both for the release and the debug build
+of the application. The package name of the debug build has the `.debug` suffix
+to allow parallel installation on one device.
+
 * TraceDroid email address
 * Contact email address
 
