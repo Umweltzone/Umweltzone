@@ -76,6 +76,7 @@ Contributors
 ------------
 
 * [cketti](https://github.com/cketti)
+* [daus-salar](https://bitbucket.com/daus-salar)
 
 
 License
