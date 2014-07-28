@@ -30,7 +30,7 @@
         style="@style/TextView.Email"
         android:text="@string/appinfo_contact_email" />
 
-    <include layout="@layout/horizontal_line" />
+    <View style="@style/HorizontalLine" />
 
     <TextView
         style="@style/AppInfo.ContentTitle"
@@ -45,7 +45,7 @@
         style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_uservoice_url" />
 
-    <include layout="@layout/horizontal_line" />
+    <View style="@style/HorizontalLine" />
 
     <TextView
         style="@style/AppInfo.ContentTitle"

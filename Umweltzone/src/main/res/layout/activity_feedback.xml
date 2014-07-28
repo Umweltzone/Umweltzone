@@ -31,7 +31,7 @@
 
         <include layout="@layout/appinfo_header" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_feedback" />
 

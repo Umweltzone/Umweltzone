@@ -31,39 +31,39 @@
 
         <include layout="@layout/appinfo_header" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_copyright" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_description" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_data" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_graphics" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_written_text" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_libraries" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_sourcecode" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_license" />
 
-        <include layout="@layout/horizontal_line" />
+        <View style="@style/HorizontalLine" />
 
         <include layout="@layout/appinfo_build_info" />
 
