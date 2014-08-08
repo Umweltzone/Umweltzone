@@ -5,8 +5,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.12.+'
+        classpath 'com.android.tools.build:gradle:0.12.2'
         classpath 'net.sf.proguard:proguard-gradle:4.10'
-        classpath 'org.standardout:gradle-versioneye-plugin:0.1.+'
+        classpath 'org.standardout:gradle-versioneye-plugin:0.1.1'
     }
 }
