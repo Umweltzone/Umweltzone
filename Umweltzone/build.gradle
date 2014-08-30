@@ -1,6 +1,9 @@
 apply plugin: 'com.android.application'
 apply plugin: 'versioneye'
 
+versioneye {
+    exclude 'androidJacocoAgent', 'androidJacocoAnt'
+}
 
 repositories {
     mavenCentral()
