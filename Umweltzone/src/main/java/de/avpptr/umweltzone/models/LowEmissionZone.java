@@ -41,6 +41,7 @@ public class LowEmissionZone {
     public Date abroadLicensedVehicleZoneNumberUntil;
     public String urlUmweltPlaketteDe;
     public String urlBadgeOnline;
+    public Date geometryUpdatedAt;
 
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;
@@ -86,7 +87,8 @@ public class LowEmissionZone {
                 ", abroadLicensedVehicleZoneNumber: " + abroadLicensedVehicleZoneNumber +
                 ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
                 ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe +
-                ", urlBadgeOnline: " + urlBadgeOnline;
+                ", urlBadgeOnline: " + urlBadgeOnline +
+                ", geometryUpdatedAt: " + geometryUpdatedAt;
     }
 
 }

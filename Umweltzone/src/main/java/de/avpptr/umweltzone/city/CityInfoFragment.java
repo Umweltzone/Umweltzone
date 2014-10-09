@@ -140,6 +140,13 @@ public class CityInfoFragment extends BaseFragment {
                 mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);
             }
         });
+
+        // Geometry updated at
+        TextView geometryUpdatedAtTextView = (TextView) activity
+                .findViewById(R.id.city_info_geometry_updated_at);
+        String geometryUpdatedAtText = StringHelper
+                .getGeometryUpdatedAtText(activity, lowEmissionZone);
+        ViewHelper.setTextOrHideView(geometryUpdatedAtTextView, geometryUpdatedAtText);
     }
 
     private void setUpCityInfoEmpty(final Activity activity) {

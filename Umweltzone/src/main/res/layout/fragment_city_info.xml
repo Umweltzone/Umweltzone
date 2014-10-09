@@ -77,6 +77,12 @@
             tools:text="Badge online URL"
             style="@style/AppInfo.WebLink" />
 
+        <TextView
+            android:id="@+id/city_info_geometry_updated_at"
+            style="@style/ZoneInfo.Content"
+            android:layout_marginTop="@dimen/large_spacer"
+            android:text="@string/city_info_geometry_updated_at_text" />
+
         <TextView style="@style/VerticalSpacerLarge" />
 
     </LinearLayout>

@@ -92,6 +92,17 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
+    public static String getGeometryUpdatedAtText(Context context,
+            LowEmissionZone lowEmissionZone) {
+        Date geometryUpdatedAt = lowEmissionZone.geometryUpdatedAt;
+        if (geometryUpdatedAt == null) {
+            return "";
+        }
+        String formattedDate = getFormattedDate(context,
+                R.string.city_info_geometry_updated_at_date_format, geometryUpdatedAt);
+        return context.getString(R.string.city_info_geometry_updated_at_text, formattedDate);
+    }
+
     // Compile date and colors into sentence
     private static String getZoneNumberInfoString(Context context, int resourceId, Date date, String color) {
         String formattedDate = getFormattedDate(context,

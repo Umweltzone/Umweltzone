@@ -271,6 +271,14 @@
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>
     <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>
 
+    <string name="city_info_geometry_updated_at_date_format">
+        d. MMMM yyyy
+    </string>
+    <string name="city_info_geometry_updated_at_text">
+        Letzte Aktualisierung der
+        Zonengeometrie: <xliff:g id="updatedAt">%1$s</xliff:g>
+    </string>
+
     <string name="city_info_empty_title">Stadtinfos</string>
     <string name="city_info_empty_status_desc">
         Die Detail-Informationen zur Umweltzone können nicht angezeigt werden,

@@ -253,6 +253,14 @@
     <string name="city_info_further_information">Further information online</string>
     <string name="city_info_badge_online_title">Online sticker application form</string>
 
+    <string name="city_info_geometry_updated_at_date_format">
+        MMM d, yyyy
+    </string>
+    <string name="city_info_geometry_updated_at_text">
+        Last update of the zone
+        geometry: <xliff:g id="updatedAt">%1$s</xliff:g>
+    </string>
+
     <string name="city_info_empty_title">City info</string>
     <string name="city_info_empty_status_desc">
         Detail information for the zone cannot be displayed.
