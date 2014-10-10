@@ -10,6 +10,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20augsburg.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-02-12",
         "boundingBox" : {
             "southWest" : {
@@ -33,6 +34,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20berlin.php",
         "urlBadgeOnline" : "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-06-09",
         "boundingBox" : {
             "southWest" : {
@@ -56,6 +58,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bremen.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-12-17",
         "boundingBox" : {
             "southWest" : {
@@ -79,6 +82,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20duesseldorf.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-12-17",
         "boundingBox" : {
             "southWest" : {
@@ -102,6 +106,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20frankfurt%20main.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-10-14",
         "boundingBox" : {
             "southWest" : {
@@ -125,6 +130,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20freiburg.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-06-09",
         "boundingBox" : {
             "southWest" : {
@@ -148,6 +154,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hagen.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-02-12",
         "boundingBox" : {
             "southWest" : {
@@ -171,6 +178,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20hannover.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-12-17",
         "boundingBox" : {
             "southWest" : {
@@ -194,6 +202,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20koeln.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-10-14",
         "boundingBox" : {
             "southWest" : {
@@ -217,6 +226,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leipzig.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-12-17",
         "boundingBox" : {
             "southWest" : {
@@ -240,6 +250,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20moenchengladbach.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-06-09",
         "boundingBox" : {
             "southWest" : {
@@ -263,6 +274,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenchen.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-10-14",
         "boundingBox" : {
             "southWest" : {
@@ -286,6 +298,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muenster_1.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-12-17",
         "boundingBox" : {
             "southWest" : {
@@ -309,6 +322,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20neuss.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-06-09",
         "boundingBox" : {
             "southWest" : {
@@ -332,6 +346,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/unweltzone%20neu%20ulm.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-06-14",
         "boundingBox" : {
             "southWest" : {
@@ -368,6 +383,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ruhrgebiet.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-02-12",
         "boundingBox" : {
             "southWest" : {
@@ -391,6 +407,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20stuttgart.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2013-10-14",
         "boundingBox" : {
             "southWest" : {
@@ -414,6 +431,7 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ulm.php",
         "urlBadgeOnline" : "",
+        "geometrySource" : "",
         "geometryUpdatedAt" : "2014-02-12",
         "boundingBox" : {
             "southWest" : {

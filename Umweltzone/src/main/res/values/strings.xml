@@ -253,6 +253,10 @@
     <string name="city_info_further_information">Further information online</string>
     <string name="city_info_badge_online_title">Online sticker application form</string>
 
+    <string name="city_info_geometry_source_text">Source of
+        the geometry coordinates: <xliff:g id="geometrySource">%1$s</xliff:g>
+    </string>
+
     <string name="city_info_geometry_updated_at_date_format">
         MMM d, yyyy
     </string>

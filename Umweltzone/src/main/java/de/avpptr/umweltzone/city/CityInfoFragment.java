@@ -147,6 +147,13 @@ public class CityInfoFragment extends BaseFragment {
         String geometryUpdatedAtText = StringHelper
                 .getGeometryUpdatedAtText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(geometryUpdatedAtTextView, geometryUpdatedAtText);
+
+        // Geometry source
+        TextView geometrySourceTextView = (TextView) activity
+                .findViewById(R.id.city_info_geometry_source);
+        String geometrySourceText = StringHelper
+                .getGeometrySourceText(activity, lowEmissionZone);
+        ViewHelper.setTextOrHideView(geometrySourceTextView, geometrySourceText);
     }
 
     private void setUpCityInfoEmpty(final Activity activity) {

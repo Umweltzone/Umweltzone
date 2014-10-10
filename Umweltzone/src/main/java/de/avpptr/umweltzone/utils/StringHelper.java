@@ -17,6 +17,7 @@
 
 package de.avpptr.umweltzone.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
@@ -101,6 +102,15 @@ public class StringHelper {
         String formattedDate = getFormattedDate(context,
                 R.string.city_info_geometry_updated_at_date_format, geometryUpdatedAt);
         return context.getString(R.string.city_info_geometry_updated_at_text, formattedDate);
+    }
+
+    public static String getGeometrySourceText(final Context context,
+            LowEmissionZone lowEmissionZone) {
+        String geometrySource = lowEmissionZone.geometrySource;
+        if (TextUtils.isEmpty(geometrySource)) {
+            return "";
+        }
+        return context.getString(R.string.city_info_geometry_source_text, geometrySource);
     }
 
     // Compile date and colors into sentence
