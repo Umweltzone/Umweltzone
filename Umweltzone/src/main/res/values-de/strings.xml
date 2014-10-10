@@ -166,16 +166,28 @@
     <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
 
     <!-- AboutActivity / License -->
-    <string name="appinfo_license_title">Lizenz</string>
+    <string name="appinfo_license_title">Lizenzen</string>
     <string name="appinfo_license_content">
         Der Quellcode der Umweltzone App unterliegt der GPLv3 Lizenz.
-        Kartenmaterial, Bilder und Texte unterliegen, soweit nicht anders genannt,
+        Die aus OpenStreetMap stammenden Geometrie-Koordinaten unterliegen
+        der Open Database Licence (ODbL) v1.0. Andere Geometrie-Koordinaten
+        unterliegenden den Bestimmungen der angegebenen Datenquellen.
+        Bilder und Texte unterliegen, soweit nicht anders genannt,
         der Creative Commons Namensnennung 3.0 Unported Lizenz.
     </string>
     <string name="appinfo_license_name_gpl">GPLv3</string>
     <string name="appinfo_license_url_title_gpl">GPLv3 Lizenz</string>
     <string name="appinfo_license_url_gpl">
         http://www.gnu.org/licenses/gpl-3.0.txt
+    </string>
+    <string name="appinfo_license_name_odbl">
+        Open Database Licence
+    </string>
+    <string name="appinfo_license_url_title_odbl">
+        Open Database Licence
+    </string>
+    <string name="appinfo_license_url_odbl">
+        http://opendatacommons.org/licenses/odbl/1.0/
     </string>
     <string name="appinfo_license_name_cc">Creative Commons</string>
     <string name="appinfo_license_url_title_cc">Creative Commons Lizenz</string>
@@ -270,6 +282,18 @@
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
     <string name="city_info_further_information">Weiterführende Informationen im Web</string>
     <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>
+
+    <string name="city_info_geometry_source_text">Datenquelle der
+        Geometrie-Koordinaten: <xliff:g id="geometrySource">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_geometry_updated_at_date_format">
+        d. MMMM yyyy
+    </string>
+    <string name="city_info_geometry_updated_at_text">
+        Letzte Aktualisierung der
+        Zonengeometrie: <xliff:g id="updatedAt">%1$s</xliff:g>
+    </string>
 
     <string name="city_info_empty_title">Stadtinfos</string>
     <string name="city_info_empty_status_desc">

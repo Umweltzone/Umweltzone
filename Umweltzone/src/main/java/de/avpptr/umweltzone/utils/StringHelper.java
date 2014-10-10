@@ -17,6 +17,7 @@
 
 package de.avpptr.umweltzone.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
@@ -92,13 +93,38 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
+    public static String getGeometryUpdatedAtText(Context context,
+            LowEmissionZone lowEmissionZone) {
+        Date geometryUpdatedAt = lowEmissionZone.geometryUpdatedAt;
+        if (geometryUpdatedAt == null) {
+            return "";
+        }
+        String formattedDate = getFormattedDate(context,
+                R.string.city_info_geometry_updated_at_date_format, geometryUpdatedAt);
+        return context.getString(R.string.city_info_geometry_updated_at_text, formattedDate);
+    }
+
+    public static String getGeometrySourceText(final Context context,
+            LowEmissionZone lowEmissionZone) {
+        String geometrySource = lowEmissionZone.geometrySource;
+        if (TextUtils.isEmpty(geometrySource)) {
+            return "";
+        }
+        return context.getString(R.string.city_info_geometry_source_text, geometrySource);
+    }
+
     // Compile date and colors into sentence
     private static String getZoneNumberInfoString(Context context, int resourceId, Date date, String color) {
-        String datePattern = context.getString(R.string.city_info_zone_number_since_date_format);
+        String formattedDate = getFormattedDate(context,
+                R.string.city_info_zone_number_since_date_format, date);
+        return context.getString(resourceId, formattedDate, color);
+    }
+
+    private static String getFormattedDate(Context context, int datePatternResourceId, Date date) {
+        String datePattern = context.getString(datePatternResourceId);
         // TODO Move locale into XML configuration
         SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.getDefault());
-        String formattedDate = dateFormat.format(date);
-        return context.getString(resourceId, formattedDate, color);
+        return dateFormat.format(date);
     }
 
     private static String zoneNumberToColor(Context context, int zoneNumber) {

@@ -31,6 +31,11 @@
         android:text="@string/appinfo_license_url_gpl" />
 
     <TextView
+        android:id="@+id/appInfoButtonOdbl"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_license_url_odbl" />
+
+    <TextView
         android:id="@+id/appInfoButtonCreativeCommons"
         style="@style/AppInfo.WebLink"
         android:text="@string/appinfo_license_url_cc" />
