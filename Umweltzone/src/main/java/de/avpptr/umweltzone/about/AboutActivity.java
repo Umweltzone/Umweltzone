@@ -82,6 +82,10 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_license_url_title_gpl,
                 R.string.appinfo_license_url_gpl, TrackingPoint.AboutItemClick,
                 "gpl_url");
+        ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonOdbl,
+                R.string.appinfo_license_url_title_odbl,
+                R.string.appinfo_license_url_odbl, TrackingPoint.AboutItemClick,
+                "gpl_url");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCreativeCommons,
                 R.string.appinfo_license_url_title_cc,
                 R.string.appinfo_license_url_cc, TrackingPoint.AboutItemClick,
