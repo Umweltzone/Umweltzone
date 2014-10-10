@@ -63,9 +63,11 @@ android {
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
 
         applicationVariants.all { variant ->
-            def file = variant.outputFile
-            def fileName = file.name.replace(".apk", "-" + versionName + ".apk")
-            variant.outputFile = new File(file.parent, fileName)
+            variant.outputs.each { output ->
+                def file = output.outputFile
+                def fileName = file.name.replace(".apk", "-" + versionName + ".apk")
+                output.outputFile = new File(file.parentFile, fileName)
+            }
         }
     }
 
@@ -105,6 +107,6 @@ dependencies {
     compile 'com.fasterxml.jackson.core:jackson-core:2.4.2'
     compile 'com.fasterxml.jackson.core:jackson-annotations:2.4.2'
     compile 'de.cketti.library.changelog:ckchangelog:1.2.0'
-    compile 'info.metadude.android:typed-preferences:1.1.0'
+    compile 'info.metadude.android:typed-preferences:2.0.0'
     compile fileTree(dir: 'libs', include: '*.jar')
 }
