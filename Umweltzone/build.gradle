@@ -84,10 +84,10 @@ android {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-DEBUG"
-            zipAlign true
+            zipAlignEnabled true
         }
         release {
-            runProguard true
+            minifyEnabled true
             proguardFile 'proguard.cfg'
             signingConfig signingConfigs.release
         }
