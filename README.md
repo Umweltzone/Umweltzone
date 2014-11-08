@@ -1,3 +1,5 @@
+[![GPL license][gpl-license-badge]][gpl-license-link]
+
 Umweltzone
 ==========
 
@@ -87,7 +89,7 @@ Contributors
 License
 -------
 
-The source code is licensed under [GPLv3][6].
+The source code is licensed under [GPLv3][gpl-license-link].
 
 This content is licensed, if not stated otherwise, under a
 [Creative Commons Attribution-ShareAlike 3.0 Unported License][7].
@@ -100,6 +102,7 @@ This content is licensed, if not stated otherwise, under a
 [3]: http://bitbucket.org/tbsprs/umweltzone/raw/18d887e823828af217156f3b68690445b3ba6129/screenshot.png
 [4]: http://umweltzone.uservoice.com
 [5]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
-[6]: http://www.gnu.org/licenses/gpl-3.0.txt
+[gpl-license-link]: http://www.gnu.org/licenses/gpl-3.0.txt
 [7]: http://creativecommons.org/licenses/by-sa/3.0/
 [8]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
+[gpl-license-badge]: http://img.shields.io/badge/license-GPL--3.0-lightgrey.svg
