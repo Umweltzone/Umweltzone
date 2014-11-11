@@ -1,3 +1,4 @@
+![VersionEye][versioneye-badge] 
 [![GPL license][gpl-license-badge]][gpl-license-link]
 
 Umweltzone
@@ -106,3 +107,4 @@ This content is licensed, if not stated otherwise, under a
 [7]: http://creativecommons.org/licenses/by-sa/3.0/
 [8]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
 [gpl-license-badge]: http://img.shields.io/badge/license-GPL--3.0-lightgrey.svg
+[versioneye-badge]: https://www.versioneye.com/user/projects/53f5b50a8d7ae1c2ec00033d/badge.svg
