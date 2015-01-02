@@ -7,6 +7,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0'
         classpath 'net.sf.proguard:proguard-gradle:4.10'
-        classpath 'org.standardout:gradle-versioneye-plugin:0.1.1'
+        classpath 'org.standardout:gradle-versioneye-plugin:1.0.1'
     }
 }

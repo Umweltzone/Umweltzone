@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'versioneye'
+apply plugin: 'org.standardout.versioneye'
 
 versioneye {
     exclude 'androidJacocoAgent', 'androidJacocoAnt'
