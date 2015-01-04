@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -80,9 +80,10 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         }
         LowEmissionZone lowEmissionZone = mLowEmissionZones[position];
         viewHolder.zoneName.setText(lowEmissionZone.displayName);
+        Resources resources = mContext.getResources();
         int zoneNumber = lowEmissionZone.zoneNumber;
         viewHolder.zoneBadge.setText(String.valueOf(zoneNumber));
-        int badgeColor = zoneNumberToColor(mContext.getResources(), zoneNumber);
+        int badgeColor = resources.getColor(zoneNumberToColorId(zoneNumber));
 
         int sdk = Build.VERSION.SDK_INT;
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
@@ -96,16 +97,17 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         return view;
     }
 
-    private int zoneNumberToColor(Resources resources, int zoneNumber) {
+    private int zoneNumberToColorId(int zoneNumber) {
         switch (zoneNumber) {
             case LowEmissionZoneNumbers.RED:
-                return resources.getColor(R.color.city_zone_2);
+                return R.color.city_zone_2;
             case LowEmissionZoneNumbers.YELLOW:
-                return resources.getColor(R.color.city_zone_3);
+                return R.color.city_zone_3;
             case LowEmissionZoneNumbers.GREEN:
-                return resources.getColor(R.color.city_zone_4);
+                return R.color.city_zone_4;
+            default:
+                return R.color.city_zone_none;
         }
-        return resources.getColor(R.color.city_zone_none);
     }
 
     private static class ViewHolder {
