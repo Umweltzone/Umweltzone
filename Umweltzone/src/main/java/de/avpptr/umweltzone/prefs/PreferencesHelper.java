@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -82,6 +82,12 @@ public class PreferencesHelper {
         return preference.get();
     }
 
+    public boolean restoreZoneIsDrawable() {
+        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+        return zoneIsDrawablePreference.get();
+    }
+
     public void storeLastKnownLocation(final GeoPoint center) {
         DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
                 Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
@@ -121,6 +127,12 @@ public class PreferencesHelper {
         return cityNamePreference.isSet();
     }
 
+    public boolean storesZoneIsDrawable() {
+        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+        return zoneIsDrawablePreference.isSet();
+    }
+
     public void storeZoomLevel(float zoomLevel) {
         FloatPreference zoomLevelPreference = new FloatPreference(
                 mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
@@ -131,6 +143,12 @@ public class PreferencesHelper {
         BooleanPreference preference = new BooleanPreference(
                 mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
         preference.set(flag);
+    }
+
+    public void storeZoneIsDrawable(boolean flag) {
+        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+        zoneIsDrawablePreference.set(flag);
     }
 
 }

@@ -81,6 +81,9 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         LowEmissionZone lowEmissionZone = mLowEmissionZones[position];
         viewHolder.zoneName.setText(lowEmissionZone.displayName);
         Resources resources = mContext.getResources();
+        int textColor = resources.getColor(
+                zoneIsDrawableToColorId(lowEmissionZone.containsGeometryInformation()));
+        viewHolder.zoneName.setTextColor(textColor);
         int zoneNumber = lowEmissionZone.zoneNumber;
         viewHolder.zoneBadge.setText(String.valueOf(zoneNumber));
         int badgeColor = resources.getColor(zoneNumberToColorId(zoneNumber));
@@ -95,6 +98,12 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
             viewHolder.zoneShape.setColor(badgeColor);
         }
         return view;
+    }
+
+    private int zoneIsDrawableToColorId(boolean zoneIsDrawable) {
+        return (zoneIsDrawable) ?
+                R.color.city_zone_name_drawable :
+                R.color.city_zone_name_not_drawable;
     }
 
     private int zoneNumberToColorId(int zoneNumber) {

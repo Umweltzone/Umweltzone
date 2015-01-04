@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -74,6 +74,10 @@ public class LowEmissionZone {
             }
         }
         return null;
+    }
+
+    public boolean containsGeometryInformation() {
+        return geometrySource != null && geometryUpdatedAt != null;
     }
 
     @Override

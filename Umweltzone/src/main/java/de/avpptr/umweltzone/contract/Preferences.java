@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -32,4 +32,6 @@ public interface Preferences {
     public static final String KEY_ZOOM_LEVEL = "de.avpptr.umweltzone.ZOOM_LEVEL";
     public static final String KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED =
             "de.avpptr.umweltzone.CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED";
+    public static final String KEY_ZONE_IS_DRAWABLE =
+            "de.avpptr.umweltzone.ZONE_IS_DRAWABLE";
 }

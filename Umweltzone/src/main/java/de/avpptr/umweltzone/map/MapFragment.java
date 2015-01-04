@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -146,7 +146,12 @@ public class MapFragment extends SupportMapFragment {
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
-        drawPolygonOverlay();
+        if (mPreferencesHelper.restoreZoneIsDrawable()) {
+            drawPolygonOverlay();
+        }
+        else {
+            // TODO: Show information regarding missing zone.
+        }
 
         Intent intent = activity.getIntent();
         if (intent == null) {
@@ -159,7 +164,12 @@ public class MapFragment extends SupportMapFragment {
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmissionZone(defaultLowEmissionZone);
-                    drawPolygonOverlay();
+                    if (mPreferencesHelper.restoreZoneIsDrawable()) {
+                        drawPolygonOverlay();
+                    }
+                    else {
+                        // TODO: Show information regarding missing zone.
+                    }
                     zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
                     storeLastMapState();
                 }
@@ -204,6 +214,8 @@ public class MapFragment extends SupportMapFragment {
     private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
         mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.name);
         mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.boundingBox);
+        mPreferencesHelper.storeZoneIsDrawable(
+                defaultLowEmissionZone.containsGeometryInformation());
     }
 
     private void storeLastMapState() {
