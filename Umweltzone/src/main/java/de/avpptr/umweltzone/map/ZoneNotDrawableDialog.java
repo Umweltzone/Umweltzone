@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.map;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,10 +33,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.avpptr.umweltzone.utils.StringHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
 
@@ -71,8 +75,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             public void onClick(final DialogInterface dialog, int whichButton) {
                                 Intent intent = IntentHelper.getSendEmailIntent(
                                         activity,
-                                        // TODO: Provide TO recipients
-                                        null,
+                                        getToRecipients(lowEmissionZone.contactEmails),
                                         getBccRecipients(),
                                         getEmailSubject(zoneDisplayName),
                                         getEmailMessage(zoneDisplayName)
@@ -89,6 +92,11 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             }
                         });
         return builder.create();
+    }
+
+    private String[] getToRecipients(List<String> contactEmails) {
+        final String toRecipients = StringHelper.getContactEmailsText(contactEmails);
+        return new String[]{toRecipients};
     }
 
     private String[] getBccRecipients() {

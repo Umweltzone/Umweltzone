@@ -41,6 +41,7 @@ public class LowEmissionZone {
     public Date abroadLicensedVehicleZoneNumberUntil;
     public String urlUmweltPlaketteDe;
     public String urlBadgeOnline;
+    public List<String> contactEmails;
     public String geometrySource;
     public Date geometryUpdatedAt;
 
@@ -93,6 +94,7 @@ public class LowEmissionZone {
                 ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
                 ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe +
                 ", urlBadgeOnline: " + urlBadgeOnline +
+                ", contactEmails: " + contactEmails +
                 ", geometrySource: " + geometrySource +
                 ", geometryUpdatedAt: " + geometryUpdatedAt;
     }

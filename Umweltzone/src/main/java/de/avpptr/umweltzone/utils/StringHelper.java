@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,6 @@
 
 package de.avpptr.umweltzone.utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
@@ -35,6 +34,13 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
+
+    public static String getContactEmailsText(List<String> contactEmails) {
+        if (contactEmails == null || contactEmails.isEmpty()) {
+            return null;
+        }
+        return TextUtils.join(", ", contactEmails);
+    }
 
     public static String getListOfCitiesText(Context context, LowEmissionZone lowEmissionZone) {
         List<String> listOfCities = lowEmissionZone.listOfCities;

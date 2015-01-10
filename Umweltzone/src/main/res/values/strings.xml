@@ -292,16 +292,18 @@
         Help now &#8230;
     </string>
     <string name="zone_not_drawable_notice">
-        <![CDATA[&#8230; damit auch die <b>Umweltzone %1$s</b> angezeigt werden kann:<br />
+        <![CDATA[&#8230; so that the <b>low emission zone of %1$s</b> can
+        be displayed, too.<br />
         <br />
-        Leider hat %2$s die Geokoordinaten (Längen- und Breitengrade) zum Verlauf
-        der Umweltzone nicht in einem <b>geeigneten (maschinenlesbaren) Dateiformat</b>
-        veröffentlicht. Aus einem Bild, einer PDF-Datei oder Internetseiten lassen sich
-        die benötigten Informationen nicht extrahieren. Somit ist es nicht möglich,
-        die genaue Lage bzw. den Verlauf der Umweltzone nachzuvollziehen.<br />
+        The problem is that %2$s does not publish the geo-coordinates (latitude
+        and longitude values) which describe the location of the low emission zone in
+        a <b>suitable (machine-readable) file format</b>. The needed information cannot
+        be extracted from an image, a PDF nor web pages. For this reason it is not
+        possible to render the exact location and shape of the low emission zone.<br />
         <br />
-        Mit einer <b>persönlichen E-Mail</b> kannst du helfen, dass sich dies ändert. Der Text ist
-        vorformuliert, es fehlt nur noch dein Name am Ende und schon kannst du sie abschicken.]]>
+        But you can help to change this situation with a <b>personal email</b>.
+        The message has already been composed. Just add your name at the bottom
+        and you are ready to send it out.]]>
     </string>
     <string name="zone_not_drawable_later">Maybe later</string>
     <string name="zone_not_drawable_open_email">Open email</string>
@@ -309,23 +311,22 @@
     <string name="zone_not_drawable_email_subject">
         Umweltzone Android App, Integration <xliff:g id="zoneName">%1$s</xliff:g>
     </string>
-    <string name="zone_not_drawable_email_message">
-        <![CDATA[<p>Sehr geehrte Damen und Herren,<br />
+        <string name="zone_not_drawable_email_message">
+        <![CDATA[<p>Dear Sir or Madam.
         <br />
-        ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],
-        mit der ich mich über den Verlauf von Umweltzonen und individuelle
-        Regelungen in verschiedenen Städten auf meinem Android-Gerät
-        informieren kann. Ich betrachte diese Anwendung als nützliche
-        Erweiterung zum bestehenden Informationsangebot vieler Städte.<br />
+        I am using the free and open source application &quot;Umweltzone&quot; [1]
+        which allows me to get informed about the location of low emission zones and
+        individual regulations in many cities. I consider this application as an useful
+        addition to the existing offer of information of the cities.<br />
         <br />
-        Leider kann die <b>Umweltzone %1$s</b> nicht dargestellt werden. Es fehlen
-        die Geokoordinaten des Umweltzonenumrings. Daher möchte ich Sie hiermit
-        persönlich bitten, die Koordinaten unter einer <b>freien Lizenz</b> zu
-        veröffentlichen. Um eine Weiterverarbeitung zu ermöglichen, eignen
-        sich folgenden <b>maschinenlesbare Dateiformate</b>:
+        Unfortunately, the <b>low emission zone of %1$s</b> cannot be rendered. This is
+        because the geo-coordinates which describe its location have not been
+        published. Thus, I would like to personally ask you to release the
+        geo-coordinates under a <b>free license</b>. To facilitate the data processing
+        the following <b>machine-readable file formats</b> are suitable:
         ESRI Shapefiles, CSV, GeoJSON.<br />
         <br />
-        Mit freundlichen Grüßen</p>
+        Best regards</p>
 
         <p>___<br />
         [1]: <a href="http://play.google.com/store/apps/details?id=de.avpptr.umweltzone">http://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
