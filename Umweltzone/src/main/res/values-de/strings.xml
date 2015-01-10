@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -305,5 +305,49 @@
     <!-- FaqActivity -->
     <string name="faq_activity_title">FAQ</string>
     <string name="faq_source_url_title_text">Quelle</string>
+
+    <!-- ZoneNotDrawableDialog -->
+    <string name="zone_not_drawable_title">
+        Jetzt mithelfen, &#8230;
+    </string>
+    <string name="zone_not_drawable_notice">
+        <![CDATA[&#8230; damit auch die <b>Umweltzone %1$s</b> angezeigt werden kann:<br />
+        <br />
+        Leider hat %2$s die Geokoordinaten (Längen- und Breitengrade) zum Verlauf
+        der Umweltzone nicht in einem <b>geeigneten (maschinenlesbaren) Dateiformat</b>
+        veröffentlicht. Aus einem Bild, einer PDF-Datei oder Internetseiten lassen sich
+        die benötigten Informationen nicht extrahieren. Somit ist es nicht möglich,
+        die genaue Lage bzw. den Verlauf der Umweltzone nachzuvollziehen.<br />
+        <br />
+        Mit einer <b>persönlichen E-Mail</b> kannst du helfen, dass sich dies ändert. Der Text ist
+        vorformuliert, es fehlt nur noch dein Name am Ende und schon kannst du sie abschicken.]]>
+    </string>
+    <string name="zone_not_drawable_later">Später</string>
+    <string name="zone_not_drawable_open_email">E-Mail öffnen</string>
+    <string name="zone_not_drawable_app_chooser_title">Entwurf öffnen mit &#8230;</string>
+    <string name="zone_not_drawable_email_subject">
+        Umweltzone <xliff:g id="zoneName">%1$s</xliff:g> veröffentlichen
+    </string>
+    <string name="zone_not_drawable_email_message">
+        <![CDATA[<p>Sehr geehrte Damen und Herren,<br />
+        <br />
+        ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],
+        mit der ich mich über den Verlauf von Umweltzonen und individuelle
+        Regelungen in verschiedenen Städten auf meinem Android-Gerät
+        informieren kann. Ich betrachte diese Anwendung als nützliche
+        Erweiterung zum bestehenden Informationsangebot vieler Städte.<br />
+        <br />
+        Leider kann die <b>Umweltzone %1$s</b> nicht dargestellt werden. Es fehlen
+        die Geokoordinaten des Umweltzonenumrings. Daher möchte ich Sie hiermit
+        persönlich bitten, die Koordinaten unter einer <b>freien Lizenz</b> zu
+        veröffentlichen. Um eine Weiterverarbeitung zu ermöglichen, eignen
+        sich folgenden <b>maschinenlesbare Dateiformate</b>:
+        ESRI Shapefiles, CSV, GeoJSON.<br />
+        <br />
+        Mit freundlichen Grüßen</p>
+
+        <p>___<br />
+        [1]: <a href="http://play.google.com/store/apps/details?id=de.avpptr.umweltzone">http://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
+    </string>
 
 </resources>

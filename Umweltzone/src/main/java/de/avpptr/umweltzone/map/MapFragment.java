@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.util.DisplayMetrics;
@@ -146,11 +147,12 @@ public class MapFragment extends SupportMapFragment {
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
-        if (mPreferencesHelper.restoreZoneIsDrawable()) {
-            drawPolygonOverlay();
-        }
-        else {
-            // TODO: Show information regarding missing zone.
+        if (mPreferencesHelper.storesZoneIsDrawable()) {
+            if (mPreferencesHelper.restoreZoneIsDrawable()) {
+                drawPolygonOverlay();
+            } else {
+                showZoneNotDrawableDialog();
+            }
         }
 
         Intent intent = activity.getIntent();
@@ -159,16 +161,17 @@ public class MapFragment extends SupportMapFragment {
         }
         Bundle extras = intent.getExtras();
         if (extras == null) {
+            // Select default city at first application start
             GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
             if (!lastKnownPosition.isValid()) {
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmissionZone(defaultLowEmissionZone);
-                    if (mPreferencesHelper.restoreZoneIsDrawable()) {
+                    if (mPreferencesHelper.storesZoneIsDrawable() &&
+                            mPreferencesHelper.restoreZoneIsDrawable()) {
                         drawPolygonOverlay();
-                    }
-                    else {
-                        // TODO: Show information regarding missing zone.
+                    } else {
+                        showZoneNotDrawableDialog();
                     }
                     zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
                     storeLastMapState();
@@ -209,6 +212,16 @@ public class MapFragment extends SupportMapFragment {
         int strokeColor = resources.getColor(R.color.shape_stroke_color);
         int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
         mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
+    }
+
+    private void showZoneNotDrawableDialog() {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        Fragment fragment = fragmentManager
+                .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
+        if (fragment == null) {
+            ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
+            dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
+        }
     }
 
     private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {

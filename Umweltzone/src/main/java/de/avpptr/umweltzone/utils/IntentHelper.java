@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@ package de.avpptr.umweltzone.utils;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.v4.app.ShareCompat;
 
 import de.avpptr.umweltzone.about.AboutActivity;
 import de.avpptr.umweltzone.cities.CitiesActivity;
@@ -30,6 +31,21 @@ import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
 
 public class IntentHelper {
+
+    public static Intent getSendEmailIntent(
+            Activity activity,
+            String[] toRecipients,
+            String[] bccRecipient,
+            String subject,
+            String message) {
+        return ShareCompat.IntentBuilder.from(activity)
+                .setEmailTo(toRecipients)
+                .setEmailBcc(bccRecipient)
+                .setSubject(subject)
+                .setType("message/rfc822")
+                .setHtmlText(message)
+                .getIntent();
+    }
 
     public static Intent getChangeCityIntent(Activity activity, String cityNameValue) {
         final Intent intent = getIntent(activity, MainActivity.class);

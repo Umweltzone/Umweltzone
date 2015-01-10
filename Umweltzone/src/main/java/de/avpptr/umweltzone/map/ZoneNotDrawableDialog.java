@@ -1,0 +1,106 @@
+/*
+ *  Copyright (C) 2015  Tobias Preuss
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package de.avpptr.umweltzone.map;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
+import android.text.Html;
+import android.text.Spanned;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+import de.avpptr.umweltzone.BuildConfig;
+import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.IntentHelper;
+
+public class ZoneNotDrawableDialog extends DialogFragment {
+
+    public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
+            ZoneNotDrawableDialog.class.getSimpleName();
+
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        final FragmentActivity activity = getActivity();
+        final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
+        final String zoneDisplayName = lowEmissionZone.displayName;
+
+        // Prepare layout
+        LayoutInflater inflater = activity.getLayoutInflater();
+        View zoneNotDrawableView = inflater.inflate(R.layout.fragment_zone_not_drawable, null);
+        TextView noticeTextView = (TextView) zoneNotDrawableView
+                .findViewById(R.id.zone_not_drawable_notice);
+        Spanned noticeSpanned = Html.fromHtml(getString(
+                R.string.zone_not_drawable_notice,
+                zoneDisplayName,
+                zoneDisplayName));
+        noticeTextView.setText(noticeSpanned, TextView.BufferType.SPANNABLE);
+
+        // Launch dialog
+        AlertDialog.Builder builder = new AlertDialog.Builder(
+                new ContextThemeWrapper(activity, R.style.AppDialog));
+        builder.setView(zoneNotDrawableView)
+                .setTitle(R.string.zone_not_drawable_title)
+                .setPositiveButton(R.string.zone_not_drawable_open_email,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(final DialogInterface dialog, int whichButton) {
+                                Intent intent = IntentHelper.getSendEmailIntent(
+                                        activity,
+                                        // TODO: Provide TO recipients
+                                        null,
+                                        getBccRecipients(),
+                                        getEmailSubject(zoneDisplayName),
+                                        getEmailMessage(zoneDisplayName)
+                                );
+                                startActivity(Intent.createChooser(intent, getString(
+                                        R.string.zone_not_drawable_app_chooser_title)));
+                            }
+                        })
+                .setNegativeButton(R.string.zone_not_drawable_later,
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(final DialogInterface dialog, int whichButton) {
+                                // Nothing to do here
+                            }
+                        });
+        return builder.create();
+    }
+
+    private String[] getBccRecipients() {
+        return new String[]{getString(R.string.config_contact_email_address)};
+    }
+
+    private String getEmailSubject(String zoneName) {
+        return getString(R.string.zone_not_drawable_email_subject, zoneName);
+    }
+
+    private String getEmailMessage(String zoneName) {
+        return getString(R.string.zone_not_drawable_email_message, zoneName);
+    }
+
+}
