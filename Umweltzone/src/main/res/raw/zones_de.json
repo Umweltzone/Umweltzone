@@ -604,6 +604,31 @@
         }
     },
     {
+        "name" : "ludwigsburg",
+        "displayName" : "Ludwigsburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ludwigsburg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.871159,
+                "longitude" : 9.128447
+            },
+            "northEast" : {
+                "latitude" : 48.933898,
+                "longitude" : 9.314184
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
