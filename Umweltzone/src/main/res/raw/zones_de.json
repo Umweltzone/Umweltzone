@@ -325,6 +325,31 @@
         }
     },
     {
+        "name" : "heidelberg",
+        "displayName" : "Heidelberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidelberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.371563,
+                "longitude" : 8.667917
+            },
+            "northEast" : {
+                "latitude" : 49.439048,
+                "longitude" : 8.717991
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
