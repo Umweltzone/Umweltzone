@@ -1215,5 +1215,30 @@
                 "longitude" : 9.637190
             }
         }
+    },
+    {
+        "name" : "wendlingen",
+        "displayName" : "Wendlingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-04-02",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wendlingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.642897,
+                "longitude" : 9.349367
+            },
+            "northEast" : {
+                "latitude" : 48.692779,
+                "longitude" : 9.427816
+            }
+        }
     }
 ]
