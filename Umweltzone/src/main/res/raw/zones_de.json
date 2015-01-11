@@ -954,6 +954,31 @@
         }
     },
     {
+        "name" : "remscheid",
+        "displayName" : "Remscheid",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20remscheid.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-11-04",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.175884,
+                "longitude" : 7.167083
+            },
+            "northEast" : {
+                "latitude" : 51.187779,
+                "longitude" : 7.199890
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
