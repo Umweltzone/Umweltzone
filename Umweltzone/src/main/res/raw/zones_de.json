@@ -854,6 +854,31 @@
         }
     },
     {
+        "name" : "offenbach",
+        "displayName" : "Offenbach",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20offenbach.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.044758,
+                "longitude" : 8.719388
+            },
+            "northEast" : {
+                "latitude" : 50.139250,
+                "longitude" : 8.847104
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
