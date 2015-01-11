@@ -679,6 +679,31 @@
         }
     },
     {
+        "name" : "mannheim",
+        "displayName" : "Mannheim",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20mannheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.473601,
+                "longitude" : 8.455916
+            },
+            "northEast" : {
+                "latitude" : 49.505884,
+                "longitude" : 8.507744
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
