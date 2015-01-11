@@ -60,7 +60,7 @@ public class CityInfoFragment extends BaseFragment {
         }
     }
 
-    private void setUpCityInfo(final Activity activity, LowEmissionZone lowEmissionZone) {
+    private void setUpCityInfo(final Activity activity, final LowEmissionZone lowEmissionZone) {
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
@@ -137,7 +137,7 @@ public class CityInfoFragment extends BaseFragment {
         badgeOnlineTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);
+                mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick, lowEmissionZone.name);
             }
         });
 

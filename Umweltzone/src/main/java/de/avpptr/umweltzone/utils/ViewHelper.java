@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -97,12 +97,7 @@ public abstract class ViewHelper {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (trackingString == null) {
-                    Umweltzone.getTracker().track(trackingPoint);
-                } else {
-                    Umweltzone.getTracker().track(trackingPoint, trackingString);
-                }
-
+                Umweltzone.getTracker().track(trackingPoint, trackingString);
             }
         });
     }

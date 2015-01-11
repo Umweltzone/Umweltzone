@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,11 +18,6 @@
 package de.avpptr.umweltzone.analytics;
 
 public class NoTracking implements Tracking {
-
-    @Override
-    public void track(TrackingPoint eventName) {
-        // Do nothing.
-    }
 
     @Override
     public void track(TrackingPoint eventName, Object parameter) {

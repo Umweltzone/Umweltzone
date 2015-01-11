@@ -32,11 +32,6 @@ public class GoogleAnalyticsTracking implements Tracking {
     }
 
     @Override
-    public void track(TrackingPoint eventName) {
-        track(eventName, null);
-    }
-
-    @Override
     public void track(TrackingPoint eventName, final Object parameter) {
         switch (eventName) {
             case ActivityStart:
