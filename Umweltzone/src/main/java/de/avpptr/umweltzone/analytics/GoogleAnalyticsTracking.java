@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.MapBuilder;
 
 public class GoogleAnalyticsTracking implements Tracking {
@@ -105,12 +104,6 @@ public class GoogleAnalyticsTracking implements Tracking {
 
     private void trackActivityStop(Activity activity) {
         mTracker.activityStop(activity);
-    }
-
-    private void trackView(String screenName) {
-        mTracker.send(
-                MapBuilder.createAppView().set(Fields.SCREEN_NAME, screenName).build()
-        );
     }
 
     private void trackEvent(String category, String action, String label) {
