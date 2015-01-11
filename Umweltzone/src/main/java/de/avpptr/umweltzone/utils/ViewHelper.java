@@ -90,8 +90,9 @@ public abstract class ViewHelper {
         TextView textView = (TextView) activity.findViewById(textViewId);
         final String tempUrl = activity.getString(urlResourceId);
         final String url = tempUrl.contains("@") ? "mailto:" + tempUrl : tempUrl;
+        final String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
-                StringHelper.spannedLinkForString(activity.getApplicationContext(), titleResourceId, urlResourceId),
+                StringHelper.spannedLinkForString(title, url),
                 url,
                 trackingPoint, trackingString);
     }
