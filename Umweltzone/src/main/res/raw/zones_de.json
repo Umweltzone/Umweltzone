@@ -654,6 +654,31 @@
         }
     },
     {
+        "name" : "mainz",
+        "displayName" : "Mainz",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20mainz.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-01-01",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.995078,
+                "longitude" : 8.264528
+            },
+            "northEast" : {
+                "latitude" : 50.024503,
+                "longitude" : 8.321997
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
