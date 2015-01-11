@@ -75,6 +75,31 @@
         }
     },
     {
+        "name" : "bonn",
+        "displayName" : "Bonn",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bonn.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-23",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.704257,
+                "longitude" : 7.072990
+            },
+            "northEast" : {
+                "latitude" : 50.755355,
+                "longitude" : 7.141435
+            }
+        }
+    },
+    {
         "name" : "bremen",
         "displayName" : "Bremen",
         "listOfCities" : [],
