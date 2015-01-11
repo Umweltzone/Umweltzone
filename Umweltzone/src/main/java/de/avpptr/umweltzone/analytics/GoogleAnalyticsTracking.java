@@ -53,13 +53,13 @@ public class GoogleAnalyticsTracking implements Tracking {
                 trackEvent("city_info_action", "button_push", "show_on_map_" + parameter);
                 break;
             case CityInfoFurtherInfoClick:
-                trackEvent("city_info_action", "button_push", "further_info_" + parameter);
+                trackEvent("city_info_action", "url_click", "further_info_" + parameter);
                 break;
             case CityInfoBadgeOnlineClick:
-                trackEvent("city_info_action", "button_push", "badge_online_" + parameter);
+                trackEvent("city_info_action", "url_click", "badge_online_" + parameter);
                 break;
             case AboutItemClick:
-                trackEvent("about_action", "button_push", "about_item_" + parameter);
+                trackEvent("about_action", "url_click", "about_item_" + parameter);
                 break;
             case SupportMailClick:
                 trackEvent("about_action", "url_click", "support_mail");
