@@ -404,6 +404,31 @@
         }
     },
     {
+        "name" : "herrenberg",
+        "displayName" : "Herrenberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20herrenberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-28",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.584744,
+                "longitude" : 8.845982
+            },
+            "northEast" : {
+                "latitude" : 48.604751,
+                "longitude" : 8.889180
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
