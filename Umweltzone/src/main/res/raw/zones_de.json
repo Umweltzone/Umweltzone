@@ -50,6 +50,59 @@
         }
     },
     {
+        "name" : "bochum",
+        "displayName" : "Bochum",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bochum.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "busskamp@bochum.de",
+            "amt67@bochum.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.453950,
+                "longitude" : 7.102106
+            },
+            "northEast" : {
+                "latitude" : 51.531375,
+                "longitude" : 7.349335
+            }
+        }
+    },
+    {
+        "name" : "bonn",
+        "displayName" : "Bonn",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bonn.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-23",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.704257,
+                "longitude" : 7.072990
+            },
+            "northEast" : {
+                "latitude" : 50.755355,
+                "longitude" : 7.141435
+            }
+        }
+    },
+    {
         "name" : "bremen",
         "displayName" : "Bremen",
         "listOfCities" : [],
@@ -75,6 +128,34 @@
         }
     },
     {
+        "name" : "dinslaken",
+        "displayName" : "Dinslaken",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20dinslaken.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "dieter.gedack@dinslaken.de",
+            "monika.hans@dinslaken.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.527512,
+                "longitude" : 6.677306
+            },
+            "northEast" : {
+                "latitude" : 51.616387,
+                "longitude" : 6.874888
+            }
+        }
+    },
+    {
         "name" : "duesseldorf",
         "displayName" : "Düsseldorf",
         "listOfCities" : [],
@@ -96,6 +177,35 @@
             "northEast" : {
                 "latitude" : 51.291201,
                 "longitude" : 6.886310
+            }
+        }
+    },
+    {
+        "name" : "erfurt",
+        "displayName" : "Erfurt",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20erfurt.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "ausnahmegenehmigung.umweltzone@erfurt.de",
+            "stadtverwaltung@erfurt.de",
+            "tiefbau-verkehr@erfurt.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.956629,
+                "longitude" : 10.996579
+            },
+            "northEast" : {
+                "latitude" : 51.011143,
+                "longitude" : 11.064259
             }
         }
     },
@@ -175,6 +285,31 @@
         }
     },
     {
+        "name" : "halle",
+        "displayName" : "Halle (Saale)",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20halle.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2013-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.477963,
+                "longitude" : 11.948725
+            },
+            "northEast" : {
+                "latitude" : 51.511401,
+                "longitude" : 11.994762
+            }
+        }
+    },
+    {
         "name" : "hannover",
         "displayName" : "Hannover",
         "listOfCities" : [],
@@ -196,6 +331,173 @@
             "northEast" : {
                 "latitude" : 52.414181,
                 "longitude" : 9.793166
+            }
+        }
+    },
+    {
+        "name" : "heidelberg",
+        "displayName" : "Heidelberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidelberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "vermessungsamt@heidelberg.de",
+            "hz@heidelberg.de",
+            "oeffentlichkeitsarbeit@heidelberg.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.371563,
+                "longitude" : 8.667917
+            },
+            "northEast" : {
+                "latitude" : 49.439048,
+                "longitude" : 8.717991
+            }
+        }
+    },
+    {
+        "name" : "heidenheim",
+        "displayName" : "Heidenheim an der Brenz",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidenheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.650845,
+                "longitude" : 10.120929
+            },
+            "northEast" : {
+                "latitude" : 48.715467,
+                "longitude" : 10.189646
+            }
+        }
+    },
+    {
+        "name" : "heilbronn",
+        "displayName" : "Heilbronn",
+        "listOfCities" : [
+                "Frankenbach",
+                "Heilbronn",
+                "Horkheim"
+            ],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heilbronn.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-14",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.1081,
+                "longitude" : 9.13107
+            },
+            "northEast" : {
+                "latitude" : 49.1771,
+                "longitude" : 9.27433
+            }
+        }
+    },
+    {
+        "name" : "herrenberg",
+        "displayName" : "Herrenberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20herrenberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-28",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.584744,
+                "longitude" : 8.845982
+            },
+            "northEast" : {
+                "latitude" : 48.604751,
+                "longitude" : 8.889180
+            }
+        }
+    },
+    {
+        "name" : "ilsfeld",
+        "displayName" : "Ilsfeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ilsfeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "gemeinde@ilsfeld.de",
+            "thomas.stutz@ilsfeld.de",
+            "sven.frank@ilsfeld.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.027032,
+                "longitude" : 9.197915
+            },
+            "northEast" : {
+                "latitude" : 49.087777,
+                "longitude" : 9.320653
+            }
+        }
+    },
+    {
+        "name" : "karlsruhe",
+        "displayName" : "Karlsruhe",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20karlsruhe.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "stadt@karlsruhe.de",
+            "pia@karlsruhe.de",
+            "umwelt-arbeitsschutz@karlsruhe.de",
+            "strassenverkehrs­stelle@oa.karlsruhe.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.994348,
+                "longitude" : 8.353000
+            },
+            "northEast" : {
+                "latitude" : 49.024274,
+                "longitude" : 8.424135
             }
         }
     },
@@ -225,6 +527,63 @@
         }
     },
     {
+        "name" : "krefeld",
+        "displayName" : "Krefeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20krefeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "wolfgang.kritzler@krefeld.de",
+            "fb62@krefeld.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.312430,
+                "longitude" : 6.533754
+            },
+            "northEast" : {
+                "latitude" : 51.356299,
+                "longitude" : 6.590485
+            }
+        }
+    },
+    {
+        "name" : "langenfeld",
+        "displayName" : "Langenfeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20langenfeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "luftreinhaltung@brd.nrw.de",
+            "poststelle@lanuv.nrw.de",
+            "info@langenfeld.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.064924,
+                "longitude" : 6.898244
+            },
+            "northEast" : {
+                "latitude" : 51.145978,
+                "longitude" : 7.009481
+            }
+        }
+    },
+    {
         "name" : "leipzig",
         "displayName" : "Leipzig",
         "listOfCities" : [],
@@ -250,6 +609,138 @@
         }
     },
     {
+        "name" : "leonberg",
+        "displayName" : "Leonberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-12-02",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leonberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "kbm@leonberg.de",
+            "posteingang@lrabb.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.745671,
+                "longitude" : 8.952203
+            },
+            "northEast" : {
+                "latitude" : 48.837275,
+                "longitude" : 9.069620
+            }
+        }
+    },
+    {
+        "name" : "ludwigsburg",
+        "displayName" : "Ludwigsburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ludwigsburg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "laerm@ludwigsburg.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.871159,
+                "longitude" : 9.128447
+            },
+            "northEast" : {
+                "latitude" : 48.933898,
+                "longitude" : 9.314184
+            }
+        }
+    },
+    {
+        "name" : "magdeburg",
+        "displayName" : "Magdeburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20magdeburg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "umweltzone-magdeburg@tba.magdeburg.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.022566,
+                "longitude" : 11.507941
+            },
+            "northEast" : {
+                "latitude" : 52.236696,
+                "longitude" : 11.771613
+            }
+        }
+    },
+    {
+        "name" : "mainz",
+        "displayName" : "Mainz",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20mainz.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-01-01",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.995078,
+                "longitude" : 8.264528
+            },
+            "northEast" : {
+                "latitude" : 50.024503,
+                "longitude" : 8.321997
+            }
+        }
+    },
+    {
+        "name" : "mannheim",
+        "displayName" : "Mannheim",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20mannheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.473601,
+                "longitude" : 8.455916
+            },
+            "northEast" : {
+                "latitude" : 49.505884,
+                "longitude" : 8.507744
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
@@ -271,6 +762,34 @@
             "northEast" : {
                 "latitude" : 51.212348,
                 "longitude" : 6.465831
+            }
+        }
+    },
+    {
+        "name" : "muehlacker",
+        "displayName" : "Mühlacker",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muehlacker.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "stadt@muehlacker.de",
+            "tiefbau@stadt-muehlacker.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.897643,
+                "longitude" : 8.765470
+            },
+            "northEast" : {
+                "latitude" : 49.001809,
+                "longitude" : 8.927175
             }
         }
     },
@@ -303,8 +822,8 @@
         "name" : "muenster",
         "displayName" : "Münster",
         "listOfCities" : [],
-        "zoneNumber" : 3,
-        "zoneNumberSince" : "2010-01-01",
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
         "nextZoneNumberAsOf" : "",
         "abroadLicensedVehicleZoneNumber" : 4,
         "abroadLicensedVehicleZoneNumberUntil" : "",
@@ -375,6 +894,162 @@
         }
     },
     {
+        "name" : "offenbach",
+        "displayName" : "Offenbach",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20offenbach.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "umweltamt@offenbach.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.044758,
+                "longitude" : 8.719388
+            },
+            "northEast" : {
+                "latitude" : 50.139250,
+                "longitude" : 8.847104
+            }
+        }
+    },
+    {
+        "name" : "osnabrueck",
+        "displayName" : "Osnabrück",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-01-03",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone_osnabrueck_1.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.244407,
+                "longitude" : 8.002427
+            },
+            "northEast" : {
+                "latitude" : 52.294796,
+                "longitude" : 8.092093
+            }
+        }
+    },
+    {
+        "name" : "pfinztal",
+        "displayName" : "Pfinztal",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pfinztal.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "u.renz@pfinztal.de",
+            "g.knobloch@pfinztal.de",
+            "n.bodner@pfinztal.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.952211,
+                "longitude" : 8.499956
+            },
+            "northEast" : {
+                "latitude" : 49.031417,
+                "longitude" : 8.599789
+            }
+        }
+    },
+    {
+        "name" : "pforzheim",
+        "displayName" : "Pforzheim",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pforzheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-11",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.885610,
+                "longitude" : 8.672546
+            },
+            "northEast" : {
+                "latitude" : 48.898061,
+                "longitude" : 8.720929
+            }
+        }
+    },
+    {
+        "name" : "remscheid",
+        "displayName" : "Remscheid",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20remscheid.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-11-04",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.175884,
+                "longitude" : 7.167083
+            },
+            "northEast" : {
+                "latitude" : 51.187779,
+                "longitude" : 7.199890
+            }
+        }
+    },
+    {
+        "name" : "reutlingen",
+        "displayName" : "Reutlingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20reutlingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-08",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.469189,
+                "longitude" : 9.193419
+            },
+            "northEast" : {
+                "latitude" : 48.500609,
+                "longitude" : 9.229387
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
@@ -413,6 +1088,85 @@
         }
     },
     {
+        "name" : "schramberg",
+        "displayName" : "Schramberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schramberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.206869,
+                "longitude" : 8.371802
+            },
+            "northEast" : {
+                "latitude" : 48.238550,
+                "longitude" : 8.416522
+            }
+        }
+    },
+    {
+        "name" : "schwaebisch_gmuend",
+        "displayName" : "Schwäbisch Gmünd",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schwaebisch-gmuend.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "presse@schwaebisch-gmuend.de",
+            "stadtverwaltung@schwaebisch-gmuend.de",
+            "ordnungsamt@schwaebisch-gmuend.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.714296,
+                "longitude" : 9.708145
+            },
+            "northEast" : {
+                "latitude" : 48.847092,
+                "longitude" : 9.939888
+            }
+        }
+    },
+    {
+        "name" : "siegen",
+        "displayName" : "Siegen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20siegen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-01-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.863838,
+                "longitude" : 8.004170
+            },
+            "northEast" : {
+                "latitude" : 50.903801,
+                "longitude" : 8.032499
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "listOfCities" : [],
@@ -438,6 +1192,35 @@
         }
     },
     {
+        "name" : "tuebingen",
+        "displayName" : "Tübingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20tuebingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "umwelt-klimaschutz@tuebingen.de",
+            "bernd.schott@tuebingen.de",
+            "hans-peter.kern@tuebingen.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.448187,
+                "longitude" : 8.959893
+            },
+            "northEast" : {
+                "latitude" : 48.595993,
+                "longitude" : 9.137734
+            }
+        }
+    },
+    {
         "name" : "ulm",
         "displayName" : "Ulm",
         "listOfCities" : [],
@@ -459,6 +1242,119 @@
             "northEast" : {
                 "latitude" : 48.436947,
                 "longitude" : 10.037466
+            }
+        }
+    },
+    {
+        "name" : "urbach",
+        "displayName" : "Urbach",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20urbach.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "info@urbach.de",
+            "bauamt@urbach.de",
+            "baumeister@urbach.de",
+            "koch@urbach.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.795927,
+                "longitude" : 9.542261
+            },
+            "northEast" : {
+                "latitude" : 48.856388,
+                "longitude" : 9.637190
+            }
+        }
+    },
+    {
+        "name" : "wendlingen",
+        "displayName" : "Wendlingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-04-02",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wendlingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "stadt@wendlingen.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.642897,
+                "longitude" : 9.349367
+            },
+            "northEast" : {
+                "latitude" : 48.692779,
+                "longitude" : 9.427816
+            }
+        }
+    },
+    {
+        "name" : "wiesbaden",
+        "displayName" : "Wiesbaden",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wiesbaden.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "strassenverkehrsbehoerde@wiesbaden.de",
+            "umweltamt@wiesbaden.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.033733,
+                "longitude" : 8.174330
+            },
+            "northEast" : {
+                "latitude" : 50.128780,
+                "longitude" : 8.316164
+            }
+        }
+    },
+    {
+        "name" : "wuppertal",
+        "displayName" : "Wuppertal",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wuppertal.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "geodatenzentrum@stadt.wuppertal.de",
+            "presseamt@stadt.wuppertal.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.165097,
+                "longitude" : 7.009271
+            },
+            "northEast" : {
+                "latitude" : 51.322850,
+                "longitude" : 7.312082
             }
         }
     }
