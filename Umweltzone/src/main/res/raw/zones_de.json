@@ -275,6 +275,31 @@
         }
     },
     {
+        "name" : "halle",
+        "displayName" : "Halle (Saale)",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20halle.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2013-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.477963,
+                "longitude" : 11.948725
+            },
+            "northEast" : {
+                "latitude" : 51.511401,
+                "longitude" : 11.994762
+            }
+        }
+    },
+    {
         "name" : "hannover",
         "displayName" : "Hannover",
         "listOfCities" : [],
