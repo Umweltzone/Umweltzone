@@ -60,7 +60,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bochum.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "busskamp@bochum.de",
+            "amt67@bochum.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -135,7 +138,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20dinslaken.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "dieter.gedack@dinslaken.de",
+            "monika.hans@dinslaken.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -185,7 +191,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20erfurt.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "ausnahmegenehmigung.umweltzone@erfurt.de",
+            "stadtverwaltung@erfurt.de",
+            "tiefbau-verkehr@erfurt.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -335,7 +345,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidelberg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "vermessungsamt@heidelberg.de",
+            "hz@heidelberg.de",
+            "oeffentlichkeitsarbeit@heidelberg.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -439,7 +453,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ilsfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "gemeinde@ilsfeld.de",
+            "thomas.stutz@ilsfeld.de",
+            "sven.frank@ilsfeld.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -464,7 +482,12 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20karlsruhe.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "stadt@karlsruhe.de",
+            "pia@karlsruhe.de",
+            "umwelt-arbeitsschutz@karlsruhe.de",
+            "strassenverkehrs­stelle@oa.karlsruhe.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -514,7 +537,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20krefeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "wolfgang.kritzler@krefeld.de",
+            "fb62@krefeld.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -539,7 +565,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20langenfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "luftreinhaltung@brd.nrw.de",
+            "poststelle@lanuv.nrw.de",
+            "info@langenfeld.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -589,7 +619,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leonberg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "kbm@leonberg.de",
+            "posteingang@lrabb.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -614,7 +647,9 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ludwigsburg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "laerm@ludwigsburg.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -639,7 +674,9 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20magdeburg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "umweltzone-magdeburg@tba.magdeburg.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -739,7 +776,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muehlacker.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "stadt@muehlacker.de",
+            "tiefbau@stadt-muehlacker.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -864,7 +904,9 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20offenbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "umweltamt@offenbach.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -914,7 +956,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pfinztal.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "u.renz@pfinztal.de",
+            "g.knobloch@pfinztal.de",
+            "n.bodner@pfinztal.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1077,7 +1123,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schwaebisch-gmuend.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "presse@schwaebisch-gmuend.de",
+            "stadtverwaltung@schwaebisch-gmuend.de",
+            "ordnungsamt@schwaebisch-gmuend.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1152,7 +1202,11 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20tuebingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "umwelt-klimaschutz@tuebingen.de",
+            "bernd.schott@tuebingen.de",
+            "hans-peter.kern@tuebingen.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1202,7 +1256,12 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20urbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "info@urbach.de",
+            "bauamt@urbach.de",
+            "baumeister@urbach.de",
+            "koch@urbach.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1227,7 +1286,9 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wendlingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "stadt@wendlingen.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1252,7 +1313,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wiesbaden.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "strassenverkehrsbehoerde@wiesbaden.de",
+            "umweltamt@wiesbaden.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
@@ -1277,7 +1341,10 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wuppertal.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : null,
+        "contactEmails" : [
+            "geodatenzentrum@stadt.wuppertal.de",
+            "presseamt@stadt.wuppertal.de"
+        ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
         "boundingBox" : {
