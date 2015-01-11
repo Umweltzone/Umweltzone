@@ -504,6 +504,31 @@
         }
     },
     {
+        "name" : "krefeld",
+        "displayName" : "Krefeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20krefeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.312430,
+                "longitude" : 6.533754
+            },
+            "northEast" : {
+                "latitude" : 51.356299,
+                "longitude" : 6.590485
+            }
+        }
+    },
+    {
         "name" : "leipzig",
         "displayName" : "Leipzig",
         "listOfCities" : [],
