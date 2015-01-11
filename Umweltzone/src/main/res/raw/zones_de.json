@@ -879,6 +879,31 @@
         }
     },
     {
+        "name" : "osnabrueck",
+        "displayName" : "Osnabrück",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-01-03",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone_osnabrueck_1.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-12-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.244407,
+                "longitude" : 8.002427
+            },
+            "northEast" : {
+                "latitude" : 52.294796,
+                "longitude" : 8.092093
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
