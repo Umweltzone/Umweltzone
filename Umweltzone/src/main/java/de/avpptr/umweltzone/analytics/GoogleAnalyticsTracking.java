@@ -43,6 +43,9 @@ public class GoogleAnalyticsTracking implements Tracking {
             case FaqItemClick:
                 trackEvent("faq_list_action", "list_item_click", "faq_" + parameter);
                 break;
+            case FaqSourceUrlClick:
+                trackEvent("faq_list_action", "url_click", "faq_source_url_" + parameter);
+                break;
             case CityListItemClick:
                 trackEvent("city_list_action", "list_item_click", "city_list_" + parameter);
                 break;
