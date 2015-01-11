@@ -904,6 +904,31 @@
         }
     },
     {
+        "name" : "pfinztal",
+        "displayName" : "Pfinztal",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pfinztal.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.952211,
+                "longitude" : 8.499956
+            },
+            "northEast" : {
+                "latitude" : 49.031417,
+                "longitude" : 8.599789
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
