@@ -1190,5 +1190,30 @@
                 "longitude" : 10.037466
             }
         }
+    },
+    {
+        "name" : "urbach",
+        "displayName" : "Urbach",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20urbach.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.795927,
+                "longitude" : 9.542261
+            },
+            "northEast" : {
+                "latitude" : 48.856388,
+                "longitude" : 9.637190
+            }
+        }
     }
 ]
