@@ -1265,5 +1265,30 @@
                 "longitude" : 8.316164
             }
         }
+    },
+    {
+        "name" : "wuppertal",
+        "displayName" : "Wuppertal",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wuppertal.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.165097,
+                "longitude" : 7.009271
+            },
+            "northEast" : {
+                "latitude" : 51.322850,
+                "longitude" : 7.312082
+            }
+        }
     }
 ]
