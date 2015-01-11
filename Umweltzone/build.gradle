@@ -80,6 +80,10 @@ android {
         }
     }
 
+    aaptOptions {
+        useNewCruncher true
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
