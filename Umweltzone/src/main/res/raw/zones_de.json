@@ -375,6 +375,35 @@
         }
     },
     {
+        "name" : "heilbronn",
+        "displayName" : "Heilbronn",
+        "listOfCities" : [
+                "Frankenbach",
+                "Heilbronn",
+                "Horkheim"
+            ],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heilbronn.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-14",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.1081,
+                "longitude" : 9.13107
+            },
+            "northEast" : {
+                "latitude" : 49.1771,
+                "longitude" : 9.27433
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
