@@ -629,6 +629,31 @@
         }
     },
     {
+        "name" : "magdeburg",
+        "displayName" : "Magdeburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20magdeburg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 52.022566,
+                "longitude" : 11.507941
+            },
+            "northEast" : {
+                "latitude" : 52.236696,
+                "longitude" : 11.771613
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
