@@ -85,7 +85,7 @@ public class MapFragment extends SupportMapFragment {
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
         if (mMap == null) {
-            mTracking.trackError(TrackingPoint.MapIsNullError);
+            mTracking.trackError(TrackingPoint.MapIsNullError, null);
             throw new IllegalStateException("Map is null");
         } else {
             DisplayMetrics displaymetrics = new DisplayMetrics();

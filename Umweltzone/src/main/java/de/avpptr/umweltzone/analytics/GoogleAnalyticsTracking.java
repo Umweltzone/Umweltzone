@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.google.analytics.tracking.android.EasyTracker;
-import com.google.analytics.tracking.android.Fields;
 import com.google.analytics.tracking.android.MapBuilder;
 
 public class GoogleAnalyticsTracking implements Tracking {
@@ -30,11 +29,6 @@ public class GoogleAnalyticsTracking implements Tracking {
 
     public GoogleAnalyticsTracking(Context context) {
         mTracker = EasyTracker.getInstance(context);
-    }
-
-    @Override
-    public void track(TrackingPoint eventName) {
-        track(eventName, null);
     }
 
     @Override
@@ -49,8 +43,8 @@ public class GoogleAnalyticsTracking implements Tracking {
             case FaqItemClick:
                 trackEvent("faq_list_action", "list_item_click", "faq_" + parameter);
                 break;
-            case FaqSourceClick:
-                trackEvent("faq_list_action", "button_push", "faq_source_" + parameter);
+            case FaqSourceUrlClick:
+                trackEvent("faq_list_action", "url_click", "faq_source_url_" + parameter);
                 break;
             case CityListItemClick:
                 trackEvent("city_list_action", "list_item_click", "city_list_" + parameter);
@@ -59,13 +53,13 @@ public class GoogleAnalyticsTracking implements Tracking {
                 trackEvent("city_info_action", "button_push", "show_on_map_" + parameter);
                 break;
             case CityInfoFurtherInfoClick:
-                trackEvent("city_info_action", "button_push", "further_info_" + parameter);
+                trackEvent("city_info_action", "url_click", "further_info_" + parameter);
                 break;
             case CityInfoBadgeOnlineClick:
-                trackEvent("city_info_action", "button_push", "badge_online_" + parameter);
+                trackEvent("city_info_action", "url_click", "badge_online_" + parameter);
                 break;
             case AboutItemClick:
-                trackEvent("about_action", "button_push", "about_item_" + parameter);
+                trackEvent("about_action", "url_click", "about_item_" + parameter);
                 break;
             case SupportMailClick:
                 trackEvent("about_action", "url_click", "support_mail");
@@ -73,12 +67,10 @@ public class GoogleAnalyticsTracking implements Tracking {
             case UserVoiceClick:
                 trackEvent("about_action", "url_click", "user_voice");
                 break;
+            case RatingClick:
+                trackEvent("about_action", "url_click", "play_store_rating");
+                break;
         }
-    }
-
-    @Override
-    public void trackError(TrackingPoint eventName) {
-        trackError(eventName, null);
     }
 
     @Override
@@ -108,12 +100,6 @@ public class GoogleAnalyticsTracking implements Tracking {
 
     private void trackActivityStop(Activity activity) {
         mTracker.activityStop(activity);
-    }
-
-    private void trackView(String screenName) {
-        mTracker.send(
-                MapBuilder.createAppView().set(Fields.SCREEN_NAME, screenName).build()
-        );
     }
 
     private void trackEvent(String category, String action, String label) {

@@ -146,12 +146,6 @@ public class StringHelper {
         return null;
     }
 
-    public static Spanned spannedLinkForString(final Context context, int titleResourceId, int urlResourceId) {
-        final String title = context.getString(titleResourceId);
-        final String url = context.getString(urlResourceId);
-        return Html.fromHtml(linkifiedString(title, url));
-    }
-
     public static Spanned spannedLinkForString(final String title, final String url) {
         return Html.fromHtml(linkifiedString(title, url));
     }

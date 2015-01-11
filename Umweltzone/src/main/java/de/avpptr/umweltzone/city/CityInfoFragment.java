@@ -60,7 +60,7 @@ public class CityInfoFragment extends BaseFragment {
         }
     }
 
-    private void setUpCityInfo(final Activity activity, LowEmissionZone lowEmissionZone) {
+    private void setUpCityInfo(final Activity activity, final LowEmissionZone lowEmissionZone) {
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
@@ -128,18 +128,13 @@ public class CityInfoFragment extends BaseFragment {
             badgeOnlineTextView.setVisibility(View.GONE);
         } else {
             badgeOnlineTextView.setVisibility(View.VISIBLE);
-            String urlBadgeOnlineTitle = activity.getString(R.string.city_info_badge_online_title);
-            badgeOnlineTextView.setText(
-                    StringHelper.spannedLinkForString(urlBadgeOnlineTitle, urlBadgeOnline),
-                    TextView.BufferType.SPANNABLE);
-            badgeOnlineTextView.setMovementMethod(LinkMovementMethod.getInstance());
+            ViewHelper.setupTextViewExtended(activity,
+                    R.id.city_info_badge_online,
+                    R.string.city_info_badge_online_title,
+                    urlBadgeOnline,
+                    TrackingPoint.CityInfoBadgeOnlineClick,
+                    lowEmissionZone.name);
         }
-        badgeOnlineTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoBadgeOnlineClick);
-            }
-        });
 
         // Geometry updated at
         TextView geometryUpdatedAtTextView = (TextView) activity
@@ -162,7 +157,6 @@ public class CityInfoFragment extends BaseFragment {
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoEmptySelectZoneClick);
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }
         });

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,25 +17,22 @@
 
 package de.avpptr.umweltzone.analytics;
 
+import android.util.Log;
+
 public class NoTracking implements Tracking {
 
     @Override
-    public void track(TrackingPoint eventName) {
-        // Do nothing.
-    }
-
-    @Override
     public void track(TrackingPoint eventName, Object parameter) {
-        // Do nothing.
-    }
-
-    @Override
-    public void trackError(TrackingPoint eventName) {
-        // Do nothing.
+        Log.d(getClass().getName(), getLogMessage(eventName, parameter));
     }
 
     @Override
     public void trackError(TrackingPoint eventName, Object parameter) {
-        // Do nothing.
+        Log.e(getClass().getName(), getLogMessage(eventName, parameter));
     }
+
+    private String getLogMessage(TrackingPoint eventName, Object parameter) {
+        return (parameter == null) ? eventName.toString() : eventName + ", " + parameter;
+    }
+
 }

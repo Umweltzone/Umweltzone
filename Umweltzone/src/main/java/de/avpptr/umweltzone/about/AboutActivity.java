@@ -57,7 +57,7 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonActionBarCompat,
                 R.string.appinfo_references_name_actionbarcompat,
                 R.string.appinfo_references_url_actionbarcompat, TrackingPoint.AboutItemClick,
-                "action_bat_compat_library");
+                "action_bar_compat_library");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonJackson,
                 R.string.appinfo_references_name_jackson,
                 R.string.appinfo_references_url_jackson, TrackingPoint.AboutItemClick,
@@ -85,7 +85,7 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonOdbl,
                 R.string.appinfo_license_url_title_odbl,
                 R.string.appinfo_license_url_odbl, TrackingPoint.AboutItemClick,
-                "gpl_url");
+                "odbl_url");
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonCreativeCommons,
                 R.string.appinfo_license_url_title_cc,
                 R.string.appinfo_license_url_cc, TrackingPoint.AboutItemClick,
