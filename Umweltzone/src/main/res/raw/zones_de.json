@@ -429,6 +429,31 @@
         }
     },
     {
+        "name" : "ilsfeld",
+        "displayName" : "Ilsfeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ilsfeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.027032,
+                "longitude" : 9.197915
+            },
+            "northEast" : {
+                "latitude" : 49.087777,
+                "longitude" : 9.320653
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
