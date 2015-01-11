@@ -1,6 +1,46 @@
 # Umweltzone changelog
 
 
+## [v.2.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.1.0)
+
+* Published: 2015-01-12
+
+### Bug fixes
+
+* Fix tracking event labels., [8bbcc](https://bitbucket.org/tbsprs/umweltzone/commits/8bbcc670ed13c810ae812e2dd2150ab2c201114f)
+* Fix tracking for badge online link., [e49d2](https://bitbucket.org/tbsprs/umweltzone/commits/e49d20d8072be5d18f62291f394535eeefb3ca55)
+* Bugfix: Clicks on text links did not trigger a tracking event., [e9157](https://bitbucket.org/tbsprs/umweltzone/commits/e9157cc3a8768eb3c1d766967c6966cef0e0dd82)
+* Update former tracking actions from "button_push" to "url_click"., [f1026](https://bitbucket.org/tbsprs/umweltzone/commits/f10263daa7d66e06801640ea18289411f56d9183)
+* Handle missing tracking event for Play Store url clicks., [55c2b](https://bitbucket.org/tbsprs/umweltzone/commits/55c2b76513b303c9c5dd9feedf6e9bfd214c489a)
+* Handle missing tracking event for FAQs source url clicks., [c0967](https://bitbucket.org/tbsprs/umweltzone/commits/c09678b61e4b76fca37dbd915f2e8b210c4951f2)
+
+### Features, improvements and maintenance
+
+* Add zone data for 13 cities with and 20 without coordinates., [ba6fa](https://bitbucket.org/tbsprs/umweltzone/commits/ba6faff3435ccbc48345cd2a627e2c1860b3b604)
+* Update zone number for Münster., [4249d](https://bitbucket.org/tbsprs/umweltzone/commits/4249d0dd32d682a46df2bf890ae9e3abf05181ac)
+* Add logging to tracking in debug mode., [739da](https://bitbucket.org/tbsprs/umweltzone/commits/739da2ce29ab7bf9b2d516f44adb73456edbde82)
+* Simpify StringHelper interface., [0cce0](https://bitbucket.org/tbsprs/umweltzone/commits/0cce06382657a3d9c1c86f53250cc0db26f0e2be)
+* Simplify tracking interface., [a4a9b](https://bitbucket.org/tbsprs/umweltzone/commits/a4a9bbce661c3d0fee5d85d745109e2e02f506d8)
+* Support zones without geometry data., [58ea1](https://bitbucket.org/tbsprs/umweltzone/commits/58ea17f0d8eaef7536f02b53f154d261d0c4028b)
+* Use designtime layout attributes., [6e7b9](https://bitbucket.org/tbsprs/umweltzone/commits/6e7b9753ed704110db45f4ae547a7cb8ab4ccb9d)
+* Update Jackson to v.2.5.0., [92ed5](https://bitbucket.org/tbsprs/umweltzone/commits/92ed5378138ee4f9d6929c457b38e24e4a11c94b)
+* Add VersionEye plug-in v.1.0.1., [1b77c](https://bitbucket.org/tbsprs/umweltzone/commits/1b77cbcea43a273e1e658bbe5cd201bff6b135b4)
+* Update Gradle plug-in to v.1.0.0., [73281](https://bitbucket.org/tbsprs/umweltzone/commits/73281d26d7e3ed4124fd9d1b5fa07d34e10ff223)
+* Update Gradle wrapper to v.2.2.1., [10861](https://bitbucket.org/tbsprs/umweltzone/commits/10861acc9c2abcc74457de4fed8b4fa12defe01d)
+* Update build tools version to v.21.1.1., [b6a264](https://bitbucket.org/tbsprs/umweltzone/commits/b6a26401fcba0df3ab8f79ba33bb551184e7d0b8)
+* Update ckChangeLog to v.1.2.1., [ee965](https://bitbucket.org/tbsprs/umweltzone/commits/ee965970c69a672bb9c16ab4bd169f7635f9c42e)
+* Revise license information., [379f3](https://bitbucket.org/tbsprs/umweltzone/commits/379f3497d3a819eeaf4edb5ccc4d520e305c7651)
+* Add geometry sources for each zone., [8bbf9](https://bitbucket.org/tbsprs/umweltzone/commits/8bbf9c80d575ac1e4f788066da92ea51c89d4ff7)
+* Add individual dates for last geometry updates., [45897](https://bitbucket.org/tbsprs/umweltzone/commits/4589779626bb406ff271668f54949fe06c5977e0)
+* Update TypedReferences to v.2.0.0., [e301b](https://bitbucket.org/tbsprs/umweltzone/commits/e301b28d0862987468628c643a3f0cc6dac1c6a1)
+* Fix library versions to avoid unpredictable and unrepeatable builds., [b9cdb](https://bitbucket.org/tbsprs/umweltzone/commits/b9cdb9654598bec2b1be46490bc2dab5fe1818f6)
+* Update targetSdkVersion to 20., [f2a4a](https://bitbucket.org/tbsprs/umweltzone/commits/f2a4a6a029eab0ddba2961a16d34bf506256c7e5)
+* Update compileSdkVersion to 20., [f7260](https://bitbucket.org/tbsprs/umweltzone/commits/f72606d8a1d4f6528934729a1ad3a4f9068b4c76)
+* Update Google support libraries to v.20.0.0., [d97e3](https://bitbucket.org/tbsprs/umweltzone/commits/d97e38738419a8e76ff12ab7b45fc71c64a3d3be)
+* Avoid unnecessary layout inflation., [66ca5](https://bitbucket.org/tbsprs/umweltzone/commits/66ca5fa4af39641d73bc25d5291b5b66183299e9)
+* Favor direct use of LruCache. Thanks to daus-salar!, [bcbb2](https://bitbucket.org/tbsprs/umweltzone/commits/bcbb226382149dccf83bf56d1026306062f52e05)
+
+
 ## [v.2.0.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.0.1)
 
 * Published: 2014-07-07

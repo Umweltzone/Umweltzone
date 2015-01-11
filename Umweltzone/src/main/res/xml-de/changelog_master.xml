@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,40 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="2.1.0"
+        versioncode="21000">
+        <change>
+            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Bonn, Halle, Heidenheim, Heilbronn, Herrenberg, Mainz, Mannheim, Osnabrück, Pforzheim, Remscheid, Reutlingen, Schramberg und Siegen).
+        </change>
+        <change>
+            Neu: Städte ohne Geokoordinaten werden unterstützt.
+        </change>
+        <change>
+            Neu: Funktion zur persönlichen Kontaktaufnahme mit Behörden via E-Mail eingebaut.
+        </change>
+        <change>
+            Neu: 20 Städte ohne Geokoordinaten hinzugefügt (Bochum, Dinslaken, Erfurt, Heidelberg, Ilsfeld, Karlsruhe, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Magdeburg, Mühlacker, Offenbach, Pfinztal, Schwäbisch Gmünd, Tübingen, Urbach, Wendlingen, Wiesbaden und Wuppertal).
+        </change>
+        <change>
+            Aktualisierung der Zonenlevels für Münster.
+        </change>
+        <change>
+            Neu: Quelle der Geometriedaten für jede Zone hinzugefügt.
+        </change>
+        <change>
+            Neu: Anzeige des Datums der letzten Aktualisierung der Geometriedaten.
+        </change>
+        <change>
+            Aktualisierung der Lizenzinformationen.
+        </change>
+        <change>
+            Neu: Überarbeiteter Zwischenspeicher-Mechanismus (Cache) zur Verbesserung der Ladezeiten.
+        </change>
+        <change>
+            Bugfix: Nicht funktionierende Protokollierung repariert.
+        </change>
+    </release>
     <release
         version="2.0.1"
         versioncode="20100">
