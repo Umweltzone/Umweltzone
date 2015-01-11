@@ -66,7 +66,7 @@ public class LowEmissionZone {
             mLowEmissionZones = ContentProvider.getLowEmissionZones(context);
         }
         if (mLowEmissionZones == null) {
-            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError);
+            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         for (LowEmissionZone lowEmissionZone : mLowEmissionZones) {

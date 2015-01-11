@@ -21,7 +21,5 @@ public interface Tracking {
 
     void track(TrackingPoint eventName, Object parameter);
 
-    void trackError(TrackingPoint eventName);
-
     void trackError(TrackingPoint eventName, Object parameter);
 }

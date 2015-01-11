@@ -68,11 +68,6 @@ public class GoogleAnalyticsTracking implements Tracking {
     }
 
     @Override
-    public void trackError(TrackingPoint eventName) {
-        trackError(eventName, null);
-    }
-
-    @Override
     public void trackError(TrackingPoint eventName, Object parameter) {
         boolean errorIsFatal = false;
         String eventDescription = eventName.toString();

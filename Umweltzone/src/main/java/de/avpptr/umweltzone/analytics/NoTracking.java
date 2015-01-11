@@ -25,11 +25,6 @@ public class NoTracking implements Tracking {
     }
 
     @Override
-    public void trackError(TrackingPoint eventName) {
-        // Do nothing.
-    }
-
-    @Override
     public void trackError(TrackingPoint eventName, Object parameter) {
         // Do nothing.
     }

@@ -72,7 +72,7 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
                 }
                 view.setTag(viewHolder);
             } else {
-                mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError);
+                mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError, null);
                 throw new IllegalStateException("City row could be inflated.");
             }
         } else {
