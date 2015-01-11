@@ -979,6 +979,31 @@
         }
     },
     {
+        "name" : "reutlingen",
+        "displayName" : "Reutlingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20reutlingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-08",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.469189,
+                "longitude" : 9.193419
+            },
+            "northEast" : {
+                "latitude" : 48.500609,
+                "longitude" : 9.229387
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
