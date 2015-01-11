@@ -1142,6 +1142,31 @@
         }
     },
     {
+        "name" : "tuebingen",
+        "displayName" : "Tübingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20tuebingen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.448187,
+                "longitude" : 8.959893
+            },
+            "northEast" : {
+                "latitude" : 48.595993,
+                "longitude" : 9.137734
+            }
+        }
+    },
+    {
         "name" : "ulm",
         "displayName" : "Ulm",
         "listOfCities" : [],
