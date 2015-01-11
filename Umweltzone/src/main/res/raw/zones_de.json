@@ -50,6 +50,31 @@
         }
     },
     {
+        "name" : "bochum",
+        "displayName" : "Bochum",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20bochum.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.453950,
+                "longitude" : 7.102106
+            },
+            "northEast" : {
+                "latitude" : 51.531375,
+                "longitude" : 7.349335
+            }
+        }
+    },
+    {
         "name" : "bremen",
         "displayName" : "Bremen",
         "listOfCities" : [],
