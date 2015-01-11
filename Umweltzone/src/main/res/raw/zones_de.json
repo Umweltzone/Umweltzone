@@ -454,6 +454,31 @@
         }
     },
     {
+        "name" : "karlsruhe",
+        "displayName" : "Karlsruhe",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20karlsruhe.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.994348,
+                "longitude" : 8.353000
+            },
+            "northEast" : {
+                "latitude" : 49.024274,
+                "longitude" : 8.424135
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
