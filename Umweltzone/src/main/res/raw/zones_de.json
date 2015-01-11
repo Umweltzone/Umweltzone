@@ -125,6 +125,31 @@
         }
     },
     {
+        "name" : "dinslaken",
+        "displayName" : "Dinslaken",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20dinslaken.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.527512,
+                "longitude" : 6.677306
+            },
+            "northEast" : {
+                "latitude" : 51.616387,
+                "longitude" : 6.874888
+            }
+        }
+    },
+    {
         "name" : "duesseldorf",
         "displayName" : "Düsseldorf",
         "listOfCities" : [],
