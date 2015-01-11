@@ -67,6 +67,9 @@ public class GoogleAnalyticsTracking implements Tracking {
             case UserVoiceClick:
                 trackEvent("about_action", "url_click", "user_voice");
                 break;
+            case RatingClick:
+                trackEvent("about_action", "url_click", "play_store_rating");
+                break;
         }
     }
 
