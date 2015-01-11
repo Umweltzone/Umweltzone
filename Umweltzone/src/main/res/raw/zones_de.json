@@ -350,6 +350,31 @@
         }
     },
     {
+        "name" : "heidenheim",
+        "displayName" : "Heidenheim an der Brenz",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidenheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.650845,
+                "longitude" : 10.120929
+            },
+            "northEast" : {
+                "latitude" : 48.715467,
+                "longitude" : 10.189646
+            }
+        }
+    },
+    {
         "name" : "cologne",
         "displayName" : "Köln",
         "listOfCities" : [],
