@@ -18,9 +18,11 @@
 package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.text.Spanned;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -57,8 +59,9 @@ public abstract class ViewHelper {
                                              final TrackingPoint trackingPoint,
                                              final String trackingString) {
         TextView textView = (TextView) view.findViewById(textViewId);
-        setupTextViewExtended(textView,
+        setupTextViewExtended(view.getContext(), textView,
                 StringHelper.spannedLinkForString(title, url),
+                url,
                 trackingPoint, trackingString);
     }
 
@@ -71,8 +74,9 @@ public abstract class ViewHelper {
 
         TextView textView = (TextView) activity.findViewById(textViewId);
         String title = activity.getString(titleResourceId);
-        setupTextViewExtended(textView,
+        setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
+                url,
                 trackingPoint, trackingString);
     }
 
@@ -84,19 +88,26 @@ public abstract class ViewHelper {
                                              final String trackingString) {
 
         TextView textView = (TextView) activity.findViewById(textViewId);
-        setupTextViewExtended(textView,
+        final String tempUrl = activity.getString(urlResourceId);
+        final String url = tempUrl.contains("@") ? "mailto:" + tempUrl : tempUrl;
+        setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(activity.getApplicationContext(), titleResourceId, urlResourceId),
+                url,
                 trackingPoint, trackingString);
     }
 
-    private static void setupTextViewExtended(TextView textView, final Spanned text,
+    private static void setupTextViewExtended(final Context context,
+                                              TextView textView,
+                                              final Spanned text,
+                                              final String url,
                                               final TrackingPoint trackingPoint,
                                               final String trackingString) {
         textView.setText(text, TextView.BufferType.SPANNABLE);
-        textView.setMovementMethod(LinkMovementMethod.getInstance());
+        final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                context.startActivity(intent);
                 Umweltzone.getTracker().track(trackingPoint, trackingString);
             }
         });
