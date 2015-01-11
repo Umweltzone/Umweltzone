@@ -929,6 +929,31 @@
         }
     },
     {
+        "name" : "pforzheim",
+        "displayName" : "Pforzheim",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pforzheim.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-09-11",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.885610,
+                "longitude" : 8.672546
+            },
+            "northEast" : {
+                "latitude" : 48.898061,
+                "longitude" : 8.720929
+            }
+        }
+    },
+    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "listOfCities" : [
