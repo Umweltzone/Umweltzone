@@ -37,14 +37,23 @@ import java.util.List;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
 
+    protected final Tracking mTracking;
+
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();
+
+    public ZoneNotDrawableDialog() {
+        mTracking = Umweltzone.getTracker();
+    }
 
     @NonNull
     @Override
@@ -80,6 +89,8 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                                         getEmailSubject(zoneDisplayName),
                                         getEmailMessage(zoneDisplayName)
                                 );
+                                mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
+                                        lowEmissionZone.name);
                                 startActivity(Intent.createChooser(intent, getString(
                                         R.string.zone_not_drawable_app_chooser_title)));
                             }
@@ -89,6 +100,8 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             @Override
                             public void onClick(final DialogInterface dialog, int whichButton) {
                                 // Nothing to do here
+                                mTracking.track(TrackingPoint.ZoneNotDrawableLaterClick,
+                                        lowEmissionZone.name);
                             }
                         });
         return builder.create();

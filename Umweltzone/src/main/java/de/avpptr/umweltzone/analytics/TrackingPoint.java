@@ -30,6 +30,8 @@ public enum TrackingPoint {
     SupportMailClick("support_mail_click"),
     UserVoiceClick("user_voice_click"),
     RatingClick("rating_click"),
+    ZoneNotDrawableLaterClick("zone_not_drawable_later"),
+    ZoneNotDrawableOpenEmailClick("zone_not_drawable_open_email"),
 
     // Errors
     ResourceNotFoundError("resource_not_found"),

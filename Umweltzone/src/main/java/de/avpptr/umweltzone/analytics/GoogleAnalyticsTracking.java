@@ -70,6 +70,12 @@ public class GoogleAnalyticsTracking implements Tracking {
             case RatingClick:
                 trackEvent("about_action", "url_click", "play_store_rating");
                 break;
+            case ZoneNotDrawableOpenEmailClick:
+                trackEvent("zone_not_drawable", "button_push", "open_email_now_" + parameter);
+                break;
+            case ZoneNotDrawableLaterClick:
+                trackEvent("zone_not_drawable", "button_push", "open_email_later_" + parameter);
+                break;
         }
     }
 
