@@ -1092,6 +1092,31 @@
         }
     },
     {
+        "name" : "siegen",
+        "displayName" : "Siegen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20siegen.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-01-02",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.863838,
+                "longitude" : 8.004170
+            },
+            "northEast" : {
+                "latitude" : 50.903801,
+                "longitude" : 8.032499
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "listOfCities" : [],
