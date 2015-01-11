@@ -17,15 +17,22 @@
 
 package de.avpptr.umweltzone.analytics;
 
+import android.util.Log;
+
 public class NoTracking implements Tracking {
 
     @Override
     public void track(TrackingPoint eventName, Object parameter) {
-        // Do nothing.
+        Log.d(getClass().getName(), getLogMessage(eventName, parameter));
     }
 
     @Override
     public void trackError(TrackingPoint eventName, Object parameter) {
-        // Do nothing.
+        Log.e(getClass().getName(), getLogMessage(eventName, parameter));
     }
+
+    private String getLogMessage(TrackingPoint eventName, Object parameter) {
+        return (parameter == null) ? eventName.toString() : eventName + ", " + parameter;
+    }
+
 }
