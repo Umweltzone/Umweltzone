@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,7 +22,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.TextView;
 
 import java.util.List;
 
@@ -111,15 +110,7 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
-            TextView sourceUrlTextView = (TextView) convertView.findViewById(R.id.faq_source_url);
-            sourceUrlTextView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mTracking.track(TrackingPoint.FaqSourceClick, itemDescription);
-                }
-            });
         }
-
         final String childText = faqAnswer.text;
         ViewHelper.setupTextViewSimple(convertView, R.id.faq_answer, childText);
 

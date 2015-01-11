@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -48,9 +48,6 @@ public class GoogleAnalyticsTracking implements Tracking {
                 break;
             case FaqItemClick:
                 trackEvent("faq_list_action", "list_item_click", "faq_" + parameter);
-                break;
-            case FaqSourceClick:
-                trackEvent("faq_list_action", "button_push", "faq_source_" + parameter);
                 break;
             case CityListItemClick:
                 trackEvent("city_list_action", "list_item_click", "city_list_" + parameter);

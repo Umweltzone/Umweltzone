@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,12 +21,10 @@ public enum TrackingPoint {
     ActivityStart("activity_start"),
     ActivityStop("activity_stop"),
     CityListItemClick("city_list"),
-    CityInfoEmptySelectZoneClick("city_info_empty_select_zone_click"),
     CityInfoShowOnMapClick("city_info_show_on_map_click"),
     CityInfoFurtherInfoClick("city_info_further_info_click"),
     CityInfoBadgeOnlineClick("city_info_badge_online_click"),
     FaqItemClick("faq_item_click"),
-    FaqSourceClick("faq_source_click"),
     FaqSourceUrlClick("faq_source_url_click"),
     AboutItemClick("about_item_click"),
     SupportMailClick("support_mail_click"),

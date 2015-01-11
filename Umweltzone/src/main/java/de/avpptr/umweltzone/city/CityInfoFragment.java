@@ -162,7 +162,6 @@ public class CityInfoFragment extends BaseFragment {
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoEmptySelectZoneClick);
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }
         });
