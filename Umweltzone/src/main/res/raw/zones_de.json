@@ -729,6 +729,31 @@
         }
     },
     {
+        "name" : "muehlacker",
+        "displayName" : "Mühlacker",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muehlacker.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.897643,
+                "longitude" : 8.765470
+            },
+            "northEast" : {
+                "latitude" : 49.001809,
+                "longitude" : 8.927175
+            }
+        }
+    },
+    {
         "name" : "munich",
         "displayName" : "München",
         "listOfCities" : [],
