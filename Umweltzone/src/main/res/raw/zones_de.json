@@ -1042,6 +1042,31 @@
         }
     },
     {
+        "name" : "schramberg",
+        "displayName" : "Schramberg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-01-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schramberg.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2014-10-12",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.206869,
+                "longitude" : 8.371802
+            },
+            "northEast" : {
+                "latitude" : 48.238550,
+                "longitude" : 8.416522
+            }
+        }
+    },
+    {
         "name" : "stuttgart",
         "displayName" : "Stuttgart",
         "listOfCities" : [],
