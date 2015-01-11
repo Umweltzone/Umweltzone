@@ -1240,5 +1240,30 @@
                 "longitude" : 9.427816
             }
         }
+    },
+    {
+        "name" : "wiesbaden",
+        "displayName" : "Wiesbaden",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2013-02-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wiesbaden.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.033733,
+                "longitude" : 8.174330
+            },
+            "northEast" : {
+                "latitude" : 50.128780,
+                "longitude" : 8.316164
+            }
+        }
     }
 ]
