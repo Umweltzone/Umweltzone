@@ -93,6 +93,7 @@ android {
         release {
             minifyEnabled true
             proguardFile 'proguard.cfg'
+            shrinkResources true
             signingConfig signingConfigs.release
         }
     }
