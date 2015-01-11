@@ -175,6 +175,31 @@
         }
     },
     {
+        "name" : "erfurt",
+        "displayName" : "Erfurt",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2012-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20erfurt.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.956629,
+                "longitude" : 10.996579
+            },
+            "northEast" : {
+                "latitude" : 51.011143,
+                "longitude" : 11.064259
+            }
+        }
+    },
+    {
         "name" : "frankfurt_main",
         "displayName" : "Frankfurt am Main",
         "listOfCities" : [],
