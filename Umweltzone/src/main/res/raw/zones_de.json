@@ -529,6 +529,31 @@
         }
     },
     {
+        "name" : "langenfeld",
+        "displayName" : "Langenfeld",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2014-07-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20langenfeld.php",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 51.064924,
+                "longitude" : 6.898244
+            },
+            "northEast" : {
+                "latitude" : 51.145978,
+                "longitude" : 7.009481
+            }
+        }
+    },
+    {
         "name" : "leipzig",
         "displayName" : "Leipzig",
         "listOfCities" : [],
