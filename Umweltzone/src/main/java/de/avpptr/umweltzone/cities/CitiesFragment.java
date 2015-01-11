@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -75,6 +75,7 @@ public class CitiesFragment extends ListFragment {
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         preferencesHelper.storeLastKnownLocation(lowEmissionZone.boundingBox);
         preferencesHelper.storeLastKnownLocation(lowEmissionZone.name);
+        preferencesHelper.storeZoneIsDrawable(lowEmissionZone.containsGeometryInformation());
     }
 
 }

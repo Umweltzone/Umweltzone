@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -41,6 +41,7 @@ public class LowEmissionZone {
     public Date abroadLicensedVehicleZoneNumberUntil;
     public String urlUmweltPlaketteDe;
     public String urlBadgeOnline;
+    public List<String> contactEmails;
     public String geometrySource;
     public Date geometryUpdatedAt;
 
@@ -76,6 +77,10 @@ public class LowEmissionZone {
         return null;
     }
 
+    public boolean containsGeometryInformation() {
+        return geometrySource != null && geometryUpdatedAt != null;
+    }
+
     @Override
     public String toString() {
         return "name: " + name +
@@ -89,6 +94,7 @@ public class LowEmissionZone {
                 ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
                 ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe +
                 ", urlBadgeOnline: " + urlBadgeOnline +
+                ", contactEmails: " + contactEmails +
                 ", geometrySource: " + geometrySource +
                 ", geometryUpdatedAt: " + geometryUpdatedAt;
     }

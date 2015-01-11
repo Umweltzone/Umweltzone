@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -286,5 +286,50 @@
     <!-- FaqActivity -->
     <string name="faq_activity_title">FAQ</string>
     <string name="faq_source_url_title_text">Source</string>
+
+    <!-- ZoneNotDrawableDialog -->
+    <string name="zone_not_drawable_title">
+        Help now &#8230;
+    </string>
+    <string name="zone_not_drawable_notice">
+        <![CDATA[&#8230; so that the <b>low emission zone of %1$s</b> can
+        be displayed, too.<br />
+        <br />
+        The problem is that %2$s does not publish the geo-coordinates (latitude
+        and longitude values) which describe the location of the low emission zone in
+        a <b>suitable (machine-readable) file format</b>. The needed information cannot
+        be extracted from an image, a PDF nor web pages. For this reason it is not
+        possible to render the exact location and shape of the low emission zone.<br />
+        <br />
+        But you can help to change this situation with a <b>personal email</b>.
+        The message has already been composed. Just add your name at the bottom
+        and you are ready to send it out.]]>
+    </string>
+    <string name="zone_not_drawable_later">Maybe later</string>
+    <string name="zone_not_drawable_open_email">Open email</string>
+    <string name="zone_not_drawable_app_chooser_title">Open draft with &#8230;</string>
+    <string name="zone_not_drawable_email_subject">
+        Umweltzone Android App, Integration <xliff:g id="zoneName">%1$s</xliff:g>
+    </string>
+        <string name="zone_not_drawable_email_message">
+        <![CDATA[<p>Dear Sir or Madam.
+        <br />
+        I am using the free and open source application &quot;Umweltzone&quot; [1]
+        which allows me to get informed about the location of low emission zones and
+        individual regulations in many cities. I consider this application as an useful
+        addition to the existing offer of information of the cities.<br />
+        <br />
+        Unfortunately, the <b>low emission zone of %1$s</b> cannot be rendered. This is
+        because the geo-coordinates which describe its location have not been
+        published. Thus, I would like to personally ask you to release the
+        geo-coordinates under a <b>free license</b>. To facilitate the data processing
+        the following <b>machine-readable file formats</b> are suitable:
+        ESRI Shapefiles, CSV, GeoJSON.<br />
+        <br />
+        Best regards</p>
+
+        <p>___<br />
+        [1]: <a href="http://play.google.com/store/apps/details?id=de.avpptr.umweltzone">http://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
+    </string>
 
 </resources>
