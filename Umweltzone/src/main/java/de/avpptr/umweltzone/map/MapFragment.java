@@ -26,6 +26,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -197,6 +198,7 @@ public class MapFragment extends SupportMapFragment {
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }
         }
+        updateSubTitle();
     }
 
     private void drawPolygonOverlay() {
@@ -237,6 +239,15 @@ public class MapFragment extends SupportMapFragment {
             mPreferencesHelper.storeLastKnownLocation(mapCenter);
             float zoomLevel = mMap.getCameraPosition().zoom;
             mPreferencesHelper.storeZoomLevel(zoomLevel);
+        }
+    }
+
+    private void updateSubTitle() {
+        ActionBarActivity activity = (ActionBarActivity) getActivity();
+        final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
+        if (lowEmissionZone != null) {
+            String title = lowEmissionZone.displayName;
+            activity.getSupportActionBar().setSubtitle(title);
         }
     }
 
