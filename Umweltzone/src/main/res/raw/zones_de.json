@@ -878,19 +878,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20offenbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umweltamt@offenbach.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Amt für Umwelt, Energie und Klimaschutz, Offenbach am Main",
+        "geometryUpdatedAt" : "2015-01-16",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.044758,
-                "longitude" : 8.719388
+                "latitude" : 50.064644,
+                "longitude" : 8.726488
             },
             "northEast" : {
-                "latitude" : 50.139250,
-                "longitude" : 8.847104
+                "latitude" : 50.137010,
+                "longitude" : 8.842745
             }
         }
     },
