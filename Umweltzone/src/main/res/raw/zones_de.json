@@ -1170,21 +1170,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20tuebingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umwelt-klimaschutz@tuebingen.de",
-            "bernd.schott@tuebingen.de",
-            "hans-peter.kern@tuebingen.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Landesamt für Geoinformation und Landentwicklung, Baden-Württemberg, www.lgl-bw.de",
+        "geometryUpdatedAt" : "2015-01-01",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.448187,
-                "longitude" : 8.959893
+                "latitude" : 48.450584,
+                "longitude" : 8.964478
             },
             "northEast" : {
-                "latitude" : 48.595993,
-                "longitude" : 9.137734
+                "latitude" : 48.593713,
+                "longitude" : 9.131075
             }
         }
     },
