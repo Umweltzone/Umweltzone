@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,7 +17,14 @@
 
 package de.avpptr.umweltzone.contract;
 
+import de.avpptr.umweltzone.BuildConfig;
+
 public interface BundleKeys {
-    public static final String CITY_CHANGE = "de.avpptr.umweltzone.bundle.key.CITY_CHANGE";
-    public static final String HOME = "de.avpptr.umweltzone.bundle.key.HOME";
+
+    public static final String CITY_CHANGE =
+            BuildConfig.APPLICATION_ID + ".bundle.key.CITY_CHANGE";
+
+    public static final String HOME =
+            BuildConfig.APPLICATION_ID + ".bundle.key.HOME";
+
 }
