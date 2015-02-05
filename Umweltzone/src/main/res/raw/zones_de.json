@@ -1245,19 +1245,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wendlingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "stadt@wendlingen.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.642897,
-                "longitude" : 9.349367
+                "latitude" : 48.660775,
+                "longitude" : 9.368358
             },
             "northEast" : {
-                "latitude" : 48.692779,
-                "longitude" : 9.427816
+                "latitude" : 48.683706,
+                "longitude" : 9.409533
             }
         }
     },
