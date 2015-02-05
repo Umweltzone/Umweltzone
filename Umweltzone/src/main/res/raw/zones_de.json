@@ -188,21 +188,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20erfurt.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "ausnahmegenehmigung.umweltzone@erfurt.de",
-            "stadtverwaltung@erfurt.de",
-            "tiefbau-verkehr@erfurt.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Tiefbau- und Verkehrsamt, Erfurt",
+        "geometryUpdatedAt" : "2015-01-28",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.956629,
-                "longitude" : 10.996579
+                "latitude" : 50.956582,
+                "longitude" : 10.996269
             },
             "northEast" : {
-                "latitude" : 51.011143,
-                "longitude" : 11.064259
+                "latitude" : 51.011862,
+                "longitude" : 11.064444
             }
         }
     },
