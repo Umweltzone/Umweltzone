@@ -446,21 +446,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ilsfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "gemeinde@ilsfeld.de",
-            "thomas.stutz@ilsfeld.de",
-            "sven.frank@ilsfeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 49.027032,
-                "longitude" : 9.197915
+                "latitude" : 49.048605,
+                "longitude" : 9.231600
             },
             "northEast" : {
-                "latitude" : 49.087777,
-                "longitude" : 9.320653
+                "latitude" : 49.061221,
+                "longitude" : 9.255589
             }
         }
     },
