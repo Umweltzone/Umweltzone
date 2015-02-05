@@ -626,19 +626,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ludwigsburg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "laerm@ludwigsburg.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.871159,
-                "longitude" : 9.128447
+                "latitude" : 48.847690,
+                "longitude" : 9.045311
             },
             "northEast" : {
-                "latitude" : 48.933898,
-                "longitude" : 9.314184
+                "latitude" : 48.978120,
+                "longitude" : 9.273868
             }
         }
     },
