@@ -526,20 +526,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20krefeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "wolfgang.kritzler@krefeld.de",
-            "fb62@krefeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Vermessungs- und Katasterwesen, Krefeld",
+        "geometryUpdatedAt" : "2015-01-13",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.312430,
-                "longitude" : 6.533754
+                "latitude" : 51.312202,
+                "longitude" : 6.533726
             },
             "northEast" : {
-                "latitude" : 51.356299,
-                "longitude" : 6.590485
+                "latitude" : 51.356344,
+                "longitude" : 6.594050
             }
         }
     },
