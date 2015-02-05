@@ -551,21 +551,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20langenfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "luftreinhaltung@brd.nrw.de",
-            "poststelle@lanuv.nrw.de",
-            "info@langenfeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Landesamt für Natur, Umwelt und Verbraucherschutz NRW, Recklinghausen",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.064924,
-                "longitude" : 6.898244
+                "latitude" : 51.117037,
+                "longitude" : 6.956629
             },
             "northEast" : {
-                "latitude" : 51.145978,
-                "longitude" : 7.009481
+                "latitude" : 51.128650,
+                "longitude" : 6.978380
             }
         }
     },
