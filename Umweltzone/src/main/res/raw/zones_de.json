@@ -138,20 +138,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20dinslaken.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "dieter.gedack@dinslaken.de",
-            "monika.hans@dinslaken.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Fachdienst Stadtentwicklung und Bauleitplanung, Dinslaken",
+        "geometryUpdatedAt" : "2015-01-20",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.527512,
-                "longitude" : 6.677306
+                "latitude" : 51.539118,
+                "longitude" : 6.724588
             },
             "northEast" : {
-                "latitude" : 51.616387,
-                "longitude" : 6.874888
+                "latitude" : 51.570214,
+                "longitude" : 6.756431
             }
         }
     },
