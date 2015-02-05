@@ -753,20 +753,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muehlacker.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "stadt@muehlacker.de",
-            "tiefbau@stadt-muehlacker.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Abteilung Geoinformation, Mühlacker",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.897643,
-                "longitude" : 8.765470
+                "latitude" : 48.945481,
+                "longitude" : 8.834968
             },
             "northEast" : {
-                "latitude" : 49.001809,
-                "longitude" : 8.927175
+                "latitude" : 48.954739,
+                "longitude" : 8.872681
             }
         }
     },
