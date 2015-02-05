@@ -1220,22 +1220,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20urbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "info@urbach.de",
-            "bauamt@urbach.de",
-            "baumeister@urbach.de",
-            "koch@urbach.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.795927,
-                "longitude" : 9.542261
+                "latitude" : 48.803810,
+                "longitude" : 9.568300
             },
             "northEast" : {
-                "latitude" : 48.856388,
-                "longitude" : 9.637190
+                "latitude" : 48.825648,
+                "longitude" : 9.592254
             }
         }
     },
