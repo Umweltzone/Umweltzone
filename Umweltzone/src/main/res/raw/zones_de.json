@@ -601,20 +601,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leonberg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "kbm@leonberg.de",
-            "posteingang@lrabb.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.745671,
-                "longitude" : 8.952203
+                "latitude" : 48.741741,
+                "longitude" : 8.959816
             },
             "northEast" : {
-                "latitude" : 48.837275,
-                "longitude" : 9.069620
+                "latitude" : 48.900599,
+                "longitude" : 9.142809
             }
         }
     },
