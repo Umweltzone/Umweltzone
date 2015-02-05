@@ -1095,21 +1095,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schwaebisch-gmuend.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "presse@schwaebisch-gmuend.de",
-            "stadtverwaltung@schwaebisch-gmuend.de",
-            "ordnungsamt@schwaebisch-gmuend.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.714296,
-                "longitude" : 9.708145
+                "latitude" : 48.782110,
+                "longitude" : 9.763678
             },
             "northEast" : {
-                "latitude" : 48.847092,
-                "longitude" : 9.939888
+                "latitude" : 48.809672,
+                "longitude" : 9.835066
             }
         }
     },
