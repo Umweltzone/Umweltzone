@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,12 +20,11 @@ package de.avpptr.umweltzone.map;
 import android.os.Bundle;
 import android.view.Menu;
 
-import org.ligi.tracedroid.sending.TraceDroidEmailSender;
-
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
+import de.avpptr.umweltzone.tracedroid.TraceDroidEmailSender;
 
 public class MainActivity extends BaseActivity {
 
@@ -35,7 +34,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.fragment_map);
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
-        TraceDroidEmailSender.sendStackTraces(getString(R.string.config_tracedroid_email_address), this);
+        TraceDroidEmailSender.sendStackTraces(this);
         migrateCityNameFrankfurtInPreferences();
         showChangeLogDialog();
     }
