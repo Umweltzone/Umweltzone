@@ -138,20 +138,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20dinslaken.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "dieter.gedack@dinslaken.de",
-            "monika.hans@dinslaken.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Fachdienst Stadtentwicklung und Bauleitplanung, Dinslaken",
+        "geometryUpdatedAt" : "2015-01-20",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.527512,
-                "longitude" : 6.677306
+                "latitude" : 51.539118,
+                "longitude" : 6.724588
             },
             "northEast" : {
-                "latitude" : 51.616387,
-                "longitude" : 6.874888
+                "latitude" : 51.570214,
+                "longitude" : 6.756431
             }
         }
     },
@@ -191,21 +188,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20erfurt.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "ausnahmegenehmigung.umweltzone@erfurt.de",
-            "stadtverwaltung@erfurt.de",
-            "tiefbau-verkehr@erfurt.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Tiefbau- und Verkehrsamt, Erfurt",
+        "geometryUpdatedAt" : "2015-01-28",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.956629,
-                "longitude" : 10.996579
+                "latitude" : 50.956582,
+                "longitude" : 10.996269
             },
             "northEast" : {
-                "latitude" : 51.011143,
-                "longitude" : 11.064259
+                "latitude" : 51.011862,
+                "longitude" : 11.064444
             }
         }
     },
@@ -453,21 +446,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ilsfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "gemeinde@ilsfeld.de",
-            "thomas.stutz@ilsfeld.de",
-            "sven.frank@ilsfeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 49.027032,
-                "longitude" : 9.197915
+                "latitude" : 49.048605,
+                "longitude" : 9.231600
             },
             "northEast" : {
-                "latitude" : 49.087777,
-                "longitude" : 9.320653
+                "latitude" : 49.061221,
+                "longitude" : 9.255589
             }
         }
     },
@@ -537,20 +526,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20krefeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "wolfgang.kritzler@krefeld.de",
-            "fb62@krefeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Vermessungs- und Katasterwesen, Krefeld",
+        "geometryUpdatedAt" : "2015-01-13",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.312430,
-                "longitude" : 6.533754
+                "latitude" : 51.312202,
+                "longitude" : 6.533726
             },
             "northEast" : {
-                "latitude" : 51.356299,
-                "longitude" : 6.590485
+                "latitude" : 51.356344,
+                "longitude" : 6.594050
             }
         }
     },
@@ -565,21 +551,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20langenfeld.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "luftreinhaltung@brd.nrw.de",
-            "poststelle@lanuv.nrw.de",
-            "info@langenfeld.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Landesamt für Natur, Umwelt und Verbraucherschutz NRW, Recklinghausen",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.064924,
-                "longitude" : 6.898244
+                "latitude" : 51.117037,
+                "longitude" : 6.956629
             },
             "northEast" : {
-                "latitude" : 51.145978,
-                "longitude" : 7.009481
+                "latitude" : 51.128650,
+                "longitude" : 6.978380
             }
         }
     },
@@ -619,20 +601,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20leonberg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "kbm@leonberg.de",
-            "posteingang@lrabb.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.745671,
-                "longitude" : 8.952203
+                "latitude" : 48.741741,
+                "longitude" : 8.959816
             },
             "northEast" : {
-                "latitude" : 48.837275,
-                "longitude" : 9.069620
+                "latitude" : 48.900599,
+                "longitude" : 9.142809
             }
         }
     },
@@ -647,19 +626,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20ludwigsburg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "laerm@ludwigsburg.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.871159,
-                "longitude" : 9.128447
+                "latitude" : 48.847690,
+                "longitude" : 9.045311
             },
             "northEast" : {
-                "latitude" : 48.933898,
-                "longitude" : 9.314184
+                "latitude" : 48.978120,
+                "longitude" : 9.273868
             }
         }
     },
@@ -776,20 +753,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20muehlacker.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "stadt@muehlacker.de",
-            "tiefbau@stadt-muehlacker.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Abteilung Geoinformation, Mühlacker",
+        "geometryUpdatedAt" : "2015-01-14",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.897643,
-                "longitude" : 8.765470
+                "latitude" : 48.945481,
+                "longitude" : 8.834968
             },
             "northEast" : {
-                "latitude" : 49.001809,
-                "longitude" : 8.927175
+                "latitude" : 48.954739,
+                "longitude" : 8.872681
             }
         }
     },
@@ -904,19 +878,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20offenbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umweltamt@offenbach.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Amt für Umwelt, Energie und Klimaschutz, Offenbach am Main",
+        "geometryUpdatedAt" : "2015-01-16",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.044758,
-                "longitude" : 8.719388
+                "latitude" : 50.064644,
+                "longitude" : 8.726488
             },
             "northEast" : {
-                "latitude" : 50.139250,
-                "longitude" : 8.847104
+                "latitude" : 50.137010,
+                "longitude" : 8.842745
             }
         }
     },
@@ -1037,15 +1009,15 @@
         "urlBadgeOnline" : "",
         "contactEmails" : null,
         "geometrySource" : "OpenStreetMap",
-        "geometryUpdatedAt" : "2014-09-08",
+        "geometryUpdatedAt" : "2015-02-06",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.469189,
-                "longitude" : 9.193419
+                "latitude" : 48.412679,
+                "longitude" : 9.114866
             },
             "northEast" : {
-                "latitude" : 48.500609,
-                "longitude" : 9.229387
+                "latitude" : 48.578614,
+                "longitude" : 9.327436
             }
         }
     },
@@ -1123,21 +1095,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20schwaebisch-gmuend.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "presse@schwaebisch-gmuend.de",
-            "stadtverwaltung@schwaebisch-gmuend.de",
-            "ordnungsamt@schwaebisch-gmuend.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.714296,
-                "longitude" : 9.708145
+                "latitude" : 48.782110,
+                "longitude" : 9.763678
             },
             "northEast" : {
-                "latitude" : 48.847092,
-                "longitude" : 9.939888
+                "latitude" : 48.809672,
+                "longitude" : 9.835066
             }
         }
     },
@@ -1202,21 +1170,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20tuebingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umwelt-klimaschutz@tuebingen.de",
-            "bernd.schott@tuebingen.de",
-            "hans-peter.kern@tuebingen.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Landesamt für Geoinformation und Landentwicklung, Baden-Württemberg, www.lgl-bw.de",
+        "geometryUpdatedAt" : "2015-01-01",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.448187,
-                "longitude" : 8.959893
+                "latitude" : 48.450584,
+                "longitude" : 8.964478
             },
             "northEast" : {
-                "latitude" : 48.595993,
-                "longitude" : 9.137734
+                "latitude" : 48.593713,
+                "longitude" : 9.131075
             }
         }
     },
@@ -1256,22 +1220,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20urbach.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "info@urbach.de",
-            "bauamt@urbach.de",
-            "baumeister@urbach.de",
-            "koch@urbach.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.795927,
-                "longitude" : 9.542261
+                "latitude" : 48.803810,
+                "longitude" : 9.568300
             },
             "northEast" : {
-                "latitude" : 48.856388,
-                "longitude" : 9.637190
+                "latitude" : 48.825648,
+                "longitude" : 9.592254
             }
         }
     },
@@ -1286,19 +1245,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wendlingen.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "stadt@wendlingen.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Regierungspräsidium Stuttgart",
+        "geometryUpdatedAt" : "2015-01-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.642897,
-                "longitude" : 9.349367
+                "latitude" : 48.660775,
+                "longitude" : 9.368358
             },
             "northEast" : {
-                "latitude" : 48.692779,
-                "longitude" : 9.427816
+                "latitude" : 48.683706,
+                "longitude" : 9.409533
             }
         }
     },
