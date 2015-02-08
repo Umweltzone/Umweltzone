@@ -16,6 +16,22 @@
 -->
 <changelog>
     <release
+        version="2.2.0"
+        versioncode="22000">
+        <change>
+            New: Add zone data for 13 cities with coordinates (Dinslaken, Erfurt, Ilsfeld, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Mühlacker, Offenbach, Schwäbisch Gmünd, Tübingen, Urbach and Wendlingen).
+        </change>
+        <change>
+            Update: Zone coordinates for Reutlingen changed by February 1, 2015.
+        </change>
+        <change>
+            New: Display name of the selected low emission zone.
+        </change>
+        <change>
+            Improved: Crash report dialog is customized and texts translated.
+        </change>
+    </release>
+    <release
         version="2.1.0"
         versioncode="21000">
         <change>

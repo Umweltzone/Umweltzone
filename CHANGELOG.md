@@ -1,6 +1,21 @@
 # Umweltzone changelog
 
 
+## [v.2.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.2.0)
+
+* Published: 2015-02-08
+
+### Features, improvements and maintenance
+
+* Enable translated crash report dialog via TraceDroid., [df50b](https://bitbucket.org/tbsprs/umweltzone/commits/df50b1da6695244af7e57ff7b753bb6b6daea66d)
+* Update zone data for Reutlingen., [b59aa](https://bitbucket.org/tbsprs/umweltzone/commits/b59aaf1b163d87d1ceba9199d9e83f6d38323efa)
+* Add zone data for 13 cities with coordinates (Dinslaken, Erfurt, Ilsfeld, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Mühlacker, Offenbach, Schwäbisch Gmünd, Tübingen, Urbach and Wendlingen)., [8f009](https://bitbucket.org/tbsprs/umweltzone/commits/8f0095a469e62c16f56fbf55551aba750b731c85)
+* Show low emission zone name as action bar subtitle., [b9018](https://bitbucket.org/tbsprs/umweltzone/commits/b9018f61b84313744634abb0bb2b38f4907365ac)
+* Update Gradle wrapper to v.1.0.1., [45d09](https://bitbucket.org/tbsprs/umweltzone/commits/45d09f421feb55ae0b5dae0b853dd15e2a470078)
+* Update build tools to v.21.1.2., [def7c](https://bitbucket.org/tbsprs/umweltzone/commits/def7cd4cba0d2aec722bc3e4d449331591c1e5bb)
+* Update ckChangeLog to v.1.2.2., [6c4fd](https://bitbucket.org/tbsprs/umweltzone/commits/6c4fd3b6dc0b20e4e8a05c8d2e0358fda0d8e58b)
+
+
 ## [v.2.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.1.0)
 
 * Published: 2015-01-12

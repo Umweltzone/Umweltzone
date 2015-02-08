@@ -16,6 +16,22 @@
 -->
 <changelog>
     <release
+        version="2.2.0"
+        versioncode="22000">
+        <change>
+            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Dinslaken, Erfurt, Ilsfeld, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Mühlacker, Offenbach, Schwäbisch Gmünd, Tübingen, Urbach und Wendlingen).
+        </change>
+        <change>
+            Aktualisierung: Die Ausdehnung der Umweltzone Reutlingen hat sich zum 1.2.2015 geändert.
+        </change>
+        <change>
+            Neu: Name der selektierten Umweltzone wird angezeigt.
+        </change>
+        <change>
+            Aktualisierung: Dialog für Fehlerberichte angepasst und Texte übersetzt.
+        </change>
+    </release>
+    <release
         version="2.1.0"
         versioncode="21000">
         <change>
