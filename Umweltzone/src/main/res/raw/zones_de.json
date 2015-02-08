@@ -1009,15 +1009,15 @@
         "urlBadgeOnline" : "",
         "contactEmails" : null,
         "geometrySource" : "OpenStreetMap",
-        "geometryUpdatedAt" : "2014-09-08",
+        "geometryUpdatedAt" : "2015-02-06",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.469189,
-                "longitude" : 9.193419
+                "latitude" : 48.412679,
+                "longitude" : 9.114866
             },
             "northEast" : {
-                "latitude" : 48.500609,
-                "longitude" : 9.229387
+                "latitude" : 48.578614,
+                "longitude" : 9.327436
             }
         }
     },
