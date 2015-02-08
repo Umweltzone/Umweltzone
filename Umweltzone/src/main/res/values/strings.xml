@@ -350,4 +350,27 @@
         [1]: <a href="http://play.google.com/store/apps/details?id=de.avpptr.umweltzone">http://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
     </string>
 
+    <!-- TraceDroid -->
+    <string name="trace_droid_dialog_title">
+        Send Umweltzone crash report &#8230;
+    </string>
+    <string name="trace_droid_dialog_message">
+        A problem with the Umweltzone app has been detected.
+        It would be helpful if you could submit a crash report
+        so the source of the problem can be identified.
+    </string>
+    <string name="trace_droid_button_title_send">
+        @string/zone_not_drawable_open_email
+    </string>
+    <string name="trace_droid_button_title_no">
+        No
+    </string>
+    <string name="trace_droid_button_title_later">
+        @string/zone_not_drawable_later
+    </string>
+    <string name="trace_droid_app_chooser_title">
+        @string/zone_not_drawable_app_chooser_title
+    </string>
+
+
 </resources>
