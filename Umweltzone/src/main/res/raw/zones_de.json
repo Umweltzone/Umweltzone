@@ -928,21 +928,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20pfinztal.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "u.renz@pfinztal.de",
-            "g.knobloch@pfinztal.de",
-            "n.bodner@pfinztal.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Gemeindeverwaltung Pfinztal, Fachbereich IV - Bauen und Planen",
+        "geometryUpdatedAt" : "2015-01-16",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.952211,
-                "longitude" : 8.499956
+                "latitude" : 48.952200,
+                "longitude" : 8.500020
             },
             "northEast" : {
-                "latitude" : 49.031417,
-                "longitude" : 8.599789
+                "latitude" : 49.031648,
+                "longitude" : 8.599817
             }
         }
     },
