@@ -72,7 +72,7 @@
     {
         "position" : 11,
         "question" : "Penalties for driving without environmental stickers.",
-        "answer" : "The penalty for non-compliance is a 40 Euro fine and 1 point in Flensburg.",
+        "answer" : "The penalty for non-compliance is a 80 Euro fine but no point in Flensburg (valid since May 2014).",
         "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
         "label" : "penalties_for_driving_without_environmental_stickers"
     },

@@ -72,7 +72,7 @@
     {
         "position" : 11,
         "question" : "Strafen die ohne Umweltplakette drohen",
-        "answer" : "Die Strafe bei Nichtbeachtung beträgt 40 Euro und 1 Punkt in Flensburg.",
+        "answer" : "Die Strafe bei Nichtbeachtung beträgt 80 Euro, dafür keinen Punkt in Flensburg. (seit Mai 2014)",
         "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
         "label" : "strafe_ohne_umweltplakette"
     },
