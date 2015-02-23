@@ -471,22 +471,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20karlsruhe.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "stadt@karlsruhe.de",
-            "pia@karlsruhe.de",
-            "umwelt-arbeitsschutz@karlsruhe.de",
-            "strassenverkehrs­stelle@oa.karlsruhe.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Stadt Karlsruhe, Umwelt- und Arbeitsschutz",
+        "geometryUpdatedAt" : "2015-02-20",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.994348,
-                "longitude" : 8.353000
+                "latitude" : 48.992871,
+                "longitude" : 8.353277
             },
             "northEast" : {
-                "latitude" : 49.024274,
-                "longitude" : 8.424135
+                "latitude" : 49.024043,
+                "longitude" : 8.424083
             }
         }
     },
