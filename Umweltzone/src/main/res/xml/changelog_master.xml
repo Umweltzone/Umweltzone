@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+        version="2.3.0"
+        versioncode="23000">
+        <change>
+            New: Add zone data with coordinates for Pfinztal and Karlsruhe.
+        </change>
+        <change>
+            Update: Penalities increased - read the FAQs!
+        </change>
+    </release>
+    <release
         version="2.2.0"
         versioncode="22000">
         <change>

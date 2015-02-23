@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+        version="2.3.0"
+        versioncode="23000">
+        <change>
+            Neu: Zwei weitere Städte mit Geokoordinaten hinzugefügt (Pfinztal und Karlsruhe).
+        </change>
+        <change>
+            Aktualisierung: Bußgeld wurde erhöht - lies die FAQs!
+        </change>
+    </release>
+    <release
         version="2.2.0"
         versioncode="22000">
         <change>

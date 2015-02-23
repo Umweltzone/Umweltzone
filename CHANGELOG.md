@@ -1,6 +1,20 @@
 # Umweltzone changelog
 
 
+## [v.2.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.3.0)
+
+* Published: 2015-02-23
+
+### Bug fixes
+
+* Update penalities., [9a0a6](https://bitbucket.org/tbsprs/umweltzone/commits/9a0a6e6af2fb0dc52e4b482a6c95d93efb04d8e6)
+
+### Features, improvements and maintenance
+
+* Add zone data with coordinates for Karlsruhe., [c4574](https://bitbucket.org/tbsprs/umweltzone/commits/c45741130ee4e600d6ee7b10ff4cb7ab22787429)
+* Add zone data with coordinates for Pfinztal., [da1ac](https://bitbucket.org/tbsprs/umweltzone/commits/da1acdb9f7f1477053c7f3e557711acffa024d0f)
+
+
 ## [v.2.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.2.0)
 
 * Published: 2015-02-08
