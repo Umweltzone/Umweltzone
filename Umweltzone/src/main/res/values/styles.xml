@@ -36,7 +36,7 @@
         <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
     </style>
 
-    <style name="AppDialog" parent="Theme.Base.AppCompat.Dialog.Light.FixedSize">
+    <style name="AppDialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
