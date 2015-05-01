@@ -26,7 +26,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -243,7 +243,7 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private void updateSubTitle() {
-        ActionBarActivity activity = (ActionBarActivity) getActivity();
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
         final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
         if (lowEmissionZone != null) {
             String title = lowEmissionZone.displayName;

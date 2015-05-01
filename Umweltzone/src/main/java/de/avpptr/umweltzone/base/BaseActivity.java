@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -36,7 +36,7 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.cketti.library.changelog.ChangeLog;
 
-public abstract class BaseActivity extends ActionBarActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     protected ActionBar mActionBar;
     protected final Tracking mTracking;
