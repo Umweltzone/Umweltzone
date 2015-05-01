@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@
     <color name="shape_stroke_color">#88ff0000</color>
 
     <color name="horizontal_line_fill_color">#c3c3c3</color>
+    <color name="text_link">@color/holo_blue_light</color>
 
     <!-- AppInfo colors -->
     <color name="appinfo_text_content_foreground">@android:color/secondary_text_light</color>
