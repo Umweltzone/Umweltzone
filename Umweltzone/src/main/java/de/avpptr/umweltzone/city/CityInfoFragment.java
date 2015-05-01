@@ -19,7 +19,6 @@ package de.avpptr.umweltzone.city;
 
 import android.app.Activity;
 import android.text.TextUtils;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
