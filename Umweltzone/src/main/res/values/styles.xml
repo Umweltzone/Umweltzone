@@ -27,6 +27,10 @@
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorButtonNormal">@color/primary</item>
     </style>
 
     <!-- Application theme. -->
@@ -72,6 +76,7 @@
     </style>
 
     <style name="TextView.Title" parent="TextView.Base.Small">
+        <item name="android:textColor">@color/title_text</item>
         <item name="android:textSize">@dimen/fragment_title</item>
         <item name="android:layout_marginBottom">@dimen/huge_spacer</item>
     </style>
@@ -80,6 +85,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/body_text_size</item>
+        <item name="android:textColor">@color/button_text</item>
     </style>
 
     <style name="TextView.Email" parent="TextView.Base.Small">
@@ -124,6 +130,7 @@
         <item name="android:layout_height">@dimen/city_zone_badge_height</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/zone_layer</item>
+        <item name="android:textColor">@color/city_zone_badge_text</item>
         <item name="android:text">0</item>
     </style>
 

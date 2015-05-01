@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -64,6 +64,7 @@
 
         <Button
             android:id="@+id/city_info_show_on_map"
+            android:theme="@style/ZoneInfo.ShowZoneOnMap"
             style="@style/ZoneInfo.ShowZoneOnMap"
             android:text="@string/city_info_show_on_map" />
 
