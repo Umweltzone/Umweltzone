@@ -17,18 +17,16 @@
 
 package de.avpptr.umweltzone.map;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.text.Spanned;
-import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -74,8 +72,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         noticeTextView.setText(noticeSpanned, TextView.BufferType.SPANNABLE);
 
         // Launch dialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(
-                new ContextThemeWrapper(activity, R.style.AppDialog));
+        AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setView(zoneNotDrawableView)
                 .setTitle(R.string.zone_not_drawable_title)
                 .setPositiveButton(R.string.zone_not_drawable_open_email,

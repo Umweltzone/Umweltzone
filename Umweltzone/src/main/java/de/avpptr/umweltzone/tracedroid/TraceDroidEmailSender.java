@@ -20,10 +20,10 @@ package de.avpptr.umweltzone.tracedroid;
 import org.ligi.tracedroid.TraceDroid;
 import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 
 import de.avpptr.umweltzone.R;
 
