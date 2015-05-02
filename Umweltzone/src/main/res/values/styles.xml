@@ -180,7 +180,7 @@
 
     <!-- FaqActivity -->
 
-    <style name="Faq.ExpandableListView" parent="android:style/Widget.ListView">
+    <style name="Faq.ExpandableListView" parent="Base.Widget.AppCompat.ListView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_margin">@dimen/medium_spacer</item>
