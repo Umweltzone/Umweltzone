@@ -17,6 +17,17 @@
 
 package de.avpptr.umweltzone.map;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLngBounds;
+
+import org.ligi.tracedroid.logging.Log;
+
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -29,17 +40,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
-
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.google.android.gms.maps.CameraUpdate;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLngBounds;
-
-import org.ligi.tracedroid.logging.Log;
 
 import java.util.List;
 
@@ -60,10 +60,15 @@ import de.avpptr.umweltzone.utils.MapDrawer;
 public class MapFragment extends SupportMapFragment {
 
     private GoogleMap mMap;
+
     private MapDrawer mMapDrawer;
+
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
+
     private boolean fragmentCreated;
+
     protected final Tracking mTracking;
+
     private PreferencesHelper mPreferencesHelper;
 
     public MapFragment() {
@@ -98,15 +103,16 @@ public class MapFragment extends SupportMapFragment {
             if (width > height) {
                 padding *= 2;
             }
-            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, padding);
+            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(
+                    latLngBounds, width, height, padding);
             mMap.moveCamera(zoneBounds);
         }
     }
 
     private void zoomToLocation(GeoPoint location, float zoomLevel) {
         if (location.isValid() && zoomLevel > 0) {
-            CameraUpdate cameraUpdate =
-                    CameraUpdateFactory.newLatLngZoom(location.toLatLng(), zoomLevel);
+            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(
+                    location.toLatLng(), zoomLevel);
             mMap.moveCamera(cameraUpdate);
         }
     }
@@ -166,7 +172,8 @@ public class MapFragment extends SupportMapFragment {
             // Select default city at first application start
             GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
             if (!lastKnownPosition.isValid()) {
-                LowEmissionZone defaultLowEmissionZone = LowEmissionZone.getDefaultLowEmissionZone(activity);
+                LowEmissionZone defaultLowEmissionZone = LowEmissionZone
+                        .getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmissionZone(defaultLowEmissionZone);
                     if (mPreferencesHelper.storesZoneIsDrawable() &&
@@ -188,13 +195,15 @@ public class MapFragment extends SupportMapFragment {
             String cityName = extras.getString(BundleKeys.CITY_CHANGE);
             if (cityName != null) {
                 // City has been selected from the list
-                BoundingBox lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsBoundingBox();
+                BoundingBox lastKnownPosition = mPreferencesHelper
+                        .restoreLastKnownLocationAsBoundingBox();
                 if (lastKnownPosition.isValid()) {
                     zoomToBounds(lastKnownPosition.toLatLngBounds());
                 }
             } else {
                 // Home button has been selected
-                GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
+                GeoPoint lastKnownPosition = mPreferencesHelper
+                        .restoreLastKnownLocationAsGeoPoint();
                 float zoomLevel = mPreferencesHelper.restoreZoomLevel();
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }
@@ -256,6 +265,7 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
+
         @Override
         public void onCameraChange(CameraPosition cameraPosition) {
             storeLastMapState();

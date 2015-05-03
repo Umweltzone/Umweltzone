@@ -18,11 +18,11 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_references_texts_title" />
+            style="@style/AppInfo.ContentTitle"
+            android:text="@string/appinfo_references_texts_title"/>
 
     <TextView
-        style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_references_texts_content" />
+            style="@style/AppInfo.TextContent"
+            android:text="@string/appinfo_references_texts_content"/>
 
 </merge>

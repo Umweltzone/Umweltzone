@@ -35,6 +35,37 @@ public class PreferencesHelper {
         mSharedPreferences = sharedPreferences;
     }
 
+    // Last known location / city name
+
+    public void storeLastKnownLocation(final String cityName) {
+        StringPreference cityNamePreference = new StringPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME);
+        cityNamePreference.set(cityName);
+    }
+
+    public String restoreLastKnownLocationAsString() {
+        StringPreference cityNamePreference = new StringPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME);
+        return cityNamePreference.get();
+    }
+
+    public boolean storesLastKnownLocation() {
+        StringPreference cityNamePreference = new StringPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME);
+        return cityNamePreference.isSet();
+    }
+
+    // Last known location / center
+
+    public void storeLastKnownLocation(final GeoPoint center) {
+        DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
+        DoublePreference longitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_CENTER_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
+        latitudePreference.set(center.getLatitude());
+        longitudePreference.set(center.getLongitude());
+    }
+
     public GeoPoint restoreLastKnownLocationAsGeoPoint() {
         DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
                 Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
@@ -43,6 +74,26 @@ public class PreferencesHelper {
         double lat = latitudePreference.get();
         double lon = longitudePreference.get();
         return new GeoPoint(lat, lon);
+    }
+
+    // Last known location / bounding box
+
+    public void storeLastKnownLocation(final BoundingBox boundingBox) {
+        DoublePreference southWestLatitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE, GeoPoint.INVALID_LATITUDE);
+        DoublePreference southWestLongitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
+        DoublePreference northEastLatitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LATITUDE, GeoPoint.INVALID_LATITUDE);
+        DoublePreference northEastLongitudePreference = new DoublePreference(mSharedPreferences,
+                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
+
+        GeoPoint southWest = boundingBox.getSouthWest();
+        southWestLatitudePreference.set(southWest.getLatitude());
+        southWestLongitudePreference.set(southWest.getLongitude());
+        GeoPoint northEast = boundingBox.getNorthEast();
+        northEastLatitudePreference.set(northEast.getLatitude());
+        northEastLongitudePreference.set(northEast.getLongitude());
     }
 
     public BoundingBox restoreLastKnownLocationAsBoundingBox() {
@@ -64,10 +115,12 @@ public class PreferencesHelper {
         return new BoundingBox(southWest, northEast);
     }
 
-    public String restoreLastKnownLocationAsString() {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        return cityNamePreference.get();
+    // Zoom level
+
+    public void storeZoomLevel(float zoomLevel) {
+        FloatPreference zoomLevelPreference = new FloatPreference(
+                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
+        zoomLevelPreference.set(zoomLevel);
     }
 
     public float restoreZoomLevel() {
@@ -76,10 +129,12 @@ public class PreferencesHelper {
         return zoomLevelPreference.get();
     }
 
-    public boolean restoreCityNameFrankfurtInPreferencesFixed() {
-        BooleanPreference preference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
-        return preference.get();
+    // Zone is drawable
+
+    public void storeZoneIsDrawable(boolean flag) {
+        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+        zoneIsDrawablePreference.set(flag);
     }
 
     public boolean restoreZoneIsDrawable() {
@@ -88,56 +143,13 @@ public class PreferencesHelper {
         return zoneIsDrawablePreference.get();
     }
 
-    public void storeLastKnownLocation(final GeoPoint center) {
-        DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference longitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        latitudePreference.set(center.getLatitude());
-        longitudePreference.set(center.getLongitude());
-    }
-
-    public void storeLastKnownLocation(final BoundingBox boundingBox) {
-        DoublePreference southWestLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference southWestLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        DoublePreference northEastLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference northEastLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-
-        GeoPoint southWest = boundingBox.getSouthWest();
-        southWestLatitudePreference.set(southWest.getLatitude());
-        southWestLongitudePreference.set(southWest.getLongitude());
-        GeoPoint northEast = boundingBox.getNorthEast();
-        northEastLatitudePreference.set(northEast.getLatitude());
-        northEastLongitudePreference.set(northEast.getLongitude());
-    }
-
-    public void storeLastKnownLocation(final String cityName) {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        cityNamePreference.set(cityName);
-    }
-
-    public boolean storesLastKnownLocation() {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        return cityNamePreference.isSet();
-    }
-
     public boolean storesZoneIsDrawable() {
         BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
                 mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
         return zoneIsDrawablePreference.isSet();
     }
 
-    public void storeZoomLevel(float zoomLevel) {
-        FloatPreference zoomLevelPreference = new FloatPreference(
-                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
-        zoomLevelPreference.set(zoomLevel);
-    }
+    // City name Frankfurt in preferences fixed
 
     public void storeCityNameFrankfurtInPreferencesFixed(boolean flag) {
         BooleanPreference preference = new BooleanPreference(
@@ -145,10 +157,10 @@ public class PreferencesHelper {
         preference.set(flag);
     }
 
-    public void storeZoneIsDrawable(boolean flag) {
-        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
-        zoneIsDrawablePreference.set(flag);
+    public boolean restoreCityNameFrankfurtInPreferencesFixed() {
+        BooleanPreference preference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
+        return preference.get();
     }
 
 }

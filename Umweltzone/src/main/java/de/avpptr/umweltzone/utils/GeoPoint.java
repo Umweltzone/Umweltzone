@@ -28,17 +28,22 @@ import java.util.Locale;
 public final class GeoPoint {
 
     public static final double MAX_LATITUDE = 90.0;
+
     public static final double MIN_LATITUDE = -90.0;
+
     public static final double MAX_LONGITUDE = 180.0;
+
     public static final double MIN_LONGITUDE = -180.0;
 
     public static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
+
     public static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
 
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));
 
     protected double mLatitude = INVALID_LATITUDE;
+
     protected double mLongitude = INVALID_LONGITUDE;
 
     public GeoPoint() {

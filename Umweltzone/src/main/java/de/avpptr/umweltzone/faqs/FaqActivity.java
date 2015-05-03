@@ -42,7 +42,11 @@ public class FaqActivity extends BaseActivity {
 
         faqsList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
             @Override
-            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+            public boolean onGroupClick(
+                    ExpandableListView parent,
+                    View view,
+                    int groupPosition,
+                    long id) {
                 if (!parent.isGroupExpanded(groupPosition)) {
                     FaqsAdapter faqsAdapter = (FaqsAdapter) parent.getExpandableListAdapter();
                     if (faqsAdapter != null) {

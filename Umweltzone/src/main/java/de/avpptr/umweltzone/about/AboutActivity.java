@@ -33,10 +33,14 @@ public class AboutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        ViewHelper.setupTextViewSimple(this, R.id.buildVersion, "v." + getBuildVersionName());
-        ViewHelper.setupTextViewSimple(this, R.id.buildTime, BuildConfig.BUILD_TIME);
-        ViewHelper.setupTextViewSimple(this, R.id.buildVersionCode, "" + BuildConfig.BUILD_VERSION_CODE);
-        ViewHelper.setupTextViewSimple(this, R.id.buildHash, BuildConfig.GIT_SHA);
+        ViewHelper.setupTextViewSimple(this,
+                R.id.buildVersion, "v." + getBuildVersionName());
+        ViewHelper.setupTextViewSimple(this,
+                R.id.buildTime, BuildConfig.BUILD_TIME);
+        ViewHelper.setupTextViewSimple(this,
+                R.id.buildVersionCode, "" + BuildConfig.BUILD_VERSION_CODE);
+        ViewHelper.setupTextViewSimple(this,
+                R.id.buildHash, BuildConfig.GIT_SHA);
 
         ViewHelper.setupTextViewExtended(this, R.id.appInfoButtonEnvironmentAgency,
                 R.string.appinfo_references_name_umweltbundesamt,

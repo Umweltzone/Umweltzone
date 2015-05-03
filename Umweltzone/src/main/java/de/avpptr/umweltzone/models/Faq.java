@@ -20,9 +20,13 @@ package de.avpptr.umweltzone.models;
 public class Faq {
 
     public int position;
+
     public String question;
+
     public String answer;
+
     public String sourceUrl;
+
     public String label;
 
     @Override

@@ -99,8 +99,9 @@ public class CityInfoFragment extends BaseFragment {
                 (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
                 StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
-        ViewHelper.setTextOrHideView(abroadLicensedVehicleZoneNumberTextView, abroadLicensedVehicleZoneNumberText);
-
+        ViewHelper.setTextOrHideView(
+                abroadLicensedVehicleZoneNumberTextView,
+                abroadLicensedVehicleZoneNumberText);
 
         // Show on map button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
@@ -121,7 +122,8 @@ public class CityInfoFragment extends BaseFragment {
                 mLowEmissionZone.name);
 
         // Badge online
-        TextView badgeOnlineTextView = (TextView) activity.findViewById(R.id.city_info_badge_online);
+        TextView badgeOnlineTextView = (TextView) activity.findViewById(
+                R.id.city_info_badge_online);
         final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
             badgeOnlineTextView.setVisibility(View.GONE);

@@ -39,6 +39,7 @@ import de.cketti.library.changelog.ChangeLog;
 public abstract class BaseActivity extends AppCompatActivity {
 
     protected ActionBar mActionBar;
+
     protected final Tracking mTracking;
 
     public BaseActivity() {

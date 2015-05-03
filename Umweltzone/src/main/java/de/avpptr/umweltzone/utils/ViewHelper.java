@@ -31,7 +31,9 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public abstract class ViewHelper {
 
-    public static void setTextOrHideView(final TextView textView, final String text) {
+    public static void setTextOrHideView(
+            final TextView textView,
+            final String text) {
         if (TextUtils.isEmpty(text)) {
             textView.setVisibility(View.GONE);
         } else {
@@ -40,24 +42,29 @@ public abstract class ViewHelper {
         }
     }
 
-    public static void setupTextViewSimple(final Activity activity, int textViewId,
-                                           final String text) {
+    public static void setupTextViewSimple(
+            final Activity activity,
+            int textViewId,
+            final String text) {
         TextView textView = (TextView) activity.findViewById(textViewId);
         textView.setText(text);
     }
 
-    public static void setupTextViewSimple(final View view, int textViewId,
-                                           final String text) {
+    public static void setupTextViewSimple(
+            final View view,
+            int textViewId,
+            final String text) {
         TextView textView = (TextView) view.findViewById(textViewId);
         textView.setText(text);
     }
 
-    public static void setupTextViewExtended(final View view,
-                                             int textViewId,
-                                             final String title,
-                                             final String url,
-                                             final TrackingPoint trackingPoint,
-                                             final String trackingString) {
+    public static void setupTextViewExtended(
+            final View view,
+            int textViewId,
+            final String title,
+            final String url,
+            final TrackingPoint trackingPoint,
+            final String trackingString) {
         TextView textView = (TextView) view.findViewById(textViewId);
         setupTextViewExtended(view.getContext(), textView,
                 StringHelper.spannedLinkForString(title, url),
@@ -65,12 +72,13 @@ public abstract class ViewHelper {
                 trackingPoint, trackingString);
     }
 
-    public static void setupTextViewExtended(final Activity activity,
-                                             int textViewId,
-                                             int titleResourceId,
-                                             final String url,
-                                             final TrackingPoint trackingPoint,
-                                             final String trackingString) {
+    public static void setupTextViewExtended(
+            final Activity activity,
+            int textViewId,
+            int titleResourceId,
+            final String url,
+            final TrackingPoint trackingPoint,
+            final String trackingString) {
 
         TextView textView = (TextView) activity.findViewById(textViewId);
         String title = activity.getString(titleResourceId);
@@ -80,12 +88,13 @@ public abstract class ViewHelper {
                 trackingPoint, trackingString);
     }
 
-    public static void setupTextViewExtended(final Activity activity,
-                                             int textViewId,
-                                             int titleResourceId,
-                                             int urlResourceId,
-                                             final TrackingPoint trackingPoint,
-                                             final String trackingString) {
+    public static void setupTextViewExtended(
+            final Activity activity,
+            int textViewId,
+            int titleResourceId,
+            int urlResourceId,
+            final TrackingPoint trackingPoint,
+            final String trackingString) {
 
         TextView textView = (TextView) activity.findViewById(textViewId);
         final String tempUrl = activity.getString(urlResourceId);
@@ -97,12 +106,13 @@ public abstract class ViewHelper {
                 trackingPoint, trackingString);
     }
 
-    private static void setupTextViewExtended(final Context context,
-                                              TextView textView,
-                                              final Spanned text,
-                                              final String url,
-                                              final TrackingPoint trackingPoint,
-                                              final String trackingString) {
+    private static void setupTextViewExtended(
+            final Context context,
+            TextView textView,
+            final Spanned text,
+            final String url,
+            final TrackingPoint trackingPoint,
+            final String trackingString) {
         textView.setText(text, TextView.BufferType.SPANNABLE);
         final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         textView.setOnClickListener(new View.OnClickListener() {

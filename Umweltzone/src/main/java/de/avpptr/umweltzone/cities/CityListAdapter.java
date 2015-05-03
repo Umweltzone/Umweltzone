@@ -40,8 +40,11 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
 
     protected final Context mContext;
+
     protected final int mResourceId;
+
     protected final LowEmissionZone[] mLowEmissionZones;
+
     protected final Tracking mTracking;
 
     public CityListAdapter(Context context, int resource, LowEmissionZone[] lowEmissionZones) {
@@ -58,17 +61,18 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         View view = convertView;
         ViewHolder viewHolder;
         if (view == null) {
-            LayoutInflater inflater =
-                    (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(
+                    Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(mResourceId, null);
             if (view != null) {
                 viewHolder = new ViewHolder();
                 viewHolder.zoneName = (TextView) view.findViewById(R.id.city_row_name);
                 viewHolder.zoneBadge = (TextView) view.findViewById(R.id.city_row_badge);
-                LayerDrawable badgeBackground = (LayerDrawable) viewHolder.zoneBadge.getBackground();
+                LayerDrawable badgeBackground =
+                        (LayerDrawable) viewHolder.zoneBadge.getBackground();
                 if (badgeBackground != null) {
-                    viewHolder.zoneShape =
-                            (GradientDrawable) badgeBackground.findDrawableByLayerId(R.id.zone_shape);
+                    viewHolder.zoneShape = (GradientDrawable) badgeBackground
+                            .findDrawableByLayerId(R.id.zone_shape);
                 }
                 view.setTag(viewHolder);
             } else {
@@ -120,8 +124,11 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
     }
 
     private static class ViewHolder {
+
         TextView zoneName;
+
         TextView zoneBadge;
+
         GradientDrawable zoneShape;
     }
 

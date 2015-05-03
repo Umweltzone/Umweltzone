@@ -16,18 +16,18 @@
   -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
+      xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_cities"
-        android:title="@string/action_cities"
-        android:icon="@drawable/ic_action_view_as_list_dark"
-        android:orderInCategory="100"
-        umweltzone:showAsAction="ifRoom" />
+            android:id="@+id/action_cities"
+            android:title="@string/action_cities"
+            android:icon="@drawable/ic_action_view_as_list_dark"
+            android:orderInCategory="100"
+            umweltzone:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/action_faq"
-        android:title="@string/action_faq"
-        android:icon="@drawable/ic_action_help_dark"
-        android:orderInCategory="102"
-        umweltzone:showAsAction="ifRoom" />
+            android:id="@+id/action_faq"
+            android:title="@string/action_faq"
+            android:icon="@drawable/ic_action_help_dark"
+            android:orderInCategory="102"
+            umweltzone:showAsAction="ifRoom"/>
 
 </menu>

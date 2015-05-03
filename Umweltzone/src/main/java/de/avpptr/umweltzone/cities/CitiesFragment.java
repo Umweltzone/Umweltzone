@@ -38,6 +38,7 @@ import de.avpptr.umweltzone.utils.IntentHelper;
 public class CitiesFragment extends ListFragment {
 
     protected final Tracking mTracking;
+
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;
 

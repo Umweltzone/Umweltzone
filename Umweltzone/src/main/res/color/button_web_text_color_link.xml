@@ -19,9 +19,9 @@
     <!--
     finger is on while button is up
     -->
-    <item android:state_checked="false" android:state_pressed="true" android:color="@android:color/primary_text_light" />
+    <item android:state_checked="false" android:state_pressed="true" android:color="@android:color/primary_text_light"/>
     <!--
     finger is gone, button is up, default
     -->
-    <item android:state_checked="false" android:state_pressed="false" android:color="@color/text_link" />
+    <item android:state_checked="false" android:state_pressed="false" android:color="@color/text_link"/>
 </selector>

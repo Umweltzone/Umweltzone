@@ -30,19 +30,33 @@ import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 
 public class LowEmissionZone {
+
     public String name;
+
     public String displayName;
+
     public List<String> listOfCities;
+
     public BoundingBox boundingBox;
+
     public int zoneNumber;
+
     public Date zoneNumberSince;
+
     public Date nextZoneNumberAsOf;
+
     public int abroadLicensedVehicleZoneNumber;
+
     public Date abroadLicensedVehicleZoneNumberUntil;
+
     public String urlUmweltPlaketteDe;
+
     public String urlBadgeOnline;
+
     public List<String> contactEmails;
+
     public String geometrySource;
+
     public Date geometryUpdatedAt;
 
     // Used for caching

@@ -18,26 +18,26 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_license_title" />
+            style="@style/AppInfo.ContentTitle"
+            android:text="@string/appinfo_license_title"/>
 
     <TextView
-        style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_license_content" />
+            style="@style/AppInfo.TextContent"
+            android:text="@string/appinfo_license_content"/>
 
     <TextView
-        android:id="@+id/appInfoButtonGpl"
-        style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_license_url_gpl" />
+            android:id="@+id/appInfoButtonGpl"
+            style="@style/AppInfo.WebLink"
+            android:text="@string/appinfo_license_url_gpl"/>
 
     <TextView
-        android:id="@+id/appInfoButtonOdbl"
-        style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_license_url_odbl" />
+            android:id="@+id/appInfoButtonOdbl"
+            style="@style/AppInfo.WebLink"
+            android:text="@string/appinfo_license_url_odbl"/>
 
     <TextView
-        android:id="@+id/appInfoButtonCreativeCommons"
-        style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_license_url_cc" />
+            android:id="@+id/appInfoButtonCreativeCommons"
+            style="@style/AppInfo.WebLink"
+            android:text="@string/appinfo_license_url_cc"/>
 
 </merge>

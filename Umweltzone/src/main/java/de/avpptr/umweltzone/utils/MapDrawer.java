@@ -29,13 +29,18 @@ import de.avpptr.umweltzone.models.Circuit;
 public class MapDrawer {
 
     protected final GoogleMap mMap;
+
     protected List<Polygon> mZonePolygons;
 
     public MapDrawer(GoogleMap map) {
         mMap = map;
     }
 
-    public void drawPolygons(List<Circuit> circuits, int fillColor, int strokeColor, int strokeWidth) {
+    public void drawPolygons(
+            List<Circuit> circuits,
+            int fillColor,
+            int strokeColor,
+            int strokeWidth) {
         if (mZonePolygons != null && !mZonePolygons.isEmpty()) {
             mZonePolygons.clear();
             mZonePolygons = null;
@@ -48,7 +53,11 @@ public class MapDrawer {
         }
     }
 
-    protected Polygon drawPolygon(Circuit circuit, int fillColor, int strokeColor, int strokeWidth) {
+    protected Polygon drawPolygon(
+            Circuit circuit,
+            int fillColor,
+            int strokeColor,
+            int strokeWidth) {
         return mMap.addPolygon(new PolygonOptions()
                 .addAll(circuit.getCoordinates())
                 .strokeWidth(strokeWidth)

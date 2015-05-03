@@ -35,7 +35,9 @@ import de.avpptr.umweltzone.utils.ViewHelper;
 public class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
+
     private final List<Faq> mFaqs;
+
     protected final Tracking mTracking;
 
     public FaqsAdapter(Context context, List<Faq> faqs) {
@@ -85,12 +87,17 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     private View getNewView(int resourceId) {
-        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) mContext
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         return inflater.inflate(resourceId, null);
     }
 
     @Override
-    public View getGroupView(int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+    public View getGroupView(
+            int groupPosition,
+            boolean isExpanded,
+            View convertView,
+            ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
 
         if (convertView == null) {
@@ -103,7 +110,12 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     @Override
-    public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
+    public View getChildView(
+            int groupPosition,
+            int childPosition,
+            boolean isLastChild,
+            View convertView,
+            ViewGroup parent) {
         final FaqAnswer faqAnswer = (FaqAnswer) getChild(groupPosition, childPosition);
 
         final String itemDescription = getFaqDescription(groupPosition);
@@ -116,8 +128,13 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
 
         final String sourceUrlText = faqAnswer.sourceUrl;
         final String sourceUrlTitle = mContext.getString(R.string.faq_source_url_title_text);
-        ViewHelper.setupTextViewExtended(convertView, R.id.faq_source_url, sourceUrlTitle, sourceUrlText,
-                TrackingPoint.FaqSourceUrlClick, itemDescription);
+        ViewHelper.setupTextViewExtended(
+                convertView,
+                R.id.faq_source_url,
+                sourceUrlTitle,
+                sourceUrlText,
+                TrackingPoint.FaqSourceUrlClick,
+                itemDescription);
 
         return convertView;
     }
@@ -128,7 +145,9 @@ public class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     private static class FaqAnswer {
+
         String text;
+
         String sourceUrl;
     }
 

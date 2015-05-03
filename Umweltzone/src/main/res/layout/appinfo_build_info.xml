@@ -18,31 +18,31 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-        style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_build_info_title" />
+            style="@style/AppInfo.ContentTitle"
+            android:text="@string/appinfo_build_info_title"/>
 
     <TextView
-        style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_time" />
+            style="@style/AppInfo.SubTitle"
+            android:text="@string/appinfo_build_info_time"/>
 
     <TextView
-        android:id="@+id/buildTime"
-        style="@style/AppInfo.SingleLineTextContent" />
+            android:id="@+id/buildTime"
+            style="@style/AppInfo.SingleLineTextContent"/>
 
     <TextView
-        style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_version_code" />
+            style="@style/AppInfo.SubTitle"
+            android:text="@string/appinfo_build_info_version_code"/>
 
     <TextView
-        android:id="@+id/buildVersionCode"
-        style="@style/AppInfo.SingleLineTextContent" />
+            android:id="@+id/buildVersionCode"
+            style="@style/AppInfo.SingleLineTextContent"/>
 
     <TextView
-        style="@style/AppInfo.SubTitle"
-        android:text="@string/appinfo_build_info_hash" />
+            style="@style/AppInfo.SubTitle"
+            android:text="@string/appinfo_build_info_hash"/>
 
     <TextView
-        android:id="@+id/buildHash"
-        style="@style/AppInfo.SingleLineTextContent" />
+            android:id="@+id/buildHash"
+            style="@style/AppInfo.SingleLineTextContent"/>
 
 </merge>

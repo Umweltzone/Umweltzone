@@ -16,16 +16,16 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="@dimen/big_spacer">
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:padding="@dimen/big_spacer">
 
     <TextView
-        android:id="@+id/faq_question"
-        tools:background="@android:color/holo_orange_light"
-        tools:text="FAQ question"
-        style="@style/Faq.Content.Question" />
+            android:id="@+id/faq_question"
+            tools:background="@android:color/holo_orange_light"
+            tools:text="FAQ question"
+            style="@style/Faq.Content.Question"/>
 
 </LinearLayout>

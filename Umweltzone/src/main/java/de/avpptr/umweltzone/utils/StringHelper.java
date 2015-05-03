@@ -17,12 +17,12 @@
 
 package de.avpptr.umweltzone.utils;
 
+import org.ligi.tracedroid.logging.Log;
+
 import android.content.Context;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
-
-import org.ligi.tracedroid.logging.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -42,7 +42,9 @@ public class StringHelper {
         return TextUtils.join(", ", contactEmails);
     }
 
-    public static String getListOfCitiesText(Context context, LowEmissionZone lowEmissionZone) {
+    public static String getListOfCitiesText(
+            Context context,
+            LowEmissionZone lowEmissionZone) {
         List<String> listOfCities = lowEmissionZone.listOfCities;
         if (listOfCities == null || listOfCities.isEmpty()) {
             return null;
@@ -53,7 +55,9 @@ public class StringHelper {
         return context.getString(R.string.city_info_list_of_cities, citiesString, lastCity);
     }
 
-    public static String getZoneNumberSinceText(Context context, LowEmissionZone lowEmissionZone) {
+    public static String getZoneNumberSinceText(
+            Context context,
+            LowEmissionZone lowEmissionZone) {
         String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.zoneNumber);
         if (zoneNumberColor == null) {
             // Static zone information
@@ -65,7 +69,9 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
-    public static String getNextZoneNumberAsOfText(Context context, LowEmissionZone lowEmissionZone) {
+    public static String getNextZoneNumberAsOfText(
+            Context context,
+            LowEmissionZone lowEmissionZone) {
         if (lowEmissionZone.nextZoneNumberAsOf == null) {
             return null;
         }
@@ -82,11 +88,14 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
-    public static String getAbroadLicensedVehicleZoneNumberText(Context context, LowEmissionZone lowEmissionZone) {
+    public static String getAbroadLicensedVehicleZoneNumberText(
+            Context context,
+            LowEmissionZone lowEmissionZone) {
         if (lowEmissionZone.abroadLicensedVehicleZoneNumberUntil == null) {
             return null;
         }
-        String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.abroadLicensedVehicleZoneNumber);
+        String zoneNumberColor = zoneNumberToColor(context,
+                lowEmissionZone.abroadLicensedVehicleZoneNumber);
         if (zoneNumberColor == null) {
             Log.e("Abroad licensed vehicle zone number '" +
                     lowEmissionZone.abroadLicensedVehicleZoneNumber +
@@ -99,7 +108,8 @@ public class StringHelper {
                 zoneNumberColor);
     }
 
-    public static String getGeometryUpdatedAtText(Context context,
+    public static String getGeometryUpdatedAtText(
+            Context context,
             LowEmissionZone lowEmissionZone) {
         Date geometryUpdatedAt = lowEmissionZone.geometryUpdatedAt;
         if (geometryUpdatedAt == null) {
@@ -120,20 +130,29 @@ public class StringHelper {
     }
 
     // Compile date and colors into sentence
-    private static String getZoneNumberInfoString(Context context, int resourceId, Date date, String color) {
+    private static String getZoneNumberInfoString(
+            Context context,
+            int resourceId,
+            Date date,
+            String color) {
         String formattedDate = getFormattedDate(context,
                 R.string.city_info_zone_number_since_date_format, date);
         return context.getString(resourceId, formattedDate, color);
     }
 
-    private static String getFormattedDate(Context context, int datePatternResourceId, Date date) {
+    private static String getFormattedDate(
+            Context context,
+            int datePatternResourceId,
+            Date date) {
         String datePattern = context.getString(datePatternResourceId);
         // TODO Move locale into XML configuration
         SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.getDefault());
         return dateFormat.format(date);
     }
 
-    private static String zoneNumberToColor(Context context, int zoneNumber) {
+    private static String zoneNumberToColor(
+            Context context,
+            int zoneNumber) {
         if (zoneNumber == LowEmissionZoneNumbers.GREEN) {
             return context.getString(R.string.city_info_zone_number_since_text_fragment_green);
         }
@@ -146,11 +165,15 @@ public class StringHelper {
         return null;
     }
 
-    public static Spanned spannedLinkForString(final String title, final String url) {
+    public static Spanned spannedLinkForString(
+            final String title,
+            final String url) {
         return Html.fromHtml(linkifiedString(title, url));
     }
 
-    public static String linkifiedString(final String title, final String url) {
+    public static String linkifiedString(
+            final String title,
+            final String url) {
         if (url == null || TextUtils.isEmpty(url)) {
             throw new IllegalArgumentException("URL cannot be null nor empty.");
         }

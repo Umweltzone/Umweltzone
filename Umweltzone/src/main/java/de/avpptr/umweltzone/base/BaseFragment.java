@@ -37,7 +37,10 @@ public abstract class BaseFragment extends Fragment {
     protected abstract int getLayoutResource();
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(
+            LayoutInflater inflater,
+            ViewGroup container,
+            Bundle savedInstanceState) {
         return inflater.inflate(getLayoutResource(), container, false);
     }
 

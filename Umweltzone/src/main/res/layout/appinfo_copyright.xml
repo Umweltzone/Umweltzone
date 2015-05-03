@@ -16,15 +16,15 @@
   -->
 
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="@layout/activity_about">
+       xmlns:tools="http://schemas.android.com/tools"
+       tools:showIn="@layout/activity_about">
 
     <TextView
-        style="@style/AppInfo.ContentTitle"
-        android:text="@string/appinfo_copyright_title" />
+            style="@style/AppInfo.ContentTitle"
+            android:text="@string/appinfo_copyright_title"/>
 
     <TextView
-        style="@style/AppInfo.TextContent"
-        android:text="@string/appinfo_copyright_content" />
+            style="@style/AppInfo.TextContent"
+            android:text="@string/appinfo_copyright_content"/>
 
 </merge>
