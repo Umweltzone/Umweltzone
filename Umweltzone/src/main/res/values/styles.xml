@@ -183,7 +183,6 @@
     <style name="Faq.ExpandableListView" parent="Base.Widget.AppCompat.ListView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_margin">@dimen/medium_spacer</item>
         <item name="android:divider">@color/list_divider</item>
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
     </style>
