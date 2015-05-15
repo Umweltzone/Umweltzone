@@ -46,6 +46,8 @@ public class PreferencesHelper {
 
     protected final BooleanPreference mZoneIsDrawablePreference;
 
+    protected final BooleanPreference mCityNameFrankfurtInPreferencesFixedPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
@@ -61,6 +63,8 @@ public class PreferencesHelper {
                 mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
         mZoneIsDrawablePreference = new BooleanPreference(
                 mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+        mCityNameFrankfurtInPreferencesFixedPreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
     }
 
     // Last known location / city name
@@ -124,15 +128,11 @@ public class PreferencesHelper {
     // City name Frankfurt in preferences fixed
 
     public void storeCityNameFrankfurtInPreferencesFixed(boolean flag) {
-        BooleanPreference preference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
-        preference.set(flag);
+        mCityNameFrankfurtInPreferencesFixedPreference.set(flag);
     }
 
     public boolean restoreCityNameFrankfurtInPreferencesFixed() {
-        BooleanPreference preference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
-        return preference.get();
+        return mCityNameFrankfurtInPreferencesFixedPreference.get();
     }
 
 }
