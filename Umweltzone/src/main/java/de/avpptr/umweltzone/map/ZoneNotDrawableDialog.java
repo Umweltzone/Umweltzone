@@ -58,6 +58,9 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final FragmentActivity activity = getActivity();
         final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
+        if (lowEmissionZone == null) {
+            throw new NullPointerException("Recent low emission zone is null.");
+        }
         final String zoneDisplayName = lowEmissionZone.displayName;
 
         // Prepare layout

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -227,12 +227,16 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private void showZoneNotDrawableDialog() {
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentActivity activity = getActivity();
+        FragmentManager fragmentManager = activity.getSupportFragmentManager();
         Fragment fragment = fragmentManager
                 .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
         if (fragment == null) {
-            ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
-            dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
+            LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
+            if (lowEmissionZone != null) {
+                ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
+                dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
+            }
         }
     }
 
