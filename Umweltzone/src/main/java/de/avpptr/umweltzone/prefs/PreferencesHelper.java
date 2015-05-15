@@ -28,8 +28,6 @@ import info.metadude.android.typedpreferences.StringPreference;
 
 public class PreferencesHelper {
 
-    private final SharedPreferences mSharedPreferences;
-
     protected final StringPreference mCityNamePreference;
 
     protected final static GeoPoint mInvalidLocation =
@@ -50,21 +48,20 @@ public class PreferencesHelper {
 
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
-        mSharedPreferences = sharedPreferences;
         mCityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
+                sharedPreferences, Preferences.KEY_CITY_NAME);
         mLastKnownLocationCenterPreference = new GeoPointPreference(
-                mSharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER, mInvalidLocation);
+                sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER, mInvalidLocation);
         mLastKnownLocationBoundingBoxPreference = new BoundingBoxPreference(
-                mSharedPreferences,
+                sharedPreferences,
                 Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX,
                 mInvalidBoundingBox);
         mZoomLevelPreference = new FloatPreference(
-                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
+                sharedPreferences, Preferences.KEY_ZOOM_LEVEL);
         mZoneIsDrawablePreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
+                sharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
         mCityNameFrankfurtInPreferencesFixedPreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
+                sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
     }
 
     // Last known location / city name
