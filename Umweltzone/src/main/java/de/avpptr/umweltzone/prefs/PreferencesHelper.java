@@ -44,6 +44,8 @@ public class PreferencesHelper {
 
     protected final FloatPreference mZoomLevelPreference;
 
+    protected final BooleanPreference mZoneIsDrawablePreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
@@ -57,6 +59,8 @@ public class PreferencesHelper {
                 mInvalidBoundingBox);
         mZoomLevelPreference = new FloatPreference(
                 mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
+        mZoneIsDrawablePreference = new BooleanPreference(
+                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
     }
 
     // Last known location / city name
@@ -106,21 +110,15 @@ public class PreferencesHelper {
     // Zone is drawable
 
     public void storeZoneIsDrawable(boolean flag) {
-        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
-        zoneIsDrawablePreference.set(flag);
+        mZoneIsDrawablePreference.set(flag);
     }
 
     public boolean restoreZoneIsDrawable() {
-        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
-        return zoneIsDrawablePreference.get();
+        return mZoneIsDrawablePreference.get();
     }
 
     public boolean storesZoneIsDrawable() {
-        BooleanPreference zoneIsDrawablePreference = new BooleanPreference(
-                mSharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
-        return zoneIsDrawablePreference.isSet();
+        return mZoneIsDrawablePreference.isSet();
     }
 
     // City name Frankfurt in preferences fixed
