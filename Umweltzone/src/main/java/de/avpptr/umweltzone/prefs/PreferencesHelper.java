@@ -42,6 +42,8 @@ public class PreferencesHelper {
 
     protected final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
 
+    protected final FloatPreference mZoomLevelPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
@@ -53,6 +55,8 @@ public class PreferencesHelper {
                 mSharedPreferences,
                 Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX,
                 mInvalidBoundingBox);
+        mZoomLevelPreference = new FloatPreference(
+                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
     }
 
     // Last known location / city name
@@ -92,15 +96,11 @@ public class PreferencesHelper {
     // Zoom level
 
     public void storeZoomLevel(float zoomLevel) {
-        FloatPreference zoomLevelPreference = new FloatPreference(
-                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
-        zoomLevelPreference.set(zoomLevel);
+        mZoomLevelPreference.set(zoomLevel);
     }
 
     public float restoreZoomLevel() {
-        FloatPreference zoomLevelPreference = new FloatPreference(
-                mSharedPreferences, Preferences.KEY_ZOOM_LEVEL);
-        return zoomLevelPreference.get();
+        return mZoomLevelPreference.get();
     }
 
     // Zone is drawable
