@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -31,28 +31,27 @@ public class PreferencesHelper {
 
     private final SharedPreferences mSharedPreferences;
 
+    protected final StringPreference mCityNamePreference;
+
+
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
+        mCityNamePreference = new StringPreference(
+                mSharedPreferences, Preferences.KEY_CITY_NAME);
     }
 
     // Last known location / city name
 
     public void storeLastKnownLocation(final String cityName) {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        cityNamePreference.set(cityName);
+        mCityNamePreference.set(cityName);
     }
 
     public String restoreLastKnownLocationAsString() {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        return cityNamePreference.get();
+        return mCityNamePreference.get();
     }
 
     public boolean storesLastKnownLocation() {
-        StringPreference cityNamePreference = new StringPreference(
-                mSharedPreferences, Preferences.KEY_CITY_NAME);
-        return cityNamePreference.isSet();
+        return mCityNamePreference.isSet();
     }
 
     // Last known location / center
