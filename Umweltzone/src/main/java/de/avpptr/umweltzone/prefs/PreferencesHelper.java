@@ -33,11 +33,18 @@ public class PreferencesHelper {
 
     protected final StringPreference mCityNamePreference;
 
+    protected final static GeoPoint mInvalidLocation =
+            new GeoPoint(GeoPoint.INVALID_LATITUDE, GeoPoint.INVALID_LONGITUDE);
+
+    protected final GeoPointPreference mLastKnownLocationCenterPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
         mCityNamePreference = new StringPreference(
                 mSharedPreferences, Preferences.KEY_CITY_NAME);
+        mLastKnownLocationCenterPreference = new GeoPointPreference(
+                mSharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER, mInvalidLocation);
     }
 
     // Last known location / city name
@@ -57,22 +64,11 @@ public class PreferencesHelper {
     // Last known location / center
 
     public void storeLastKnownLocation(final GeoPoint center) {
-        DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference longitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        latitudePreference.set(center.getLatitude());
-        longitudePreference.set(center.getLongitude());
+        mLastKnownLocationCenterPreference.set(center);
     }
 
     public GeoPoint restoreLastKnownLocationAsGeoPoint() {
-        DoublePreference latitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference longitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_CENTER_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        double lat = latitudePreference.get();
-        double lon = longitudePreference.get();
-        return new GeoPoint(lat, lon);
+        return mLastKnownLocationCenterPreference.get();
     }
 
     // Last known location / bounding box
