@@ -24,18 +24,8 @@ public interface Preferences {
     public static final String KEY_LAST_KNOWN_LOCATION_CENTER =
             BuildConfig.APPLICATION_ID + ".LAST_KNOWN_LOCATION_CENTER";
 
-
-    public static final String KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE =
-            BuildConfig.APPLICATION_ID + ".BOUNDING_BOX_SOUTHWEST_LATITUDE";
-
-    public static final String KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE =
-            BuildConfig.APPLICATION_ID + ".BOUNDING_BOX_SOUTHWEST_LONGITUDE";
-
-    public static final String KEY_BOUNDING_BOX_NORTHEAST_LATITUDE =
-            BuildConfig.APPLICATION_ID + ".BOUNDING_BOX_NORTHEAST_LATITUDE";
-
-    public static final String KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE =
-            BuildConfig.APPLICATION_ID + ".BOUNDING_BOX_NORTHEAST_LONGITUDE";
+    public static final String KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX =
+            BuildConfig.APPLICATION_ID + ".LAST_KNOWN_LOCATION_BOUNDING_BOX";
 
     public static final String KEY_CITY_NAME =
             BuildConfig.APPLICATION_ID + ".CITY_NAME";

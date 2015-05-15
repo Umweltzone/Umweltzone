@@ -23,7 +23,6 @@ import de.avpptr.umweltzone.contract.Preferences;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import info.metadude.android.typedpreferences.BooleanPreference;
-import info.metadude.android.typedpreferences.DoublePreference;
 import info.metadude.android.typedpreferences.FloatPreference;
 import info.metadude.android.typedpreferences.StringPreference;
 
@@ -38,6 +37,11 @@ public class PreferencesHelper {
 
     protected final GeoPointPreference mLastKnownLocationCenterPreference;
 
+    protected final static BoundingBox mInvalidBoundingBox =
+            new BoundingBox(mInvalidLocation, mInvalidLocation);
+
+    protected final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mSharedPreferences = sharedPreferences;
@@ -45,6 +49,10 @@ public class PreferencesHelper {
                 mSharedPreferences, Preferences.KEY_CITY_NAME);
         mLastKnownLocationCenterPreference = new GeoPointPreference(
                 mSharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER, mInvalidLocation);
+        mLastKnownLocationBoundingBoxPreference = new BoundingBoxPreference(
+                mSharedPreferences,
+                Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX,
+                mInvalidBoundingBox);
     }
 
     // Last known location / city name
@@ -74,40 +82,11 @@ public class PreferencesHelper {
     // Last known location / bounding box
 
     public void storeLastKnownLocation(final BoundingBox boundingBox) {
-        DoublePreference southWestLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference southWestLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        DoublePreference northEastLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference northEastLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-
-        GeoPoint southWest = boundingBox.getSouthWest();
-        southWestLatitudePreference.set(southWest.getLatitude());
-        southWestLongitudePreference.set(southWest.getLongitude());
-        GeoPoint northEast = boundingBox.getNorthEast();
-        northEastLatitudePreference.set(northEast.getLatitude());
-        northEastLongitudePreference.set(northEast.getLongitude());
+        mLastKnownLocationBoundingBoxPreference.set(boundingBox);
     }
 
     public BoundingBox restoreLastKnownLocationAsBoundingBox() {
-        DoublePreference southWestLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference southWestLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_SOUTHWEST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-        DoublePreference northEastLatitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LATITUDE, GeoPoint.INVALID_LATITUDE);
-        DoublePreference northEastLongitudePreference = new DoublePreference(mSharedPreferences,
-                Preferences.KEY_BOUNDING_BOX_NORTHEAST_LONGITUDE, GeoPoint.INVALID_LONGITUDE);
-
-        double southWestLatitude = southWestLatitudePreference.get();
-        double southWestLongitude = southWestLongitudePreference.get();
-        double northEastLatitude = northEastLatitudePreference.get();
-        double northEastLongitude = northEastLongitudePreference.get();
-        GeoPoint southWest = new GeoPoint(southWestLatitude, southWestLongitude);
-        GeoPoint northEast = new GeoPoint(northEastLatitude, northEastLongitude);
-        return new BoundingBox(southWest, northEast);
+        return mLastKnownLocationBoundingBoxPreference.get();
     }
 
     // Zoom level
