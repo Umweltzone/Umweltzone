@@ -23,7 +23,7 @@ Screenshot
 ------------------
 The map screen of the app shows the outline of the low-emission zone
 
-![Umweltzone][3]
+![Umweltzone][app-screenshot]
 
 
 Android versions
@@ -100,9 +100,9 @@ This content is licensed, if not stated otherwise, under a
 
 [1]: http://bitbucket.org/tbsprs/umweltzone/raw/9ae472a8cc7ad0ef09179e57ca911a46ecd8abb8/google-play-badge.png
 [2]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
-[3]: http://bitbucket.org/tbsprs/umweltzone/raw/18d887e823828af217156f3b68690445b3ba6129/screenshot.png
 [4]: http://umweltzone.uservoice.com
 [5]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
+[app-screenshot]: screenshot.png
 [gpl-license-link]: http://www.gnu.org/licenses/gpl-3.0.txt
 [7]: http://creativecommons.org/licenses/by-sa/3.0/
 [8]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
