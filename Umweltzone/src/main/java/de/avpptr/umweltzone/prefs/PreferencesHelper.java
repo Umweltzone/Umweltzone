@@ -78,6 +78,10 @@ public class PreferencesHelper {
         return mCityNamePreference.isSet();
     }
 
+    public void deleteLastKnownLocationAsString() {
+        mCityNamePreference.delete();
+    }
+
     // Last known location / center
 
     public void storeLastKnownLocation(final GeoPoint center) {
@@ -86,6 +90,10 @@ public class PreferencesHelper {
 
     public GeoPoint restoreLastKnownLocationAsGeoPoint() {
         return mLastKnownLocationCenterPreference.get();
+    }
+
+    public void deleteLastKnownLocationAsGeoPoint() {
+        mLastKnownLocationCenterPreference.delete();
     }
 
     // Last known location / bounding box
@@ -98,6 +106,10 @@ public class PreferencesHelper {
         return mLastKnownLocationBoundingBoxPreference.get();
     }
 
+    public void deleteLastKnownLocationAsBoundingBox() {
+        mLastKnownLocationBoundingBoxPreference.delete();
+    }
+
     // Zoom level
 
     public void storeZoomLevel(float zoomLevel) {
@@ -106,6 +118,10 @@ public class PreferencesHelper {
 
     public float restoreZoomLevel() {
         return mZoomLevelPreference.get();
+    }
+
+    public void deleteZoomLevel() {
+        mZoomLevelPreference.delete();
     }
 
     // Zone is drawable
