@@ -39,6 +39,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 
 import java.util.List;
@@ -168,7 +169,7 @@ public class MapFragment extends SupportMapFragment {
             return;
         }
         Bundle extras = intent.getExtras();
-        if (extras == null) {
+        if (extras == null || TextUtils.isEmpty(extras.getString(BundleKeys.CITY_CHANGE))) {
             // Select default city at first application start
             GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
             if (!lastKnownPosition.isValid()) {
