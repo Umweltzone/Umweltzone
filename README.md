@@ -16,7 +16,7 @@ pointing to external websites which serve more information to
 read through.
 
 
-[![Available for Android at Google Play][1]][2]
+[![Available for Android at Google Play][google-play-badge]][google-play-link]
 
 
 Screenshot
@@ -37,7 +37,7 @@ Feedback
 Users can leave there feature request on a special website which not
 only allows to post own wishes but also to vote on ideas of others.
 
-* [http://umweltzone.uservoice.com][4]
+* [http://umweltzone.uservoice.com][uservoice-link]
 
 
 Configuration
@@ -70,7 +70,7 @@ example included which contains the properties which are referenced in the build
 
 References
 ----------
-* [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][5]
+* [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][immissionsschutzgesetz-link]
 
 
 Authors
@@ -93,19 +93,19 @@ License
 The source code is licensed under [GPLv3][gpl-license-link].
 
 This content is licensed, if not stated otherwise, under a
-[Creative Commons Attribution-ShareAlike 3.0 Unported License][7].
+[Creative Commons Attribution-ShareAlike 3.0 Unported License][cc-by-sa-link].
 
-![Creative Commons Attribution-ShareAlike 3.0 Unported License][8]
+![Creative Commons Attribution-ShareAlike 3.0 Unported License][cc-by-sa-image]
 
 
-[1]: http://bitbucket.org/tbsprs/umweltzone/raw/9ae472a8cc7ad0ef09179e57ca911a46ecd8abb8/google-play-badge.png
-[2]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
-[4]: http://umweltzone.uservoice.com
-[5]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
+[google-play-badge]: google-play-badge.png
+[google-play-link]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
 [app-screenshot]: screenshot.png
+[uservoice-link]: http://umweltzone.uservoice.com
+[immissionsschutzgesetz-link]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
 [gpl-license-link]: http://www.gnu.org/licenses/gpl-3.0.txt
-[7]: http://creativecommons.org/licenses/by-sa/3.0/
-[8]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
+[cc-by-sa-link]: http://creativecommons.org/licenses/by-sa/3.0/
+[cc-by-sa-image]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
 [gpl-license-badge]: http://img.shields.io/badge/license-GPL--3.0-lightgrey.svg
 [versioneye-badge]: https://www.versioneye.com/user/projects/53f5b50a8d7ae1c2ec00033d/badge.svg
 [versioneye-link]: https://www.versioneye.com/user/projects/53f5b50a8d7ae1c2ec00033d
