@@ -35,6 +35,7 @@ public class MainActivity extends BaseActivity {
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
         TraceDroidEmailSender.sendStackTraces(this);
+        migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
         showChangeLogDialog();
     }
@@ -64,6 +65,23 @@ public class MainActivity extends BaseActivity {
             }
         }
         preferencesHelper.storeCityNameFrankfurtInPreferencesFixed(true);
+    }
+
+    // Remove "bochum" as the last selected city name
+    // and reset the map location
+    // The city name has been removed since it is contained in "ruhrgebiet".
+    private void migrateBochumRemoval() {
+        final Umweltzone application = (Umweltzone) getApplication();
+        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        if (preferencesHelper.storesLastKnownLocation()) {
+            final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
+            if (cityName.equals("bochum")) {
+                preferencesHelper.deleteLastKnownLocationAsString();
+                preferencesHelper.deleteLastKnownLocationAsBoundingBox();
+                preferencesHelper.deleteLastKnownLocationAsGeoPoint();
+                preferencesHelper.deleteZoomLevel();
+            }
+        }
     }
 
 }
