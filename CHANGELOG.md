@@ -147,7 +147,7 @@
 * Extend error reporting when Google Play Services is not installed on the device, [66054](https://bitbucket.org/tbsprs/umweltzone/commits/6605442fb8c9c303e9088ced7bb9ce6c010f68fa)
 * Added new cities: Dusseldorf, Bremen, Leipzig, Hanover and Muenster, [9ef31](https://bitbucket.org/tbsprs/umweltzone/commits/9ef317e36d66f392a54c833ba0baf04864eaab5f)
 * Point out missing `gradle.properties` when project is imported, [df740](https://bitbucket.org/tbsprs/umweltzone/commits/df7405b7be011d880b4d95379b22c40c2586e332)
-* Set `versionNameSuffix` for convinient look-up while development, [f373f](https://bitbucket.org/tbsprs/umweltzone/commits/f373f1fabc8e382dd6e443e311160295f44884ca)
+* Set `versionNameSuffix` for convenient look-up while development, [f373f](https://bitbucket.org/tbsprs/umweltzone/commits/f373f1fabc8e382dd6e443e311160295f44884ca)
 * Extracted feedback menu into separate action menu item, [92b80](https://bitbucket.org/tbsprs/umweltzone/commits/92b80c0826eeaf366bd61eafd1c8678d7499d38e)
 * Disable tracking for debug builds, [9fd4b](https://bitbucket.org/tbsprs/umweltzone/commits/9fd4bdb6f3dfddfb785455be88e3e941816fef9c)
 * Tracking for city selection if none has been selected before, [ecb74](https://bitbucket.org/tbsprs/umweltzone/commits/ecb7431f4471231ae7accb1b53b5862524c89b10)
