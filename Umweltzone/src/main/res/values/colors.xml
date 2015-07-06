@@ -23,6 +23,7 @@
     <!-- Commons -->
     <color name="horizontal_line_fill_color">#c3c3c3</color>
     <color name="text_link">@color/accent</color>
+    <color name="text_link_pressed">@android:color/black</color>
     <color name="button_text">@android:color/white</color>
     <color name="title_text">@android:color/primary_text_light</color>
 

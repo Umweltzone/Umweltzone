@@ -19,7 +19,7 @@
     <!--
     finger is on while button is up
     -->
-    <item android:state_checked="false" android:state_pressed="true" android:color="@android:color/primary_text_light"/>
+    <item android:state_checked="false" android:state_pressed="true" android:color="@color/text_link_pressed"/>
     <!--
     finger is gone, button is up, default
     -->
