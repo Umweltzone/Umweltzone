@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -26,17 +26,17 @@
             android:text="@string/appinfo_license_content"/>
 
     <TextView
-            android:id="@+id/appInfoButtonGpl"
+            android:id="@+id/app_info_gpl"
             style="@style/AppInfo.WebLink"
             android:text="@string/appinfo_license_url_gpl"/>
 
     <TextView
-            android:id="@+id/appInfoButtonOdbl"
+            android:id="@+id/app_info_odbl"
             style="@style/AppInfo.WebLink"
             android:text="@string/appinfo_license_url_odbl"/>
 
     <TextView
-            android:id="@+id/appInfoButtonCreativeCommons"
+            android:id="@+id/app_info_creative_commons"
             style="@style/AppInfo.WebLink"
             android:text="@string/appinfo_license_url_cc"/>
 
