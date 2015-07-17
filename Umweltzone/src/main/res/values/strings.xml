@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+  Copyright (C) 2015  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -105,17 +105,11 @@
     <string name="appinfo_references_url_googleplayservices">
         http://developer.android.com/google/play-services
     </string>
-    <string name="appinfo_references_name_googlesupportlibrary">
-        Google Support Library v4
+    <string name="appinfo_references_name_googledesignsupportlibrary">
+        Google Design Support Library
     </string>
-    <string name="appinfo_references_url_googlesupportlibrary">
-        http://developer.android.com/tools/support-library
-    </string>
-    <string name="appinfo_references_name_actionbarcompat">
-        Google ActionBarCompat, Google Support Library v7
-    </string>
-    <string name="appinfo_references_url_actionbarcompat">
-        http://developer.android.com/tools/support-library
+    <string name="appinfo_references_url_googledesignsupportlibrary">
+        http://developer.android.com/tools/support-library/features.html#design
     </string>
     <string name="appinfo_references_name_jackson">
         Jackson JSON processor

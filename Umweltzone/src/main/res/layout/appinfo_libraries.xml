@@ -31,14 +31,9 @@
             android:text="@string/appinfo_references_url_googleplayservices"/>
 
     <TextView
-            android:id="@+id/app_info_google_support_library"
+            android:id="@+id/app_info_google_design_support_library"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_googlesupportlibrary"/>
-
-    <TextView
-            android:id="@+id/app_info_actionbarcompat"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_actionbarcompat"/>
+            android:text="@string/appinfo_references_url_googledesignsupportlibrary"/>
 
     <TextView
             android:id="@+id/app_info_jackson"
