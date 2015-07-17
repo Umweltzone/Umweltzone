@@ -80,12 +80,6 @@ public class IntentHelper {
         return getIntent(activity, FaqActivity.class);
     }
 
-    public static Intent getUriIntent(String uri) {
-        final Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(uri));
-        return intent;
-    }
-
     private static Intent getIntent(Activity activity, Class<?> clazz) {
         final Intent intent = new Intent(activity, clazz);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
