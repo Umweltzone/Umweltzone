@@ -16,6 +16,32 @@
 -->
 <changelog>
     <release
+            version="2.4.0"
+            versioncode="24000">
+        <change>
+            Neu: Endlich Farben! Die Statusleiste, das Menü, Links, Schaltflächen, Effekte
+            und Dialoge erstrahlen in bunten Farben.
+        </change>
+        <change>
+            Neu: Ein neu gestaltetes App-Symbol.
+        </change>
+        <change>
+            Bugfix: Das Laden der Standardstadt beim ersten Start
+            funktioniert jetzt wie erwartet.
+        </change>
+        <change>
+            Aktualisierung: Bochum wurde entfernt, da es Teil des Ruhrgebiets ist.
+        </change>
+        <change>
+            Aktualisierung: Der Scroll-Effekt in der FAQ-Liste
+            funktioniert jetzt korrekt.
+        </change>
+        <change>
+            Aktualisierung: Abstürze beim Aufrufen von Links auf
+            einigen Geräten treten nicht mehr auf.
+        </change>
+    </release>
+    <release
         version="2.3.0"
         versioncode="23000">
         <change>

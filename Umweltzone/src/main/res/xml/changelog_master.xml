@@ -16,6 +16,30 @@
 -->
 <changelog>
     <release
+            version="2.4.0"
+            versioncode="24000">
+        <change>
+            New: Brand new colors! The statusbar, toolbar, links, buttons,
+            highlights and dialogs are inked now.
+        </change>
+        <change>
+            New: A new fresh application icon.
+        </change>
+        <change>
+            Bugfix: Loading the default city on 1st application
+            launch works as expected now.
+        </change>
+        <change>
+            Improved: Removed Bochum since it is part of the Ruhrgebiet.
+        </change>
+        <change>
+            Improved: Scroll effect in FAQs works correctly now.
+        </change>
+        <change>
+            Improved: Avoid crashes when clicking links on some devices.
+        </change>
+    </release>
+    <release
         version="2.3.0"
         versioncode="23000">
         <change>

@@ -1,5 +1,41 @@
 # Umweltzone changelog
 
+## [v.2.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.4.0)
+
+* Published: 2015-07-17
+
+### Features, improvements and maintenance
+
+* Avoid crash when activity cannot be resolved from intent., [af44a](https://bitbucket.org/tbsprs/umweltzone/commits/af44a0e09da8a25a1c535091b9a0ec5c1c2a0021)
+* Customize color for highlighting controls., [01ab8](https://bitbucket.org/tbsprs/umweltzone/commits/01ab852995338b66e6df0ff6b994998e72a6ec8f)
+* Fix preview rendering in Android Studio: Do not cascade selectors., [cf7c2](https://bitbucket.org/tbsprs/umweltzone/commits/cf7c2df31cf7831390a6bfbffedf3cc100ff6bb9)
+* Remove "Bochum" since it already contained in the "Ruhrgebiet"., [012c6](https://bitbucket.org/tbsprs/umweltzone/commits/012c64ca39bd5550ef3320fc867c06f19810de46)
+* Allow to reset preferences., [79de2](https://bitbucket.org/tbsprs/umweltzone/commits/79de2f8a451c075d75c8094903091757e29ca305)
+* Load default city on first application launch., [41eb2](https://bitbucket.org/tbsprs/umweltzone/commits/41eb256393d06aa7603018151694bdf9f52e4302)
+* Add design time layout color., [1f099](https://bitbucket.org/tbsprs/umweltzone/commits/1f099a3d34a328d22732d31ff7e70a1aca9987f5)
+* Fix overscroll effect for FAQ list., [0dab2](https://bitbucket.org/tbsprs/umweltzone/commits/0dab2dde01d00472bbf9080b25584f55a4ada92c)
+* Consider missing 'recent low emission zone'., [5dfb3](https://bitbucket.org/tbsprs/umweltzone/commits/5dfb3ff838c51beee3aa33b98db46c1e8008acf5)
+* Refactor preferences., [83c70](https://bitbucket.org/tbsprs/umweltzone/commits/83c70bcc40071b4f41bcf87b4bf6c3a632e6fafd)
+* Update application icon., [4d5ac](https://bitbucket.org/tbsprs/umweltzone/commits/4d5ace2bac27eddc04299d3f2a4b869ef7d985b8)
+* Update style for FAQ list., [c9648](https://bitbucket.org/tbsprs/umweltzone/commits/c96482aa6c3e113e642e138b1d2adc67f972f47c)
+* Customize text colors for alert dialogs., [bbd5f](https://bitbucket.org/tbsprs/umweltzone/commits/bbd5f356a3c6745560acffa40149c2071f319780)
+* Customize colors for toolbar, status bar, buttons, zone polygon, badge., [f8968](https://bitbucket.org/tbsprs/umweltzone/commits/f89683a5badbee294dbb8f5e298875195ac77f02)
+* Ensure compatibility below API level 11., [abe16](https://bitbucket.org/tbsprs/umweltzone/commits/abe163c5a475ecb1639baab974a916456c02e990)
+* Avoid NullPointerException if ActionBar is missing., [14d8e](https://bitbucket.org/tbsprs/umweltzone/commits/14d8e0efd30c54f7f20c7f1b37629f86a930ec09)
+* Replace deprecated ActionBarActivity with AppCompatActivity., [139e4](https://bitbucket.org/tbsprs/umweltzone/commits/139e40cf8e4e4b769609352cabcbbe13198defa5)
+* Remove empty and dangerous theme replacement for API 11 and 14., [e0f99](https://bitbucket.org/tbsprs/umweltzone/commits/e0f99a2152a2c4230772e13a7a102f6a34c883ab)
+
+### Libraries, build tools, SDK
+
+* Add Google Design Support Library v.22.2.0., [ac6d9](https://bitbucket.org/tbsprs/umweltzone/commits/ac6d95289f26d121852100f329b1c321741f9491)
+* Update appcompat-v7 to v.22.2.0., [3b01d](https://bitbucket.org/tbsprs/umweltzone/commits/3b01da1fb3a3213852f0737525f13666297930cb)
+* Update Gradle wrapper to v.2.4., [2848e](https://bitbucket.org/tbsprs/umweltzone/commits/2848ec383f9018ecaed18d53ab4efff24d70f7dd)
+* Update Gradle plugin to v.1.2.3., [8cfb1](https://bitbucket.org/tbsprs/umweltzone/commits/8cfb148260d0ea464ebc75a8f87f4a65263f85f9)
+* Update SDK version to v.22., [a415b](https://bitbucket.org/tbsprs/umweltzone/commits/a415bae4d5dc3c4098671fe2f931a5408aba614c)
+* Update jackson-databind to v.2.5.4., [c881b](https://bitbucket.org/tbsprs/umweltzone/commits/c881bc7f1f3b5b73bce2f021d10ec2370b447144)
+* Update ProGuard plugin to v.5.2.1., [2a1e8](https://bitbucket.org/tbsprs/umweltzone/commits/2a1e87b0583bdb595d9933901eea9db3a84c260c)
+* Update build tools to v.22.0.1., [d2a14](https://bitbucket.org/tbsprs/umweltzone/commits/d2a14fbb53cdcf255b86d8ea4694919086e5fbbe)
+
 
 ## [v.2.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.3.0)
 
