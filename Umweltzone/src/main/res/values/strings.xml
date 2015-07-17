@@ -300,6 +300,9 @@
     </string>
     <string name="zone_not_drawable_later">Maybe later</string>
     <string name="zone_not_drawable_open_email">Open email</string>
+    <string name="zone_not_drawable_no_email_app">
+        No compatible email app installed.
+    </string>
     <string name="zone_not_drawable_app_chooser_title">Open draft with &#8230;</string>
     <string name="zone_not_drawable_email_subject">
         Umweltzone Android App, Integration <xliff:g id="zoneName">%1$s</xliff:g>
@@ -354,6 +357,9 @@
     </string>
     <string name="trace_droid_button_title_send">
         @string/zone_not_drawable_open_email
+    </string>
+    <string name="trace_droid_no_email_app">
+        @string/zone_not_drawable_no_email_app
     </string>
     <string name="trace_droid_button_title_no">
         No

@@ -20,19 +20,20 @@ package de.avpptr.umweltzone.tracedroid;
 import org.ligi.tracedroid.TraceDroid;
 import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;
 
-import android.content.Context;
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.utils.SnackBarHelper;
 
 // This class supports translation and configuration via XML files.
 // The original TraceDroidEmailSender class is available here:
 // https://github.com/ligi/tracedroid
 public abstract class TraceDroidEmailSender {
 
-    public static boolean sendStackTraces(final Context context) {
+    public static boolean sendStackTraces(final Activity context) {
         if (TraceDroid.getStackTraceFiles().length < 1) {
             return false;
         }
@@ -61,8 +62,13 @@ public abstract class TraceDroidEmailSender {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         final Intent emailIntent = getEmailIntent(
                                 emailAddress, maximumStackTracesCount);
-                        context.startActivity(Intent.createChooser(emailIntent, sendMail));
-                        TraceDroid.deleteStacktraceFiles();
+                        if (emailIntent.resolveActivity(context.getPackageManager()) != null) {
+                            context.startActivity(Intent.createChooser(emailIntent, sendMail));
+                            TraceDroid.deleteStacktraceFiles();
+                        } else {
+                            SnackBarHelper.showError(context, R.id.map,
+                                    R.string.trace_droid_no_email_app);
+                        }
                     }
                 })
                 .setNegativeButton(buttonTitleNo, new DialogInterface.OnClickListener() {

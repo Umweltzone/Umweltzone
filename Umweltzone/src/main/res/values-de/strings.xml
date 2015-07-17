@@ -315,6 +315,9 @@
     </string>
     <string name="zone_not_drawable_later">Später</string>
     <string name="zone_not_drawable_open_email">E-Mail öffnen</string>
+    <string name="zone_not_drawable_no_email_app">
+        Keine kompatible E-Mail-App installiert.
+    </string>
     <string name="zone_not_drawable_app_chooser_title">Entwurf öffnen mit &#8230;</string>
     <string name="zone_not_drawable_email_subject">
         Umweltzone <xliff:g id="zoneName">%1$s</xliff:g> veröffentlichen
@@ -352,6 +355,9 @@
     </string>
     <string name="trace_droid_button_title_send">
         @string/zone_not_drawable_open_email
+    </string>
+    <string name="trace_droid_no_email_app">
+        @string/zone_not_drawable_no_email_app
     </string>
     <string name="trace_droid_button_title_no">
         Nein

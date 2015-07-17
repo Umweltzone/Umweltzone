@@ -23,6 +23,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -118,8 +119,15 @@ public abstract class ViewHelper {
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(intent);
-                Umweltzone.getTracker().track(trackingPoint, trackingString);
+                if (intent.resolveActivity(context.getPackageManager()) != null) {
+                    context.startActivity(intent);
+                    Umweltzone.getTracker().track(trackingPoint, trackingString);
+                }
+                else {
+                    // TODO Present error to the user
+                    Log.e(getClass().getName(),
+                            "Activity for intent cannot be resolved. URL = " + url);
+                }
             }
         });
     }

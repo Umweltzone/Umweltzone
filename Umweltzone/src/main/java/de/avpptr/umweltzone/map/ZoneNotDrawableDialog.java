@@ -40,6 +40,7 @@ import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.avpptr.umweltzone.utils.SnackBarHelper;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
@@ -91,8 +92,12 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                                 );
                                 mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
                                         lowEmissionZone.name);
-                                startActivity(Intent.createChooser(intent, getString(
-                                        R.string.zone_not_drawable_app_chooser_title)));
+                                if (intent.resolveActivity(activity.getPackageManager()) != null) {
+                                    startActivity(Intent.createChooser(intent, getString(
+                                            R.string.zone_not_drawable_app_chooser_title)));
+                                } else {
+                                    SnackBarHelper.showError(activity, R.id.map, R.string.zone_not_drawable_no_email_app);
+                                }
                             }
                         })
                 .setNegativeButton(R.string.zone_not_drawable_later,
