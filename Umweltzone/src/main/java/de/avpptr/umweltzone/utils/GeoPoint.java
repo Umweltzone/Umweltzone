@@ -93,8 +93,10 @@ public final class GeoPoint {
     }
 
     public static List<LatLng> getLatLngPoints(final List<GeoPoint> geoPoints) {
-        final List<LatLng> latLngPoints = new ArrayList<LatLng>(geoPoints.size());
-        for (final GeoPoint point : geoPoints) {
+        int geoPointsCount = geoPoints.size();
+        final List<LatLng> latLngPoints = new ArrayList<>(geoPointsCount);
+        for (int i = 0; i < geoPointsCount; i++) {
+            GeoPoint point = geoPoints.get(i);
             latLngPoints.add(point.toLatLng());
         }
         return latLngPoints;

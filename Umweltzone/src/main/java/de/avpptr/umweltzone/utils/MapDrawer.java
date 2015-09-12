@@ -46,8 +46,10 @@ public class MapDrawer {
             mZonePolygons = null;
         }
 
-        mZonePolygons = new ArrayList<Polygon>(circuits.size());
-        for (Circuit circuit : circuits) {
+        int circuitsCount = circuits.size();
+        mZonePolygons = new ArrayList<>(circuitsCount);
+        for (int i = 0; i < circuitsCount; i++) {
+            Circuit circuit = circuits.get(i);
             Polygon zonePolygon = drawPolygon(circuit, fillColor, strokeColor, strokeWidth);
             mZonePolygons.add(zonePolygon);
         }

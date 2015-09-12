@@ -83,7 +83,8 @@ public class LowEmissionZone {
             Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
-        for (LowEmissionZone lowEmissionZone : mLowEmissionZones) {
+        for (int i = 0, size = mLowEmissionZones.size(); i < size; i++) {
+            LowEmissionZone lowEmissionZone = mLowEmissionZones.get(i);
             if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
                 return lowEmissionZone;
             }
