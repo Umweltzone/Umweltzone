@@ -1261,20 +1261,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wuppertal.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "geodatenzentrum@stadt.wuppertal.de",
-            "presseamt@stadt.wuppertal.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Bezirksregierung Düsseldorf",
+        "geometryUpdatedAt" : "2015-07-27",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.165097,
-                "longitude" : 7.009271
+                "latitude" : 51.224868,
+                "longitude" : 7.064431
             },
             "northEast" : {
-                "latitude" : 51.322850,
-                "longitude" : 7.312082
+                "latitude" : 51.287860,
+                "longitude" : 7.244236
             }
         }
     }
