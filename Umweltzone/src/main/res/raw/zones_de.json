@@ -310,20 +310,16 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20heidelberg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "vermessungsamt@heidelberg.de",
-            "hz@heidelberg.de",
-            "oeffentlichkeitsarbeit@heidelberg.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-08-05",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 49.371563,
+                "latitude" : 49.368,
                 "longitude" : 8.667917
             },
             "northEast" : {
-                "latitude" : 49.439048,
+                "latitude" : 49.4425,
                 "longitude" : 8.717991
             }
         }
