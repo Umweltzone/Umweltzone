@@ -614,19 +614,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20magdeburg.php",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umweltzone-magdeburg@tba.magdeburg.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "OpenStreetMap",
+        "geometryUpdatedAt" : "2015-09-06",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 52.022566,
-                "longitude" : 11.507941
+                "latitude" : 52.112531,
+                "longitude" : 11.602910
             },
             "northEast" : {
-                "latitude" : 52.236696,
-                "longitude" : 11.771613
+                "latitude" : 52.140916,
+                "longitude" : 11.651436
             }
         }
     },
