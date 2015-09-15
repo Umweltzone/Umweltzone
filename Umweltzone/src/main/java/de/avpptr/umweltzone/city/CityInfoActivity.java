@@ -28,7 +28,7 @@ public class CityInfoActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initFragment(new CityInfoFragment());
+        initFragment(new CityInfoFragment(), CityInfoFragment.FRAGMENT_TAG);
     }
 
     @Override

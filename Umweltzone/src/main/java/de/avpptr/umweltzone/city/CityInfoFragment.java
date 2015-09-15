@@ -23,6 +23,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
@@ -34,6 +35,9 @@ import de.avpptr.umweltzone.utils.StringHelper;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class CityInfoFragment extends BaseFragment {
+
+    public static final String FRAGMENT_TAG =
+            BuildConfig.APPLICATION_ID + ".CITY_INFO_FRAGMENT_TAG";
 
     private LowEmissionZone mLowEmissionZone;
 

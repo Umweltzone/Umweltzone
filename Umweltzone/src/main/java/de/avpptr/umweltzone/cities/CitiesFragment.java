@@ -26,6 +26,7 @@ import android.widget.ListView;
 
 import java.util.List;
 
+import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
@@ -36,6 +37,9 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class CitiesFragment extends ListFragment {
+
+    public static final String FRAGMENT_TAG =
+            BuildConfig.APPLICATION_ID + ".CITIES_FRAGMENT_TAG";
 
     protected final Tracking mTracking;
 
