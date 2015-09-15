@@ -107,7 +107,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:design:22.2.1'
     compile 'com.google.android.gms:play-services:3.2.65'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.1'
     compile 'de.cketti.library.changelog:ckchangelog:1.2.2'
