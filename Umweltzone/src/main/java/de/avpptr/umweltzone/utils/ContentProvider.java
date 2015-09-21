@@ -26,11 +26,14 @@ import org.ligi.tracedroid.logging.Log;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.support.annotation.NonNull;
+import android.support.annotation.RawRes;
 import android.support.v4.util.LruCache;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -44,12 +47,14 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
+
     private static final LruCache<String, List<Circuit>> CIRCUITS_CACHE
             = new LruCache<String, List<Circuit>>(6);
 
     private static final LruCache<String, Integer> RESOURCE_ID_CACHE
             = new LruCache<String, Integer>(6);
 
+    @NonNull
     public static List<Faq> getFaqs(final Context context) {
         // Do not accidentally compare with Locale.GERMAN
         if (Locale.getDefault().equals(Locale.GERMANY)) {
@@ -58,10 +63,12 @@ public abstract class ContentProvider {
         return getContent(context, "faqs_en", Faq.class);
     }
 
+    @NonNull
     public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
         return getContent(context, "zones_de", LowEmissionZone.class);
     }
 
+    @NonNull
     public static List<Circuit> getCircuits(final Context context, final String zoneName) {
         String keyForZone = generateKeyForZoneWith(zoneName);
         List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
@@ -76,6 +83,7 @@ public abstract class ContentProvider {
         return "zone_" + zoneName;
     }
 
+    @NonNull
     private static <T> List<T> getContent(
             final Context context,
             final String fileName,
@@ -83,6 +91,8 @@ public abstract class ContentProvider {
         return getContent(context, fileName, "raw", contentType);
     }
 
+    @SuppressWarnings("unchecked") // for Collections.EMPTY_LIST
+    @NonNull
     private static <T> List<T> getContent(
             final Context context,
             final String fileName,
@@ -107,9 +117,10 @@ public abstract class ContentProvider {
             e.printStackTrace();
         }
         Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
-        return null;
+        return Collections.EMPTY_LIST;
     }
 
+    @RawRes
     static Integer getResourceId(Context context, String fileName, String folderName) {
         String resourceKey = getFilePath(folderName, fileName);
         Integer rawResourceId = RESOURCE_ID_CACHE.get(resourceKey);
@@ -121,6 +132,7 @@ public abstract class ContentProvider {
         return rawResourceId;
     }
 
+    @RawRes
     private static int getRawResourceId(Context context, String fileName, String folderName) {
         final Resources resources = context.getResources();
         // Look-up identifier using reflection (expensive)

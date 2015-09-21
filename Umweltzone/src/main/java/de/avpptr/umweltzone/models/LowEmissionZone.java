@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.models;
 
 import android.content.Context;
+import android.support.annotation.Nullable;
 
 import java.util.Date;
 import java.util.List;
@@ -64,6 +65,7 @@ public class LowEmissionZone {
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;
 
+    @Nullable
     public static LowEmissionZone getRecentLowEmissionZone(Context context) {
         Umweltzone application = (Umweltzone) context.getApplicationContext();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
@@ -71,17 +73,19 @@ public class LowEmissionZone {
         return getLowEmissionZone(context, zoneName);
     }
 
+    @Nullable
     public static LowEmissionZone getDefaultLowEmissionZone(Context context) {
         String defaultZone = context.getString(R.string.config_default_zone_name);
         return getLowEmissionZone(context, defaultZone);
     }
 
     // TODO Parser should not be called more often then needed
+    @Nullable
     private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
         if (mLowEmissionZones == null) {
             mLowEmissionZones = ContentProvider.getLowEmissionZones(context);
         }
-        if (mLowEmissionZones == null) {
+        if (mLowEmissionZones.isEmpty()) {
             Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }

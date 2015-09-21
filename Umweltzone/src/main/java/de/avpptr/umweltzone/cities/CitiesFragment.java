@@ -57,7 +57,7 @@ public class CitiesFragment extends ListFragment {
         if (mLowEmissionZones == null) {
             mLowEmissionZones = ContentProvider.getLowEmissionZones(activity);
         }
-        if (mLowEmissionZones == null) {
+        if (mLowEmissionZones.isEmpty()) {
             mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }

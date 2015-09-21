@@ -20,6 +20,8 @@ package de.avpptr.umweltzone.utils;
 import org.ligi.tracedroid.logging.Log;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -35,6 +37,7 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
 
+    @Nullable
     public static String getContactEmailsText(List<String> contactEmails) {
         if (contactEmails == null || contactEmails.isEmpty()) {
             return null;
@@ -42,6 +45,7 @@ public class StringHelper {
         return TextUtils.join(", ", contactEmails);
     }
 
+    @Nullable
     public static String getListOfCitiesText(
             Context context,
             LowEmissionZone lowEmissionZone) {
@@ -55,6 +59,7 @@ public class StringHelper {
         return context.getString(R.string.city_info_list_of_cities, citiesString, lastCity);
     }
 
+    @NonNull
     public static String getZoneNumberSinceText(
             Context context,
             LowEmissionZone lowEmissionZone) {
@@ -70,6 +75,7 @@ public class StringHelper {
                 colorStringResourceId);
     }
 
+    @Nullable
     public static String getNextZoneNumberAsOfText(
             Context context,
             LowEmissionZone lowEmissionZone) {
@@ -90,6 +96,7 @@ public class StringHelper {
                 colorStringResourceId);
     }
 
+    @Nullable
     public static String getAbroadLicensedVehicleZoneNumberText(
             Context context,
             LowEmissionZone lowEmissionZone) {
@@ -110,6 +117,7 @@ public class StringHelper {
                 colorStringResourceId);
     }
 
+    @NonNull
     public static String getGeometryUpdatedAtText(
             Context context,
             LowEmissionZone lowEmissionZone) {
@@ -122,6 +130,7 @@ public class StringHelper {
         return context.getString(R.string.city_info_geometry_updated_at_text, formattedDate);
     }
 
+    @NonNull
     public static String getGeometrySourceText(final Context context,
             LowEmissionZone lowEmissionZone) {
         String geometrySource = lowEmissionZone.geometrySource;
@@ -132,6 +141,7 @@ public class StringHelper {
     }
 
     // Compile date and colors into sentence
+    @NonNull
     private static String getZoneNumberInfoString(
             Context context,
             int resourceId,
@@ -143,6 +153,7 @@ public class StringHelper {
         return context.getString(resourceId, formattedDate, zoneNumberColor);
     }
 
+    @NonNull
     private static String getFormattedDate(
             Context context,
             int datePatternResourceId,
@@ -153,12 +164,14 @@ public class StringHelper {
         return dateFormat.format(date);
     }
 
+    @NonNull
     public static Spanned spannedLinkForString(
             final String title,
             final String url) {
         return Html.fromHtml(linkifiedString(title, url));
     }
 
+    @NonNull
     public static String linkifiedString(
             final String title,
             final String url) {
