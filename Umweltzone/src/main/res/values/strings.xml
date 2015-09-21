@@ -215,7 +215,6 @@
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">City info</string>
 
-    <string name="city_info_title">City info</string>
     <string name="city_info_zone_status">free</string>
     <string name="city_info_zone_number_since">
         Since <xliff:g id="date">%1$s</xliff:g> only

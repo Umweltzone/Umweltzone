@@ -230,7 +230,6 @@
     <!-- CityInfoActivity -->
     <string name="city_info_activity_title">Stadtinfos</string>
 
-    <string name="city_info_title">Stadtinfos</string>
     <string name="city_info_zone_status">frei</string>
     <string name="city_info_zone_number_since">
         Seit dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
