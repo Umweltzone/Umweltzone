@@ -113,4 +113,10 @@ dependencies {
     compile 'de.cketti.library.changelog:ckchangelog:1.2.2'
     compile 'info.metadude.android:typed-preferences:2.0.0'
     compile fileTree(dir: 'libs', include: '*.jar')
+
+    // Unit tests
+    testCompile 'junit:junit:4.12'
+    testCompile('com.squareup.assertj:assertj-android:1.1.0') {
+        exclude module: 'support-annotations'
+    }
 }

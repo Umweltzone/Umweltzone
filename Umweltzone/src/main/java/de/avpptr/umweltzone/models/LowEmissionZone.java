@@ -25,6 +25,7 @@ import java.util.List;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -39,6 +40,7 @@ public class LowEmissionZone {
 
     public BoundingBox boundingBox;
 
+    @LowEmissionZoneNumbers.Color
     public int zoneNumber;
 
     public Date zoneNumberSince;

@@ -36,6 +36,7 @@ import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
 
 public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
 
@@ -90,7 +91,8 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         viewHolder.zoneName.setTextColor(textColor);
         int zoneNumber = lowEmissionZone.zoneNumber;
         viewHolder.zoneBadge.setText(String.valueOf(zoneNumber));
-        int badgeColor = resources.getColor(zoneNumberToColorId(zoneNumber));
+        int colorResourceId = LowEmissionZoneNumberConverter.getColor(zoneNumber);
+        int badgeColor = resources.getColor(colorResourceId);
 
         int sdk = Build.VERSION.SDK_INT;
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {
@@ -108,19 +110,6 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         return (zoneIsDrawable) ?
                 R.color.city_zone_name_drawable :
                 R.color.city_zone_name_not_drawable;
-    }
-
-    private int zoneNumberToColorId(int zoneNumber) {
-        switch (zoneNumber) {
-            case LowEmissionZoneNumbers.RED:
-                return R.color.city_zone_2;
-            case LowEmissionZoneNumbers.YELLOW:
-                return R.color.city_zone_3;
-            case LowEmissionZoneNumbers.GREEN:
-                return R.color.city_zone_4;
-            default:
-                return R.color.city_zone_none;
-        }
     }
 
     private static class ViewHolder {

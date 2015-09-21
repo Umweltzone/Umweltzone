@@ -17,8 +17,13 @@
 
 package de.avpptr.umweltzone.contract;
 
+import android.support.annotation.DrawableRes;
+import android.support.annotation.StringRes;
+
 public interface Resources {
 
-    public final int INVALID_RESOURCE_ID = 0;
+    @DrawableRes
+    @StringRes
+    int INVALID_RESOURCE_ID = 0;
 
 }

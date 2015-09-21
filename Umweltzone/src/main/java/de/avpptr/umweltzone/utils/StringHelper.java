@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Locale;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
@@ -58,15 +58,16 @@ public class StringHelper {
     public static String getZoneNumberSinceText(
             Context context,
             LowEmissionZone lowEmissionZone) {
-        String zoneNumberColor = zoneNumberToColor(context, lowEmissionZone.zoneNumber);
-        if (zoneNumberColor == null) {
+        int colorStringResourceId = LowEmissionZoneNumberConverter
+                .getColorString(lowEmissionZone.zoneNumber);
+        if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             // Static zone information
             return context.getString(R.string.city_info_zone_number_none);
         }
         return getZoneNumberInfoString(context,
                 R.string.city_info_zone_number_since,
                 lowEmissionZone.zoneNumberSince,
-                zoneNumberColor);
+                colorStringResourceId);
     }
 
     public static String getNextZoneNumberAsOfText(
@@ -76,8 +77,9 @@ public class StringHelper {
             return null;
         }
         int nextZoneNumber = lowEmissionZone.zoneNumber + 1;
-        String zoneNumberColor = zoneNumberToColor(context, nextZoneNumber);
-        if (zoneNumberColor == null) {
+        int colorStringResourceId = LowEmissionZoneNumberConverter
+                .getColorString(lowEmissionZone.zoneNumber);
+        if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             Log.e("Next zone number '" + nextZoneNumber +
                     "' cannot be converted into color text fragment.");
             return null;
@@ -85,7 +87,7 @@ public class StringHelper {
         return getZoneNumberInfoString(context,
                 R.string.city_info_next_zone_number_as_of,
                 lowEmissionZone.nextZoneNumberAsOf,
-                zoneNumberColor);
+                colorStringResourceId);
     }
 
     public static String getAbroadLicensedVehicleZoneNumberText(
@@ -94,9 +96,9 @@ public class StringHelper {
         if (lowEmissionZone.abroadLicensedVehicleZoneNumberUntil == null) {
             return null;
         }
-        String zoneNumberColor = zoneNumberToColor(context,
-                lowEmissionZone.abroadLicensedVehicleZoneNumber);
-        if (zoneNumberColor == null) {
+        int colorStringResourceId = LowEmissionZoneNumberConverter
+                .getColorString(lowEmissionZone.abroadLicensedVehicleZoneNumber);
+        if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             Log.e("Abroad licensed vehicle zone number '" +
                     lowEmissionZone.abroadLicensedVehicleZoneNumber +
                     "' cannot be converted into color text fragment.");
@@ -105,7 +107,7 @@ public class StringHelper {
         return getZoneNumberInfoString(context,
                 R.string.city_info_abroad_licensed_vehicle_zone_info,
                 lowEmissionZone.abroadLicensedVehicleZoneNumberUntil,
-                zoneNumberColor);
+                colorStringResourceId);
     }
 
     public static String getGeometryUpdatedAtText(
@@ -134,10 +136,11 @@ public class StringHelper {
             Context context,
             int resourceId,
             Date date,
-            String color) {
+            int colorStringResourceId) {
         String formattedDate = getFormattedDate(context,
                 R.string.city_info_zone_number_since_date_format, date);
-        return context.getString(resourceId, formattedDate, color);
+        String zoneNumberColor = context.getString(colorStringResourceId);
+        return context.getString(resourceId, formattedDate, zoneNumberColor);
     }
 
     private static String getFormattedDate(
@@ -148,21 +151,6 @@ public class StringHelper {
         // TODO Move locale into XML configuration
         SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.getDefault());
         return dateFormat.format(date);
-    }
-
-    private static String zoneNumberToColor(
-            Context context,
-            int zoneNumber) {
-        if (zoneNumber == LowEmissionZoneNumbers.GREEN) {
-            return context.getString(R.string.city_info_zone_number_since_text_fragment_green);
-        }
-        if (zoneNumber == LowEmissionZoneNumbers.YELLOW) {
-            return context.getString(R.string.city_info_zone_number_since_text_fragment_yellow);
-        }
-        if (zoneNumber == LowEmissionZoneNumbers.RED) {
-            return context.getString(R.string.city_info_zone_number_since_text_fragment_red);
-        }
-        return null;
     }
 
     public static Spanned spannedLinkForString(

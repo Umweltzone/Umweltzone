@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -27,10 +27,10 @@ import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
 import de.avpptr.umweltzone.utils.StringHelper;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
@@ -70,7 +70,8 @@ public class CityInfoFragment extends BaseFragment {
 
         // Zone status image
         TextView zoneStatus = (TextView) activity.findViewById(R.id.city_info_zone_status);
-        int zoneStatusId = zoneNumberToStatusDrawableResourceId(lowEmissionZone.zoneNumber);
+        int zoneStatusId = LowEmissionZoneNumberConverter
+                .getStatusDrawable(lowEmissionZone.zoneNumber);
         if (zoneStatusId == Resources.INVALID_RESOURCE_ID) {
             zoneStatus.setVisibility(View.GONE);
         } else {
@@ -165,18 +166,6 @@ public class CityInfoFragment extends BaseFragment {
                 startActivity(IntentHelper.getCitiesIntent(activity));
             }
         });
-    }
-
-    private int zoneNumberToStatusDrawableResourceId(int zoneNumber) {
-        switch (zoneNumber) {
-            case LowEmissionZoneNumbers.RED:
-                return R.drawable.umweltzone_status_2;
-            case LowEmissionZoneNumbers.YELLOW:
-                return R.drawable.umweltzone_status_3;
-            case LowEmissionZoneNumbers.GREEN:
-                return R.drawable.umweltzone_status_4;
-        }
-        return Resources.INVALID_RESOURCE_ID;
     }
 
 }

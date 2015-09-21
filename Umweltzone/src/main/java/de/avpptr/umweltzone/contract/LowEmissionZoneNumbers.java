@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,12 +17,21 @@
 
 package de.avpptr.umweltzone.contract;
 
+import android.support.annotation.IntDef;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
 public interface LowEmissionZoneNumbers {
 
-    public static final int RED = 2;
+    @IntDef({RED, YELLOW, GREEN})
+    @Retention(RetentionPolicy.SOURCE)
+    @interface Color {}
 
-    public static final int YELLOW = 3;
+    int RED = 2;
 
-    public static final int GREEN = 4;
+    int YELLOW = 3;
+
+    int GREEN = 4;
 
 }
