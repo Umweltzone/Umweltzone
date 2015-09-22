@@ -1229,7 +1229,8 @@
         "urlBadgeOnline" : "",
         "contactEmails" : [
             "strassenverkehrsbehoerde@wiesbaden.de",
-            "umweltamt@wiesbaden.de"
+            "umweltamt@wiesbaden.de",
+            "umweltberatung@wiesbaden.de"
         ],
         "geometrySource" : null,
         "geometryUpdatedAt" : null,
