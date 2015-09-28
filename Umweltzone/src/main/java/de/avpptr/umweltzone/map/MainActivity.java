@@ -76,10 +76,8 @@ public class MainActivity extends BaseActivity {
         if (preferencesHelper.storesLastKnownLocationAsString()) {
             final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
             if (cityName.equals("bochum")) {
-                preferencesHelper.deleteLastKnownLocationAsString();
-                preferencesHelper.deleteLastKnownLocationAsBoundingBox();
-                preferencesHelper.deleteLastKnownLocationAsGeoPoint();
-                preferencesHelper.deleteZoomLevel();
+                // Reset to default low emission zone.
+                preferencesHelper.deleteLastKnownLocation();
             }
         }
     }

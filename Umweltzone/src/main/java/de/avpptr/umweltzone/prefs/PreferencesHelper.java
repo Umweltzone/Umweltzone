@@ -130,6 +130,10 @@ public class PreferencesHelper {
         return mZoneIsDrawablePreference.isSet();
     }
 
+    public void deleteZoneIsDrawable() {
+        mZoneIsDrawablePreference.delete();
+    }
+
     // City name Frankfurt in preferences fixed
 
     public void storeCityNameFrankfurtInPreferencesFixed(boolean flag) {
@@ -138,6 +142,16 @@ public class PreferencesHelper {
 
     public boolean restoreCityNameFrankfurtInPreferencesFixed() {
         return mCityNameFrankfurtInPreferencesFixedPreference.get();
+    }
+
+    // Smart helper methods
+
+    public void deleteLastKnownLocation() {
+        deleteLastKnownLocationAsString();
+        deleteLastKnownLocationAsBoundingBox();
+        deleteLastKnownLocationAsGeoPoint();
+        deleteZoomLevel();
+        deleteZoneIsDrawable();
     }
 
 }
