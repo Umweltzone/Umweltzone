@@ -25,6 +25,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.tracedroid.TraceDroidEmailSender;
+import de.avpptr.umweltzone.utils.ContentProvider;
 
 public class MainActivity extends BaseActivity {
 
@@ -35,6 +36,7 @@ public class MainActivity extends BaseActivity {
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
         TraceDroidEmailSender.sendStackTraces(this);
+        migrateNewZonesAddedInVersion250();
         migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
         showChangeLogDialog();
@@ -80,6 +82,31 @@ public class MainActivity extends BaseActivity {
                 preferencesHelper.deleteLastKnownLocation();
             }
         }
+    }
+
+    // When the user did select one of the missing cities before the update to v.2.5.0
+    // then the ZoneNotDrawableDialog will be shown although the zone data is available
+    // meanwhile. Therefore, the content provider cache is cleared and the zone selection
+    // is reset to the default low emission zone.
+    private void migrateNewZonesAddedInVersion250() {
+        final Umweltzone application = (Umweltzone) getApplication();
+        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        if (preferencesHelper.restoreDidParseZoneDataAfterUpdate250()) {
+            return;
+        }
+
+        if (preferencesHelper.storesLastKnownLocationAsString()) {
+            final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
+            if (cityName.equals("magdeburg") ||
+                    cityName.equals("heidelberg") ||
+                    cityName.equals("wuppertal")) {
+                // Enforce that zone data is parsed from file
+                ContentProvider.enforceContentUpdate();
+                // Reset to default low emission zone.
+                preferencesHelper.deleteLastKnownLocation();
+            }
+        }
+        preferencesHelper.storeDidParseZoneDataAfterUpdate250(true);
     }
 
 }

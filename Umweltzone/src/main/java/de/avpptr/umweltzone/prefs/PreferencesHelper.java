@@ -40,6 +40,8 @@ public class PreferencesHelper {
 
     protected final BooleanPreference mCityNameFrankfurtInPreferencesFixedPreference;
 
+    protected final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mCityNamePreference = new StringPreference(
@@ -54,6 +56,8 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
         mCityNameFrankfurtInPreferencesFixedPreference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
+        mDidParseZoneDataAfterUpdate250Preference = new BooleanPreference(
+                sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
     }
 
     // Last known location / city name
@@ -142,6 +146,16 @@ public class PreferencesHelper {
 
     public boolean restoreCityNameFrankfurtInPreferencesFixed() {
         return mCityNameFrankfurtInPreferencesFixedPreference.get();
+    }
+
+    // Enforce parsing zone data at first start after update to v.2.5.0
+
+    public void storeDidParseZoneDataAfterUpdate250(boolean flag) {
+        mDidParseZoneDataAfterUpdate250Preference.set(flag);
+    }
+
+    public boolean restoreDidParseZoneDataAfterUpdate250() {
+        return mDidParseZoneDataAfterUpdate250Preference.get();
     }
 
     // Smart helper methods

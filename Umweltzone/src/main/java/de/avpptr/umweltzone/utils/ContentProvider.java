@@ -54,6 +54,12 @@ public abstract class ContentProvider {
     private static final LruCache<String, Integer> RESOURCE_ID_CACHE
             = new LruCache<String, Integer>(6);
 
+    public static void enforceContentUpdate() {
+        // Clear caches
+        CIRCUITS_CACHE.evictAll();
+        RESOURCE_ID_CACHE.evictAll();
+    }
+
     @NonNull
     public static List<Faq> getFaqs(final Context context) {
         // Do not accidentally compare with Locale.GERMAN

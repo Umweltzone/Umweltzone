@@ -39,4 +39,7 @@ public interface Preferences {
     public static final String KEY_ZONE_IS_DRAWABLE =
             BuildConfig.APPLICATION_ID + ".ZONE_IS_DRAWABLE";
 
+    public static final String KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250 =
+            BuildConfig.APPLICATION_ID + ".KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250";
+
 }
