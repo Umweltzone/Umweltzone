@@ -242,8 +242,8 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
-        mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.name);
-        mPreferencesHelper.storeLastKnownLocation(defaultLowEmissionZone.boundingBox);
+        mPreferencesHelper.storeLastKnownLocationAsString(defaultLowEmissionZone.name);
+        mPreferencesHelper.storeLastKnownLocationAsBoundingBox(defaultLowEmissionZone.boundingBox);
         mPreferencesHelper.storeZoneIsDrawable(
                 defaultLowEmissionZone.containsGeometryInformation());
     }
@@ -251,7 +251,7 @@ public class MapFragment extends SupportMapFragment {
     private void storeLastMapState() {
         if (mMap != null) {
             GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
-            mPreferencesHelper.storeLastKnownLocation(mapCenter);
+            mPreferencesHelper.storeLastKnownLocationAsGeoPoint(mapCenter);
             float zoomLevel = mMap.getCameraPosition().zoom;
             mPreferencesHelper.storeZoomLevel(zoomLevel);
         }

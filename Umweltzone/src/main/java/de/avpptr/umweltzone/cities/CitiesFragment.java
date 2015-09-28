@@ -78,8 +78,8 @@ public class CitiesFragment extends ListFragment {
     private void storeSelectedLocation(LowEmissionZone lowEmissionZone) {
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
-        preferencesHelper.storeLastKnownLocation(lowEmissionZone.boundingBox);
-        preferencesHelper.storeLastKnownLocation(lowEmissionZone.name);
+        preferencesHelper.storeLastKnownLocationAsBoundingBox(lowEmissionZone.boundingBox);
+        preferencesHelper.storeLastKnownLocationAsString(lowEmissionZone.name);
         preferencesHelper.storeZoneIsDrawable(lowEmissionZone.containsGeometryInformation());
     }
 

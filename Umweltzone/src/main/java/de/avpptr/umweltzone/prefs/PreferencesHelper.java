@@ -58,7 +58,7 @@ public class PreferencesHelper {
 
     // Last known location / city name
 
-    public void storeLastKnownLocation(final String cityName) {
+    public void storeLastKnownLocationAsString(final String cityName) {
         mCityNamePreference.set(cityName);
     }
 
@@ -66,7 +66,7 @@ public class PreferencesHelper {
         return mCityNamePreference.get();
     }
 
-    public boolean storesLastKnownLocation() {
+    public boolean storesLastKnownLocationAsString() {
         return mCityNamePreference.isSet();
     }
 
@@ -76,7 +76,7 @@ public class PreferencesHelper {
 
     // Last known location / center
 
-    public void storeLastKnownLocation(final GeoPoint center) {
+    public void storeLastKnownLocationAsGeoPoint(final GeoPoint center) {
         mLastKnownLocationCenterPreference.set(center);
     }
 
@@ -90,7 +90,7 @@ public class PreferencesHelper {
 
     // Last known location / bounding box
 
-    public void storeLastKnownLocation(final BoundingBox boundingBox) {
+    public void storeLastKnownLocationAsBoundingBox(final BoundingBox boundingBox) {
         mLastKnownLocationBoundingBoxPreference.set(boundingBox);
     }
 

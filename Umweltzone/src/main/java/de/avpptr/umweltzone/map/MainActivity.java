@@ -58,10 +58,10 @@ public class MainActivity extends BaseActivity {
             return;
         }
 
-        if (preferencesHelper.storesLastKnownLocation()) {
+        if (preferencesHelper.storesLastKnownLocationAsString()) {
             final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
             if (cityName.equals("frankfurt")) {
-                preferencesHelper.storeLastKnownLocation("frankfurt_main");
+                preferencesHelper.storeLastKnownLocationAsString("frankfurt_main");
             }
         }
         preferencesHelper.storeCityNameFrankfurtInPreferencesFixed(true);
@@ -73,7 +73,7 @@ public class MainActivity extends BaseActivity {
     private void migrateBochumRemoval() {
         final Umweltzone application = (Umweltzone) getApplication();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
-        if (preferencesHelper.storesLastKnownLocation()) {
+        if (preferencesHelper.storesLastKnownLocationAsString()) {
             final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
             if (cityName.equals("bochum")) {
                 preferencesHelper.deleteLastKnownLocationAsString();
