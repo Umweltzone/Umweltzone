@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -100,6 +100,10 @@ public final class GeoPoint {
             latLngPoints.add(point.toLatLng());
         }
         return latLngPoints;
+    }
+
+    public static GeoPoint getInvalidGeoPoint() {
+        return new GeoPoint(INVALID_LATITUDE, INVALID_LONGITUDE);
     }
 
     @Override

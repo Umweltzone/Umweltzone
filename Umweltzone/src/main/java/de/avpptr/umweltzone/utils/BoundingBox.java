@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2015  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -65,6 +65,11 @@ public class BoundingBox {
 
     public LatLngBounds toLatLngBounds() {
         return new LatLngBounds(southWest.toLatLng(), northEast.toLatLng());
+    }
+
+    public static BoundingBox getInvalidBoundingBox() {
+        GeoPoint invalidLocation = GeoPoint.getInvalidGeoPoint();
+        return new BoundingBox(invalidLocation, invalidLocation);
     }
 
     @Override

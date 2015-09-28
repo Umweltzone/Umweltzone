@@ -23,6 +23,12 @@ public class GeoPointPreference {
                 sharedPreferences, keyLongitude, defaultLocation.getLongitude());
     }
 
+    public GeoPointPreference(
+            final SharedPreferences sharedPreferences,
+            final String key) {
+        this(sharedPreferences, key, GeoPoint.getInvalidGeoPoint());
+    }
+
     public GeoPoint get() {
         double latitude = mLatitudePreference.get();
         double longitude = mLongitudePreference.get();

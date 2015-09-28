@@ -30,13 +30,7 @@ public class PreferencesHelper {
 
     protected final StringPreference mCityNamePreference;
 
-    protected final static GeoPoint mInvalidLocation =
-            new GeoPoint(GeoPoint.INVALID_LATITUDE, GeoPoint.INVALID_LONGITUDE);
-
     protected final GeoPointPreference mLastKnownLocationCenterPreference;
-
-    protected final static BoundingBox mInvalidBoundingBox =
-            new BoundingBox(mInvalidLocation, mInvalidLocation);
 
     protected final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
 
@@ -51,11 +45,9 @@ public class PreferencesHelper {
         mCityNamePreference = new StringPreference(
                 sharedPreferences, Preferences.KEY_CITY_NAME);
         mLastKnownLocationCenterPreference = new GeoPointPreference(
-                sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER, mInvalidLocation);
+                sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER);
         mLastKnownLocationBoundingBoxPreference = new BoundingBoxPreference(
-                sharedPreferences,
-                Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX,
-                mInvalidBoundingBox);
+                sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX);
         mZoomLevelPreference = new FloatPreference(
                 sharedPreferences, Preferences.KEY_ZOOM_LEVEL);
         mZoneIsDrawablePreference = new BooleanPreference(
