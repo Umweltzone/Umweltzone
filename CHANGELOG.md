@@ -1,5 +1,33 @@
 # Umweltzone changelog
 
+## [v.2.5.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.5.0)
+
+* Published: 2015-09-30
+
+### Features, improvements and maintenance
+
+* Migrate new zones added in version v.2.5.0., [837b9](https://bitbucket.org/tbsprs/umweltzone/commits/837b984f804c6316fde4368ccb336a8194f8de74)
+* Move method to clear last known location into PreferencesHelper., [5f902](https://bitbucket.org/tbsprs/umweltzone/commits/5f90218ba925553caf48e2de9e89ddae6f1a2cd6)
+* Use unified naming for methods in PreferencesHelper., [e1493](https://bitbucket.org/tbsprs/umweltzone/commits/e14931d3897ea7e7a8425dbcd2f69db786f98f9b)
+* Encapsulate default preference values., [f212d](https://bitbucket.org/tbsprs/umweltzone/commits/f212dc9665e89aa9c446243b76906b8856e75c98)
+* Update contact e-mails for Wiesbaden., [977b5](https://bitbucket.org/tbsprs/umweltzone/commits/977b51294c77f0e3183b30db3ff5991df0b242c0)
+* Add zone data for Wuppertal, Heidelberg and Magdeburg., [5f636](https://bitbucket.org/tbsprs/umweltzone/commits/5f6367291c1882a1772b30d67b53f9454fa7102c)
+* Avoid computing launcher icons when higher resolution should be displayed., [a56c3](https://bitbucket.org/tbsprs/umweltzone/commits/a56c3904969fd202728bb8652168367b64bcdc5e)
+* Allow return type inspection., [c8c1b](https://bitbucket.org/tbsprs/umweltzone/commits/c8c1b669baaf5ad7d566515900c47c53f03b7da8)
+* Extract LowEmissionZoneNumberConverter to allow unit tests., [59b21](https://bitbucket.org/tbsprs/umweltzone/commits/59b212274a165807d8cf6e3689628ea935b28031)
+* Avoid indirection and redundant method calls., [f669d](https://bitbucket.org/tbsprs/umweltzone/commits/f669da4b44f10e10c2c194ab4f1d4bad75ff3a82)
+* Use design time layout attributes to preview texts., [ff8c9](https://bitbucket.org/tbsprs/umweltzone/commits/ff8c998f139c66f8355656190b566f2f526023e8)
+* Allow resolving fragments by tag., [e7cdf](https://bitbucket.org/tbsprs/umweltzone/commits/e7cdf5c274e93b87a9fe8715380f27832b2a2fd4)
+
+### Libraries, build tools, SDK
+
+* Update build tools to v.23.0.1., [f6c74](https://bitbucket.org/tbsprs/umweltzone/commits/f6c7493e352ebf5ee3e48205b3236db3bfcfe318)
+* Add gradle-versions-plugin v.0.11.3., [2b6c9](https://bitbucket.org/tbsprs/umweltzone/commits/2b6c9221f801407a291bf5fd35d7d645183e2091)
+* Update jackson-databind to v.2.6.2., [f3f52](https://bitbucket.org/tbsprs/umweltzone/commits/f3f52a8d9c80824199f60608152007556e7d56ee)
+* Update Gradle plugin to v.1.3.1., [39255](https://bitbucket.org/tbsprs/umweltzone/commits/39255c50aafbc533c42c57ad4c95247603707ea4)
+* Update Gradle wrapper to v.2.5., [3e388](https://bitbucket.org/tbsprs/umweltzone/commits/3e3883e2e238f0aaad2f7c6a88150eb36a806db3)
+
+
 ## [v.2.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.4.0)
 
 * Published: 2015-07-17

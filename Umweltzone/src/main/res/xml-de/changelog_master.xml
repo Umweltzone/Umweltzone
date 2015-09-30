@@ -16,6 +16,23 @@
 -->
 <changelog>
     <release
+            version="2.5.0"
+            versioncode="25000">
+        <change>
+            Neu: Drei weitere Städte mit Geokoordinaten hinzugefügt (Wuppertal,
+            Heidelberg und Magdeburg).
+        </change>
+        <change>
+            Aktualisierung: Eine weitere Kontakt-E-Mail-Adresse für Wiesbaden hinzugefügt.
+        </change>
+        <change>
+            Aktualisierung: Hochauflösendes App-Symbol kann jetzt auf allen Geräte angezeigt werden.
+        </change>
+        <change>
+            Aktualisierung: Höhere Testabdeckung, um die Einführung von Programmierfehler zu vermeiden.
+        </change>
+    </release>
+    <release
             version="2.4.0"
             versioncode="24000">
         <change>

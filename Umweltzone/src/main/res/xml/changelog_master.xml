@@ -16,6 +16,23 @@
 -->
 <changelog>
     <release
+            version="2.5.0"
+            versioncode="25000">
+        <change>
+            New: Add zone data with coordinates for Wuppertal,
+            Heidelberg and Magdeburg.
+        </change>
+        <change>
+            Update: Add one more contact e-mail for Wiesbaden.
+        </change>
+        <change>
+            Improved: High resolution app icon can now be shown on every device.
+        </change>
+        <change>
+            Improved: Add more tests to avoid introducing bugs.
+        </change>
+    </release>
+    <release
             version="2.4.0"
             versioncode="24000">
         <change>
