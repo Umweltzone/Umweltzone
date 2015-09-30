@@ -179,7 +179,7 @@
 
 ### Features
 
-* Added changelog dialog to the application using [ckChangeLog][ckchanglog], [e8963](https://bitbucket.org/tbsprs/umweltzone/commits/e8963288e6ea5517b5bd486a13f8f34df2c4f743)
+* Added changelog dialog to the application using [ckChangeLog][ckchangelog], [e8963](https://bitbucket.org/tbsprs/umweltzone/commits/e8963288e6ea5517b5bd486a13f8f34df2c4f743)
 * Extend error reporting when Google Play Services is not installed on the device, [66054](https://bitbucket.org/tbsprs/umweltzone/commits/6605442fb8c9c303e9088ced7bb9ce6c010f68fa)
 * Added new cities: Dusseldorf, Bremen, Leipzig, Hanover and Muenster, [9ef31](https://bitbucket.org/tbsprs/umweltzone/commits/9ef317e36d66f392a54c833ba0baf04864eaab5f)
 * Point out missing `gradle.properties` when project is imported, [df740](https://bitbucket.org/tbsprs/umweltzone/commits/df7405b7be011d880b4d95379b22c40c2586e332)
@@ -201,6 +201,6 @@
 
 [umweltzoneatplaystore]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
 [htcbug]: http://commonsware.com/blog/2012/07/23/linkify-problem-patent-behavior.html
-[ckchanglog]: https://github.com/cketti/ckChangeLog
+[ckchangelog]: https://github.com/cketti/ckChangeLog
 [cketti]: https://github.com/cketti
 [typedpreferences]: https://github.com/johnjohndoe/TypedPreferences
