@@ -21,9 +21,6 @@ import de.avpptr.umweltzone.BuildConfig;
 
 public interface BundleKeys {
 
-    public static final String CITY_CHANGE =
-            BuildConfig.APPLICATION_ID + ".bundle.key.CITY_CHANGE";
-
     public static final String HOME =
             BuildConfig.APPLICATION_ID + ".bundle.key.HOME";
 

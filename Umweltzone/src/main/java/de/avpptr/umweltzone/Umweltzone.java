@@ -17,12 +17,12 @@
 
 package de.avpptr.umweltzone;
 
-import org.ligi.tracedroid.TraceDroid;
-
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import org.ligi.tracedroid.TraceDroid;
 
 import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
 import de.avpptr.umweltzone.analytics.NoTracking;
@@ -34,6 +34,8 @@ public class Umweltzone extends Application {
     private static Tracking mTracking;
 
     protected PreferencesHelper mPreferencesHelper;
+
+    public static boolean centerZoneRequested = false;
 
     public void onCreate() {
         super.onCreate();
@@ -61,5 +63,4 @@ public class Umweltzone extends Application {
         }
         return mPreferencesHelper;
     }
-
 }
