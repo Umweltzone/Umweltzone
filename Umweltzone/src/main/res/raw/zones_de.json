@@ -100,6 +100,31 @@
         }
     },
     {
+        "name" : "darmstadt",
+        "displayName" : "Darmstadt",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2015-11-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/index.php?navID=348",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "Vermessungsamt, Kartographie, Darmstadt",
+        "geometryUpdatedAt" : "2015-11-30",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 49.801157,
+                "longitude" : 8.599527
+            },
+            "northEast" : {
+                "latitude" : 49.953796,
+                "longitude" : 8.750039
+            }
+        }
+    },
+    {
         "name" : "dinslaken",
         "displayName" : "Dinslaken",
         "listOfCities" : [],
