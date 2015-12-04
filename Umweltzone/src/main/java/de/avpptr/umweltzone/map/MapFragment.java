@@ -17,6 +17,18 @@
 
 package de.avpptr.umweltzone.map;
 
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.maps.CameraUpdate;
@@ -28,27 +40,12 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
 
-import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.Resources;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.text.TextUtils;
-import android.util.DisplayMetrics;
-
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -66,8 +63,6 @@ public class MapFragment extends SupportMapFragment {
 
     private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
 
-    private boolean fragmentCreated;
-
     protected final Tracking mTracking;
 
     private PreferencesHelper mPreferencesHelper;
@@ -82,7 +77,6 @@ public class MapFragment extends SupportMapFragment {
         super.onCreate(savedInstanceState);
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();
-        fragmentCreated = true;
     }
 
     @Override
@@ -164,15 +158,18 @@ public class MapFragment extends SupportMapFragment {
             }
         }
 
-        Intent intent = activity.getIntent();
-        if (intent == null) {
-            return;
-        }
-        Bundle extras = intent.getExtras();
-        if (extras == null || TextUtils.isEmpty(extras.getString(BundleKeys.CITY_CHANGE))) {
-            // Select default city at first application start
+        if (Umweltzone.centerZoneRequested) {
+            // City has been selected from the list
+            BoundingBox lastKnownPosition = mPreferencesHelper
+                    .restoreLastKnownLocationAsBoundingBox();
+            if (lastKnownPosition.isValid()) {
+                zoomToBounds(lastKnownPosition.toLatLngBounds());
+            }
+            Umweltzone.centerZoneRequested = false;
+        } else {
             GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
             if (!lastKnownPosition.isValid()) {
+                // Select default city at first application start
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone
                         .getDefaultLowEmissionZone(activity);
                 if (defaultLowEmissionZone != null) {
@@ -186,25 +183,7 @@ public class MapFragment extends SupportMapFragment {
                     zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
                     storeLastMapState();
                 }
-            } else if (fragmentCreated) {
-                // MapFragment gets created after app start
-                fragmentCreated = false;
-                float zoomLevel = mPreferencesHelper.restoreZoomLevel();
-                zoomToLocation(lastKnownPosition, zoomLevel);
-            }
-        } else {
-            String cityName = extras.getString(BundleKeys.CITY_CHANGE);
-            if (cityName != null) {
-                // City has been selected from the list
-                BoundingBox lastKnownPosition = mPreferencesHelper
-                        .restoreLastKnownLocationAsBoundingBox();
-                if (lastKnownPosition.isValid()) {
-                    zoomToBounds(lastKnownPosition.toLatLngBounds());
-                }
             } else {
-                // Home button has been selected
-                GeoPoint lastKnownPosition = mPreferencesHelper
-                        .restoreLastKnownLocationAsGeoPoint();
                 float zoomLevel = mPreferencesHelper.restoreZoomLevel();
                 zoomToLocation(lastKnownPosition, zoomLevel);
             }

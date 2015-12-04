@@ -71,7 +71,8 @@ public class CitiesFragment extends ListFragment {
         LowEmissionZone lowEmissionZone = mLowEmissionZones.get(position);
         mTracking.track(TrackingPoint.CityListItemClick, lowEmissionZone.name);
         storeSelectedLocation(lowEmissionZone);
-        Intent intent = IntentHelper.getChangeCityIntent(getActivity(), lowEmissionZone.name);
+        Intent intent = IntentHelper.getNewMapIntent(getActivity());
+        Umweltzone.centerZoneRequested = true;
         startActivity(intent);
     }
 

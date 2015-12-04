@@ -19,7 +19,6 @@ package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v4.app.ShareCompat;
 
 import de.avpptr.umweltzone.about.AboutActivity;
@@ -47,9 +46,8 @@ public class IntentHelper {
                 .getIntent();
     }
 
-    public static Intent getChangeCityIntent(Activity activity, String cityNameValue) {
+    public static Intent getNewMapIntent(Activity activity) {
         final Intent intent = getIntent(activity, MainActivity.class);
-        intent.putExtra(BundleKeys.CITY_CHANGE, cityNameValue);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }

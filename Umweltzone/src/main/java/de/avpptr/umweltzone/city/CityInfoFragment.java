@@ -25,6 +25,7 @@ import android.widget.TextView;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.Resources;
@@ -114,7 +115,8 @@ public class CityInfoFragment extends BaseFragment {
             @Override
             public void onClick(View view) {
                 mTracking.track(TrackingPoint.CityInfoShowOnMapClick, mLowEmissionZone.name);
-                startActivity(IntentHelper.getChangeCityIntent(activity, mLowEmissionZone.name));
+                Umweltzone.centerZoneRequested = true;
+                startActivity(IntentHelper.getNewMapIntent(activity));
             }
         });
 
