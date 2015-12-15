@@ -16,6 +16,17 @@
 -->
 <changelog>
     <release
+            version="2.6.0"
+            versioncode="26000">
+        <change>
+            New: Add zone data with coordinates for Darmstadt (since 11/01/15).
+        </change>
+        <change>
+            Bugfix: Resolved failure to restore the map state (zoom position)
+            after the device has been rotated.
+        </change>
+    </release>
+    <release
             version="2.5.0"
             versioncode="25000">
         <change>

@@ -1,5 +1,24 @@
 # Umweltzone changelog
 
+## [v.2.6.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.6.0)
+
+* Published: 2015-12-15
+
+### Features, improvements and maintenance
+
+* Add zone data for Darmstadt., [296c8](https://bitbucket.org/tbsprs/umweltzone/commits/296c8b4d4244212d7c64f37128b9caa81402133a)
+* Restore map state after orientation change (Thanks to [Peter Vasil](https://github.com/ptrv)), [5bfd4](https://bitbucket.org/tbsprs/umweltzone/commits/5bfd46175af2237279f934b9069b743bd4ae479b)
+
+### Libraries, build tools, SDK
+
+* Update jackson-databind to v.2.6.4., [ad553](https://bitbucket.org/tbsprs/umweltzone/commits/ad553154b6994f3cf8bcb8fcb1700cd99b7c6167)
+* Update typed-preferences to v.2.1.0., [4359e](https://bitbucket.org/tbsprs/umweltzone/commits/4359e08e62a979229557874e2377b56dc06d131e)
+* Update build tools to v.23.0.2., [67937](https://bitbucket.org/tbsprs/umweltzone/commits/6793775fc810c4d77a5c74069ec575b316c5cab0)
+* Update Gradle wrapper to v.2.9., [55c4f](https://bitbucket.org/tbsprs/umweltzone/commits/55c4f6429ab1eefc367f4ee69c83a84f58c34390)
+* Update Gradle plugin to v.1.5.0., [6081c](https://bitbucket.org/tbsprs/umweltzone/commits/6081ce2913e79e44db57af7c26608d8876c86352)
+* Update assertj-android to v.1.1.1., [ca969](https://bitbucket.org/tbsprs/umweltzone/commits/ca9695273407a63b6fcfd1ea21501e441e91964b)
+
+
 ## [v.2.5.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.5.0)
 
 * Published: 2015-09-30

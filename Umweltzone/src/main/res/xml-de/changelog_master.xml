@@ -16,6 +16,17 @@
 -->
 <changelog>
     <release
+            version="2.6.0"
+            versioncode="26000">
+        <change>
+            Neu: Darmstadt mit Geokoordinaten hinzugefügt (neu seit 01.11.2015).
+        </change>
+        <change>
+            Bugfix: Fehler beim Wiederherstellen der Kartenansicht
+            (Zoom-Position) nach dem Drehen des Geräts behoben.
+        </change>
+    </release>
+    <release
             version="2.5.0"
             versioncode="25000">
         <change>
