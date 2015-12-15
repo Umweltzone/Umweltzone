@@ -112,7 +112,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:3.2.65'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.6.3'
     compile 'de.cketti.library.changelog:ckchangelog:1.2.2'
-    compile 'info.metadude.android:typed-preferences:2.0.0'
+    compile 'info.metadude.android:typed-preferences:2.1.0'
     compile fileTree(dir: 'libs', include: '*.jar')
 
     // Unit tests
