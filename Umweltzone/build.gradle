@@ -30,16 +30,6 @@ def buildTime() {
     return new Date().format("yyyy-MM-dd'T'HH:mm'Z'", TimeZone.getTimeZone("UTC"))
 }
 
-Properties props = new Properties()
-File gradlePropertiesFile = file("gradle.properties")
-if (!gradlePropertiesFile.exists()) {
-    throw new IllegalStateException(
-            "Please create the file 'gradle.properties' before" +
-                    "importing the project. Do not forget to add custom values!"
-    )
-}
-props.load(new FileInputStream(gradlePropertiesFile))
-
 allprojects {
     gradle.projectsEvaluated {
         tasks.withType(JavaCompile) {
@@ -66,12 +56,7 @@ android {
     }
 
     signingConfigs {
-        release {
-            storeFile file(props['signing.release.keystoreFilePath'])
-            storePassword props['signing.release.keystorePassword']
-            keyAlias props['signing.release.keyAlias']
-            keyPassword props['signing.release.keyPassword']
-        }
+        release
     }
 
     aaptOptions {
@@ -115,3 +100,21 @@ dependencies {
     }
 }
 
+Properties props = new Properties()
+File gradlePropertiesFile = file("gradle.properties")
+if (gradlePropertiesFile.exists()) {
+    props.load(new FileInputStream(gradlePropertiesFile))
+}
+
+if (project.hasProperty('signing.release.keystoreFilePath')) {
+    android.signingConfigs.release.storeFile = file(props['signing.release.keystoreFilePath'])
+}
+if (project.hasProperty('signing.release.keystorePassword')) {
+    android.signingConfigs.release.storePassword = props['signing.release.keystorePassword']
+}
+if (project.hasProperty('signing.release.keyAlias')) {
+    android.signingConfigs.release.keyAlias = props['signing.release.keyAlias']
+}
+if (project.hasProperty('signing.release.keyPassword')) {
+    android.signingConfigs.release.keyPassword = props['signing.release.keyPassword']
+}
