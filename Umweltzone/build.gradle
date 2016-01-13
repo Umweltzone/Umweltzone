@@ -62,14 +62,7 @@ android {
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
-
-        applicationVariants.all { variant ->
-            variant.outputs.each { output ->
-                File file = output.outputFile
-                String fileName = file.name.replace(".apk", "-" + versionName.toString() + ".apk")
-                output.outputFile = new File(file.parentFile, fileName)
-            }
-        }
+        archivesBaseName = "Umweltzone-$versionName"
     }
 
     signingConfigs {
