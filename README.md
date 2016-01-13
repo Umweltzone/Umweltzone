@@ -1,8 +1,7 @@
 [![VersionEye][versioneye-badge]][versioneye-link] 
 [![GPL license][gpl-license-badge]][gpl-license-link]
 
-Umweltzone
-==========
+# Umweltzone
 
 This application enables people to look up the areas of cities
 which are restricted for being used by cars limited by their
@@ -19,29 +18,29 @@ read through.
 [![Available for Android at Google Play][google-play-badge]][google-play-link]
 
 
-Screenshot
-------------------
+## Screenshot
+
 The map screen of the app shows the outline of the low-emission zone
 
 ![Umweltzone][app-screenshot]
 
 
-Android versions
-----------------
+## Android versions
+
 The application is designed to work both on smartphones and on tablets.
 Android 2.2 (Froyo) and newer versions are supported.
 
 
-Feedback
---------
+## Feedback
+
 Users can leave their feature request on a special website which not
 only allows to post own wishes but also to vote on ideas of others.
 
 * [http://umweltzone.uservoice.com][uservoice-link]
 
 
-Configuration
----------------
+## Configuration
+
 Before the app can be built a bunch of values have to be set.
 
 * Google Maps v2 API key
@@ -68,27 +67,24 @@ Therefore, put the needed information into a `gradle.properties` file. There is 
 example included which contains the properties which are referenced in the build configuration.
 
 
-References
-----------
+## References
+
 * [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][immissionsschutzgesetz-link]
 
 
-Authors
--------
+## Authors
 
 * [Tobias Preuss](https://bitbucket.org/tbsprs)
 * [Peter Vasil](https://github.com/ptrv)
 
 
-Contributors
-------------
+## Contributors
 
 * [cketti](https://github.com/cketti)
 * [daus-salar](https://bitbucket.com/daus-salar)
 
 
-License
--------
+## License
 
 The source code is licensed under [GPLv3][gpl-license-link].
 
