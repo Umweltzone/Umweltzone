@@ -29,12 +29,12 @@ The map screen of the app shows the outline of the low-emission zone
 Android versions
 ----------------
 The application is designed to work both on smartphones and on tablets.
-Android 2.2 (Froyo) and never versions are supported.
+Android 2.2 (Froyo) and newer versions are supported.
 
 
 Feedback
 --------
-Users can leave there feature request on a special website which not
+Users can leave their feature request on a special website which not
 only allows to post own wishes but also to vote on ideas of others.
 
 * [http://umweltzone.uservoice.com][uservoice-link]
@@ -64,7 +64,7 @@ These settings can be found in following places:
 These settings can be found in `/Umweltzone/src/main/res/values/analytics.xml`.
 
 In order to build a release version of the app signing information must be provided.
-Therefore, put the needed information into a `gradle.properties` file. There is a
+Therefore, put the needed information into a `gradle.properties` file. There is an
 example included which contains the properties which are referenced in the build configuration.
 
 
