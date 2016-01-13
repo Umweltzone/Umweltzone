@@ -18,10 +18,15 @@
 package de.avpptr.umweltzone.analytics;
 
 import com.google.analytics.tracking.android.EasyTracker;
+import com.google.analytics.tracking.android.ExceptionParser;
+import com.google.analytics.tracking.android.ExceptionReporter;
 import com.google.analytics.tracking.android.MapBuilder;
 
 import android.app.Activity;
 import android.content.Context;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 public class GoogleAnalyticsTracking implements Tracking {
 
@@ -29,6 +34,13 @@ public class GoogleAnalyticsTracking implements Tracking {
 
     public GoogleAnalyticsTracking(Context context) {
         mTracker = EasyTracker.getInstance(context);
+
+        Thread.UncaughtExceptionHandler uncaughtExceptionHandler =
+                Thread.getDefaultUncaughtExceptionHandler();
+        if (uncaughtExceptionHandler instanceof ExceptionReporter) {
+            ExceptionReporter exceptionReporter = (ExceptionReporter) uncaughtExceptionHandler;
+            exceptionReporter.setExceptionParser(new AnalyticsExceptionParser());
+        }
     }
 
     @Override
@@ -117,4 +129,14 @@ public class GoogleAnalyticsTracking implements Tracking {
         mTracker.send(MapBuilder.createException(exceptionDescription, fatal).build());
     }
 
+    private class AnalyticsExceptionParser implements ExceptionParser {
+
+        @Override
+        public String getDescription(String threadName, Throwable throwable) {
+            StringWriter stringWriter = new StringWriter();
+            PrintWriter printWriter = new PrintWriter(stringWriter, true);
+            throwable.printStackTrace(printWriter);
+            return "Thread: " + threadName + ", Exception: " + stringWriter.getBuffer().toString();
+        }
+    }
 }
