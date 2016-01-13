@@ -96,7 +96,8 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                                     startActivity(Intent.createChooser(intent, getString(
                                             R.string.zone_not_drawable_app_chooser_title)));
                                 } else {
-                                    SnackBarHelper.showError(activity, R.id.map, R.string.zone_not_drawable_no_email_app);
+                                    SnackBarHelper.showError(activity, R.id.map,
+                                            R.string.zone_not_drawable_no_email_app);
                                 }
                             }
                         })

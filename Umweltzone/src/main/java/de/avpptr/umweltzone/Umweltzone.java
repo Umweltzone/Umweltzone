@@ -17,12 +17,12 @@
 
 package de.avpptr.umweltzone;
 
+import org.ligi.tracedroid.TraceDroid;
+
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-
-import org.ligi.tracedroid.TraceDroid;
 
 import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
 import de.avpptr.umweltzone.analytics.NoTracking;

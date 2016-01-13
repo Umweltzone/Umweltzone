@@ -26,7 +26,9 @@ public interface LowEmissionZoneNumbers {
 
     @IntDef({RED, YELLOW, GREEN})
     @Retention(RetentionPolicy.SOURCE)
-    @interface Color {}
+    @interface Color {
+
+    }
 
     int RED = 2;
 

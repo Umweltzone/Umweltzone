@@ -122,8 +122,7 @@ public abstract class ViewHelper {
                 if (intent.resolveActivity(context.getPackageManager()) != null) {
                     context.startActivity(intent);
                     Umweltzone.getTracker().track(trackingPoint, trackingString);
-                }
-                else {
+                } else {
                     // TODO Present error to the user
                     Log.e(getClass().getName(),
                             "Activity for intent cannot be resolved. URL = " + url);

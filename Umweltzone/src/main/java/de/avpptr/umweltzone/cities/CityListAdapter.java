@@ -34,7 +34,6 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
 
