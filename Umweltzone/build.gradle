@@ -91,7 +91,8 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-databind:2.7.0"
     compile "de.cketti.library.changelog:ckchangelog:1.2.2"
     compile "info.metadude.android:typed-preferences:2.1.0"
-    compile fileTree(dir: 'libs', include: '*.jar')
+    compile files("libs/libGoogleAnalyticsServices.jar")
+    compile files("libs/TraceDroid-1.1.jar")
 
     // Unit tests
     testCompile "junit:junit:4.12"
