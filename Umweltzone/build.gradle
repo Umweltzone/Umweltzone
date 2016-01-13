@@ -83,6 +83,11 @@ android {
         pickFirst 'META-INF/NOTICE'
         pickFirst 'META-INF/NOTICE.txt'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
 }
 
 dependencies {

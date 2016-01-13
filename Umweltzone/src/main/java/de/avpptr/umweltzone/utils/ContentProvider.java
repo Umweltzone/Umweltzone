@@ -49,10 +49,10 @@ public abstract class ContentProvider {
 
 
     private static final LruCache<String, List<Circuit>> CIRCUITS_CACHE
-            = new LruCache<String, List<Circuit>>(6);
+            = new LruCache<>(6);
 
     private static final LruCache<String, Integer> RESOURCE_ID_CACHE
-            = new LruCache<String, Integer>(6);
+            = new LruCache<>(6);
 
     public static void enforceContentUpdate() {
         // Clear caches
