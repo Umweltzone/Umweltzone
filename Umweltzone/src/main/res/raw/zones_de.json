@@ -1280,6 +1280,7 @@
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20wiesbaden.php",
         "urlBadgeOnline" : "",
         "contactEmails" : [
+            "oberbuergermeister@wiesbaden.de",
             "strassenverkehrsbehoerde@wiesbaden.de",
             "umweltamt@wiesbaden.de",
             "umweltberatung@wiesbaden.de"
