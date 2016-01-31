@@ -9,7 +9,7 @@
 * Update contact emails for Wiesbaden., [76639](https://bitbucket.org/tbsprs/umweltzone/commits/76639072a6c5e14effb71f22063526a750010c0c)
 * Add zone data for Aachen (coordinates not available)., [1f042](https://bitbucket.org/tbsprs/umweltzone/commits/1f0420583f34016e958689729cc9a38e6260833c)
 * Show map at lock screen., [0532f](https://bitbucket.org/tbsprs/umweltzone/commits/0532f67751512d051b39effd65856e756981dd29)
-* Include stack trace of uncaught exceptions in the tracking message (Thanks to [Peter Vasil](https://github.com/ptrv)), [acb083d360dcf39f1b39227a0a91636530026471](https://bitbucket.org/tbsprs/umweltzone/commits/acb083d360dcf39f1b39227a0a91636530026471)
+* Include stack trace of uncaught exceptions in the tracking message (Thanks to [Peter Vasil](https://github.com/ptrv)), [acb08](https://bitbucket.org/tbsprs/umweltzone/commits/acb083d360dcf39f1b39227a0a91636530026471)
 
 ### Libraries, build tools, SDK
 
