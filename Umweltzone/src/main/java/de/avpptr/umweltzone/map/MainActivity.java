@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.map;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.WindowManager;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
@@ -47,6 +48,12 @@ public class MainActivity extends BaseActivity {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
     }
 
     // Renames the stored city name in the preferences
