@@ -1,5 +1,25 @@
 # Umweltzone changelog
 
+## [v.2.7.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.7.0)
+
+* Published: 2016-01-31
+
+### Features, improvements and maintenance
+
+* Update contact emails for Wiesbaden., [76639](https://bitbucket.org/tbsprs/umweltzone/commits/76639072a6c5e14effb71f22063526a750010c0c)
+* Add zone data for Aachen (coordinates not available)., [1f042](https://bitbucket.org/tbsprs/umweltzone/commits/1f0420583f34016e958689729cc9a38e6260833c)
+* Show map at lock screen., [0532f](https://bitbucket.org/tbsprs/umweltzone/commits/0532f67751512d051b39effd65856e756981dd29)
+* Include stack trace of uncaught exceptions in the tracking message (Thanks to [Peter Vasil](https://github.com/ptrv)), [acb083d360dcf39f1b39227a0a91636530026471](https://bitbucket.org/tbsprs/umweltzone/commits/acb083d360dcf39f1b39227a0a91636530026471)
+
+### Libraries, build tools, SDK
+
+* Update gradle-versions-plugin to v.0.12.0., [b7a5a](https://bitbucket.org/tbsprs/umweltzone/commits/b7a5ade45b9429201e232d9c9567aadcf5890d21)
+* Update gradle-versioneye-plugin to v.1.2.0., [42437](https://bitbucket.org/tbsprs/umweltzone/commits/424378c156a8d6f696c57a0cfed0eac6ff9028fc)
+* Explicitly set compatibility to Java v.1.7., [e7f10](https://bitbucket.org/tbsprs/umweltzone/commits/e7f100fdb5aa69dd311b1932fa183d7ebb7bfde0)
+* Update jackson-databind to v.2.7.0., [c9fbb](https://bitbucket.org/tbsprs/umweltzone/commits/c9fbb0924b0ee5211dd857d303b7fe9a65c65853)
+* Update Gradle wrapper to v.2.10., [319e3](https://bitbucket.org/tbsprs/umweltzone/commits/319e33490d19c44a1cd1d7d1eea31c3ac7c4f86c)
+
+
 ## [v.2.6.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.6.0)
 
 * Published: 2015-12-15

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+  Copyright (C) 2016  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,24 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+            version="2.7.0"
+            versioncode="27000">
+        <change>
+            Neu: Aachen ohne Geokoordinaten hinzugefügt (neu seit 01.02.2016).
+            Eine Datenanfrage wurde an die Stadt gestellt, wartet leider
+            noch auf Bearbeitung.
+        </change>
+        <change>
+            Neu: Karte wird auf dem Sperrbildschirm deines Geräts angezeigt.
+        </change>
+        <change>
+            Aktualisierung: Eine weitere E-Mail-Adresse, um Wiesbaden zu kontaktieren.
+        </change>
+        <change>
+            Aktualisierung: Detailliertere Fehler-Informationen, falls die App abstürzt.
+        </change>
+    </release>
     <release
             version="2.6.0"
             versioncode="26000">

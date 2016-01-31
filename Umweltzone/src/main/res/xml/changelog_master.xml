@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+  Copyright (C) 2016  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,23 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+            version="2.7.0"
+            versioncode="27000">
+        <change>
+            New: Add zone data without coordinates for Aachen (since 02/01/16).
+            A request to the city has been made but waits for being answered.
+        </change>
+        <change>
+            New: Allow to show the map on the lock screen of your device.
+        </change>
+        <change>
+            Update: Add one more e-mail address to contact Wiesbaden.
+        </change>
+        <change>
+            Update: More detailed error information when crash happens.
+        </change>
+    </release>
     <release
             version="2.6.0"
             versioncode="26000">
