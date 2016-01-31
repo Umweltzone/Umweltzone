@@ -1,5 +1,32 @@
 [
     {
+        "name" : "aachen",
+        "displayName" : "Aachen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2016-02-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/index.php?navID=349",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "umweltzone@mail.aachen.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.655235,
+                "longitude" : 5.970863
+            },
+            "northEast" : {
+                "latitude" : 50.859825,
+                "longitude" : 6.210502
+            }
+        }
+    },
+    {
         "name" : "augsburg",
         "displayName" : "Augsburg",
         "listOfCities" : [],
