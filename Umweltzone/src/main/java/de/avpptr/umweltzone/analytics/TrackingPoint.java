@@ -35,7 +35,6 @@ public enum TrackingPoint {
 
     // Errors
     ResourceNotFoundError("resource_not_found"),
-    NoCircuitPointsAvailableError("no_circuit_points_available"),
     GooglePlayServicesNotAvailableError("google_play_services_not_available"),
     MapIsNullError("map_is_null"),
     ParsingZonesFromJSONFailedError("parsing_zones_from_json_failed"),
