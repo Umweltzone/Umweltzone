@@ -42,11 +42,13 @@ public class BoundingBox {
     }
 
     // Required by Jackson and ProGuard to de-serialize JSON content
+    @SuppressWarnings("unused")
     public void setSouthWest(GeoPoint southWest) {
         this.southWest = southWest;
     }
 
     // Required by Jackson and ProGuard to de-serialize JSON content
+    @SuppressWarnings("unused")
     public void setNorthEast(GeoPoint northEast) {
         this.northEast = northEast;
     }
