@@ -232,8 +232,8 @@
 
     <string name="city_info_zone_status">frei</string>
     <string name="city_info_zone_number_since">
-        Seit dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
-        Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
+        Seit dem <xliff:g example="1. Februar 2016" id="date">%1$s</xliff:g> dürfen nur
+        Fahrzeuge <xliff:g example="mit grüner" id="with_colors">%2$s</xliff:g>
         Umweltplakette in die Umweltzone fahren.
     </string>
     <string name="city_info_zone_number_since_date_format">
@@ -252,21 +252,21 @@
         Fahrzeuge aller Schadstoffklassen dürfen in die Umweltzone fahren.
     </string>
     <string name="city_info_next_zone_number_as_of">
-        Ab dem <xliff:g id="date">%1$s</xliff:g> dürfen nur
-        noch Fahrzeuge <xliff:g id="with_colors">%2$s</xliff:g>
+        Ab dem <xliff:g example="1. Februar 2016" id="date">%1$s</xliff:g> dürfen nur
+        noch Fahrzeuge <xliff:g example="mit grüner" id="with_colors">%2$s</xliff:g>
         Plakette in die Umweltzone fahren.
     </string>
     <string name="city_info_abroad_licensed_vehicle_zone_info">
         Im Ausland zugelassene Fahrzeuge dürfen
-        bis <xliff:g id="date">%1$s</xliff:g>&#160;
-        <xliff:g id="with_colors">%2$s</xliff:g>
+        bis <xliff:g example="31. Januar 2016" id="date">%1$s</xliff:g>&#160;
+        <xliff:g example="mit gelber oder grüner" id="with_colors">%2$s</xliff:g>
         Umweltplakette in die Umweltzone einfahren.
     </string>
 
     <string name="city_info_list_of_cities">
         Die Umweltzone beinhaltet die folgenden Städte bzw. Teile
-        der Städte: <xliff:g id="cities">%1$s</xliff:g> und
-        <xliff:g id="last_city">%2$s</xliff:g>.
+        der Städte: <xliff:g example="Bochum, Castrop-Rauxel, Essen" id="cities">%1$s</xliff:g> und
+        <xliff:g example="Recklinghausen" id="last_city">%2$s</xliff:g>.
     </string>
 
     <string name="city_info_show_on_map">Umweltzone auf der Karte anzeigen</string>
@@ -274,7 +274,8 @@
     <string name="city_info_badge_online_title">Online-Antrag Feinstaubplakette</string>
 
     <string name="city_info_geometry_source_text">Datenquelle der
-        Geometrie-Koordinaten: <xliff:g id="geometrySource">%1$s</xliff:g>
+        Geometrie-Koordinaten: <xliff:g example="Geoportal Berlin / Umweltzone Berlin"
+                                        id="geometrySource">%1$s</xliff:g>
     </string>
 
     <string name="city_info_geometry_updated_at_date_format">
@@ -282,7 +283,7 @@
     </string>
     <string name="city_info_geometry_updated_at_text">
         Letzte Aktualisierung der
-        Zonengeometrie: <xliff:g id="updatedAt">%1$s</xliff:g>
+        Zonengeometrie: <xliff:g example="6. September 2014" id="updatedAt">%1$s</xliff:g>
     </string>
 
     <string name="city_info_empty_title">Stadtinfos</string>
@@ -319,7 +320,7 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Entwurf öffnen mit &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Umweltzone <xliff:g id="zoneName">%1$s</xliff:g> veröffentlichen
+        Umweltzone <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g> veröffentlichen
     </string>
     <string name="zone_not_drawable_email_message">
         <![CDATA[<p>Sehr geehrte Damen und Herren,<br />

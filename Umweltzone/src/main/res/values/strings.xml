@@ -217,8 +217,8 @@
 
     <string name="city_info_zone_status">free</string>
     <string name="city_info_zone_number_since">
-        Since <xliff:g id="date">%1$s</xliff:g> only
-        vehicles <xliff:g id="with_colors">%2$s</xliff:g> sticker are
+        Since <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> only
+        vehicles <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> sticker are
         allowed to drive into the low emission zone.
     </string>
     <string name="city_info_zone_number_since_date_format">MMM d, yyyy</string>
@@ -235,21 +235,21 @@
         Vehicles of all emission classes are allowed to drive into the low emission zone.
     </string>
     <string name="city_info_next_zone_number_as_of">
-        As of <xliff:g id="date">%1$s</xliff:g> only
-        vehicles <xliff:g id="with_colors">%2$s</xliff:g> sticker are
+        As of <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> only
+        vehicles <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> sticker are
         allowed to drive into the low emission zone.
     </string>
     <string name="city_info_abroad_licensed_vehicle_zone_info">
         Vehicles registered abroad are allowed
         to drive into the low emission zone
-        until <xliff:g id="date">%1$s</xliff:g>
-        <xliff:g id="with_colors">%2$s</xliff:g> sticker.
+        until <xliff:g example="Jan 31, 2016" id="date">%1$s</xliff:g>
+        <xliff:g example="with a yellow or a green" id="with_colors">%2$s</xliff:g> sticker.
     </string>
 
     <string name="city_info_list_of_cities">
         The zone contains the following cities or certain
-        districts: <xliff:g id="cities">%1$s</xliff:g> and
-        <xliff:g id="last_city">%2$s</xliff:g>.
+        districts: <xliff:g example="Bochum, Castrop-Rauxel, Essen" id="cities">%1$s</xliff:g> and
+        <xliff:g example="Recklinghausen" id="last_city">%2$s</xliff:g>.
     </string>
 
     <string name="city_info_show_on_map">Show zone on map</string>
@@ -257,7 +257,8 @@
     <string name="city_info_badge_online_title">Online sticker application form</string>
 
     <string name="city_info_geometry_source_text">Source of
-        the geometry coordinates: <xliff:g id="geometrySource">%1$s</xliff:g>
+        the geometry coordinates: <xliff:g example="Geoportal Berlin / Umweltzone Berlin"
+                                           id="geometrySource">%1$s</xliff:g>
     </string>
 
     <string name="city_info_geometry_updated_at_date_format">
@@ -265,7 +266,7 @@
     </string>
     <string name="city_info_geometry_updated_at_text">
         Last update of the zone
-        geometry: <xliff:g id="updatedAt">%1$s</xliff:g>
+        geometry: <xliff:g example="Sep 6, 2014" id="updatedAt">%1$s</xliff:g>
     </string>
 
     <string name="city_info_empty_title">City info</string>
@@ -304,7 +305,8 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Open draft with &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Umweltzone Android App, Integration <xliff:g id="zoneName">%1$s</xliff:g>
+        Umweltzone Android App, Integration <xliff:g example="Wiesbaden"
+                                                     id="zoneName">%1$s</xliff:g>
     </string>
         <string name="zone_not_drawable_email_message">
         <![CDATA[<p>Dear Sir or Madam.
