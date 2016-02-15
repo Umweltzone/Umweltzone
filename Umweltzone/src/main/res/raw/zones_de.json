@@ -10,19 +10,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/index.php?navID=349",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umweltzone@mail.aachen.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Servicestelle MapInfo/CAD, Aachen",
+        "geometryUpdatedAt" : "2016-02-15",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.655235,
-                "longitude" : 5.970863
+                "latitude" : 50.750172,
+                "longitude" : 6.046924
             },
             "northEast" : {
-                "latitude" : 50.859825,
-                "longitude" : 6.210502
+                "latitude" : 50.803712,
+                "longitude" : 6.143952
             }
         }
     },
