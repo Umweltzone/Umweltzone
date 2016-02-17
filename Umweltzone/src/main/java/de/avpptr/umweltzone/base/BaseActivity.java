@@ -85,6 +85,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 return true;
             case R.id.action_share_app:
                 startActivity(IntentHelper.getShareIntent(this));
+                mTracking.track(TrackingPoint.ShareAppClick, this.getClass().getSimpleName());
                 return true;
             case R.id.action_changelog:
                 showFullChangeLogDialog();
