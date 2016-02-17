@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+            version="2.8.0"
+            versioncode="28000">
+        <change>
+            New: Add zone data with coordinates for Aachen.
+        </change>
+        <change>
+            New: Add menu item "Share this app".
+        </change>
+    </release>
+    <release
             version="2.7.0"
             versioncode="27000">
         <change>

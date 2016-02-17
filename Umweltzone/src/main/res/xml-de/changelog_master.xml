@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+            version="2.8.0"
+            versioncode="28000">
+        <change>
+            Neu: Aachen mit Geokoordinaten hinzugefügt.
+        </change>
+        <change>
+            Neu: Menü-Eintrag "App teilen" hinzugefügt.
+        </change>
+    </release>
+    <release
             version="2.7.0"
             versioncode="27000">
         <change>

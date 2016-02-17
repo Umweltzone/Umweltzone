@@ -1,5 +1,20 @@
 # Umweltzone changelog
 
+## [v.2.8.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.8.0)
+
+* Published: 2016-02-18
+
+### Features, improvements and maintenance
+
+* Add menu item to share this app., [e0640](https://bitbucket.org/tbsprs/umweltzone/commits/e0640ae6e5880954d858cfd6b00856a49a740eb6)
+* Add zone data for Aachen (incl. coordinates)., [b4fb5](https://bitbucket.org/tbsprs/umweltzone/commits/b4fb59dbc511ba6db4a0c326c992852bad77d2fb)
+
+### Libraries, build tools, SDK
+
+* Update Gradle wrapper to v.2.11., [8b494](https://bitbucket.org/tbsprs/umweltzone/commits/8b494df9c53c7764b5113cf034f760779cec33a5)
+* Update jackson-databind to v.2.7.1-1., [014b6](https://bitbucket.org/tbsprs/umweltzone/commits/014b69cd2137a74f4c84e6d384475947953c9cb7)
+
+
 ## [v.2.7.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.7.0)
 
 * Published: 2016-01-31
