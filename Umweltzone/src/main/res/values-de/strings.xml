@@ -22,8 +22,16 @@
     <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>
     <string name="action_feedback">@string/feedback_activity_title</string>
+    <string name="action_share_app">App teilen &#8230;</string>
     <string name="action_changelog">Versionsinformationen</string>
     <string name="action_about">@string/about_activity_title</string>
+
+    <!-- Share intent -->
+    <string name="share_intent_message">
+        <![CDATA[Kennst du schon Umweltzone? Diese Android-App enthält alle
+        Informationen über Umweltzonen in Deutschland.\nHier kostenlos
+        herunterladen: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+    </string>
 
     <!-- FeedbackActivity -->
     <string name="feedback_activity_title">Feedback</string>

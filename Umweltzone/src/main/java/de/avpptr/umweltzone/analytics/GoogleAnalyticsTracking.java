@@ -88,6 +88,8 @@ public class GoogleAnalyticsTracking implements Tracking {
             case ZoneNotDrawableLaterClick:
                 trackEvent("zone_not_drawable", "button_push", "open_email_later_" + parameter);
                 break;
+            case ShareAppClick:
+                trackEvent("menu", "menu_item_click", "share_app_" + parameter);
         }
     }
 

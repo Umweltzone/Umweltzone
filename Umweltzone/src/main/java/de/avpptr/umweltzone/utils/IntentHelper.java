@@ -18,9 +18,11 @@
 package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.ShareCompat;
 
+import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.about.AboutActivity;
 import de.avpptr.umweltzone.cities.CitiesActivity;
 import de.avpptr.umweltzone.city.CityInfoActivity;
@@ -44,6 +46,15 @@ public class IntentHelper {
                 .setType("message/rfc822")
                 .setHtmlText(message)
                 .getIntent();
+    }
+
+    public static Intent getShareIntent(Context context) {
+        String message = context.getString(R.string.share_intent_message);
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_TEXT, message);
+        shareIntent.setType("text/plain");
+        return shareIntent;
     }
 
     public static Intent getNewMapIntent(Activity activity) {
