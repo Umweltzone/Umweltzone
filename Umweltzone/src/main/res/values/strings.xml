@@ -24,8 +24,16 @@
     <string name="action_city_info">@string/city_info_activity_title</string>
     <string name="action_faq">@string/faq_activity_title</string>
     <string name="action_feedback">@string/feedback_activity_title</string>
+    <string name="action_share_app">Share this app &#8230;</string>
     <string name="action_changelog">Version information</string>
     <string name="action_about">@string/about_activity_title</string>
+
+    <!-- Share intent -->
+    <string name="share_intent_message">
+        <![CDATA[Try out Umweltzone - the Android app which has all information
+        about low emission zones in Germany.\nGet it here for
+        free: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+    </string>
 
     <!-- FeedbackActivity -->
     <string name="feedback_activity_title">Feedback</string>
