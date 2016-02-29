@@ -80,7 +80,9 @@ public abstract class ContentProvider {
         List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
         if (circuits == null) {
             circuits = getContent(context, keyForZone, Circuit.class);
-            CIRCUITS_CACHE.put(keyForZone, circuits);
+            if (!circuits.isEmpty()) {
+                CIRCUITS_CACHE.put(keyForZone, circuits);
+            }
         }
         return circuits;
     }
