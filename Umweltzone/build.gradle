@@ -93,7 +93,7 @@ android {
 dependencies {
     compile "com.android.support:design:22.2.1"
     compile "com.google.android.gms:play-services:3.2.65"
-    compile "com.fasterxml.jackson.core:jackson-databind:2.7.1-1"
+    compile "com.fasterxml.jackson.core:jackson-databind:2.7.2"
     compile "de.cketti.library.changelog:ckchangelog:1.2.2"
     compile "info.metadude.android:typed-preferences:2.1.0"
     compile files("libs/libGoogleAnalyticsServices.jar")
