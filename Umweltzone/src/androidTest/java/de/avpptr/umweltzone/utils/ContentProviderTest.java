@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2016  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,40 +17,82 @@
 
 package de.avpptr.umweltzone.utils;
 
+import android.support.annotation.NonNull;
+import android.support.annotation.RawRes;
 import android.test.InstrumentationTestCase;
 
 import java.util.List;
 
 import de.avpptr.umweltzone.models.Circuit;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class ContentProviderTest extends InstrumentationTestCase {
 
+    private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg",
+            "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf", "erfurt",
+            "frankfurt_main", "freiburg_breisgau", "hagen", "halle", "hannover", "heidelberg",
+            "heidenheim", "heilbronn", "herrenberg", "ilsfeld", "karlsruhe", "cologne",
+            "krefeld", "langenfeld", "leipzig", "leonberg", "ludwigsburg", "magdeburg",
+            "mainz", "mannheim", "moenchengladbach", "muehlacker", "munich", "muenster",
+            "neuss", "neuulm", "offenbach", "osnabrueck", "pfinztal", "pforzheim",
+            "remscheid", "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend",
+            "siegen", "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
+
+    private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
+
+    public void testGetCircuits_failsWhenCoordinatesAreMissing() {
+        String expectedErrorMessage;
+        for (String zoneName : ZONES_WITHOUT_COORDINATES) {
+            expectedErrorMessage = "Resource for file path 'raw/zone_" + zoneName + "' not found.";
+            try {
+                getCircuits(zoneName);
+                fail();
+            } catch (Exception e) {
+                assertThat(e.getMessage()).isEqualTo(expectedErrorMessage);
+            }
+        }
+    }
+
     public void testGetCircuits_worksAtAll() throws Exception {
-        assertNotNull(getCircuitsOfBerlin());
+        for (String zoneName : ZONES_WITH_COORDINATES) {
+            assertThat(getCircuits(zoneName))
+                    .isNotNull()
+                    .isNotEmpty();
+        }
     }
 
     public void testGetCircuits_usesCaches() throws Exception {
-        List<Circuit> circuitsOfBerlin = getCircuitsOfBerlin();
-        assertSame(circuitsOfBerlin, getCircuitsOfBerlin());
-    }
-
-    private List<Circuit> getCircuitsOfBerlin() {
-        return ContentProvider.getCircuits(
-                getInstrumentation().getTargetContext(), "berlin");
+        for (String zoneName : ZONES_WITH_COORDINATES) {
+            List<Circuit> circuits = getCircuits(zoneName);
+            assertThat(circuits).isEqualTo(getCircuits(zoneName));
+        }
     }
 
     public void testGetResourceId_worksAtAll() throws Exception {
-        assertNotNull(getResourceIdOfBerlin_JSON());
+        for (String zoneName : ZONES_WITH_COORDINATES) {
+            assertThat(getZoneJsonResourceId(zoneName)).isNotNull();
+        }
     }
 
     public void testGetResourceId_usesCaches() throws Exception {
-        Integer resourceIdOfBerlin_JSON = getResourceIdOfBerlin_JSON();
-        assertSame(resourceIdOfBerlin_JSON, getResourceIdOfBerlin_JSON());
+        for (String zoneName : ZONES_WITH_COORDINATES) {
+            @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
+            assertThat(zoneJsonResourceId).isEqualTo(getZoneJsonResourceId(zoneName));
+        }
     }
 
-    private Integer getResourceIdOfBerlin_JSON() {
+    @NonNull
+    private List<Circuit> getCircuits(@NonNull String zoneName) {
+        return ContentProvider.getCircuits(
+                getInstrumentation().getTargetContext(), zoneName);
+    }
+
+    @RawRes
+    private Integer getZoneJsonResourceId(@NonNull String zoneName) {
+        String fileName = "zone_" + zoneName;
         return ContentProvider.getResourceId(
-                getInstrumentation().getTargetContext(), "zone_berlin", "raw");
+                getInstrumentation().getTargetContext(), fileName, "raw");
     }
 
 }
