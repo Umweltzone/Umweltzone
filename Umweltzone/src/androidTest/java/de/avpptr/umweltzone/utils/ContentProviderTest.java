@@ -39,6 +39,20 @@ public class ContentProviderTest extends InstrumentationTestCase {
             "remscheid", "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend",
             "siegen", "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
 
+    private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
+
+    public void testGetCircuits_failsWhenCoordinatesAreMissing() {
+        String expectedErrorMessage;
+        for (String zoneName : ZONES_WITHOUT_COORDINATES) {
+            expectedErrorMessage = "Resource for file path 'raw/zone_" + zoneName + "' not found.";
+            try {
+                getCircuits(zoneName);
+                fail();
+            } catch (Exception e) {
+                assertThat(e.getMessage()).isEqualTo(expectedErrorMessage);
+            }
+        }
+    }
 
     public void testGetCircuits_worksAtAll() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
