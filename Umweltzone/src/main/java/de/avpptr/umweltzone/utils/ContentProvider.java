@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -120,6 +120,8 @@ public abstract class ContentProvider {
             return objectMapper.readValue(inputStream, collectionType);
         } catch (IOException e) {
             // TODO Aware that app will crash when JSON is mis-structured.
+            String filePath = getFilePath(folderName, fileName);
+            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
             e.printStackTrace();
         }
         Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
