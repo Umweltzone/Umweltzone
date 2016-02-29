@@ -99,6 +99,11 @@ dependencies {
     compile files("libs/libGoogleAnalyticsServices.jar")
     compile files("libs/TraceDroid-1.1.jar")
 
+    // Integration tests
+    androidTestCompile("com.squareup.assertj:assertj-android:1.1.1") {
+        exclude module: "support-annotations"
+    }
+
     // Unit tests
     testCompile "junit:junit:4.12"
     testCompile("com.squareup.assertj:assertj-android:1.1.1") {
