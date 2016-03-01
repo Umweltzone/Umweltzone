@@ -239,6 +239,11 @@
     <string name="city_info_activity_title">Stadtinfos</string>
 
     <string name="city_info_zone_status">frei</string>
+    <string name="city_info_zone_number_as_of">
+        Ab dem <xliff:g example="1. Oktober 2099" id="date">%1$s</xliff:g> dürfen nur
+        Fahrzeuge <xliff:g example="mit grüner" id="with_colors">%2$s</xliff:g>
+        Umweltplakette in die Umweltzone fahren.
+    </string>
     <string name="city_info_zone_number_since">
         Seit dem <xliff:g example="1. Februar 2016" id="date">%1$s</xliff:g> dürfen nur
         Fahrzeuge <xliff:g example="mit grüner" id="with_colors">%2$s</xliff:g>

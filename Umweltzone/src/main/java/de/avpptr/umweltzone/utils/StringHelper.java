@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,11 @@ package de.avpptr.umweltzone.utils;
 import org.ligi.tracedroid.logging.Log;
 
 import android.content.Context;
+import android.support.annotation.ColorInt;
+import android.support.annotation.ColorRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -60,18 +63,23 @@ public class StringHelper {
     }
 
     @NonNull
-    public static String getZoneNumberSinceText(
-            Context context,
-            LowEmissionZone lowEmissionZone) {
-        int colorStringResourceId = LowEmissionZoneNumberConverter
+    public static String getZoneNumberSinceAsOfText(
+            @NonNull Context context,
+            @NonNull LowEmissionZone lowEmissionZone) {
+        Date zoneNumberSince = lowEmissionZone.zoneNumberSince;
+        @StringRes int colorStringResourceId = LowEmissionZoneNumberConverter
                 .getColorString(lowEmissionZone.zoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             // Static zone information
             return context.getString(R.string.city_info_zone_number_none);
         }
+        @StringRes int cityInfoZoneNumberResourceId = R.string.city_info_zone_number_since;
+        if (new Date().before(zoneNumberSince)) {
+            cityInfoZoneNumberResourceId = R.string.city_info_zone_number_as_of;
+        }
         return getZoneNumberInfoString(context,
-                R.string.city_info_zone_number_since,
-                lowEmissionZone.zoneNumberSince,
+                cityInfoZoneNumberResourceId,
+                zoneNumberSince,
                 colorStringResourceId);
     }
 
@@ -143,10 +151,10 @@ public class StringHelper {
     // Compile date and colors into sentence
     @NonNull
     private static String getZoneNumberInfoString(
-            Context context,
-            int resourceId,
-            Date date,
-            int colorStringResourceId) {
+            @NonNull Context context,
+            @StringRes int resourceId,
+            @NonNull Date date,
+            @StringRes int colorStringResourceId) {
         String formattedDate = getFormattedDate(context,
                 R.string.city_info_zone_number_since_date_format, date);
         String zoneNumberColor = context.getString(colorStringResourceId);

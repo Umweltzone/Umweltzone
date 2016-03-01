@@ -224,6 +224,11 @@
     <string name="city_info_activity_title">City info</string>
 
     <string name="city_info_zone_status">free</string>
+    <string name="city_info_zone_number_as_of">
+        As of <xliff:g example="Oct 1, 2099" id="date">%1$s</xliff:g> only
+        vehicles <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> sticker are
+        allowed to drive into the low emission zone.
+    </string>
     <string name="city_info_zone_number_since">
         Since <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> only
         vehicles <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> sticker are

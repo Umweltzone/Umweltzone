@@ -86,11 +86,11 @@ public class CityInfoFragment extends BaseFragment {
         String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
 
-        // Zone number since
+        // Zone number since or as of
         TextView zoneNumberSinceTextView =
                 (TextView) activity.findViewById(R.id.city_info_zone_number_since);
         String zoneNumberSinceText =
-                StringHelper.getZoneNumberSinceText(activity, lowEmissionZone);
+                StringHelper.getZoneNumberSinceAsOfText(activity, lowEmissionZone);
         zoneNumberSinceTextView.setText(zoneNumberSinceText);
 
         // Next zone number as of
