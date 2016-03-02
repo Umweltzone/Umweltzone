@@ -17,12 +17,15 @@
 
 package de.avpptr.umweltzone.map;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.WindowManager;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.tracedroid.TraceDroidEmailSender;
@@ -54,6 +57,20 @@ public class MainActivity extends BaseActivity {
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+    }
+
+    @Override
+    public void startActivityForResult(Intent intent, int requestCode) {
+        try {
+            super.startActivityForResult(intent, requestCode);
+        } catch (NullPointerException e) {
+            // Avoid crash when Google Play Services are not present
+            // http://stackoverflow.com/a/20905954/356895
+            mTracking.trackError(TrackingPoint.GooglePlayServicesNotAvailableError,
+                    "MainActivity.startActivityForResult: " +
+                            TextUtils.join("\nat ", e.getStackTrace()));
+            e.printStackTrace();
+        }
     }
 
     // Renames the stored city name in the preferences
