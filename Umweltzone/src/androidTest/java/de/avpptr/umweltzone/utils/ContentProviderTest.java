@@ -65,7 +65,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
     public void testGetCircuits_usesCaches() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             List<Circuit> circuits = getCircuits(zoneName);
-            assertThat(circuits).isEqualTo(getCircuits(zoneName));
+            assertThat(circuits).isSameAs(getCircuits(zoneName));
         }
     }
 
@@ -78,7 +78,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
     public void testGetResourceId_usesCaches() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
-            assertThat(zoneJsonResourceId).isEqualTo(getZoneJsonResourceId(zoneName));
+            assertThat(zoneJsonResourceId).isSameAs(getZoneJsonResourceId(zoneName));
         }
     }
 
