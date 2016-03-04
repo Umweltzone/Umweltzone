@@ -17,6 +17,7 @@
 
 package de.avpptr.umweltzone.utils;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
 import android.test.InstrumentationTestCase;
@@ -40,6 +41,14 @@ public class ContentProviderTest extends InstrumentationTestCase {
             "siegen", "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
 
     private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
+
+    private Context mContext;
+
+    @Override
+    protected void setUp() throws Exception {
+        super.setUp();
+        mContext = getInstrumentation().getTargetContext();
+    }
 
     public void testGetCircuits_failsWhenCoordinatesAreMissing() {
         String expectedErrorMessage;
@@ -84,15 +93,13 @@ public class ContentProviderTest extends InstrumentationTestCase {
 
     @NonNull
     private List<Circuit> getCircuits(@NonNull String zoneName) {
-        return ContentProvider.getCircuits(
-                getInstrumentation().getTargetContext(), zoneName);
+        return ContentProvider.getCircuits(mContext, zoneName);
     }
 
     @RawRes
     private Integer getZoneJsonResourceId(@NonNull String zoneName) {
         String fileName = "zone_" + zoneName;
-        return ContentProvider.getResourceId(
-                getInstrumentation().getTargetContext(), fileName, "raw");
+        return ContentProvider.getResourceId(mContext, fileName, "raw");
     }
 
 }
