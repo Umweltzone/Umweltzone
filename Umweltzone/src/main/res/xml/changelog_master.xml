@@ -16,6 +16,32 @@
 -->
 <changelog>
     <release
+            version="2.9.0"
+            versioncode="29000">
+        <change>
+            New: Add zone data without coordinates for Marburg (since 04/01/16).
+            The city still works on publishing the data.
+        </change>
+        <change>
+            Update: The zone of Halle slightly changed at 03/03/16.
+            However, the city did not yet send the latest zone data!
+        </change>
+        <change>
+            Bugfix: Resolve crash on Android 2.3 when selecting a city.
+        </change>
+        <change>
+            Bugfix: Prevent crash when Google Play Services are not present.
+        </change>
+        <change>
+            Improved: Display slightly different text with respect to the
+            current date for zones which become effective in the future.
+        </change>
+        <change>
+            Improved: Refactor "Share this app" feature to ensure
+            compatibility with older Android versions.
+        </change>
+    </release>
+    <release
             version="2.8.0"
             versioncode="28000">
         <change>

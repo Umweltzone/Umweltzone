@@ -16,6 +16,33 @@
 -->
 <changelog>
     <release
+            version="2.9.0"
+            versioncode="29000">
+        <change>
+            Neu: Marburg ohne Geokoordinaten hinzugefügt (neu ab 01.04.2016).
+            Die Stadt arbeitet noch an der Freigabe der Daten.
+        </change>
+        <change>
+            Aktualisierung: Halle hat zum 03.03.2016 den Verlauf der Umweltzone
+            leicht geändert. Leider hat die Stadt die aktuellen Daten bisher
+            nicht geschickt.
+        </change>
+        <change>
+            Bugfix: Absturz beim Auswählen einer Stadt behoben (Android 2.3).
+        </change>
+        <change>
+            Bugfix: Absturz vermieden, falls Google Play Services nicht installiert sind.
+        </change>
+        <change>
+            Aktualisierung: Bei Zonen, die in der Zukunft in Kraft treten,
+            wird in Abhängigkeit vom Datum ein abweichender Text angezeigt.
+        </change>
+        <change>
+            Aktualisierung: Überarbeitung der "App teilen"-Funktion,
+            um die Kompatibilität mit älteren Android-Version zu gewährleisten.
+        </change>
+    </release>
+    <release
             version="2.8.0"
             versioncode="28000">
         <change>

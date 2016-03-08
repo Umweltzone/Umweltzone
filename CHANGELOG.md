@@ -1,5 +1,24 @@
 # Umweltzone changelog
 
+## [v.2.9.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.9.0)
+
+* Published: 2016-03-08
+
+### Features, improvements and maintenance
+
+* Add zone data for Marburg (coordinates not available)., [09171](https://bitbucket.org/tbsprs/umweltzone/commits/0917151ce64be3063defdf24b334c3c8a9c499f7)
+* Display different text for zones which become effective in the future., [fbeff](https://bitbucket.org/tbsprs/umweltzone/commits/fbeff55af98c23be0f4eb36d24b77e1fccd9224e)
+* Avoid crash when Google Play Services are not present., [9e997](https://bitbucket.org/tbsprs/umweltzone/commits/9e9971e006efe33aba3bf9c4d3497e2b02c0f1b8)
+* Fix crash on Android 2.3 when selecting a city., [afafa](https://bitbucket.org/tbsprs/umweltzone/commits/afafac4de020c7a9cb1262279a6de55309bb8895)
+* Track exceptions which may occur when reading files., [a6b97](https://bitbucket.org/tbsprs/umweltzone/commits/a6b974b6f89a99519de0b655700a4cc283450861)
+* Refactor tests., [43213](https://bitbucket.org/tbsprs/umweltzone/commits/43213a4ead4c659b63ac45b6565fd972d7559663)
+* Refactor share app feature., [8e443](https://bitbucket.org/tbsprs/umweltzone/commits/8e4437cc8333c14449c1ca5ef65544fee2627200)
+
+### Libraries, build tools, SDK
+
+* Update jackson-databind to v.2.7.2., [afafa](https://bitbucket.org/tbsprs/umweltzone/commits/afafac4de020c7a9cb1262279a6de55309bb8895)
+
+
 ## [v.2.8.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.8.0)
 
 * Published: 2016-02-18
