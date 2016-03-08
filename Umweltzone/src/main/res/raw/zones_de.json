@@ -729,6 +729,33 @@
         }
     },
     {
+        "name" : "marburg",
+        "displayName" : "Marburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2016-04-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/index.php?navID=350",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "umwelt@marburg-stadt.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.752471,
+                "longitude" : 8.682044
+            },
+            "northEast" : {
+                "latitude" : 50.850331,
+                "longitude" : 8.827957
+            }
+        }
+    },
+    {
         "name" : "moenchengladbach",
         "displayName" : "Mönchengladbach",
         "listOfCities" : [],
