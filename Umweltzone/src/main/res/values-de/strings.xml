@@ -335,7 +335,7 @@
     <string name="zone_not_drawable_email_subject">
         Umweltzone <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g> veröffentlichen
     </string>
-    <string name="zone_not_drawable_email_message">
+    <string name="zone_not_drawable_email_html_message">
         <![CDATA[<p>Sehr geehrte Damen und Herren,<br />
         <br />
         ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],

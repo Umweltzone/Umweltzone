@@ -19,6 +19,8 @@ package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ShareCompat;
 
 import de.avpptr.umweltzone.R;
@@ -33,18 +35,20 @@ import de.avpptr.umweltzone.map.MainActivity;
 public class IntentHelper {
 
     public static Intent getSendEmailIntent(
-            Activity activity,
-            String[] toRecipients,
-            String[] bccRecipient,
-            String subject,
-            String message) {
-        return ShareCompat.IntentBuilder.from(activity)
-                .setEmailTo(toRecipients)
-                .setEmailBcc(bccRecipient)
-                .setSubject(subject)
-                .setType("message/rfc822")
-                .setHtmlText(message)
-                .getIntent();
+            @NonNull Activity activity,
+            @NonNull String[] toRecipients,
+            @Nullable String[] bccRecipient,
+            @NonNull String subject,
+            @NonNull String message) {
+        ShareCompat.IntentBuilder builder = ShareCompat.IntentBuilder.from(activity);
+        builder.setEmailTo(toRecipients);
+        if (bccRecipient != null) {
+            builder.setEmailBcc(bccRecipient);
+        }
+        builder.setSubject(subject);
+        builder.setType("message/rfc822");
+        builder.setHtmlText(message);
+        return builder.getIntent();
     }
 
     public static Intent getShareIntent(Activity activity) {

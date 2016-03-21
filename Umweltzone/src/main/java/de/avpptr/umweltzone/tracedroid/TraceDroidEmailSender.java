@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  ligi, Tobias Preuss
+ *  Copyright (C) 2016  ligi, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,9 +23,11 @@ import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
 
 // This class supports translation and configuration via XML files.
@@ -33,7 +35,7 @@ import de.avpptr.umweltzone.utils.SnackBarHelper;
 // https://github.com/ligi/tracedroid
 public abstract class TraceDroidEmailSender {
 
-    public static boolean sendStackTraces(final Activity context) {
+    public static boolean sendStackTraces(@NonNull final Activity context) {
         if (TraceDroid.getStackTraceFiles().length < 1) {
             return false;
         }
@@ -61,7 +63,7 @@ public abstract class TraceDroidEmailSender {
                 .setPositiveButton(buttonTitleSend, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         final Intent emailIntent = getEmailIntent(
-                                emailAddress, maximumStackTracesCount);
+                                context, emailAddress, maximumStackTracesCount);
                         if (emailIntent.resolveActivity(context.getPackageManager()) != null) {
                             context.startActivity(Intent.createChooser(emailIntent, sendMail));
                             TraceDroid.deleteStacktraceFiles();
@@ -85,14 +87,15 @@ public abstract class TraceDroidEmailSender {
         return true;
     }
 
-    private static Intent getEmailIntent(final String recipient, int maximumStackTracesCount) {
-        final Intent intent = new Intent(Intent.ACTION_SEND);
-        intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{recipient});
-        intent.putExtra(Intent.EXTRA_SUBJECT,
-                "[TraceDroid Report] " + TraceDroidMetaInfo.getAppPackageName());
-        intent.putExtra(Intent.EXTRA_TEXT, TraceDroid.getStackTraceText(maximumStackTracesCount));
-        return intent;
+    @NonNull
+    private static Intent getEmailIntent(
+            @NonNull Activity context,
+            @NonNull final String recipient,
+            int maximumStackTracesCount) {
+        String[] recipients = {recipient};
+        String subject = "[TraceDroid Report] " + TraceDroidMetaInfo.getAppPackageName();
+        String message = TraceDroid.getStackTraceText(maximumStackTracesCount);
+        return IntentHelper.getSendEmailIntent(context, recipients, null, subject, message);
     }
 
 }

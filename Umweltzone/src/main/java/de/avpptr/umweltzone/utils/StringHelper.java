@@ -39,14 +39,6 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 public class StringHelper {
 
     @Nullable
-    public static String getContactEmailsText(List<String> contactEmails) {
-        if (contactEmails == null || contactEmails.isEmpty()) {
-            return null;
-        }
-        return TextUtils.join(", ", contactEmails);
-    }
-
-    @Nullable
     public static String getListOfCitiesText(
             Context context,
             LowEmissionZone lowEmissionZone) {

@@ -321,7 +321,7 @@
         Umweltzone Android App, Integration <xliff:g example="Wiesbaden"
                                                      id="zoneName">%1$s</xliff:g>
     </string>
-        <string name="zone_not_drawable_email_message">
+    <string name="zone_not_drawable_email_html_message">
         <![CDATA[<p>Dear Sir or Madam.
         <br />
         I am using the free and open source application &quot;Umweltzone&quot; [1]

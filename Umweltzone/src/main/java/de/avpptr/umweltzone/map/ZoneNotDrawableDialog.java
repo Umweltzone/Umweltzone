@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,11 +22,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
@@ -41,7 +43,6 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
-import de.avpptr.umweltzone.utils.StringHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
 
@@ -75,6 +76,8 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                 zoneDisplayName));
         noticeTextView.setText(noticeSpanned, TextView.BufferType.SPANNABLE);
 
+        final String[] toRecipients = getToRecipients(lowEmissionZone.contactEmails);
+
         // Launch dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setView(zoneNotDrawableView)
@@ -85,7 +88,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             public void onClick(final DialogInterface dialog, int whichButton) {
                                 Intent intent = IntentHelper.getSendEmailIntent(
                                         activity,
-                                        getToRecipients(lowEmissionZone.contactEmails),
+                                        toRecipients,
                                         getBccRecipients(),
                                         getEmailSubject(zoneDisplayName),
                                         getEmailMessage(zoneDisplayName)
@@ -113,21 +116,28 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         return builder.create();
     }
 
-    private String[] getToRecipients(List<String> contactEmails) {
-        final String toRecipients = StringHelper.getContactEmailsText(contactEmails);
+    @NonNull
+    private String[] getToRecipients(@Nullable List<String> contactEmails) {
+        if (contactEmails == null || contactEmails.isEmpty()) {
+            throw new AssertionError("Contact emails cannot be null or empty.");
+        }
+        String toRecipients = TextUtils.join(", ", contactEmails);
         return new String[]{toRecipients};
     }
 
+    @NonNull
     private String[] getBccRecipients() {
         return new String[]{getString(R.string.config_contact_email_address)};
     }
 
+    @NonNull
     private String getEmailSubject(String zoneName) {
         return getString(R.string.zone_not_drawable_email_subject, zoneName);
     }
 
+    @NonNull
     private String getEmailMessage(String zoneName) {
-        return getString(R.string.zone_not_drawable_email_message, zoneName);
+        return getString(R.string.zone_not_drawable_email_html_message, zoneName);
     }
 
 }
