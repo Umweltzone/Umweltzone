@@ -130,7 +130,7 @@
     <string name="appinfo_references_url_ga">
         http://developers.google.com/analytics/devguides/collection/android/
     </string>
-    <string name="appinfo_references_name_tracdroid">
+    <string name="appinfo_references_name_tracedroid">
         TraceDroid
     </string>
     <string name="appinfo_references_url_tracedroid">
