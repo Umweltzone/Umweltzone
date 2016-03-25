@@ -32,7 +32,6 @@ import android.support.v4.util.LruCache;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -114,7 +113,7 @@ public abstract class ContentProvider {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(module);
         String datePattern = context.getString(R.string.config_zone_number_since_date_format);
-        objectMapper.setDateFormat(new SimpleDateFormat(datePattern, Locale.getDefault()));
+        objectMapper.setDateFormat(DateFormats.getDateFormat(datePattern));
         try {
             TypeFactory typeFactory = objectMapper.getTypeFactory();
             CollectionType collectionType = typeFactory.constructCollectionType(

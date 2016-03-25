@@ -27,10 +27,8 @@ import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
@@ -154,13 +152,11 @@ public class StringHelper {
 
     @NonNull
     private static String getFormattedDate(
-            Context context,
+            @NonNull Context context,
             int datePatternResourceId,
-            Date date) {
+            @NonNull Date date) {
         String datePattern = context.getString(datePatternResourceId);
-        // TODO Move locale into XML configuration
-        SimpleDateFormat dateFormat = new SimpleDateFormat(datePattern, Locale.getDefault());
-        return dateFormat.format(date);
+        return DateFormatter.getFormattedDate(date, datePattern);
     }
 
     @NonNull
