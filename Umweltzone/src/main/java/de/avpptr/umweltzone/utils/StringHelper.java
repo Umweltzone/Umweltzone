@@ -83,7 +83,7 @@ public class StringHelper {
         }
         int nextZoneNumber = LowEmissionZoneNumbers.getNext(lowEmissionZone.zoneNumber);
         int colorStringResourceId = LowEmissionZoneNumberConverter
-                .getColorString(lowEmissionZone.zoneNumber);
+                .getColorString(nextZoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             Log.e("Next zone number '" + nextZoneNumber +
                     "' cannot be converted into color text fragment.");
