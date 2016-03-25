@@ -125,7 +125,7 @@
         der Creative Commons Namensnennung 3.0 Unported Lizenz.
     </string>
     <string name="appinfo_license_url_title_gpl">GPLv3 Lizenz</string>
-    <string name="appinfo_license_url_title_cc">Creative Commons Lizenz</string>
+    <string name="appinfo_license_url_title_creative_commons">Creative Commons Lizenz</string>
 
     <!-- AboutActivity / Build Info -->
     <string name="appinfo_build_info_title">Build Informationen</string>

@@ -33,17 +33,17 @@
     <TextView
             android:id="@+id/app_info_google_analytics"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_ga"/>
+            android:text="@string/appinfo_references_url_google_analytics"/>
 
     <TextView
             android:id="@+id/app_info_google_design_support_library"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_googledesignsupportlibrary"/>
+            android:text="@string/appinfo_references_url_google_design_support_library"/>
 
     <TextView
             android:id="@+id/app_info_google_play_services"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_googleplayservices"/>
+            android:text="@string/appinfo_references_url_google_play_services"/>
 
     <TextView
             android:id="@+id/app_info_jackson"
@@ -53,11 +53,11 @@
     <TextView
             android:id="@+id/app_info_trace_droid"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_tracedroid"/>
+            android:text="@string/appinfo_references_url_trace_droid"/>
 
     <TextView
             android:id="@+id/app_info_typed_preferences"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_typedpreferences"/>
+            android:text="@string/appinfo_references_url_typed_preferences"/>
 
 </merge>

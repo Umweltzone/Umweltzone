@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -44,57 +44,56 @@ public class AboutActivity extends BaseActivity {
 
         ViewHelper.setupTextViewExtended(this, R.id.app_info_environment_agency,
                 R.string.appinfo_references_name_umweltbundesamt,
-                R.string.appinfo_references_url_umweltbundesamt, TrackingPoint.AboutItemClick,
-                "environment_agency");
+                R.string.appinfo_references_url_umweltbundesamt,
+                TrackingPoint.AboutItemClick, "environment_agency");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_wikimedia_commons,
                 R.string.appinfo_references_name_wikimedia_commons,
-                R.string.appinfo_references_url_wikimedia_commons, TrackingPoint.AboutItemClick,
-                "wikimedia_commons");
+                R.string.appinfo_references_url_wikimedia_commons,
+                TrackingPoint.AboutItemClick, "wikimedia_commons");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_google_play_services,
-                R.string.appinfo_references_name_googleplayservices,
-                R.string.appinfo_references_url_googleplayservices, TrackingPoint.AboutItemClick,
-                "google_play_services_library");
+                R.string.appinfo_references_name_google_play_services,
+                R.string.appinfo_references_url_google_play_services,
+                TrackingPoint.AboutItemClick, "google_play_services_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_google_design_support_library,
-                R.string.appinfo_references_name_googledesignsupportlibrary,
-                R.string.appinfo_references_url_googledesignsupportlibrary,
-                TrackingPoint.AboutItemClick,
-                "google_design_support_library");
+                R.string.appinfo_references_name_google_design_support_library,
+                R.string.appinfo_references_url_google_design_support_library,
+                TrackingPoint.AboutItemClick, "google_design_support_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_jackson,
                 R.string.appinfo_references_name_jackson,
-                R.string.appinfo_references_url_jackson, TrackingPoint.AboutItemClick,
-                "jackson_library");
+                R.string.appinfo_references_url_jackson,
+                TrackingPoint.AboutItemClick, "jackson_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_google_analytics,
-                R.string.appinfo_references_name_ga,
-                R.string.appinfo_references_url_ga, TrackingPoint.AboutItemClick,
-                "google_analytics");
+                R.string.appinfo_references_name_google_analytics,
+                R.string.appinfo_references_url_google_analytics,
+                TrackingPoint.AboutItemClick, "google_analytics");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_trace_droid,
-                R.string.appinfo_references_name_tracedroid,
-                R.string.appinfo_references_url_tracedroid, TrackingPoint.AboutItemClick,
-                "trace_droid_library");
+                R.string.appinfo_references_name_trace_droid,
+                R.string.appinfo_references_url_trace_droid,
+                TrackingPoint.AboutItemClick, "trace_droid_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_ckchangelog,
                 R.string.appinfo_references_name_ckchangelog,
-                R.string.appinfo_references_url_ckchangelog, TrackingPoint.AboutItemClick,
-                "ck_changelog_library");
+                R.string.appinfo_references_url_ckchangelog,
+                TrackingPoint.AboutItemClick, "ck_changelog_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_typed_preferences,
-                R.string.appinfo_references_name_typedpreferences,
-                R.string.appinfo_references_url_typedpreferences, TrackingPoint.AboutItemClick,
-                "typed_preferences_library");
+                R.string.appinfo_references_name_typed_preferences,
+                R.string.appinfo_references_url_typed_preferences,
+                TrackingPoint.AboutItemClick, "typed_preferences_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_gpl,
                 R.string.appinfo_license_url_title_gpl,
-                R.string.appinfo_license_url_gpl, TrackingPoint.AboutItemClick,
-                "gpl_url");
+                R.string.appinfo_license_url_gpl,
+                TrackingPoint.AboutItemClick, "gpl_url");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_odbl,
                 R.string.appinfo_license_url_title_odbl,
-                R.string.appinfo_license_url_odbl, TrackingPoint.AboutItemClick,
-                "odbl_url");
+                R.string.appinfo_license_url_odbl,
+                TrackingPoint.AboutItemClick, "odbl_url");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_creative_commons,
-                R.string.appinfo_license_url_title_cc,
-                R.string.appinfo_license_url_cc, TrackingPoint.AboutItemClick,
-                "cc_url");
+                R.string.appinfo_license_url_title_creative_commons,
+                R.string.appinfo_license_url_creative_commons,
+                TrackingPoint.AboutItemClick, "cc_url");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_source_code,
                 R.string.appinfo_sourcecode_url_title,
-                R.string.appinfo_sourcecode_url, TrackingPoint.AboutItemClick,
-                "source_code_url");
+                R.string.appinfo_sourcecode_url,
+                TrackingPoint.AboutItemClick, "source_code_url");
     }
 
     @Override

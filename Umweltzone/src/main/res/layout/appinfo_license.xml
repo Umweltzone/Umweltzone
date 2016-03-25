@@ -38,6 +38,6 @@
     <TextView
             android:id="@+id/app_info_creative_commons"
             style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_license_url_cc"/>
+            android:text="@string/appinfo_license_url_creative_commons"/>
 
 </merge>
