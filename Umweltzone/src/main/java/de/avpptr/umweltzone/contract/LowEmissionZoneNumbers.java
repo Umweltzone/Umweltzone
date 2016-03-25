@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,18 +22,31 @@ import android.support.annotation.IntDef;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-public interface LowEmissionZoneNumbers {
+public abstract class LowEmissionZoneNumbers {
 
-    @IntDef({RED, YELLOW, GREEN})
+    @IntDef(value = {RED, YELLOW, GREEN})
     @Retention(RetentionPolicy.SOURCE)
-    @interface Color {
+    public @interface Color {
 
     }
 
-    int RED = 2;
+    public static final int RED = 2;
 
-    int YELLOW = 3;
+    public static final int YELLOW = 3;
 
-    int GREEN = 4;
+    public static final int GREEN = 4;
+
+    @Color
+    public static int getNext(@Color int zoneNumber) {
+        switch (zoneNumber) {
+            case RED:
+                return YELLOW;
+            case YELLOW:
+                return GREEN;
+            case GREEN:
+                // continue
+        }
+        throw new IllegalArgumentException("Cannot return next zone number after: " + zoneNumber);
+    }
 
 }

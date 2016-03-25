@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Locale;
 
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
@@ -80,7 +81,7 @@ public class StringHelper {
         if (lowEmissionZone.nextZoneNumberAsOf == null) {
             return null;
         }
-        int nextZoneNumber = lowEmissionZone.zoneNumber + 1;
+        int nextZoneNumber = LowEmissionZoneNumbers.getNext(lowEmissionZone.zoneNumber);
         int colorStringResourceId = LowEmissionZoneNumberConverter
                 .getColorString(lowEmissionZone.zoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
