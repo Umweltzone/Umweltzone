@@ -85,19 +85,12 @@
         Strafen übernehmen.
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Umweltbundesamt</string>
-    <string name="appinfo_references_url_umweltbundesamt">
-        http://www.umweltbundesamt.de
-    </string>
 
     <!-- AboutActivity / Graphics -->
     <string name="appinfo_references_graphics_title">Grafiken</string>
     <string name="appinfo_references_graphics_content">
         Die verwendeten Grafiken stammen aus Wikimedia Commons. Dies
         betrifft das Logo sowie die Plaketten der Schadstoffgruppen.
-    </string>
-    <string name="appinfo_references_name_wikimedia_commons">Wikimedia Commons</string>
-    <string name="appinfo_references_url_wikimedia_commons">
-        http://commons.wikimedia.org
     </string>
 
     <!-- AboutActivity / Texts -->
@@ -113,48 +106,6 @@
         Im Folgenden wird auf Software-Projekte verwiesen, die in
         der Anwendung genutzt werden.
     </string>
-    <string name="appinfo_references_name_googleplayservices">
-        Google Play Services
-    </string>
-    <string name="appinfo_references_url_googleplayservices">
-        http://developer.android.com/google/play-services
-    </string>
-    <string name="appinfo_references_name_googledesignsupportlibrary">
-        Google Design Support Library
-    </string>
-    <string name="appinfo_references_url_googledesignsupportlibrary">
-        http://developer.android.com/tools/support-library/features.html#design
-    </string>
-    <string name="appinfo_references_name_jackson">
-        Jackson JSON processor
-    </string>
-    <string name="appinfo_references_url_jackson">
-        http://jackson.codehaus.org
-    </string>
-    <string name="appinfo_references_name_ga">
-        Google Analytics
-    </string>
-    <string name="appinfo_references_url_ga">
-        http://developers.google.com/analytics/devguides/collection/android/
-    </string>
-    <string name="appinfo_references_name_tracedroid">
-        TraceDroid
-    </string>
-    <string name="appinfo_references_url_tracedroid">
-        http://github.com/ligi/tracedroid
-    </string>
-    <string name="appinfo_references_name_ckchangelog">
-        ckChangeLog
-    </string>
-    <string name="appinfo_references_url_ckchangelog">
-        http://github.com/cketti/ckChangeLog
-    </string>
-    <string name="appinfo_references_name_typedpreferences">
-        Typed Preferences
-    </string>
-    <string name="appinfo_references_url_typedpreferences">
-        http://github.com/johnjohndoe/TypedPreferences
-    </string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Quellcode</string>
@@ -162,7 +113,6 @@
         Der Quellcode der Anwendung ist online abrufbar.
     </string>
     <string name="appinfo_sourcecode_url_title">Quellcode der Anwendung</string>
-    <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
 
     <!-- AboutActivity / License -->
     <string name="appinfo_license_title">Lizenzen</string>
@@ -174,25 +124,8 @@
         Bilder und Texte unterliegen, soweit nicht anders genannt,
         der Creative Commons Namensnennung 3.0 Unported Lizenz.
     </string>
-    <string name="appinfo_license_name_gpl">GPLv3</string>
     <string name="appinfo_license_url_title_gpl">GPLv3 Lizenz</string>
-    <string name="appinfo_license_url_gpl">
-        http://www.gnu.org/licenses/gpl-3.0.txt
-    </string>
-    <string name="appinfo_license_name_odbl">
-        Open Database Licence
-    </string>
-    <string name="appinfo_license_url_title_odbl">
-        Open Database Licence
-    </string>
-    <string name="appinfo_license_url_odbl">
-        http://opendatacommons.org/licenses/odbl/1.0/
-    </string>
-    <string name="appinfo_license_name_cc">Creative Commons</string>
     <string name="appinfo_license_url_title_cc">Creative Commons Lizenz</string>
-    <string name="appinfo_license_url_cc">
-        http://creativecommons.org/licenses/by/3.0/deed.de
-    </string>
 
     <!-- AboutActivity / Build Info -->
     <string name="appinfo_build_info_title">Build Informationen</string>
@@ -208,10 +141,8 @@
         Fehlermeldungen oder der Wunsch nach neuen Funktionen
         kann an folgende Adresse gerichtet werden:
     </string>
-    <string name="appinfo_contact_email">@string/config_contact_email_address</string>
 
     <!-- FeedbackActivity / Contact / Uservoice -->
-    <string name="appinfo_uservoice_title">UserVoice</string>
     <string name="appinfo_uservoice_content">
         Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
         eingetragen werden. Auf der Seite kann man auch jeden anderen
@@ -219,7 +150,6 @@
         der Nutzer gerne möchte.
     </string>
     <string name="appinfo_uservoice_url_title">UserVoice Webseite</string>
-    <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
 
     <!-- FeedbackActivity / Rating -->
     <string name="appinfo_rating_title">Bewerten</string>
@@ -229,9 +159,6 @@
     </string>
     <string name="appinfo_rating_url_title">
         Umweltzone im Google Play Store
-    </string>
-    <string name="appinfo_rating_url">
-        http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
     </string>
 
 

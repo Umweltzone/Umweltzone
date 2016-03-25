@@ -86,15 +86,21 @@
         costs or punishments.
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Federal Environment Agency</string>
-    <string name="appinfo_references_url_umweltbundesamt">http://www.umweltbundesamt.de</string>
+    <string name="appinfo_references_url_umweltbundesamt" translatable="false">
+        http://www.umweltbundesamt.de
+    </string>
 
     <!-- AboutActivity / Graphics -->
     <string name="appinfo_references_graphics_title">Graphics</string>
     <string name="appinfo_references_graphics_content">
         Graphics such as the logo and stickers are taken from Wikimedia Commons.
     </string>
-    <string name="appinfo_references_name_wikimedia_commons">Wikimedia Commons</string>
-    <string name="appinfo_references_url_wikimedia_commons">http://commons.wikimedia.org</string>
+    <string name="appinfo_references_name_wikimedia_commons" translatable="false">
+        Wikimedia Commons
+    </string>
+    <string name="appinfo_references_url_wikimedia_commons" translatable="false">
+        http://commons.wikimedia.org
+    </string>
 
     <!-- AboutActivity / Texts -->
     <string name="appinfo_references_texts_title">Texts</string>
@@ -107,45 +113,45 @@
     <string name="appinfo_references_libraries_content">
         The following software libraries are used within the application.
     </string>
-    <string name="appinfo_references_name_googleplayservices">
+    <string name="appinfo_references_name_googleplayservices" translatable="false">
         Google Play Services
     </string>
-    <string name="appinfo_references_url_googleplayservices">
+    <string name="appinfo_references_url_googleplayservices" translatable="false">
         http://developer.android.com/google/play-services
     </string>
-    <string name="appinfo_references_name_googledesignsupportlibrary">
+    <string name="appinfo_references_name_googledesignsupportlibrary" translatable="false">
         Google Design Support Library
     </string>
-    <string name="appinfo_references_url_googledesignsupportlibrary">
+    <string name="appinfo_references_url_googledesignsupportlibrary" translatable="false">
         http://developer.android.com/tools/support-library/features.html#design
     </string>
-    <string name="appinfo_references_name_jackson">
+    <string name="appinfo_references_name_jackson" translatable="false">
         Jackson JSON processor
     </string>
-    <string name="appinfo_references_url_jackson">
+    <string name="appinfo_references_url_jackson" translatable="false">
         http://jackson.codehaus.org
     </string>
-    <string name="appinfo_references_name_ga">
+    <string name="appinfo_references_name_ga" translatable="false">
         Google Analytics</string>
-    <string name="appinfo_references_url_ga">
+    <string name="appinfo_references_url_ga" translatable="false">
         http://developers.google.com/analytics/devguides/collection/android/
     </string>
-    <string name="appinfo_references_name_tracedroid">
+    <string name="appinfo_references_name_tracedroid" translatable="false">
         TraceDroid
     </string>
-    <string name="appinfo_references_url_tracedroid">
+    <string name="appinfo_references_url_tracedroid" translatable="false">
         http://github.com/ligi/tracedroid
     </string>
-    <string name="appinfo_references_name_ckchangelog">
+    <string name="appinfo_references_name_ckchangelog" translatable="false">
         ckChangeLog
     </string>
-    <string name="appinfo_references_url_ckchangelog">
+    <string name="appinfo_references_url_ckchangelog" translatable="false">
         http://github.com/cketti/ckChangeLog
     </string>
-    <string name="appinfo_references_name_typedpreferences">
+    <string name="appinfo_references_name_typedpreferences" translatable="false">
         Typed Preferences
     </string>
-    <string name="appinfo_references_url_typedpreferences">
+    <string name="appinfo_references_url_typedpreferences" translatable="false">
         http://github.com/johnjohndoe/TypedPreferences
     </string>
 
@@ -155,7 +161,9 @@
         The source code of the application is available online.
     </string>
     <string name="appinfo_sourcecode_url_title">Application source code</string>
-    <string name="appinfo_sourcecode_url">http://bitbucket.org/tbsprs/umweltzone</string>
+    <string name="appinfo_sourcecode_url" translatable="false">
+        http://bitbucket.org/tbsprs/umweltzone
+    </string>
 
     <!-- AboutActivity / License -->
     <string name="appinfo_license_title">Licenses</string>
@@ -166,21 +174,25 @@
         defined by the mentioned data sources. Images and texts are licensed under
         the Creative Commons Attribution 3.0 Unported License.
     </string>
-    <string name="appinfo_license_name_gpl">GPLv3</string>
+    <string name="appinfo_license_name_gpl" translatable="false">GPLv3</string>
     <string name="appinfo_license_url_title_gpl">GPLv3 License</string>
-    <string name="appinfo_license_url_gpl">http://www.gnu.org/licenses/gpl-3.0.txt</string>
-    <string name="appinfo_license_name_odbl">
+    <string name="appinfo_license_url_gpl" translatable="false">
+        http://www.gnu.org/licenses/gpl-3.0.txt
+    </string>
+    <string name="appinfo_license_name_odbl" translatable="false">
         Open Database Licence
     </string>
-    <string name="appinfo_license_url_title_odbl">
+    <string name="appinfo_license_url_title_odbl" translatable="false">
         Open Database Licence
     </string>
-    <string name="appinfo_license_url_odbl">
+    <string name="appinfo_license_url_odbl" translatable="false">
         http://opendatacommons.org/licenses/odbl/1.0/
     </string>
-    <string name="appinfo_license_name_cc">Creative Commons</string>
+    <string name="appinfo_license_name_cc" translatable="false">Creative Commons</string>
     <string name="appinfo_license_url_title_cc">Creative Commons License</string>
-    <string name="appinfo_license_url_cc">http://creativecommons.org/licenses/by/3.0/deed</string>
+    <string name="appinfo_license_url_cc" translatable="false">
+        http://creativecommons.org/licenses/by/3.0/deed
+    </string>
 
     <!-- AboutActivity / Build Info -->
     <string name="appinfo_build_info_title">Build information</string>
@@ -195,17 +207,21 @@
         All kinds of feedback such as improvement ideas, error reports
         or feature requests can be sent to the following address:
     </string>
-    <string name="appinfo_contact_email">@string/config_contact_email_address</string>
+    <string name="appinfo_contact_email" translatable="false">
+        @string/config_contact_email_address
+    </string>
 
     <!-- FeedbackActivity / Contact / Uservoice -->
-    <string name="appinfo_uservoice_title">UserVoice</string>
+    <string name="appinfo_uservoice_title" translatable="false">UserVoice</string>
     <string name="appinfo_uservoice_content">
         Own ideas also can be posted on our UserVoice website. Posts of
         other people can be rated which allows us to see which improvements
         the majority of users want.
     </string>
     <string name="appinfo_uservoice_url_title">UserVoice website</string>
-    <string name="appinfo_uservoice_url">http://umweltzone.uservoice.com</string>
+    <string name="appinfo_uservoice_url" translatable="false">
+        http://umweltzone.uservoice.com
+    </string>
 
     <!-- FeedbackActivity / Rating -->
     <string name="appinfo_rating_title">Rating</string>
@@ -215,7 +231,7 @@
     <string name="appinfo_rating_url_title">
         Umweltzone in the Google Play Store
     </string>
-    <string name="appinfo_rating_url">
+    <string name="appinfo_rating_url" translatable="false">
         http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
     </string>
 
