@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.utils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -51,7 +52,7 @@ public class IntentHelper {
         return builder.getIntent();
     }
 
-    public static Intent getShareIntent(Activity activity) {
+    public static Intent getShareIntent(@NonNull Activity activity) {
         String message = activity.getString(R.string.share_intent_message);
         return ShareCompat.IntentBuilder.from(activity)
                 .setType("text/plain")
@@ -59,40 +60,40 @@ public class IntentHelper {
                 .getIntent();
     }
 
-    public static Intent getNewMapIntent(Activity activity) {
-        final Intent intent = getIntent(activity, MainActivity.class);
+    public static Intent getNewMapIntent(@NonNull Context context) {
+        final Intent intent = getIntent(context, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
 
-    public static Intent getHomeIntent(Activity activity) {
-        final Intent intent = getIntent(activity, MainActivity.class);
+    public static Intent getHomeIntent(@NonNull Context context) {
+        final Intent intent = getIntent(context, MainActivity.class);
         intent.putExtra(BundleKeys.HOME, BundleKeys.HOME);
         return intent;
     }
 
-    public static Intent getCityInfoIntent(Activity activity) {
-        return getIntent(activity, CityInfoActivity.class);
+    public static Intent getCityInfoIntent(@NonNull Context context) {
+        return getIntent(context, CityInfoActivity.class);
     }
 
-    public static Intent getFeedbackIntent(Activity activity) {
-        return getIntent(activity, FeedbackActivity.class);
+    public static Intent getFeedbackIntent(@NonNull Context context) {
+        return getIntent(context, FeedbackActivity.class);
     }
 
-    public static Intent getAboutIntent(Activity activity) {
-        return getIntent(activity, AboutActivity.class);
+    public static Intent getAboutIntent(@NonNull Context context) {
+        return getIntent(context, AboutActivity.class);
     }
 
-    public static Intent getCitiesIntent(Activity activity) {
-        return getIntent(activity, CitiesActivity.class);
+    public static Intent getCitiesIntent(@NonNull Context context) {
+        return getIntent(context, CitiesActivity.class);
     }
 
-    public static Intent getFaqsIntent(Activity activity) {
-        return getIntent(activity, FaqActivity.class);
+    public static Intent getFaqsIntent(@NonNull Context context) {
+        return getIntent(context, FaqActivity.class);
     }
 
-    private static Intent getIntent(Activity activity, Class<?> clazz) {
-        final Intent intent = new Intent(activity, clazz);
+    private static Intent getIntent(Context context, Class<?> clazz) {
+        final Intent intent = new Intent(context, clazz);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
     }
