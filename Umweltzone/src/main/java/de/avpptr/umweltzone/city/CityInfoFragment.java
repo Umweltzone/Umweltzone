@@ -82,7 +82,7 @@ public class CityInfoFragment extends BaseFragment {
 
         // List of cities
         TextView listOfCitiesTextView =
-                (TextView) activity.findViewById(R.id.city_info_zone_list_of_cities);
+                (TextView) activity.findViewById(R.id.city_info_list_of_cities);
         String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
 
