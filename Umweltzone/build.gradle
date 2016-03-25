@@ -90,6 +90,12 @@ android {
     }
 }
 
+configurations {
+    // http://qathread.blogspot.de/2015/02/discovering-espresso-for-android.html
+    androidTestCompile.exclude group: "com.android.support", module: "support-annotations"
+    testCompile.exclude group: "com.android.support", module: "support-annotations"
+}
+
 dependencies {
     compile "com.android.support:design:22.2.1"
     compile "com.google.android.gms:play-services:3.2.65"
@@ -100,15 +106,11 @@ dependencies {
     compile files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
-    androidTestCompile("com.squareup.assertj:assertj-android:1.1.1") {
-        exclude module: "support-annotations"
-    }
+    androidTestCompile "com.squareup.assertj:assertj-android:1.1.1"
 
     // Unit tests
     testCompile "junit:junit:4.12"
-    testCompile("com.squareup.assertj:assertj-android:1.1.1") {
-        exclude module: "support-annotations"
-    }
+    testCompile "com.squareup.assertj:assertj-android:1.1.1"
 }
 
 Properties props = new Properties()
