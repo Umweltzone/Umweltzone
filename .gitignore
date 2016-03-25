@@ -38,6 +38,7 @@ local.properties
 *.ipr
 *.iws
 .idea/
+.navigation/
 
 ### Android ###
 # built application files
