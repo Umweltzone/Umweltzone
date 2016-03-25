@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.city;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -64,7 +65,8 @@ public class CityInfoFragment extends BaseFragment {
         }
     }
 
-    private void setUpCityInfo(final Activity activity, final LowEmissionZone lowEmissionZone) {
+    private void setUpCityInfo(@NonNull final Activity activity,
+            @NonNull final LowEmissionZone lowEmissionZone) {
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
@@ -114,7 +116,7 @@ public class CityInfoFragment extends BaseFragment {
         showOnMapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoShowOnMapClick, mLowEmissionZone.name);
+                mTracking.track(TrackingPoint.CityInfoShowOnMapClick, lowEmissionZone.name);
                 Umweltzone.centerZoneRequested = true;
                 startActivity(IntentHelper.getNewMapIntent(activity));
             }
@@ -124,14 +126,14 @@ public class CityInfoFragment extends BaseFragment {
         ViewHelper.setupTextViewExtended(activity,
                 R.id.city_info_further_information,
                 R.string.city_info_further_information,
-                mLowEmissionZone.urlUmweltPlaketteDe,
+                lowEmissionZone.urlUmweltPlaketteDe,
                 TrackingPoint.CityInfoFurtherInfoClick,
-                mLowEmissionZone.name);
+                lowEmissionZone.name);
 
         // Badge online
         TextView badgeOnlineTextView = (TextView) activity.findViewById(
                 R.id.city_info_badge_online);
-        final String urlBadgeOnline = mLowEmissionZone.urlBadgeOnline;
+        final String urlBadgeOnline = lowEmissionZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
             badgeOnlineTextView.setVisibility(View.GONE);
         } else {
