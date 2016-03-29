@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,10 +19,13 @@ package de.avpptr.umweltzone.utils;
 
 import com.google.android.gms.maps.model.LatLngBounds;
 
+import org.parceler.Parcel;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
+@Parcel(Parcel.Serialization.BEAN)
 public class BoundingBox {
 
     private GeoPoint southWest;
@@ -33,7 +36,7 @@ public class BoundingBox {
             new DecimalFormat(".#####", new DecimalFormatSymbols(Locale.US));
 
     public BoundingBox() {
-        // Required by Jackson to de-serialize JSON content
+        // Required by Jackson and Parceler to de-serialize JSON content
     }
 
     public BoundingBox(GeoPoint southWest, GeoPoint northEast) {
@@ -41,13 +44,13 @@ public class BoundingBox {
         this.northEast = northEast;
     }
 
-    // Required by Jackson and ProGuard to de-serialize JSON content
+    // Required by Jackson, Parceler and ProGuard to de-serialize JSON content
     @SuppressWarnings("unused")
     public void setSouthWest(GeoPoint southWest) {
         this.southWest = southWest;
     }
 
-    // Required by Jackson and ProGuard to de-serialize JSON content
+    // Required by Jackson, Parceler and ProGuard to de-serialize JSON content
     @SuppressWarnings("unused")
     public void setNorthEast(GeoPoint northEast) {
         this.northEast = northEast;
@@ -72,6 +75,31 @@ public class BoundingBox {
     public static BoundingBox getInvalidBoundingBox() {
         GeoPoint invalidLocation = GeoPoint.getInvalidGeoPoint();
         return new BoundingBox(invalidLocation, invalidLocation);
+    }
+
+    @SuppressWarnings("SimplifiableIfStatement")
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (other == null || getClass() != other.getClass()) {
+            return false;
+        }
+        BoundingBox boundingBox = (BoundingBox) other;
+        if (southWest != null ? !southWest.equals(boundingBox.southWest)
+                : boundingBox.southWest != null) {
+            return false;
+        }
+        return northEast != null ? northEast.equals(boundingBox.northEast)
+                : boundingBox.northEast == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = southWest != null ? southWest.hashCode() : 0;
+        result = 31 * result + (northEast != null ? northEast.hashCode() : 0);
+        return result;
     }
 
     @Override

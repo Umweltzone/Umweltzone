@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,12 +19,15 @@ package de.avpptr.umweltzone.utils;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import org.parceler.Parcel;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+@Parcel
 public final class GeoPoint {
 
     public static final double MAX_LATITUDE = 90.0;
@@ -104,6 +107,30 @@ public final class GeoPoint {
 
     public static GeoPoint getInvalidGeoPoint() {
         return new GeoPoint(INVALID_LATITUDE, INVALID_LONGITUDE);
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (other == null || getClass() != other.getClass()) {
+            return false;
+        }
+        GeoPoint geoPoint = (GeoPoint) other;
+        return Double.compare(geoPoint.mLatitude, mLatitude) == 0 &&
+                Double.compare(geoPoint.mLongitude, mLongitude) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(mLatitude);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(mLongitude);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
     }
 
     @Override
