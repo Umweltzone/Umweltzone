@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,8 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -33,6 +35,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.cketti.library.changelog.ChangeLog;
 
@@ -75,7 +78,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 startActivity(IntentHelper.getCitiesIntent(this));
                 return true;
             case R.id.action_city_info:
-                startActivity(IntentHelper.getCityInfoIntent(this));
+                LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(this);
+                startActivity(IntentHelper.getCityInfoIntent(this, lowEmissionZone));
                 return true;
             case R.id.action_faq:
                 startActivity(IntentHelper.getFaqsIntent(this));
@@ -109,6 +113,17 @@ public abstract class BaseActivity extends AppCompatActivity {
         // Must use appcompat-v7:19.0.0 and newer to work on Android 2.3. See issue 58108
         fragmentTransaction.replace(android.R.id.content, fragment, fragmentTag);
         fragmentTransaction.commit();
+    }
+
+    protected void addFragment(
+            @IdRes int containerViewId,
+            @NonNull Fragment fragment,
+            @NonNull String fragmentTag) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(containerViewId, fragment, fragmentTag)
+                .disallowAddToBackStack()
+                .commit();
     }
 
     @Override

@@ -17,8 +17,13 @@
 
 package de.avpptr.umweltzone.city;
 
+import org.parceler.Parcels;
+
 import android.app.Activity;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -41,32 +46,52 @@ public class CityInfoFragment extends BaseFragment {
     public static final String FRAGMENT_TAG =
             BuildConfig.APPLICATION_ID + ".CITY_INFO_FRAGMENT_TAG";
 
+    public static final String BUNDLE_KEY_LOW_EMISSION_ZONE =
+            BuildConfig.APPLICATION_ID + ".LOW_EMISSION_ZONE_BUNDLE_KEY";
+
     private LowEmissionZone mLowEmissionZone;
+
+    public static CityInfoFragment newInstance(@NonNull LowEmissionZone lowEmissionZone) {
+        CityInfoFragment cityInfoFragment = new CityInfoFragment();
+        Bundle extras = new Bundle();
+        Parcelable lowEmissionZoneParcelable = Parcels.wrap(lowEmissionZone);
+        extras.putParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE, lowEmissionZoneParcelable);
+        cityInfoFragment.setArguments(extras);
+        return cityInfoFragment;
+    }
+
+    public CityInfoFragment() {
+        // Mandatory empty constructor for the fragment manager to
+        // instantiate the fragment (e.g. upon screen orientation changes).
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Bundle extras = getArguments();
+        if (extras != null) {
+            Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE);
+            mLowEmissionZone = Parcels.unwrap(parcelable);
+        }
+    }
 
     @Override
     public int getLayoutResource() {
-        mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
-        if (mLowEmissionZone == null) {
-            return R.layout.fragment_city_info_empty;
-        } else {
-            return R.layout.fragment_city_info;
-        }
+        return R.layout.fragment_city_info;
     }
 
     @Override
     public void onResume() {
         super.onResume();
         Activity activity = getActivity();
-        mLowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(getActivity());
-        if (mLowEmissionZone != null) {
+        if (activity != null && mLowEmissionZone != null) {
             setUpCityInfo(activity, mLowEmissionZone);
-        } else {
-            setUpCityInfoEmpty(activity);
         }
     }
 
     private void setUpCityInfo(@NonNull final Activity activity,
             @NonNull final LowEmissionZone lowEmissionZone) {
+
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
@@ -159,17 +184,6 @@ public class CityInfoFragment extends BaseFragment {
         String geometrySourceText = StringHelper
                 .getGeometrySourceText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(geometrySourceTextView, geometrySourceText);
-    }
-
-    private void setUpCityInfoEmpty(final Activity activity) {
-        // Select zone button
-        Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_empty_select_zone);
-        showOnMapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(IntentHelper.getCitiesIntent(activity));
-            }
-        });
     }
 
 }
