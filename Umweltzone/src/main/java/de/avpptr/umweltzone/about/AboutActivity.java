@@ -50,6 +50,10 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_references_name_wikimedia_commons,
                 R.string.appinfo_references_url_wikimedia_commons,
                 TrackingPoint.AboutItemClick, "wikimedia_commons");
+        ViewHelper.setupTextViewExtended(this, R.id.app_info_android_testing_support_library,
+                R.string.appinfo_references_name_android_testing_support_library,
+                R.string.appinfo_references_url_android_testing_support_library,
+                TrackingPoint.AboutItemClick, "android_testing_support_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_google_play_services,
                 R.string.appinfo_references_name_google_play_services,
                 R.string.appinfo_references_url_google_play_services,
@@ -66,6 +70,10 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_references_name_google_analytics,
                 R.string.appinfo_references_url_google_analytics,
                 TrackingPoint.AboutItemClick, "google_analytics");
+        ViewHelper.setupTextViewExtended(this, R.id.app_info_parceler,
+                R.string.appinfo_references_name_parceler,
+                R.string.appinfo_references_url_parceler,
+                TrackingPoint.AboutItemClick, "parceler");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_trace_droid,
                 R.string.appinfo_references_name_trace_droid,
                 R.string.appinfo_references_url_trace_droid,

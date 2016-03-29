@@ -113,6 +113,12 @@
     <string name="appinfo_references_libraries_content">
         The following software libraries are used within the application.
     </string>
+    <string name="appinfo_references_name_android_testing_support_library" translatable="false">
+        Android Testing Support Library
+    </string>
+    <string name="appinfo_references_url_android_testing_support_library" translatable="false">
+        https://google.github.io/android-testing-support-library/
+    </string>
     <string name="appinfo_references_name_google_play_services" translatable="false">
         Google Play Services
     </string>
@@ -136,6 +142,12 @@
     </string>
     <string name="appinfo_references_url_google_analytics" translatable="false">
         http://developers.google.com/analytics/devguides/collection/android/
+    </string>
+    <string name="appinfo_references_name_parceler" translatable="false">
+        Parceler
+    </string>
+    <string name="appinfo_references_url_parceler" translatable="false">
+        http://parceler.org
     </string>
     <string name="appinfo_references_name_trace_droid" translatable="false">
         TraceDroid
