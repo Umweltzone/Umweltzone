@@ -48,6 +48,7 @@ public class LowEmissionZone {
 
     public Date nextZoneNumberAsOf;
 
+    @LowEmissionZoneNumbers.Color
     public int abroadLicensedVehicleZoneNumber;
 
     public Date abroadLicensedVehicleZoneNumberUntil;
