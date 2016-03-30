@@ -60,7 +60,7 @@ public abstract class ContentProvider {
     }
 
     @NonNull
-    public static List<Faq> getFaqs(final Context context) {
+    public static List<Faq> getFaqs(@NonNull final Context context) {
         // Do not accidentally compare with Locale.GERMAN
         if (Locale.getDefault().equals(Locale.GERMANY)) {
             return getContent(context, "faqs_de", Faq.class);
@@ -69,7 +69,7 @@ public abstract class ContentProvider {
     }
 
     @NonNull
-    public static List<LowEmissionZone> getLowEmissionZones(final Context context) {
+    public static List<LowEmissionZone> getLowEmissionZones(@NonNull final Context context) {
         return getContent(context, "zones_de", LowEmissionZone.class);
     }
 

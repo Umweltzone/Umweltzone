@@ -24,7 +24,10 @@ import android.test.InstrumentationTestCase;
 
 import java.util.List;
 
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.Circuit;
+import de.avpptr.umweltzone.models.Faq;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -88,6 +91,67 @@ public class ContentProviderTest extends InstrumentationTestCase {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
             assertThat(zoneJsonResourceId).isSameAs(getZoneJsonResourceId(zoneName));
+        }
+    }
+
+    public void testGetFaqs_worksAtAll() {
+        List<Faq> faqs = ContentProvider.getFaqs(mContext);
+        assertThat(faqs)
+                .isNotNull()
+                .isNotEmpty();
+        for (Faq faq : faqs) {
+            assertThat(faq).isNotNull();
+            testFaq(faq);
+        }
+    }
+
+    public void testGetLowEmissionZones_worksAtAll() {
+        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(mContext);
+        assertThat(lowEmissionZones)
+                .isNotNull()
+                .isNotEmpty();
+        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
+            assertThat(lowEmissionZone).isNotNull();
+            testLowEmissionZone(lowEmissionZone);
+        }
+    }
+
+    private void testFaq(@NonNull Faq faq) {
+        assertThat(faq.position).isNotNull().isGreaterThan(0);
+        assertThat(faq.question).isNotNull().isNotEmpty();
+        assertThat(faq.answer).isNotNull().isNotEmpty();
+        assertThat(faq.label).isNotNull().isNotEmpty();
+        assertThat(faq.sourceUrl).isNotNull().isNotEmpty();
+    }
+
+    private void testLowEmissionZone(@NonNull LowEmissionZone lowEmissionZone) {
+        assertThat(lowEmissionZone.name).isNotNull();
+        assertThat(lowEmissionZone.displayName).isNotNull();
+        assertThat(lowEmissionZone.listOfCities).isNotNull();
+
+        BoundingBox boundingBox = lowEmissionZone.boundingBox;
+        assertThat(boundingBox).isNotNull();
+        assertThat(boundingBox.isValid()).isTrue();
+
+        assertThat(lowEmissionZone.zoneNumber)
+                .isNotNull()
+                .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
+
+        assertThat(lowEmissionZone.zoneNumberSince).isNotNull();
+        assertThat(lowEmissionZone.abroadLicensedVehicleZoneNumber).isNotNull();
+
+        assertThat(lowEmissionZone.urlUmweltPlaketteDe)
+                .isNotNull()
+                .isNotEmpty();
+
+        assertThat(lowEmissionZone.urlBadgeOnline).isNotNull();
+
+        List<String> contactEmails = lowEmissionZone.contactEmails;
+        if (contactEmails == null) {
+            assertThat(lowEmissionZone.containsGeometryInformation()).isTrue();
+        } else {
+            assertThat(contactEmails).isNotEmpty();
+            assertThat(lowEmissionZone.containsGeometryInformation()).isFalse();
         }
     }
 
