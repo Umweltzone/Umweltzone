@@ -311,16 +311,16 @@
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/umweltzone%20halle.php",
         "urlBadgeOnline" : "",
         "contactEmails" : null,
-        "geometrySource" : "OpenStreetMap",
-        "geometryUpdatedAt" : "2013-10-12",
+        "geometrySource" : "Fachbereich Umwelt, Halle (Saale)",
+        "geometryUpdatedAt" : "2016-04-03",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 51.477963,
-                "longitude" : 11.948725
+                "latitude" : 51.477952,
+                "longitude" : 11.948753
             },
             "northEast" : {
-                "latitude" : 51.511401,
-                "longitude" : 11.994762
+                "latitude" : 51.511204,
+                "longitude" : 11.994751
             }
         }
     },
