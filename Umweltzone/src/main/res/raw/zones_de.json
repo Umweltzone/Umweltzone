@@ -739,19 +739,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "http://umwelt-plakette.de/index.php?navID=350",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "umwelt@marburg-stadt.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Fachdienst Straßenverkehr, Marburg",
+        "geometryUpdatedAt" : "2016-04-03",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.752471,
-                "longitude" : 8.682044
+                "latitude" : 50.789068,
+                "longitude" : 8.728712
             },
             "northEast" : {
-                "latitude" : 50.850331,
-                "longitude" : 8.827957
+                "latitude" : 50.848226,
+                "longitude" : 8.798001
             }
         }
     },
