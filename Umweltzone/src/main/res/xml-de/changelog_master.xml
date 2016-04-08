@@ -16,6 +16,25 @@
 -->
 <changelog>
     <release
+            version="2.10.0"
+            versioncode="210000">
+        <change>
+            Neu: Marburg mit Geokoordinaten hinzugefügt (neu ab 01.04.2016)
+        </change>
+        <change>
+            Aktualisierung: Minimale Korrektur der Koordinaten der Umweltzone
+            von Halle (Saale). Die Daten wurden jetzt von der Stadt zur
+            Verfügung gestellt.
+        </change>
+        <change>
+            Die Liste der verwendeten Bibliotheken ist jetzt alphabetisch sortiert.
+        </change>
+        <change>
+            Aktualisierung: Teile des zugrundliegenden Codes wurden umgeschrieben,
+            um automatische Tests nutzen zu können.
+        </change>
+    </release>
+    <release
             version="2.9.0"
             versioncode="29000">
         <change>

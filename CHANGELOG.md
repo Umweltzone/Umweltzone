@@ -1,5 +1,38 @@
 # Umweltzone changelog
 
+
+## [v.2.10.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.10.0)
+
+* Published: 2016-04-08
+
+### Features, improvements and maintenance
+
+* Add geometry for Marburg., [fb112](https://bitbucket.org/tbsprs/umweltzone/commits/fb11289178400bdecbdb4ae1c5033c1951b185f4)
+* Update geometry for Halle (Saale)., [90934](https://bitbucket.org/tbsprs/umweltzone/commits/9093477adf389679d46914c294fc04cc6e2e5822)
+* Describe how to run tests., [aa3a7](https://bitbucket.org/tbsprs/umweltzone/commits/aa3a7a4b78f742372b2c57f3400cc264f4ce2951)
+* Let there be tests for the about screen., [fc4cf](https://bitbucket.org/tbsprs/umweltzone/commits/fc4cfc791c1cff87beb588c13abb4a413c091d92)
+* Add ATSL and Parceler to list of libraries., [7144d](https://bitbucket.org/tbsprs/umweltzone/commits/7144dd0b0b85fa8f2b72d6858efca3842d29737c)
+* Let there be tests for city info screens., [65f00](https://bitbucket.org/tbsprs/umweltzone/commits/65f0097c1d408553e4fafe667a8f42a6a792bbd8)
+* Make LowEmissionZone parcelable., [b0c0e](https://bitbucket.org/tbsprs/umweltzone/commits/b0c0efc4999dc76aba90222149e43c02046b1353)
+* Let there be tests for de-serializing zones and FAQs., [83c3c](https://bitbucket.org/tbsprs/umweltzone/commits/83c3c720120476bb50d5ac4e540b3e8ed694f1ff)
+* Log test events to the console., [13a8d](https://bitbucket.org/tbsprs/umweltzone/commits/13a8dc54c9b1061b1be1ec8473ff26d100b16815)
+* Remove strings which cannot be translated., [50a3c](https://bitbucket.org/tbsprs/umweltzone/commits/50a3c927806be48086d427002e3c9b984d53e63f)
+* Display libraries in alphabetical order., [79603](https://bitbucket.org/tbsprs/umweltzone/commits/79603350d6eed4fb126368ea380ae0568ce0e192)
+* Avoid duplicated usage of SimpleDateFormat., [101ec](https://bitbucket.org/tbsprs/umweltzone/commits/101ecab61343985a77a2ee24e6d3296180a90052)
+* Fix displaying wrong information for next zone., [85826](https://bitbucket.org/tbsprs/umweltzone/commits/8582649cb5f7bfd5830ac25404b7010c36ae42f0)
+* Make retrieving next zone number type safe., [160ed](https://bitbucket.org/tbsprs/umweltzone/commits/160ed73f29ca838319fcdf888d6ad065239e3018)
+* Re-use intent helper to send emails., [698ab](https://bitbucket.org/tbsprs/umweltzone/commits/698ab314c97eb94e5e45f216cc0adc514d5463a3)
+
+### Libraries, build tools, SDK
+
+* Change version code schema! Allow two digits being expressed in minor version., [b84ec](https://bitbucket.org/tbsprs/umweltzone/commits/b84ec8d1168d12b35affe367d88d70790b861028)
+* Update Gradle wrapper to v.2.12., [9bff4](https://bitbucket.org/tbsprs/umweltzone/commits/9bff423000f9d560644d553b46c46499d413199e)
+* Update Gradle plugin to v.2.0.0., [25001](https://bitbucket.org/tbsprs/umweltzone/commits/2500180932b5023c42ace8b66882b0fdfaf35e7d)
+* Update build tools to v.23.0.3.., [31941](https://bitbucket.org/tbsprs/umweltzone/commits/31941b2463d3aa4f2a20e2efa10bfb770936d67e)
+* Update jackson-databind to v.2.7.3., [f5a4c](https://bitbucket.org/tbsprs/umweltzone/commits/f5a4c376ae586965f95e11c311c75226a7fefab8)
+* Avoid defining exclusion for each library., [50d23](https://bitbucket.org/tbsprs/umweltzone/commits/50d233eaa78233a4dc32abad1a041c587087f57d)
+
+
 ## [v.2.9.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.9.0)
 
 * Published: 2016-03-08
