@@ -1,4 +1,8 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'org.standardout.versioneye'
 apply plugin: 'com.github.ben-manes.versions'
 
@@ -53,6 +57,17 @@ android {
         buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
         buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
         archivesBaseName = "Umweltzone-$versionName"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    sourceSets {
+        String sharedTestDir = "src/sharedTest/java"
+        androidTest {
+            java.srcDirs += sharedTestDir
+        }
+        test {
+            java.srcDirs += sharedTestDir
+        }
     }
 
     signingConfigs {
@@ -90,10 +105,28 @@ android {
     }
 }
 
+tasks.withType(Test) {
+    testLogging {
+        events TestLogEvent.FAILED,
+                TestLogEvent.PASSED,
+                TestLogEvent.SKIPPED,
+                TestLogEvent.STANDARD_ERROR,
+                TestLogEvent.STANDARD_OUT
+        exceptionFormat TestExceptionFormat.FULL
+        showCauses true
+        showExceptions true
+        showStackTraces true
+    }
+}
+
 configurations {
     // http://qathread.blogspot.de/2015/02/discovering-espresso-for-android.html
     androidTestCompile.exclude group: "com.android.support", module: "support-annotations"
     testCompile.exclude group: "com.android.support", module: "support-annotations"
+}
+
+ext {
+    parcelerVersion = "1.0.4"
 }
 
 dependencies {
@@ -102,11 +135,14 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-databind:2.7.2"
     compile "de.cketti.library.changelog:ckchangelog:1.2.2"
     compile "info.metadude.android:typed-preferences:2.1.0"
+    compile "org.parceler:parceler-api:${parcelerVersion}"
+    apt "org.parceler:parceler:${parcelerVersion}"
     compile files("libs/libGoogleAnalyticsServices.jar")
     compile files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
     androidTestCompile "com.squareup.assertj:assertj-android:1.1.1"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.2"
 
     // Unit tests
     testCompile "junit:junit:4.12"

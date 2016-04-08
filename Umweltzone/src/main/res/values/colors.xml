@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss
+  Copyright (C) 2016  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -53,6 +53,7 @@
     <color name="city_zone_badge_default_stroke_color">@android:color/black</color>
     <color name="city_zone_badge_text">@android:color/black</color>
 
-    <color name="zone_info_empty_status_desc_background">#E5CC15</color>
+    <!-- NoCitySelectedFragment -->
+    <color name="no_city_selected_status_desc_background">#E5CC15</color>
 
 </resources>

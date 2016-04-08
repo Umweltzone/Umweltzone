@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 
 package de.avpptr.umweltzone.models;
 
+import org.parceler.Parcel;
+
 import android.content.Context;
 import android.support.annotation.Nullable;
 
@@ -31,6 +33,7 @@ import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 
+@Parcel
 public class LowEmissionZone {
 
     public String name;
@@ -101,6 +104,91 @@ public class LowEmissionZone {
 
     public boolean containsGeometryInformation() {
         return geometrySource != null && geometryUpdatedAt != null;
+    }
+
+    @SuppressWarnings("SimplifiableIfStatement")
+    @Override
+    public boolean equals(Object other) {
+        if (this == other) {
+            return true;
+        }
+        if (other == null || getClass() != other.getClass()) {
+            return false;
+        }
+        LowEmissionZone lez = (LowEmissionZone) other;
+        if (zoneNumber != lez.zoneNumber) {
+            return false;
+        }
+        if (abroadLicensedVehicleZoneNumber != lez.abroadLicensedVehicleZoneNumber) {
+            return false;
+        }
+        if (name != null ? !name.equals(lez.name) : lez.name != null) {
+            return false;
+        }
+        if (displayName != null ? !displayName.equals(lez.displayName)
+                : lez.displayName != null) {
+            return false;
+        }
+        if (listOfCities != null ? !listOfCities.equals(lez.listOfCities)
+                : lez.listOfCities != null) {
+            return false;
+        }
+        if (boundingBox != null ? !boundingBox.equals(lez.boundingBox)
+                : lez.boundingBox != null) {
+            return false;
+        }
+        if (zoneNumberSince != null ? !zoneNumberSince.equals(lez.zoneNumberSince)
+                : lez.zoneNumberSince != null) {
+            return false;
+        }
+        if (nextZoneNumberAsOf != null ? !nextZoneNumberAsOf.equals(lez.nextZoneNumberAsOf)
+                : lez.nextZoneNumberAsOf != null) {
+            return false;
+        }
+        if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil
+                .equals(lez.abroadLicensedVehicleZoneNumberUntil)
+                : lez.abroadLicensedVehicleZoneNumberUntil != null) {
+            return false;
+        }
+        if (urlUmweltPlaketteDe != null ? !urlUmweltPlaketteDe.equals(lez.urlUmweltPlaketteDe)
+                : lez.urlUmweltPlaketteDe != null) {
+            return false;
+        }
+        if (urlBadgeOnline != null ? !urlBadgeOnline.equals(lez.urlBadgeOnline)
+                : lez.urlBadgeOnline != null) {
+            return false;
+        }
+        if (contactEmails != null ? !contactEmails.equals(lez.contactEmails)
+                : lez.contactEmails != null) {
+            return false;
+        }
+        if (geometrySource != null ? !geometrySource.equals(lez.geometrySource)
+                : lez.geometrySource != null) {
+            return false;
+        }
+        return geometryUpdatedAt != null ? geometryUpdatedAt.equals(lez.geometryUpdatedAt)
+                : lez.geometryUpdatedAt == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
+        result = 31 * result + (listOfCities != null ? listOfCities.hashCode() : 0);
+        result = 31 * result + (boundingBox != null ? boundingBox.hashCode() : 0);
+        result = 31 * result + zoneNumber;
+        result = 31 * result + (zoneNumberSince != null ? zoneNumberSince.hashCode() : 0);
+        result = 31 * result + (nextZoneNumberAsOf != null ? nextZoneNumberAsOf.hashCode() : 0);
+        result = 31 * result + abroadLicensedVehicleZoneNumber;
+        result = 31 * result + (abroadLicensedVehicleZoneNumberUntil != null
+                ? abroadLicensedVehicleZoneNumberUntil.hashCode() : 0);
+        result = 31 * result + (urlUmweltPlaketteDe != null ? urlUmweltPlaketteDe.hashCode() : 0);
+        result = 31 * result + (urlBadgeOnline != null ? urlBadgeOnline.hashCode() : 0);
+        result = 31 * result + (contactEmails != null ? contactEmails.hashCode() : 0);
+        result = 31 * result + (geometrySource != null ? geometrySource.hashCode() : 0);
+        result = 31 * result + (geometryUpdatedAt != null ? geometryUpdatedAt.hashCode() : 0);
+        return result;
     }
 
     @Override

@@ -67,6 +67,26 @@ Therefore, put the needed information into a `gradle.properties` file. There is 
 example included which contains the properties which are referenced in the build configuration.
 
 
+## Testing
+
+Please make sure to run tests before submitting contributions.
+Tests can be executed with the following commands.
+
+### Unit tests
+
+``` bash
+$ ./gradlew clean test
+```
+
+### Integration tests
+
+Before running integrations tests make sure to connect a device or to start an emulator.
+
+``` bash
+$ ./gradlew clean connectedAndroidTest
+```
+
+
 ## References
 
 * [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][immissionsschutzgesetz-link]

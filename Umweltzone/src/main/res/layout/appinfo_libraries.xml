@@ -31,6 +31,11 @@
             android:text="@string/appinfo_references_url_ckchangelog"/>
 
     <TextView
+            android:id="@+id/app_info_android_testing_support_library"
+            style="@style/AppInfo.WebLink"
+            android:text="@string/appinfo_references_url_android_testing_support_library"/>
+
+    <TextView
             android:id="@+id/app_info_google_analytics"
             style="@style/AppInfo.WebLink"
             android:text="@string/appinfo_references_url_google_analytics"/>
@@ -49,6 +54,11 @@
             android:id="@+id/app_info_jackson"
             style="@style/AppInfo.WebLink"
             android:text="@string/appinfo_references_url_jackson"/>
+
+    <TextView
+            android:id="@+id/app_info_parceler"
+            style="@style/AppInfo.WebLink"
+            android:text="@string/appinfo_references_url_parceler"/>
 
     <TextView
             android:id="@+id/app_info_trace_droid"

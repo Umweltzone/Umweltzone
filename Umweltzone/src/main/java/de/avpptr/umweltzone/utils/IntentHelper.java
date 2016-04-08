@@ -17,6 +17,8 @@
 
 package de.avpptr.umweltzone.utils;
 
+import org.parceler.Parcels;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -28,10 +30,12 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.about.AboutActivity;
 import de.avpptr.umweltzone.cities.CitiesActivity;
 import de.avpptr.umweltzone.city.CityInfoActivity;
+import de.avpptr.umweltzone.city.CityInfoFragment;
 import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class IntentHelper {
 
@@ -72,8 +76,12 @@ public class IntentHelper {
         return intent;
     }
 
-    public static Intent getCityInfoIntent(@NonNull Context context) {
-        return getIntent(context, CityInfoActivity.class);
+    public static Intent getCityInfoIntent(@NonNull Context context,
+            @Nullable LowEmissionZone lowEmissionZone) {
+        Intent intent = getIntent(context, CityInfoActivity.class);
+        intent.putExtra(CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE,
+                Parcels.wrap(lowEmissionZone));
+        return intent;
     }
 
     public static Intent getFeedbackIntent(@NonNull Context context) {
