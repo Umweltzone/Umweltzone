@@ -52,14 +52,11 @@ public class CityInfoActivity extends BaseActivity {
         Parcelable parcelable = intent.getParcelableExtra(
                 CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE);
         if (parcelable == null) {
-            throw new AssertionError("Parcelable cannot be null.");
-        }
-        LowEmissionZone lowEmissionZone = Parcels.unwrap(parcelable);
-        if (lowEmissionZone == null) {
             addFragment(R.id.city_info_container,
                     new NoCitySelectedFragment(),
                     NoCitySelectedFragment.FRAGMENT_TAG);
         } else {
+            LowEmissionZone lowEmissionZone = Parcels.unwrap(parcelable);
             CityInfoFragment cityInfoFragment = CityInfoFragment.newInstance(lowEmissionZone);
             addFragment(R.id.city_info_container,
                     cityInfoFragment,
