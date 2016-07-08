@@ -225,6 +225,31 @@
         }
     },
     {
+        "name" : "eschweiler",
+        "displayName" : "Eschweiler",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2016-06-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/home.html",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "Stadt Eschweiler, Vermessung und Bodenwirtschaft",
+        "geometryUpdatedAt" : "2016-07-07",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.813235,
+                "longitude" : 6.252223
+            },
+            "northEast" : {
+                "latitude" : 50.828205,
+                "longitude" : 6.282508
+            }
+        }
+    },
+    {
         "name" : "frankfurt_main",
         "displayName" : "Frankfurt am Main",
         "listOfCities" : [],
