@@ -17,10 +17,13 @@
 
 package de.avpptr.umweltzone.map;
 
+import org.parceler.Parcels;
+
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -51,6 +54,17 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();
 
+    private static final String BUNDLE_KEY_LOW_EMISSION_ZONE =
+            BuildConfig.APPLICATION_ID + ".LOW_EMISSION_ZONE";
+
+    public static ZoneNotDrawableDialog newInstance(@NonNull LowEmissionZone lowEmissionZone) {
+        ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
+        Bundle extras = new Bundle();
+        extras.putParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE, Parcels.wrap(lowEmissionZone));
+        dialog.setArguments(extras);
+        return dialog;
+    }
+
     public ZoneNotDrawableDialog() {
         mTracking = Umweltzone.getTracker();
     }
@@ -59,7 +73,9 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final FragmentActivity activity = getActivity();
-        final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
+        Bundle extras = getArguments();
+        Parcelable lowEmissionZoneParcelable = extras.getParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE);
+        final LowEmissionZone lowEmissionZone = Parcels.unwrap(lowEmissionZoneParcelable);
         if (lowEmissionZone == null) {
             throw new NullPointerException("Recent low emission zone is null.");
         }

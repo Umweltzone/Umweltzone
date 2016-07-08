@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2016  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -214,7 +214,7 @@ public class MapFragment extends SupportMapFragment {
         if (fragment == null) {
             LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
             if (lowEmissionZone != null) {
-                ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
+                ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog.newInstance(lowEmissionZone);
                 dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
             }
         }
