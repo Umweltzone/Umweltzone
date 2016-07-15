@@ -16,6 +16,27 @@
 -->
 <changelog>
     <release
+            version="2.11.0"
+            versioncode="211000">
+        <change>
+            New: Add zone data with coordinates for Eschweiler (since 06/01/16).
+        </change>
+        <change>
+            Update: Augsburg only allows cars with a green badge as of June 1, 2016.
+        </change>
+        <change>
+            Update: Mention Duisburg in the list of cities of the Ruhrgebiet zone.
+        </change>
+        <change>
+            Improved: The URLs for "Further information online" in the "City info"
+            screen are up-to-date now.
+        </change>
+        <change>
+            Improved: Prevent rare crash which happened during an
+            update of a zone without coordinates.
+        </change>
+    </release>
+    <release
             version="2.10.0"
             versioncode="210000">
         <change>

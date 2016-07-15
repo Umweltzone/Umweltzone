@@ -16,6 +16,29 @@
 -->
 <changelog>
     <release
+            version="2.11.0"
+            versioncode="211000">
+        <change>
+            Neu: Eschweiler mit Geokoordinaten hinzugefügt (neu ab 01.06.2016).
+        </change>
+        <change>
+            Aktualisierung: Augsburg erlaubt seit 1. Juni 2016 nur noch
+            Fahrzeuge mit grüner Plakette.
+        </change>
+        <change>
+            Aktualisierung: Duisburg wird jetzt in der Städteliste der
+            Ruhrgebiet-Zone aufgeführt.
+        </change>
+        <change>
+            Aktualisierung: Die Links für "Weiterführende Informationen im Web"
+            auf dem "Stadtinfos"-Bildschirm sind jetzt aktuell.
+        </change>
+        <change>
+            Bugfix: Absturz behoben, der bei der Aktualisierung einer Zone
+            ohne Geokoordinaten auftrat.
+        </change>
+    </release>
+    <release
             version="2.10.0"
             versioncode="210000">
         <change>

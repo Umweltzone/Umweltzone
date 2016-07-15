@@ -1,6 +1,30 @@
 # Umweltzone changelog
 
 
+## [v.2.11.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.11.0)
+
+* Published: 2016-07-15
+
+### Features, improvements and maintenance
+
+* Suppress ZoneNotDrawableDialog when geo-information are available. Prevent crash., [233b0](https://bitbucket.org/tbsprs/umweltzone/commits/233b080c297073a7c4f6f0ecd33d430ddca76850)
+* Avoid invoking recent zone twice., [87fb1](https://bitbucket.org/tbsprs/umweltzone/commits/87fb1428d270a176a210346a92ca4c8008569754)
+* Add zone data for Eschweiler., [c848f](https://bitbucket.org/tbsprs/umweltzone/commits/c848f0792167396aeaf29399ac2fcb03a91bf3f2)
+* Mention Duisburg in the list of cities of the Ruhrgebiet zone., [8aa03](https://bitbucket.org/tbsprs/umweltzone/commits/8aa03a789840935804583a1338bd65a58ba1139c)
+* Augsburg only allows cars with a green badge as of June 1, 2016., [ffda9](https://bitbucket.org/tbsprs/umweltzone/commits/ffda93c5dd414bebcd6d37682cbdad2facf3412a)
+* Update external URLs for umwelt-plakette.de., [0df8a](https://bitbucket.org/tbsprs/umweltzone/commits/0df8abf34ca1cfdd4c22ae5f6d3a9f92d0b3e1e9)
+* Fix NoCitySelectedFragmentTest., [a3a23](https://bitbucket.org/tbsprs/umweltzone/commits/a3a230e0d572e86c604b23de955d653af65676f5)
+
+### Libraries, build tools, SDK
+
+* Update gradle-versions-plugin to v.0.13.0., [fd7cc](https://bitbucket.org/tbsprs/umweltzone/commits/fd7cc6dbe77749f7cf7489d7dbcac796329fd666)
+* Update Gradle wrapper to v.2.14., [2f42c](https://bitbucket.org/tbsprs/umweltzone/commits/2f42cf446b758060b72c84a343fec71c3909dd0f)
+* Update Gradle plugin to v.2.1.2., [376d0](https://bitbucket.org/tbsprs/umweltzone/commits/376d080e5e8fc97b28f9866de2850ee8cebcf792)
+* Update jackson-databind to v.2.7.5., [294ae](https://bitbucket.org/tbsprs/umweltzone/commits/294aed07394121e2d7cf505af1fa87a629110e5e)
+* Update parceler to v.1.1.5., [90c79](https://bitbucket.org/tbsprs/umweltzone/commits/90c79f873f1f018d4d7e66598ca7736e17a33cbf)
+* Update gradle-versioneye-plugin to v.1.4.0., [caf0b](https://bitbucket.org/tbsprs/umweltzone/commits/caf0bd6bf11dbd3d41e76fd2221f0f78d8885994)
+
+
 ## [v.2.10.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.10.0)
 
 * Published: 2016-04-08
