@@ -214,8 +214,12 @@ public class MapFragment extends SupportMapFragment {
         if (fragment == null) {
             LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
             if (lowEmissionZone != null) {
-                ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog.newInstance(lowEmissionZone);
-                dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
+                // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
+                if (!lowEmissionZone.containsGeometryInformation()) {
+                    ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
+                            .newInstance(lowEmissionZone);
+                    dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
+                }
             }
         }
     }
