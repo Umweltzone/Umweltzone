@@ -125,7 +125,7 @@ configurations {
 }
 
 ext {
-    parcelerVersion = "1.1.5"
+    parcelerVersion = "1.1.6"
 }
 
 dependencies {
