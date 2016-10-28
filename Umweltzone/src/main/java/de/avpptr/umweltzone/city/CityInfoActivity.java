@@ -55,7 +55,9 @@ public class CityInfoActivity extends BaseActivity {
         if (parcelable == null) {
             addNoCitySelectedFragment();
         } else {
-            addCityInfoFragment(parcelable);
+            if (!fragmentExists(CityInfoFragment.FRAGMENT_TAG)) {
+                addCityInfoFragment(parcelable);
+            }
         }
     }
 
