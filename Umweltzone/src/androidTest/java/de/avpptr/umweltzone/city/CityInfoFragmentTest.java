@@ -90,7 +90,7 @@ public class CityInfoFragmentTest {
                 .setGeometryUpdatedAt(geometryUpdatedAtDate)
                 .build();
 
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        launchActivity(zone);
 
         onView(withId(R.id.city_info_title))
                 .perform(scrollTo())
@@ -175,7 +175,7 @@ public class CityInfoFragmentTest {
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .build();
 
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        launchActivity(zone);
 
         String datePattern = mContext.getString(R.string.city_info_zone_number_since_date_format);
 
@@ -207,7 +207,7 @@ public class CityInfoFragmentTest {
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .build();
 
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        launchActivity(zone);
 
         String datePattern = mContext.getString(R.string.city_info_zone_number_since_date_format);
         String zoneNumberAsOfText = mContext.getString(
@@ -226,7 +226,7 @@ public class CityInfoFragmentTest {
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .build();
 
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        launchActivity(zone);
 
         String zoneNumberNoneText = mContext.getString(
                 R.string.city_info_zone_number_none);
@@ -247,7 +247,7 @@ public class CityInfoFragmentTest {
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .build();
 
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        launchActivity(zone);
 
         String listOfCitiesText = mContext.getString(
                 R.string.city_info_list_of_cities,
@@ -256,6 +256,10 @@ public class CityInfoFragmentTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(listOfCitiesText)));
+    }
+
+    private void launchActivity(LowEmissionZone zone) {
+        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
     }
 
 }

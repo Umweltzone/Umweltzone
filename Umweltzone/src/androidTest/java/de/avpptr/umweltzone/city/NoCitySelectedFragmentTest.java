@@ -59,7 +59,7 @@ public class NoCitySelectedFragmentTest {
 
     @Test
     public void renderCityInfo() {
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, null));
+        launchActivity();
 
         onView(allOf(
                 withParent(isAssignableFrom(LinearLayout.class)),
@@ -77,6 +77,10 @@ public class NoCitySelectedFragmentTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.no_city_selected_select_zone)));
+    }
+
+    private void launchActivity() {
+        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, null));
     }
 
 }
