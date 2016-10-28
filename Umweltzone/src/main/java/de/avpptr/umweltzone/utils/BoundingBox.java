@@ -104,6 +104,7 @@ public class BoundingBox {
 
     @Override
     public String toString() {
+        //noinspection StringBufferReplaceableByString
         StringBuilder string = new StringBuilder();
         string.append("SW: ");
         string.append(df.format(southWest.getLatitude())).append(",");
