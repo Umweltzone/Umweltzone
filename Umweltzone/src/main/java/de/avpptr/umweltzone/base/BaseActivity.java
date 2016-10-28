@@ -115,6 +115,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    protected boolean fragmentExists(@NonNull String fragmentTag) {
+        return getSupportFragmentManager().findFragmentByTag(fragmentTag) != null;
+    }
+
     protected void addFragment(
             @IdRes int containerViewId,
             @NonNull Fragment fragment,

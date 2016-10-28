@@ -31,6 +31,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import java.util.ArrayList;
 import java.util.Date;
 
+import de.avpptr.umweltzone.AndroidTestUtils;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
@@ -260,6 +261,8 @@ public class CityInfoFragmentTest {
 
     private void launchActivity(LowEmissionZone zone) {
         mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
+        // Rotate to verify fragment is re-used
+        AndroidTestUtils.rotateScreen(mActivityRule.getActivity());
     }
 
 }
