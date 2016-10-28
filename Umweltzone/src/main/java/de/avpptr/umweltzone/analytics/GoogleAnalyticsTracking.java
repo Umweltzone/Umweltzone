@@ -30,7 +30,7 @@ import java.io.StringWriter;
 
 public class GoogleAnalyticsTracking implements Tracking {
 
-    private EasyTracker mTracker;
+    private final EasyTracker mTracker;
 
     public GoogleAnalyticsTracking(Context context) {
         mTracker = EasyTracker.getInstance(context);
