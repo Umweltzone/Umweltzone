@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,6 @@ import de.avpptr.umweltzone.BuildConfig;
 
 public interface BundleKeys {
 
-    public static final String HOME =
-            BuildConfig.APPLICATION_ID + ".bundle.key.HOME";
+    String HOME = BuildConfig.APPLICATION_ID + ".bundle.key.HOME";
 
 }

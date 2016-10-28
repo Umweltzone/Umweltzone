@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -43,7 +43,7 @@ public enum TrackingPoint {
 
     private final String mMessage;
 
-    private TrackingPoint(final String message) {
+    TrackingPoint(final String message) {
         mMessage = message;
     }
 
