@@ -22,6 +22,7 @@ import org.parceler.Parcels;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
 import android.view.Menu;
 
 import de.avpptr.umweltzone.R;
@@ -52,16 +53,24 @@ public class CityInfoActivity extends BaseActivity {
         Parcelable parcelable = intent.getParcelableExtra(
                 CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE);
         if (parcelable == null) {
-            addFragment(R.id.city_info_container,
-                    new NoCitySelectedFragment(),
-                    NoCitySelectedFragment.FRAGMENT_TAG);
+            addNoCitySelectedFragment();
         } else {
-            LowEmissionZone lowEmissionZone = Parcels.unwrap(parcelable);
-            CityInfoFragment cityInfoFragment = CityInfoFragment.newInstance(lowEmissionZone);
-            addFragment(R.id.city_info_container,
-                    cityInfoFragment,
-                    CityInfoFragment.FRAGMENT_TAG);
+            addCityInfoFragment(parcelable);
         }
+    }
+
+    private void addNoCitySelectedFragment() {
+        addFragment(R.id.city_info_container,
+                new NoCitySelectedFragment(),
+                NoCitySelectedFragment.FRAGMENT_TAG);
+    }
+
+    private void addCityInfoFragment(@NonNull Parcelable parcelable) {
+        LowEmissionZone lowEmissionZone = Parcels.unwrap(parcelable);
+        CityInfoFragment cityInfoFragment = CityInfoFragment.newInstance(lowEmissionZone);
+        addFragment(R.id.city_info_container,
+                cityInfoFragment,
+                CityInfoFragment.FRAGMENT_TAG);
     }
 
 }
