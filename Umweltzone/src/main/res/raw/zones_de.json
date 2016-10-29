@@ -615,8 +615,8 @@
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/staedte/leipzig.html",
         "urlBadgeOnline" : "",
         "contactEmails" : null,
-        "geometrySource" : "OpenStreetMap",
-        "geometryUpdatedAt" : "2013-12-17",
+        "geometrySource" : "Amt für Umweltschutz, Stadt Leipzig",
+        "geometryUpdatedAt" : "2016-01-22",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.256458,
