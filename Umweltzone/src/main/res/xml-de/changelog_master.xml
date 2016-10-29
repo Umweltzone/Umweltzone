@@ -16,6 +16,18 @@
 -->
 <changelog>
     <release
+            version="2.12.0"
+            versioncode="212000">
+        <change>
+            Aktualisierung: Die Zonendaten für Leipzig werden jetzt offiziell
+            von der Stadt zur Verfügung gestellt.
+        </change>
+        <change>
+            Aktualisierung: Darstellungsfehler auf dem Stadtinfos-Bildschirm behoben.
+            Inhalte wurden doppelt angezeigt, wenn das Gerät gedreht wurde.
+        </change>
+    </release>
+    <release
             version="2.11.0"
             versioncode="211000">
         <change>

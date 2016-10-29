@@ -1,6 +1,25 @@
 # Umweltzone changelog
 
 
+## [v.2.12.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.12.0)
+
+* Published: 2016-10-29
+
+### Features, improvements and maintenance
+
+* Update file mode bits - no content change., [24ab9](https://bitbucket.org/tbsprs/umweltzone/commits/24ab99f5ed7d67a2cb827a647e941b39a356565c)
+* Update zone data for Leipzig., [caa7f](https://bitbucket.org/tbsprs/umweltzone/commits/caa7fd1854418e170fb4a8310aeee993761df2ac)
+* Remove unused strings., [1dab4](https://bitbucket.org/tbsprs/umweltzone/commits/1dab423453c7e8ba2f43e8d9a3065f818ebee6c9)
+* Fix showing city info twice after rotating the device., [0559c](https://bitbucket.org/tbsprs/umweltzone/commits/0559c7443eff50b9e4bb32f58993f2a7d3850d3a)
+
+### Libraries, build tools, SDK
+
+* Update Gradle plugin to v.2.1.3., [a07a5](https://bitbucket.org/tbsprs/umweltzone/commits/a07a5bbec234ac476a7a6745c4b1cd3e84692931)
+* Update Gradle wrapper to v.2.14.1., [ccf85](https://bitbucket.org/tbsprs/umweltzone/commits/ccf8555afedbf07aa4a1a909af1c4e415e5ef9f8)
+* Update parceler to v.1.1.6., [691b3](https://bitbucket.org/tbsprs/umweltzone/commits/691b3f452190ce2f4b514c9a0aa9d31eeaaf0737)
+* Update jackson-databind to v.2.8.4., [3da96](https://bitbucket.org/tbsprs/umweltzone/commits/3da96781408fd932c1da6a9476bc1fa2092e76dd)
+
+
 ## [v.2.11.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.11.0)
 
 * Published: 2016-07-15
