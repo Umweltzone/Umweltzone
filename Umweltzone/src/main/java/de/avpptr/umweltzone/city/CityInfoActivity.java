@@ -17,13 +17,13 @@
 
 package de.avpptr.umweltzone.city;
 
-import org.parceler.Parcels;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.view.Menu;
+
+import org.parceler.Parcels;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.base.BaseActivity;

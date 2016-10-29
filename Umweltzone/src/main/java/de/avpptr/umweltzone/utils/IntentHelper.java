@@ -17,14 +17,14 @@
 
 package de.avpptr.umweltzone.utils;
 
-import org.parceler.Parcels;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ShareCompat;
+
+import org.parceler.Parcels;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.about.AboutActivity;

@@ -17,10 +17,10 @@
 
 package de.avpptr.umweltzone.models;
 
-import org.parceler.Parcel;
-
 import android.content.Context;
 import android.support.annotation.Nullable;
+
+import org.parceler.Parcel;
 
 import java.util.Date;
 import java.util.List;

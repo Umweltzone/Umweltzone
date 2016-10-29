@@ -17,8 +17,6 @@
 
 package de.avpptr.umweltzone.map;
 
-import org.parceler.Parcels;
-
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,6 +33,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import org.parceler.Parcels;
 
 import java.util.List;
 

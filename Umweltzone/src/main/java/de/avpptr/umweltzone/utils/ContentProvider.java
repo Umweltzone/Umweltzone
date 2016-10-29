@@ -17,18 +17,18 @@
 
 package de.avpptr.umweltzone.utils;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.support.annotation.NonNull;
+import android.support.annotation.RawRes;
+import android.support.v4.util.LruCache;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
 import org.ligi.tracedroid.logging.Log;
-
-import android.content.Context;
-import android.content.res.Resources;
-import android.support.annotation.NonNull;
-import android.support.annotation.RawRes;
-import android.support.v4.util.LruCache;
 
 import java.io.IOException;
 import java.io.InputStream;

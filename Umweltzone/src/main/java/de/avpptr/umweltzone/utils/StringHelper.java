@@ -17,8 +17,6 @@
 
 package de.avpptr.umweltzone.utils;
 
-import org.ligi.tracedroid.logging.Log;
-
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -26,6 +24,8 @@ import android.support.annotation.StringRes;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
+
+import org.ligi.tracedroid.logging.Log;
 
 import java.util.Date;
 import java.util.List;

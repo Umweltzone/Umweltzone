@@ -17,13 +17,13 @@
 
 package de.avpptr.umweltzone.analytics;
 
+import android.app.Activity;
+import android.content.Context;
+
 import com.google.analytics.tracking.android.EasyTracker;
 import com.google.analytics.tracking.android.ExceptionParser;
 import com.google.analytics.tracking.android.ExceptionReporter;
 import com.google.analytics.tracking.android.MapBuilder;
-
-import android.app.Activity;
-import android.content.Context;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
