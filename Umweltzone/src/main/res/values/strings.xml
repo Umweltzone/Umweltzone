@@ -187,22 +187,15 @@
         defined by the mentioned data sources. Images and texts are licensed under
         the Creative Commons Attribution 3.0 Unported License.
     </string>
-    <string name="appinfo_license_name_gpl" translatable="false">GPLv3</string>
     <string name="appinfo_license_url_title_gpl">GPLv3 License</string>
     <string name="appinfo_license_url_gpl" translatable="false">
         http://www.gnu.org/licenses/gpl-3.0.txt
-    </string>
-    <string name="appinfo_license_name_odbl" translatable="false">
-        Open Database Licence
     </string>
     <string name="appinfo_license_url_title_odbl" translatable="false">
         Open Database Licence
     </string>
     <string name="appinfo_license_url_odbl" translatable="false">
         http://opendatacommons.org/licenses/odbl/1.0/
-    </string>
-    <string name="appinfo_license_name_creative_commons" translatable="false">
-        Creative Commons
     </string>
     <string name="appinfo_license_url_title_creative_commons">
         Creative Commons License
