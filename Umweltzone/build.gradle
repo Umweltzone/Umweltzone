@@ -125,6 +125,7 @@ configurations {
 }
 
 ext {
+    assertjAndroidVersion = "1.1.1"
     parcelerVersion = "1.1.8"
 }
 
@@ -140,12 +141,12 @@ dependencies {
     compile files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
-    androidTestCompile "com.squareup.assertj:assertj-android:1.1.1"
+    androidTestCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
     androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.2"
 
     // Unit tests
     testCompile "junit:junit:4.12"
-    testCompile "com.squareup.assertj:assertj-android:1.1.1"
+    testCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
 }
 
 Properties props = new Properties()
