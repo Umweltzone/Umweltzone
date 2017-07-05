@@ -124,29 +124,24 @@ configurations {
     testCompile.exclude group: "com.android.support", module: "support-annotations"
 }
 
-ext {
-    assertjAndroidVersion = "1.1.1"
-    parcelerVersion = "1.1.8"
-}
-
 dependencies {
-    compile "com.android.support:design:22.2.1"
-    compile "com.google.android.gms:play-services:3.2.65"
-    compile "com.fasterxml.jackson.core:jackson-databind:2.8.8.1"
-    compile "de.cketti.library.changelog:ckchangelog:1.2.2"
-    compile "info.metadude.android:typed-preferences:2.1.0"
-    compile "org.parceler:parceler-api:${parcelerVersion}"
-    apt "org.parceler:parceler:${parcelerVersion}"
+    compile "com.android.support:design:$androidSupportVersion"
+    compile "com.google.android.gms:play-services:$playServicesVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
+    compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"
+    compile "org.parceler:parceler-api:$parcelerVersion"
+    apt "org.parceler:parceler:$parcelerVersion"
     compile files("libs/libGoogleAnalyticsServices.jar")
     compile files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
-    androidTestCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
-    androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.2"
+    androidTestCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
 
     // Unit tests
-    testCompile "junit:junit:4.12"
-    testCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
+    testCompile "junit:junit:$junitVersion"
+    testCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
 }
 
 Properties props = new Properties()
