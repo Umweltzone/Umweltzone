@@ -17,7 +17,7 @@ buildscript {
         espressoVersion = "2.2.2"
         jacksonVersion = "2.8.8.1"
         junitVersion = "4.12"
-        parcelerVersion = "1.1.8"
+        parcelerVersion = "1.1.9"
         playServicesVersion = "3.2.65"
         typedPreferencesVersion = "2.1.0"
     }
