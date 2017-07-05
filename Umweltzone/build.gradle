@@ -1,12 +1,12 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
-apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'com.github.ben-manes.versions'
+apply plugin: "com.android.application"
+apply plugin: "com.neenbedankt.android-apt"
+apply plugin: "com.github.ben-manes.versions"
 
 versioneye {
-    exclude 'androidJacocoAgent', 'androidJacocoAnt'
+    exclude "androidJacocoAgent", "androidJacocoAnt"
 }
 
 repositories {
@@ -19,9 +19,9 @@ def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 def gitSha() {
-    def res = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+    def res = "git rev-parse --short HEAD".execute([], project.rootDir).text.trim()
 
-    def diff = 'git diff'.execute([], project.rootDir).text.trim()
+    def diff = "git diff".execute([], project.rootDir).text.trim()
     if (diff != null && diff.length() > 0) {
         res += "-dirty"
     }
@@ -85,17 +85,17 @@ android {
         }
         release {
             minifyEnabled true
-            proguardFile 'proguard.cfg'
+            proguardFile "proguard.cfg"
             shrinkResources true
             signingConfig signingConfigs.release
         }
     }
 
     packagingOptions {
-        pickFirst 'META-INF/LICENSE'
-        pickFirst 'META-INF/LICENSE.txt'
-        pickFirst 'META-INF/NOTICE'
-        pickFirst 'META-INF/NOTICE.txt'
+        pickFirst "META-INF/LICENSE"
+        pickFirst "META-INF/LICENSE.txt"
+        pickFirst "META-INF/NOTICE"
+        pickFirst "META-INF/NOTICE.txt"
     }
 
     compileOptions {
@@ -155,15 +155,15 @@ if (gradlePropertiesFile.exists()) {
     props.load(new FileInputStream(gradlePropertiesFile))
 }
 
-if (project.hasProperty('signing.release.keystoreFilePath')) {
-    android.signingConfigs.release.storeFile = file(props['signing.release.keystoreFilePath'])
+if (project.hasProperty("signing.release.keystoreFilePath")) {
+    android.signingConfigs.release.storeFile = file(props["signing.release.keystoreFilePath"])
 }
-if (project.hasProperty('signing.release.keystorePassword')) {
-    android.signingConfigs.release.storePassword = props['signing.release.keystorePassword']
+if (project.hasProperty("signing.release.keystorePassword")) {
+    android.signingConfigs.release.storePassword = props["signing.release.keystorePassword"]
 }
-if (project.hasProperty('signing.release.keyAlias')) {
-    android.signingConfigs.release.keyAlias = props['signing.release.keyAlias']
+if (project.hasProperty("signing.release.keyAlias")) {
+    android.signingConfigs.release.keyAlias = props["signing.release.keyAlias"]
 }
-if (project.hasProperty('signing.release.keyPassword')) {
-    android.signingConfigs.release.keyPassword = props['signing.release.keyPassword']
+if (project.hasProperty("signing.release.keyPassword")) {
+    android.signingConfigs.release.keyPassword = props["signing.release.keyPassword"]
 }
