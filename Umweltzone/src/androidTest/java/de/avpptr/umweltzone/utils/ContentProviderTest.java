@@ -34,14 +34,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ContentProviderTest extends InstrumentationTestCase {
 
     private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg",
-            "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf", "erfurt",
-            "frankfurt_main", "freiburg_breisgau", "hagen", "halle", "hannover", "heidelberg",
-            "heidenheim", "heilbronn", "herrenberg", "ilsfeld", "karlsruhe", "cologne",
-            "krefeld", "langenfeld", "leipzig", "leonberg", "ludwigsburg", "magdeburg",
-            "mainz", "mannheim", "moenchengladbach", "muehlacker", "munich", "muenster",
-            "neuss", "neuulm", "offenbach", "osnabrueck", "pfinztal", "pforzheim",
-            "remscheid", "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend",
-            "siegen", "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
+            "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf",
+            "erfurt", "eschweiler", "frankfurt_main", "freiburg_breisgau", "hagen",
+            "halle", "hannover", "heidelberg", "heidenheim", "heilbronn", "herrenberg",
+            "ilsfeld", "karlsruhe", "cologne", "krefeld", "langenfeld", "leipzig",
+            "leonberg", "ludwigsburg", "magdeburg", "mainz", "mannheim", "marburg",
+            "moenchengladbach", "muehlacker", "munich", "muenster", "neuss", "neuulm",
+            "offenbach", "osnabrueck", "pfinztal", "pforzheim", "remscheid", "reutlingen",
+            "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen", "stuttgart",
+            "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
 
     private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
 
