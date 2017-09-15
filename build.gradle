@@ -8,7 +8,7 @@ buildscript {
         proguardGradlePluginVersion = "6.0.3"
 
         // Libraries
-        androidSupportVersion = "24.2.1"
+        androidSupportVersion = "25.4.0"
         assertjAndroidVersion = "1.2.0"
         ckChangelogVersion = "1.2.2"
         constraintLayoutVersion = "1.1.3"
