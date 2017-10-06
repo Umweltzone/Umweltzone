@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2017  Tobias Preuss, Peter Vasil
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,13 +19,13 @@ package de.avpptr.umweltzone.cities;
 
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -86,14 +86,13 @@ public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
         }
         LowEmissionZone lowEmissionZone = mLowEmissionZones[position];
         viewHolder.zoneName.setText(lowEmissionZone.displayName);
-        Resources resources = mContext.getResources();
-        int textColor = resources.getColor(
+        int textColor = ContextCompat.getColor(mContext,
                 zoneIsDrawableToColorId(lowEmissionZone.containsGeometryInformation()));
         viewHolder.zoneName.setTextColor(textColor);
         int zoneNumber = lowEmissionZone.zoneNumber;
         viewHolder.zoneBadge.setText(String.valueOf(zoneNumber));
         int colorResourceId = LowEmissionZoneNumberConverter.getColor(zoneNumber);
-        int badgeColor = resources.getColor(colorResourceId);
+        int badgeColor = ContextCompat.getColor(mContext, colorResourceId);
 
         int sdk = Build.VERSION.SDK_INT;
         if (sdk < Build.VERSION_CODES.HONEYCOMB) {

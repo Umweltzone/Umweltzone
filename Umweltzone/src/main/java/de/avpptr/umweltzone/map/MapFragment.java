@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2017  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
@@ -200,8 +201,8 @@ public class MapFragment extends SupportMapFragment {
         @SuppressWarnings("unchecked")
         List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
         Resources resources = getResources();
-        int fillColor = resources.getColor(R.color.shape_fill_color);
-        int strokeColor = resources.getColor(R.color.shape_stroke_color);
+        int fillColor = ContextCompat.getColor(activity, R.color.shape_fill_color);
+        int strokeColor = ContextCompat.getColor(activity, R.color.shape_stroke_color);
         int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
         mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
     }

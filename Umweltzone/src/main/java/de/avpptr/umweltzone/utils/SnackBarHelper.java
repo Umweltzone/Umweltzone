@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2017  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 import de.avpptr.umweltzone.R;
@@ -42,7 +43,7 @@ public abstract class SnackBarHelper {
         View parentView = activity.findViewById(parentViewResId);
         Snackbar snackbar = Snackbar.make(parentView, message, Snackbar.LENGTH_LONG);
         View snackBarView = snackbar.getView();
-        int color = activity.getResources().getColor(R.color.snack_bar_error_background);
+        int color = ContextCompat.getColor(activity, R.color.snack_bar_error_background);
         snackBarView.setBackgroundColor(color);
         snackbar.show();
     }
