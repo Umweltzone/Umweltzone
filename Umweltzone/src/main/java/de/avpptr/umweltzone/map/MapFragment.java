@@ -35,6 +35,7 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -56,7 +57,7 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 
-public class MapFragment extends SupportMapFragment {
+public class MapFragment extends SupportMapFragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -130,10 +131,7 @@ public class MapFragment extends SupportMapFragment {
                 FragmentManager fragmentManager = activity.getSupportFragmentManager();
                 SupportMapFragment mapFragment =
                         (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
-                mMap = mapFragment.getMap();
-                if (mMap != null) {
-                    onMapIsSetUp(activity);
-                }
+                mapFragment.getMapAsync(this);
             }
         }
     }
@@ -147,7 +145,9 @@ public class MapFragment extends SupportMapFragment {
         }
     }
 
-    protected void onMapIsSetUp(Activity activity) {
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
@@ -172,7 +172,7 @@ public class MapFragment extends SupportMapFragment {
             if (!lastKnownPosition.isValid()) {
                 // Select default city at first application start
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone
-                        .getDefaultLowEmissionZone(activity);
+                        .getDefaultLowEmissionZone(getActivity());
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmissionZone(defaultLowEmissionZone);
                     if (mPreferencesHelper.storesZoneIsDrawable() &&
