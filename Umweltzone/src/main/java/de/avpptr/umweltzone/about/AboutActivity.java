@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2017  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -74,6 +74,10 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_references_name_parceler,
                 R.string.appinfo_references_url_parceler,
                 TrackingPoint.AboutItemClick, "parceler");
+        ViewHelper.setupTextViewExtended(this, R.id.app_info_snack_engage,
+                R.string.appinfo_references_name_snack_engage,
+                R.string.appinfo_references_url_snack_engage,
+                TrackingPoint.AboutItemClick, "snack_engage");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_trace_droid,
                 R.string.appinfo_references_name_trace_droid,
                 R.string.appinfo_references_url_trace_droid,

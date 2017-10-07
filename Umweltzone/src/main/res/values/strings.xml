@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2016  Tobias Preuss
+  Copyright (C) 2017  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -148,6 +148,12 @@
     </string>
     <string name="appinfo_references_url_parceler" translatable="false">
         http://parceler.org
+    </string>
+    <string name="appinfo_references_name_snack_engage" translatable="false">
+        SnackEngage
+    </string>
+    <string name="appinfo_references_url_snack_engage" translatable="false">
+        https://github.com/ligi/SnackEngage
     </string>
     <string name="appinfo_references_name_trace_droid" translatable="false">
         TraceDroid
