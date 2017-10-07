@@ -1,16 +1,37 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+
+    ext {
+        // Plugins
+        androidAptPluginVersion = "1.8"
+        androidGradlePluginVersion = "2.2.2"
+        gradleVersioneyePlugin = "1.4.0"
+        gradleVersionsPluginVersion = "0.15.0"
+        proguardGradlePluginVersion = "5.3.3"
+
+        // Libraries
+        androidSupportVersion = "22.2.1"
+        assertjAndroidVersion = "1.1.1"
+        ckChangelogVersion = "1.2.2"
+        espressoVersion = "2.2.2"
+        jacksonVersion = "2.8.8.1"
+        junitVersion = "4.12"
+        parcelerVersion = "1.1.8"
+        playServicesVersion = "3.2.65"
+        typedPreferencesVersion = "2.1.0"
+    }
+
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:2.1.3"
-        classpath "com.neenbedankt.gradle.plugins:android-apt:1.8"
-        classpath "net.sf.proguard:proguard-gradle:5.3.3"
-        classpath "org.standardout:gradle-versioneye-plugin:1.4.0"
-        classpath "com.github.ben-manes:gradle-versions-plugin:0.15.0"
+        classpath "com.neenbedankt.gradle.plugins:android-apt:$androidAptPluginVersion"
+        classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
+        classpath "org.standardout:gradle-versioneye-plugin:$gradleVersioneyePlugin"
+        classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
+        classpath "net.sf.proguard:proguard-gradle:$proguardGradlePluginVersion"
     }
 }
 

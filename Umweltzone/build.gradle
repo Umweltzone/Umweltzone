@@ -1,12 +1,12 @@
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
-apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'com.github.ben-manes.versions'
+apply plugin: "com.android.application"
+apply plugin: "com.neenbedankt.android-apt"
+apply plugin: "com.github.ben-manes.versions"
 
 versioneye {
-    exclude 'androidJacocoAgent', 'androidJacocoAnt'
+    exclude "androidJacocoAgent", "androidJacocoAnt"
 }
 
 repositories {
@@ -19,9 +19,9 @@ def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 
 def gitSha() {
-    def res = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+    def res = "git rev-parse --short HEAD".execute([], project.rootDir).text.trim()
 
-    def diff = 'git diff'.execute([], project.rootDir).text.trim()
+    def diff = "git diff".execute([], project.rootDir).text.trim()
     if (diff != null && diff.length() > 0) {
         res += "-dirty"
     }
@@ -85,17 +85,17 @@ android {
         }
         release {
             minifyEnabled true
-            proguardFile 'proguard.cfg'
+            proguardFile "proguard.cfg"
             shrinkResources true
             signingConfig signingConfigs.release
         }
     }
 
     packagingOptions {
-        pickFirst 'META-INF/LICENSE'
-        pickFirst 'META-INF/LICENSE.txt'
-        pickFirst 'META-INF/NOTICE'
-        pickFirst 'META-INF/NOTICE.txt'
+        pickFirst "META-INF/LICENSE"
+        pickFirst "META-INF/LICENSE.txt"
+        pickFirst "META-INF/NOTICE"
+        pickFirst "META-INF/NOTICE.txt"
     }
 
     compileOptions {
@@ -124,29 +124,24 @@ configurations {
     testCompile.exclude group: "com.android.support", module: "support-annotations"
 }
 
-ext {
-    assertjAndroidVersion = "1.1.1"
-    parcelerVersion = "1.1.8"
-}
-
 dependencies {
-    compile "com.android.support:design:22.2.1"
-    compile "com.google.android.gms:play-services:3.2.65"
-    compile "com.fasterxml.jackson.core:jackson-databind:2.8.8.1"
-    compile "de.cketti.library.changelog:ckchangelog:1.2.2"
-    compile "info.metadude.android:typed-preferences:2.1.0"
-    compile "org.parceler:parceler-api:${parcelerVersion}"
-    apt "org.parceler:parceler:${parcelerVersion}"
+    compile "com.android.support:design:$androidSupportVersion"
+    compile "com.google.android.gms:play-services:$playServicesVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
+    compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"
+    compile "org.parceler:parceler-api:$parcelerVersion"
+    apt "org.parceler:parceler:$parcelerVersion"
     compile files("libs/libGoogleAnalyticsServices.jar")
     compile files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
-    androidTestCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
-    androidTestCompile "com.android.support.test.espresso:espresso-core:2.2.2"
+    androidTestCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
+    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
 
     // Unit tests
-    testCompile "junit:junit:4.12"
-    testCompile "com.squareup.assertj:assertj-android:${assertjAndroidVersion}"
+    testCompile "junit:junit:$junitVersion"
+    testCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
 }
 
 Properties props = new Properties()
@@ -155,15 +150,15 @@ if (gradlePropertiesFile.exists()) {
     props.load(new FileInputStream(gradlePropertiesFile))
 }
 
-if (project.hasProperty('signing.release.keystoreFilePath')) {
-    android.signingConfigs.release.storeFile = file(props['signing.release.keystoreFilePath'])
+if (project.hasProperty("signing.release.keystoreFilePath")) {
+    android.signingConfigs.release.storeFile = file(props["signing.release.keystoreFilePath"])
 }
-if (project.hasProperty('signing.release.keystorePassword')) {
-    android.signingConfigs.release.storePassword = props['signing.release.keystorePassword']
+if (project.hasProperty("signing.release.keystorePassword")) {
+    android.signingConfigs.release.storePassword = props["signing.release.keystorePassword"]
 }
-if (project.hasProperty('signing.release.keyAlias')) {
-    android.signingConfigs.release.keyAlias = props['signing.release.keyAlias']
+if (project.hasProperty("signing.release.keyAlias")) {
+    android.signingConfigs.release.keyAlias = props["signing.release.keyAlias"]
 }
-if (project.hasProperty('signing.release.keyPassword')) {
-    android.signingConfigs.release.keyPassword = props['signing.release.keyPassword']
+if (project.hasProperty("signing.release.keyPassword")) {
+    android.signingConfigs.release.keyPassword = props["signing.release.keyPassword"]
 }
