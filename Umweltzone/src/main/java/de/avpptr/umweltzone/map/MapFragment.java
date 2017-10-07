@@ -37,7 +37,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
@@ -63,14 +62,14 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
 
     private MapDrawer mMapDrawer;
 
-    private final GoogleMap.OnCameraChangeListener mOnCameraChangeListener;
+    private final GoogleMap.OnCameraMoveListener mOnCameraMoveListener;
 
     protected final Tracking mTracking;
 
     private PreferencesHelper mPreferencesHelper;
 
     public MapFragment() {
-        this.mOnCameraChangeListener = new OnCameraChangeListener();
+        this.mOnCameraMoveListener = new OnCameraMoveListener();
         mTracking = Umweltzone.getTracker();
     }
 
@@ -149,7 +148,7 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
-        mMap.setOnCameraChangeListener(mOnCameraChangeListener);
+        mMap.setOnCameraMoveListener(mOnCameraMoveListener);
         mMap.setMyLocationEnabled(true);
         if (mPreferencesHelper.storesZoneIsDrawable()) {
             if (mPreferencesHelper.restoreZoneIsDrawable()) {
@@ -253,10 +252,10 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
         }
     }
 
-    private class OnCameraChangeListener implements GoogleMap.OnCameraChangeListener {
+    private class OnCameraMoveListener implements GoogleMap.OnCameraMoveListener {
 
         @Override
-        public void onCameraChange(CameraPosition cameraPosition) {
+        public void onCameraMove() {
             storeLastMapState();
         }
     }
