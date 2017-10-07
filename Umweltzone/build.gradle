@@ -47,7 +47,7 @@ android {
     buildToolsVersion "26.0.2"
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 22
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
@@ -85,7 +85,7 @@ android {
         }
         release {
             minifyEnabled true
-            proguardFile "proguard.cfg"
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard.cfg"
             shrinkResources true
             signingConfig signingConfigs.release
         }
@@ -126,7 +126,8 @@ configurations {
 
 dependencies {
     compile "com.android.support:design:$androidSupportVersion"
-    compile "com.google.android.gms:play-services:$playServicesVersion"
+    compile "com.google.android.gms:play-services-base:$playServicesVersion"
+    compile "com.google.android.gms:play-services-maps:$playServicesVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"

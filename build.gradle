@@ -18,7 +18,7 @@ buildscript {
         jacksonVersion = "2.9.1"
         junitVersion = "4.12"
         parcelerVersion = "1.1.9"
-        playServicesVersion = "3.2.65"
+        playServicesVersion = "7.8.0"
         typedPreferencesVersion = "2.1.0"
     }
 
