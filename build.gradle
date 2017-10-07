@@ -11,7 +11,7 @@ buildscript {
         proguardGradlePluginVersion = "5.3.3"
 
         // Libraries
-        androidSupportVersion = "23.4.0"
+        androidSupportVersion = "24.2.1"
         assertjAndroidVersion = "1.1.1"
         ckChangelogVersion = "1.2.2"
         espressoVersion = "2.2.2"
