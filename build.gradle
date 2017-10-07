@@ -6,7 +6,7 @@ buildscript {
         // Plugins
         androidAptPluginVersion = "1.8"
         androidGradlePluginVersion = "2.3.3"
-        gradleVersioneyePlugin = "1.4.0"
+        gradleVersioneyePlugin = "1.5.0"
         gradleVersionsPluginVersion = "0.15.0"
         proguardGradlePluginVersion = "5.3.3"
 
