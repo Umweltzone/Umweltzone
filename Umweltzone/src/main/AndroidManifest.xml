@@ -16,16 +16,17 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="de.avpptr.umweltzone">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="de.avpptr.umweltzone">
 
     <supports-screens android:anyDensity="true"/>
 
     <!-- Copied from Google Maps Library/AndroidManifest.xml. -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <!-- External storage for caching. -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="22"/>
     <!-- My Location -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -34,6 +35,9 @@
             android:glEsVersion="0x00020000"
             android:required="true"/>
     <!-- End of copy. -->
+
+    <!-- Force minSdkVersion 9 for com.android.support/animated-vector-drawable/23.4.0/AndroidManifest.xml -->
+    <uses-sdk tools:overrideLibrary="android.support.graphics.drawable.animated"/>
 
     <application
             android:name=".Umweltzone"

@@ -49,6 +49,22 @@ public class ConnectionResultHelper {
                 return "LICENSE_CHECK_FAILED";
             case 12: // Referenced as DATE_INVALID in API documentation.
                 return "DATE_INVALID";
+            case ConnectionResult.CANCELED: // 13
+                return "CANCELED";
+            case ConnectionResult.TIMEOUT: // 14
+                return "TIMEOUT";
+            case ConnectionResult.INTERRUPTED: // 15
+                return "INTERRUPTED";
+            case ConnectionResult.API_UNAVAILABLE: // 16
+                return "API_UNAVAILABLE";
+            case ConnectionResult.SIGN_IN_FAILED: // 17
+                return "SIGN_IN_FAILED";
+            case ConnectionResult.SERVICE_UPDATING: // 18
+                return "SERVICE_UPDATING";
+            case ConnectionResult.SERVICE_MISSING_PERMISSION: // 19
+                return "SERVICE_MISSING_PERMISSION";
+            case ConnectionResult.RESTRICTED_PROFILE: // 20
+                return "RESTRICTED_PROFILE";
         }
         return "UNDOCUMENTED_CONNECTION_RESULT: " + connectionResult;
     }

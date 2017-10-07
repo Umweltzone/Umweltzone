@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2017  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,15 +25,17 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLngBounds;
@@ -55,7 +57,7 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 
-public class MapFragment extends SupportMapFragment {
+public class MapFragment extends SupportMapFragment implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -116,7 +118,7 @@ public class MapFragment extends SupportMapFragment {
         if (mMap == null) {
             FragmentActivity activity = getActivity();
             Context context = activity.getApplicationContext();
-            int connectionResult = GooglePlayServicesUtil
+            int connectionResult = GoogleApiAvailability.getInstance()
                     .isGooglePlayServicesAvailable(context);
             if (connectionResult != ConnectionResult.SUCCESS) {
                 final String connectionResultString =
@@ -129,16 +131,13 @@ public class MapFragment extends SupportMapFragment {
                 FragmentManager fragmentManager = activity.getSupportFragmentManager();
                 SupportMapFragment mapFragment =
                         (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
-                mMap = mapFragment.getMap();
-                if (mMap != null) {
-                    onMapIsSetUp(activity);
-                }
+                mapFragment.getMapAsync(this);
             }
         }
     }
 
     private void showGooglePlayServicesErrorDialog(Activity activity, int errorCode) {
-        final Dialog dialog = GooglePlayServicesUtil.getErrorDialog(errorCode, activity, 0);
+        final Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(activity, errorCode, 0);
         if (dialog == null) {
             Log.e("GooglePlayServicesErrorDialog is null.");
         } else {
@@ -146,7 +145,9 @@ public class MapFragment extends SupportMapFragment {
         }
     }
 
-    protected void onMapIsSetUp(Activity activity) {
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraChangeListener(mOnCameraChangeListener);
         mMap.setMyLocationEnabled(true);
@@ -171,7 +172,7 @@ public class MapFragment extends SupportMapFragment {
             if (!lastKnownPosition.isValid()) {
                 // Select default city at first application start
                 LowEmissionZone defaultLowEmissionZone = LowEmissionZone
-                        .getDefaultLowEmissionZone(activity);
+                        .getDefaultLowEmissionZone(getActivity());
                 if (defaultLowEmissionZone != null) {
                     storeLastLowEmissionZone(defaultLowEmissionZone);
                     if (mPreferencesHelper.storesZoneIsDrawable() &&
@@ -200,8 +201,8 @@ public class MapFragment extends SupportMapFragment {
         @SuppressWarnings("unchecked")
         List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
         Resources resources = getResources();
-        int fillColor = resources.getColor(R.color.shape_fill_color);
-        int strokeColor = resources.getColor(R.color.shape_stroke_color);
+        int fillColor = ContextCompat.getColor(activity, R.color.shape_fill_color);
+        int strokeColor = ContextCompat.getColor(activity, R.color.shape_stroke_color);
         int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
         mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
     }
