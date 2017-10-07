@@ -31,7 +31,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -117,7 +117,7 @@ public class MapFragment extends SupportMapFragment {
         if (mMap == null) {
             FragmentActivity activity = getActivity();
             Context context = activity.getApplicationContext();
-            int connectionResult = GooglePlayServicesUtil
+            int connectionResult = GoogleApiAvailability.getInstance()
                     .isGooglePlayServicesAvailable(context);
             if (connectionResult != ConnectionResult.SUCCESS) {
                 final String connectionResultString =
@@ -139,7 +139,7 @@ public class MapFragment extends SupportMapFragment {
     }
 
     private void showGooglePlayServicesErrorDialog(Activity activity, int errorCode) {
-        final Dialog dialog = GooglePlayServicesUtil.getErrorDialog(errorCode, activity, 0);
+        final Dialog dialog = GoogleApiAvailability.getInstance().getErrorDialog(activity, errorCode, 0);
         if (dialog == null) {
             Log.e("GooglePlayServicesErrorDialog is null.");
         } else {
