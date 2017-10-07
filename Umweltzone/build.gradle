@@ -126,7 +126,8 @@ configurations {
 
 dependencies {
     compile "com.android.support:design:$androidSupportVersion"
-    compile "com.google.android.gms:play-services:$playServicesVersion"
+    compile "com.google.android.gms:play-services-base:$playServicesVersion"
+    compile "com.google.android.gms:play-services-maps:$playServicesVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"
