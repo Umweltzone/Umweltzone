@@ -418,5 +418,8 @@
         @string/zone_not_drawable_app_chooser_title
     </string>
 
+    <!-- SnackEngage -->
+    <string name="snack_engage_rate_title">Everything fine?</string>
+    <string name="snack_engage_rate_action">Please rate the app</string>
 
 </resources>
