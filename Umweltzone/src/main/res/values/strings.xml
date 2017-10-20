@@ -421,5 +421,7 @@
     <!-- SnackEngage -->
     <string name="snack_engage_rate_title">Everything fine?</string>
     <string name="snack_engage_rate_action">Please rate the app</string>
+    <string name="snack_engage_beta_testing_title">Power user?</string>
+    <string name="snack_engage_beta_testing_action">Become a beta tester</string>
 
 </resources>
