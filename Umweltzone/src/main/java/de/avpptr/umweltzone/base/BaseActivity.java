@@ -155,7 +155,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public void showChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
-        if (changeLog.isFirstRun()) {
+        if (changeLog.isFirstRun() && !isFinishing()) {
             changeLog.getLogDialog().show();
         }
     }
