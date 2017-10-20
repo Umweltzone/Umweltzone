@@ -1004,6 +1004,33 @@
         }
     },
     {
+        "name" : "overath",
+        "displayName" : "Overath",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2017-10-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/overath.html",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "buergerbuero@overath.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.913205,
+                "longitude" : 7.221450
+            },
+            "northEast" : {
+                "latitude" : 50.977883,
+                "longitude" : 7.364272
+            }
+        }
+    },
+    {
         "name" : "pfinztal",
         "displayName" : "Pfinztal",
         "listOfCities" : [],
