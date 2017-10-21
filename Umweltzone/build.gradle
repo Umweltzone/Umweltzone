@@ -11,6 +11,7 @@ versioneye {
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 def versionMajor = 2
@@ -129,6 +130,9 @@ dependencies {
     compile "com.google.android.gms:play-services-base:$playServicesVersion"
     compile "com.google.android.gms:play-services-maps:$playServicesVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    compile("com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion") {
+        exclude group: "com.android.support"
+    }
     compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"
     compile "org.parceler:parceler-api:$parcelerVersion"

@@ -19,6 +19,7 @@ buildscript {
         junitVersion = "4.12"
         parcelerVersion = "1.1.9"
         playServicesVersion = "10.0.1"
+        snackengagePlayrateVersion = "0.14"
         typedPreferencesVersion = "2.1.0"
     }
 

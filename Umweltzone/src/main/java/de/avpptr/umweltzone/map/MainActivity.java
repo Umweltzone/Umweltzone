@@ -19,9 +19,18 @@ package de.avpptr.umweltzone.map;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.WindowManager;
+
+import org.ligi.snackengage.SnackEngage;
+import org.ligi.snackengage.conditions.AfterNumberOfOpportunities;
+import org.ligi.snackengage.conditions.NeverAgainWhenClickedOnce;
+import org.ligi.snackengage.conditions.connectivity.IsConnectedViaWiFiOrUnknown;
+import org.ligi.snackengage.snacks.BaseSnack;
+import org.ligi.snackengage.snacks.DefaultRateSnack;
+import org.ligi.snackengage.snacks.GooglePlayOpenBetaTestSnack;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
@@ -44,6 +53,7 @@ public class MainActivity extends BaseActivity {
         migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
         showChangeLogDialog();
+        initUserEngagement();
     }
 
     @Override
@@ -77,6 +87,27 @@ public class MainActivity extends BaseActivity {
         if (!isFinishing()) {
             TraceDroidEmailSender.sendStackTraces(this);
         }
+    }
+
+    private void initUserEngagement() {
+        int actionColor = ContextCompat.getColor(this, R.color.snack_engage_action_text);
+        BaseSnack rateSnack = new DefaultRateSnack()
+                .overrideTitleText(getString(R.string.snack_engage_rate_title))
+                .overrideActionText(getString(R.string.snack_engage_rate_action));
+        rateSnack.setActionColor(actionColor);
+        BaseSnack betaTestSnack = new GooglePlayOpenBetaTestSnack()
+                .overrideTitleText(getString(R.string.snack_engage_beta_testing_title))
+                .overrideActionText(getString(R.string.snack_engage_beta_testing_action))
+                .withConditions(
+                        new NeverAgainWhenClickedOnce(),
+                        new AfterNumberOfOpportunities(13),
+                        new IsConnectedViaWiFiOrUnknown());
+        betaTestSnack.setActionColor(actionColor);
+        SnackEngage.from(this)
+                .withSnack(rateSnack)
+                .withSnack(betaTestSnack)
+                .build()
+                .engageWhenAppropriate();
     }
 
     // Renames the stored city name in the preferences
