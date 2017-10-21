@@ -62,14 +62,14 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
 
     private MapDrawer mMapDrawer;
 
-    private final GoogleMap.OnCameraMoveListener mOnCameraMoveListener;
+    private final GoogleMap.OnCameraIdleListener mOnCameraIdleListener;
 
     protected final Tracking mTracking;
 
     private PreferencesHelper mPreferencesHelper;
 
     public MapFragment() {
-        this.mOnCameraMoveListener = new OnCameraMoveListener();
+        this.mOnCameraIdleListener = new OnCameraIdleListener();
         mTracking = Umweltzone.getTracker();
     }
 
@@ -148,7 +148,7 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
-        mMap.setOnCameraMoveListener(mOnCameraMoveListener);
+        mMap.setOnCameraIdleListener(mOnCameraIdleListener);
         mMap.setMyLocationEnabled(true);
         if (mPreferencesHelper.storesZoneIsDrawable()) {
             if (mPreferencesHelper.restoreZoneIsDrawable()) {
@@ -252,10 +252,10 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
         }
     }
 
-    private class OnCameraMoveListener implements GoogleMap.OnCameraMoveListener {
+    private class OnCameraIdleListener implements GoogleMap.OnCameraIdleListener {
 
         @Override
-        public void onCameraMove() {
+        public void onCameraIdle() {
             storeLastMapState();
         }
     }
