@@ -39,7 +39,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.fragment_map);
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
-        TraceDroidEmailSender.sendStackTraces(this);
+        showTraceDroidDialog();
         migrateNewZonesAddedInVersion250();
         migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
@@ -70,6 +70,12 @@ public class MainActivity extends BaseActivity {
                     "MainActivity.startActivityForResult: " +
                             TextUtils.join("\nat ", e.getStackTrace()));
             e.printStackTrace();
+        }
+    }
+
+    private void showTraceDroidDialog() {
+        if (!isFinishing()) {
+            TraceDroidEmailSender.sendStackTraces(this);
         }
     }
 
