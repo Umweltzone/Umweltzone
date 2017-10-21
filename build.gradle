@@ -15,7 +15,7 @@ buildscript {
         assertjAndroidVersion = "1.1.1"
         ckChangelogVersion = "1.2.2"
         espressoVersion = "2.2.2"
-        jacksonVersion = "2.9.1"
+        jacksonVersion = "2.8.10"
         junitVersion = "4.12"
         parcelerVersion = "1.1.9"
         playServicesVersion = "10.0.1"
