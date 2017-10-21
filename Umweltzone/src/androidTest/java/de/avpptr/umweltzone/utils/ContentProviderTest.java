@@ -33,7 +33,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ContentProviderTest extends InstrumentationTestCase {
 
-    private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg",
+    private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg", "balingen",
             "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf",
             "erfurt", "eschweiler", "frankfurt_main", "freiburg_breisgau", "hagen",
             "halle", "hannover", "heidelberg", "heidenheim", "heilbronn", "herrenberg",

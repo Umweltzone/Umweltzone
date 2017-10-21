@@ -50,6 +50,31 @@
         }
     },
     {
+        "name" : "balingen",
+        "displayName" : "Balingen",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2017-04-01",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/balingen.html",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg",
+        "geometryUpdatedAt" : "2017-10-20",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.213670,
+                "longitude" : 8.767912
+            },
+            "northEast" : {
+                "latitude" : 48.326580,
+                "longitude" : 8.947274
+            }
+        }
+    },
+    {
         "name" : "berlin",
         "displayName" : "Berlin",
         "listOfCities" : [],
