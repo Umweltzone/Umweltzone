@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+  Copyright (C) 2017  Tobias Preuss, Peter Vasil
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,35 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+            version="3.0.0"
+            versioncode="300000">
+        <change>
+            Android: Die niedrigste, unterstützte Version ist jetzt Android 2.3
+            (Gingerbread), um die zukünfigte Weiterentwicklung der App zu ermöglichen.
+        </change>
+        <change>
+            Neu: Seit 01.10.2017 hat Overath eine Umweltzone. Die Beantwortung
+            der Datenanfrage steht aus.
+        </change>
+        <change>
+            Neu: Seit 01.04.2017 hat Balingen eine Umweltzone. Nun konnten wir
+            gemeinsam mit der Stadt die Lage der Zone digitalisieren.
+        </change>
+        <change>
+            Neu: Nutzer werden eingeladen, Beta-Tester zu werden.
+        </change>
+        <change>
+            Neu: Nutzer werden eingeladen, die App zu bewerten.
+        </change>
+        <change>
+            Bugfix: Seltener Absturz bei Starten der App behoben (BadTokenException).
+        </change>
+        <change>
+            Aktualisierung: Viele intern genutzte Software-Komponenten wurden
+            aktualisiert. Bitte melde dich, sollte es Probleme geben.
+        </change>
+    </release>
     <release
             version="2.12.0"
             versioncode="212000">

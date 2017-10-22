@@ -1,6 +1,39 @@
 # Umweltzone changelog
 
 
+## [v.3.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.0.0)
+
+* Published: 2017-10-22
+
+### Features, improvements and maintenance
+
+* Update email subject both for German and English templates., [2394b](https://bitbucket.org/tbsprs/umweltzone/commits/2394be4a66dba18e1fc190ff4ee3accd949d88a2)
+* Add zone data for Overath (coordinates requested)., [4558f](https://bitbucket.org/tbsprs/umweltzone/commits/4558fee136bdb3ab83d7a9617b4da9eb3f73315f)
+* Add zone data for Balingen., [32096](https://bitbucket.org/tbsprs/umweltzone/commits/320963e06b5de2d98896c26972f9d1de2c2190a8)
+* Engage users to become beta testers., [80ed7](https://bitbucket.org/tbsprs/umweltzone/commits/80ed7cc163192bd82dceee10204be47376423c90)
+* Engage users to rate the app., [91061](https://bitbucket.org/tbsprs/umweltzone/commits/9106130c3660561551ded8e94228226a4fd76672)
+* Avoid NoClassDefFoundError/ExceptionInInitializerError., [37665](https://bitbucket.org/tbsprs/umweltzone/commits/37665507d4a03630398a4207d2872a646251d893)
+* Avoid BadTokenException., [67986](https://bitbucket.org/tbsprs/umweltzone/commits/679864012f76473708afb58a77ced0c044fe3903)
+* Also use ProGuard file distributed with the Android plugin for Gradle., [019c3](https://bitbucket.org/tbsprs/umweltzone/commits/019c3d681968d49fc4322e053a5ae66de0e76d44)
+* Drop support for Android Froyo, 2.2.x., [3ee5e](https://bitbucket.org/tbsprs/umweltzone/commits/3ee5e8286e2c14762e77b1faf417ca26d4300069)
+* Update list of cities in ContentProviderTest., [b3ba8](https://bitbucket.org/tbsprs/umweltzone/commits/b3ba87fb3a036c61aea70ea6782be53a38d9fd6a)
+* Update external URLs for umwelt-plakette.de., [1bb15](https://bitbucket.org/tbsprs/umweltzone/commits/1bb153bbe78867e84bd9f29d9657210da35ba4a4)
+* Add scripts to update external URLs for umwelt-plakette.de., [bc38e](https://bitbucket.org/tbsprs/umweltzone/commits/bc38e164ba2e4e3ab5d8491f9f3f03c0ca5d55c2)
+
+### Libraries, build tools, SDK
+
+* Update jackson-databind to v.2.8.10., [37665](https://bitbucket.org/tbsprs/umweltzone/commits/37665507d4a03630398a4207d2872a646251d893)
+* Use gradle-versioneye-plugin v.1.5.0., [f3fdb](https://bitbucket.org/tbsprs/umweltzone/commits/f3fdb42fa22f03d1224d0ae957375a8b12d4b9ce)
+* Use Android Plugin for Gradle v.2.3.3., [ffdc5](https://bitbucket.org/tbsprs/umweltzone/commits/ffdc52a2a1a70c3734d3a77f8b766cc08969b961)
+* Update Gradle wrapper to v.4.2.1., [9046a](https://bitbucket.org/tbsprs/umweltzone/commits/9046aa061b53d09489cf98652a47c8e8ade1585c)
+* Use play-services v.10.0.1., [39f07](https://bitbucket.org/tbsprs/umweltzone/commits/39f070c77b61d799e638e98a61d76f409dc6b6bb)
+* Update compileSdkVersion to 24 and Google support library to v.24.2.1., [2423b](https://bitbucket.org/tbsprs/umweltzone/commits/2423b57f6e5057dc9055c8476bcc27904ddc0477)
+* Update build tools to v.26.0.2., [e2405](https://bitbucket.org/tbsprs/umweltzone/commits/e2405cca69983097c1fc85d9970b65380e9edd30)
+* Update parceler to v.1.1.9., [3cac2](https://bitbucket.org/tbsprs/umweltzone/commits/3cac27ebc43f813910ac59e25622580cb6cc0917)
+* Update gradle-versions-plugin to v.0.15.0., [f25de](https://bitbucket.org/tbsprs/umweltzone/commits/f25de651d3f66d098737fd5fe8232c92525877ce)
+* Update proguard-gradle to v.5.3.3., [551e2](https://bitbucket.org/tbsprs/umweltzone/commits/551e2dbf1641766669f1f22b71012c64347e8e20)
+
+
 ## [v.2.12.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.2.12.0)
 
 * Published: 2016-10-29
