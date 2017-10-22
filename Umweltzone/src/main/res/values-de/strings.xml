@@ -261,7 +261,8 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Entwurf öffnen mit &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Umweltzone <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g> veröffentlichen
+        Umweltzone Android App - Umweltzone <xliff:g example="Wiesbaden"
+        id="zoneName">%1$s</xliff:g> veröffentlichen
     </string>
     <string name="zone_not_drawable_email_html_message">
         <![CDATA[<p>Sehr geehrte Damen und Herren,<br />
