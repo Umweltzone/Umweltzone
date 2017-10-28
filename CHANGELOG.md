@@ -22,6 +22,7 @@
 
 ### Libraries, build tools, SDK
 
+* Use snackengage-playrate to v.0.14., [74599](https://bitbucket.org/tbsprs/umweltzone/commits/745993c6387dab34ef06acf964d04b1746d4c7dc)
 * Update jackson-databind to v.2.8.10., [37665](https://bitbucket.org/tbsprs/umweltzone/commits/37665507d4a03630398a4207d2872a646251d893)
 * Use gradle-versioneye-plugin v.1.5.0., [f3fdb](https://bitbucket.org/tbsprs/umweltzone/commits/f3fdb42fa22f03d1224d0ae957375a8b12d4b9ce)
 * Use Android Plugin for Gradle v.2.3.3., [ffdc5](https://bitbucket.org/tbsprs/umweltzone/commits/ffdc52a2a1a70c3734d3a77f8b766cc08969b961)
