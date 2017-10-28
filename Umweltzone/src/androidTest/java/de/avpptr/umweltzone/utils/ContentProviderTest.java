@@ -40,11 +40,11 @@ public class ContentProviderTest extends InstrumentationTestCase {
             "ilsfeld", "karlsruhe", "cologne", "krefeld", "langenfeld", "leipzig",
             "leonberg", "ludwigsburg", "magdeburg", "mainz", "mannheim", "marburg",
             "moenchengladbach", "muehlacker", "munich", "muenster", "neuss", "neuulm",
-            "offenbach", "osnabrueck", "pfinztal", "pforzheim", "remscheid", "reutlingen",
-            "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen", "stuttgart",
-            "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
+            "offenbach", "osnabrueck", "overath", "pfinztal", "pforzheim", "remscheid",
+            "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen",
+            "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
 
-    private static final String[] ZONES_WITHOUT_COORDINATES = {"overath", "wiesbaden"};
+    private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
 
     private Context mContext;
 

@@ -1014,19 +1014,17 @@
         "abroadLicensedVehicleZoneNumberUntil" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/overath.html",
         "urlBadgeOnline" : "",
-        "contactEmails" : [
-            "buergerbuero@overath.de"
-        ],
-        "geometrySource" : null,
-        "geometryUpdatedAt" : null,
+        "contactEmails" : null,
+        "geometrySource" : "Stadtverwaltung Overath",
+        "geometryUpdatedAt" : "2017-10-23",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.913205,
-                "longitude" : 7.221450
+                "latitude" : 50.928498,
+                "longitude" : 7.283247
             },
             "northEast" : {
-                "latitude" : 50.977883,
-                "longitude" : 7.364272
+                "latitude" : 50.935657,
+                "longitude" : 7.293224
             }
         }
     },
