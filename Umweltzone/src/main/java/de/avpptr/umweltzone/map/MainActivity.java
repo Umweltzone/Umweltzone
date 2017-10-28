@@ -91,10 +91,12 @@ public class MainActivity extends BaseActivity {
 
     private void initUserEngagement() {
         int actionColor = ContextCompat.getColor(this, R.color.snack_engage_action_text);
+        int backgroundColor = ContextCompat.getColor(this, R.color.snack_engage_action_background);
         BaseSnack rateSnack = new DefaultRateSnack()
                 .overrideTitleText(getString(R.string.snack_engage_rate_title))
                 .overrideActionText(getString(R.string.snack_engage_rate_action));
         rateSnack.setActionColor(actionColor);
+        rateSnack.setBackgroundColor(backgroundColor);
         BaseSnack betaTestSnack = new GooglePlayOpenBetaTestSnack()
                 .overrideTitleText(getString(R.string.snack_engage_beta_testing_title))
                 .overrideActionText(getString(R.string.snack_engage_beta_testing_action))
@@ -103,6 +105,7 @@ public class MainActivity extends BaseActivity {
                         new AfterNumberOfOpportunities(13),
                         new IsConnectedViaWiFiOrUnknown());
         betaTestSnack.setActionColor(actionColor);
+        betaTestSnack.setBackgroundColor(backgroundColor);
         SnackEngage.from(this)
                 .withSnack(rateSnack)
                 .withSnack(betaTestSnack)

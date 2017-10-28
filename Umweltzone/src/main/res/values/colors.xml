@@ -31,7 +31,8 @@
     <color name="snack_bar_error_background">@color/accent</color>
 
     <!-- SnackEngage -->
-    <color name="snack_engage_action_text">@color/primary</color>
+    <color name="snack_engage_action_background">@color/primary_dark</color>
+    <color name="snack_engage_action_text">#E5CC15</color>
 
     <!-- Zone polygon on map -->
     <color name="shape_fill_color">#8819bf03</color>
