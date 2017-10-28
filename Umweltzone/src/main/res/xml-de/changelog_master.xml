@@ -16,6 +16,18 @@
 -->
 <changelog>
     <release
+        version="3.1.0"
+        versioncode="301000">
+        <change>
+            Aktualisierung: Die Zonendaten für Overath werden jetzt offiziell
+            von der Stadt zur Verfügung gestellt.
+        </change>
+        <change>
+            Bugfix: Die Einladung zur Bewertung oder zum Beta-Testen werden nicht
+            mehr angezeigt, wenn sie zuvor angeklickt wurden.
+        </change>
+    </release>
+    <release
             version="3.0.0"
             versioncode="300000">
         <change>

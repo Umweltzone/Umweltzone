@@ -1,6 +1,20 @@
 # Umweltzone changelog
 
 
+## [v.3.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.1.0)
+
+* Published: 2017-10-28
+
+### Features, improvements and maintenance
+
+* Add zone data for Overath (incl. coordinates)., [c020b](https://bitbucket.org/tbsprs/umweltzone/commits/c020b9ff77dd324fee6b9d4a889a60e421e5eed1)
+* Customize snack colors., [904ff](https://bitbucket.org/tbsprs/umweltzone/commits/904ff96834a2e5f31bb4747bbc5e4e9cab5db65d)
+* Fix snacks showing up again and again although clicked before., [6adff](https://bitbucket.org/tbsprs/umweltzone/commits/6adff01d562f48dceb92f42e32bcc74b24edb9d1)
+
+### Libraries, build tools, SDK
+
+* Update snackengage-playrate to v.0.15., [6adff](https://bitbucket.org/tbsprs/umweltzone/commits/6adff01d562f48dceb92f42e32bcc74b24edb9d1)
+
 ## [v.3.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.0.0)
 
 * Published: 2017-10-22
