@@ -679,6 +679,31 @@
         }
     },
     {
+        "name" : "limburg",
+        "displayName" : "Limburg an der Lahn",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2018-01-31",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/limburg.html",
+        "urlBadgeOnline" : "",
+        "contactEmails" : null,
+        "geometrySource" : "Hessisches Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz",
+        "geometryUpdatedAt" : "2018-02-05",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 50.370866,
+                "longitude" : 8.037716
+            },
+            "northEast" : {
+                "latitude" : 50.399291,
+                "longitude" : 8.081390
+            }
+        }
+    },
+    {
         "name" : "ludwigsburg",
         "displayName" : "Ludwigsburg",
         "listOfCities" : [],

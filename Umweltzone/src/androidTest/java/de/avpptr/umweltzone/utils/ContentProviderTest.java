@@ -38,7 +38,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
             "erfurt", "eschweiler", "frankfurt_main", "freiburg_breisgau", "hagen",
             "halle", "hannover", "heidelberg", "heidenheim", "heilbronn", "herrenberg",
             "ilsfeld", "karlsruhe", "cologne", "krefeld", "langenfeld", "leipzig",
-            "leonberg", "ludwigsburg", "magdeburg", "mainz", "mannheim", "marburg",
+            "leonberg", "limburg", "ludwigsburg", "magdeburg", "mainz", "mannheim", "marburg",
             "moenchengladbach", "muehlacker", "munich", "muenster", "neuss", "neuulm",
             "offenbach", "osnabrueck", "overath", "pfinztal", "pforzheim", "remscheid",
             "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen",
