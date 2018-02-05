@@ -12,7 +12,7 @@ buildscript {
 
         // Libraries
         androidSupportVersion = "24.2.1"
-        assertjAndroidVersion = "1.1.1"
+        assertjAndroidVersion = "1.2.0"
         ckChangelogVersion = "1.2.2"
         espressoVersion = "2.2.2"
         jacksonVersion = "2.8.10"
