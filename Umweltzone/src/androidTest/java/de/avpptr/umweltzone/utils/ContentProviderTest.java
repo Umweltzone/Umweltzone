@@ -44,7 +44,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
             "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen",
             "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
 
-    private static final String[] ZONES_WITHOUT_COORDINATES = {"wiesbaden"};
+    private static final String[] ZONES_WITHOUT_COORDINATES = {"regensburg", "wiesbaden"};
 
     private Context mContext;
 

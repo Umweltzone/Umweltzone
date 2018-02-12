@@ -1104,6 +1104,36 @@
         }
     },
     {
+        "name" : "regensburg",
+        "displayName" : "Regensburg",
+        "listOfCities" : [],
+        "zoneNumber" : 4,
+        "zoneNumberSince" : "2018-01-15",
+        "nextZoneNumberAsOf" : "",
+        "abroadLicensedVehicleZoneNumber" : 4,
+        "abroadLicensedVehicleZoneNumberUntil" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/regensburg.html",
+        "urlBadgeOnline" : "",
+        "contactEmails" : [
+            "wolbergs.joachim@regensburg.de",
+            "hahn.reinhard@Regensburg.de",
+            "voelkl.gerhard@regensburg.de",
+            "pressestelle@regensburg.de"
+        ],
+        "geometrySource" : null,
+        "geometryUpdatedAt" : null,
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 48.967496,
+                "longitude" : 12.026912
+            },
+            "northEast" : {
+                "latitude" : 49.057344,
+                "longitude" : 12.192393
+            }
+        }
+    },
+    {
         "name" : "remscheid",
         "displayName" : "Remscheid",
         "listOfCities" : [],
