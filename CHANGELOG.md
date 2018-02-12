@@ -1,5 +1,25 @@
 # Umweltzone changelog
 
+## [v.3.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.2.0)
+
+* Published: 2018-02-12
+
+### Features, improvements and maintenance
+
+* Add zone data for Regensburg (coordinates are available only for money)., [6de82](https://bitbucket.org/tbsprs/umweltzone/commits/6de826dcd0d0dfe78b0ead920b003059f39fb80c)
+* Add zone data for Limburg an der Lahn (incl. coordinates)., [6a615](https://bitbucket.org/tbsprs/umweltzone/commits/6a6154694ed1d7e36f94c7e0291b7b70eede6e33)
+* Fix broken URLs., [b46e1](https://bitbucket.org/tbsprs/umweltzone/commits/b46e18e22805498f24ff97f3c40d6b4af0e7ce64)
+
+### Libraries, build tools, SDK
+
+* Use proguard-gradle v.6.0., [682bd](https://bitbucket.org/tbsprs/umweltzone/commits/682bd98bbf8604f79615a916273112fa09bcdd62)
+* Use gradle-versions-plugin v.0.17.0., [00f01](https://bitbucket.org/tbsprs/umweltzone/commits/00f019f22b0eaa0944d4aa82ab4a40ccb936ab77)
+* Use build tools v.27.0.3., [2de2e](https://bitbucket.org/tbsprs/umweltzone/commits/2de2e6d9c2608334620c71bd4f411bb44935ffe0)
+* Use assertj v.1.2.0., [86dc2](https://bitbucket.org/tbsprs/umweltzone/commits/86dc2082448a076c65dd65a306cc8846ee65cc64)
+* Use parceler v.1.1.10., [dcaf2](https://bitbucket.org/tbsprs/umweltzone/commits/dcaf2870075834f3ceb7ba3a8b7952a61efd4f69)
+* Use Gradle wrapper v.4.5.1., [53a8a](https://bitbucket.org/tbsprs/umweltzone/commits/53a8af8ad0448d730b6e7ce6fda9857647cc6cab)
+* Also evaluate dependency version in root build.gradle., [7293c](https://bitbucket.org/tbsprs/umweltzone/commits/7293c28989d86d67cf50abdb85c11b01c93b2010)
+
 
 ## [v.3.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.1.0)
 
