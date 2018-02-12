@@ -37,6 +37,7 @@ buildscript {
 }
 
 apply plugin: "org.standardout.versioneye"
+apply plugin: "com.github.ben-manes.versions"
 
 versioneye {
     includeSubProjects = true
