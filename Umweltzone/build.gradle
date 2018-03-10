@@ -74,10 +74,6 @@ android {
         release
     }
 
-    aaptOptions {
-        useNewCruncher true
-    }
-
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
