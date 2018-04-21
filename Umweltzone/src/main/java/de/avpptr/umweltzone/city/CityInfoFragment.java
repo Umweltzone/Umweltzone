@@ -90,7 +90,7 @@ public class CityInfoFragment extends BaseFragment {
     }
 
     private void setUpCityInfo(@NonNull final Activity activity,
-            @NonNull final LowEmissionZone lowEmissionZone) {
+                               @NonNull final LowEmissionZone lowEmissionZone) {
 
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);

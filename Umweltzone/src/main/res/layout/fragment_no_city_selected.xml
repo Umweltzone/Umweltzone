@@ -16,29 +16,29 @@
   -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".city.NoCitySelectedFragment">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".city.NoCitySelectedFragment">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
-                style="@style/NoCitySelected.Title"
-                android:text="@string/no_city_selected_title"/>
+            style="@style/NoCitySelected.Title"
+            android:text="@string/no_city_selected_title" />
 
         <TextView
-                style="@style/NoCitySelected.StatusDesc"
-                android:text="@string/no_city_selected_status_desc"/>
+            style="@style/NoCitySelected.StatusDesc"
+            android:text="@string/no_city_selected_status_desc" />
 
         <Button
-                android:id="@+id/no_city_selected_select_zone"
-                style="@style/NoCitySelected.SelectZone"
-                android:text="@string/no_city_selected_select_zone"/>
+            android:id="@+id/no_city_selected_select_zone"
+            style="@style/NoCitySelected.SelectZone"
+            android:text="@string/no_city_selected_select_zone" />
 
     </LinearLayout>
 </ScrollView>

@@ -44,8 +44,8 @@
         </change>
     </release>
     <release
-            version="3.0.0"
-            versioncode="300000">
+        version="3.0.0"
+        versioncode="300000">
         <change>
             Android: Die niedrigste, unterstützte Version ist jetzt Android 2.3
             (Gingerbread), um die zukünfigte Weiterentwicklung der App zu ermöglichen.
@@ -73,8 +73,8 @@
         </change>
     </release>
     <release
-            version="2.12.0"
-            versioncode="212000">
+        version="2.12.0"
+        versioncode="212000">
         <change>
             Aktualisierung: Die Zonendaten für Leipzig werden jetzt offiziell
             von der Stadt zur Verfügung gestellt.
@@ -85,8 +85,8 @@
         </change>
     </release>
     <release
-            version="2.11.0"
-            versioncode="211000">
+        version="2.11.0"
+        versioncode="211000">
         <change>
             Neu: Eschweiler mit Geokoordinaten hinzugefügt (neu ab 01.06.2016).
         </change>
@@ -108,8 +108,8 @@
         </change>
     </release>
     <release
-            version="2.10.0"
-            versioncode="210000">
+        version="2.10.0"
+        versioncode="210000">
         <change>
             Neu: Marburg mit Geokoordinaten hinzugefügt (neu ab 01.04.2016).
         </change>
@@ -127,8 +127,8 @@
         </change>
     </release>
     <release
-            version="2.9.0"
-            versioncode="29000">
+        version="2.9.0"
+        versioncode="29000">
         <change>
             Neu: Marburg ohne Geokoordinaten hinzugefügt (neu ab 01.04.2016).
             Die Stadt arbeitet noch an der Freigabe der Daten.
@@ -154,8 +154,8 @@
         </change>
     </release>
     <release
-            version="2.8.0"
-            versioncode="28000">
+        version="2.8.0"
+        versioncode="28000">
         <change>
             Neu: Aachen mit Geokoordinaten hinzugefügt.
         </change>
@@ -164,8 +164,8 @@
         </change>
     </release>
     <release
-            version="2.7.0"
-            versioncode="27000">
+        version="2.7.0"
+        versioncode="27000">
         <change>
             Neu: Aachen ohne Geokoordinaten hinzugefügt (neu seit 01.02.2016).
             Eine Datenanfrage wurde an die Stadt gestellt, wartet leider
@@ -182,8 +182,8 @@
         </change>
     </release>
     <release
-            version="2.6.0"
-            versioncode="26000">
+        version="2.6.0"
+        versioncode="26000">
         <change>
             Neu: Darmstadt mit Geokoordinaten hinzugefügt (neu seit 01.11.2015).
         </change>
@@ -193,8 +193,8 @@
         </change>
     </release>
     <release
-            version="2.5.0"
-            versioncode="25000">
+        version="2.5.0"
+        versioncode="25000">
         <change>
             Neu: Drei weitere Städte mit Geokoordinaten hinzugefügt (Wuppertal,
             Heidelberg und Magdeburg).
@@ -206,12 +206,13 @@
             Aktualisierung: Hochauflösendes App-Symbol kann jetzt auf allen Geräte angezeigt werden.
         </change>
         <change>
-            Aktualisierung: Höhere Testabdeckung, um die Einführung von Programmierfehler zu vermeiden.
+            Aktualisierung: Höhere Testabdeckung, um die Einführung von Programmierfehler zu
+            vermeiden.
         </change>
     </release>
     <release
-            version="2.4.0"
-            versioncode="24000">
+        version="2.4.0"
+        versioncode="24000">
         <change>
             Neu: Endlich Farben! Die Statusleiste, das Menü, Links, Schaltflächen, Effekte
             und Dialoge erstrahlen in bunten Farben.
@@ -249,7 +250,9 @@
         version="2.2.0"
         versioncode="22000">
         <change>
-            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Dinslaken, Erfurt, Ilsfeld, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Mühlacker, Offenbach, Schwäbisch Gmünd, Tübingen, Urbach und Wendlingen).
+            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Dinslaken, Erfurt, Ilsfeld,
+            Krefeld, Langenfeld, Leonberg, Ludwigsburg, Mühlacker, Offenbach, Schwäbisch Gmünd,
+            Tübingen, Urbach und Wendlingen).
         </change>
         <change>
             Aktualisierung: Die Ausdehnung der Umweltzone Reutlingen hat sich zum 1.2.2015 geändert.
@@ -265,7 +268,9 @@
         version="2.1.0"
         versioncode="21000">
         <change>
-            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Bonn, Halle, Heidenheim, Heilbronn, Herrenberg, Mainz, Mannheim, Osnabrück, Pforzheim, Remscheid, Reutlingen, Schramberg und Siegen).
+            Neu: Weitere 13 Städte mit Geokoordinaten hinzugefügt (Bonn, Halle, Heidenheim,
+            Heilbronn, Herrenberg, Mainz, Mannheim, Osnabrück, Pforzheim, Remscheid, Reutlingen,
+            Schramberg und Siegen).
         </change>
         <change>
             Neu: Städte ohne Geokoordinaten werden unterstützt.
@@ -274,7 +279,10 @@
             Neu: Funktion zur persönlichen Kontaktaufnahme mit Behörden via E-Mail eingebaut.
         </change>
         <change>
-            Neu: 20 Städte ohne Geokoordinaten hinzugefügt (Bochum, Dinslaken, Erfurt, Heidelberg, Ilsfeld, Karlsruhe, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Magdeburg, Mühlacker, Offenbach, Pfinztal, Schwäbisch Gmünd, Tübingen, Urbach, Wendlingen, Wiesbaden und Wuppertal).
+            Neu: 20 Städte ohne Geokoordinaten hinzugefügt (Bochum, Dinslaken, Erfurt, Heidelberg,
+            Ilsfeld, Karlsruhe, Krefeld, Langenfeld, Leonberg, Ludwigsburg, Magdeburg, Mühlacker,
+            Offenbach, Pfinztal, Schwäbisch Gmünd, Tübingen, Urbach, Wendlingen, Wiesbaden und
+            Wuppertal).
         </change>
         <change>
             Aktualisierung der Zonenlevels für Münster.
@@ -289,7 +297,8 @@
             Aktualisierung der Lizenzinformationen.
         </change>
         <change>
-            Neu: Überarbeiteter Zwischenspeicher-Mechanismus (Cache) zur Verbesserung der Ladezeiten.
+            Neu: Überarbeiteter Zwischenspeicher-Mechanismus (Cache) zur Verbesserung der
+            Ladezeiten.
         </change>
         <change>
             Bugfix: Nicht funktionierende Protokollierung repariert.

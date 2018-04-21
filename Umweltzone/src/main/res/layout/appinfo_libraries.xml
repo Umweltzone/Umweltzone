@@ -18,61 +18,61 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_references_libraries_title"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_references_libraries_title" />
 
     <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_references_libraries_content"/>
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_references_libraries_content" />
 
     <TextView
-            android:id="@+id/app_info_ckchangelog"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_ckchangelog"/>
+        android:id="@+id/app_info_ckchangelog"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_ckchangelog" />
 
     <TextView
-            android:id="@+id/app_info_android_testing_support_library"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_android_testing_support_library"/>
+        android:id="@+id/app_info_android_testing_support_library"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_android_testing_support_library" />
 
     <TextView
-            android:id="@+id/app_info_google_analytics"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_google_analytics"/>
+        android:id="@+id/app_info_google_analytics"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_google_analytics" />
 
     <TextView
-            android:id="@+id/app_info_google_design_support_library"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_google_design_support_library"/>
+        android:id="@+id/app_info_google_design_support_library"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_google_design_support_library" />
 
     <TextView
-            android:id="@+id/app_info_google_play_services"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_google_play_services"/>
+        android:id="@+id/app_info_google_play_services"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_google_play_services" />
 
     <TextView
-            android:id="@+id/app_info_jackson"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_jackson"/>
+        android:id="@+id/app_info_jackson"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_jackson" />
 
     <TextView
-            android:id="@+id/app_info_parceler"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_parceler"/>
+        android:id="@+id/app_info_parceler"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_parceler" />
 
     <TextView
         android:id="@+id/app_info_snack_engage"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_snack_engage"/>
+        android:text="@string/appinfo_references_url_snack_engage" />
 
     <TextView
-            android:id="@+id/app_info_trace_droid"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_trace_droid"/>
+        android:id="@+id/app_info_trace_droid"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_trace_droid" />
 
     <TextView
-            android:id="@+id/app_info_typed_preferences"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_references_url_typed_preferences"/>
+        android:id="@+id/app_info_typed_preferences"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_references_url_typed_preferences" />
 
 </merge>

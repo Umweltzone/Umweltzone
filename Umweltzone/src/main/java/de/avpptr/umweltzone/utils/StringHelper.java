@@ -129,7 +129,7 @@ public class StringHelper {
 
     @NonNull
     public static String getGeometrySourceText(final Context context,
-            LowEmissionZone lowEmissionZone) {
+                                               LowEmissionZone lowEmissionZone) {
         String geometrySource = lowEmissionZone.geometrySource;
         if (TextUtils.isEmpty(geometrySource)) {
             return "";

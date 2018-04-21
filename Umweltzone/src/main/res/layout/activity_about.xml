@@ -16,56 +16,56 @@
   -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/huge_spacer">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/huge_spacer"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-        <include layout="@layout/appinfo_header"/>
+        <include layout="@layout/appinfo_header" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_copyright"/>
+        <include layout="@layout/appinfo_copyright" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_description"/>
+        <include layout="@layout/appinfo_description" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_data"/>
+        <include layout="@layout/appinfo_data" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_graphics"/>
+        <include layout="@layout/appinfo_graphics" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_written_text"/>
+        <include layout="@layout/appinfo_written_text" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_libraries"/>
+        <include layout="@layout/appinfo_libraries" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_sourcecode"/>
+        <include layout="@layout/appinfo_sourcecode" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_license"/>
+        <include layout="@layout/appinfo_license" />
 
-        <View style="@style/HorizontalLine"/>
+        <View style="@style/HorizontalLine" />
 
-        <include layout="@layout/appinfo_build_info"/>
+        <include layout="@layout/appinfo_build_info" />
 
     </LinearLayout>
 </ScrollView>

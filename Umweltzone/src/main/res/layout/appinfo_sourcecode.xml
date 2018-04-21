@@ -18,16 +18,16 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_sourcecode_title"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_sourcecode_title" />
 
     <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_sourcecode_content"/>
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_sourcecode_content" />
 
     <TextView
-            android:id="@+id/app_info_source_code"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_sourcecode_url"/>
+        android:id="@+id/app_info_source_code"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_sourcecode_url" />
 
 </merge>

@@ -18,46 +18,46 @@
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_contact_title"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_contact_title" />
 
     <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_contact_content"/>
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_contact_content" />
 
     <TextView
-            android:id="@+id/app_info_contact_email"
-            style="@style/TextView.Email"
-            android:text="@string/appinfo_contact_email"/>
+        android:id="@+id/app_info_contact_email"
+        style="@style/TextView.Email"
+        android:text="@string/appinfo_contact_email" />
 
-    <View style="@style/HorizontalLine"/>
-
-    <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_uservoice_title"/>
+    <View style="@style/HorizontalLine" />
 
     <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_uservoice_content"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_uservoice_title" />
 
     <TextView
-            android:id="@+id/app_info_user_voice"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_uservoice_url"/>
-
-    <View style="@style/HorizontalLine"/>
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_uservoice_content" />
 
     <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_rating_title"/>
+        android:id="@+id/app_info_user_voice"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_uservoice_url" />
+
+    <View style="@style/HorizontalLine" />
 
     <TextView
-            style="@style/AppInfo.TextContent"
-            android:text="@string/appinfo_rating_content"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_rating_title" />
 
     <TextView
-            android:id="@+id/app_info_rating"
-            style="@style/AppInfo.WebLink"
-            android:text="@string/appinfo_rating_url"/>
+        style="@style/AppInfo.TextContent"
+        android:text="@string/appinfo_rating_content" />
+
+    <TextView
+        android:id="@+id/app_info_rating"
+        style="@style/AppInfo.WebLink"
+        android:text="@string/appinfo_rating_url" />
 
 </merge>

@@ -302,8 +302,7 @@
     <string name="city_info_badge_online_title">Online sticker application form</string>
 
     <string name="city_info_geometry_source_text">Source of
-        the geometry coordinates: <xliff:g example="Geoportal Berlin / Umweltzone Berlin"
-                                           id="geometrySource">%1$s</xliff:g>
+        the geometry coordinates: <xliff:g example="Geoportal Berlin / Umweltzone Berlin" id="geometrySource">%1$s</xliff:g>
     </string>
 
     <string name="city_info_geometry_updated_at_date_format">
@@ -351,8 +350,7 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Open draft with &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Umweltzone Android App - Integration <xliff:g example="Wiesbaden"
-                                                     id="zoneName">%1$s</xliff:g>
+        Umweltzone Android App - Integration <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
     </string>
     <string name="zone_not_drawable_email_html_message">
         <![CDATA[<p>Dear Sir or Madam.

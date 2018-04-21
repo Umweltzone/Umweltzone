@@ -16,23 +16,23 @@
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              tools:background="@android:color/darker_gray"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="@dimen/big_spacer">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/big_spacer"
+    tools:background="@android:color/darker_gray">
 
     <TextView
-            android:id="@+id/faq_answer"
-            style="@style/Faq.Content.Answer"
-            tools:background="@android:color/holo_blue_light"
-            tools:text="FAQ answer"/>
+        android:id="@+id/faq_answer"
+        style="@style/Faq.Content.Answer"
+        tools:background="@android:color/holo_blue_light"
+        tools:text="FAQ answer" />
 
     <TextView
-            android:id="@+id/faq_source_url"
-            style="@style/Faq.Content.SourceUrl"
-            tools:background="@android:color/holo_green_light"
-            tools:text="FAQ source URL"/>
+        android:id="@+id/faq_source_url"
+        style="@style/Faq.Content.SourceUrl"
+        tools:background="@android:color/holo_green_light"
+        tools:text="FAQ source URL" />
 
 </LinearLayout>
