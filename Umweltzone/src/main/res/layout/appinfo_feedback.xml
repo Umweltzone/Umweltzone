@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2015  Tobias Preuss
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,7 +15,13 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:gravity="center"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
     <TextView
         style="@style/AppInfo.ContentTitle"
@@ -28,7 +34,7 @@
     <TextView
         android:id="@+id/app_info_contact_email"
         style="@style/TextView.Email"
-        android:text="@string/appinfo_contact_email" />
+        tools:text="@string/appinfo_contact_email" />
 
     <View style="@style/HorizontalLine" />
 
@@ -43,7 +49,7 @@
     <TextView
         android:id="@+id/app_info_user_voice"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_uservoice_url" />
+        tools:text="@string/appinfo_uservoice_url" />
 
     <View style="@style/HorizontalLine" />
 
@@ -58,6 +64,6 @@
     <TextView
         android:id="@+id/app_info_rating"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_rating_url" />
+        tools:text="@string/appinfo_rating_url" />
 
 </merge>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2017  Tobias Preuss
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,7 +15,13 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:gravity="center"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
     <TextView
         style="@style/AppInfo.ContentTitle"
@@ -28,51 +34,51 @@
     <TextView
         android:id="@+id/app_info_ckchangelog"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_ckchangelog" />
+        tools:text="@string/appinfo_references_url_ckchangelog" />
 
     <TextView
         android:id="@+id/app_info_android_testing_support_library"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_android_testing_support_library" />
+        tools:text="@string/appinfo_references_url_android_testing_support_library" />
 
     <TextView
         android:id="@+id/app_info_google_analytics"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_google_analytics" />
+        tools:text="@string/appinfo_references_url_google_analytics" />
 
     <TextView
         android:id="@+id/app_info_google_design_support_library"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_google_design_support_library" />
+        tools:text="@string/appinfo_references_url_google_design_support_library" />
 
     <TextView
         android:id="@+id/app_info_google_play_services"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_google_play_services" />
+        tools:text="@string/appinfo_references_url_google_play_services" />
 
     <TextView
         android:id="@+id/app_info_jackson"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_jackson" />
+        tools:text="@string/appinfo_references_url_jackson" />
 
     <TextView
         android:id="@+id/app_info_parceler"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_parceler" />
+        tools:text="@string/appinfo_references_url_parceler" />
 
     <TextView
         android:id="@+id/app_info_snack_engage"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_snack_engage" />
+        tools:text="@string/appinfo_references_url_snack_engage" />
 
     <TextView
         android:id="@+id/app_info_trace_droid"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_trace_droid" />
+        tools:text="@string/appinfo_references_url_trace_droid" />
 
     <TextView
         android:id="@+id/app_info_typed_preferences"
         style="@style/AppInfo.WebLink"
-        android:text="@string/appinfo_references_url_typed_preferences" />
+        tools:text="@string/appinfo_references_url_typed_preferences" />
 
 </merge>
