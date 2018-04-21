@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@ package de.avpptr.umweltzone.faqs;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
 import android.widget.ExpandableListView;
 
 import java.util.List;
@@ -40,22 +39,15 @@ public class FaqActivity extends BaseActivity {
         List<Faq> faqs = ContentProvider.getFaqs(this);
         faqsList.setAdapter(new FaqsAdapter(this, faqs));
 
-        faqsList.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
-            @Override
-            public boolean onGroupClick(
-                    ExpandableListView parent,
-                    View view,
-                    int groupPosition,
-                    long id) {
-                if (!parent.isGroupExpanded(groupPosition)) {
-                    FaqsAdapter faqsAdapter = (FaqsAdapter) parent.getExpandableListAdapter();
-                    if (faqsAdapter != null) {
-                        String itemDescription = faqsAdapter.getFaqDescription(groupPosition);
-                        mTracking.track(TrackingPoint.FaqItemClick, itemDescription);
-                    }
+        faqsList.setOnGroupClickListener((parent, view, groupPosition, id) -> {
+            if (!parent.isGroupExpanded(groupPosition)) {
+                FaqsAdapter faqsAdapter = (FaqsAdapter) parent.getExpandableListAdapter();
+                if (faqsAdapter != null) {
+                    String itemDescription = faqsAdapter.getFaqDescription(groupPosition);
+                    mTracking.track(TrackingPoint.FaqItemClick, itemDescription);
                 }
-                return false;
             }
+            return false;
         });
     }
 
