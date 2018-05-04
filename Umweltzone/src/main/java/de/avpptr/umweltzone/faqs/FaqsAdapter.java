@@ -26,8 +26,6 @@ import android.widget.BaseExpandableListAdapter;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ViewHelper;
@@ -38,12 +36,9 @@ class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final List<Faq> mFaqs;
 
-    protected final Tracking mTracking;
-
-    public FaqsAdapter(Context context, List<Faq> faqs) {
+    FaqsAdapter(Context context, List<Faq> faqs) {
         mContext = context;
         mFaqs = faqs;
-        mTracking = Umweltzone.getTracker();
     }
 
     @Override
