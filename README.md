@@ -29,7 +29,7 @@ The map screen of the app shows the outline of the low-emission zone
 ## Android versions
 
 The application is designed to work both on smartphones and on tablets.
-Android 2.2 (Froyo) and newer versions are supported.
+Android 2.3 (Gingerbread) and newer versions are supported.
 
 
 ## Feedback
