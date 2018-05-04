@@ -1,8 +1,25 @@
+/*
+ *  Copyright (C) 2018  Tobias Preuss
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package de.avpptr.umweltzone.about;
 
+import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -64,8 +81,7 @@ public class AboutActivityTest {
         onView(withId(R.id.app_info_android_testing_support_library))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
-                .check(matches(withText(
-                        R.string.appinfo_references_name_android_testing_support_library)));
+                .check(matches(withText(R.string.appinfo_references_name_android_testing_support_library)));
         onView(withId(R.id.app_info_ckchangelog))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
@@ -77,8 +93,7 @@ public class AboutActivityTest {
         onView(withId(R.id.app_info_google_design_support_library))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
-                .check(matches(
-                        withText(R.string.appinfo_references_name_google_design_support_library)));
+                .check(matches(withText(R.string.appinfo_references_name_google_design_support_library)));
         onView(withId(R.id.app_info_google_play_services))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
@@ -91,6 +106,10 @@ public class AboutActivityTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.appinfo_references_name_parceler)));
+        onView(withId(R.id.app_info_snack_engage))
+                .perform(scrollTo())
+                .check(matches(isDisplayed()))
+                .check(matches(withText(R.string.appinfo_references_name_snack_engage)));
         onView(withId(R.id.app_info_trace_droid))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))

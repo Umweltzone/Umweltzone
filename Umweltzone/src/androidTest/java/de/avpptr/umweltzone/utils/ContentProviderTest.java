@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2018  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,11 @@ package de.avpptr.umweltzone.utils;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
-import android.test.InstrumentationTestCase;
+import android.support.test.runner.AndroidJUnit4;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.util.List;
 
@@ -29,9 +33,12 @@ import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
+import static android.support.test.InstrumentationRegistry.getInstrumentation;
+import static junit.framework.Assert.fail;
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ContentProviderTest extends InstrumentationTestCase {
+@RunWith(AndroidJUnit4.class)
+public class ContentProviderTest {
 
     private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg", "balingen",
             "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf",
@@ -48,12 +55,12 @@ public class ContentProviderTest extends InstrumentationTestCase {
 
     private Context mContext;
 
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    @Before
+    public void setUp() throws Exception {
         mContext = getInstrumentation().getTargetContext();
     }
 
+    @Test
     public void testGetCircuits_failsWhenCoordinatesAreMissing() {
         String expectedErrorMessage;
         for (String zoneName : ZONES_WITHOUT_COORDINATES) {
@@ -67,6 +74,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
         }
     }
 
+    @Test
     public void testGetCircuits_worksAtAll() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             assertThat(getCircuits(zoneName))
@@ -75,6 +83,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
         }
     }
 
+    @Test
     public void testGetCircuits_usesCaches() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             List<Circuit> circuits = getCircuits(zoneName);
@@ -82,12 +91,14 @@ public class ContentProviderTest extends InstrumentationTestCase {
         }
     }
 
+    @Test
     public void testGetResourceId_worksAtAll() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             assertThat(getZoneJsonResourceId(zoneName)).isNotNull();
         }
     }
 
+    @Test
     public void testGetResourceId_usesCaches() throws Exception {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
@@ -95,6 +106,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
         }
     }
 
+    @Test
     public void testGetFaqs_worksAtAll() {
         List<Faq> faqs = ContentProvider.getFaqs(mContext);
         assertThat(faqs)
@@ -106,6 +118,7 @@ public class ContentProviderTest extends InstrumentationTestCase {
         }
     }
 
+    @Test
     public void testGetLowEmissionZones_worksAtAll() {
         List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(mContext);
         assertThat(lowEmissionZones)

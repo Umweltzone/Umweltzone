@@ -9,6 +9,7 @@ versioneye {
 }
 
 repositories {
+    google()
     mavenCentral()
     maven { url "https://jitpack.io" }
 }
@@ -142,6 +143,7 @@ dependencies {
     // Integration tests
     androidTestCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
     androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
+    androidTestCompile "com.android.support.test:rules:$rulesVersion"
 
     // Unit tests
     testCompile "junit:junit:$junitVersion"

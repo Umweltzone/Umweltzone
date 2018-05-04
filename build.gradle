@@ -14,11 +14,12 @@ buildscript {
         androidSupportVersion = "24.2.1"
         assertjAndroidVersion = "1.2.0"
         ckChangelogVersion = "1.2.2"
-        espressoVersion = "2.2.2"
+        espressoVersion = "3.0.2"
         jacksonVersion = "2.8.10"
         junitVersion = "4.12"
         parcelerVersion = "1.1.10"
         playServicesVersion = "10.0.1"
+        rulesVersion = "1.0.2"
         snackengagePlayrateVersion = "0.15"
         typedPreferencesVersion = "2.1.0"
     }
