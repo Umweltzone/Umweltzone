@@ -2,7 +2,6 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "com.android.application"
-apply plugin: "com.neenbedankt.android-apt"
 
 versioneye {
     exclude "androidJacocoAgent", "androidJacocoAnt"
@@ -11,6 +10,7 @@ versioneye {
 repositories {
     google()
     mavenCentral()
+    jcenter()
     maven { url "https://jitpack.io" }
 }
 
@@ -74,10 +74,6 @@ android {
         release
     }
 
-    aaptOptions {
-        useNewCruncher true
-    }
-
     buildTypes {
         debug {
             applicationIdSuffix ".debug"
@@ -121,33 +117,39 @@ tasks.withType(Test) {
 
 configurations {
     // http://qathread.blogspot.de/2015/02/discovering-espresso-for-android.html
-    androidTestCompile.exclude group: "com.android.support", module: "support-annotations"
-    testCompile.exclude group: "com.android.support", module: "support-annotations"
+    testImplementation.exclude group: "com.android.support", module: "support-annotations"
 }
 
 dependencies {
-    compile "com.android.support:design:$androidSupportVersion"
-    compile "com.google.android.gms:play-services-base:$playServicesVersion"
-    compile "com.google.android.gms:play-services-maps:$playServicesVersion"
-    compile "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
-    compile("com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion") {
+    implementation "com.android.support:design:$androidSupportVersion"
+    implementation "com.google.android.gms:play-services-base:$playServicesVersion"
+    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation("com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion") {
         exclude group: "com.android.support"
     }
-    compile "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
-    compile "info.metadude.android:typed-preferences:$typedPreferencesVersion"
-    compile "org.parceler:parceler-api:$parcelerVersion"
-    apt "org.parceler:parceler:$parcelerVersion"
-    compile files("libs/libGoogleAnalyticsServices.jar")
-    compile files("libs/TraceDroid-1.1.jar")
+    implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
+    implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
+    implementation "org.parceler:parceler-api:$parcelerVersion"
+    annotationProcessor "org.parceler:parceler:$parcelerVersion"
+    implementation files("libs/libGoogleAnalyticsServices.jar")
+    implementation files("libs/TraceDroid-1.1.jar")
 
     // Integration tests
-    androidTestCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
-    androidTestCompile "com.android.support.test.espresso:espresso-core:$espressoVersion"
-    androidTestCompile "com.android.support.test:rules:$rulesVersion"
+    androidTestImplementation "com.android.support:support-annotations:$androidSupportVersion"
+    androidTestImplementation ("com.squareup.assertj:assertj-android:$assertjAndroidVersion") {
+        exclude group: "com.android.support", module: "support-annotations"
+    }
+    androidTestImplementation ("com.android.support.test.espresso:espresso-core:$espressoVersion") {
+        exclude group: "com.android.support", module: "support-annotations"
+    }
+    androidTestImplementation ("com.android.support.test:rules:$rulesVersion") {
+        exclude group: "com.android.support", module: "support-annotations"
+    }
 
     // Unit tests
-    testCompile "junit:junit:$junitVersion"
-    testCompile "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
 }
 
 Properties props = new Properties()
