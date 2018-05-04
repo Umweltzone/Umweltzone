@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,9 +28,9 @@ import de.avpptr.umweltzone.models.Circuit;
 
 public class MapDrawer {
 
-    protected final GoogleMap mMap;
+    private final GoogleMap mMap;
 
-    protected List<Polygon> mZonePolygons;
+    private List<Polygon> mZonePolygons;
 
     public MapDrawer(GoogleMap map) {
         mMap = map;
@@ -55,7 +55,7 @@ public class MapDrawer {
         }
     }
 
-    protected Polygon drawPolygon(
+    private Polygon drawPolygon(
             Circuit circuit,
             int fillColor,
             int strokeColor,

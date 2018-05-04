@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,19 +28,19 @@ import info.metadude.android.typedpreferences.StringPreference;
 
 public class PreferencesHelper {
 
-    protected final StringPreference mCityNamePreference;
+    private final StringPreference mCityNamePreference;
 
-    protected final GeoPointPreference mLastKnownLocationCenterPreference;
+    private final GeoPointPreference mLastKnownLocationCenterPreference;
 
-    protected final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
+    private final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
 
-    protected final FloatPreference mZoomLevelPreference;
+    private final FloatPreference mZoomLevelPreference;
 
-    protected final BooleanPreference mZoneIsDrawablePreference;
+    private final BooleanPreference mZoneIsDrawablePreference;
 
-    protected final BooleanPreference mCityNameFrankfurtInPreferencesFixedPreference;
+    private final BooleanPreference mCityNameFrankfurtInPreferencesFixedPreference;
 
-    protected final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
+    private final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
 
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
@@ -74,7 +74,7 @@ public class PreferencesHelper {
         return mCityNamePreference.isSet();
     }
 
-    public void deleteLastKnownLocationAsString() {
+    private void deleteLastKnownLocationAsString() {
         mCityNamePreference.delete();
     }
 
@@ -88,7 +88,7 @@ public class PreferencesHelper {
         return mLastKnownLocationCenterPreference.get();
     }
 
-    public void deleteLastKnownLocationAsGeoPoint() {
+    private void deleteLastKnownLocationAsGeoPoint() {
         mLastKnownLocationCenterPreference.delete();
     }
 
@@ -102,7 +102,7 @@ public class PreferencesHelper {
         return mLastKnownLocationBoundingBoxPreference.get();
     }
 
-    public void deleteLastKnownLocationAsBoundingBox() {
+    private void deleteLastKnownLocationAsBoundingBox() {
         mLastKnownLocationBoundingBoxPreference.delete();
     }
 
@@ -116,7 +116,7 @@ public class PreferencesHelper {
         return mZoomLevelPreference.get();
     }
 
-    public void deleteZoomLevel() {
+    private void deleteZoomLevel() {
         mZoomLevelPreference.delete();
     }
 
@@ -134,7 +134,7 @@ public class PreferencesHelper {
         return mZoneIsDrawablePreference.isSet();
     }
 
-    public void deleteZoneIsDrawable() {
+    private void deleteZoneIsDrawable() {
         mZoneIsDrawablePreference.delete();
     }
 

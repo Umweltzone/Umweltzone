@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2017  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -39,17 +39,17 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
 
-public class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
+class CityListAdapter extends ArrayAdapter<LowEmissionZone> {
 
-    protected final Context mContext;
+    private final Context mContext;
 
-    protected final int mResourceId;
+    private final int mResourceId;
 
-    protected final LowEmissionZone[] mLowEmissionZones;
+    private final LowEmissionZone[] mLowEmissionZones;
 
-    protected final Tracking mTracking;
+    private final Tracking mTracking;
 
-    public CityListAdapter(Context context, int resource, LowEmissionZone[] lowEmissionZones) {
+    CityListAdapter(Context context, int resource, LowEmissionZone[] lowEmissionZones) {
         super(context, resource, lowEmissionZones);
         mContext = context;
         mResourceId = resource;

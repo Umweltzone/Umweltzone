@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
-public class FaqsAdapter extends BaseExpandableListAdapter {
+class FaqsAdapter extends BaseExpandableListAdapter {
 
     private final Context mContext;
 

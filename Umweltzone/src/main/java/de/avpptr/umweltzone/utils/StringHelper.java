@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -167,7 +167,7 @@ public class StringHelper {
     }
 
     @NonNull
-    public static String linkifiedString(
+    private static String linkifiedString(
             final String title,
             final String url) {
         if (url == null || TextUtils.isEmpty(url)) {

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -49,7 +49,7 @@ import de.avpptr.umweltzone.utils.SnackBarHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
 
-    protected final Tracking mTracking;
+    private final Tracking mTracking;
 
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();

@@ -30,17 +30,17 @@ import java.util.Locale;
 @Parcel
 public final class GeoPoint {
 
-    public static final double MAX_LATITUDE = 90.0;
+    private static final double MAX_LATITUDE = 90.0;
 
-    public static final double MIN_LATITUDE = -90.0;
+    private static final double MIN_LATITUDE = -90.0;
 
-    public static final double MAX_LONGITUDE = 180.0;
+    private static final double MAX_LONGITUDE = 180.0;
 
-    public static final double MIN_LONGITUDE = -180.0;
+    private static final double MIN_LONGITUDE = -180.0;
 
-    public static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
+    private static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
 
-    public static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
+    private static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
 
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));

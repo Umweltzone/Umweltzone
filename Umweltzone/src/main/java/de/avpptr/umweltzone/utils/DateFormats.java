@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import android.support.annotation.NonNull;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-public abstract class DateFormats {
+abstract class DateFormats {
 
     @NonNull
     public static SimpleDateFormat getDateFormat(@NonNull String datePattern) {

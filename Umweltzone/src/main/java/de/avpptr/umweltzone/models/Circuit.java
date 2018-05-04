@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2014  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@ import de.avpptr.umweltzone.utils.GeoPoint;
 
 public class Circuit {
 
-    public List<LatLng> mLatLngCoordinates;
+    private List<LatLng> mLatLngCoordinates;
 
     public List<LatLng> getCoordinates() {
         return mLatLngCoordinates;

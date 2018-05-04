@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -41,7 +41,7 @@ public class CitiesFragment extends ListFragment {
     public static final String FRAGMENT_TAG =
             BuildConfig.APPLICATION_ID + ".CITIES_FRAGMENT_TAG";
 
-    protected final Tracking mTracking;
+    private final Tracking mTracking;
 
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;
