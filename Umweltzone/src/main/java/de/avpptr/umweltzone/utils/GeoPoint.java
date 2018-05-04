@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -45,8 +45,12 @@ public final class GeoPoint {
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));
 
+    // Parceler: Avoid reflection
+    @SuppressWarnings("WeakerAccess")
     protected double mLatitude = INVALID_LATITUDE;
 
+    // Parceler: Avoid reflection
+    @SuppressWarnings("WeakerAccess")
     protected double mLongitude = INVALID_LONGITUDE;
 
     public GeoPoint() {
