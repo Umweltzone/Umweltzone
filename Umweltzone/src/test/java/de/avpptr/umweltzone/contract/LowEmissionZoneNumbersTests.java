@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,19 +28,19 @@ import static org.junit.Assert.fail;
 public class LowEmissionZoneNumbersTests {
 
     @Test
-    public void getNextWithRed() throws Exception {
+    public void getNextWithRed() {
         assertThat(LowEmissionZoneNumbers.getNext(LowEmissionZoneNumbers.RED))
                 .isEqualTo(LowEmissionZoneNumbers.YELLOW);
     }
 
     @Test
-    public void getNextWithYellow() throws Exception {
+    public void getNextWithYellow() {
         assertThat(LowEmissionZoneNumbers.getNext(LowEmissionZoneNumbers.YELLOW))
                 .isEqualTo(LowEmissionZoneNumbers.GREEN);
     }
 
     @Test
-    public void getNextWithGreen() throws Exception {
+    public void getNextWithGreen() {
         try {
             LowEmissionZoneNumbers.getNext(LowEmissionZoneNumbers.GREEN);
             fail();

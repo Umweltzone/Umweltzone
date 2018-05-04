@@ -56,7 +56,7 @@ public class ContentProviderTest {
     private Context mContext;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         mContext = getInstrumentation().getTargetContext();
     }
 
@@ -75,7 +75,7 @@ public class ContentProviderTest {
     }
 
     @Test
-    public void testGetCircuits_worksAtAll() throws Exception {
+    public void testGetCircuits_worksAtAll() {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             assertThat(getCircuits(zoneName))
                     .isNotNull()
@@ -84,7 +84,7 @@ public class ContentProviderTest {
     }
 
     @Test
-    public void testGetCircuits_usesCaches() throws Exception {
+    public void testGetCircuits_usesCaches() {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             List<Circuit> circuits = getCircuits(zoneName);
             assertThat(circuits).isSameAs(getCircuits(zoneName));
@@ -92,14 +92,14 @@ public class ContentProviderTest {
     }
 
     @Test
-    public void testGetResourceId_worksAtAll() throws Exception {
+    public void testGetResourceId_worksAtAll() {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             assertThat(getZoneJsonResourceId(zoneName)).isNotNull();
         }
     }
 
     @Test
-    public void testGetResourceId_usesCaches() throws Exception {
+    public void testGetResourceId_usesCaches() {
         for (String zoneName : ZONES_WITH_COORDINATES) {
             @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
             assertThat(zoneJsonResourceId).isSameAs(getZoneJsonResourceId(zoneName));
