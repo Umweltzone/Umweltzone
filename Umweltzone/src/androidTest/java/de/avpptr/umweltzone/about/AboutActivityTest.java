@@ -106,6 +106,10 @@ public class AboutActivityTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.appinfo_references_name_parceler)));
+        onView(withId(R.id.app_info_snack_engage))
+                .perform(scrollTo())
+                .check(matches(isDisplayed()))
+                .check(matches(withText(R.string.appinfo_references_name_snack_engage)));
         onView(withId(R.id.app_info_trace_droid))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
