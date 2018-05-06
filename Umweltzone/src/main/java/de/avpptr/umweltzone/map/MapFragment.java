@@ -17,6 +17,7 @@
 
 package de.avpptr.umweltzone.map;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -34,6 +35,7 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
@@ -71,6 +73,11 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     private static final String MAP_VIEW_BUNDLE_KEY =
             BuildConfig.APPLICATION_ID + ".MAP_VIEW_BUNDLE_KEY";
 
+    private final View.OnClickListener MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER =
+            view -> requestMyLocationActivation();
+
+    private Button mMyLocationActivationView;
+
     private MapView mMapView;
 
     private GoogleMap mMap;
@@ -83,6 +90,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private PreferencesHelper mPreferencesHelper;
 
+    private MyLocationPermission myLocationPermission;
+
     public MapFragment() {
         this.mOnCameraIdleListener = new OnCameraIdleListener();
         mTracking = Umweltzone.getTracker();
@@ -91,6 +100,12 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     @Override
     protected int getLayoutResource() {
         return R.layout.fragment_map;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        myLocationPermission = new MyLocationPermission(this, mTracking);
     }
 
     @Override
@@ -113,6 +128,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         if (layout != null) {
             mMapView = (MapView) layout.findViewById(R.id.map_view);
             mMapView.onCreate(mapViewBundle);
+            mMyLocationActivationView = (Button) layout.findViewById(R.id.map_my_location_activation);
+            mMyLocationActivationView.setOnClickListener(MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER);
         }
         return layout;
     }
@@ -225,7 +242,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraIdleListener(mOnCameraIdleListener);
-        mMap.setMyLocationEnabled(true);
         if (mPreferencesHelper.storesZoneIsDrawable()) {
             if (mPreferencesHelper.restoreZoneIsDrawable()) {
                 drawPolygonOverlay();
@@ -265,6 +281,52 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             }
         }
         updateSubTitle();
+        initMyLocationActivation();
+    }
+
+    private void initMyLocationActivation() {
+        setMyLocationActivationViewVisibility(true);
+        boolean isGranted = myLocationPermission.isGranted();
+        boolean isDeclined = mPreferencesHelper.restoreMyLocationPermissionIsPermanentlyDeclined();
+        boolean requestActivation = !isGranted && !isDeclined;
+        setMyLocationActivationViewVisibility(requestActivation);
+        setMyLocationViewVisibility(isGranted);
+    }
+
+    private void requestMyLocationActivation() {
+        myLocationPermission.request();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MyLocationPermission.ACCESS_LOCATION_REQUEST_CODE: {
+                if (myLocationPermission.isGranted(grantResults)) {
+                    setMyLocationActivationViewVisibility(false);
+                    setMyLocationViewVisibility(true);
+                } else {
+                    if (myLocationPermission.canShowRationale()) {
+                        setMyLocationActivationViewVisibility(true);
+                    } else {
+                        setMyLocationActivationViewVisibility(false);
+                        mPreferencesHelper.storeMyLocationPermissionIsPermanentlyDeclined(true);
+                    }
+                }
+                break;
+            }
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void setMyLocationActivationViewVisibility(boolean isVisible) {
+        int visibility = isVisible ? View.VISIBLE : View.GONE;
+        mMyLocationActivationView.setVisibility(visibility);
+    }
+
+    @SuppressLint("MissingPermission")
+    private void setMyLocationViewVisibility(boolean isVisible) {
+        mMap.setMyLocationEnabled(isVisible);
     }
 
     private void drawPolygonOverlay() {

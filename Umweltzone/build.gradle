@@ -49,7 +49,7 @@ android {
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""

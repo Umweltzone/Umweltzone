@@ -90,6 +90,13 @@ public class GoogleAnalyticsTracking implements Tracking {
                 break;
             case ShareAppClick:
                 trackEvent("menu", "menu_item_click", "share_app_" + parameter);
+                break;
+            case RequestPermission:
+                trackEvent("permission", "request", "" + parameter);
+                break;
+            case PermissionResult:
+                trackEvent("permission", "result", "" + parameter);
+                break;
         }
     }
 
