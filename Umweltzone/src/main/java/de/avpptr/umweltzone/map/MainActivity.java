@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -45,7 +45,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_map);
+        initFragment(new MapFragment(), MapFragment.FRAGMENT_TAG);
         mActionBar.setDisplayHomeAsUpEnabled(false);
         mActionBar.setHomeButtonEnabled(false);
         showTraceDroidDialog();

@@ -22,6 +22,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -29,24 +31,29 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
 
 import java.util.List;
 
+import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -56,7 +63,15 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 
-public class MapFragment extends SupportMapFragment implements OnMapReadyCallback {
+public class MapFragment extends BaseFragment implements OnMapReadyCallback {
+
+    public static final String FRAGMENT_TAG =
+            BuildConfig.APPLICATION_ID + ".MAP_FRAGMENT_TAG";
+
+    private static final String MAP_VIEW_BUNDLE_KEY =
+            BuildConfig.APPLICATION_ID + ".MAP_VIEW_BUNDLE_KEY";
+
+    private MapView mMapView;
 
     private GoogleMap mMap;
 
@@ -74,16 +89,80 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
     }
 
     @Override
+    protected int getLayoutResource() {
+        return R.layout.fragment_map;
+    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();
     }
 
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View layout = super.onCreateView(inflater, container, savedInstanceState);
+        Bundle mapViewBundle = null;
+        if (savedInstanceState != null) {
+            mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        }
+        if (layout != null) {
+            mMapView = (MapView) layout.findViewById(R.id.map_view);
+            mMapView.onCreate(mapViewBundle);
+        }
+        return layout;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mMapView.onStart();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+        mMapView.onResume();
         setUpMapIfNeeded();
+    }
+
+    @Override
+    public void onPause() {
+        mMapView.onPause();
+        super.onPause();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Bundle mapViewBundle = outState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        if (mapViewBundle == null) {
+            mapViewBundle = new Bundle();
+            outState.putBundle(MAP_VIEW_BUNDLE_KEY, mapViewBundle);
+        }
+        mMapView.onSaveInstanceState(mapViewBundle);
+    }
+
+    @Override
+    public void onStop() {
+        mMapView.onStop();
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mMapView.onLowMemory();
     }
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
@@ -127,10 +206,7 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
                         connectionResultString);
                 showGooglePlayServicesErrorDialog(activity, connectionResult);
             } else {
-                FragmentManager fragmentManager = activity.getSupportFragmentManager();
-                SupportMapFragment mapFragment =
-                        (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
-                mapFragment.getMapAsync(this);
+                mMapView.getMapAsync(this);
             }
         }
     }
