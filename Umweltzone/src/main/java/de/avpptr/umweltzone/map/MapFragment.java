@@ -243,7 +243,7 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
     private void updateSubTitle() {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
-        if (activity != null && lowEmissionZone != null) {
+        if (lowEmissionZone != null) {
             String title = lowEmissionZone.displayName;
             ActionBar actionBar = activity.getSupportActionBar();
             if (actionBar != null) {
