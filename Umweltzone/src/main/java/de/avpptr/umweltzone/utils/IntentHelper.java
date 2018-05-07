@@ -77,7 +77,7 @@ public class IntentHelper {
     }
 
     public static Intent getCityInfoIntent(@NonNull Context context,
-            @Nullable LowEmissionZone lowEmissionZone) {
+                                           @Nullable LowEmissionZone lowEmissionZone) {
         Intent intent = getIntent(context, CityInfoActivity.class);
         intent.putExtra(CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE,
                 Parcels.wrap(lowEmissionZone));

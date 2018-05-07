@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,13 +22,13 @@ import android.content.SharedPreferences;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
 
-public class BoundingBoxPreference {
+class BoundingBoxPreference {
 
-    protected final GeoPointPreference mSouthWestPreference;
+    private final GeoPointPreference mSouthWestPreference;
 
-    protected final GeoPointPreference mNorthEastPreference;
+    private final GeoPointPreference mNorthEastPreference;
 
-    public BoundingBoxPreference(
+    private BoundingBoxPreference(
             final SharedPreferences sharedPreferences,
             final String key,
             final BoundingBox defaultBoundingBox) {
@@ -40,7 +40,7 @@ public class BoundingBoxPreference {
                 sharedPreferences, keyNorthEast, defaultBoundingBox.getNorthEast());
     }
 
-    public BoundingBoxPreference(
+    BoundingBoxPreference(
             final SharedPreferences sharedPreferences,
             final String key) {
         this(sharedPreferences, key, BoundingBox.getInvalidBoundingBox());

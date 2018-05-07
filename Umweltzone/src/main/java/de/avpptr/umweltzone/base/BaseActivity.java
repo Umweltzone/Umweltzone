@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -153,14 +153,14 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void showChangeLogDialog() {
+    protected void showChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
         if (changeLog.isFirstRun() && !isFinishing()) {
             changeLog.getLogDialog().show();
         }
     }
 
-    public void showFullChangeLogDialog() {
+    private void showFullChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
         changeLog.getFullLogDialog().show();
     }

@@ -49,7 +49,7 @@ public class NoCitySelectedFragmentTest {
     private Context mContext;
 
     @Rule
-    public ActivityTestRule mActivityRule =
+    public final ActivityTestRule mActivityRule =
             new ActivityTestRule<>(CityInfoActivity.class, true, false);
 
     @Before

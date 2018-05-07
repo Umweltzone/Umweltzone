@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -90,7 +90,7 @@ public class CityInfoFragment extends BaseFragment {
     }
 
     private void setUpCityInfo(@NonNull final Activity activity,
-            @NonNull final LowEmissionZone lowEmissionZone) {
+                               @NonNull final LowEmissionZone lowEmissionZone) {
 
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
@@ -138,13 +138,10 @@ public class CityInfoFragment extends BaseFragment {
 
         // Show on map button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
-        showOnMapButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mTracking.track(TrackingPoint.CityInfoShowOnMapClick, lowEmissionZone.name);
-                Umweltzone.centerZoneRequested = true;
-                startActivity(IntentHelper.getNewMapIntent(activity));
-            }
+        showOnMapButton.setOnClickListener(view -> {
+            mTracking.track(TrackingPoint.CityInfoShowOnMapClick, lowEmissionZone.name);
+            Umweltzone.centerZoneRequested = true;
+            startActivity(IntentHelper.getNewMapIntent(activity));
         });
 
         // Further information button

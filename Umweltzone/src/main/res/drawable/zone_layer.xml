@@ -18,7 +18,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-            android:id="@+id/zone_shape"
-            android:drawable="@drawable/zone_shape"/>
+        android:id="@+id/zone_shape"
+        android:drawable="@drawable/zone_shape" />
 
 </layer-list>

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -30,23 +30,27 @@ import java.util.Locale;
 @Parcel
 public final class GeoPoint {
 
-    public static final double MAX_LATITUDE = 90.0;
+    private static final double MAX_LATITUDE = 90.0;
 
-    public static final double MIN_LATITUDE = -90.0;
+    private static final double MIN_LATITUDE = -90.0;
 
-    public static final double MAX_LONGITUDE = 180.0;
+    private static final double MAX_LONGITUDE = 180.0;
 
-    public static final double MIN_LONGITUDE = -180.0;
+    private static final double MIN_LONGITUDE = -180.0;
 
-    public static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
+    private static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
 
-    public static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
+    private static final double INVALID_LONGITUDE = MIN_LONGITUDE - 1;
 
     private static final DecimalFormat df =
             new DecimalFormat("@@@@@", new DecimalFormatSymbols(Locale.US));
 
+    // Parceler: Avoid reflection
+    @SuppressWarnings("WeakerAccess")
     protected double mLatitude = INVALID_LATITUDE;
 
+    // Parceler: Avoid reflection
+    @SuppressWarnings("WeakerAccess")
     protected double mLongitude = INVALID_LONGITUDE;
 
     public GeoPoint() {

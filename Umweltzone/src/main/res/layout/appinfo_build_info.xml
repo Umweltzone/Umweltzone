@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,34 +15,43 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:gravity="center"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:orientation="vertical"
+    tools:parentTag="android.widget.LinearLayout">
 
     <TextView
-            style="@style/AppInfo.ContentTitle"
-            android:text="@string/appinfo_build_info_title"/>
+        style="@style/AppInfo.ContentTitle"
+        android:text="@string/appinfo_build_info_title" />
 
     <TextView
-            style="@style/AppInfo.SubTitle"
-            android:text="@string/appinfo_build_info_time"/>
+        style="@style/AppInfo.SubTitle"
+        android:text="@string/appinfo_build_info_time" />
 
     <TextView
-            android:id="@+id/buildTime"
-            style="@style/AppInfo.SingleLineTextContent"/>
+        android:id="@+id/buildTime"
+        style="@style/AppInfo.SingleLineTextContent"
+        tools:text="@sample/build_info.json/buildTime" />
 
     <TextView
-            style="@style/AppInfo.SubTitle"
-            android:text="@string/appinfo_build_info_version_code"/>
+        style="@style/AppInfo.SubTitle"
+        android:text="@string/appinfo_build_info_version_code" />
 
     <TextView
-            android:id="@+id/buildVersionCode"
-            style="@style/AppInfo.SingleLineTextContent"/>
+        android:id="@+id/buildVersionCode"
+        style="@style/AppInfo.SingleLineTextContent"
+        tools:text="@sample/build_info.json/versionCode" />
 
     <TextView
-            style="@style/AppInfo.SubTitle"
-            android:text="@string/appinfo_build_info_hash"/>
+        style="@style/AppInfo.SubTitle"
+        android:text="@string/appinfo_build_info_hash" />
 
     <TextView
-            android:id="@+id/buildHash"
-            style="@style/AppInfo.SingleLineTextContent"/>
+        android:id="@+id/buildHash"
+        style="@style/AppInfo.SingleLineTextContent"
+        tools:text="@sample/build_info.json/buildHash" />
 
 </merge>

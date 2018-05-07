@@ -16,15 +16,15 @@
   -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                tools:background="@android:color/holo_red_light"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".faqs.FaqActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@android:color/holo_red_light"
+    tools:context=".faqs.FaqActivity">
 
     <ExpandableListView
-            android:id="@+id/faq_list"
-            tools:listitem="@layout/faq_list_item"
-            style="@style/Faq.ExpandableListView"/>
+        android:id="@+id/faq_list"
+        style="@style/Faq.ExpandableListView"
+        tools:listitem="@layout/faq_list_item" />
 
 </RelativeLayout>

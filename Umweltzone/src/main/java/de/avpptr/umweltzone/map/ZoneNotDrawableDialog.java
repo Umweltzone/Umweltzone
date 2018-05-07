@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,6 @@
 package de.avpptr.umweltzone.map;
 
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -49,7 +48,7 @@ import de.avpptr.umweltzone.utils.SnackBarHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
 
-    protected final Tracking mTracking;
+    private final Tracking mTracking;
 
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();
@@ -98,37 +97,29 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setView(zoneNotDrawableView)
                 .setTitle(R.string.zone_not_drawable_title)
-                .setPositiveButton(R.string.zone_not_drawable_open_email,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(final DialogInterface dialog, int whichButton) {
-                                Intent intent = IntentHelper.getSendEmailIntent(
-                                        activity,
-                                        toRecipients,
-                                        getBccRecipients(),
-                                        getEmailSubject(zoneDisplayName),
-                                        getEmailMessage(zoneDisplayName)
-                                );
-                                mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
-                                        lowEmissionZone.name);
-                                if (intent.resolveActivity(activity.getPackageManager()) != null) {
-                                    startActivity(Intent.createChooser(intent, getString(
-                                            R.string.zone_not_drawable_app_chooser_title)));
-                                } else {
-                                    SnackBarHelper.showError(activity, R.id.map,
-                                            R.string.zone_not_drawable_no_email_app);
-                                }
-                            }
-                        })
-                .setNegativeButton(R.string.zone_not_drawable_later,
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(final DialogInterface dialog, int whichButton) {
-                                // Nothing to do here
-                                mTracking.track(TrackingPoint.ZoneNotDrawableLaterClick,
-                                        lowEmissionZone.name);
-                            }
-                        });
+                .setPositiveButton(R.string.zone_not_drawable_open_email, (dialog, whichButton) -> {
+                    Intent intent = IntentHelper.getSendEmailIntent(
+                            activity,
+                            toRecipients,
+                            getBccRecipients(),
+                            getEmailSubject(zoneDisplayName),
+                            getEmailMessage(zoneDisplayName)
+                    );
+                    mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
+                            lowEmissionZone.name);
+                    if (intent.resolveActivity(activity.getPackageManager()) != null) {
+                        startActivity(Intent.createChooser(intent, getString(
+                                R.string.zone_not_drawable_app_chooser_title)));
+                    } else {
+                        SnackBarHelper.showError(activity, R.id.map,
+                                R.string.zone_not_drawable_no_email_app);
+                    }
+                })
+                .setNegativeButton(R.string.zone_not_drawable_later, (dialog, whichButton) -> {
+                    // Nothing to do here
+                    mTracking.track(TrackingPoint.ZoneNotDrawableLaterClick,
+                            lowEmissionZone.name);
+                });
         return builder.create();
     }
 
