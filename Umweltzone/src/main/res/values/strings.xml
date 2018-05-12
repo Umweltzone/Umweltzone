@@ -26,6 +26,7 @@
     <string name="action_feedback">@string/feedback_activity_title</string>
     <string name="action_share_app">Share this app &#8230;</string>
     <string name="action_changelog">Version information</string>
+    <string name="action_settings">@string/settings_activity_title</string>
     <string name="action_about">@string/about_activity_title</string>
 
     <!-- Share intent -->
@@ -421,5 +422,19 @@
     <string name="snack_engage_rate_action">Please rate the app</string>
     <string name="snack_engage_beta_testing_title">Power user?</string>
     <string name="snack_engage_beta_testing_action">Become a beta tester</string>
+
+    <!-- Settings -->
+    <string name="settings_activity_title">Settings</string>
+    <string name="settings_category_title_data_privacy">Data privacy</string>
+    <string name="settings_key_google_analytics" translatable="false">
+        pref_key_google_analytics
+    </string>
+    <string name="settings_title_google_analytics">Send anonymized usage statistics</string>
+    <string name="settings_summary_google_analytics">
+        Allows to transmit usage statistics and crash reports to Google Analytics. This
+        anonymized data is used by the developer of the Umweltzone app to analyze program
+        errors and to continuously improve the app.
+    </string>
+    <string name="settings_default_value_google_analytics" translatable="false">true</string>
 
 </resources>

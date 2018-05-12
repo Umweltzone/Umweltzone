@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -36,6 +36,7 @@ import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.settings.SettingsActivity;
 
 public class IntentHelper {
 
@@ -86,6 +87,10 @@ public class IntentHelper {
 
     public static Intent getFeedbackIntent(@NonNull Context context) {
         return getIntent(context, FeedbackActivity.class);
+    }
+
+    public static Intent getSettingsIntent(@NonNull Context context) {
+        return getIntent(context, SettingsActivity.class);
     }
 
     public static Intent getAboutIntent(@NonNull Context context) {

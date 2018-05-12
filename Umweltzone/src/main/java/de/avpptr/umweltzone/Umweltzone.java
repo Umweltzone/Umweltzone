@@ -39,15 +39,24 @@ public class Umweltzone extends Application {
 
     public void onCreate() {
         super.onCreate();
-        mTracking = getTracking(getApplicationContext());
+        initTracking();
         TraceDroid.init(this);
+    }
+
+    public void initTracking() {
+        mTracking = getTracking(getApplicationContext());
     }
 
     private Tracking getTracking(Context context) {
         if (BuildConfig.DEBUG) {
             return new NoTracking();
         } else {
-            return new GoogleAnalyticsTracking(context);
+            boolean isEnabled = getPreferencesHelper().restoreGoogleAnalyticsIsEnabled();
+            if (isEnabled) {
+                return new GoogleAnalyticsTracking(context);
+            } else {
+                return new NoTracking();
+            }
         }
     }
 

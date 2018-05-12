@@ -42,6 +42,8 @@ public class PreferencesHelper {
 
     private final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
 
+    private final BooleanPreference mGoogleAnalyticsIsEnabledPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mCityNamePreference = new StringPreference(
@@ -58,6 +60,8 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
         mDidParseZoneDataAfterUpdate250Preference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
+        mGoogleAnalyticsIsEnabledPreference = new BooleanPreference(
+                sharedPreferences, Preferences.KEY_GOOGLE_ANALYTICS_IS_ENABLED);
     }
 
     // Last known location / city name
@@ -156,6 +160,16 @@ public class PreferencesHelper {
 
     public boolean restoreDidParseZoneDataAfterUpdate250() {
         return mDidParseZoneDataAfterUpdate250Preference.get();
+    }
+
+    // Google Analytics
+
+    public void storeGoogleAnalyticsIsEnabled(boolean flag) {
+        mGoogleAnalyticsIsEnabledPreference.set(flag);
+    }
+
+    public boolean restoreGoogleAnalyticsIsEnabled() {
+        return mGoogleAnalyticsIsEnabledPreference.get();
     }
 
     // Smart helper methods
