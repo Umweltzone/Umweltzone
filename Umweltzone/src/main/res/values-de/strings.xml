@@ -24,6 +24,7 @@
     <string name="action_feedback">@string/feedback_activity_title</string>
     <string name="action_share_app">App teilen &#8230;</string>
     <string name="action_changelog">Versionsinformationen</string>
+    <string name="action_settings">@string/settings_activity_title</string>
     <string name="action_about">@string/about_activity_title</string>
 
     <!-- Share intent -->
@@ -314,5 +315,15 @@
     <string name="snack_engage_rate_action">Bitte bewerte die App</string>
     <string name="snack_engage_beta_testing_title">Neugierig?</string>
     <string name="snack_engage_beta_testing_action">Werde Beta-Tester</string>
+
+    <!-- Settings -->
+    <string name="settings_activity_title">Einstellungen</string>
+    <string name="settings_category_title_data_privacy">Datenschutz</string>
+    <string name="settings_title_google_analytics">Anonyme Nutzungsstatistiken senden</string>
+    <string name="settings_summary_google_analytics">
+        Erlaubt das Übermitteln von Nutzungsdaten und Fehlerberichten an Google Analytics.
+        Diese anonymisierten Daten helfen dem Entwickler der Umweltzone-App bei der Analyse
+        von Programmfehlern und bei der Weiterentwicklung der App.
+    </string>
 
 </resources>

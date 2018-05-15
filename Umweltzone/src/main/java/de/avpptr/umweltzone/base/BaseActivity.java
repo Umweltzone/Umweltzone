@@ -97,6 +97,9 @@ public abstract class BaseActivity extends AppCompatActivity {
             case R.id.action_changelog:
                 showFullChangeLogDialog();
                 return true;
+            case R.id.action_settings:
+                startActivity(IntentHelper.getSettingsIntent(this));
+                return true;
             case R.id.action_about:
                 Intent intent = IntentHelper.getAboutIntent(this);
                 startActivity(intent);

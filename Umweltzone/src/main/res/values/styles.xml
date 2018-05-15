@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2016  Tobias Preuss
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -34,12 +34,23 @@
         <item name="colorControlHighlight">@color/accent</item>
     </style>
 
+    <!-- Settings -->
+
+    <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay">
+        <item name="checkBoxPreferenceStyle">@style/AppPreference.CheckBoxPreference</item>
+    </style>
+
+    <style name="AppPreference.CheckBoxPreference" parent="@style/Preference.CheckBoxPreference">
+        <item name="android:layout">@layout/settings_item</item>
+    </style>
+
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
         <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
         <item name="alertDialogTheme">@style/AppDialog</item>
+        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
     </style>
 
     <style name="AppDialog" parent="Theme.AppCompat.Light.Dialog.Alert">

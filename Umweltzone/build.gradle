@@ -122,6 +122,7 @@ configurations {
 
 dependencies {
     implementation "com.android.support:design:$androidSupportVersion"
+    implementation "com.android.support:preference-v7:$androidSupportVersion"
     implementation "com.google.android.gms:play-services-base:$playServicesVersion"
     implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"

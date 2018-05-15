@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -42,4 +42,6 @@ public interface Preferences {
     String KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250 =
             BuildConfig.APPLICATION_ID + ".KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250";
 
+    String KEY_GOOGLE_ANALYTICS_IS_ENABLED =
+            BuildConfig.APPLICATION_ID + ".KEY_GOOGLE_ANALYTICS_IS_ENABLED";
 }
