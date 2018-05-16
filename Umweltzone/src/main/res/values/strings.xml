@@ -36,6 +36,12 @@
         free: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
+    <!-- Map -->
+    <string name="map_my_location_activation_hint">
+        Tap here to configure the location lookup in order to show
+        your own position on the map.
+    </string>
+
     <!-- FeedbackActivity -->
     <string name="feedback_activity_title">Feedback</string>
 

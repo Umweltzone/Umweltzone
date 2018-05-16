@@ -17,11 +17,14 @@
 
 package de.avpptr.umweltzone.map;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -29,24 +32,30 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
 
 import java.util.List;
 
+import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -56,7 +65,20 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.MapDrawer;
 
-public class MapFragment extends SupportMapFragment implements OnMapReadyCallback {
+public class MapFragment extends BaseFragment implements OnMapReadyCallback {
+
+    public static final String FRAGMENT_TAG =
+            BuildConfig.APPLICATION_ID + ".MAP_FRAGMENT_TAG";
+
+    private static final String MAP_VIEW_BUNDLE_KEY =
+            BuildConfig.APPLICATION_ID + ".MAP_VIEW_BUNDLE_KEY";
+
+    private final View.OnClickListener MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER =
+            view -> requestMyLocationActivation();
+
+    private Button mMyLocationActivationView;
+
+    private MapView mMapView;
 
     private GoogleMap mMap;
 
@@ -68,9 +90,22 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
 
     private PreferencesHelper mPreferencesHelper;
 
+    private MyLocationPermission myLocationPermission;
+
     public MapFragment() {
         this.mOnCameraIdleListener = new OnCameraIdleListener();
         mTracking = Umweltzone.getTracker();
+    }
+
+    @Override
+    protected int getLayoutResource() {
+        return R.layout.fragment_map;
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        myLocationPermission = new MyLocationPermission(this, mTracking);
     }
 
     @Override
@@ -80,10 +115,71 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
         mPreferencesHelper = application.getPreferencesHelper();
     }
 
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
+        View layout = super.onCreateView(inflater, container, savedInstanceState);
+        Bundle mapViewBundle = null;
+        if (savedInstanceState != null) {
+            mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        }
+        if (layout != null) {
+            mMapView = (MapView) layout.findViewById(R.id.map_view);
+            mMapView.onCreate(mapViewBundle);
+            mMyLocationActivationView = (Button) layout.findViewById(R.id.map_my_location_activation);
+            mMyLocationActivationView.setOnClickListener(MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER);
+        }
+        return layout;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mMapView.onStart();
+    }
+
     @Override
     public void onResume() {
         super.onResume();
+        mMapView.onResume();
         setUpMapIfNeeded();
+    }
+
+    @Override
+    public void onPause() {
+        mMapView.onPause();
+        super.onPause();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Bundle mapViewBundle = outState.getBundle(MAP_VIEW_BUNDLE_KEY);
+        if (mapViewBundle == null) {
+            mapViewBundle = new Bundle();
+            outState.putBundle(MAP_VIEW_BUNDLE_KEY, mapViewBundle);
+        }
+        mMapView.onSaveInstanceState(mapViewBundle);
+    }
+
+    @Override
+    public void onStop() {
+        mMapView.onStop();
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        mMapView.onDestroy();
+        super.onDestroy();
+    }
+
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mMapView.onLowMemory();
     }
 
     private void zoomToBounds(LatLngBounds latLngBounds) {
@@ -127,10 +223,7 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
                         connectionResultString);
                 showGooglePlayServicesErrorDialog(activity, connectionResult);
             } else {
-                FragmentManager fragmentManager = activity.getSupportFragmentManager();
-                SupportMapFragment mapFragment =
-                        (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
-                mapFragment.getMapAsync(this);
+                mMapView.getMapAsync(this);
             }
         }
     }
@@ -149,7 +242,6 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraIdleListener(mOnCameraIdleListener);
-        mMap.setMyLocationEnabled(true);
         if (mPreferencesHelper.storesZoneIsDrawable()) {
             if (mPreferencesHelper.restoreZoneIsDrawable()) {
                 drawPolygonOverlay();
@@ -189,6 +281,52 @@ public class MapFragment extends SupportMapFragment implements OnMapReadyCallbac
             }
         }
         updateSubTitle();
+        initMyLocationActivation();
+    }
+
+    private void initMyLocationActivation() {
+        setMyLocationActivationViewVisibility(true);
+        boolean isGranted = myLocationPermission.isGranted();
+        boolean isDeclined = mPreferencesHelper.restoreMyLocationPermissionIsPermanentlyDeclined();
+        boolean requestActivation = !isGranted && !isDeclined;
+        setMyLocationActivationViewVisibility(requestActivation);
+        setMyLocationViewVisibility(isGranted);
+    }
+
+    private void requestMyLocationActivation() {
+        myLocationPermission.request();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case MyLocationPermission.ACCESS_LOCATION_REQUEST_CODE: {
+                if (myLocationPermission.isGranted(grantResults)) {
+                    setMyLocationActivationViewVisibility(false);
+                    setMyLocationViewVisibility(true);
+                } else {
+                    if (myLocationPermission.canShowRationale()) {
+                        setMyLocationActivationViewVisibility(true);
+                    } else {
+                        setMyLocationActivationViewVisibility(false);
+                        mPreferencesHelper.storeMyLocationPermissionIsPermanentlyDeclined(true);
+                    }
+                }
+                break;
+            }
+            default:
+                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    private void setMyLocationActivationViewVisibility(boolean isVisible) {
+        int visibility = isVisible ? View.VISIBLE : View.GONE;
+        mMyLocationActivationView.setVisibility(visibility);
+    }
+
+    @SuppressLint("MissingPermission")
+    private void setMyLocationViewVisibility(boolean isVisible) {
+        mMap.setMyLocationEnabled(isVisible);
     }
 
     private void drawPolygonOverlay() {

@@ -66,7 +66,7 @@ public abstract class TraceDroidEmailSender {
                         context.startActivity(Intent.createChooser(emailIntent, sendMail));
                         TraceDroid.deleteStacktraceFiles();
                     } else {
-                        SnackBarHelper.showError(context, R.id.map,
+                        SnackBarHelper.showError(context, R.id.map_view,
                                 R.string.trace_droid_no_email_app);
                     }
                 })

@@ -33,6 +33,8 @@ public enum TrackingPoint {
     ZoneNotDrawableLaterClick("zone_not_drawable_later"),
     ZoneNotDrawableOpenEmailClick("zone_not_drawable_open_email"),
     ShareAppClick("share_app_click"),
+    RequestPermission("request_permission"),
+    PermissionResult("permission_result"),
 
     // Errors
     ResourceNotFoundError("resource_not_found"),

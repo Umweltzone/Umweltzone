@@ -44,6 +44,8 @@ public class PreferencesHelper {
 
     private final BooleanPreference mGoogleAnalyticsIsEnabledPreference;
 
+    private final BooleanPreference mMyLocationPermissionIsPermanentlyDeclinedPreference;
+
 
     public PreferencesHelper(final SharedPreferences sharedPreferences) {
         mCityNamePreference = new StringPreference(
@@ -62,6 +64,8 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
         mGoogleAnalyticsIsEnabledPreference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_GOOGLE_ANALYTICS_IS_ENABLED);
+        mMyLocationPermissionIsPermanentlyDeclinedPreference = new BooleanPreference(
+                sharedPreferences, Preferences.KEY_MY_LOCATION_PERMISSION_IS_PERMANENTLY_DECLINED);
     }
 
     // Last known location / city name
@@ -170,6 +174,16 @@ public class PreferencesHelper {
 
     public boolean restoreGoogleAnalyticsIsEnabled() {
         return mGoogleAnalyticsIsEnabledPreference.get();
+    }
+
+    // My location permission
+
+    public void storeMyLocationPermissionIsPermanentlyDeclined(boolean flag) {
+        mMyLocationPermissionIsPermanentlyDeclinedPreference.set(flag);
+    }
+
+    public boolean restoreMyLocationPermissionIsPermanentlyDeclined() {
+        return mMyLocationPermissionIsPermanentlyDeclinedPreference.get();
     }
 
     // Smart helper methods
