@@ -1,5 +1,35 @@
 # Umweltzone changelog
 
+## [v.3.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.3.0)
+
+* Published: 2018-05-18
+
+### Features, improvements and maintenance
+
+* Update contact emails for Regensburg., [56d62](https://bitbucket.org/tbsprs/umweltzone/commits/56d6244e4ab3a9829c097aba2bfbc22867a5627f)
+* Update zone data for Mainz (provided by the city)., [c84ea](https://bitbucket.org/tbsprs/umweltzone/commits/c84eae2ce80d2c586c1ea638f3e0b65ea7f6dedd)
+* Request permission to enable "my location" feature., [10372](https://bitbucket.org/tbsprs/umweltzone/commits/10372739b0785f69ce8d675a5bbd0ecfd79bb468)
+* Prepare map screen for "my location" activation overlay., [3c9e6](https://bitbucket.org/tbsprs/umweltzone/commits/3c9e610315401d42a7a149a674262d0d6c260c7a)
+* Let users enable or disable Google Analytics in settings., [41e89](https://bitbucket.org/tbsprs/umweltzone/commits/41e89910649bb6a34b649510ba6421a70508c0b0)
+* Clean up project, resolve Lint warnings., [109eb](https://bitbucket.org/tbsprs/umweltzone/commits/109eb74a2c0dc491f132c124d44cd921a6d56279)
+* Improve preview rendering of layouts., [c43df](https://bitbucket.org/tbsprs/umweltzone/commits/c43dfe6ec66b1a6a4ecb15b0b853bda7acf0ca7f)
+
+### Libraries, build tools, SDK
+
+* Use proguard-gradle v.6.0.3., [50d54](https://bitbucket.org/tbsprs/umweltzone/commits/50d544b6a156f7ba19860032cb1443cc97994725)
+* Update targetSdkVersion to 23., [10372](https://bitbucket.org/tbsprs/umweltzone/commits/10372739b0785f69ce8d675a5bbd0ecfd79bb468)
+* Use Java 8., [dbe66](https://bitbucket.org/tbsprs/umweltzone/commits/dbe668730e6f3ad7419728eb8eb5eaf8ee62acd4)
+* Disallow release candidates as upgradable versions., [3a98a](https://bitbucket.org/tbsprs/umweltzone/commits/3a98a6f93a7493511f215f16516b59083155c79d)
+* Let ProGuard optimize for Android., [2c2db](https://bitbucket.org/tbsprs/umweltzone/commits/2c2db7ea58779b9e0c37f0580d2fe6a51f254a0f)
+* Use Gradle wrapper v.4.7., [17008](https://bitbucket.org/tbsprs/umweltzone/commits/170083ae47c5c8bc8b448d201f40cbc785b788e2)
+* Migrate project to Android Studio 3., [62c38](https://bitbucket.org/tbsprs/umweltzone/commits/62c383375d4953d3580ed48f4c72c7995807c901)
+* Resolve build error while trying to find "trove4j"., [d6fdc](https://bitbucket.org/tbsprs/umweltzone/commits/d6fdc7605d8de9c40b4b5d19485ebfe4dbdd6de0)
+* Resolve deprecation warning: new cruncher is enabled by default., [83b0e](https://bitbucket.org/tbsprs/umweltzone/commits/83b0e0bf7abb08fc4c8fea5a2b1d897544197240)
+* Update statement about supported Android versions., [1d6fc](https://bitbucket.org/tbsprs/umweltzone/commits/1d6fc04b3836c011e759c8f8c3661665bb2d2a20)
+* Use espresso v.3.0.2., [ea84d](https://bitbucket.org/tbsprs/umweltzone/commits/ea84d0facc7a88f0a7b3f2f65b873ab7777a175f)
+* Migrate deprecated instrumentation test to run with the Android Testing Support Library., [4c85f](https://bitbucket.org/tbsprs/umweltzone/commits/4c85fc36c4b671fd163d6c8ecc5f630ab66f30e8)
+
+
 ## [v.3.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.2.0)
 
 * Published: 2018-02-12

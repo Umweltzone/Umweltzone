@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2018  Tobias Preuss, Peter Vasil
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,26 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="3.3.0"
+        versioncode="303000">
+        <change>
+            Update: The zone data for Mainz is now officially provided by the city.
+        </change>
+        <change>
+            Android: The app is now optimized for Android 23 (Marshmallow) which
+            requires users to grant permission before the "my location" feature
+            can be used. The app shows a notice to do so if it is installed for
+            the first time.
+        </change>
+        <change>
+            New: Google Analytics can now be configured in the settings. Google Analytics
+            provides valuable information for the developer to further improve the app.
+        </change>
+        <change>
+            Update: Add two more e-mail addresses to contact Regensburg.
+        </change>
+    </release>
     <release
         version="3.2.0"
         versioncode="302000">
