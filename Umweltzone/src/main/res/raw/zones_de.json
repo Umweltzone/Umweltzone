@@ -765,16 +765,16 @@
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/mainz.html",
         "urlBadgeOnline" : "",
         "contactEmails" : null,
-        "geometrySource" : "OpenStreetMap",
-        "geometryUpdatedAt" : "2015-01-01",
+        "geometrySource" : "Landeshauptstadt Mainz",
+        "geometryUpdatedAt" : "2018-03-06",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 49.995078,
-                "longitude" : 8.264528
+                "latitude" : 49.964709,
+                "longitude" : 8.183407
             },
             "northEast" : {
-                "latitude" : 50.024503,
-                "longitude" : 8.321997
+                "latitude" : 50.025860,
+                "longitude" : 8.312130
             }
         }
     },
