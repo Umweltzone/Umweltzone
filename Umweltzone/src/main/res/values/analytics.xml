@@ -9,4 +9,7 @@
 
     <!--Enable automatic exception tracking-->
     <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <!--Remove the last octet of the device's IP address from tracking data-->
+    <bool name="ga_anonymizeIp">true</bool>
 </resources>
