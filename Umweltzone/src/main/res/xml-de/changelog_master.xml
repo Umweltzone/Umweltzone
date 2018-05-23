@@ -16,6 +16,18 @@
 -->
 <changelog>
     <release
+        version="3.3.1"
+        versioncode="303100">
+        <change>
+            Aktualisierung: Um die Privatsphäre der Nutzer noch besser zu
+            wahren, wird die IP-Adresse des Geräts anonymisiert, bevor sie
+            an Google Analytics übertragen wird.
+        </change>
+        <change>
+            Neu: Die Datenschutzerklärung ist in den Einstellungen verlinkt.
+        </change>
+    </release>
+    <release
         version="3.3.0"
         versioncode="303000">
         <change>

@@ -1,5 +1,16 @@
 # Umweltzone changelog
 
+## [v.3.3.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.3.1)
+
+* Published: 2018-05-24
+
+### Features, improvements and maintenance
+
+* Reference data privacy statement in settings., [f9770](https://bitbucket.org/tbsprs/umweltzone/commits/f9770e98555465b1340fd1e911ce300e07f438b4)
+* Add data privacy statement (German)., [bc5e6](https://bitbucket.org/tbsprs/umweltzone/commits/bc5e6a83ff444aebf44e5d9e98f6d4953e362d10)
+* Google Analytics: Anonymize the IP address of the user's device., [21eab](https://bitbucket.org/tbsprs/umweltzone/commits/21eab9f8d5aebb052b9862b6d8ff85e3a05a326f)
+
+
 ## [v.3.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.3.0)
 
 * Published: 2018-05-18

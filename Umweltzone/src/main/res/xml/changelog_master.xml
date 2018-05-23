@@ -16,6 +16,17 @@
 -->
 <changelog>
     <release
+        version="3.3.1"
+        versioncode="303100">
+        <change>
+            Update: In order to protect your privacy even more the IP address
+            of the device is anonymized before it is sent to Google Analytics.
+        </change>
+        <change>
+            New: The data privacy statement (German) is linked in settings.
+        </change>
+    </release>
+    <release
         version="3.3.0"
         versioncode="303000">
         <change>
