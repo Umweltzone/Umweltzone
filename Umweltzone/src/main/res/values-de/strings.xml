@@ -331,5 +331,8 @@
         Diese anonymisierten Daten helfen dem Entwickler der Umweltzone-App bei der Analyse
         von Programmfehlern und bei der Weiterentwicklung der App.
     </string>
+    <string name="settings_title_data_privacy_statement_de">
+        Datenschutzerklärung &#8230;
+    </string>
 
 </resources>

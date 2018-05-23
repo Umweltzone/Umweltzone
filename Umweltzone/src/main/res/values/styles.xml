@@ -38,9 +38,14 @@
 
     <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay">
         <item name="checkBoxPreferenceStyle">@style/AppPreference.CheckBoxPreference</item>
+        <item name="preferenceStyle">@style/AppPreference.Preference</item>
     </style>
 
     <style name="AppPreference.CheckBoxPreference" parent="@style/Preference.CheckBoxPreference">
+        <item name="android:layout">@layout/settings_item</item>
+    </style>
+
+    <style name="AppPreference.Preference" parent="@style/Preference">
         <item name="android:layout">@layout/settings_item</item>
     </style>
 

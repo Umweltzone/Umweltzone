@@ -442,5 +442,8 @@
         errors and to continuously improve the app.
     </string>
     <string name="settings_default_value_google_analytics" translatable="false">true</string>
+    <string name="settings_title_data_privacy_statement_de">
+        Data privacy statement (German) &#8230;
+    </string>
 
 </resources>
