@@ -45,7 +45,7 @@
 
     <!-- AboutActivity -->
     <string name="appinfo_application_logo_description">
-        Logo der Anwendung &#8220;Umweltzone&#8221;
+        Logo der &#8220;Umweltzone&#8221; App
     </string>
     <string name="about_activity_title">Über</string>
     <string name="appinfo_subtitle">
