@@ -433,7 +433,7 @@
     <string name="settings_activity_title">Settings</string>
     <string name="settings_category_title_data_privacy">Data privacy</string>
     <string name="settings_key_google_analytics" translatable="false">
-        pref_key_google_analytics
+        KEY_GOOGLE_ANALYTICS_IS_ENABLED
     </string>
     <string name="settings_title_google_analytics">Send anonymized usage statistics</string>
     <string name="settings_summary_google_analytics">
