@@ -100,6 +100,9 @@ public class GoogleAnalyticsTracking implements Tracking {
             case SettingsItemClick:
                 trackEvent("settings", "item_click", "" + parameter);
                 break;
+            case DataPrivacyModalItemClick:
+                trackEvent("data_privacy_modal", "item_click", "" + parameter);
+                break;
         }
     }
 

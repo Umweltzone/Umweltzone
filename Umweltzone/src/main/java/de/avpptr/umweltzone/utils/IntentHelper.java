@@ -32,6 +32,7 @@ import de.avpptr.umweltzone.cities.CitiesActivity;
 import de.avpptr.umweltzone.city.CityInfoActivity;
 import de.avpptr.umweltzone.city.CityInfoFragment;
 import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.dataprivacy.DataPrivacyActivity;
 import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
@@ -83,6 +84,10 @@ public class IntentHelper {
         intent.putExtra(CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE,
                 Parcels.wrap(lowEmissionZone));
         return intent;
+    }
+
+    public static Intent getDataPrivacyIntent(@NonNull Context context) {
+        return getIntent(context, DataPrivacyActivity.class);
     }
 
     public static Intent getFeedbackIntent(@NonNull Context context) {

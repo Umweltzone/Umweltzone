@@ -39,8 +39,11 @@ import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.tracedroid.TraceDroidEmailSender;
 import de.avpptr.umweltzone.utils.ContentProvider;
+import de.avpptr.umweltzone.utils.IntentHelper;
 
 public class MainActivity extends BaseActivity {
+
+    private static final int DATA_PRIVACY_REQUEST_CODE = 7468;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +55,15 @@ public class MainActivity extends BaseActivity {
         migrateNewZonesAddedInVersion250();
         migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
-        showChangeLogDialog();
-        initUserEngagement();
+        Umweltzone application = (Umweltzone) getApplication();
+        PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        if (preferencesHelper.restoreDataPrivacyModalWasShown()) {
+            showChangeLogDialog();
+            initUserEngagement();
+        } else {
+            showDataPrivacyDialog();
+        }
+
     }
 
     @Override
@@ -83,10 +93,23 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == DATA_PRIVACY_REQUEST_CODE) {
+            showChangeLogDialog();
+            initUserEngagement();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
     private void showTraceDroidDialog() {
         if (!isFinishing()) {
             TraceDroidEmailSender.sendStackTraces(this);
         }
+    }
+
+    private void showDataPrivacyDialog() {
+        startActivityForResult(IntentHelper.getDataPrivacyIntent(this), DATA_PRIVACY_REQUEST_CODE);
     }
 
     private void initUserEngagement() {

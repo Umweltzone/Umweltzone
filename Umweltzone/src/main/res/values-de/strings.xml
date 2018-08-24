@@ -335,4 +335,21 @@
         Datenschutzerklärung &#8230;
     </string>
 
+    <!-- Data Privacy -->
+    <string name="data_privacy_app_icon_description">Logo der &#8220;Umweltzone&#8221; App</string>
+    <string name="data_privacy_title">Bitte unterstütze die App</string>
+    <string name="data_privacy_content">
+        <![CDATA[Erlaube, dass die App Laufzeitfehler, Absturzprotokolle und anonymisierte
+        Nutzungsstatisken sammelt und an Google Analytics sendet, damit die
+        "Umweltzone" App weiter verbessert wird. Die Verarbeitung erfolgt gemäß
+        EU-Datenschutz-Grundverordnung (DSGVO).
+        <br />
+        In den Einstellung der App kannst du deine Entscheidung jederzeit ändern.]]>
+    </string>
+    <string name="data_privacy_confirm">Ich helfe gerne</string>
+    <string name="data_privacy_decline">Nein</string>
+    <string name="data_privacy_statement_title_de">
+        Datenschutzerklärung
+    </string>
+
 </resources>

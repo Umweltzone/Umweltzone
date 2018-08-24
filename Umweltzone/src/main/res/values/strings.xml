@@ -449,4 +449,26 @@
         Data privacy statement (German) &#8230;
     </string>
 
+    <!-- Data Privacy -->
+    <string name="data_privacy_app_icon_description">
+        Logo of the &#8220;Umweltzone&#8221; application
+    </string>
+    <string name="data_privacy_title">Please support the app</string>
+    <string name="data_privacy_content">
+        <![CDATA[Let the app collect runtime errors, crash reports and anonymized usage logs
+        and send them to Google Analytics which allows to improve the Umweltzone app.
+        All data is processed according to the European General Data
+        Protection Regulation (GDPR).
+        <br />
+        The app settings let you reverse your decision at any time.]]>
+    </string>
+    <string name="data_privacy_confirm">I support you</string>
+    <string name="data_privacy_decline">No</string>
+    <string name="data_privacy_statement_title_de">
+        Data privacy statement (German)
+    </string>
+    <string name="data_privacy_statement_link_de" translatable="false">
+        https://github.com/johnjohndoe/Umweltzone/blob/master/DATA-PRIVACY-DE.md
+    </string>
+
 </resources>

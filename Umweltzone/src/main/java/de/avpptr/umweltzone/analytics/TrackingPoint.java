@@ -36,6 +36,7 @@ public enum TrackingPoint {
     RequestPermission("request_permission"),
     PermissionResult("permission_result"),
     SettingsItemClick("settings_item_click"),
+    DataPrivacyModalItemClick("data_privacy_modal_item_click"),
 
     // Errors
     ResourceNotFoundError("resource_not_found"),

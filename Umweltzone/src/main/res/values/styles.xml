@@ -248,5 +248,13 @@
         <item name="android:padding">@dimen/large_spacer</item>
     </style>
 
+    <!-- Data Privacy -->
+    <style name="DataPrivacy.Logo" parent="AppInfo.Logo" />
+
+    <style name="DataPrivacy.Button.Confirm" parent="Button.Base" />
+
+    <style name="DataPrivacy.Button.Decline" parent="Button.Base">
+        <item name="colorButtonNormal">@color/button_decline_color</item>
+    </style>
 
 </resources>

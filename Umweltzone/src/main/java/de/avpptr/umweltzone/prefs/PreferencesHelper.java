@@ -45,6 +45,8 @@ public class PreferencesHelper {
 
     private final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
 
+    private final BooleanPreference mDataPrivacyModalWasShownPreference;
+
     private final BooleanPreference mGoogleAnalyticsIsEnabledPreference;
 
     private final BooleanPreference mMyLocationPermissionIsPermanentlyDeclinedPreference;
@@ -65,6 +67,8 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
         mDidParseZoneDataAfterUpdate250Preference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
+        mDataPrivacyModalWasShownPreference = new BooleanPreference(
+                sharedPreferences, Preferences.KEY_DATA_PRIVACY_MODAL_WAS_SHOWN);
         String googleAnalyticsPreferenceKey = context.getString(R.string.settings_key_google_analytics);
         String googleAnalyticsDefaultValueString = context.getString(
                 R.string.settings_default_value_google_analytics);
@@ -171,6 +175,16 @@ public class PreferencesHelper {
 
     public boolean restoreDidParseZoneDataAfterUpdate250() {
         return mDidParseZoneDataAfterUpdate250Preference.get();
+    }
+
+    // Data Privacy Modal
+
+    public void storeDataPrivacyModalWasShown(boolean flag) {
+        mDataPrivacyModalWasShownPreference.set(flag);
+    }
+
+    public boolean restoreDataPrivacyModalWasShown() {
+        return mDataPrivacyModalWasShownPreference.get();
     }
 
     // Google Analytics
