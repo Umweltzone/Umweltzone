@@ -16,7 +16,7 @@ buildscript {
         espressoVersion = "3.0.2"
         jacksonVersion = "2.8.10"
         junitVersion = "4.12"
-        parcelerVersion = "1.1.10"
+        parcelerVersion = "1.1.11"
         playServicesVersion = "10.0.1"
         rulesVersion = "1.0.2"
         snackengagePlayrateVersion = "0.15"
