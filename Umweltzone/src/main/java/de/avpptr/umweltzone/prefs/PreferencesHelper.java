@@ -17,8 +17,11 @@
 
 package de.avpptr.umweltzone.prefs;
 
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.annotation.NonNull;
 
+import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.Preferences;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -47,7 +50,7 @@ public class PreferencesHelper {
     private final BooleanPreference mMyLocationPermissionIsPermanentlyDeclinedPreference;
 
 
-    public PreferencesHelper(final SharedPreferences sharedPreferences) {
+    public PreferencesHelper(@NonNull SharedPreferences sharedPreferences, @NonNull Context context) {
         mCityNamePreference = new StringPreference(
                 sharedPreferences, Preferences.KEY_CITY_NAME);
         mLastKnownLocationCenterPreference = new GeoPointPreference(
@@ -62,8 +65,12 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
         mDidParseZoneDataAfterUpdate250Preference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
+        String googleAnalyticsPreferenceKey = context.getString(R.string.settings_key_google_analytics);
+        String googleAnalyticsDefaultValueString = context.getString(
+                R.string.settings_default_value_google_analytics);
+        boolean googleAnalyticsDefaultValue = Boolean.valueOf(googleAnalyticsDefaultValueString);
         mGoogleAnalyticsIsEnabledPreference = new BooleanPreference(
-                sharedPreferences, Preferences.KEY_GOOGLE_ANALYTICS_IS_ENABLED);
+                sharedPreferences, googleAnalyticsPreferenceKey, googleAnalyticsDefaultValue);
         mMyLocationPermissionIsPermanentlyDeclinedPreference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_MY_LOCATION_PERMISSION_IS_PERMANENTLY_DECLINED);
     }

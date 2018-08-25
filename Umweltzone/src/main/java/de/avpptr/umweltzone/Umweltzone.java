@@ -68,7 +68,7 @@ public class Umweltzone extends Application {
         if (mPreferencesHelper == null) {
             SharedPreferences sharedPreferences = PreferenceManager
                     .getDefaultSharedPreferences(this);
-            mPreferencesHelper = new PreferencesHelper(sharedPreferences);
+            mPreferencesHelper = new PreferencesHelper(sharedPreferences, this);
         }
         return mPreferencesHelper;
     }
