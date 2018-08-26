@@ -23,6 +23,24 @@ E-Mail-Adresse: umweltzone PUNKT android AT googlemail PUNKT de
 - Meta-/Kommunikationsdaten (z.B., Geräte-Informationen, IP-Adressen).
 
 
+### Nutzungsdaten
+
+Die App erfasst folgende quantitativen Ereignisse in anonymisierter Form:
+
+- Öffnen bzw. Schliessen von Bildschirmansichten
+- Auswählen von Städten
+- Aufklappen von FAQs
+- Anklicken von Links zu externen Inhalten
+- Anklicken von Buttons
+- Ändern von Berechtigungen
+- Ändern oder Anklicken von Einstellungen
+- Nutzung der Teilen-Funktion
+
+Die Ereignisse werden ausgewertet, um nachvollziehen zu können, ob und wie häufig bestimmte
+Programmfunktionen genutzt werden. Die Ergebnisse fliessen in die Entscheidung über
+die zukünftige Weiterentwicklung der App ein.
+
+
 ## Kategorien betroffener Personen
 
 Besucher und Nutzer des Onlineangebotes (Nachfolgend bezeichnen wir die betroffenen Personen zusammenfassend auch als „Nutzer“).  
