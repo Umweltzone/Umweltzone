@@ -23,6 +23,8 @@ import android.support.v7.preference.PreferenceFragmentCompat;
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
+import de.avpptr.umweltzone.analytics.Tracking;
+import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
@@ -36,11 +38,20 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        Tracking tracker = Umweltzone.getTracker();
         findPreference(getString(R.string.settings_key_google_analytics))
                 .setOnPreferenceChangeListener((preference, isEnabled) -> {
-                    preferencesHelper.storeGoogleAnalyticsIsEnabled((boolean) isEnabled);
+                    boolean isEnabledValue = (boolean) isEnabled;
+                    String suffix = isEnabledValue ? "enabled" : "disabled";
+                    tracker.track(TrackingPoint.SettingsItemClick, "google_analytics_" + suffix);
+                    preferencesHelper.storeGoogleAnalyticsIsEnabled(isEnabledValue);
                     application.initTracking();
                     return true;
+                });
+        findPreference(getString(R.string.settings_key_data_privacy_statement_de))
+                .setOnPreferenceClickListener(preference -> {
+                    tracker.track(TrackingPoint.SettingsItemClick, "data_privacy_statement_de");
+                    return false;
                 });
     }
 

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -35,6 +35,7 @@ public enum TrackingPoint {
     ShareAppClick("share_app_click"),
     RequestPermission("request_permission"),
     PermissionResult("permission_result"),
+    SettingsItemClick("settings_item_click"),
 
     // Errors
     ResourceNotFoundError("resource_not_found"),

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -96,6 +96,9 @@ public class GoogleAnalyticsTracking implements Tracking {
                 break;
             case PermissionResult:
                 trackEvent("permission", "result", "" + parameter);
+                break;
+            case SettingsItemClick:
+                trackEvent("settings", "item_click", "" + parameter);
                 break;
         }
     }
