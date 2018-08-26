@@ -90,10 +90,10 @@ public class AboutActivityTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.appinfo_references_name_google_analytics)));
-        onView(withId(R.id.app_info_google_design_support_library))
+        onView(withId(R.id.app_info_google_support_library))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_google_design_support_library)));
+                .check(matches(withText(R.string.appinfo_references_name_google_support_library)));
         onView(withId(R.id.app_info_google_play_services))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))

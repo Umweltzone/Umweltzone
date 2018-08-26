@@ -47,9 +47,9 @@
         tools:text="@string/appinfo_references_url_google_analytics" />
 
     <TextView
-        android:id="@+id/app_info_google_design_support_library"
+        android:id="@+id/app_info_google_support_library"
         style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_google_design_support_library" />
+        tools:text="@string/appinfo_references_url_google_support_library" />
 
     <TextView
         android:id="@+id/app_info_google_play_services"

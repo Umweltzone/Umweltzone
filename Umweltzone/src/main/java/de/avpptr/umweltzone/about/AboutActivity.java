@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2017  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -58,9 +58,9 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_references_name_google_play_services,
                 R.string.appinfo_references_url_google_play_services,
                 TrackingPoint.AboutItemClick, "google_play_services_library");
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_google_design_support_library,
-                R.string.appinfo_references_name_google_design_support_library,
-                R.string.appinfo_references_url_google_design_support_library,
+        ViewHelper.setupTextViewExtended(this, R.id.app_info_google_support_library,
+                R.string.appinfo_references_name_google_support_library,
+                R.string.appinfo_references_url_google_support_library,
                 TrackingPoint.AboutItemClick, "google_design_support_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_jackson,
                 R.string.appinfo_references_name_jackson,
