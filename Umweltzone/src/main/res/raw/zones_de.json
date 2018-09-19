@@ -716,15 +716,15 @@
         "urlBadgeOnline" : "",
         "contactEmails" : null,
         "geometrySource" : "Regierungspräsidium Stuttgart",
-        "geometryUpdatedAt" : "2015-01-15",
+        "geometryUpdatedAt" : "2018-09-19",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 48.847690,
-                "longitude" : 9.045311
+                "latitude" : 48.846367,
+                "longitude" : 9.045313
             },
             "northEast" : {
-                "latitude" : 48.978120,
-                "longitude" : 9.273868
+                "latitude" : 48.978103,
+                "longitude" : 9.330772
             }
         }
     },
