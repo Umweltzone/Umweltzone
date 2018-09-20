@@ -138,13 +138,13 @@ dependencies {
 
     // Integration tests
     androidTestImplementation "com.android.support:support-annotations:$androidSupportVersion"
-    androidTestImplementation ("com.squareup.assertj:assertj-android:$assertjAndroidVersion") {
+    androidTestImplementation("com.squareup.assertj:assertj-android:$assertjAndroidVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
-    androidTestImplementation ("com.android.support.test.espresso:espresso-core:$espressoVersion") {
+    androidTestImplementation("com.android.support.test.espresso:espresso-core:$espressoVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
-    androidTestImplementation ("com.android.support.test:rules:$rulesVersion") {
+    androidTestImplementation("com.android.support.test:rules:$rulesVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
 
