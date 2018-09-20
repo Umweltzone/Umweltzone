@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,18 +15,18 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.cities;
+package de.avpptr.umweltzone.zones;
 
 import android.os.Bundle;
 
 import de.avpptr.umweltzone.base.BaseActivity;
 
-public class CitiesActivity extends BaseActivity {
+public class ZonesActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initFragment(new CitiesFragment(), CitiesFragment.FRAGMENT_TAG);
+        initFragment(new ZonesFragment(), ZonesFragment.FRAGMENT_TAG);
     }
 
 }

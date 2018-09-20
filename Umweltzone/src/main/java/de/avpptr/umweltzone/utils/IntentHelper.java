@@ -28,7 +28,6 @@ import org.parceler.Parcels;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.about.AboutActivity;
-import de.avpptr.umweltzone.cities.CitiesActivity;
 import de.avpptr.umweltzone.city.CityInfoActivity;
 import de.avpptr.umweltzone.city.CityInfoFragment;
 import de.avpptr.umweltzone.contract.BundleKeys;
@@ -37,6 +36,7 @@ import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.settings.SettingsActivity;
+import de.avpptr.umweltzone.zones.ZonesActivity;
 
 public class IntentHelper {
 
@@ -98,7 +98,7 @@ public class IntentHelper {
     }
 
     public static Intent getCitiesIntent(@NonNull Context context) {
-        return getIntent(context, CitiesActivity.class);
+        return getIntent(context, ZonesActivity.class);
     }
 
     public static Intent getFaqsIntent(@NonNull Context context) {

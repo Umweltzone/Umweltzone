@@ -12,6 +12,7 @@ buildscript {
         androidSupportVersion = "24.2.1"
         assertjAndroidVersion = "1.2.0"
         ckChangelogVersion = "1.2.2"
+        constraintLayoutVersion = "1.1.3"
         espressoVersion = "3.0.2"
         jacksonVersion = "2.8.10"
         junitVersion = "4.12"
