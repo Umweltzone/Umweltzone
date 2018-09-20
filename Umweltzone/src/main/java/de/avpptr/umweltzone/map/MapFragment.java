@@ -59,7 +59,6 @@ import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
-import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -90,6 +89,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private PreferencesHelper mPreferencesHelper;
 
+    private MapReadyDelegate mMapReadyDelegate;
+
     private MyLocationPermission myLocationPermission;
 
     public MapFragment() {
@@ -113,6 +114,42 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();
+        mMapReadyDelegate = new MapReadyDelegate(
+                mPreferencesHelper,
+                () -> Umweltzone.centerZoneRequested,
+                (centerZoneRequested) -> {
+                    Umweltzone.centerZoneRequested = centerZoneRequested;
+                    return null;
+                },
+                () -> LowEmissionZone.getDefaultLowEmissionZone(getActivity()),
+                new MapReadyDelegate.Listener() {
+
+                    @Override
+                    public void onDrawPolygonOverlay() {
+                        drawPolygonOverlay();
+                    }
+
+                    @Override
+                    public void onShowZoneNotDrawableDialog() {
+                        showZoneNotDrawableDialog();
+                    }
+
+                    @Override
+                    public void onStoreLastMapState() {
+                        storeLastMapState();
+                    }
+
+                    @Override
+                    public void onZoomToBounds(@NonNull LatLngBounds latLngBounds) {
+                        zoomToBounds(latLngBounds);
+                    }
+
+                    @Override
+                    public void onZoomToLocation(@NonNull GeoPoint location, float zoomLevel) {
+                        zoomToLocation(location, zoomLevel);
+                    }
+
+                });
     }
 
     @Nullable
@@ -182,7 +219,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         mMapView.onLowMemory();
     }
 
-    private void zoomToBounds(LatLngBounds latLngBounds) {
+    private void zoomToBounds(@NonNull LatLngBounds latLngBounds) {
         if (mMap == null) {
             mTracking.trackError(TrackingPoint.MapIsNullError, null);
             throw new IllegalStateException("Map is null");
@@ -201,7 +238,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         }
     }
 
-    private void zoomToLocation(GeoPoint location, float zoomLevel) {
+    private void zoomToLocation(@NonNull GeoPoint location, float zoomLevel) {
         if (location.isValid() && zoomLevel > 0) {
             CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(
                     location.toLatLng(), zoomLevel);
@@ -242,44 +279,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraIdleListener(mOnCameraIdleListener);
-        if (mPreferencesHelper.storesZoneIsDrawable()) {
-            if (mPreferencesHelper.restoreZoneIsDrawable()) {
-                drawPolygonOverlay();
-            } else {
-                showZoneNotDrawableDialog();
-            }
-        }
-
-        if (Umweltzone.centerZoneRequested) {
-            // City has been selected from the list
-            BoundingBox lastKnownPosition = mPreferencesHelper
-                    .restoreLastKnownLocationAsBoundingBox();
-            if (lastKnownPosition.isValid()) {
-                zoomToBounds(lastKnownPosition.toLatLngBounds());
-            }
-            Umweltzone.centerZoneRequested = false;
-        } else {
-            GeoPoint lastKnownPosition = mPreferencesHelper.restoreLastKnownLocationAsGeoPoint();
-            if (!lastKnownPosition.isValid()) {
-                // Select default city at first application start
-                LowEmissionZone defaultLowEmissionZone = LowEmissionZone
-                        .getDefaultLowEmissionZone(getActivity());
-                if (defaultLowEmissionZone != null) {
-                    storeLastLowEmissionZone(defaultLowEmissionZone);
-                    if (mPreferencesHelper.storesZoneIsDrawable() &&
-                            mPreferencesHelper.restoreZoneIsDrawable()) {
-                        drawPolygonOverlay();
-                    } else {
-                        showZoneNotDrawableDialog();
-                    }
-                    zoomToBounds(defaultLowEmissionZone.boundingBox.toLatLngBounds());
-                    storeLastMapState();
-                }
-            } else {
-                float zoomLevel = mPreferencesHelper.restoreZoomLevel();
-                zoomToLocation(lastKnownPosition, zoomLevel);
-            }
-        }
+        mMapReadyDelegate.evaluate();
         updateSubTitle();
         initMyLocationActivation();
     }
@@ -360,13 +360,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                 }
             }
         }
-    }
-
-    private void storeLastLowEmissionZone(LowEmissionZone defaultLowEmissionZone) {
-        mPreferencesHelper.storeLastKnownLocationAsString(defaultLowEmissionZone.name);
-        mPreferencesHelper.storeLastKnownLocationAsBoundingBox(defaultLowEmissionZone.boundingBox);
-        mPreferencesHelper.storeZoneIsDrawable(
-                defaultLowEmissionZone.containsGeometryInformation());
     }
 
     private void storeLastMapState() {
