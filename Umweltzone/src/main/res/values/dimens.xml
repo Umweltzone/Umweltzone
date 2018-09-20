@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+  Copyright (C) 2018  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -23,6 +23,8 @@
     <dimen name="big_spacer">8dp</dimen>
     <dimen name="large_spacer">16dp</dimen>
     <dimen name="huge_spacer">32dp</dimen>
+    <dimen name="wide_spacer">64dp</dimen>
+    <dimen name="long_spacer">128dp</dimen>
 
     <dimen name="horizontal_line_height">1dp</dimen>
 
@@ -42,5 +44,9 @@
     <dimen name="city_zone_badge_stroke_width">2dp</dimen>
     <dimen name="city_zone_badge_width">50dp</dimen>
     <dimen name="city_zone_badge_height">@dimen/city_zone_badge_width</dimen>
+
+    <!-- Zones -->
+    <dimen name="zones_margin_horizontal">@dimen/big_spacer</dimen>
+    <dimen name="zones_margin_vertical">@dimen/big_spacer</dimen>
 
 </resources>

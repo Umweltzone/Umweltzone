@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ import android.support.annotation.Nullable;
 
 import org.parceler.Parcel;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -65,6 +66,10 @@ public class LowEmissionZone {
     public String geometrySource;
 
     public Date geometryUpdatedAt;
+
+    public List<String> childZones = new ArrayList<String>(1) {{
+        add("");
+    }};
 
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;

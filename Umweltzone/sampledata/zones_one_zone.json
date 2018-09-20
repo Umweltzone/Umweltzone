@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "name": "Aachen",
+      "zoneNumber": 2,
+      "color": "@color/city_zone_2"
+    },
+    {
+      "name": "Augsburg",
+      "zoneNumber": 3,
+      "color": "@color/city_zone_3"
+    },
+    {
+      "name": "Balingen",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Berlin",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Bonn",
+      "zoneNumber": 2,
+      "color": "@color/city_zone_2"
+    },
+    {
+      "name": "Bremen",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Darmstadt",
+      "zoneNumber": 3,
+      "color": "@color/city_zone_3"
+    },
+    {
+      "name": "Dinslaken",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Düsseldorf",
+      "zoneNumber": 3,
+      "color": "@color/city_zone_3"
+    },
+    {
+      "name": "Erfurt",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Eschweiler",
+      "zoneNumber": 2,
+      "color": "@color/city_zone_2"
+    },
+    {
+      "name": "Frankfurt am Main",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Freiburg im Breisgau",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Hagen",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    },
+    {
+      "name": "Halle (Saale)",
+      "zoneNumber": 4,
+      "color": "@color/city_zone_4"
+    }
+  ]
+}

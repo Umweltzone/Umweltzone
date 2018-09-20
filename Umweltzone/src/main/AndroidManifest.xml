@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".cities.CitiesActivity"
+            android:name=".zones.ZonesActivity"
             android:label="@string/app_name" />
         <activity
             android:name=".city.CityInfoActivity"
