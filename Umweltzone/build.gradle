@@ -2,6 +2,8 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
 
 versioneye {
     exclude "androidJacocoAgent", "androidJacocoAnt"
@@ -121,6 +123,7 @@ configurations {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
     implementation "com.android.support:design:$androidSupportVersion"
     implementation "com.android.support:preference-v7:$androidSupportVersion"
     implementation "com.google.android.gms:play-services-base:$playServicesVersion"
