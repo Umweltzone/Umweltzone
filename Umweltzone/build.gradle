@@ -2,6 +2,9 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-android-extensions"
+apply plugin: "kotlin-kapt"
 
 repositories {
     google()
@@ -117,6 +120,7 @@ configurations {
 }
 
 dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "com.android.support:design:$androidSupportVersion"
     implementation "com.android.support:preference-v7:$androidSupportVersion"
     implementation "com.google.android.gms:play-services-base:$playServicesVersion"
@@ -128,7 +132,7 @@ dependencies {
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
     implementation "org.parceler:parceler-api:$parcelerVersion"
-    annotationProcessor "org.parceler:parceler:$parcelerVersion"
+    kapt "org.parceler:parceler:$parcelerVersion"
     implementation files("libs/libGoogleAnalyticsServices.jar")
     implementation files("libs/TraceDroid-1.1.jar")
 
