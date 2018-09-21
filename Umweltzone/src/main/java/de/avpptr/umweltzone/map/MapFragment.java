@@ -31,7 +31,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +58,7 @@ import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
+import de.avpptr.umweltzone.utils.CameraUpdateHelper;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -224,16 +224,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             mTracking.trackError(TrackingPoint.MapIsNullError, null);
             throw new IllegalStateException("Map is null");
         } else {
-            DisplayMetrics displaymetrics = new DisplayMetrics();
-            getActivity().getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-            int height = displaymetrics.heightPixels;
-            int width = displaymetrics.widthPixels;
-            int padding = 50;
-            if (width > height) {
-                padding *= 2;
-            }
-            CameraUpdate zoneBounds = CameraUpdateFactory.newLatLngBounds(
-                    latLngBounds, width, height, padding);
+            CameraUpdate zoneBounds = CameraUpdateHelper.getCameraUpdate(getActivity(), latLngBounds);
             mMap.moveCamera(zoneBounds);
         }
     }
