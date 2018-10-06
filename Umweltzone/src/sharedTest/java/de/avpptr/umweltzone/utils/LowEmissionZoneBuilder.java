@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,10 +17,9 @@
 
 package de.avpptr.umweltzone.utils;
 
-import java.util.Date;
 import java.util.List;
 
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class LowEmissionZoneBuilder {
@@ -33,27 +32,13 @@ public class LowEmissionZoneBuilder {
 
     private BoundingBox mBoundingBox;
 
-    @LowEmissionZoneNumbers.Color
-    private int mZoneNumber;
-
-    private Date mZoneNumberSince;
-
-    private Date mNextZoneNumberAsOf;
-
-    @LowEmissionZoneNumbers.Color
-    private int mAbroadLicensedVehicleZoneNumber;
-
-    private Date mAbroadLicensedVehicleZoneNumberUntil;
-
     private String mUrlUmweltPlaketteDe;
 
     private String mUrlBadgeOnline;
 
     private List<String> mContactEmails;
 
-    private String mGeometrySource;
-
-    private Date mGeometryUpdatedAt;
+    public List<ChildZone> mChildZones;
 
     public LowEmissionZoneBuilder setName(String name) {
         mName = name;
@@ -75,33 +60,6 @@ public class LowEmissionZoneBuilder {
         return this;
     }
 
-    public LowEmissionZoneBuilder setZoneNumber(@LowEmissionZoneNumbers.Color int zoneNumber) {
-        mZoneNumber = zoneNumber;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setZoneNumberSince(Date zoneNumberSince) {
-        mZoneNumberSince = zoneNumberSince;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setNextZoneNumberAsOf(Date nextZoneNumberAsOf) {
-        mNextZoneNumberAsOf = nextZoneNumberAsOf;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumber(
-            @LowEmissionZoneNumbers.Color int abroadLicensedVehicleZoneNumber) {
-        mAbroadLicensedVehicleZoneNumber = abroadLicensedVehicleZoneNumber;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumberUntil(
-            Date abroadLicensedVehicleZoneNumberUntil) {
-        mAbroadLicensedVehicleZoneNumberUntil = abroadLicensedVehicleZoneNumberUntil;
-        return this;
-    }
-
     public LowEmissionZoneBuilder setUrlUmweltPlaketteDe(String urlUmweltPlaketteDe) {
         mUrlUmweltPlaketteDe = urlUmweltPlaketteDe;
         return this;
@@ -117,13 +75,8 @@ public class LowEmissionZoneBuilder {
         return this;
     }
 
-    public LowEmissionZoneBuilder setGeometrySource(String geometrySource) {
-        mGeometrySource = geometrySource;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setGeometryUpdatedAt(Date geometryUpdatedAt) {
-        mGeometryUpdatedAt = geometryUpdatedAt;
+    public LowEmissionZoneBuilder setChildZones(List<ChildZone> childZones) {
+        mChildZones = childZones;
         return this;
     }
 
@@ -133,18 +86,10 @@ public class LowEmissionZoneBuilder {
         lowEmissionZone.displayName = mDisplayName;
         lowEmissionZone.listOfCities = mListOfCities;
         lowEmissionZone.boundingBox = mBoundingBox;
-        lowEmissionZone.zoneNumber = mZoneNumber;
-        lowEmissionZone.zoneNumberSince = mZoneNumberSince;
-        lowEmissionZone.nextZoneNumberAsOf = mNextZoneNumberAsOf;
-        lowEmissionZone.abroadLicensedVehicleZoneNumber =
-                mAbroadLicensedVehicleZoneNumber;
-        lowEmissionZone.abroadLicensedVehicleZoneNumberUntil =
-                mAbroadLicensedVehicleZoneNumberUntil;
         lowEmissionZone.urlUmweltPlaketteDe = mUrlUmweltPlaketteDe;
         lowEmissionZone.urlBadgeOnline = mUrlBadgeOnline;
         lowEmissionZone.contactEmails = mContactEmails;
-        lowEmissionZone.geometrySource = mGeometrySource;
-        lowEmissionZone.geometryUpdatedAt = mGeometryUpdatedAt;
+        lowEmissionZone.childZones = mChildZones;
         return lowEmissionZone;
     }
 

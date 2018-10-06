@@ -33,6 +33,7 @@ import java.util.List;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
@@ -54,10 +55,10 @@ public class StringHelper {
     @NonNull
     public static String getZoneNumberSinceAsOfText(
             @NonNull Context context,
-            @NonNull LowEmissionZone lowEmissionZone) {
-        Date zoneNumberSince = lowEmissionZone.zoneNumberSince;
+            @NonNull ChildZone zone) {
+        Date zoneNumberSince = zone.zoneNumberSince;
         @StringRes int colorStringResourceId = LowEmissionZoneNumberConverter
-                .getColorString(lowEmissionZone.zoneNumber);
+                .getColorString(zone.zoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             // Static zone information
             return context.getString(R.string.city_info_zone_number_none);
@@ -75,11 +76,11 @@ public class StringHelper {
     @Nullable
     public static String getNextZoneNumberAsOfText(
             Context context,
-            LowEmissionZone lowEmissionZone) {
-        if (lowEmissionZone.nextZoneNumberAsOf == null) {
+            @NonNull ChildZone zone) {
+        if (zone.nextZoneNumberAsOf == null) {
             return null;
         }
-        int nextZoneNumber = LowEmissionZoneNumbers.getNext(lowEmissionZone.zoneNumber);
+        int nextZoneNumber = LowEmissionZoneNumbers.getNext(zone.zoneNumber);
         int colorStringResourceId = LowEmissionZoneNumberConverter
                 .getColorString(nextZoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
@@ -89,36 +90,35 @@ public class StringHelper {
         }
         return getZoneNumberInfoString(context,
                 R.string.city_info_next_zone_number_as_of,
-                lowEmissionZone.nextZoneNumberAsOf,
+                zone.nextZoneNumberAsOf,
                 colorStringResourceId);
     }
 
     @Nullable
     public static String getAbroadLicensedVehicleZoneNumberText(
             Context context,
-            LowEmissionZone lowEmissionZone) {
-        if (lowEmissionZone.abroadLicensedVehicleZoneNumberUntil == null) {
+            @NonNull ChildZone zone) {
+        if (zone.abroadLicensedVehicleZoneNumberUntil == null) {
             return null;
         }
         int colorStringResourceId = LowEmissionZoneNumberConverter
-                .getColorString(lowEmissionZone.abroadLicensedVehicleZoneNumber);
+                .getColorString(zone.abroadLicensedVehicleZoneNumber);
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             Log.e("Abroad licensed vehicle zone number '" +
-                    lowEmissionZone.abroadLicensedVehicleZoneNumber +
+                    zone.abroadLicensedVehicleZoneNumber +
                     "' cannot be converted into color text fragment.");
             return null;
         }
         return getZoneNumberInfoString(context,
                 R.string.city_info_abroad_licensed_vehicle_zone_info,
-                lowEmissionZone.abroadLicensedVehicleZoneNumberUntil,
+                zone.abroadLicensedVehicleZoneNumberUntil,
                 colorStringResourceId);
     }
 
     @NonNull
     public static String getGeometryUpdatedAtText(
             Context context,
-            LowEmissionZone lowEmissionZone) {
-        Date geometryUpdatedAt = lowEmissionZone.geometryUpdatedAt;
+            @Nullable Date geometryUpdatedAt) {
         if (geometryUpdatedAt == null) {
             return "";
         }
@@ -129,8 +129,7 @@ public class StringHelper {
 
     @NonNull
     public static String getGeometrySourceText(final Context context,
-                                               LowEmissionZone lowEmissionZone) {
-        String geometrySource = lowEmissionZone.geometrySource;
+                                               @Nullable String geometrySource) {
         if (TextUtils.isEmpty(geometrySource)) {
             return "";
         }

@@ -29,6 +29,7 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
@@ -147,12 +148,7 @@ public class ContentProviderTest {
         assertThat(boundingBox).isNotNull();
         assertThat(boundingBox.isValid()).isTrue();
 
-        assertThat(lowEmissionZone.zoneNumber)
-                .isNotNull()
-                .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
-
-        assertThat(lowEmissionZone.zoneNumberSince).isNotNull();
-        assertThat(lowEmissionZone.abroadLicensedVehicleZoneNumber).isNotNull();
+        lowEmissionZone.childZones.forEach(this::testChildZone);
 
         assertThat(lowEmissionZone.urlUmweltPlaketteDe)
                 .isNotNull()
@@ -167,6 +163,14 @@ public class ContentProviderTest {
             assertThat(contactEmails).isNotEmpty();
             assertThat(lowEmissionZone.containsGeometryInformation()).isFalse();
         }
+    }
+
+    private void testChildZone(@NonNull ChildZone childZone) {
+        assertThat(childZone.zoneNumber)
+                .isNotNull()
+                .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
+        assertThat(childZone.zoneNumberSince).isNotNull();
+        assertThat(childZone.abroadLicensedVehicleZoneNumber).isNotNull();
     }
 
     @NonNull
