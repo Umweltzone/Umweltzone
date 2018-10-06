@@ -22,14 +22,11 @@ import android.support.annotation.Nullable;
 
 import org.parceler.Parcel;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -45,31 +42,13 @@ public class LowEmissionZone {
 
     public BoundingBox boundingBox;
 
-    @LowEmissionZoneNumbers.Color
-    public int zoneNumber;
-
-    public Date zoneNumberSince;
-
-    public Date nextZoneNumberAsOf;
-
-    @LowEmissionZoneNumbers.Color
-    public int abroadLicensedVehicleZoneNumber;
-
-    public Date abroadLicensedVehicleZoneNumberUntil;
-
     public String urlUmweltPlaketteDe;
 
     public String urlBadgeOnline;
 
     public List<String> contactEmails;
 
-    public String geometrySource;
-
-    public Date geometryUpdatedAt;
-
-    public List<String> childZones = new ArrayList<String>(1) {{
-        add("");
-    }};
+    public List<ChildZone> childZones;
 
     // Used for caching
     private static List<LowEmissionZone> mLowEmissionZones;
@@ -108,7 +87,12 @@ public class LowEmissionZone {
     }
 
     public boolean containsGeometryInformation() {
-        return geometrySource != null && geometryUpdatedAt != null;
+        for (ChildZone childZone : childZones) {
+            if (childZone.containsGeometryInformation()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @SuppressWarnings("SimplifiableIfStatement")
@@ -121,12 +105,6 @@ public class LowEmissionZone {
             return false;
         }
         LowEmissionZone lez = (LowEmissionZone) other;
-        if (zoneNumber != lez.zoneNumber) {
-            return false;
-        }
-        if (abroadLicensedVehicleZoneNumber != lez.abroadLicensedVehicleZoneNumber) {
-            return false;
-        }
         if (name != null ? !name.equals(lez.name) : lez.name != null) {
             return false;
         }
@@ -142,19 +120,6 @@ public class LowEmissionZone {
                 : lez.boundingBox != null) {
             return false;
         }
-        if (zoneNumberSince != null ? !zoneNumberSince.equals(lez.zoneNumberSince)
-                : lez.zoneNumberSince != null) {
-            return false;
-        }
-        if (nextZoneNumberAsOf != null ? !nextZoneNumberAsOf.equals(lez.nextZoneNumberAsOf)
-                : lez.nextZoneNumberAsOf != null) {
-            return false;
-        }
-        if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil
-                .equals(lez.abroadLicensedVehicleZoneNumberUntil)
-                : lez.abroadLicensedVehicleZoneNumberUntil != null) {
-            return false;
-        }
         if (urlUmweltPlaketteDe != null ? !urlUmweltPlaketteDe.equals(lez.urlUmweltPlaketteDe)
                 : lez.urlUmweltPlaketteDe != null) {
             return false;
@@ -167,13 +132,8 @@ public class LowEmissionZone {
                 : lez.contactEmails != null) {
             return false;
         }
-        if (geometrySource != null ? !geometrySource.equals(lez.geometrySource)
-                : lez.geometrySource != null) {
-            return false;
-        }
-        return geometryUpdatedAt != null ? geometryUpdatedAt.equals(lez.geometryUpdatedAt)
-                : lez.geometryUpdatedAt == null;
-
+        return childZones != null ? childZones.equals(lez.childZones)
+                : lez.childZones == null;
     }
 
     @Override
@@ -182,36 +142,25 @@ public class LowEmissionZone {
         result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
         result = 31 * result + (listOfCities != null ? listOfCities.hashCode() : 0);
         result = 31 * result + (boundingBox != null ? boundingBox.hashCode() : 0);
-        result = 31 * result + zoneNumber;
-        result = 31 * result + (zoneNumberSince != null ? zoneNumberSince.hashCode() : 0);
-        result = 31 * result + (nextZoneNumberAsOf != null ? nextZoneNumberAsOf.hashCode() : 0);
-        result = 31 * result + abroadLicensedVehicleZoneNumber;
-        result = 31 * result + (abroadLicensedVehicleZoneNumberUntil != null
-                ? abroadLicensedVehicleZoneNumberUntil.hashCode() : 0);
         result = 31 * result + (urlUmweltPlaketteDe != null ? urlUmweltPlaketteDe.hashCode() : 0);
         result = 31 * result + (urlBadgeOnline != null ? urlBadgeOnline.hashCode() : 0);
         result = 31 * result + (contactEmails != null ? contactEmails.hashCode() : 0);
-        result = 31 * result + (geometrySource != null ? geometrySource.hashCode() : 0);
-        result = 31 * result + (geometryUpdatedAt != null ? geometryUpdatedAt.hashCode() : 0);
+        result = 31 * result + (childZones != null ? childZones.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
-        return "name: " + name +
-                ", displayName: " + displayName +
-                ", listOfCities: " + listOfCities +
-                ", boundingBox: " + boundingBox +
-                ", zoneNumber: " + zoneNumber +
-                ", zoneNumberSince: " + zoneNumberSince +
-                ", nextZoneNumberAsOf: " + nextZoneNumberAsOf +
-                ", abroadLicensedVehicleZoneNumber: " + abroadLicensedVehicleZoneNumber +
-                ", abroadLicensedVehicleZoneNumberUntil: " + abroadLicensedVehicleZoneNumberUntil +
-                ", urlUmweltPlaketteDe: " + urlUmweltPlaketteDe +
-                ", urlBadgeOnline: " + urlBadgeOnline +
-                ", contactEmails: " + contactEmails +
-                ", geometrySource: " + geometrySource +
-                ", geometryUpdatedAt: " + geometryUpdatedAt;
+        return "LowEmissionZone{" +
+                "name='" + name + '\'' +
+                ", displayName='" + displayName + '\'' +
+                ", listOfCities=" + listOfCities +
+                ", boundingBox=" + boundingBox +
+                ", urlUmweltPlaketteDe='" + urlUmweltPlaketteDe + '\'' +
+                ", urlBadgeOnline='" + urlBadgeOnline + '\'' +
+                ", contactEmails=" + contactEmails +
+                ", childZones=" + childZones +
+                '}';
     }
 
 }

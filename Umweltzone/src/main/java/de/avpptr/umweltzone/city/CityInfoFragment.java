@@ -35,6 +35,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
@@ -92,14 +93,17 @@ public class CityInfoFragment extends BaseFragment {
     private void setUpCityInfo(@NonNull final Activity activity,
                                @NonNull final LowEmissionZone lowEmissionZone) {
 
+        // TODO: Loop over child zones.
+        ChildZone childZone = lowEmissionZone.childZones.get(0);
+
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
-        titleTextView.setText(lowEmissionZone.displayName);
+        titleTextView.setText(childZone.displayName);
 
         // Zone status image
         TextView zoneStatus = (TextView) activity.findViewById(R.id.city_info_zone_status);
         int zoneStatusId = LowEmissionZoneNumberConverter
-                .getStatusDrawable(lowEmissionZone.zoneNumber);
+                .getStatusDrawable(childZone.zoneNumber);
         if (zoneStatusId == Resources.INVALID_RESOURCE_ID) {
             zoneStatus.setVisibility(View.GONE);
         } else {
@@ -117,21 +121,21 @@ public class CityInfoFragment extends BaseFragment {
         TextView zoneNumberSinceTextView =
                 (TextView) activity.findViewById(R.id.city_info_zone_number_since);
         String zoneNumberSinceText =
-                StringHelper.getZoneNumberSinceAsOfText(activity, lowEmissionZone);
+                StringHelper.getZoneNumberSinceAsOfText(activity, childZone);
         zoneNumberSinceTextView.setText(zoneNumberSinceText);
 
         // Next zone number as of
         TextView nextZoneNumberAsOfTextView =
                 (TextView) activity.findViewById(R.id.city_info_next_zone_number_as_of);
         String nextZoneNumberAsOfText =
-                StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
+                StringHelper.getNextZoneNumberAsOfText(activity, childZone);
         ViewHelper.setTextOrHideView(nextZoneNumberAsOfTextView, nextZoneNumberAsOfText);
 
         // Abroad licenced vehicle zone number info
         TextView abroadLicensedVehicleZoneNumberTextView =
                 (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
-                StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
+                StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, childZone);
         ViewHelper.setTextOrHideView(
                 abroadLicensedVehicleZoneNumberTextView,
                 abroadLicensedVehicleZoneNumberText);
@@ -172,14 +176,14 @@ public class CityInfoFragment extends BaseFragment {
         TextView geometryUpdatedAtTextView = (TextView) activity
                 .findViewById(R.id.city_info_geometry_updated_at);
         String geometryUpdatedAtText = StringHelper
-                .getGeometryUpdatedAtText(activity, lowEmissionZone);
+                .getGeometryUpdatedAtText(activity, childZone.geometryUpdatedAt);
         ViewHelper.setTextOrHideView(geometryUpdatedAtTextView, geometryUpdatedAtText);
 
         // Geometry source
         TextView geometrySourceTextView = (TextView) activity
                 .findViewById(R.id.city_info_geometry_source);
         String geometrySourceText = StringHelper
-                .getGeometrySourceText(activity, lowEmissionZone);
+                .getGeometrySourceText(activity, childZone.geometrySource);
         ViewHelper.setTextOrHideView(geometrySourceTextView, geometrySourceText);
     }
 

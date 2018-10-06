@@ -15,25 +15,18 @@ fun LowEmissionZone.toZoneViewModel(context: Context): ZoneViewModel = when (chi
         ZoneViewModel.OneZoneViewModel(
                 name = displayName,
                 nameTextColor = getTextColor(context),
-                badgeViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context))
+                badgeViewModel = childZones[0].toBadgeViewModel(context)
         )
     }
     ChildZonesCount.TWO.value -> {
         ZoneViewModel.TwoZonesViewModel(
                 name = displayName,
                 nameTextColor = getTextColor(context),
-                // TODO: Map child zone data correctly
-                badge1ViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context)),
-                badge2ViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context))
+                badge1ViewModel = childZones[0].toBadgeViewModel(context),
+                badge2ViewModel = childZones[1].toBadgeViewModel(context)
         )
     }
     else -> error("Unknown child zones size: ${childZones.size}")
-}
-
-@ColorInt
-private fun LowEmissionZone.getBadgeColor(context: Context): Int {
-    val color = LowEmissionZoneNumberConverter.getColor(zoneNumber)
-    return ContextCompat.getColor(context, color)
 }
 
 @ColorInt
