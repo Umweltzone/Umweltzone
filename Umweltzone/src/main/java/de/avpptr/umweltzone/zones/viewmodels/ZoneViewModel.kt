@@ -25,4 +25,17 @@ sealed class ZoneViewModel(
 
     ) : ZoneViewModel(name, nameTextColor, ChildZonesCount.ONE)
 
+    data class TwoZonesViewModel(
+
+            override val name: String,
+
+            @ColorInt
+            override val nameTextColor: Int,
+
+            val badge1ViewModel: BadgeViewModel,
+
+            val badge2ViewModel: BadgeViewModel
+
+    ) : ZoneViewModel(name, nameTextColor, ChildZonesCount.TWO)
+
 }

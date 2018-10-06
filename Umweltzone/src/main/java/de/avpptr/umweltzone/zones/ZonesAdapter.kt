@@ -22,6 +22,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import de.avpptr.umweltzone.zones.viewholders.OneZoneViewHolder
+import de.avpptr.umweltzone.zones.viewholders.TwoZonesViewHolder
 import de.avpptr.umweltzone.zones.viewholders.ZoneViewHolder
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 
@@ -40,6 +41,10 @@ class ZonesAdapter(
                 val itemView = inflater.inflate(OneZoneViewHolder.layout, parent, false)
                 OneZoneViewHolder(itemView, onItemClick)
             }
+            ChildZonesCount.TWO.value -> {
+                val itemView = inflater.inflate(TwoZonesViewHolder.layout, parent, false)
+                TwoZonesViewHolder(itemView, onItemClick)
+            }
             else -> {
                 onItemViewInflationError.invoke(viewType)
                 error("Unknown view type: $viewType")
@@ -51,6 +56,7 @@ class ZonesAdapter(
         val viewModel = zones[position]
         when (viewHolder) {
             is OneZoneViewHolder -> viewHolder.bind(viewModel as ZoneViewModel.OneZoneViewModel)
+            is TwoZonesViewHolder -> viewHolder.bind(viewModel as ZoneViewModel.TwoZonesViewModel)
             else -> error("Unknown view holder: $viewHolder")
         }
     }

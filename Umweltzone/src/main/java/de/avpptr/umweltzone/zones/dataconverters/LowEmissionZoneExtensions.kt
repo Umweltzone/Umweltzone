@@ -18,6 +18,15 @@ fun LowEmissionZone.toZoneViewModel(context: Context): ZoneViewModel = when (chi
                 badgeViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context))
         )
     }
+    ChildZonesCount.TWO.value -> {
+        ZoneViewModel.TwoZonesViewModel(
+                name = displayName,
+                nameTextColor = getTextColor(context),
+                // TODO: Map child zone data correctly
+                badge1ViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context)),
+                badge2ViewModel = BadgeViewModel("$zoneNumber", getBadgeColor(context))
+        )
+    }
     else -> error("Unknown child zones size: ${childZones.size}")
 }
 
