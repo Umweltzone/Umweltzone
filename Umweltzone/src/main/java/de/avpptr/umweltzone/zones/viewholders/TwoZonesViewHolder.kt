@@ -30,7 +30,7 @@ class TwoZonesViewHolder(
         val view: View,
         private val onItemClick: (view: View) -> Unit
 
-) : ZoneViewHolder(view) {
+) : ZoneViewHolder<ZoneViewModel.TwoZonesViewModel>(view) {
 
     private val zoneShape1View: GradientDrawable
     private val zoneShape2View: GradientDrawable
@@ -42,7 +42,7 @@ class TwoZonesViewHolder(
         zoneShape2View = badge2Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
     }
 
-    fun bind(viewModel: ZoneViewModel.TwoZonesViewModel) = with(view) {
+    override fun bind(viewModel: ZoneViewModel.TwoZonesViewModel) = with(view) {
         tag = viewModel
         setOnClickListener(onItemClick)
         zoneTwoZonesNameView.text = viewModel.name

@@ -24,8 +24,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
 import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
+import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 
-abstract class ZoneViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+abstract class ZoneViewHolder<in T: ZoneViewModel>(view: View) : RecyclerView.ViewHolder(view) {
+
+    abstract fun bind(viewModel: T)
 
     protected fun TextView.setBadge(zoneShapeView: GradientDrawable, viewModel: BadgeViewModel) {
         this.text = viewModel.text

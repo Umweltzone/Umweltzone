@@ -32,10 +32,11 @@ class ZonesAdapter(
         private val onItemClick: (view: View) -> Unit,
         private val onItemViewInflationError: (viewType: Int) -> Unit
 
-) : RecyclerView.Adapter<ZoneViewHolder>() {
+) : RecyclerView.Adapter<ZoneViewHolder<ZoneViewModel>>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZoneViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZoneViewHolder<ZoneViewModel> {
         val inflater = LayoutInflater.from(parent.context)
+        @Suppress("UNCHECKED_CAST")
         return when (viewType) {
             ChildZonesCount.ONE.value -> {
                 val itemView = inflater.inflate(OneZoneViewHolder.layout, parent, false)
@@ -49,16 +50,12 @@ class ZonesAdapter(
                 onItemViewInflationError.invoke(viewType)
                 error("Unknown view type: $viewType")
             }
-        }
+        } as ZoneViewHolder<ZoneViewModel>
     }
 
-    override fun onBindViewHolder(viewHolder: ZoneViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: ZoneViewHolder<ZoneViewModel>, position: Int) {
         val viewModel = zones[position]
-        when (viewHolder) {
-            is OneZoneViewHolder -> viewHolder.bind(viewModel as ZoneViewModel.OneZoneViewModel)
-            is TwoZonesViewHolder -> viewHolder.bind(viewModel as ZoneViewModel.TwoZonesViewModel)
-            else -> error("Unknown view holder: $viewHolder")
-        }
+        viewHolder.bind(viewModel)
     }
 
     override fun getItemCount(): Int =
