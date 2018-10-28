@@ -5,7 +5,6 @@ buildscript {
     ext {
         // Plugins
         androidGradlePluginVersion = "3.1.1"
-        gradleVersioneyePlugin = "1.5.0"
         gradleVersionsPluginVersion = "0.20.0"
         proguardGradlePluginVersion = "6.0.3"
 
@@ -30,18 +29,12 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
-        classpath "org.standardout:gradle-versioneye-plugin:$gradleVersioneyePlugin"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
         classpath "net.sf.proguard:proguard-gradle:$proguardGradlePluginVersion"
     }
 }
 
-apply plugin: "org.standardout.versioneye"
 apply plugin: "com.github.ben-manes.versions"
-
-versioneye {
-    includeSubProjects = true
-}
 
 dependencyUpdates.resolutionStrategy = {
     componentSelection { rules ->

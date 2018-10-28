@@ -3,10 +3,6 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "com.android.application"
 
-versioneye {
-    exclude "androidJacocoAgent", "androidJacocoAnt"
-}
-
 repositories {
     google()
     mavenCentral()
