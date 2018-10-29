@@ -16,6 +16,25 @@
 -->
 <changelog>
     <release
+        version="3.4.0"
+        versioncode="304000">
+        <change>
+            Android: Die App ist jetzt für Android 24 (Nougat) optimiert.
+        </change>
+        <change>
+            Aktualisierung: Die Zonendaten für Ludwigsburg haben sich geändert.
+        </change>
+        <change>
+            Neu: Die Städteliste wurde überarbeitet, um in naher Zukunft
+            mehrere Zonen pro Stadt anzeigen zu können (bspw. Dieselverbotszonen).
+            Umbau in Arbeit.
+        </change>
+        <change>
+            Bugfix: Durch einen Programmierfehler war Google Analytics für alle
+            Nutzer inaktiv. Der Fehler wurde behoben.
+        </change>
+    </release>
+    <release
         version="3.3.1"
         versioncode="303100">
         <change>

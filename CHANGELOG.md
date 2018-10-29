@@ -1,5 +1,32 @@
 # Umweltzone changelog
 
+## [v.3.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.4.0)
+
+* Published: 2018-10-29
+
+### Features, improvements and maintenance
+
+* Prepare data for displaying multiple badges., [bea27](https://bitbucket.org/tbsprs/umweltzone/commits/bea27b9d1ab27ae51578c2c90202d96f4d8a553b)
+* Prepare zones list for displaying two badges., [6954a](https://bitbucket.org/tbsprs/umweltzone/commits/6954a7192e977977f7a1f021c14a89c04bce42c5)
+* Prepare zones list for displaying multiple badges., [9f232](https://bitbucket.org/tbsprs/umweltzone/commits/9f232504e9a6acec69dc529d37c1e95cb8387f56)
+* Reduce complexity of MapFragment -> CameraUpdateHelper., [ca5e2](https://bitbucket.org/tbsprs/umweltzone/commits/ca5e2041d58156719082dde18ede2d47d3cec933)
+* Reduce complexity of MapFragment -> MapReadyDelegate., [cd335](https://bitbucket.org/tbsprs/umweltzone/commits/cd3353c0579e1014e62dc1cfac89a0dae4654596)
+* Update zone data for Ludwigsburg., [7f504](https://bitbucket.org/tbsprs/umweltzone/commits/7f5042e17de401a4dbda258dcf70c6b83dcc3ec0)
+* Google Analytics: Resolve bug causing analytics being disabled for all users., [6918b](https://bitbucket.org/tbsprs/umweltzone/commits/6918be4af01022bd53d058ea662be4c1f70c3ede)
+
+### Libraries, build tools, SDK
+
+* Use kotlin-stdlib-jdk7 v.1.2.71., [36121](https://bitbucket.org/tbsprs/umweltzone/commits/36121e6fd6bb7699c483ab4b44b10f6765ecfe7d)
+* Use Android Gradle plugin v.3.2.1., [5f120](https://bitbucket.org/tbsprs/umweltzone/commits/5f1203b54507f72970caef074c5d077e4f7b292f)
+* Use build tools v.28.0.3., [5d778](https://bitbucket.org/tbsprs/umweltzone/commits/5d778a0a31658e52fbde82f4d113d8fe90966d24)
+* Use Gradle wrapper v.4.10.2., [2636d](https://bitbucket.org/tbsprs/umweltzone/commits/2636db995571093eb348340dad1de823e970013e)
+* Update ProGuard configuration for Parceler., [e279b](https://bitbucket.org/tbsprs/umweltzone/commits/e279b85f2d381a59933a5ed1255dc9101cc55554)
+* RIP VersionEye., [a4f7b](https://bitbucket.org/tbsprs/umweltzone/commits/a4f7b1c08bf0e02bf2195e73936c0f8cbc6ac187)
+* Update targetSdkVersion to 24., [2db56](https://bitbucket.org/tbsprs/umweltzone/commits/2db5684eccb139dc17f75803b5860419287e9ea6)
+* Use parceler v.1.1.11., [6c000](https://bitbucket.org/tbsprs/umweltzone/commits/6c00059424966e2ad00dab1b95265529b4d2a36b)
+* Use gradle-versions-plugin v.0.20.0., [7830d](https://bitbucket.org/tbsprs/umweltzone/commits/7830dbcd092cbac149432589d42ac99774996447)
+
+
 ## [v.3.3.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.3.1)
 
 * Published: 2018-05-24

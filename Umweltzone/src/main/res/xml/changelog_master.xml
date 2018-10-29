@@ -16,6 +16,25 @@
 -->
 <changelog>
     <release
+        version="3.4.0"
+        versioncode="304000">
+        <change>
+            Android: The app is now optimized for Android 24 (Nougat).
+        </change>
+        <change>
+            Update: The zone data for Ludwigsburg has changed.
+        </change>
+        <change>
+            New: The city list has been restructured to allow displaying
+            multiple zones in the near future (such as Diesel prohibition
+            zones). Work in progress.
+        </change>
+        <change>
+            Bugfix: Google Analytics was disabled for all users due to a
+            coding mistake. The error has been resolved.
+        </change>
+    </release>
+    <release
         version="3.3.1"
         versioncode="303100">
         <change>
