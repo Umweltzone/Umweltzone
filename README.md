@@ -1,4 +1,3 @@
-[![VersionEye][versioneye-badge]][versioneye-link] 
 [![Build Status](https://travis-ci.org/johnjohndoe/Umweltzone.svg?branch=master)](https://travis-ci.org/johnjohndoe/Umweltzone) 
 [![GPL license][gpl-license-badge]][gpl-license-link]
 
@@ -124,5 +123,3 @@ This content is licensed, if not stated otherwise, under a
 [cc-by-sa-link]: http://creativecommons.org/licenses/by-sa/3.0/
 [cc-by-sa-image]: http://i.creativecommons.org/l/by-sa/3.0/88x31.png
 [gpl-license-badge]: http://img.shields.io/badge/license-GPL--3.0-lightgrey.svg
-[versioneye-badge]: https://www.versioneye.com/user/projects/53f5b50a8d7ae1c2ec00033d/badge.svg
-[versioneye-link]: https://www.versioneye.com/user/projects/53f5b50a8d7ae1c2ec00033d

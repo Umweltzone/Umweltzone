@@ -3,10 +3,6 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 apply plugin: "com.android.application"
 
-versioneye {
-    exclude "androidJacocoAgent", "androidJacocoAnt"
-}
-
 repositories {
     google()
     mavenCentral()
@@ -45,7 +41,7 @@ allprojects {
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "28.0.2"
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 9
