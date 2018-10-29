@@ -173,7 +173,7 @@
         <item name="android:layout_marginTop">@dimen/big_spacer</item>
     </style>
 
-    <!-- CitiesActivity -->
+    <!-- ZonesActivity -->
 
     <style name="ZoneBadge" parent="@android:style/TextAppearance.Large">
         <item name="android:layout_width">@dimen/city_zone_badge_width</item>
@@ -185,9 +185,6 @@
     </style>
 
     <style name="ZoneName" parent="@android:style/TextAppearance.Large">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
         <item name="android:layout_marginLeft">@dimen/big_spacer</item>
     </style>
 

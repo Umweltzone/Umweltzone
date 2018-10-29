@@ -34,7 +34,9 @@ import java.util.Date;
 import de.avpptr.umweltzone.AndroidTestUtils;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateFormatter;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.IntentHelper;
@@ -49,6 +51,7 @@ import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withEffectiveVisibility;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static java.util.Collections.singletonList;
 import static org.hamcrest.Matchers.not;
 
 @LargeTest
@@ -78,17 +81,22 @@ public class CityInfoFragmentTest {
         String geometryUpdatedAtDatePattern = mContext
                 .getString(R.string.city_info_geometry_updated_at_date_format);
 
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        ChildZone firstChildZone = new ChildZoneBuilder()
                 .setDisplayName(displayName)
                 .setZoneNumber(LowEmissionZoneNumbers.GREEN)
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
                 .setAbroadLicensedVehicleZoneNumberUntil(abroadLicensedVehicleZoneNumberUntilDate)
+                .setGeometrySource(geometrySource)
+                .setGeometryUpdatedAt(geometryUpdatedAtDate)
+                .build();
+
+        LowEmissionZone zone = new LowEmissionZoneBuilder()
+                .setDisplayName(displayName)
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
                         "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php")
-                .setGeometrySource(geometrySource)
-                .setGeometryUpdatedAt(geometryUpdatedAtDate)
+                .setChildZones(singletonList(firstChildZone))
                 .build();
 
         launchActivity(zone);
@@ -169,11 +177,14 @@ public class CityInfoFragmentTest {
     public void renderCityInfoWithNextZone() {
         Date zoneNumberSinceDate = DateHelper.getDate(2011, 8, 1);
         Date zoneNumberAsOfDate = DateHelper.getDate(2013, 6, 1);
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        ChildZone firstChildZone = new ChildZoneBuilder()
                 .setZoneNumber(LowEmissionZoneNumbers.RED)
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .setNextZoneNumberAsOf(zoneNumberAsOfDate)
+                .build();
+        LowEmissionZone zone = new LowEmissionZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
+                .setChildZones(singletonList(firstChildZone))
                 .build();
 
         launchActivity(zone);
@@ -202,10 +213,13 @@ public class CityInfoFragmentTest {
     @Test
     public void renderCityInfoWithFutureZone() {
         Date zoneNumberSinceDate = DateHelper.getDate(2034, 11, 1);
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        ChildZone firstChildZone = new ChildZoneBuilder()
                 .setZoneNumber(LowEmissionZoneNumbers.YELLOW)
                 .setZoneNumberSince(zoneNumberSinceDate)
+                .build();
+        LowEmissionZone zone = new LowEmissionZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
+                .setChildZones(singletonList(firstChildZone))
                 .build();
 
         launchActivity(zone);
@@ -223,8 +237,10 @@ public class CityInfoFragmentTest {
 
     @Test
     public void renderCityInfoWithNoRestriction() {
+        ChildZone childZone = new ChildZoneBuilder().build();
         LowEmissionZone zone = new LowEmissionZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
+                .setChildZones(singletonList(childZone))
                 .build();
 
         launchActivity(zone);
@@ -239,6 +255,7 @@ public class CityInfoFragmentTest {
 
     @Test
     public void renderCityInfoWithListOfCities() {
+        ChildZone childZone = new ChildZoneBuilder().build();
         LowEmissionZone zone = new LowEmissionZoneBuilder()
                 .setListOfCities(new ArrayList<String>(3) {{
                     add("Bochum");
@@ -246,6 +263,7 @@ public class CityInfoFragmentTest {
                     add("Castrop-Rauxel");
                 }})
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
+                .setChildZones(singletonList(childZone))
                 .build();
 
         launchActivity(zone);

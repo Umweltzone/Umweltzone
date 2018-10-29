@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2018  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -24,13 +24,16 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.utils.BoundingBox;
+import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 
+import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnit4.class)
@@ -43,7 +46,6 @@ public class LowEmissionZoneTests {
     }
 
     private LowEmissionZone getLowEmissionZone() {
-        Date date = DateHelper.getDate(2016, 4, 1);
         GeoPoint southWest = new GeoPoint(52.464504, 13.282079);
         GeoPoint northEast = new GeoPoint(52.549808, 13.475550);
         return new LowEmissionZoneBuilder()
@@ -55,11 +57,6 @@ public class LowEmissionZoneTests {
                     add("Castrop-Rauxel");
                 }})
                 .setBoundingBox(new BoundingBox(southWest, northEast))
-                .setZoneNumber(LowEmissionZoneNumbers.GREEN)
-                .setZoneNumberSince(date)
-                .setNextZoneNumberAsOf(null)
-                .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
-                .setAbroadLicensedVehicleZoneNumberUntil(date)
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
                         "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php")
@@ -67,9 +64,24 @@ public class LowEmissionZoneTests {
                     add("john.doe@example.com");
                     add("anna.mae@example.com");
                 }})
-                .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
-                .setGeometryUpdatedAt(date)
+                .setChildZones(getChildZones())
                 .build();
+    }
+
+    private List<ChildZone> getChildZones() {
+        Date date = DateHelper.getDate(2016, 4, 1);
+        return singletonList(
+                new ChildZoneBuilder()
+                        .setName("berlin1")
+                        .setDisplayName("Berlin 1")
+                        .setZoneNumber(LowEmissionZoneNumbers.GREEN)
+                        .setZoneNumberSince(date)
+                        .setNextZoneNumberAsOf(null)
+                        .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
+                        .setAbroadLicensedVehicleZoneNumberUntil(date)
+                        .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
+                        .setGeometryUpdatedAt(date)
+                        .build());
     }
 
 }
