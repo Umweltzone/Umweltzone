@@ -141,6 +141,7 @@ public class PreferencesHelper {
         mZoneIsDrawablePreference.set(flag);
     }
 
+    @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     public boolean restoreZoneIsDrawable() {
         return mZoneIsDrawablePreference.get();
     }
