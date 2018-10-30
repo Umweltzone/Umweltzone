@@ -422,7 +422,7 @@
         "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/halle-saale.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/halle-an-der-saale.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.477952,
@@ -1711,4 +1711,6 @@
             }
         }
     }
+]
+
 ]
