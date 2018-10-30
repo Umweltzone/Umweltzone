@@ -16,6 +16,13 @@
 -->
 <changelog>
     <release
+        version="3.5.0"
+        versioncode="305000">
+        <change>
+            Android: The app is now optimized for Android 25 (Nougat).
+        </change>
+    </release>
+    <release
         version="3.4.0"
         versioncode="304000">
         <change>

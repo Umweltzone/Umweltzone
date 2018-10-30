@@ -14,7 +14,7 @@ repositories {
 }
 
 def versionMajor = 3
-def versionMinor = 4
+def versionMinor = 5
 def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 

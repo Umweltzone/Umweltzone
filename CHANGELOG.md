@@ -1,5 +1,18 @@
 # Umweltzone changelog
 
+## [v.3.5.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.5.0)
+
+* Published: 2018-10-31
+
+### Features, improvements and maintenance
+
+* Update external URL for umwelt-plakette.de., [ec8cc](https://bitbucket.org/tbsprs/umweltzone/commits/ec8cc1ec7cfe2b4fcb4ef358a493fe0243d12d79)
+
+### Libraries, build tools, SDK
+
+* Use targetSdkVersion 25, compileSdkVersion 25 and Google support library v.25.4.0., [0e1f2](https://bitbucket.org/tbsprs/umweltzone/commits/0e1f2eb545dc86bc290f9000fe226419077a23d4)
+
+
 ## [v.3.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.4.0)
 
 * Published: 2018-10-29
