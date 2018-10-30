@@ -5,9 +5,7 @@ import android.support.annotation.ColorInt
 import android.support.v4.content.ContextCompat
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.models.LowEmissionZone
-import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter
 import de.avpptr.umweltzone.zones.ChildZonesCount
-import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 
 fun LowEmissionZone.toZoneViewModel(context: Context): ZoneViewModel = when (childZones.size) {
