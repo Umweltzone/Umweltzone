@@ -43,12 +43,12 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 25
     buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 24
+        targetSdkVersion 25
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
@@ -128,9 +128,7 @@ dependencies {
     implementation "com.google.android.gms:play-services-base:$playServicesVersion"
     implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
-    implementation("com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion") {
-        exclude group: "com.android.support"
-    }
+    implementation "com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion"
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
     implementation "org.parceler:parceler-api:$parcelerVersion"
