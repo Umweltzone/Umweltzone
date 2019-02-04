@@ -323,7 +323,7 @@
         "displayName" : "Frankfurt am Main",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Main",
+            "displayName" : "Frankfurt am Main",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-01-01",
             "nextZoneNumberAsOf" : "",
@@ -352,7 +352,7 @@
         "displayName" : "Freiburg im Breisgau",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Breisgau",
+            "displayName" : "Freiburg im Breisgau",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
             "nextZoneNumberAsOf" : "",
@@ -410,7 +410,7 @@
         "displayName" : "Halle (Saale)",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Saale)",
+            "displayName" : "Halle (Saale)",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
             "nextZoneNumberAsOf" : "",
@@ -497,7 +497,7 @@
         "displayName" : "Heidenheim an der Brenz",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Brenz",
+            "displayName" : "Heidenheim an der Brenz",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
             "nextZoneNumberAsOf" : "",
@@ -791,7 +791,7 @@
         "displayName" : "Limburg an der Lahn",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Lahn",
+            "displayName" : "Limburg an der Lahn",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2018-01-31",
             "nextZoneNumberAsOf" : "",
@@ -1110,7 +1110,7 @@
         "displayName" : "Neu-Ulm",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Ulm",
+            "displayName" : "Neu-Ulm",
             "zoneNumber" : 3,
             "zoneNumberSince" : "2012-11-05",
             "nextZoneNumberAsOf" : "",
@@ -1450,7 +1450,7 @@
         "displayName" : "Schwäbisch Gmünd",
         "childZones" : [{
             "name" : "",
-            "displayName" : "Gmünd",
+            "displayName" : "Schwäbisch Gmünd",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
             "nextZoneNumberAsOf" : "",
