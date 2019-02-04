@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -261,13 +261,14 @@ public class CityInfoFragmentTest {
 
     @Test
     public void renderCityInfoWithListOfCities() {
-        ChildZone childZone = new ChildZoneBuilder().build();
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        ChildZone childZone = new ChildZoneBuilder()
                 .setListOfCities(new ArrayList<String>(3) {{
                     add("Bochum");
                     add("Bottrop");
                     add("Castrop-Rauxel");
                 }})
+                .build();
+        LowEmissionZone zone = new LowEmissionZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .setChildZones(singletonList(childZone))
                 .build();

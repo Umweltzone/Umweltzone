@@ -11,9 +11,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Servicestelle MapInfo/CAD, Aachen",
-            "geometryUpdatedAt" : "2016-02-15"
+            "geometryUpdatedAt" : "2016-02-15",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/aachen.html",
@@ -39,10 +39,10 @@
             "nextZoneNumberAsOf" : "",
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12"
+            "geometrySource" : "Stadt Augsburg / Geodatenamt",
+            "geometryUpdatedAt" : "2018-11-22",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/augsburg.html",
@@ -69,9 +69,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg",
-            "geometryUpdatedAt" : "2017-10-20"
+            "geometryUpdatedAt" : "2017-10-20",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/balingen.html",
@@ -98,9 +98,9 @@
             "abroadLicensedVehicleZoneNumber" : 3,
             "abroadLicensedVehicleZoneNumberUntil" : "2014-12-31",
             "geometrySource" : "Geoportal Berlin / Umweltzone Berlin",
-            "geometryUpdatedAt" : "2014-06-09"
+            "geometryUpdatedAt" : "2014-06-09",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/berlin.html",
@@ -127,9 +127,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-09-23"
+            "geometryUpdatedAt" : "2014-09-23",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/bonn.html",
@@ -156,9 +156,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17"
+            "geometryUpdatedAt" : "2013-12-17",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/bremen.html",
@@ -185,9 +185,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Vermessungsamt, Kartographie, Darmstadt",
-            "geometryUpdatedAt" : "2015-11-30"
+            "geometryUpdatedAt" : "2015-11-30",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/darmstadt.html",
@@ -214,9 +214,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Fachdienst Stadtentwicklung und Bauleitplanung, Dinslaken",
-            "geometryUpdatedAt" : "2015-01-20"
+            "geometryUpdatedAt" : "2015-01-20",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/dinslaken.html",
@@ -243,9 +243,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17"
+            "geometryUpdatedAt" : "2013-12-17",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/duesseldorf.html",
@@ -272,9 +272,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Tiefbau- und Verkehrsamt, Erfurt",
-            "geometryUpdatedAt" : "2015-01-28"
+            "geometryUpdatedAt" : "2015-01-28",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/erfurt.html",
@@ -301,9 +301,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Eschweiler, Vermessung und Bodenwirtschaft",
-            "geometryUpdatedAt" : "2016-07-07"
+            "geometryUpdatedAt" : "2016-07-07",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen.html",
@@ -330,9 +330,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Frankfurt",
-            "geometryUpdatedAt" : "2013-10-14"
+            "geometryUpdatedAt" : "2013-10-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/frankfurt-am-main.html",
@@ -359,9 +359,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-06-09"
+            "geometryUpdatedAt" : "2014-06-09",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/freiburg-im-breisgau.html",
@@ -388,9 +388,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12"
+            "geometryUpdatedAt" : "2014-02-12",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hagen.html",
@@ -417,9 +417,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Fachbereich Umwelt, Halle (Saale)",
-            "geometryUpdatedAt" : "2016-04-03"
+            "geometryUpdatedAt" : "2016-04-03",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/halle-an-der-saale.html",
@@ -446,9 +446,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17"
+            "geometryUpdatedAt" : "2013-12-17",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hannover.html",
@@ -475,9 +475,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-08-05"
+            "geometryUpdatedAt" : "2015-08-05",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heidelberg.html",
@@ -504,9 +504,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-10-12"
+            "geometryUpdatedAt" : "2014-10-12",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heidenheim.html",
@@ -533,13 +533,13 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-09-14"
+            "geometryUpdatedAt" : "2014-09-14",
+            "listOfCities" : [
+                "Frankenbach",
+                "Heilbronn",
+                "Horkheim"
+            ]
         }],
-        "listOfCities" : [
-            "Frankenbach",
-            "Heilbronn",
-            "Horkheim"
-        ],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heilbronn.html",
@@ -566,9 +566,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-12-28"
+            "geometryUpdatedAt" : "2014-12-28",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/herrenberg.html",
@@ -595,9 +595,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-14"
+            "geometryUpdatedAt" : "2015-01-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ilsfeld.html",
@@ -624,9 +624,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Karlsruhe, Umwelt- und Arbeitsschutz",
-            "geometryUpdatedAt" : "2015-02-20"
+            "geometryUpdatedAt" : "2015-02-20",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/karlsruhe.html",
@@ -653,9 +653,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Köln",
-            "geometryUpdatedAt" : "2013-10-14"
+            "geometryUpdatedAt" : "2013-10-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/koeln.html",
@@ -682,9 +682,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Vermessungs- und Katasterwesen, Krefeld",
-            "geometryUpdatedAt" : "2015-01-13"
+            "geometryUpdatedAt" : "2015-01-13",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/krefeld.html",
@@ -711,9 +711,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Landesamt für Natur, Umwelt und Verbraucherschutz NRW, Recklinghausen",
-            "geometryUpdatedAt" : "2015-01-14"
+            "geometryUpdatedAt" : "2015-01-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/langenfeld.html",
@@ -740,9 +740,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Amt für Umweltschutz, Stadt Leipzig",
-            "geometryUpdatedAt" : "2016-01-22"
+            "geometryUpdatedAt" : "2016-01-22",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/leipzig.html",
@@ -769,9 +769,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15"
+            "geometryUpdatedAt" : "2015-01-15",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/leonberg-hemmingen-und-umgebung.html",
@@ -798,9 +798,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Hessisches Ministerium für Umwelt, Klimaschutz, Landwirtschaft und Verbraucherschutz",
-            "geometryUpdatedAt" : "2018-02-05"
+            "geometryUpdatedAt" : "2018-02-05",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/limburg.html",
@@ -827,9 +827,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2018-09-19"
+            "geometryUpdatedAt" : "2018-09-19",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ludwigsburg-und-umgebung.html",
@@ -856,9 +856,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-09-06"
+            "geometryUpdatedAt" : "2015-09-06",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/magdeburg.html",
@@ -885,9 +885,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Landeshauptstadt Mainz",
-            "geometryUpdatedAt" : "2018-03-06"
+            "geometryUpdatedAt" : "2018-03-06",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/mainz.html",
@@ -914,9 +914,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-12-02"
+            "geometryUpdatedAt" : "2014-12-02",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/mannheim.html",
@@ -943,9 +943,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Fachdienst Straßenverkehr, Marburg",
-            "geometryUpdatedAt" : "2016-04-03"
+            "geometryUpdatedAt" : "2016-04-03",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/marburg.html",
@@ -972,9 +972,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Mönchengladbach",
-            "geometryUpdatedAt" : "2014-06-09"
+            "geometryUpdatedAt" : "2014-06-09",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/moenchengladbach.html",
@@ -1001,9 +1001,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Abteilung Geoinformation, Mühlacker",
-            "geometryUpdatedAt" : "2015-01-14"
+            "geometryUpdatedAt" : "2015-01-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muehlacker.html",
@@ -1030,9 +1030,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt München",
-            "geometryUpdatedAt" : "2013-10-14"
+            "geometryUpdatedAt" : "2013-10-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muenchen.html",
@@ -1059,9 +1059,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17"
+            "geometryUpdatedAt" : "2013-12-17",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muenster.html",
@@ -1088,9 +1088,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-06-09"
+            "geometryUpdatedAt" : "2014-06-09",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/neuss.html",
@@ -1117,9 +1117,9 @@
             "abroadLicensedVehicleZoneNumber" : 3,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-06-14"
+            "geometryUpdatedAt" : "2014-06-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/neu-ulm.html",
@@ -1146,9 +1146,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Amt für Umwelt, Energie und Klimaschutz, Offenbach am Main",
-            "geometryUpdatedAt" : "2015-01-16"
+            "geometryUpdatedAt" : "2015-01-16",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/offenbach.html",
@@ -1175,9 +1175,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-12-02"
+            "geometryUpdatedAt" : "2014-12-02",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/osnabrueck.html",
@@ -1204,9 +1204,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadtverwaltung Overath",
-            "geometryUpdatedAt" : "2017-10-23"
+            "geometryUpdatedAt" : "2017-10-23",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/overath.html",
@@ -1233,9 +1233,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Gemeindeverwaltung Pfinztal, Fachbereich IV - Bauen und Planen",
-            "geometryUpdatedAt" : "2015-01-16"
+            "geometryUpdatedAt" : "2015-01-16",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/pfinztal.html",
@@ -1262,9 +1262,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-09-11"
+            "geometryUpdatedAt" : "2014-09-11",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/pforzheim.html",
@@ -1291,9 +1291,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : null,
-            "geometryUpdatedAt" : null
+            "geometryUpdatedAt" : null,
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : [
             "wolbergs.joachim@regensburg.de",
             "maltz-schwarzfischer.gertrud@regensburg.de",
@@ -1327,9 +1327,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-11-04"
+            "geometryUpdatedAt" : "2014-11-04",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/remscheid.html",
@@ -1356,9 +1356,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-02-06"
+            "geometryUpdatedAt" : "2015-02-06",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/reutlingen.html",
@@ -1385,23 +1385,23 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12"
+            "geometryUpdatedAt" : "2014-02-12",
+            "listOfCities" : [
+                "Bochum",
+                "Bottrop",
+                "Castrop-Rauxel",
+                "Dortmund",
+                "Duisburg",
+                "Essen",
+                "Gelsenkirchen",
+                "Gladbeck",
+                "Herne",
+                "Herten",
+                "Mülheim/Ruhr",
+                "Oberhausen",
+                "Recklinghausen"
+            ]
         }],
-        "listOfCities" : [
-            "Bochum",
-            "Bottrop",
-            "Castrop-Rauxel",
-            "Dortmund",
-            "Duisburg",
-            "Essen",
-            "Gelsenkirchen",
-            "Gladbeck",
-            "Herne",
-            "Herten",
-            "Mülheim/Ruhr",
-            "Oberhausen",
-            "Recklinghausen"
-        ],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ruhrgebiet.html",
@@ -1428,9 +1428,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-10-12"
+            "geometryUpdatedAt" : "2014-10-12",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/schramberg.html",
@@ -1457,9 +1457,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15"
+            "geometryUpdatedAt" : "2015-01-15",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/schwaebisch-gmuend.html",
@@ -1486,9 +1486,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-01-02"
+            "geometryUpdatedAt" : "2015-01-02",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/siegen.html",
@@ -1515,9 +1515,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Stuttgart",
-            "geometryUpdatedAt" : "2013-10-14"
+            "geometryUpdatedAt" : "2013-10-14",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/stuttgart.html",
@@ -1544,9 +1544,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Landesamt für Geoinformation und Landentwicklung, Baden-Württemberg, www.lgl-bw.de",
-            "geometryUpdatedAt" : "2015-01-01"
+            "geometryUpdatedAt" : "2015-01-01",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/tuebingen.html",
@@ -1573,9 +1573,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12"
+            "geometryUpdatedAt" : "2014-02-12",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ulm.html",
@@ -1602,9 +1602,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15"
+            "geometryUpdatedAt" : "2015-01-15",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/urbach.html",
@@ -1631,9 +1631,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15"
+            "geometryUpdatedAt" : "2015-01-15",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/wendlingen.html",
@@ -1660,9 +1660,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : null,
-            "geometryUpdatedAt" : null
+            "geometryUpdatedAt" : null,
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : [
             "oberbuergermeister@wiesbaden.de",
             "strassenverkehrsbehoerde@wiesbaden.de",
@@ -1694,9 +1694,9 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Bezirksregierung Düsseldorf",
-            "geometryUpdatedAt" : "2015-07-27"
+            "geometryUpdatedAt" : "2015-07-27",
+            "listOfCities" : []
         }],
-        "listOfCities" : [],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/wuppertal.html",

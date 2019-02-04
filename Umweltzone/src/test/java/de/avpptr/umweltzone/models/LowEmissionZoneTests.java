@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -51,11 +51,6 @@ public class LowEmissionZoneTests {
         return new LowEmissionZoneBuilder()
                 .setName("berlin")
                 .setDisplayName("Berlin")
-                .setListOfCities(new ArrayList<String>(3) {{
-                    add("Bochum");
-                    add("Bottrop");
-                    add("Castrop-Rauxel");
-                }})
                 .setBoundingBox(new BoundingBox(southWest, northEast))
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
@@ -79,6 +74,11 @@ public class LowEmissionZoneTests {
                         .setNextZoneNumberAsOf(null)
                         .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
                         .setAbroadLicensedVehicleZoneNumberUntil(date)
+                        .setListOfCities(new ArrayList<String>(3) {{
+                            add("Bochum");
+                            add("Bottrop");
+                            add("Castrop-Rauxel");
+                        }})
                         .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
                         .setGeometryUpdatedAt(date)
                         .build());

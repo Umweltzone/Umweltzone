@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@ package de.avpptr.umweltzone.models;
 import org.parceler.Parcel;
 
 import java.util.Date;
+import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 
@@ -41,6 +42,8 @@ public class ChildZone {
     public int abroadLicensedVehicleZoneNumber;
 
     public Date abroadLicensedVehicleZoneNumberUntil;
+
+    public List<String> listOfCities;
 
     public String geometrySource;
 
@@ -81,6 +84,9 @@ public class ChildZone {
         if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil.equals(childZone.abroadLicensedVehicleZoneNumberUntil) : childZone.abroadLicensedVehicleZoneNumberUntil != null) {
             return false;
         }
+        if (listOfCities != null ? !listOfCities.equals(childZone.listOfCities) : childZone.listOfCities != null) {
+            return false;
+        }
         if (geometrySource != null ? !geometrySource.equals(childZone.geometrySource) : childZone.geometrySource != null) {
             return false;
         }
@@ -96,6 +102,7 @@ public class ChildZone {
         result = 31 * result + (nextZoneNumberAsOf != null ? nextZoneNumberAsOf.hashCode() : 0);
         result = 31 * result + abroadLicensedVehicleZoneNumber;
         result = 31 * result + (abroadLicensedVehicleZoneNumberUntil != null ? abroadLicensedVehicleZoneNumberUntil.hashCode() : 0);
+        result = 31 * result + (listOfCities != null ? listOfCities.hashCode() : 0);
         result = 31 * result + (geometrySource != null ? geometrySource.hashCode() : 0);
         result = 31 * result + (geometryUpdatedAt != null ? geometryUpdatedAt.hashCode() : 0);
         return result;
@@ -111,6 +118,7 @@ public class ChildZone {
                 ", nextZoneNumberAsOf=" + nextZoneNumberAsOf +
                 ", abroadLicensedVehicleZoneNumber=" + abroadLicensedVehicleZoneNumber +
                 ", abroadLicensedVehicleZoneNumberUntil=" + abroadLicensedVehicleZoneNumberUntil +
+                ", listOfCities=" + listOfCities +
                 ", geometrySource='" + geometrySource + '\'' +
                 ", geometryUpdatedAt=" + geometryUpdatedAt +
                 '}';

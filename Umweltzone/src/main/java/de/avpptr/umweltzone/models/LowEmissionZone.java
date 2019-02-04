@@ -38,8 +38,6 @@ public class LowEmissionZone {
 
     public String displayName;
 
-    public List<String> listOfCities;
-
     public BoundingBox boundingBox;
 
     public String urlUmweltPlaketteDe;
@@ -112,10 +110,6 @@ public class LowEmissionZone {
                 : lez.displayName != null) {
             return false;
         }
-        if (listOfCities != null ? !listOfCities.equals(lez.listOfCities)
-                : lez.listOfCities != null) {
-            return false;
-        }
         if (boundingBox != null ? !boundingBox.equals(lez.boundingBox)
                 : lez.boundingBox != null) {
             return false;
@@ -140,7 +134,6 @@ public class LowEmissionZone {
     public int hashCode() {
         int result = name != null ? name.hashCode() : 0;
         result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
-        result = 31 * result + (listOfCities != null ? listOfCities.hashCode() : 0);
         result = 31 * result + (boundingBox != null ? boundingBox.hashCode() : 0);
         result = 31 * result + (urlUmweltPlaketteDe != null ? urlUmweltPlaketteDe.hashCode() : 0);
         result = 31 * result + (urlBadgeOnline != null ? urlBadgeOnline.hashCode() : 0);
@@ -154,7 +147,6 @@ public class LowEmissionZone {
         return "LowEmissionZone{" +
                 "name='" + name + '\'' +
                 ", displayName='" + displayName + '\'' +
-                ", listOfCities=" + listOfCities +
                 ", boundingBox=" + boundingBox +
                 ", urlUmweltPlaketteDe='" + urlUmweltPlaketteDe + '\'' +
                 ", urlBadgeOnline='" + urlBadgeOnline + '\'' +

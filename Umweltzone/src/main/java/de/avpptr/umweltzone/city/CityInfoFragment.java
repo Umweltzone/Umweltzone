@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -114,7 +114,7 @@ public class CityInfoFragment extends BaseFragment {
         // List of cities
         TextView listOfCitiesTextView =
                 (TextView) activity.findViewById(R.id.city_info_list_of_cities);
-        String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
+        String listOfCitiesText = StringHelper.getListOfCitiesText(activity, childZone);
         ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
 
         // Zone number since or as of

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,8 +28,6 @@ public class LowEmissionZoneBuilder {
 
     private String mDisplayName;
 
-    private List<String> mListOfCities;
-
     private BoundingBox mBoundingBox;
 
     private String mUrlUmweltPlaketteDe;
@@ -47,11 +45,6 @@ public class LowEmissionZoneBuilder {
 
     public LowEmissionZoneBuilder setDisplayName(String displayName) {
         mDisplayName = displayName;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setListOfCities(List<String> listOfCities) {
-        mListOfCities = listOfCities;
         return this;
     }
 
@@ -84,7 +77,6 @@ public class LowEmissionZoneBuilder {
         LowEmissionZone lowEmissionZone = new LowEmissionZone();
         lowEmissionZone.name = mName;
         lowEmissionZone.displayName = mDisplayName;
-        lowEmissionZone.listOfCities = mListOfCities;
         lowEmissionZone.boundingBox = mBoundingBox;
         lowEmissionZone.urlUmweltPlaketteDe = mUrlUmweltPlaketteDe;
         lowEmissionZone.urlBadgeOnline = mUrlBadgeOnline;

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -40,6 +40,8 @@ public class ChildZoneBuilder {
     private int mAbroadLicensedVehicleZoneNumber;
 
     private Date mAbroadLicensedVehicleZoneNumberUntil;
+
+    private List<String> mListOfCities;
 
     private String mGeometrySource;
 
@@ -84,6 +86,11 @@ public class ChildZoneBuilder {
         return this;
     }
 
+    public ChildZoneBuilder setListOfCities(List<String> listOfCities) {
+        mListOfCities = listOfCities;
+        return this;
+    }
+
     public ChildZoneBuilder setGeometrySource(String geometrySource) {
         mGeometrySource = geometrySource;
         return this;
@@ -108,6 +115,7 @@ public class ChildZoneBuilder {
         zone.nextZoneNumberAsOf = mNextZoneNumberAsOf;
         zone.abroadLicensedVehicleZoneNumber = mAbroadLicensedVehicleZoneNumber;
         zone.abroadLicensedVehicleZoneNumberUntil = mAbroadLicensedVehicleZoneNumberUntil;
+        zone.listOfCities = mListOfCities;
         zone.geometrySource = mGeometrySource;
         zone.geometryUpdatedAt = mGeometryUpdatedAt;
         return zone;

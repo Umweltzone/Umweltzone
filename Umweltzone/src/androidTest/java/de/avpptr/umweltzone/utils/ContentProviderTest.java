@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2019  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -142,7 +142,6 @@ public class ContentProviderTest {
     private void testLowEmissionZone(@NonNull LowEmissionZone lowEmissionZone) {
         assertThat(lowEmissionZone.name).isNotNull();
         assertThat(lowEmissionZone.displayName).isNotNull();
-        assertThat(lowEmissionZone.listOfCities).isNotNull();
 
         BoundingBox boundingBox = lowEmissionZone.boundingBox;
         assertThat(boundingBox).isNotNull();
@@ -171,6 +170,7 @@ public class ContentProviderTest {
                 .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
         assertThat(childZone.zoneNumberSince).isNotNull();
         assertThat(childZone.abroadLicensedVehicleZoneNumber).isNotNull();
+        assertThat(childZone.listOfCities).isNotNull();
     }
 
     @NonNull
