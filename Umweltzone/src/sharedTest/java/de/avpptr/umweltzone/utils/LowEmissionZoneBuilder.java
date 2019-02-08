@@ -47,8 +47,6 @@ public class LowEmissionZoneBuilder {
 
     private Date mGeometryUpdatedAt;
 
-    public List<LowEmissionZone> mChildZones;
-
     public LowEmissionZoneBuilder setName(String name) {
         mName = name;
         return this;
@@ -98,11 +96,6 @@ public class LowEmissionZoneBuilder {
 
     public LowEmissionZoneBuilder setGeometryUpdatedAt(Date geometryUpdatedAt) {
         mGeometryUpdatedAt = geometryUpdatedAt;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setChildZones(List<LowEmissionZone> childZones) {
-        mChildZones = childZones;
         return this;
     }
 
