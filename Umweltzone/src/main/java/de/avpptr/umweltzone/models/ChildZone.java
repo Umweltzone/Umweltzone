@@ -15,13 +15,19 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.zones.dataconverters
+package de.avpptr.umweltzone.models;
 
-import android.content.Context
-import de.avpptr.umweltzone.extensions.getColorCompat
-import de.avpptr.umweltzone.models.ChildZone
-import de.avpptr.umweltzone.utils.color
-import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
-fun ChildZone.toBadgeViewModel(context: Context) =
-        BadgeViewModel("$zoneNumber", context.getColorCompat(zoneNumber.color))
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
+})
+public interface ChildZone {
+
+    int getZoneNumber();
+
+    boolean containsGeometryInformation();
+
+}

@@ -25,7 +25,7 @@ import java.util.List;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 
 @Parcel
-public class LowEmissionZone {
+public class LowEmissionZone implements ChildZone {
 
     public String name;
 
@@ -49,8 +49,14 @@ public class LowEmissionZone {
 
     public Date geometryUpdatedAt;
 
+    @Override
     public boolean containsGeometryInformation() {
         return geometrySource != null && geometryUpdatedAt != null;
+    }
+
+    @Override
+    public int getZoneNumber() {
+        return zoneNumber;
     }
 
     @SuppressWarnings("EqualsReplaceableByObjectsCall")

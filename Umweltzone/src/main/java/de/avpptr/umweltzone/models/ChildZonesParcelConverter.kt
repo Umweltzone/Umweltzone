@@ -15,13 +15,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.zones.dataconverters
+package de.avpptr.umweltzone.models
 
-import android.content.Context
-import de.avpptr.umweltzone.extensions.getColorCompat
-import de.avpptr.umweltzone.models.ChildZone
-import de.avpptr.umweltzone.utils.color
-import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
+import android.os.Parcel
+import android.os.Parcelable
 
-fun ChildZone.toBadgeViewModel(context: Context) =
-        BadgeViewModel("$zoneNumber", context.getColorCompat(zoneNumber.color))
+import org.parceler.Parcels
+import org.parceler.converter.ArrayListParcelConverter
+
+class ChildZonesParcelConverter : ArrayListParcelConverter<ChildZone>() {
+
+    override fun itemToParcel(input: ChildZone, parcel: Parcel) {
+        parcel.writeParcelable(Parcels.wrap(input), NO_FLAGS)
+    }
+
+    override fun itemFromParcel(parcel: Parcel): ChildZone = Parcels.unwrap<ChildZone>(
+            parcel.readParcelable<Parcelable>(ChildZone::class.java.classLoader))
+
+    companion object {
+        private const val NO_FLAGS = 0
+    }
+
+}

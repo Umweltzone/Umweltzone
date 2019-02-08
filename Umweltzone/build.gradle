@@ -155,6 +155,7 @@ dependencies {
     // Unit tests
     testImplementation "junit:junit:$junitVersion"
     testImplementation "com.squareup.assertj:assertj-android:$assertjAndroidVersion"
+    kaptTest "org.parceler:parceler:$parcelerVersion"
 }
 
 Properties props = new Properties()

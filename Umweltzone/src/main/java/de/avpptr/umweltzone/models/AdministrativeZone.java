@@ -21,6 +21,7 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 
 import org.parceler.Parcel;
+import org.parceler.ParcelPropertyConverter;
 
 import java.util.List;
 
@@ -46,7 +47,8 @@ public class AdministrativeZone {
 
     public List<String> contactEmails;
 
-    public List<LowEmissionZone> childZones;
+    @ParcelPropertyConverter(ChildZonesParcelConverter.class)
+    public List<ChildZone> childZones;
 
     // Used for caching
     private static List<AdministrativeZone> mAdministrativeZones;
@@ -85,7 +87,7 @@ public class AdministrativeZone {
     }
 
     public boolean containsGeometryInformation() {
-        for (LowEmissionZone childZone : childZones) {
+        for (ChildZone childZone : childZones) {
             if (childZone.containsGeometryInformation()) {
                 return true;
             }

@@ -30,9 +30,11 @@ import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.AdministrativeZone;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.Faq;
+import de.avpptr.umweltzone.models.LowEmissionZone;
+import kotlin.NotImplementedError;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.fail;
@@ -147,7 +149,14 @@ public class ContentProviderTest {
         assertThat(boundingBox).isNotNull();
         assertThat(boundingBox.isValid()).isTrue();
 
-        administrativeZone.childZones.forEach(this::testLowEmissionZone);
+        for (ChildZone childZone : administrativeZone.childZones) {
+            if (childZone instanceof LowEmissionZone) {
+                testLowEmissionZone((LowEmissionZone) childZone);
+            } else {
+                fail();
+                throw new NotImplementedError();
+            }
+        }
 
         assertThat(administrativeZone.urlUmweltPlaketteDe)
                 .isNotNull()

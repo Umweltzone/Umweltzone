@@ -94,7 +94,7 @@ public class CityInfoFragment extends BaseFragment {
                                @NonNull final AdministrativeZone administrativeZone) {
 
         // TODO: Loop over child zones.
-        LowEmissionZone lowEmissionZone = administrativeZone.childZones.get(0);
+        LowEmissionZone lowEmissionZone = (LowEmissionZone) administrativeZone.childZones.get(0);
 
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);

@@ -63,7 +63,7 @@ public class AdministrativeZoneTests {
                 .build();
     }
 
-    private List<LowEmissionZone> getChildZones() {
+    private List<ChildZone> getChildZones() {
         Date date = DateHelper.getDate(2016, 4, 1);
         return singletonList(
                 new LowEmissionZoneBuilder()
