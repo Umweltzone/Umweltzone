@@ -25,7 +25,7 @@ import com.google.android.gms.maps.model.CameraPosition;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.Preferences;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import info.metadude.android.typedpreferences.BooleanPreference;
 import info.metadude.android.typedpreferences.StringPreference;
@@ -72,9 +72,9 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_MY_LOCATION_PERMISSION_IS_PERMANENTLY_DECLINED);
     }
 
-    // LowEmissionZone
+    // AdministrativeZone
 
-    public void storeLowEmissionZone(@NonNull final LowEmissionZone zone) {
+    public void storeAdministrativeZone(@NonNull final AdministrativeZone zone) {
         storeLastKnownLocationAsBoundingBox(zone.boundingBox);
         storeLastKnownLocationAsString(zone.name);
         storeZoneIsDrawable(zone.containsGeometryInformation());

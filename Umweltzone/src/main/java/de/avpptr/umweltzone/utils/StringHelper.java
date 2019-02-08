@@ -34,8 +34,8 @@ import java.util.List;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
 

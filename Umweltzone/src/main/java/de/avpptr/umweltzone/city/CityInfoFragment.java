@@ -35,8 +35,8 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter;
 import de.avpptr.umweltzone.utils.StringHelper;
@@ -47,16 +47,16 @@ public class CityInfoFragment extends BaseFragment {
     public static final String FRAGMENT_TAG =
             BuildConfig.APPLICATION_ID + ".CITY_INFO_FRAGMENT_TAG";
 
-    public static final String BUNDLE_KEY_LOW_EMISSION_ZONE =
-            BuildConfig.APPLICATION_ID + ".LOW_EMISSION_ZONE_BUNDLE_KEY";
+    public static final String BUNDLE_KEY_ADMINISTRATIVE_ZONE =
+            BuildConfig.APPLICATION_ID + ".ADMINISTRATIVE_ZONE_BUNDLE_KEY";
 
-    private LowEmissionZone mLowEmissionZone;
+    private AdministrativeZone mAdministrativeZone;
 
-    public static CityInfoFragment newInstance(@NonNull LowEmissionZone lowEmissionZone) {
+    public static CityInfoFragment newInstance(@NonNull AdministrativeZone administrativeZone) {
         CityInfoFragment cityInfoFragment = new CityInfoFragment();
         Bundle extras = new Bundle();
-        Parcelable lowEmissionZoneParcelable = Parcels.wrap(lowEmissionZone);
-        extras.putParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE, lowEmissionZoneParcelable);
+        Parcelable parcelable = Parcels.wrap(administrativeZone);
+        extras.putParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE, parcelable);
         cityInfoFragment.setArguments(extras);
         return cityInfoFragment;
     }
@@ -71,8 +71,8 @@ public class CityInfoFragment extends BaseFragment {
         super.onCreate(savedInstanceState);
         Bundle extras = getArguments();
         if (extras != null) {
-            Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE);
-            mLowEmissionZone = Parcels.unwrap(parcelable);
+            Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE);
+            mAdministrativeZone = Parcels.unwrap(parcelable);
         }
     }
 
@@ -85,16 +85,16 @@ public class CityInfoFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         Activity activity = getActivity();
-        if (activity != null && mLowEmissionZone != null) {
-            setUpCityInfo(activity, mLowEmissionZone);
+        if (activity != null && mAdministrativeZone != null) {
+            setUpCityInfo(activity, mAdministrativeZone);
         }
     }
 
     private void setUpCityInfo(@NonNull final Activity activity,
-                               @NonNull final LowEmissionZone lowEmissionZone) {
+                               @NonNull final AdministrativeZone administrativeZone) {
 
         // TODO: Loop over child zones.
-        ChildZone childZone = lowEmissionZone.childZones.get(0);
+        ChildZone childZone = administrativeZone.childZones.get(0);
 
         // Title
         TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
@@ -143,7 +143,7 @@ public class CityInfoFragment extends BaseFragment {
         // Show on map button
         Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(view -> {
-            mTracking.track(TrackingPoint.CityInfoShowOnMapClick, lowEmissionZone.name);
+            mTracking.track(TrackingPoint.CityInfoShowOnMapClick, administrativeZone.name);
             Umweltzone.centerZoneRequested = true;
             startActivity(IntentHelper.getNewMapIntent(activity));
         });
@@ -152,14 +152,14 @@ public class CityInfoFragment extends BaseFragment {
         ViewHelper.setupTextViewExtended(activity,
                 R.id.city_info_further_information,
                 R.string.city_info_further_information,
-                lowEmissionZone.urlUmweltPlaketteDe,
+                administrativeZone.urlUmweltPlaketteDe,
                 TrackingPoint.CityInfoFurtherInfoClick,
-                lowEmissionZone.name);
+                administrativeZone.name);
 
         // Badge online
         TextView badgeOnlineTextView = (TextView) activity.findViewById(
                 R.id.city_info_badge_online);
-        final String urlBadgeOnline = lowEmissionZone.urlBadgeOnline;
+        final String urlBadgeOnline = administrativeZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
             badgeOnlineTextView.setVisibility(View.GONE);
         } else {
@@ -169,7 +169,7 @@ public class CityInfoFragment extends BaseFragment {
                     R.string.city_info_badge_online_title,
                     urlBadgeOnline,
                     TrackingPoint.CityInfoBadgeOnlineClick,
-                    lowEmissionZone.name);
+                    administrativeZone.name);
         }
 
         // Geometry updated at

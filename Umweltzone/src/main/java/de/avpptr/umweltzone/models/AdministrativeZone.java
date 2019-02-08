@@ -32,7 +32,7 @@ import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
 
 @Parcel
-public class LowEmissionZone {
+public class AdministrativeZone {
 
     public String name;
 
@@ -49,36 +49,36 @@ public class LowEmissionZone {
     public List<ChildZone> childZones;
 
     // Used for caching
-    private static List<LowEmissionZone> mLowEmissionZones;
+    private static List<AdministrativeZone> mAdministrativeZones;
 
     @Nullable
-    public static LowEmissionZone getRecentLowEmissionZone(Context context) {
+    public static AdministrativeZone getRecentAdministrativeZone(Context context) {
         Umweltzone application = (Umweltzone) context.getApplicationContext();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         String zoneName = preferencesHelper.restoreLastKnownLocationAsString();
-        return getLowEmissionZone(context, zoneName);
+        return getAdministrativeZone(context, zoneName);
     }
 
     @Nullable
-    public static LowEmissionZone getDefaultLowEmissionZone(Context context) {
+    public static AdministrativeZone getDefaultAdministrativeZone(Context context) {
         String defaultZone = context.getString(R.string.config_default_zone_name);
-        return getLowEmissionZone(context, defaultZone);
+        return getAdministrativeZone(context, defaultZone);
     }
 
     // TODO Parser should not be called more often then needed
     @Nullable
-    private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
-        if (mLowEmissionZones == null) {
-            mLowEmissionZones = ContentProvider.getLowEmissionZones(context);
+    private static AdministrativeZone getAdministrativeZone(Context context, String zoneName) {
+        if (mAdministrativeZones == null) {
+            mAdministrativeZones = ContentProvider.getAdministrativeZones(context);
         }
-        if (mLowEmissionZones.isEmpty()) {
+        if (mAdministrativeZones.isEmpty()) {
             Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
-        for (int i = 0, size = mLowEmissionZones.size(); i < size; i++) {
-            LowEmissionZone lowEmissionZone = mLowEmissionZones.get(i);
-            if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
-                return lowEmissionZone;
+        for (int i = 0, size = mAdministrativeZones.size(); i < size; i++) {
+            AdministrativeZone administrativeZone = mAdministrativeZones.get(i);
+            if (administrativeZone.name.equalsIgnoreCase(zoneName)) {
+                return administrativeZone;
             }
         }
         return null;
@@ -102,32 +102,32 @@ public class LowEmissionZone {
         if (other == null || getClass() != other.getClass()) {
             return false;
         }
-        LowEmissionZone lez = (LowEmissionZone) other;
-        if (name != null ? !name.equals(lez.name) : lez.name != null) {
+        AdministrativeZone zone = (AdministrativeZone) other;
+        if (name != null ? !name.equals(zone.name) : zone.name != null) {
             return false;
         }
-        if (displayName != null ? !displayName.equals(lez.displayName)
-                : lez.displayName != null) {
+        if (displayName != null ? !displayName.equals(zone.displayName)
+                : zone.displayName != null) {
             return false;
         }
-        if (boundingBox != null ? !boundingBox.equals(lez.boundingBox)
-                : lez.boundingBox != null) {
+        if (boundingBox != null ? !boundingBox.equals(zone.boundingBox)
+                : zone.boundingBox != null) {
             return false;
         }
-        if (urlUmweltPlaketteDe != null ? !urlUmweltPlaketteDe.equals(lez.urlUmweltPlaketteDe)
-                : lez.urlUmweltPlaketteDe != null) {
+        if (urlUmweltPlaketteDe != null ? !urlUmweltPlaketteDe.equals(zone.urlUmweltPlaketteDe)
+                : zone.urlUmweltPlaketteDe != null) {
             return false;
         }
-        if (urlBadgeOnline != null ? !urlBadgeOnline.equals(lez.urlBadgeOnline)
-                : lez.urlBadgeOnline != null) {
+        if (urlBadgeOnline != null ? !urlBadgeOnline.equals(zone.urlBadgeOnline)
+                : zone.urlBadgeOnline != null) {
             return false;
         }
-        if (contactEmails != null ? !contactEmails.equals(lez.contactEmails)
-                : lez.contactEmails != null) {
+        if (contactEmails != null ? !contactEmails.equals(zone.contactEmails)
+                : zone.contactEmails != null) {
             return false;
         }
-        return childZones != null ? childZones.equals(lez.childZones)
-                : lez.childZones == null;
+        return childZones != null ? childZones.equals(zone.childZones)
+                : zone.childZones == null;
     }
 
     @Override
@@ -144,7 +144,7 @@ public class LowEmissionZone {
 
     @Override
     public String toString() {
-        return "LowEmissionZone{" +
+        return "AdministrativeZone{" +
                 "name='" + name + '\'' +
                 ", displayName='" + displayName + '\'' +
                 ", boundingBox=" + boundingBox +

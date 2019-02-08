@@ -24,7 +24,7 @@ import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.Umweltzone
 import de.avpptr.umweltzone.analytics.TrackingPoint
 import de.avpptr.umweltzone.base.BaseFragment
-import de.avpptr.umweltzone.models.LowEmissionZone
+import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.utils.ContentProvider
 import de.avpptr.umweltzone.utils.IntentHelper
 import de.avpptr.umweltzone.zones.dataconverters.toZoneViewModels
@@ -37,20 +37,20 @@ class ZonesFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        zones = ContentProvider.getLowEmissionZones(activity)
-        if (zones.isEmpty()) {
+        administrativeZones = ContentProvider.getAdministrativeZones(activity)
+        if (administrativeZones.isEmpty()) {
             mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null)
             error("Parsing zones from JSON failed.")
         }
-        val zoneViewModels = zones.toZoneViewModels(context)
-        lowEmissionZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick, ::onItemViewInflationError)
+        val zoneViewModels = administrativeZones.toZoneViewModels(context)
+        administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick, ::onItemViewInflationError)
     }
 
     private fun onItemClick(view: View) {
         val zoneViewModel = view.tag as ZoneViewModel
-        val lowEmissionZone = zones.single { it.displayName == zoneViewModel.name }
-        mTracking.track(TrackingPoint.CityListItemClick, lowEmissionZone.name)
-        storeSelectedLocation(lowEmissionZone)
+        val zone = administrativeZones.single { it.displayName == zoneViewModel.name }
+        mTracking.track(TrackingPoint.CityListItemClick, zone.name)
+        storeSelectedLocation(zone)
         val intent = IntentHelper.getNewMapIntent(activity)
         Umweltzone.centerZoneRequested = true
         startActivity(intent)
@@ -60,8 +60,8 @@ class ZonesFragment : BaseFragment() {
         mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError, "view type: $viewType")
     }
 
-    private fun storeSelectedLocation(zone: LowEmissionZone) =
-            preferencesHelper.storeLowEmissionZone(zone)
+    private fun storeSelectedLocation(zone: AdministrativeZone) =
+            preferencesHelper.storeAdministrativeZone(zone)
 
     private val preferencesHelper by lazy { (activity.applicationContext as Umweltzone).preferencesHelper }
 
@@ -70,7 +70,7 @@ class ZonesFragment : BaseFragment() {
         const val FRAGMENT_TAG = BuildConfig.APPLICATION_ID + ".ZONES_FRAGMENT_TAG"
 
         // Used for caching
-        private var zones: List<LowEmissionZone> = emptyList()
+        private var administrativeZones: List<AdministrativeZone> = emptyList()
 
     }
 

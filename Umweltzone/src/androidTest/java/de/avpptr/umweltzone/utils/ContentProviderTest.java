@@ -29,10 +29,10 @@ import org.junit.runner.RunWith;
 import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.Faq;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 
 import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static junit.framework.Assert.fail;
@@ -120,14 +120,14 @@ public class ContentProviderTest {
     }
 
     @Test
-    public void testGetLowEmissionZones_worksAtAll() {
-        List<LowEmissionZone> lowEmissionZones = ContentProvider.getLowEmissionZones(mContext);
-        assertThat(lowEmissionZones)
+    public void testGetAdministrativeZones_worksAtAll() {
+        List<AdministrativeZone> administrativeZones = ContentProvider.getAdministrativeZones(mContext);
+        assertThat(administrativeZones)
                 .isNotNull()
                 .isNotEmpty();
-        for (LowEmissionZone lowEmissionZone : lowEmissionZones) {
-            assertThat(lowEmissionZone).isNotNull();
-            testLowEmissionZone(lowEmissionZone);
+        for (AdministrativeZone administrativeZone : administrativeZones) {
+            assertThat(administrativeZone).isNotNull();
+            testAdministrativeZone(administrativeZone);
         }
     }
 
@@ -139,28 +139,28 @@ public class ContentProviderTest {
         assertThat(faq.sourceUrl).isNotNull().isNotEmpty();
     }
 
-    private void testLowEmissionZone(@NonNull LowEmissionZone lowEmissionZone) {
-        assertThat(lowEmissionZone.name).isNotNull();
-        assertThat(lowEmissionZone.displayName).isNotNull();
+    private void testAdministrativeZone(@NonNull AdministrativeZone administrativeZone) {
+        assertThat(administrativeZone.name).isNotNull();
+        assertThat(administrativeZone.displayName).isNotNull();
 
-        BoundingBox boundingBox = lowEmissionZone.boundingBox;
+        BoundingBox boundingBox = administrativeZone.boundingBox;
         assertThat(boundingBox).isNotNull();
         assertThat(boundingBox.isValid()).isTrue();
 
-        lowEmissionZone.childZones.forEach(this::testChildZone);
+        administrativeZone.childZones.forEach(this::testChildZone);
 
-        assertThat(lowEmissionZone.urlUmweltPlaketteDe)
+        assertThat(administrativeZone.urlUmweltPlaketteDe)
                 .isNotNull()
                 .isNotEmpty();
 
-        assertThat(lowEmissionZone.urlBadgeOnline).isNotNull();
+        assertThat(administrativeZone.urlBadgeOnline).isNotNull();
 
-        List<String> contactEmails = lowEmissionZone.contactEmails;
+        List<String> contactEmails = administrativeZone.contactEmails;
         if (contactEmails == null) {
-            assertThat(lowEmissionZone.containsGeometryInformation()).isTrue();
+            assertThat(administrativeZone.containsGeometryInformation()).isTrue();
         } else {
             assertThat(contactEmails).isNotEmpty();
-            assertThat(lowEmissionZone.containsGeometryInformation()).isFalse();
+            assertThat(administrativeZone.containsGeometryInformation()).isFalse();
         }
     }
 

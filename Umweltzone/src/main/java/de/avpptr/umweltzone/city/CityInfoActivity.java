@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@ import org.parceler.Parcels;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.base.BaseActivity;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 
 public class CityInfoActivity extends BaseActivity {
 
@@ -51,7 +51,7 @@ public class CityInfoActivity extends BaseActivity {
             throw new AssertionError("Intent cannot be null.");
         }
         Parcelable parcelable = intent.getParcelableExtra(
-                CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE);
+                CityInfoFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE);
         if (parcelable == null) {
             addNoCitySelectedFragment();
         } else {
@@ -68,8 +68,8 @@ public class CityInfoActivity extends BaseActivity {
     }
 
     private void addCityInfoFragment(@NonNull Parcelable parcelable) {
-        LowEmissionZone lowEmissionZone = Parcels.unwrap(parcelable);
-        CityInfoFragment cityInfoFragment = CityInfoFragment.newInstance(lowEmissionZone);
+        AdministrativeZone administrativeZone = Parcels.unwrap(parcelable);
+        CityInfoFragment cityInfoFragment = CityInfoFragment.newInstance(administrativeZone);
         addFragment(R.id.city_info_container,
                 cityInfoFragment,
                 CityInfoFragment.FRAGMENT_TAG);

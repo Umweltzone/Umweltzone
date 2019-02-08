@@ -35,13 +35,13 @@ import java.util.Date;
 import de.avpptr.umweltzone.AndroidTestUtils;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
 import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateFormatter;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.IntentHelper;
-import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -93,7 +93,7 @@ public class CityInfoFragmentTest {
                 .setGeometryUpdatedAt(geometryUpdatedAtDate)
                 .build();
 
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setDisplayName(displayName)
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
@@ -185,7 +185,7 @@ public class CityInfoFragmentTest {
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .setNextZoneNumberAsOf(zoneNumberAsOfDate)
                 .build();
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .setChildZones(singletonList(firstChildZone))
                 .build();
@@ -221,7 +221,7 @@ public class CityInfoFragmentTest {
                 .setZoneNumber(LowEmissionZoneNumbers.YELLOW)
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .build();
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .setChildZones(singletonList(firstChildZone))
                 .build();
@@ -244,7 +244,7 @@ public class CityInfoFragmentTest {
     @Test
     public void renderCityInfoWithNoRestriction() {
         ChildZone childZone = new ChildZoneBuilder().build();
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .setChildZones(singletonList(childZone))
                 .build();
@@ -268,7 +268,7 @@ public class CityInfoFragmentTest {
                     add("Castrop-Rauxel");
                 }})
                 .build();
-        LowEmissionZone zone = new LowEmissionZoneBuilder()
+        AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
                 .setChildZones(singletonList(childZone))
                 .build();
@@ -284,7 +284,7 @@ public class CityInfoFragmentTest {
                 .check(matches(withText(listOfCitiesText)));
     }
 
-    private void launchActivity(LowEmissionZone zone) {
+    private void launchActivity(AdministrativeZone zone) {
         mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, zone));
         // Rotate to verify fragment is re-used
         AndroidTestUtils.rotateScreen(mActivityRule.getActivity());

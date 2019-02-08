@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.cketti.library.changelog.ChangeLog;
 
@@ -78,8 +78,8 @@ public abstract class BaseActivity extends AppCompatActivity {
                 startActivity(IntentHelper.getCitiesIntent(this));
                 return true;
             case R.id.action_city_info:
-                LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(this);
-                startActivity(IntentHelper.getCityInfoIntent(this, lowEmissionZone));
+                AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(this);
+                startActivity(IntentHelper.getCityInfoIntent(this, administrativeZone));
                 return true;
             case R.id.action_faq:
                 startActivity(IntentHelper.getFaqsIntent(this));

@@ -19,10 +19,10 @@ package de.avpptr.umweltzone.utils;
 
 import java.util.List;
 
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 
-public class LowEmissionZoneBuilder {
+public class AdministrativeZoneBuilder {
 
     private String mName;
 
@@ -38,51 +38,51 @@ public class LowEmissionZoneBuilder {
 
     public List<ChildZone> mChildZones;
 
-    public LowEmissionZoneBuilder setName(String name) {
+    public AdministrativeZoneBuilder setName(String name) {
         mName = name;
         return this;
     }
 
-    public LowEmissionZoneBuilder setDisplayName(String displayName) {
+    public AdministrativeZoneBuilder setDisplayName(String displayName) {
         mDisplayName = displayName;
         return this;
     }
 
-    public LowEmissionZoneBuilder setBoundingBox(BoundingBox boundingBox) {
+    public AdministrativeZoneBuilder setBoundingBox(BoundingBox boundingBox) {
         mBoundingBox = boundingBox;
         return this;
     }
 
-    public LowEmissionZoneBuilder setUrlUmweltPlaketteDe(String urlUmweltPlaketteDe) {
+    public AdministrativeZoneBuilder setUrlUmweltPlaketteDe(String urlUmweltPlaketteDe) {
         mUrlUmweltPlaketteDe = urlUmweltPlaketteDe;
         return this;
     }
 
-    public LowEmissionZoneBuilder setUrlBadgeOnline(String urlBadgeOnline) {
+    public AdministrativeZoneBuilder setUrlBadgeOnline(String urlBadgeOnline) {
         mUrlBadgeOnline = urlBadgeOnline;
         return this;
     }
 
-    public LowEmissionZoneBuilder setContactEmails(List<String> contactEmails) {
+    public AdministrativeZoneBuilder setContactEmails(List<String> contactEmails) {
         mContactEmails = contactEmails;
         return this;
     }
 
-    public LowEmissionZoneBuilder setChildZones(List<ChildZone> childZones) {
+    public AdministrativeZoneBuilder setChildZones(List<ChildZone> childZones) {
         mChildZones = childZones;
         return this;
     }
 
-    public LowEmissionZone build() {
-        LowEmissionZone lowEmissionZone = new LowEmissionZone();
-        lowEmissionZone.name = mName;
-        lowEmissionZone.displayName = mDisplayName;
-        lowEmissionZone.boundingBox = mBoundingBox;
-        lowEmissionZone.urlUmweltPlaketteDe = mUrlUmweltPlaketteDe;
-        lowEmissionZone.urlBadgeOnline = mUrlBadgeOnline;
-        lowEmissionZone.contactEmails = mContactEmails;
-        lowEmissionZone.childZones = mChildZones;
-        return lowEmissionZone;
+    public AdministrativeZone build() {
+        AdministrativeZone administrativeZone = new AdministrativeZone();
+        administrativeZone.name = mName;
+        administrativeZone.displayName = mDisplayName;
+        administrativeZone.boundingBox = mBoundingBox;
+        administrativeZone.urlUmweltPlaketteDe = mUrlUmweltPlaketteDe;
+        administrativeZone.urlBadgeOnline = mUrlBadgeOnline;
+        administrativeZone.contactEmails = mContactEmails;
+        administrativeZone.childZones = mChildZones;
+        return administrativeZone;
     }
 
 }

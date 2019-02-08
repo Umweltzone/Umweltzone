@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -39,10 +39,10 @@ import java.util.Locale;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.CircuitDeserializer;
 import de.avpptr.umweltzone.models.Faq;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public abstract class ContentProvider {
 
@@ -69,8 +69,8 @@ public abstract class ContentProvider {
     }
 
     @NonNull
-    public static List<LowEmissionZone> getLowEmissionZones(@NonNull final Context context) {
-        return getContent(context, "zones_de", LowEmissionZone.class);
+    public static List<AdministrativeZone> getAdministrativeZones(@NonNull final Context context) {
+        return getContent(context, "zones_de", AdministrativeZone.class);
     }
 
     @NonNull

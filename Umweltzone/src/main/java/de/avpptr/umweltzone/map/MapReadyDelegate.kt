@@ -19,8 +19,8 @@ package de.avpptr.umweltzone.map
 
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLngBounds
+import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.models.extensions.isValid
-import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.prefs.PreferencesHelper
 
 internal class MapReadyDelegate(
@@ -28,7 +28,7 @@ internal class MapReadyDelegate(
         private val preferencesHelper: PreferencesHelper,
         private val getCenterZoneRequested: () -> Boolean,
         private val setCenterZoneRequested: (centerZoneRequested: Boolean) -> Unit,
-        private val getDefaultLowEmissionZone: () -> LowEmissionZone?,
+        private val getDefaultAdministrativeZone: () -> AdministrativeZone?,
         private val listener: Listener
 
 ) {
@@ -54,8 +54,8 @@ internal class MapReadyDelegate(
                 listener.onZoomToLocation(lastKnownCameraPosition)
             } else {
                 // Select default city at first application start
-                getDefaultLowEmissionZone.invoke()?.let {
-                    storeLastLowEmissionZone(it)
+                getDefaultAdministrativeZone.invoke()?.let {
+                    storeLastAdministrativeZone(it)
                     if (preferencesHelper.storesZoneIsDrawable() && preferencesHelper.restoreZoneIsDrawable()) {
                         listener.onDrawPolygonOverlay()
                     } else {
@@ -68,8 +68,8 @@ internal class MapReadyDelegate(
         }
     }
 
-    private fun storeLastLowEmissionZone(defaultLowEmissionZone: LowEmissionZone) =
-            preferencesHelper.storeLowEmissionZone(defaultLowEmissionZone)
+    private fun storeLastAdministrativeZone(defaultAdministrativeZone: AdministrativeZone) =
+            preferencesHelper.storeAdministrativeZone(defaultAdministrativeZone)
 
     internal interface Listener {
 

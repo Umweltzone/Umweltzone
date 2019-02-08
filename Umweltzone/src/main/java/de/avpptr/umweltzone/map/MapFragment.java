@@ -56,8 +56,8 @@ import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.extensions.ContextExtensions;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
-import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.CameraUpdateHelper;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
@@ -121,7 +121,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                     Umweltzone.centerZoneRequested = centerZoneRequested;
                     return null;
                 },
-                () -> LowEmissionZone.getDefaultLowEmissionZone(getActivity()),
+                () -> AdministrativeZone.getDefaultAdministrativeZone(getActivity()),
                 new MapReadyDelegate.Listener() {
 
                     @Override
@@ -337,12 +337,12 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         Fragment fragment = fragmentManager
                 .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
         if (fragment == null) {
-            LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
-            if (lowEmissionZone != null) {
+            AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
+            if (administrativeZone != null) {
                 // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
-                if (!lowEmissionZone.containsGeometryInformation()) {
+                if (!administrativeZone.containsGeometryInformation()) {
                     ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
-                            .newInstance(lowEmissionZone);
+                            .newInstance(administrativeZone);
                     dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
                 }
             }
@@ -357,9 +357,9 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void updateSubTitle() {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
-        final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
-        if (lowEmissionZone != null) {
-            String title = lowEmissionZone.displayName;
+        final AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
+        if (administrativeZone != null) {
+            String title = administrativeZone.displayName;
             ActionBar actionBar = activity.getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setSubtitle(title);

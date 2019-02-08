@@ -31,24 +31,24 @@ import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
-import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
+import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
 
 import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnit4.class)
-public class LowEmissionZoneTests {
+public class AdministrativeZoneTests {
 
     @Test
     public void wrapUnwrapParcelable() {
-        LowEmissionZone lowEmissionZone = Parcels.unwrap(Parcels.wrap(getLowEmissionZone()));
-        assertThat(lowEmissionZone).isEqualTo(getLowEmissionZone());
+        AdministrativeZone administrativeZone = Parcels.unwrap(Parcels.wrap(getAdministrativeZone()));
+        assertThat(administrativeZone).isEqualTo(getAdministrativeZone());
     }
 
-    private LowEmissionZone getLowEmissionZone() {
+    private AdministrativeZone getAdministrativeZone() {
         GeoPoint southWest = new GeoPoint(52.464504, 13.282079);
         GeoPoint northEast = new GeoPoint(52.549808, 13.475550);
-        return new LowEmissionZoneBuilder()
+        return new AdministrativeZoneBuilder()
                 .setName("berlin")
                 .setDisplayName("Berlin")
                 .setBoundingBox(new BoundingBox(southWest, northEast))
