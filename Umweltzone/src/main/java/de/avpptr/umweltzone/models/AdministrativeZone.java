@@ -46,7 +46,7 @@ public class AdministrativeZone {
 
     public List<String> contactEmails;
 
-    public List<ChildZone> childZones;
+    public List<LowEmissionZone> childZones;
 
     // Used for caching
     private static List<AdministrativeZone> mAdministrativeZones;
@@ -85,7 +85,7 @@ public class AdministrativeZone {
     }
 
     public boolean containsGeometryInformation() {
-        for (ChildZone childZone : childZones) {
+        for (LowEmissionZone childZone : childZones) {
             if (childZone.containsGeometryInformation()) {
                 return true;
             }

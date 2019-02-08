@@ -30,7 +30,7 @@ import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.AdministrativeZone;
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.Faq;
 
@@ -147,7 +147,7 @@ public class ContentProviderTest {
         assertThat(boundingBox).isNotNull();
         assertThat(boundingBox.isValid()).isTrue();
 
-        administrativeZone.childZones.forEach(this::testChildZone);
+        administrativeZone.childZones.forEach(this::testLowEmissionZone);
 
         assertThat(administrativeZone.urlUmweltPlaketteDe)
                 .isNotNull()
@@ -164,13 +164,13 @@ public class ContentProviderTest {
         }
     }
 
-    private void testChildZone(@NonNull ChildZone childZone) {
-        assertThat(childZone.zoneNumber)
+    private void testLowEmissionZone(@NonNull LowEmissionZone lowEmissionZone) {
+        assertThat(lowEmissionZone.zoneNumber)
                 .isNotNull()
                 .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
-        assertThat(childZone.zoneNumberSince).isNotNull();
-        assertThat(childZone.abroadLicensedVehicleZoneNumber).isNotNull();
-        assertThat(childZone.listOfCities).isNotNull();
+        assertThat(lowEmissionZone.zoneNumberSince).isNotNull();
+        assertThat(lowEmissionZone.abroadLicensedVehicleZoneNumber).isNotNull();
+        assertThat(lowEmissionZone.listOfCities).isNotNull();
     }
 
     @NonNull

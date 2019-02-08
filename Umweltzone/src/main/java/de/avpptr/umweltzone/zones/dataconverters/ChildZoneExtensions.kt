@@ -19,9 +19,9 @@ package de.avpptr.umweltzone.zones.dataconverters
 
 import android.content.Context
 import de.avpptr.umweltzone.extensions.getColorCompat
-import de.avpptr.umweltzone.models.ChildZone
+import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.color
 import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
 
-fun ChildZone.toBadgeViewModel(context: Context) =
+fun LowEmissionZone.toBadgeViewModel(context: Context) =
         BadgeViewModel("$zoneNumber", context.getColorCompat(zoneNumber.color))

@@ -25,7 +25,7 @@ import java.util.List;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 
 @Parcel
-public class ChildZone {
+public class LowEmissionZone {
 
     public String name;
 
@@ -62,35 +62,35 @@ public class ChildZone {
         if (other == null || getClass() != other.getClass()) {
             return false;
         }
-        ChildZone childZone = (ChildZone) other;
-        if (zoneNumber != childZone.zoneNumber) {
+        LowEmissionZone zone = (LowEmissionZone) other;
+        if (zoneNumber != zone.zoneNumber) {
             return false;
         }
-        if (abroadLicensedVehicleZoneNumber != childZone.abroadLicensedVehicleZoneNumber) {
+        if (abroadLicensedVehicleZoneNumber != zone.abroadLicensedVehicleZoneNumber) {
             return false;
         }
-        if (name != null ? !name.equals(childZone.name) : childZone.name != null) {
+        if (name != null ? !name.equals(zone.name) : zone.name != null) {
             return false;
         }
-        if (displayName != null ? !displayName.equals(childZone.displayName) : childZone.displayName != null) {
+        if (displayName != null ? !displayName.equals(zone.displayName) : zone.displayName != null) {
             return false;
         }
-        if (zoneNumberSince != null ? !zoneNumberSince.equals(childZone.zoneNumberSince) : childZone.zoneNumberSince != null) {
+        if (zoneNumberSince != null ? !zoneNumberSince.equals(zone.zoneNumberSince) : zone.zoneNumberSince != null) {
             return false;
         }
-        if (nextZoneNumberAsOf != null ? !nextZoneNumberAsOf.equals(childZone.nextZoneNumberAsOf) : childZone.nextZoneNumberAsOf != null) {
+        if (nextZoneNumberAsOf != null ? !nextZoneNumberAsOf.equals(zone.nextZoneNumberAsOf) : zone.nextZoneNumberAsOf != null) {
             return false;
         }
-        if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil.equals(childZone.abroadLicensedVehicleZoneNumberUntil) : childZone.abroadLicensedVehicleZoneNumberUntil != null) {
+        if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil.equals(zone.abroadLicensedVehicleZoneNumberUntil) : zone.abroadLicensedVehicleZoneNumberUntil != null) {
             return false;
         }
-        if (listOfCities != null ? !listOfCities.equals(childZone.listOfCities) : childZone.listOfCities != null) {
+        if (listOfCities != null ? !listOfCities.equals(zone.listOfCities) : zone.listOfCities != null) {
             return false;
         }
-        if (geometrySource != null ? !geometrySource.equals(childZone.geometrySource) : childZone.geometrySource != null) {
+        if (geometrySource != null ? !geometrySource.equals(zone.geometrySource) : zone.geometrySource != null) {
             return false;
         }
-        return geometryUpdatedAt != null ? geometryUpdatedAt.equals(childZone.geometryUpdatedAt) : childZone.geometryUpdatedAt == null;
+        return geometryUpdatedAt != null ? geometryUpdatedAt.equals(zone.geometryUpdatedAt) : zone.geometryUpdatedAt == null;
     }
 
     @Override
@@ -110,7 +110,7 @@ public class ChildZone {
 
     @Override
     public String toString() {
-        return "ChildZone{" +
+        return "LowEmissionZone{" +
                 "name='" + name + '\'' +
                 ", displayName='" + displayName + '\'' +
                 ", zoneNumber=" + zoneNumber +

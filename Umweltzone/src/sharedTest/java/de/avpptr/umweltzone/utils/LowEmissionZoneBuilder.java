@@ -21,9 +21,9 @@ import java.util.Date;
 import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
-public class ChildZoneBuilder {
+public class LowEmissionZoneBuilder {
 
     private String mName;
 
@@ -47,67 +47,67 @@ public class ChildZoneBuilder {
 
     private Date mGeometryUpdatedAt;
 
-    public List<ChildZone> mChildZones;
+    public List<LowEmissionZone> mChildZones;
 
-    public ChildZoneBuilder setName(String name) {
+    public LowEmissionZoneBuilder setName(String name) {
         mName = name;
         return this;
     }
 
-    public ChildZoneBuilder setDisplayName(String displayName) {
+    public LowEmissionZoneBuilder setDisplayName(String displayName) {
         mDisplayName = displayName;
         return this;
     }
 
-    public ChildZoneBuilder setZoneNumber(@LowEmissionZoneNumbers.Color int zoneNumber) {
+    public LowEmissionZoneBuilder setZoneNumber(@LowEmissionZoneNumbers.Color int zoneNumber) {
         mZoneNumber = zoneNumber;
         return this;
     }
 
-    public ChildZoneBuilder setZoneNumberSince(Date zoneNumberSince) {
+    public LowEmissionZoneBuilder setZoneNumberSince(Date zoneNumberSince) {
         mZoneNumberSince = zoneNumberSince;
         return this;
     }
 
-    public ChildZoneBuilder setNextZoneNumberAsOf(Date nextZoneNumberAsOf) {
+    public LowEmissionZoneBuilder setNextZoneNumberAsOf(Date nextZoneNumberAsOf) {
         mNextZoneNumberAsOf = nextZoneNumberAsOf;
         return this;
     }
 
-    public ChildZoneBuilder setAbroadLicensedVehicleZoneNumber(
+    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumber(
             @LowEmissionZoneNumbers.Color int abroadLicensedVehicleZoneNumber) {
         mAbroadLicensedVehicleZoneNumber = abroadLicensedVehicleZoneNumber;
         return this;
     }
 
-    public ChildZoneBuilder setAbroadLicensedVehicleZoneNumberUntil(
+    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumberUntil(
             Date abroadLicensedVehicleZoneNumberUntil) {
         mAbroadLicensedVehicleZoneNumberUntil = abroadLicensedVehicleZoneNumberUntil;
         return this;
     }
 
-    public ChildZoneBuilder setListOfCities(List<String> listOfCities) {
+    public LowEmissionZoneBuilder setListOfCities(List<String> listOfCities) {
         mListOfCities = listOfCities;
         return this;
     }
 
-    public ChildZoneBuilder setGeometrySource(String geometrySource) {
+    public LowEmissionZoneBuilder setGeometrySource(String geometrySource) {
         mGeometrySource = geometrySource;
         return this;
     }
 
-    public ChildZoneBuilder setGeometryUpdatedAt(Date geometryUpdatedAt) {
+    public LowEmissionZoneBuilder setGeometryUpdatedAt(Date geometryUpdatedAt) {
         mGeometryUpdatedAt = geometryUpdatedAt;
         return this;
     }
 
-    public ChildZoneBuilder setChildZones(List<ChildZone> childZones) {
+    public LowEmissionZoneBuilder setChildZones(List<LowEmissionZone> childZones) {
         mChildZones = childZones;
         return this;
     }
 
-    public ChildZone build() {
-        ChildZone zone = new ChildZone();
+    public LowEmissionZone build() {
+        LowEmissionZone zone = new LowEmissionZone();
         zone.name = mName;
         zone.displayName = mDisplayName;
         zone.zoneNumber = mZoneNumber;

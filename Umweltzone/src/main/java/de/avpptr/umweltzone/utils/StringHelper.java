@@ -34,15 +34,14 @@ import java.util.List;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
-import de.avpptr.umweltzone.models.AdministrativeZone;
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
 
     @NonNull
     public static String getListOfCitiesText(
             Context context,
-            ChildZone zone) {
+            LowEmissionZone zone) {
         List<String> listOfCities = zone.listOfCities;
         if (listOfCities == null || listOfCities.isEmpty()) {
             return "";
@@ -56,7 +55,7 @@ public class StringHelper {
     @NonNull
     public static String getZoneNumberSinceAsOfText(
             @NonNull Context context,
-            @NonNull ChildZone zone) {
+            @NonNull LowEmissionZone zone) {
         Date zoneNumberSince = zone.zoneNumberSince;
         @StringRes int colorStringResourceId = LowEmissionZoneNumberConverter
                 .getColorString(zone.zoneNumber);
@@ -74,7 +73,7 @@ public class StringHelper {
     @NonNull
     public static String getNextZoneNumberAsOfText(
             Context context,
-            @NonNull ChildZone zone) {
+            @NonNull LowEmissionZone zone) {
         if (zone.nextZoneNumberAsOf == null) {
             return "";
         }
@@ -95,7 +94,7 @@ public class StringHelper {
     @NonNull
     public static String getAbroadLicensedVehicleZoneNumberText(
             Context context,
-            @NonNull ChildZone zone) {
+            @NonNull LowEmissionZone zone) {
         if (zone.abroadLicensedVehicleZoneNumberUntil == null) {
             return "";
         }

@@ -36,12 +36,12 @@ import de.avpptr.umweltzone.AndroidTestUtils;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.AdministrativeZone;
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
-import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateFormatter;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.IntentHelper;
+import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 import de.avpptr.umweltzone.utils.StringHelper;
 
 import static android.support.test.espresso.Espresso.onView;
@@ -83,7 +83,7 @@ public class CityInfoFragmentTest {
         String geometryUpdatedAtDatePattern = mContext
                 .getString(R.string.city_info_geometry_updated_at_date_format);
 
-        ChildZone firstChildZone = new ChildZoneBuilder()
+        LowEmissionZone firstChildZone = new LowEmissionZoneBuilder()
                 .setDisplayName(displayName)
                 .setZoneNumber(LowEmissionZoneNumbers.GREEN)
                 .setZoneNumberSince(zoneNumberSinceDate)
@@ -180,7 +180,7 @@ public class CityInfoFragmentTest {
     public void renderCityInfoWithNextZone() {
         Date zoneNumberSinceDate = DateHelper.getDate(2011, 8, 1);
         Date zoneNumberAsOfDate = DateHelper.getDate(2013, 6, 1);
-        ChildZone firstChildZone = new ChildZoneBuilder()
+        LowEmissionZone firstChildZone = new LowEmissionZoneBuilder()
                 .setZoneNumber(LowEmissionZoneNumbers.RED)
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .setNextZoneNumberAsOf(zoneNumberAsOfDate)
@@ -217,7 +217,7 @@ public class CityInfoFragmentTest {
     @Test
     public void renderCityInfoWithFutureZone() {
         Date zoneNumberSinceDate = DateHelper.getDate(2034, 11, 1);
-        ChildZone firstChildZone = new ChildZoneBuilder()
+        LowEmissionZone firstChildZone = new LowEmissionZoneBuilder()
                 .setZoneNumber(LowEmissionZoneNumbers.YELLOW)
                 .setZoneNumberSince(zoneNumberSinceDate)
                 .build();
@@ -243,10 +243,10 @@ public class CityInfoFragmentTest {
 
     @Test
     public void renderCityInfoWithNoRestriction() {
-        ChildZone childZone = new ChildZoneBuilder().build();
+        LowEmissionZone lowEmissionZone = new LowEmissionZoneBuilder().build();
         AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
-                .setChildZones(singletonList(childZone))
+                .setChildZones(singletonList(lowEmissionZone))
                 .build();
 
         launchActivity(zone);
@@ -261,7 +261,7 @@ public class CityInfoFragmentTest {
 
     @Test
     public void renderCityInfoWithListOfCities() {
-        ChildZone childZone = new ChildZoneBuilder()
+        LowEmissionZone lowEmissionZone = new LowEmissionZoneBuilder()
                 .setListOfCities(new ArrayList<String>(3) {{
                     add("Bochum");
                     add("Bottrop");
@@ -270,7 +270,7 @@ public class CityInfoFragmentTest {
                 .build();
         AdministrativeZone zone = new AdministrativeZoneBuilder()
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
-                .setChildZones(singletonList(childZone))
+                .setChildZones(singletonList(lowEmissionZone))
                 .build();
 
         launchActivity(zone);

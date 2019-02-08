@@ -28,7 +28,7 @@ import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.ChildZoneBuilder;
+import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
@@ -63,10 +63,10 @@ public class AdministrativeZoneTests {
                 .build();
     }
 
-    private List<ChildZone> getChildZones() {
+    private List<LowEmissionZone> getChildZones() {
         Date date = DateHelper.getDate(2016, 4, 1);
         return singletonList(
-                new ChildZoneBuilder()
+                new LowEmissionZoneBuilder()
                         .setName("berlin1")
                         .setDisplayName("Berlin 1")
                         .setZoneNumber(LowEmissionZoneNumbers.GREEN)

@@ -20,7 +20,7 @@ package de.avpptr.umweltzone.utils;
 import java.util.List;
 
 import de.avpptr.umweltzone.models.AdministrativeZone;
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class AdministrativeZoneBuilder {
 
@@ -36,7 +36,7 @@ public class AdministrativeZoneBuilder {
 
     private List<String> mContactEmails;
 
-    public List<ChildZone> mChildZones;
+    public List<LowEmissionZone> mChildZones;
 
     public AdministrativeZoneBuilder setName(String name) {
         mName = name;
@@ -68,7 +68,7 @@ public class AdministrativeZoneBuilder {
         return this;
     }
 
-    public AdministrativeZoneBuilder setChildZones(List<ChildZone> childZones) {
+    public AdministrativeZoneBuilder setChildZones(List<LowEmissionZone> childZones) {
         mChildZones = childZones;
         return this;
     }
