@@ -30,6 +30,8 @@ val @receiver:LowEmissionZoneNumbers.Color Int.color
         LowEmissionZoneNumbers.RED -> R.color.city_zone_2
         LowEmissionZoneNumbers.YELLOW -> R.color.city_zone_3
         LowEmissionZoneNumbers.GREEN -> R.color.city_zone_4
+        LowEmissionZoneNumbers.LIGHT_BLUE -> R.color.city_zone_5
+        LowEmissionZoneNumbers.DARK_BLUE -> R.color.city_zone_6
         else -> R.color.city_zone_none
     }
 
@@ -46,5 +48,7 @@ val @receiver:LowEmissionZoneNumbers.Color Int.shapeFillColor
         LowEmissionZoneNumbers.RED -> R.color.shape_fill_color_zone_2
         LowEmissionZoneNumbers.YELLOW -> R.color.shape_fill_color_zone_3
         LowEmissionZoneNumbers.GREEN -> R.color.shape_fill_color_zone_4
+        LowEmissionZoneNumbers.LIGHT_BLUE -> R.color.shape_fill_color_zone_5
+        LowEmissionZoneNumbers.DARK_BLUE -> R.color.shape_fill_color_zone_6
         else -> throw IllegalStateException("Unknown zone number: $this.")
     }

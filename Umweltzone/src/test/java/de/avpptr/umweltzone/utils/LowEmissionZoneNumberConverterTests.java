@@ -45,6 +45,10 @@ public class LowEmissionZoneNumberConverterTests {
                 .isEqualTo(R.color.city_zone_3);
         assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.GREEN))
                 .isEqualTo(R.color.city_zone_4);
+        assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.LIGHT_BLUE))
+                .isEqualTo(R.color.city_zone_5);
+        assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.DARK_BLUE))
+                .isEqualTo(R.color.city_zone_6);
     }
 
     @Test
@@ -73,6 +77,10 @@ public class LowEmissionZoneNumberConverterTests {
                 .isEqualTo(R.color.shape_fill_color_zone_3);
         assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.GREEN))
                 .isEqualTo(R.color.shape_fill_color_zone_4);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.LIGHT_BLUE))
+                .isEqualTo(R.color.shape_fill_color_zone_5);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.DARK_BLUE))
+                .isEqualTo(R.color.shape_fill_color_zone_6);
     }
 
 }

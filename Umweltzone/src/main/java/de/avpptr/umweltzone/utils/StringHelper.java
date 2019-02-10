@@ -158,7 +158,7 @@ public class StringHelper {
     }
 
     @NonNull
-    private static String getFormattedDate(
+    public static String getFormattedDate(
             @NonNull Context context,
             int datePatternResourceId,
             @NonNull Date date) {

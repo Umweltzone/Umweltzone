@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -46,6 +46,26 @@ public class LowEmissionZoneNumbersTests {
             fail();
         } catch (Exception e) {
             assertThat(e.getMessage()).isEqualTo("Cannot return next zone number after: 4");
+        }
+    }
+
+    @Test
+    public void getNextWithLightBlue() {
+        try {
+            LowEmissionZoneNumbers.getNext(LowEmissionZoneNumbers.LIGHT_BLUE);
+            fail();
+        } catch (Exception e) {
+            assertThat(e.getMessage()).isEqualTo("Cannot return next zone number after: 5");
+        }
+    }
+
+    @Test
+    public void getNextWithDarkBlue() {
+        try {
+            LowEmissionZoneNumbers.getNext(LowEmissionZoneNumbers.DARK_BLUE);
+            fail();
+        } catch (Exception e) {
+            assertThat(e.getMessage()).isEqualTo("Cannot return next zone number after: 6");
         }
     }
 

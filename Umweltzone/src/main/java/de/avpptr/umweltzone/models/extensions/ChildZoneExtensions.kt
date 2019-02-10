@@ -30,5 +30,12 @@ val ChildZone.roadSignType: RoadSign.Type
         zoneNumber == LowEmissionZoneNumbers.YELLOW -> RoadSign.Type.EnvironmentalBadge.YellowGreen
         zoneNumber == LowEmissionZoneNumbers.GREEN -> RoadSign.Type.EnvironmentalBadge.Green
 
+        zoneNumber == LowEmissionZoneNumbers.LIGHT_BLUE && fileName == "lez_stuttgart" ->
+            RoadSign.Type.DieselProhibition.FreeAsOfEuro5VExceptDeliveryVehiclesStuttgart
+        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_hamburg_max_brauer_allee" ->
+            RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5VOpenForResidentsHamburg
+        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_hamburg_stresemannstrasse" ->
+            RoadSign.Type.DieselProhibition.HgvsFreeUntilEuroVOpenForResidentsHamburg
+
         else -> throw IllegalStateException("Unknown combination of zone number: '$zoneNumber' and file name: '$fileName'.")
     }

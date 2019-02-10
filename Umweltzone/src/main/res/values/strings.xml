@@ -268,6 +268,7 @@
     <string name="city_info_activity_title">City info</string>
 
     <string name="city_info_section_title_lez">Details about the low emission zone</string>
+    <string name="city_info_section_title_dpz">Details about the diesel prohibition zone</string>
     <string name="city_info_section_title_other">Further information</string>
 
     <string name="city_info_zone_status">free</string>
@@ -325,6 +326,39 @@
     <string name="city_info_geometry_updated_at_text">
         Last update of the zone
         geometry: <xliff:g example="Sep 6, 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Only vehicles which at least comply with the Diesel exhaust emission standard
+        Euro <xliff:g example="6" id="number">%1$d</xliff:g> are allowed to
+        drive into the Diesel prohibition zone.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        For residents this regulation applies as of <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        For non residents this regulation applies as of <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        This provision applies to <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">
+        cars
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">
+        heavy goods vehicles
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">
+        cars and heavy goods vehicles
+    </string>
+
+    <string name="city_info_is_congruent_with_lez">
+        This zone is congruent with the low emission zone.
     </string>
 
     <!-- NoCitySelectedFragment -->

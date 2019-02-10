@@ -172,6 +172,7 @@
     <string name="city_info_activity_title">Stadtinfos</string>
 
     <string name="city_info_section_title_lez">Details zur Umweltzone</string>
+    <string name="city_info_section_title_dpz">Details zum Dieselfahrverbot</string>
     <string name="city_info_section_title_other">Sonstige Informationen</string>
 
     <string name="city_info_zone_status">frei</string>
@@ -231,6 +232,39 @@
     <string name="city_info_geometry_updated_at_text">
         Letzte Aktualisierung der
         Zonengeometrie: <xliff:g example="6. September 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Nur Fahrzeuge, die mindestens der Diesel-Abgasnorm
+        Euro <xliff:g example="6" id="number">%1$d</xliff:g> entsprechen,
+        dürfen in die Dieselfahrverbotszone fahren.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        Für Anwohner gilt die Regelung seit dem <xliff:g example="31. May 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        Für Auswärtige gilt die Regelung seit dem <xliff:g example="31. May 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        Diese Bestimmung gilt für <xliff:g example="PKWs und LKWs" id="vehicles">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">
+        PKWs
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">
+        LKWs
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">
+        PKWs und LKWs
+    </string>
+
+    <string name="city_info_is_congruent_with_lez">
+        Diese Zone is deckungsgleich mit der Umweltzone.
     </string>
 
     <!-- NoCitySelectedFragment -->

@@ -15,25 +15,18 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.details.viewmodels
 
-import android.support.annotation.NonNull;
+import info.metadude.kotlin.library.roadsigns.RoadSign
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = DieselProhibitionZone.class, name = "diesel-prohibition-zone"),
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
-
-    @NonNull
-    String getFileName();
-
-    int getZoneNumber();
-
-    boolean containsGeometryInformation();
-
-}
+data class DpzDetailsViewModel(
+        val roadSignType: RoadSign.Type,
+        val displayName: String,
+        val allowedEmissionStandardInDpz: String,
+        val isCongruentWithLowEmissionZone: String,
+        val zoneNumberForResidentsSince: String,
+        val zoneNumberForNonResidentsSince: String,
+        val prohibitedVehicles: String,
+        val geometrySource: String,
+        val geometryUpdatedAt: String
+)

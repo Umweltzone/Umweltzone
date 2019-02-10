@@ -24,7 +24,7 @@ import java.lang.annotation.RetentionPolicy;
 
 public abstract class LowEmissionZoneNumbers {
 
-    @IntDef(value = {NONE, RED, YELLOW, GREEN})
+    @IntDef(value = {NONE, RED, YELLOW, GREEN, LIGHT_BLUE, DARK_BLUE})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Color {
 
@@ -38,6 +38,10 @@ public abstract class LowEmissionZoneNumbers {
 
     public static final int GREEN = 4;
 
+    public static final int LIGHT_BLUE = 5;
+
+    public static final int DARK_BLUE = 6;
+
     @Color
     public static int getNext(@Color int zoneNumber) {
         switch (zoneNumber) {
@@ -46,6 +50,10 @@ public abstract class LowEmissionZoneNumbers {
             case YELLOW:
                 return GREEN;
             case GREEN:
+                // continue
+            case LIGHT_BLUE:
+                // continue
+            case DARK_BLUE:
                 // continue
             case NONE:
                 // continue

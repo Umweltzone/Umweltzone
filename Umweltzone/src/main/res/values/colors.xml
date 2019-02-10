@@ -46,6 +46,8 @@
     <color name="shape_fill_color_zone_2">#88BF1903</color>
     <color name="shape_fill_color_zone_3">#88BFA603</color>
     <color name="shape_fill_color_zone_4">#8819bf03</color>
+    <color name="shape_fill_color_zone_5">#8800abf9</color>
+    <color name="shape_fill_color_zone_6">#88005190</color>
     <color name="shape_stroke_color">#88000000</color>
 
     <!-- AppInfo colors -->
@@ -63,6 +65,8 @@
     <color name="city_zone_2">#D81B15</color>
     <color name="city_zone_3">#E5CC15</color>
     <color name="city_zone_4">#108434</color>
+    <color name="city_zone_5">#00abf9</color>
+    <color name="city_zone_6">#005190</color>
     <color name="city_zone_badge_default_stroke_color">@android:color/black</color>
     <color name="city_zone_badge_text">@android:color/black</color>
 

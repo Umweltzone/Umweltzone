@@ -15,25 +15,14 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.models
 
-import android.support.annotation.NonNull;
+sealed class VehicleType(val value: String) {
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = DieselProhibitionZone.class, name = "diesel-prohibition-zone"),
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
-
-    @NonNull
-    String getFileName();
-
-    int getZoneNumber();
-
-    boolean containsGeometryInformation();
+    object CAR : VehicleType("CAR")
+    /**
+     * HGV is the abbreviation for heavy goods vehicles
+     */
+    object HGV : VehicleType("HGV")
 
 }

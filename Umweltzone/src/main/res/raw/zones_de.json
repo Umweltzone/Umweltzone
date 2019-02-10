@@ -450,6 +450,51 @@
         }
     },
     {
+        "name" : "hamburg",
+        "displayName" : "Hamburg",
+        "childZones" : [{
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "dpz_hamburg_max_brauer_allee",
+            "displayName" : "Max Brauer Allee, Hamburg",
+            "zoneNumber" : "6",
+            "zoneNumberForResidentsSince" : null,
+            "zoneNumberForNonResidentsSince" : "2018-05-31",
+            "prohibitedVehicles" : [
+                "HGV",
+                "CAR"
+            ],
+            "isCongruentWithLowEmissionZone" : false,
+            "geometrySource" : "Behörde für Wirtschaft, Verkehr und Innovation, Amt für Verkehr und Straßenwesen, Hamburg",
+            "geometryUpdatedAt" : "2019-02-19"
+        }, {
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "dpz_hamburg_stresemannstrasse",
+            "displayName" : "Stresemannstraße, Hamburg",
+            "zoneNumber" : "6",
+            "zoneNumberForResidentsSince" : null,
+            "zoneNumberForNonResidentsSince" : "2018-05-31",
+            "isCongruentWithLowEmissionZone" : false,
+            "prohibitedVehicles" : [
+                "HGV"
+            ],
+            "geometrySource" : "Behörde für Wirtschaft, Verkehr und Innovation, Amt für Verkehr und Straßenwesen, Hamburg",
+            "geometryUpdatedAt" : "2019-02-19"
+        }],
+        "contactEmails" : null,
+        "urlBadgeOnline" : "",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hamburg-blau.html",
+        "boundingBox" : {
+            "southWest" : {
+                "latitude" : 53.555447,
+                "longitude" : 9.941528
+            },
+            "northEast" : {
+                "latitude" : 53.563556,
+                "longitude" : 9.963312
+            }
+        }
+    },
+    {
         "name" : "hannover",
         "displayName" : "Hannover",
         "childZones" : [{
@@ -1569,6 +1614,17 @@
             "geometrySource" : "Stadt Stuttgart",
             "geometryUpdatedAt" : "2013-10-14",
             "listOfCities" : []
+        }, {
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "lez_stuttgart",
+            "displayName" : "",
+            "zoneNumber" : "5",
+            "zoneNumberForResidentsSince" : "2019-01-01",
+            "zoneNumberForNonResidentsSince" : "2019-04-01",
+            "prohibitedVehicles" : [],
+            "isCongruentWithLowEmissionZone" : true,
+            "geometrySource" : "Stadt Stuttgart",
+            "geometryUpdatedAt" : "2013-10-14"
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",

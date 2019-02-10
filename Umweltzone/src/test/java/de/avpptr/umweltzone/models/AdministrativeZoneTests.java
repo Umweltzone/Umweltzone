@@ -30,9 +30,11 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.DateHelper;
+import de.avpptr.umweltzone.utils.DieselProhibitionZoneBuilder;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 
+import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -65,23 +67,37 @@ public class AdministrativeZoneTests {
 
     private List<ChildZone> getChildZones() {
         Date date = DateHelper.getDate(2016, 4, 1);
-        return singletonList(
-                new LowEmissionZoneBuilder()
-                        .setFileName("lez_berlin")
-                        .setDisplayName("Berlin 1")
-                        .setZoneNumber(LowEmissionZoneNumbers.GREEN)
-                        .setZoneNumberSince(date)
-                        .setNextZoneNumberAsOf(null)
-                        .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
-                        .setAbroadLicensedVehicleZoneNumberUntil(date)
-                        .setListOfCities(new ArrayList<String>(3) {{
-                            add("Bochum");
-                            add("Bottrop");
-                            add("Castrop-Rauxel");
-                        }})
-                        .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
-                        .setGeometryUpdatedAt(date)
-                        .build());
+        LowEmissionZone lowEmissionZone = new LowEmissionZoneBuilder()
+                .setFileName("lez_berlin")
+                .setDisplayName("Berlin 1")
+                .setZoneNumber(LowEmissionZoneNumbers.GREEN)
+                .setZoneNumberSince(date)
+                .setNextZoneNumberAsOf(null)
+                .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
+                .setAbroadLicensedVehicleZoneNumberUntil(date)
+                .setListOfCities(new ArrayList<String>(3) {{
+                    add("Bochum");
+                    add("Bottrop");
+                    add("Castrop-Rauxel");
+                }})
+                .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
+                .setGeometryUpdatedAt(date)
+                .build();
+        Date zoneNumberForNonResidentsSince = DateHelper.getDate(2018, 2, 1);
+        Date zoneNumberForResidentsSince = DateHelper.getDate(2018, 4, 1);
+        Date geometryUpdatedAt = DateHelper.getDate(2019, 2, 1);
+        DieselProhibitionZone dieselProhibitionZone = new DieselProhibitionZoneBuilder()
+                .setFileName("dpz_hamburg_max_brauer_allee")
+                .setDisplayName("Max Brauer Allee, Hamburg")
+                .setZoneNumber(6)
+                .setZoneNumberForNonResidentsSince(zoneNumberForNonResidentsSince)
+                .setZoneNumberForResidentsSince(zoneNumberForResidentsSince)
+                .setProhibitedVehicles(singletonList(VehicleType.CAR.INSTANCE.getValue()))
+                .setIsCongruentWithLowEmissionZone(true)
+                .setGeometrySource("Hamburger Behörde")
+                .setGeometryUpdatedAt(geometryUpdatedAt)
+                .build();
+        return asList(lowEmissionZone, dieselProhibitionZone);
     }
 
 }

@@ -32,6 +32,7 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.models.Circuit;
+import de.avpptr.umweltzone.models.DieselProhibitionZone;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import kotlin.NotImplementedError;
@@ -55,7 +56,8 @@ public class ContentProviderTest {
             "lez_overath", "lez_pfinztal", "lez_pforzheim", "lez_remscheid", "lez_reutlingen",
             "lez_ruhrregion", "lez_schramberg", "lez_schwaebisch_gmuend", "lez_siegen",
             "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
-            "lez_wuppertal"
+            "lez_wuppertal",
+            "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse"
     };
 
     private static final String[] ZONE_FILE_NAMES_WITHOUT_COORDINATES = {
@@ -158,6 +160,8 @@ public class ContentProviderTest {
         for (ChildZone childZone : administrativeZone.childZones) {
             if (childZone instanceof LowEmissionZone) {
                 testLowEmissionZone((LowEmissionZone) childZone);
+            } else if (childZone instanceof DieselProhibitionZone) {
+                testDieselProhibitionZone((DieselProhibitionZone) childZone);
             } else {
                 fail();
                 throw new NotImplementedError();
@@ -182,10 +186,21 @@ public class ContentProviderTest {
     private void testLowEmissionZone(@NonNull LowEmissionZone lowEmissionZone) {
         assertThat(lowEmissionZone.zoneNumber)
                 .isNotNull()
-                .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN);
+                .isBetween(LowEmissionZoneNumbers.RED, LowEmissionZoneNumbers.GREEN)
+                .isLessThan(LowEmissionZoneNumbers.LIGHT_BLUE);
         assertThat(lowEmissionZone.zoneNumberSince).isNotNull();
         assertThat(lowEmissionZone.abroadLicensedVehicleZoneNumber).isNotNull();
         assertThat(lowEmissionZone.listOfCities).isNotNull();
+    }
+
+    private void testDieselProhibitionZone(@NonNull DieselProhibitionZone dieselProhibitionZone) {
+        assertThat(dieselProhibitionZone.fileName).isNotEmpty();
+        assertThat(dieselProhibitionZone.displayName).isNotNull();
+        assertThat(dieselProhibitionZone.zoneNumber)
+                .isNotNull()
+                .isBetween(LowEmissionZoneNumbers.LIGHT_BLUE, LowEmissionZoneNumbers.DARK_BLUE)
+                .isGreaterThan(LowEmissionZoneNumbers.GREEN);
+        assertThat(dieselProhibitionZone.prohibitedVehicles).isNotNull();
     }
 
     @NonNull

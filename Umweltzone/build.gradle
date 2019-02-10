@@ -64,6 +64,7 @@ android {
         String sharedTestDir = "src/sharedTest/java"
         androidTest {
             java.srcDirs += sharedTestDir
+            kotlin.srcDirs += sharedTestDir
         }
         test {
             java.srcDirs += sharedTestDir
