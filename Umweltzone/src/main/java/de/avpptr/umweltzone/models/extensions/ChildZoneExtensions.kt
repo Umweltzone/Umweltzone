@@ -15,16 +15,20 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.details.viewmodels
+@file:JvmName("ChildZoneExtensions")
 
+package de.avpptr.umweltzone.models.extensions
+
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
+import de.avpptr.umweltzone.models.ChildZone
 import info.metadude.kotlin.library.roadsigns.RoadSign
 
-data class LezDetailsViewModel(
-        val roadSignType: RoadSign.Type,
-        val listOfCitiesText: String,
-        val zoneNumberSinceText: String,
-        val nextZoneNumberAsOfText: String,
-        val abroadLicensedVehicleZoneNumberText: String,
-        val geometryUpdatedAtText: String,
-        val geometrySourceText: String
-)
+val ChildZone.roadSignType: RoadSign.Type
+    get() = when {
+        zoneNumber == LowEmissionZoneNumbers.NONE -> RoadSign.Type.None
+        zoneNumber == LowEmissionZoneNumbers.RED -> RoadSign.Type.EnvironmentalBadge.RedYellowGreen
+        zoneNumber == LowEmissionZoneNumbers.YELLOW -> RoadSign.Type.EnvironmentalBadge.YellowGreen
+        zoneNumber == LowEmissionZoneNumbers.GREEN -> RoadSign.Type.EnvironmentalBadge.Green
+
+        else -> throw IllegalStateException("Unknown combination of zone number: '$zoneNumber' and file name: '$fileName'.")
+    }

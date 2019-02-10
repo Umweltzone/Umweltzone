@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -34,18 +34,6 @@ public class LowEmissionZoneNumberConverterTests {
     private final static
     @LowEmissionZoneNumbers.Color
     int INVALID_COLOR = 1;
-
-    @Test
-    public void testGetStatusDrawable() {
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(INVALID_COLOR))
-                .isEqualTo(Resources.INVALID_RESOURCE_ID);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.RED))
-                .isEqualTo(R.drawable.umweltzone_status_2);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.YELLOW))
-                .isEqualTo(R.drawable.umweltzone_status_3);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.GREEN))
-                .isEqualTo(R.drawable.umweltzone_status_4);
-    }
 
     @Test
     public void testGetColor() {

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -24,11 +24,13 @@ import java.lang.annotation.RetentionPolicy;
 
 public abstract class LowEmissionZoneNumbers {
 
-    @IntDef(value = {RED, YELLOW, GREEN})
+    @IntDef(value = {NONE, RED, YELLOW, GREEN})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Color {
 
     }
+
+    public static final int NONE = -1;
 
     public static final int RED = 2;
 
@@ -44,6 +46,8 @@ public abstract class LowEmissionZoneNumbers {
             case YELLOW:
                 return GREEN;
             case GREEN:
+                // continue
+            case NONE:
                 // continue
         }
         throw new IllegalArgumentException("Cannot return next zone number after: " + zoneNumber);

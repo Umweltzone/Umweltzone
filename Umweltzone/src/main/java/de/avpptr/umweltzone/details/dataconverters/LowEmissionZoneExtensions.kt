@@ -20,11 +20,11 @@ package de.avpptr.umweltzone.details.dataconverters
 import android.app.Activity
 import de.avpptr.umweltzone.details.viewmodels.LezDetailsViewModel
 import de.avpptr.umweltzone.models.LowEmissionZone
+import de.avpptr.umweltzone.models.extensions.roadSignType
 import de.avpptr.umweltzone.utils.StringHelper
-import de.avpptr.umweltzone.utils.statusDrawable
 
 fun LowEmissionZone.toDetailsViewModel(activity: Activity) = LezDetailsViewModel(
-        zoneStatusId = zoneNumber.statusDrawable,
+        roadSignType = roadSignType,
         listOfCitiesText = StringHelper.getListOfCitiesText(activity, this),
         zoneNumberSinceText = StringHelper.getZoneNumberSinceAsOfText(activity, this),
         nextZoneNumberAsOfText = StringHelper.getNextZoneNumberAsOfText(activity, this),

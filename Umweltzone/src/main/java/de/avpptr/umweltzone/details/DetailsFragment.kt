@@ -35,12 +35,13 @@ import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.LezDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.OtherDetailsViewModel
 import de.avpptr.umweltzone.extensions.isVisible
-import de.avpptr.umweltzone.extensions.setBackgroundResourceOrHide
 import de.avpptr.umweltzone.extensions.textOrHide
+import de.avpptr.umweltzone.extensions.typeOrHide
 import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.models.ChildZone
 import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.ViewHelper
+import info.metadude.kotlin.library.roadsigns.RoadSign
 import org.parceler.Parcels
 
 class DetailsFragment : BaseFragment() {
@@ -105,7 +106,7 @@ class DetailsFragment : BaseFragment() {
             addView(view, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
 
     private fun updateLezDetails(rootView: View, model: LezDetailsViewModel) {
-        val roadSignView = rootView.findViewById(R.id.detailsLezRoadSignView) as TextView
+        val roadSignView = rootView.findViewById(R.id.detailsLezRoadSignView) as RoadSign
         val listOfCitiesView = rootView.findViewById(R.id.detailsLezListOfCitiesView) as TextView
         val zoneNumberSinceView = rootView.findViewById(R.id.detailsLezZoneNumberSinceView) as TextView
         val nextZoneNumberAsOfView = rootView.findViewById(R.id.detailsLezNextZoneNumberAsOfView) as TextView
@@ -113,7 +114,7 @@ class DetailsFragment : BaseFragment() {
         val geometryUpdatedAtView = rootView.findViewById(R.id.detailsLezGeometryUpdatedAtView) as TextView
         val geometrySourceView = rootView.findViewById(R.id.detailsLezGeometrySourceView) as TextView
         return with(model) {
-            roadSignView.setBackgroundResourceOrHide = zoneStatusId
+            roadSignView.typeOrHide = roadSignType
             listOfCitiesView.textOrHide = listOfCitiesText
             zoneNumberSinceView.textOrHide = zoneNumberSinceText
             nextZoneNumberAsOfView.textOrHide = nextZoneNumberAsOfText

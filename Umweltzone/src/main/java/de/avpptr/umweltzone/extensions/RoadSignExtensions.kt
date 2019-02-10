@@ -1,3 +1,5 @@
+@file:JvmName("RoadSignExtensions")
+
 /*
  *  Copyright (C) 2019  Tobias Preuss
  *
@@ -15,16 +17,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.details.viewmodels
+package de.avpptr.umweltzone.extensions
 
+import android.support.annotation.NonNull
 import info.metadude.kotlin.library.roadsigns.RoadSign
 
-data class LezDetailsViewModel(
-        val roadSignType: RoadSign.Type,
-        val listOfCitiesText: String,
-        val zoneNumberSinceText: String,
-        val nextZoneNumberAsOfText: String,
-        val abroadLicensedVehicleZoneNumberText: String,
-        val geometryUpdatedAtText: String,
-        val geometrySourceText: String
-)
+/**
+ * Returns the type this RoadSign is displaying.
+ * Sets the type to be displayed or hides this view if the type is [RoadSign.Type.None].
+ */
+var @receiver:NonNull RoadSign.typeOrHide: RoadSign.Type
+    @NonNull
+    get() = this.type
+    set(@NonNull value) {
+        if (RoadSign.Type.None == value) {
+            isVisible = false
+        } else {
+            isVisible = true
+            this.type = value
+        }
+    }

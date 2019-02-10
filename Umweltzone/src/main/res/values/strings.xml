@@ -155,6 +155,12 @@
     <string name="appinfo_references_url_parceler" translatable="false">
         http://parceler.org
     </string>
+    <string name="appinfo_references_name_road_signs" translatable="false">
+        Road signs
+    </string>
+    <string name="appinfo_references_url_road_signs" translatable="false">
+        https://github.com/Umweltzone/roadsigns
+    </string>
     <string name="appinfo_references_name_snack_engage" translatable="false">
         SnackEngage
     </string>

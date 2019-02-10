@@ -20,20 +20,10 @@
 package de.avpptr.umweltzone.utils
 
 import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
-
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
 import de.avpptr.umweltzone.contract.Resources
-
-val @receiver:LowEmissionZoneNumbers.Color Int.statusDrawable
-    @DrawableRes get() = when (this) {
-        LowEmissionZoneNumbers.RED -> R.drawable.umweltzone_status_2
-        LowEmissionZoneNumbers.YELLOW -> R.drawable.umweltzone_status_3
-        LowEmissionZoneNumbers.GREEN -> R.drawable.umweltzone_status_4
-        else -> Resources.INVALID_RESOURCE_ID
-    }
 
 val @receiver:LowEmissionZoneNumbers.Color Int.color
     @ColorRes get() = when (this) {
