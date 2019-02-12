@@ -28,7 +28,7 @@ internal class MapReadyDelegate(
         private val preferencesHelper: PreferencesHelper,
         private val getCenterZoneRequested: () -> Boolean,
         private val setCenterZoneRequested: (centerZoneRequested: Boolean) -> Unit,
-        private val getDefaultAdministrativeZone: () -> AdministrativeZone?,
+        private val getDefaultAdministrativeZone: () -> AdministrativeZone,
         private val listener: Listener
 
 ) {
@@ -54,7 +54,7 @@ internal class MapReadyDelegate(
                 listener.onZoomToLocation(lastKnownCameraPosition)
             } else {
                 // Select default city at first application start
-                getDefaultAdministrativeZone.invoke()?.let {
+                getDefaultAdministrativeZone.invoke().let {
                     storeLastAdministrativeZone(it)
                     if (preferencesHelper.storesZoneIsDrawable() && preferencesHelper.restoreZoneIsDrawable()) {
                         listener.onDrawPolygonOverlay()

@@ -18,7 +18,7 @@
 package de.avpptr.umweltzone.models;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 
 import org.parceler.Parcel;
 import org.parceler.ParcelPropertyConverter;
@@ -27,7 +27,6 @@ import java.util.List;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -50,40 +49,18 @@ public class AdministrativeZone {
     @ParcelPropertyConverter(ChildZonesParcelConverter.class)
     public List<ChildZone> childZones;
 
-    // Used for caching
-    private static List<AdministrativeZone> mAdministrativeZones;
-
-    @Nullable
+    @NonNull
     public static AdministrativeZone getRecentAdministrativeZone(Context context) {
         Umweltzone application = (Umweltzone) context.getApplicationContext();
         final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         String zoneName = preferencesHelper.restoreLastKnownLocationAsString();
-        return getAdministrativeZone(context, zoneName);
+        return ContentProvider.getAdministrativeZoneByName(context, zoneName);
     }
 
-    @Nullable
+    @NonNull
     public static AdministrativeZone getDefaultAdministrativeZone(Context context) {
         String defaultZone = context.getString(R.string.config_default_zone_name);
-        return getAdministrativeZone(context, defaultZone);
-    }
-
-    // TODO Parser should not be called more often then needed
-    @Nullable
-    private static AdministrativeZone getAdministrativeZone(Context context, String zoneName) {
-        if (mAdministrativeZones == null) {
-            mAdministrativeZones = ContentProvider.getAdministrativeZones(context);
-        }
-        if (mAdministrativeZones.isEmpty()) {
-            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
-            throw new IllegalStateException("Parsing zones from JSON failed.");
-        }
-        for (int i = 0, size = mAdministrativeZones.size(); i < size; i++) {
-            AdministrativeZone administrativeZone = mAdministrativeZones.get(i);
-            if (administrativeZone.name.equalsIgnoreCase(zoneName)) {
-                return administrativeZone;
-            }
-        }
-        return null;
+        return ContentProvider.getAdministrativeZoneByName(context, defaultZone);
     }
 
     public boolean containsGeometryInformation() {

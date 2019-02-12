@@ -38,10 +38,6 @@ class ZonesFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         administrativeZones = ContentProvider.getAdministrativeZones(activity)
-        if (administrativeZones.isEmpty()) {
-            mTracking.trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null)
-            error("Parsing zones from JSON failed.")
-        }
         val zoneViewModels = administrativeZones.toZoneViewModels(context)
         administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick, ::onItemViewInflationError)
     }

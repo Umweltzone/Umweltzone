@@ -332,13 +332,11 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                 .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
         if (fragment == null) {
             AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
-            if (administrativeZone != null) {
-                // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
-                if (!administrativeZone.containsGeometryInformation()) {
-                    ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
-                            .newInstance(administrativeZone);
-                    dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
-                }
+            // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
+            if (!administrativeZone.containsGeometryInformation()) {
+                ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
+                        .newInstance(administrativeZone);
+                dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
             }
         }
     }
@@ -351,13 +349,11 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void updateSubTitle() {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
-        final AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
-        if (administrativeZone != null) {
-            String title = administrativeZone.displayName;
-            ActionBar actionBar = activity.getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setSubtitle(title);
-            }
+        AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
+        String title = administrativeZone.displayName;
+        ActionBar actionBar = activity.getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setSubtitle(title);
         }
     }
 

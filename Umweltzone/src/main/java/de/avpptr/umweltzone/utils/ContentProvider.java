@@ -43,6 +43,7 @@ import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.CircuitDeserializer;
 import de.avpptr.umweltzone.models.Faq;
+import kotlin.collections.CollectionsKt;
 
 public abstract class ContentProvider {
 
@@ -69,8 +70,18 @@ public abstract class ContentProvider {
     }
 
     @NonNull
+    public static AdministrativeZone getAdministrativeZoneByName(@NonNull final Context context, @NonNull final String name) {
+        return CollectionsKt.single(getAdministrativeZones(context), zone -> name.equalsIgnoreCase(zone.name));
+    }
+
+    @NonNull
     public static List<AdministrativeZone> getAdministrativeZones(@NonNull final Context context) {
-        return getContent(context, "zones_de", AdministrativeZone.class);
+        List<AdministrativeZone> zones = getContent(context, "zones_de", AdministrativeZone.class);
+        if (zones.isEmpty()) {
+            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
+            throw new IllegalStateException("Parsing zones from JSON failed.");
+        }
+        return zones;
     }
 
     @NonNull

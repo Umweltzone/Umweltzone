@@ -78,7 +78,7 @@ public class IntentHelper {
     }
 
     public static Intent getCityInfoIntent(@NonNull Context context,
-                                           @Nullable AdministrativeZone administrativeZone) {
+                                           @NonNull AdministrativeZone administrativeZone) {
         Intent intent = getIntent(context, CityInfoActivity.class);
         intent.putExtra(CityInfoFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE,
                 Parcels.wrap(administrativeZone));
