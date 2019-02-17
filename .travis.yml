@@ -23,8 +23,6 @@ android:
 before_script:
   - echo ANDROID_API_LEVEL=$ANDROID_API_LEVEL
   - echo ANDROID_BUILD_TOOLS_VERSION=$ANDROID_BUILD_TOOLS_VERSION
-  # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
-  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
 
 script:
   - ./gradlew clean testDebug assembleDebug -PdisablePreDex
@@ -40,4 +38,7 @@ cache:
     - $TRAVIS_BUILD_DIR/.android/build-cache
 
 before_install:
+  # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3+
+  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
+  # Make Gradle wrapper executable.
   - chmod +x gradlew
