@@ -21,6 +21,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
+import android.support.annotation.VisibleForTesting;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -63,10 +64,7 @@ public class StringHelper {
             // Static zone information
             return context.getString(R.string.city_info_zone_number_none);
         }
-        @StringRes int cityInfoZoneNumberResourceId = R.string.city_info_zone_number_since;
-        if (new Date().before(zoneNumberSince)) {
-            cityInfoZoneNumberResourceId = R.string.city_info_zone_number_as_of;
-        }
+        @StringRes int cityInfoZoneNumberResourceId = getZoneNumberSinceAsOfResourceId(zoneNumberSince);
         return getZoneNumberInfoString(context,
                 cityInfoZoneNumberResourceId,
                 zoneNumberSince,
@@ -137,6 +135,17 @@ public class StringHelper {
     }
 
     // Compile date and colors into sentence
+
+    @VisibleForTesting
+    @StringRes
+    public static int getZoneNumberSinceAsOfResourceId(@NonNull Date zoneNumberSinceDate) {
+        if (new Date().before(zoneNumberSinceDate)) {
+            return R.string.city_info_zone_number_as_of;
+        } else {
+            return R.string.city_info_zone_number_since;
+        }
+    }
+
     @NonNull
     private static String getZoneNumberInfoString(
             @NonNull Context context,

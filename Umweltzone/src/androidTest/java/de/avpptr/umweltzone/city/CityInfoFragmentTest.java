@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.city;
 
 import android.content.Context;
+import android.support.annotation.StringRes;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.filters.LargeTest;
 import android.support.test.rule.ActivityTestRule;
@@ -41,6 +42,7 @@ import de.avpptr.umweltzone.utils.DateFormatter;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
+import de.avpptr.umweltzone.utils.StringHelper;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
@@ -115,8 +117,9 @@ public class CityInfoFragmentTest {
                 .check(matches(withEffectiveVisibility(Visibility.GONE)))
                 .check(matches(not(isDisplayed())));
 
+        @StringRes int zoneNumberSinceAsOf = StringHelper.getZoneNumberSinceAsOfResourceId(zoneNumberSinceDate);
         String zoneNumberSinceText = mContext.getString(
-                R.string.city_info_zone_number_since,
+                zoneNumberSinceAsOf,
                 DateFormatter.getFormattedDate(zoneNumberSinceDate, datePattern),
                 mContext.getString(R.string.city_info_zone_number_since_text_fragment_green));
         onView(withId(R.id.city_info_zone_number_since))
@@ -190,9 +193,10 @@ public class CityInfoFragmentTest {
         launchActivity(zone);
 
         String datePattern = mContext.getString(R.string.city_info_zone_number_since_date_format);
-
+        @StringRes int zoneNumberSinceAsOf =
+                StringHelper.getZoneNumberSinceAsOfResourceId(zoneNumberSinceDate);
         String zoneNumberSinceText = mContext.getString(
-                R.string.city_info_zone_number_since,
+                zoneNumberSinceAsOf,
                 DateFormatter.getFormattedDate(zoneNumberSinceDate, datePattern),
                 mContext.getString(R.string.city_info_zone_number_since_text_fragment_red));
         onView(withId(R.id.city_info_zone_number_since))
@@ -225,8 +229,10 @@ public class CityInfoFragmentTest {
         launchActivity(zone);
 
         String datePattern = mContext.getString(R.string.city_info_zone_number_since_date_format);
+        @StringRes int zoneNumberSinceAsOf =
+                StringHelper.getZoneNumberSinceAsOfResourceId(zoneNumberSinceDate);
         String zoneNumberAsOfText = mContext.getString(
-                R.string.city_info_zone_number_as_of,
+                zoneNumberSinceAsOf,
                 DateFormatter.getFormattedDate(zoneNumberSinceDate, datePattern),
                 mContext.getString(R.string.city_info_zone_number_since_text_fragment_yellow));
         onView(withId(R.id.city_info_zone_number_since))
