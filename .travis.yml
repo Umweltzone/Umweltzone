@@ -1,3 +1,4 @@
+sudo: required
 dist: focal
 
 language: java
@@ -8,9 +9,16 @@ env:
   global:
     # Android command line tools, check for updates here https://developer.android.com/studio/#command-tools
     - COMMAND_LINE_TOOLS_VERSION=7583922
-    - ANDROID_HOME=$HOME/android-sdk
+    - ABI="google_apis;armeabi-v7a" # x86 emulation requires hardware acceleration, user cannot access KVM
+    - ANDROID_HOME=$HOME
+    - ANDROID_SDK_ROOT=$HOME
+    - ADB_INSTALL_TIMEOUT=25
+    - QEMU_AUDIO_DRV=none
+    - TERM=dumb
     - TARGET_SDK_VERSION=`grep -H targetSdk Umweltzone/build.gradle | grep -Po "\d+"`
     - BUILD_TOOLS_VERSION=`grep -H buildToolsVersion Umweltzone/build.gradle | grep -Po "\d+.\d+.\d+"`
+  matrix:
+    - EMULATOR_API=19
 
 branches:
   except:
@@ -28,7 +36,7 @@ cache:
   directories:
     # Android
     - $HOME/android-cmdline-tools
-    - $HOME/android-sdk
+    - $HOME
     - $HOME/.android/build-cache
 
     # Gradle
@@ -40,9 +48,15 @@ install:
   # Download and unzip the Android command line tools (if not already there thanks to the cache mechanism)
   - if test ! -e $HOME/android-cmdline-tools/cmdline-tools.zip ; then curl "https://dl.google.com/android/repository/commandlinetools-linux-${COMMAND_LINE_TOOLS_VERSION}_latest.zip" > $HOME/android-cmdline-tools/cmdline-tools.zip ; fi
   - unzip -qq -n $HOME/android-cmdline-tools/cmdline-tools.zip -d $HOME/android-cmdline-tools
-  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME/android-sdk "platform-tools"
-  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME/android-sdk "build-tools;${BUILD_TOOLS_VERSION}"
-  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME/android-sdk "platforms;android-${TARGET_SDK_VERSION}"
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "platform-tools"
+  - PATH="$PATH:$HOME/platform-tools"
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "build-tools;${BUILD_TOOLS_VERSION}"
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "platforms;android-${TARGET_SDK_VERSION}"
+  # Install the rest of tools (e.g., avdmanager)
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "tools"
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "cmdline-tools;latest"
+  # Install the system image
+  - echo y | $HOME/android-cmdline-tools/cmdline-tools/bin/sdkmanager --sdk_root=$HOME "system-images;android-$EMULATOR_API;$ABI"
 
 before_script:
   # To see if the correct values have been extracted.
@@ -51,9 +65,17 @@ before_script:
 
   # Ensure Gradle wrapper is executable
   - chmod +x gradlew
+  # Ensure shell script is executable
+  - chmod +x ci/android-wait-for-emulator.sh
 
   # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
   - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
 
+  # Create and start emulator for the script. Meant to race the install task.
+  - echo no | $HOME/android-cmdline-tools/cmdline-tools/bin/avdmanager create avd --force -n test -k "system-images;android-$EMULATOR_API;$ABI"
+  - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window &
+  - ci/android-wait-for-emulator.sh
+  - adb shell input keyevent 82
+
 script:
-  - ./gradlew clean testDebug assembleDebug -PdisablePreDex
+  - ./gradlew testDebug connectedDebugAndroidTest --stacktrace -PdisablePreDex
