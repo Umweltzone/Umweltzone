@@ -148,9 +148,6 @@ dependencies {
     androidTestImplementation("com.android.support.test.espresso:espresso-core:$espressoVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
-    androidTestImplementation("com.android.support.test:rules:$rulesVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
 
     // Unit tests
     testImplementation "junit:junit:$junitVersion"
