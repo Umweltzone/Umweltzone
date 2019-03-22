@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -68,11 +68,8 @@ internal class MapReadyDelegate(
         }
     }
 
-    private fun storeLastLowEmissionZone(defaultLowEmissionZone: LowEmissionZone) {
-        preferencesHelper.storeLastKnownLocationAsString(defaultLowEmissionZone.name)
-        preferencesHelper.storeLastKnownLocationAsBoundingBox(defaultLowEmissionZone.boundingBox)
-        preferencesHelper.storeZoneIsDrawable(defaultLowEmissionZone.containsGeometryInformation())
-    }
+    private fun storeLastLowEmissionZone(defaultLowEmissionZone: LowEmissionZone) =
+            preferencesHelper.storeLowEmissionZone(defaultLowEmissionZone)
 
     internal interface Listener {
 

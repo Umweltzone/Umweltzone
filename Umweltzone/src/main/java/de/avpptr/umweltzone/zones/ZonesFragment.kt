@@ -60,14 +60,10 @@ class ZonesFragment : BaseFragment() {
         mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError, "view type: $viewType")
     }
 
-    private fun storeSelectedLocation(lowEmissionZone: LowEmissionZone) {
-        val application = activity.applicationContext as Umweltzone
-        with(application.preferencesHelper) {
-            storeLastKnownLocationAsBoundingBox(lowEmissionZone.boundingBox)
-            storeLastKnownLocationAsString(lowEmissionZone.name)
-            storeZoneIsDrawable(lowEmissionZone.containsGeometryInformation())
-        }
-    }
+    private fun storeSelectedLocation(zone: LowEmissionZone) =
+            preferencesHelper.storeLowEmissionZone(zone)
+
+    private val preferencesHelper by lazy { (activity.applicationContext as Umweltzone).preferencesHelper }
 
     companion object {
 

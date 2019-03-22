@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@ import android.support.annotation.NonNull;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.Preferences;
+import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import info.metadude.android.typedpreferences.BooleanPreference;
@@ -75,6 +76,14 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_MY_LOCATION_PERMISSION_IS_PERMANENTLY_DECLINED);
     }
 
+    // LowEmissionZone
+
+    public void storeLowEmissionZone(@NonNull final LowEmissionZone zone) {
+        storeLastKnownLocationAsBoundingBox(zone.boundingBox);
+        storeLastKnownLocationAsString(zone.name);
+        storeZoneIsDrawable(zone.containsGeometryInformation());
+    }
+
     // Last known location / city name
 
     public void storeLastKnownLocationAsString(final String cityName) {
@@ -109,7 +118,7 @@ public class PreferencesHelper {
 
     // Last known location / bounding box
 
-    public void storeLastKnownLocationAsBoundingBox(final BoundingBox boundingBox) {
+    private void storeLastKnownLocationAsBoundingBox(final BoundingBox boundingBox) {
         mLastKnownLocationBoundingBoxPreference.set(boundingBox);
     }
 
@@ -137,7 +146,7 @@ public class PreferencesHelper {
 
     // Zone is drawable
 
-    public void storeZoneIsDrawable(boolean flag) {
+    private void storeZoneIsDrawable(boolean flag) {
         mZoneIsDrawablePreference.set(flag);
     }
 
