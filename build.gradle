@@ -4,7 +4,7 @@ buildscript {
     ext {
         // Plugins
         androidGradlePluginVersion = "3.2.1"
-        gradleVersionsPluginVersion = "0.20.0"
+        gradleVersionsPluginVersion = "0.21.0"
         proguardGradlePluginVersion = "6.0.3"
 
         // Libraries
@@ -16,7 +16,7 @@ buildscript {
         jacksonVersion = "2.8.10"
         junitVersion = "4.12"
         kotlinVersion = "1.2.71"
-        parcelerVersion = "1.1.11"
+        parcelerVersion = "1.1.12"
         playServicesVersion = "10.0.1"
         rulesVersion = "1.0.2"
         snackengagePlayrateVersion = "0.15"
