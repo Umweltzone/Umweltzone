@@ -29,9 +29,8 @@
 
     <!-- Share intent -->
     <string name="share_intent_message">
-        <![CDATA[Kennst du schon Umweltzone? Diese Android-App enthält alle
-        Informationen über Umweltzonen in Deutschland.\nHier kostenlos
-        herunterladen: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+        <![CDATA[Kennst du schon Umweltzone? Diese Android-App enthält alle Informationen über Umweltzonen in Deutschland.
+        \nHier kostenlos herunterladen: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
     <!-- Map -->
