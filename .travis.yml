@@ -2,8 +2,7 @@ sudo: false
 
 language: android
 
-jdk:
-- oraclejdk8
+jdk: oraclejdk8
 
 notifications:
   email: true
@@ -29,14 +28,14 @@ script:
   - ./gradlew clean testDebug assembleDebug -PdisablePreDex
 
 before_cache:
-  - rm -f  ${TRAVIS_BUILD_DIR}/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr ${TRAVIS_BUILD_DIR}/.gradle/caches/*/plugin-resolution/
+  - rm -f  $TRAVIS_BUILD_DIR/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $TRAVIS_BUILD_DIR/.gradle/caches/*/plugin-resolution/
 
 cache:
   directories:
-    - ${TRAVIS_BUILD_DIR}/.gradle/caches/
-    - ${TRAVIS_BUILD_DIR}/.gradle/wrapper/
-    - ${TRAVIS_BUILD_DIR}/.android/build-cache
+    - $TRAVIS_BUILD_DIR/.gradle/caches/
+    - $TRAVIS_BUILD_DIR/.gradle/wrapper/
+    - $TRAVIS_BUILD_DIR/.android/build-cache
 
 before_install:
   - chmod +x gradlew
