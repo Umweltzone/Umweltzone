@@ -9,8 +9,8 @@ apply plugin: "kotlin-kapt"
 repositories {
     google()
     mavenCentral()
-    jcenter()
     maven { url "https://jitpack.io" }
+    jcenter()
 }
 
 def versionMajor = 3
