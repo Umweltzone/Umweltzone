@@ -31,9 +31,8 @@
 
     <!-- Share intent -->
     <string name="share_intent_message">
-        <![CDATA[Try out Umweltzone - the Android app which has all information
-        about low emission zones in Germany.\nGet it here for
-        free: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+        <![CDATA[Try out Umweltzone - the Android app which has all information about low emission zones in Germany.
+        \nGet it here for free: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
     <!-- Map -->
