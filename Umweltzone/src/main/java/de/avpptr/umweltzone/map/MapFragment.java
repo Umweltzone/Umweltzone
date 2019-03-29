@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,7 +28,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -55,6 +54,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
+import de.avpptr.umweltzone.extensions.ContextExtensions;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -329,8 +329,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         @SuppressWarnings("unchecked")
         List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
         Resources resources = getResources();
-        int fillColor = ContextCompat.getColor(activity, R.color.shape_fill_color);
-        int strokeColor = ContextCompat.getColor(activity, R.color.shape_stroke_color);
+        int fillColor = ContextExtensions.getColorCompat(activity, R.color.shape_fill_color);
+        int strokeColor = ContextExtensions.getColorCompat(activity, R.color.shape_stroke_color);
         int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
         mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
     }

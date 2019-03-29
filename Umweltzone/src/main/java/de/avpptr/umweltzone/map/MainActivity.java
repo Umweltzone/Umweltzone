@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@ package de.avpptr.umweltzone.map;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.WindowManager;
@@ -36,6 +35,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseActivity;
+import de.avpptr.umweltzone.extensions.ContextExtensions;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.tracedroid.TraceDroidEmailSender;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -90,8 +90,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initUserEngagement() {
-        int actionColor = ContextCompat.getColor(this, R.color.snack_engage_action_text);
-        int backgroundColor = ContextCompat.getColor(this, R.color.snack_engage_action_background);
+        int actionColor = ContextExtensions.getColorCompat(this, R.color.snack_engage_action_text);
+        int backgroundColor = ContextExtensions.getColorCompat(this, R.color.snack_engage_action_background);
         BaseSnack rateSnack = new DefaultRateSnack()
                 .overrideTitleText(getString(R.string.snack_engage_rate_title))
                 .overrideActionText(getString(R.string.snack_engage_rate_action));
