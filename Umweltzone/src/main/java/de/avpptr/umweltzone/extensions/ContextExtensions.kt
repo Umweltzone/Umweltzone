@@ -1,3 +1,5 @@
+@file:JvmName("ContextExtensions")
+
 /*
  *  Copyright (C) 2019  Tobias Preuss
  *
@@ -15,20 +17,12 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.zones.dataconverters
+package de.avpptr.umweltzone.extensions
 
 import android.content.Context
-import android.support.annotation.ColorInt
-import de.avpptr.umweltzone.extensions.getColorCompat
-import de.avpptr.umweltzone.models.ChildZone
-import de.avpptr.umweltzone.utils.LowEmissionZoneNumberConverter
-import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
+import android.support.annotation.ColorRes
+import android.support.annotation.NonNull
+import android.support.v4.content.ContextCompat
 
-fun ChildZone.toBadgeViewModel(context: Context) =
-        BadgeViewModel("$zoneNumber", getBadgeColor(context))
-
-@ColorInt
-private fun ChildZone.getBadgeColor(context: Context): Int {
-    val color = LowEmissionZoneNumberConverter.getColor(zoneNumber)
-    return context.getColorCompat(color)
-}
+fun @receiver:NonNull Context.getColorCompat(@ColorRes id: Int) =
+        ContextCompat.getColor(this, id)
