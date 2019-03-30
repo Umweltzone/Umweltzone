@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -48,7 +48,7 @@ class ZonesFragment : BaseFragment() {
 
     private fun onItemClick(view: View) {
         val zoneViewModel = view.tag as ZoneViewModel
-        val lowEmissionZone = zones.first { it.displayName == zoneViewModel.name }
+        val lowEmissionZone = zones.single { it.displayName == zoneViewModel.name }
         mTracking.track(TrackingPoint.CityListItemClick, lowEmissionZone.name)
         storeSelectedLocation(lowEmissionZone)
         val intent = IntentHelper.getNewMapIntent(activity)
@@ -60,14 +60,10 @@ class ZonesFragment : BaseFragment() {
         mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError, "view type: $viewType")
     }
 
-    private fun storeSelectedLocation(lowEmissionZone: LowEmissionZone) {
-        val application = activity.applicationContext as Umweltzone
-        with(application.preferencesHelper) {
-            storeLastKnownLocationAsBoundingBox(lowEmissionZone.boundingBox)
-            storeLastKnownLocationAsString(lowEmissionZone.name)
-            storeZoneIsDrawable(lowEmissionZone.containsGeometryInformation())
-        }
-    }
+    private fun storeSelectedLocation(zone: LowEmissionZone) =
+            preferencesHelper.storeLowEmissionZone(zone)
+
+    private val preferencesHelper by lazy { (activity.applicationContext as Umweltzone).preferencesHelper }
 
     companion object {
 
