@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,17 +21,14 @@ import de.avpptr.umweltzone.BuildConfig;
 
 public interface Preferences {
 
-    String KEY_LAST_KNOWN_LOCATION_CENTER =
-            BuildConfig.APPLICATION_ID + ".LAST_KNOWN_LOCATION_CENTER";
+    String KEY_CAMERA_POSITION =
+            BuildConfig.APPLICATION_ID + ".CAMERA_POSITION";
 
     String KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX =
             BuildConfig.APPLICATION_ID + ".LAST_KNOWN_LOCATION_BOUNDING_BOX";
 
     String KEY_CITY_NAME =
             BuildConfig.APPLICATION_ID + ".CITY_NAME";
-
-    String KEY_ZOOM_LEVEL =
-            BuildConfig.APPLICATION_ID + ".ZOOM_LEVEL";
 
     String KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED =
             BuildConfig.APPLICATION_ID + ".CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED";
