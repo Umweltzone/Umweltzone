@@ -50,6 +50,7 @@ public class ChildZone {
         return geometrySource != null && geometryUpdatedAt != null;
     }
 
+    @SuppressWarnings("EqualsReplaceableByObjectsCall")
     @Override
     public boolean equals(Object other) {
         if (this == other) {
