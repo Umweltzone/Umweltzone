@@ -27,16 +27,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import static de.avpptr.umweltzone.models.extensions.LatitudeExtensions.MIN_LATITUDE;
+import static de.avpptr.umweltzone.models.extensions.LatitudeExtensions.isValidLatitude;
+import static de.avpptr.umweltzone.models.extensions.LongitudeExtensions.MIN_LONGITUDE;
+import static de.avpptr.umweltzone.models.extensions.LongitudeExtensions.isValidLongitude;
+
 @Parcel
 public final class GeoPoint {
-
-    private static final double MAX_LATITUDE = 90.0;
-
-    private static final double MIN_LATITUDE = -90.0;
-
-    private static final double MAX_LONGITUDE = 180.0;
-
-    private static final double MIN_LONGITUDE = -180.0;
 
     private static final double INVALID_LATITUDE = MIN_LATITUDE - 1;
 
@@ -91,8 +88,7 @@ public final class GeoPoint {
     }
 
     public boolean isValid() {
-        return (mLatitude > MIN_LATITUDE && mLatitude <= MAX_LATITUDE
-                && mLongitude > MIN_LONGITUDE && mLongitude <= MAX_LONGITUDE);
+        return isValidLatitude(mLatitude) && isValidLongitude(mLongitude);
     }
 
     public LatLng toLatLng() {

@@ -42,6 +42,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
@@ -145,8 +146,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                     }
 
                     @Override
-                    public void onZoomToLocation(@NonNull GeoPoint location, float zoomLevel) {
-                        zoomToLocation(location, zoomLevel);
+                    public void onZoomToLocation(@NonNull CameraPosition cameraPosition) {
+                        zoomToLocation(cameraPosition);
                     }
 
                 });
@@ -229,12 +230,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         }
     }
 
-    private void zoomToLocation(@NonNull GeoPoint location, float zoomLevel) {
-        if (location.isValid() && zoomLevel > 0) {
-            CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(
-                    location.toLatLng(), zoomLevel);
-            mMap.moveCamera(cameraUpdate);
-        }
+    private void zoomToLocation(@NonNull CameraPosition cameraPosition) {
+        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
     private void setUpMapIfNeeded() {
@@ -355,10 +352,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void storeLastMapState() {
         if (mMap != null) {
-            GeoPoint mapCenter = new GeoPoint(mMap.getCameraPosition().target);
-            mPreferencesHelper.storeLastKnownLocationAsGeoPoint(mapCenter);
-            float zoomLevel = mMap.getCameraPosition().zoom;
-            mPreferencesHelper.storeZoomLevel(zoomLevel);
+            mPreferencesHelper.storeCameraPosition(mMap.getCameraPosition());
         }
     }
 

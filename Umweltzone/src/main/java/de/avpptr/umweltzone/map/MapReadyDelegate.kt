@@ -17,10 +17,11 @@
 
 package de.avpptr.umweltzone.map
 
+import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.maps.model.LatLngBounds
+import de.avpptr.umweltzone.models.extensions.isValid
 import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.prefs.PreferencesHelper
-import de.avpptr.umweltzone.utils.GeoPoint
 
 internal class MapReadyDelegate(
 
@@ -48,10 +49,9 @@ internal class MapReadyDelegate(
             }
             setCenterZoneRequested.invoke(false)
         } else {
-            val lastKnownPosition = preferencesHelper.restoreLastKnownLocationAsGeoPoint()
-            if (lastKnownPosition.isValid) {
-                val zoomLevel = preferencesHelper.restoreZoomLevel()
-                listener.onZoomToLocation(lastKnownPosition, zoomLevel)
+            val lastKnownCameraPosition = preferencesHelper.restoreCameraPosition()
+            if (lastKnownCameraPosition.isValid()) {
+                listener.onZoomToLocation(lastKnownCameraPosition)
             } else {
                 // Select default city at first application start
                 getDefaultLowEmissionZone.invoke()?.let {
@@ -81,7 +81,7 @@ internal class MapReadyDelegate(
 
         fun onZoomToBounds(latLngBounds: LatLngBounds)
 
-        fun onZoomToLocation(location: GeoPoint, zoomLevel: Float)
+        fun onZoomToLocation(cameraPosition: CameraPosition)
 
     }
 

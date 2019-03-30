@@ -21,24 +21,22 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 
+import com.google.android.gms.maps.model.CameraPosition;
+
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.Preferences;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.GeoPoint;
 import info.metadude.android.typedpreferences.BooleanPreference;
-import info.metadude.android.typedpreferences.FloatPreference;
 import info.metadude.android.typedpreferences.StringPreference;
 
 public class PreferencesHelper {
 
     private final StringPreference mCityNamePreference;
 
-    private final GeoPointPreference mLastKnownLocationCenterPreference;
+    private final CameraPositionPreference mCameraPositionPreference;
 
     private final BoundingBoxPreference mLastKnownLocationBoundingBoxPreference;
-
-    private final FloatPreference mZoomLevelPreference;
 
     private final BooleanPreference mZoneIsDrawablePreference;
 
@@ -54,12 +52,10 @@ public class PreferencesHelper {
     public PreferencesHelper(@NonNull SharedPreferences sharedPreferences, @NonNull Context context) {
         mCityNamePreference = new StringPreference(
                 sharedPreferences, Preferences.KEY_CITY_NAME);
-        mLastKnownLocationCenterPreference = new GeoPointPreference(
-                sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_CENTER);
+        mCameraPositionPreference = new CameraPositionPreference(
+                sharedPreferences, Preferences.KEY_CAMERA_POSITION);
         mLastKnownLocationBoundingBoxPreference = new BoundingBoxPreference(
                 sharedPreferences, Preferences.KEY_LAST_KNOWN_LOCATION_BOUNDING_BOX);
-        mZoomLevelPreference = new FloatPreference(
-                sharedPreferences, Preferences.KEY_ZOOM_LEVEL);
         mZoneIsDrawablePreference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_ZONE_IS_DRAWABLE);
         mCityNameFrankfurtInPreferencesFixedPreference = new BooleanPreference(
@@ -84,6 +80,20 @@ public class PreferencesHelper {
         storeZoneIsDrawable(zone.containsGeometryInformation());
     }
 
+    // CameraPosition
+
+    public void storeCameraPosition(@NonNull final CameraPosition cameraPosition) {
+        mCameraPositionPreference.set(cameraPosition);
+    }
+
+    public CameraPosition restoreCameraPosition() {
+        return mCameraPositionPreference.get();
+    }
+
+    private void deleteCameraPosition() {
+        mCameraPositionPreference.delete();
+    }
+
     // Last known location / city name
 
     public void storeLastKnownLocationAsString(final String cityName) {
@@ -102,20 +112,6 @@ public class PreferencesHelper {
         mCityNamePreference.delete();
     }
 
-    // Last known location / center
-
-    public void storeLastKnownLocationAsGeoPoint(final GeoPoint center) {
-        mLastKnownLocationCenterPreference.set(center);
-    }
-
-    public GeoPoint restoreLastKnownLocationAsGeoPoint() {
-        return mLastKnownLocationCenterPreference.get();
-    }
-
-    private void deleteLastKnownLocationAsGeoPoint() {
-        mLastKnownLocationCenterPreference.delete();
-    }
-
     // Last known location / bounding box
 
     private void storeLastKnownLocationAsBoundingBox(final BoundingBox boundingBox) {
@@ -128,20 +124,6 @@ public class PreferencesHelper {
 
     private void deleteLastKnownLocationAsBoundingBox() {
         mLastKnownLocationBoundingBoxPreference.delete();
-    }
-
-    // Zoom level
-
-    public void storeZoomLevel(float zoomLevel) {
-        mZoomLevelPreference.set(zoomLevel);
-    }
-
-    public float restoreZoomLevel() {
-        return mZoomLevelPreference.get();
-    }
-
-    private void deleteZoomLevel() {
-        mZoomLevelPreference.delete();
     }
 
     // Zone is drawable
@@ -208,8 +190,7 @@ public class PreferencesHelper {
     public void deleteLastKnownLocation() {
         deleteLastKnownLocationAsString();
         deleteLastKnownLocationAsBoundingBox();
-        deleteLastKnownLocationAsGeoPoint();
-        deleteZoomLevel();
+        deleteCameraPosition();
         deleteZoneIsDrawable();
     }
 
