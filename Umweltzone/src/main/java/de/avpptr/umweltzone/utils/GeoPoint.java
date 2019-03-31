@@ -23,8 +23,6 @@ import org.parceler.Parcel;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 import static de.avpptr.umweltzone.models.extensions.LatitudeExtensions.MIN_LATITUDE;
@@ -93,16 +91,6 @@ public final class GeoPoint {
 
     public LatLng toLatLng() {
         return new LatLng(mLatitude, mLongitude);
-    }
-
-    public static List<LatLng> getLatLngPoints(final List<GeoPoint> geoPoints) {
-        int geoPointsCount = geoPoints.size();
-        final List<LatLng> latLngPoints = new ArrayList<>(geoPointsCount);
-        for (int i = 0; i < geoPointsCount; i++) {
-            GeoPoint point = geoPoints.get(i);
-            latLngPoints.add(point.toLatLng());
-        }
-        return latLngPoints;
     }
 
     public static GeoPoint getInvalidGeoPoint() {

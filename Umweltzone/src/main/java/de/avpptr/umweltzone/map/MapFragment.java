@@ -21,7 +21,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -55,14 +54,13 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
-import de.avpptr.umweltzone.extensions.ContextExtensions;
+import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.CameraUpdateHelper;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
-import de.avpptr.umweltzone.utils.MapDrawer;
 
 public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
@@ -324,11 +322,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         }
         @SuppressWarnings("unchecked")
         List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
-        Resources resources = getResources();
-        int fillColor = ContextExtensions.getColorCompat(activity, R.color.shape_fill_color);
-        int strokeColor = ContextExtensions.getColorCompat(activity, R.color.shape_stroke_color);
-        int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
-        mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
+        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(circuits, activity));
     }
 
     private void showZoneNotDrawableDialog() {
