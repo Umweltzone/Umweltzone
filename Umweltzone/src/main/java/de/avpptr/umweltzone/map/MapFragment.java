@@ -320,9 +320,9 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         if (cityName == null || cityName.length() < 1) {
             return;
         }
-        @SuppressWarnings("unchecked")
+        AdministrativeZone zone = ContentProvider.getAdministrativeZoneByName(activity, cityName);
         List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
-        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(circuits, activity));
+        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(zone.childZones, activity, circuits));
     }
 
     private void showZoneNotDrawableDialog() {

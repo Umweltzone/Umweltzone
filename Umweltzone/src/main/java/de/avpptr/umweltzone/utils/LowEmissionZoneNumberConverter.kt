@@ -51,3 +51,10 @@ val @receiver:LowEmissionZoneNumbers.Color Int.colorString
         else -> Resources.INVALID_RESOURCE_ID
     }
 
+val @receiver:LowEmissionZoneNumbers.Color Int.shapeFillColor
+    @ColorRes get() = when (this) {
+        LowEmissionZoneNumbers.RED -> R.color.shape_fill_color_zone_2
+        LowEmissionZoneNumbers.YELLOW -> R.color.shape_fill_color_zone_3
+        LowEmissionZoneNumbers.GREEN -> R.color.shape_fill_color_zone_4
+        else -> throw IllegalStateException("Unknown zone number: $this.")
+    }
