@@ -98,7 +98,7 @@ public abstract class ContentProvider {
     }
 
     private static String generateKeyForZoneWith(String zoneName) {
-        return "zone_" + zoneName;
+        return "lez_" + zoneName;
     }
 
     @NonNull

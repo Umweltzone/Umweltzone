@@ -67,7 +67,7 @@ public class ContentProviderTest {
     public void testGetCircuits_failsWhenCoordinatesAreMissing() {
         String expectedErrorMessage;
         for (String zoneName : ZONES_WITHOUT_COORDINATES) {
-            expectedErrorMessage = "Resource for file path 'raw/zone_" + zoneName + "' not found.";
+            expectedErrorMessage = "Resource for file path 'raw/lez_" + zoneName + "' not found.";
             try {
                 getCircuits(zoneName);
                 fail();
@@ -189,7 +189,7 @@ public class ContentProviderTest {
 
     @RawRes
     private Integer getZoneJsonResourceId(@NonNull String zoneName) {
-        String fileName = "zone_" + zoneName;
+        String fileName = "lez_" + zoneName;
         return ContentProvider.getResourceId(mContext, fileName, "raw");
     }
 
