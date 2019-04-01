@@ -21,11 +21,11 @@ import android.content.Context
 import android.support.annotation.ColorInt
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.extensions.getColorCompat
-import de.avpptr.umweltzone.models.LowEmissionZone
+import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.zones.ChildZonesCount
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 
-fun LowEmissionZone.toZoneViewModel(context: Context): ZoneViewModel = when (childZones.size) {
+fun AdministrativeZone.toZoneViewModel(context: Context): ZoneViewModel = when (childZones.size) {
     ChildZonesCount.ONE.value -> {
         ZoneViewModel.OneZoneViewModel(
                 name = displayName,
@@ -45,7 +45,7 @@ fun LowEmissionZone.toZoneViewModel(context: Context): ZoneViewModel = when (chi
 }
 
 @ColorInt
-private fun LowEmissionZone.getTextColor(context: Context): Int {
+private fun AdministrativeZone.getTextColor(context: Context): Int {
     val color = zoneIsDrawableToColorId(containsGeometryInformation())
     return context.getColorCompat(color)
 }

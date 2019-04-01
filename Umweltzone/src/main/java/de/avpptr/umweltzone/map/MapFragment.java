@@ -21,7 +21,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -47,22 +46,18 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
 
-import java.util.List;
-
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
-import de.avpptr.umweltzone.extensions.ContextExtensions;
-import de.avpptr.umweltzone.models.Circuit;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.CameraUpdateHelper;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
-import de.avpptr.umweltzone.utils.MapDrawer;
 
 public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
@@ -121,7 +116,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                     Umweltzone.centerZoneRequested = centerZoneRequested;
                     return null;
                 },
-                () -> LowEmissionZone.getDefaultLowEmissionZone(getActivity()),
+                () -> AdministrativeZone.getDefaultAdministrativeZone(getActivity()),
                 new MapReadyDelegate.Listener() {
 
                     @Override
@@ -322,13 +317,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         if (cityName == null || cityName.length() < 1) {
             return;
         }
-        @SuppressWarnings("unchecked")
-        List<Circuit> circuits = ContentProvider.getCircuits(activity, cityName);
-        Resources resources = getResources();
-        int fillColor = ContextExtensions.getColorCompat(activity, R.color.shape_fill_color);
-        int strokeColor = ContextExtensions.getColorCompat(activity, R.color.shape_stroke_color);
-        int strokeWidth = resources.getInteger(R.integer.shape_stroke_width);
-        mMapDrawer.drawPolygons(circuits, fillColor, strokeColor, strokeWidth);
+        AdministrativeZone zone = ContentProvider.getAdministrativeZoneByName(activity, cityName);
+        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(zone.childZones, activity));
     }
 
     private void showZoneNotDrawableDialog() {
@@ -337,14 +327,12 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         Fragment fragment = fragmentManager
                 .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
         if (fragment == null) {
-            LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
-            if (lowEmissionZone != null) {
-                // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
-                if (!lowEmissionZone.containsGeometryInformation()) {
-                    ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
-                            .newInstance(lowEmissionZone);
-                    dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
-                }
+            AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
+            // TODO Future refactoring: drawPolygonOverlay() should already check if zone is drawable.
+            if (!administrativeZone.containsGeometryInformation()) {
+                ZoneNotDrawableDialog dialog = ZoneNotDrawableDialog
+                        .newInstance(administrativeZone);
+                dialog.show(fragmentManager, ZoneNotDrawableDialog.FRAGMENT_TAG);
             }
         }
     }
@@ -357,13 +345,11 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void updateSubTitle() {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
-        final LowEmissionZone lowEmissionZone = LowEmissionZone.getRecentLowEmissionZone(activity);
-        if (lowEmissionZone != null) {
-            String title = lowEmissionZone.displayName;
-            ActionBar actionBar = activity.getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setSubtitle(title);
-            }
+        AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
+        String title = administrativeZone.displayName;
+        ActionBar actionBar = activity.getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setSubtitle(title);
         }
     }
 

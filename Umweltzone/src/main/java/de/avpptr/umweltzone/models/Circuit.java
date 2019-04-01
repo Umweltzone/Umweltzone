@@ -17,8 +17,6 @@
 
 package de.avpptr.umweltzone.models;
 
-import com.google.android.gms.maps.model.LatLng;
-
 import java.util.List;
 
 import de.avpptr.umweltzone.utils.GeoPoint;
@@ -31,10 +29,10 @@ import de.avpptr.umweltzone.utils.GeoPoint;
  */
 public class Circuit {
 
-    private List<LatLng> mLatLngCoordinates;
+    private List<GeoPoint> geoPointCoordinates;
 
-    public List<LatLng> getCoordinates() {
-        return mLatLngCoordinates;
+    public List<GeoPoint> getCoordinates() {
+        return geoPointCoordinates;
     }
 
     // Required by Jackson to de-serialize JSON content
@@ -42,12 +40,12 @@ public class Circuit {
         // Store drawable data type.
         // Avoid multiple conversion at each redraw step.
         // This object might be retrieved from cache.
-        mLatLngCoordinates = GeoPoint.getLatLngPoints(coordinates);
+        geoPointCoordinates = coordinates;
     }
 
     @Override
     public String toString() {
-        return "number of coordinates = " + mLatLngCoordinates.size();
+        return "number of coordinates = " + geoPointCoordinates.size();
     }
 
 }

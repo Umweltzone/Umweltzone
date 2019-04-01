@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -27,8 +27,8 @@ import java.util.Date;
 import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
 import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.ChildZoneBuilder;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
 import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
@@ -37,25 +37,20 @@ import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JUnit4.class)
-public class LowEmissionZoneTests {
+public class AdministrativeZoneTests {
 
     @Test
     public void wrapUnwrapParcelable() {
-        LowEmissionZone lowEmissionZone = Parcels.unwrap(Parcels.wrap(getLowEmissionZone()));
-        assertThat(lowEmissionZone).isEqualTo(getLowEmissionZone());
+        AdministrativeZone administrativeZone = Parcels.unwrap(Parcels.wrap(getAdministrativeZone()));
+        assertThat(administrativeZone).isEqualTo(getAdministrativeZone());
     }
 
-    private LowEmissionZone getLowEmissionZone() {
+    private AdministrativeZone getAdministrativeZone() {
         GeoPoint southWest = new GeoPoint(52.464504, 13.282079);
         GeoPoint northEast = new GeoPoint(52.549808, 13.475550);
-        return new LowEmissionZoneBuilder()
+        return new AdministrativeZoneBuilder()
                 .setName("berlin")
                 .setDisplayName("Berlin")
-                .setListOfCities(new ArrayList<String>(3) {{
-                    add("Bochum");
-                    add("Bottrop");
-                    add("Castrop-Rauxel");
-                }})
                 .setBoundingBox(new BoundingBox(southWest, northEast))
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
@@ -71,14 +66,19 @@ public class LowEmissionZoneTests {
     private List<ChildZone> getChildZones() {
         Date date = DateHelper.getDate(2016, 4, 1);
         return singletonList(
-                new ChildZoneBuilder()
-                        .setName("berlin1")
+                new LowEmissionZoneBuilder()
+                        .setFileName("lez_berlin")
                         .setDisplayName("Berlin 1")
                         .setZoneNumber(LowEmissionZoneNumbers.GREEN)
                         .setZoneNumberSince(date)
                         .setNextZoneNumberAsOf(null)
                         .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
                         .setAbroadLicensedVehicleZoneNumberUntil(date)
+                        .setListOfCities(new ArrayList<String>(3) {{
+                            add("Bochum");
+                            add("Bottrop");
+                            add("Castrop-Rauxel");
+                        }})
                         .setGeometrySource("Geoportal Berlin / Umweltzone Berlin")
                         .setGeometryUpdatedAt(date)
                         .build());

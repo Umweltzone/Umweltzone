@@ -15,24 +15,16 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.map.viewmodels
 
-import android.support.annotation.NonNull;
+import android.support.annotation.ColorInt
+import com.google.android.gms.maps.model.LatLng
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+data class CircuitViewModel(
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
+        val coordinates: List<LatLng>,
+        @ColorInt val fillColor: Int,
+        @ColorInt val strokeColor: Int,
+        val strokeWidth: Int
 
-    @NonNull
-    String getFileName();
-
-    int getZoneNumber();
-
-    boolean containsGeometryInformation();
-
-}
+)

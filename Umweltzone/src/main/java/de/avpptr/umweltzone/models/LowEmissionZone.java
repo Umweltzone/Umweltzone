@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,85 +17,57 @@
 
 package de.avpptr.umweltzone.models;
 
-import android.content.Context;
-import android.support.annotation.Nullable;
+import android.support.annotation.NonNull;
 
 import org.parceler.Parcel;
 
+import java.util.Date;
 import java.util.List;
 
-import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.prefs.PreferencesHelper;
-import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.ContentProvider;
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 
 @Parcel
-public class LowEmissionZone {
+public class LowEmissionZone implements ChildZone {
 
-    public String name;
+    public String fileName;
 
     public String displayName;
 
+    @LowEmissionZoneNumbers.Color
+    public int zoneNumber;
+
+    public Date zoneNumberSince;
+
+    public Date nextZoneNumberAsOf;
+
+    @LowEmissionZoneNumbers.Color
+    public int abroadLicensedVehicleZoneNumber;
+
+    public Date abroadLicensedVehicleZoneNumberUntil;
+
     public List<String> listOfCities;
 
-    public BoundingBox boundingBox;
+    public String geometrySource;
 
-    public String urlUmweltPlaketteDe;
+    public Date geometryUpdatedAt;
 
-    public String urlBadgeOnline;
-
-    public List<String> contactEmails;
-
-    public List<ChildZone> childZones;
-
-    // Used for caching
-    private static List<LowEmissionZone> mLowEmissionZones;
-
-    @Nullable
-    public static LowEmissionZone getRecentLowEmissionZone(Context context) {
-        Umweltzone application = (Umweltzone) context.getApplicationContext();
-        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
-        String zoneName = preferencesHelper.restoreLastKnownLocationAsString();
-        return getLowEmissionZone(context, zoneName);
-    }
-
-    @Nullable
-    public static LowEmissionZone getDefaultLowEmissionZone(Context context) {
-        String defaultZone = context.getString(R.string.config_default_zone_name);
-        return getLowEmissionZone(context, defaultZone);
-    }
-
-    // TODO Parser should not be called more often then needed
-    @Nullable
-    private static LowEmissionZone getLowEmissionZone(Context context, String zoneName) {
-        if (mLowEmissionZones == null) {
-            mLowEmissionZones = ContentProvider.getLowEmissionZones(context);
-        }
-        if (mLowEmissionZones.isEmpty()) {
-            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
-            throw new IllegalStateException("Parsing zones from JSON failed.");
-        }
-        for (int i = 0, size = mLowEmissionZones.size(); i < size; i++) {
-            LowEmissionZone lowEmissionZone = mLowEmissionZones.get(i);
-            if (lowEmissionZone.name.equalsIgnoreCase(zoneName)) {
-                return lowEmissionZone;
-            }
-        }
-        return null;
-    }
-
+    @Override
     public boolean containsGeometryInformation() {
-        for (ChildZone childZone : childZones) {
-            if (childZone.containsGeometryInformation()) {
-                return true;
-            }
-        }
-        return false;
+        return geometrySource != null && geometryUpdatedAt != null;
     }
 
-    @SuppressWarnings("SimplifiableIfStatement")
+    @NonNull
+    @Override
+    public String getFileName() {
+        return fileName;
+    }
+
+    @Override
+    public int getZoneNumber() {
+        return zoneNumber;
+    }
+
+    @SuppressWarnings("EqualsReplaceableByObjectsCall")
     @Override
     public boolean equals(Object other) {
         if (this == other) {
@@ -104,62 +76,65 @@ public class LowEmissionZone {
         if (other == null || getClass() != other.getClass()) {
             return false;
         }
-        LowEmissionZone lez = (LowEmissionZone) other;
-        if (name != null ? !name.equals(lez.name) : lez.name != null) {
+        LowEmissionZone zone = (LowEmissionZone) other;
+        if (zoneNumber != zone.zoneNumber) {
             return false;
         }
-        if (displayName != null ? !displayName.equals(lez.displayName)
-                : lez.displayName != null) {
+        if (abroadLicensedVehicleZoneNumber != zone.abroadLicensedVehicleZoneNumber) {
             return false;
         }
-        if (listOfCities != null ? !listOfCities.equals(lez.listOfCities)
-                : lez.listOfCities != null) {
+        if (fileName != null ? !fileName.equals(zone.fileName) : zone.fileName != null) {
             return false;
         }
-        if (boundingBox != null ? !boundingBox.equals(lez.boundingBox)
-                : lez.boundingBox != null) {
+        if (displayName != null ? !displayName.equals(zone.displayName) : zone.displayName != null) {
             return false;
         }
-        if (urlUmweltPlaketteDe != null ? !urlUmweltPlaketteDe.equals(lez.urlUmweltPlaketteDe)
-                : lez.urlUmweltPlaketteDe != null) {
+        if (zoneNumberSince != null ? !zoneNumberSince.equals(zone.zoneNumberSince) : zone.zoneNumberSince != null) {
             return false;
         }
-        if (urlBadgeOnline != null ? !urlBadgeOnline.equals(lez.urlBadgeOnline)
-                : lez.urlBadgeOnline != null) {
+        if (nextZoneNumberAsOf != null ? !nextZoneNumberAsOf.equals(zone.nextZoneNumberAsOf) : zone.nextZoneNumberAsOf != null) {
             return false;
         }
-        if (contactEmails != null ? !contactEmails.equals(lez.contactEmails)
-                : lez.contactEmails != null) {
+        if (abroadLicensedVehicleZoneNumberUntil != null ? !abroadLicensedVehicleZoneNumberUntil.equals(zone.abroadLicensedVehicleZoneNumberUntil) : zone.abroadLicensedVehicleZoneNumberUntil != null) {
             return false;
         }
-        return childZones != null ? childZones.equals(lez.childZones)
-                : lez.childZones == null;
+        if (listOfCities != null ? !listOfCities.equals(zone.listOfCities) : zone.listOfCities != null) {
+            return false;
+        }
+        if (geometrySource != null ? !geometrySource.equals(zone.geometrySource) : zone.geometrySource != null) {
+            return false;
+        }
+        return geometryUpdatedAt != null ? geometryUpdatedAt.equals(zone.geometryUpdatedAt) : zone.geometryUpdatedAt == null;
     }
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = fileName != null ? fileName.hashCode() : 0;
         result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
+        result = 31 * result + zoneNumber;
+        result = 31 * result + (zoneNumberSince != null ? zoneNumberSince.hashCode() : 0);
+        result = 31 * result + (nextZoneNumberAsOf != null ? nextZoneNumberAsOf.hashCode() : 0);
+        result = 31 * result + abroadLicensedVehicleZoneNumber;
+        result = 31 * result + (abroadLicensedVehicleZoneNumberUntil != null ? abroadLicensedVehicleZoneNumberUntil.hashCode() : 0);
         result = 31 * result + (listOfCities != null ? listOfCities.hashCode() : 0);
-        result = 31 * result + (boundingBox != null ? boundingBox.hashCode() : 0);
-        result = 31 * result + (urlUmweltPlaketteDe != null ? urlUmweltPlaketteDe.hashCode() : 0);
-        result = 31 * result + (urlBadgeOnline != null ? urlBadgeOnline.hashCode() : 0);
-        result = 31 * result + (contactEmails != null ? contactEmails.hashCode() : 0);
-        result = 31 * result + (childZones != null ? childZones.hashCode() : 0);
+        result = 31 * result + (geometrySource != null ? geometrySource.hashCode() : 0);
+        result = 31 * result + (geometryUpdatedAt != null ? geometryUpdatedAt.hashCode() : 0);
         return result;
     }
 
     @Override
     public String toString() {
         return "LowEmissionZone{" +
-                "name='" + name + '\'' +
+                "fileName='" + fileName + '\'' +
                 ", displayName='" + displayName + '\'' +
+                ", zoneNumber=" + zoneNumber +
+                ", zoneNumberSince=" + zoneNumberSince +
+                ", nextZoneNumberAsOf=" + nextZoneNumberAsOf +
+                ", abroadLicensedVehicleZoneNumber=" + abroadLicensedVehicleZoneNumber +
+                ", abroadLicensedVehicleZoneNumberUntil=" + abroadLicensedVehicleZoneNumberUntil +
                 ", listOfCities=" + listOfCities +
-                ", boundingBox=" + boundingBox +
-                ", urlUmweltPlaketteDe='" + urlUmweltPlaketteDe + '\'' +
-                ", urlBadgeOnline='" + urlBadgeOnline + '\'' +
-                ", contactEmails=" + contactEmails +
-                ", childZones=" + childZones +
+                ", geometrySource='" + geometrySource + '\'' +
+                ", geometryUpdatedAt=" + geometryUpdatedAt +
                 '}';
     }
 

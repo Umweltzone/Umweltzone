@@ -26,6 +26,7 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.contract.Resources;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.fail;
 
 @RunWith(JUnit4.class)
 public class LowEmissionZoneNumberConverterTests {
@@ -68,6 +69,22 @@ public class LowEmissionZoneNumberConverterTests {
                 .isEqualTo(R.string.city_info_zone_number_since_text_fragment_yellow);
         assertThat(LowEmissionZoneNumberConverter.getColorString(LowEmissionZoneNumbers.GREEN))
                 .isEqualTo(R.string.city_info_zone_number_since_text_fragment_green);
+    }
+
+    @Test
+    public void testGetShapeFillColor() {
+        try {
+            LowEmissionZoneNumberConverter.getShapeFillColor(INVALID_COLOR);
+            fail();
+        } catch (IllegalStateException e) {
+            assertThat(e.getMessage()).isEqualTo("Unknown zone number: " + INVALID_COLOR + ".");
+        }
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.RED))
+                .isEqualTo(R.color.shape_fill_color_zone_2);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.YELLOW))
+                .isEqualTo(R.color.shape_fill_color_zone_3);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.GREEN))
+                .isEqualTo(R.color.shape_fill_color_zone_4);
     }
 
 }

@@ -15,24 +15,10 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.zones.dataconverters
 
-import android.support.annotation.NonNull;
+import android.content.Context
+import de.avpptr.umweltzone.models.AdministrativeZone
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
-
-    @NonNull
-    String getFileName();
-
-    int getZoneNumber();
-
-    boolean containsGeometryInformation();
-
-}
+fun List<AdministrativeZone>.toZoneViewModels(context: Context) =
+        map { it.toZoneViewModel(context) }

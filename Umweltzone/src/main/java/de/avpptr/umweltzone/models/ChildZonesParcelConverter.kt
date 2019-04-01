@@ -15,24 +15,25 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.models
 
-import android.support.annotation.NonNull;
+import android.os.Parcel
+import android.os.Parcelable
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import org.parceler.Parcels
+import org.parceler.converter.ArrayListParcelConverter
 
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
+class ChildZonesParcelConverter : ArrayListParcelConverter<ChildZone>() {
 
-    @NonNull
-    String getFileName();
+    override fun itemToParcel(input: ChildZone, parcel: Parcel) {
+        parcel.writeParcelable(Parcels.wrap(input), NO_FLAGS)
+    }
 
-    int getZoneNumber();
+    override fun itemFromParcel(parcel: Parcel): ChildZone = Parcels.unwrap<ChildZone>(
+            parcel.readParcelable<Parcelable>(ChildZone::class.java.classLoader))
 
-    boolean containsGeometryInformation();
+    companion object {
+        private const val NO_FLAGS = 0
+    }
 
 }

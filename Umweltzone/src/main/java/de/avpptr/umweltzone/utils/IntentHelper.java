@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -34,7 +34,7 @@ import de.avpptr.umweltzone.contract.BundleKeys;
 import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.settings.SettingsActivity;
 import de.avpptr.umweltzone.zones.ZonesActivity;
 
@@ -78,10 +78,10 @@ public class IntentHelper {
     }
 
     public static Intent getCityInfoIntent(@NonNull Context context,
-                                           @Nullable LowEmissionZone lowEmissionZone) {
+                                           @NonNull AdministrativeZone administrativeZone) {
         Intent intent = getIntent(context, CityInfoActivity.class);
-        intent.putExtra(CityInfoFragment.BUNDLE_KEY_LOW_EMISSION_ZONE,
-                Parcels.wrap(lowEmissionZone));
+        intent.putExtra(CityInfoFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE,
+                Parcels.wrap(administrativeZone));
         return intent;
     }
 

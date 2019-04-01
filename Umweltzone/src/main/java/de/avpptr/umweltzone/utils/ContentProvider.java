@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.util.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -39,10 +40,11 @@ import java.util.Locale;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.CircuitDeserializer;
 import de.avpptr.umweltzone.models.Faq;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import kotlin.collections.CollectionsKt;
 
 public abstract class ContentProvider {
 
@@ -69,25 +71,30 @@ public abstract class ContentProvider {
     }
 
     @NonNull
-    public static List<LowEmissionZone> getLowEmissionZones(@NonNull final Context context) {
-        return getContent(context, "zones_de", LowEmissionZone.class);
+    public static AdministrativeZone getAdministrativeZoneByName(@NonNull final Context context, @NonNull final String name) {
+        return CollectionsKt.single(getAdministrativeZones(context), zone -> name.equalsIgnoreCase(zone.name));
     }
 
     @NonNull
-    public static List<Circuit> getCircuits(final Context context, final String zoneName) {
-        String keyForZone = generateKeyForZoneWith(zoneName);
-        List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
+    public static List<AdministrativeZone> getAdministrativeZones(@NonNull final Context context) {
+        List<AdministrativeZone> zones = getContent(context, "zones_de", AdministrativeZone.class);
+        if (zones.isEmpty()) {
+            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
+            throw new IllegalStateException("Parsing zones from JSON failed.");
+        }
+        return zones;
+    }
+
+    @NonNull
+    public static List<Circuit> getCircuits(@NonNull final Context context, @NonNull final String zoneFileName) {
+        List<Circuit> circuits = CIRCUITS_CACHE.get(zoneFileName);
         if (circuits == null) {
-            circuits = getContent(context, keyForZone, Circuit.class);
+            circuits = getContent(context, zoneFileName, Circuit.class);
             if (!circuits.isEmpty()) {
-                CIRCUITS_CACHE.put(keyForZone, circuits);
+                CIRCUITS_CACHE.put(zoneFileName, circuits);
             }
         }
         return circuits;
-    }
-
-    private static String generateKeyForZoneWith(String zoneName) {
-        return "zone_" + zoneName;
     }
 
     @NonNull
@@ -129,6 +136,7 @@ public abstract class ContentProvider {
         return Collections.EMPTY_LIST;
     }
 
+    @VisibleForTesting
     @RawRes
     static Integer getResourceId(Context context, String fileName, String folderName) {
         String resourceKey = getFilePath(folderName, fileName);

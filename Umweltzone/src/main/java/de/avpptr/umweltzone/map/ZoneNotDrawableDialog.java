@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
-import de.avpptr.umweltzone.models.LowEmissionZone;
+import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
 
@@ -53,13 +53,13 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();
 
-    private static final String BUNDLE_KEY_LOW_EMISSION_ZONE =
-            BuildConfig.APPLICATION_ID + ".LOW_EMISSION_ZONE";
+    private static final String BUNDLE_KEY_ADMINISTRATIVE_ZONE =
+            BuildConfig.APPLICATION_ID + ".ADMINISTRATIVE_ZONE";
 
-    public static ZoneNotDrawableDialog newInstance(@NonNull LowEmissionZone lowEmissionZone) {
+    public static ZoneNotDrawableDialog newInstance(@NonNull AdministrativeZone administrativeZone) {
         ZoneNotDrawableDialog dialog = new ZoneNotDrawableDialog();
         Bundle extras = new Bundle();
-        extras.putParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE, Parcels.wrap(lowEmissionZone));
+        extras.putParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE, Parcels.wrap(administrativeZone));
         dialog.setArguments(extras);
         return dialog;
     }
@@ -73,12 +73,12 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final FragmentActivity activity = getActivity();
         Bundle extras = getArguments();
-        Parcelable lowEmissionZoneParcelable = extras.getParcelable(BUNDLE_KEY_LOW_EMISSION_ZONE);
-        final LowEmissionZone lowEmissionZone = Parcels.unwrap(lowEmissionZoneParcelable);
-        if (lowEmissionZone == null) {
+        Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE);
+        final AdministrativeZone administrativeZone = Parcels.unwrap(parcelable);
+        if (administrativeZone == null) {
             throw new NullPointerException("Recent low emission zone is null.");
         }
-        final String zoneDisplayName = lowEmissionZone.displayName;
+        final String zoneDisplayName = administrativeZone.displayName;
 
         // Prepare layout
         LayoutInflater inflater = activity.getLayoutInflater();
@@ -91,7 +91,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                 zoneDisplayName));
         noticeTextView.setText(noticeSpanned, TextView.BufferType.SPANNABLE);
 
-        final String[] toRecipients = getToRecipients(lowEmissionZone.contactEmails);
+        final String[] toRecipients = getToRecipients(administrativeZone.contactEmails);
 
         // Launch dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
@@ -106,7 +106,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             getEmailMessage(zoneDisplayName)
                     );
                     mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
-                            lowEmissionZone.name);
+                            administrativeZone.name);
                     if (intent.resolveActivity(activity.getPackageManager()) != null) {
                         startActivity(Intent.createChooser(intent, getString(
                                 R.string.zone_not_drawable_app_chooser_title)));
@@ -118,7 +118,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                 .setNegativeButton(R.string.zone_not_drawable_later, (dialog, whichButton) -> {
                     // Nothing to do here
                     mTracking.track(TrackingPoint.ZoneNotDrawableLaterClick,
-                            lowEmissionZone.name);
+                            administrativeZone.name);
                 });
         return builder.create();
     }

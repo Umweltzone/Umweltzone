@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,31 +17,38 @@
 
 package de.avpptr.umweltzone.utils;
 
+import java.util.Date;
 import java.util.List;
 
-import de.avpptr.umweltzone.models.ChildZone;
+import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class LowEmissionZoneBuilder {
 
-    private String mName;
+    public String mFileName;
 
     private String mDisplayName;
 
+    @LowEmissionZoneNumbers.Color
+    private int mZoneNumber;
+
+    private Date mZoneNumberSince;
+
+    private Date mNextZoneNumberAsOf;
+
+    @LowEmissionZoneNumbers.Color
+    private int mAbroadLicensedVehicleZoneNumber;
+
+    private Date mAbroadLicensedVehicleZoneNumberUntil;
+
     private List<String> mListOfCities;
 
-    private BoundingBox mBoundingBox;
+    private String mGeometrySource;
 
-    private String mUrlUmweltPlaketteDe;
+    private Date mGeometryUpdatedAt;
 
-    private String mUrlBadgeOnline;
-
-    private List<String> mContactEmails;
-
-    public List<ChildZone> mChildZones;
-
-    public LowEmissionZoneBuilder setName(String name) {
-        mName = name;
+    public LowEmissionZoneBuilder setFileName(String fileName) {
+        mFileName = fileName;
         return this;
     }
 
@@ -50,47 +57,61 @@ public class LowEmissionZoneBuilder {
         return this;
     }
 
+    public LowEmissionZoneBuilder setZoneNumber(@LowEmissionZoneNumbers.Color int zoneNumber) {
+        mZoneNumber = zoneNumber;
+        return this;
+    }
+
+    public LowEmissionZoneBuilder setZoneNumberSince(Date zoneNumberSince) {
+        mZoneNumberSince = zoneNumberSince;
+        return this;
+    }
+
+    public LowEmissionZoneBuilder setNextZoneNumberAsOf(Date nextZoneNumberAsOf) {
+        mNextZoneNumberAsOf = nextZoneNumberAsOf;
+        return this;
+    }
+
+    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumber(
+            @LowEmissionZoneNumbers.Color int abroadLicensedVehicleZoneNumber) {
+        mAbroadLicensedVehicleZoneNumber = abroadLicensedVehicleZoneNumber;
+        return this;
+    }
+
+    public LowEmissionZoneBuilder setAbroadLicensedVehicleZoneNumberUntil(
+            Date abroadLicensedVehicleZoneNumberUntil) {
+        mAbroadLicensedVehicleZoneNumberUntil = abroadLicensedVehicleZoneNumberUntil;
+        return this;
+    }
+
     public LowEmissionZoneBuilder setListOfCities(List<String> listOfCities) {
         mListOfCities = listOfCities;
         return this;
     }
 
-    public LowEmissionZoneBuilder setBoundingBox(BoundingBox boundingBox) {
-        mBoundingBox = boundingBox;
+    public LowEmissionZoneBuilder setGeometrySource(String geometrySource) {
+        mGeometrySource = geometrySource;
         return this;
     }
 
-    public LowEmissionZoneBuilder setUrlUmweltPlaketteDe(String urlUmweltPlaketteDe) {
-        mUrlUmweltPlaketteDe = urlUmweltPlaketteDe;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setUrlBadgeOnline(String urlBadgeOnline) {
-        mUrlBadgeOnline = urlBadgeOnline;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setContactEmails(List<String> contactEmails) {
-        mContactEmails = contactEmails;
-        return this;
-    }
-
-    public LowEmissionZoneBuilder setChildZones(List<ChildZone> childZones) {
-        mChildZones = childZones;
+    public LowEmissionZoneBuilder setGeometryUpdatedAt(Date geometryUpdatedAt) {
+        mGeometryUpdatedAt = geometryUpdatedAt;
         return this;
     }
 
     public LowEmissionZone build() {
-        LowEmissionZone lowEmissionZone = new LowEmissionZone();
-        lowEmissionZone.name = mName;
-        lowEmissionZone.displayName = mDisplayName;
-        lowEmissionZone.listOfCities = mListOfCities;
-        lowEmissionZone.boundingBox = mBoundingBox;
-        lowEmissionZone.urlUmweltPlaketteDe = mUrlUmweltPlaketteDe;
-        lowEmissionZone.urlBadgeOnline = mUrlBadgeOnline;
-        lowEmissionZone.contactEmails = mContactEmails;
-        lowEmissionZone.childZones = mChildZones;
-        return lowEmissionZone;
+        LowEmissionZone zone = new LowEmissionZone();
+        zone.fileName = mFileName;
+        zone.displayName = mDisplayName;
+        zone.zoneNumber = mZoneNumber;
+        zone.zoneNumberSince = mZoneNumberSince;
+        zone.nextZoneNumberAsOf = mNextZoneNumberAsOf;
+        zone.abroadLicensedVehicleZoneNumber = mAbroadLicensedVehicleZoneNumber;
+        zone.abroadLicensedVehicleZoneNumberUntil = mAbroadLicensedVehicleZoneNumberUntil;
+        zone.listOfCities = mListOfCities;
+        zone.geometrySource = mGeometrySource;
+        zone.geometryUpdatedAt = mGeometryUpdatedAt;
+        return zone;
     }
 
 }
