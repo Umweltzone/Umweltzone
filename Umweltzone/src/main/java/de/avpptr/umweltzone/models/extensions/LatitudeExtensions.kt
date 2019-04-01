@@ -20,7 +20,7 @@
 package de.avpptr.umweltzone.models.extensions
 
 const val MIN_LATITUDE = -90.0
-const val MAX_LATITUDE = 90.0
+private const val MAX_LATITUDE = 90.0
 
 /**
  * Latitude, in degrees. This value is in the range [-90, 90].

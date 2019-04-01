@@ -20,7 +20,7 @@
 package de.avpptr.umweltzone.models.extensions
 
 const val MIN_LONGITUDE = -180.0
-const val MAX_LONGITUDE = 180.0
+private const val MAX_LONGITUDE = 180.0
 
 /**
  * Longitude, in degrees. This value is in the range [-180, 180).

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,6 +23,12 @@ import java.util.List;
 
 import de.avpptr.umweltzone.utils.GeoPoint;
 
+/**
+ * A single polygon which either represents one zone or one part of a multi-polygon zone.
+ * A typical use-case for a multi-polygon is when a low emission zone is divided into
+ * two parts by a highway. While such a zone is considered one logical unit its parts
+ * are rendered separately.
+ */
 public class Circuit {
 
     private List<LatLng> mLatLngCoordinates;

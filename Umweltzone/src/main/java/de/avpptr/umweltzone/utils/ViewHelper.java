@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,8 +21,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.text.Spanned;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -33,9 +33,9 @@ import de.avpptr.umweltzone.analytics.TrackingPoint;
 public abstract class ViewHelper {
 
     public static void setTextOrHideView(
-            final TextView textView,
-            final String text) {
-        if (TextUtils.isEmpty(text)) {
+            @NonNull final TextView textView,
+            @NonNull final String text) {
+        if (text.isEmpty()) {
             textView.setVisibility(View.GONE);
         } else {
             textView.setVisibility(View.VISIBLE);

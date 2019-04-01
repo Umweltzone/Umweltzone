@@ -39,13 +39,13 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class StringHelper {
 
-    @Nullable
+    @NonNull
     public static String getListOfCitiesText(
             Context context,
             LowEmissionZone lowEmissionZone) {
         List<String> listOfCities = lowEmissionZone.listOfCities;
         if (listOfCities == null || listOfCities.isEmpty()) {
-            return null;
+            return "";
         }
         int lastCityIndex = listOfCities.size() - 1;
         String citiesString = TextUtils.join(", ", listOfCities.subList(0, lastCityIndex));
@@ -71,12 +71,12 @@ public class StringHelper {
                 colorStringResourceId);
     }
 
-    @Nullable
+    @NonNull
     public static String getNextZoneNumberAsOfText(
             Context context,
             @NonNull ChildZone zone) {
         if (zone.nextZoneNumberAsOf == null) {
-            return null;
+            return "";
         }
         int nextZoneNumber = LowEmissionZoneNumbers.getNext(zone.zoneNumber);
         int colorStringResourceId = LowEmissionZoneNumberConverter
@@ -92,12 +92,12 @@ public class StringHelper {
                 colorStringResourceId);
     }
 
-    @Nullable
+    @NonNull
     public static String getAbroadLicensedVehicleZoneNumberText(
             Context context,
             @NonNull ChildZone zone) {
         if (zone.abroadLicensedVehicleZoneNumberUntil == null) {
-            return null;
+            return "";
         }
         int colorStringResourceId = LowEmissionZoneNumberConverter
                 .getColorString(zone.abroadLicensedVehicleZoneNumber);
