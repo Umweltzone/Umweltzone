@@ -21,6 +21,7 @@ package de.avpptr.umweltzone.map.dataconverters
 
 import android.content.Context
 import android.support.annotation.ColorInt
+import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.extensions.getColorCompat
 import de.avpptr.umweltzone.map.viewmodels.CircuitViewModel
 import de.avpptr.umweltzone.models.ChildZone
@@ -29,15 +30,15 @@ import de.avpptr.umweltzone.utils.ContentProvider
 import de.avpptr.umweltzone.utils.GeoPoint
 import de.avpptr.umweltzone.utils.shapeFillColor
 
-
-fun List<ChildZone>.toCircuitViewModels(context: Context, circuits: List<Circuit>): List<CircuitViewModel> {
-    val strokeColor = context.getColorCompat(de.avpptr.umweltzone.R.color.shape_stroke_color)
-    val strokeWidth = context.resources.getInteger(de.avpptr.umweltzone.R.integer.shape_stroke_width)
-    return flatMap { it.toCircuitViewModels(context, circuits, strokeColor, strokeWidth) }
+fun List<ChildZone>.toCircuitViewModels(context: Context): List<CircuitViewModel> {
+    val strokeColor = context.getColorCompat(R.color.shape_stroke_color)
+    val strokeWidth = context.resources.getInteger(R.integer.shape_stroke_width)
+    return flatMap { it.toCircuitViewModels(context, strokeColor, strokeWidth) }
 }
 
-private fun ChildZone.toCircuitViewModels(context: Context, circuits: List<Circuit>, @ColorInt strokeColor: Int, strokeWith: Int): List<CircuitViewModel> {
+private fun ChildZone.toCircuitViewModels(context: Context, @ColorInt strokeColor: Int, strokeWith: Int): List<CircuitViewModel> {
     val fillColor = context.getColorCompat(zoneNumber.shapeFillColor)
+    val circuits = ContentProvider.getCircuits(context, fileName)
     return circuits.toCircuitViewModels(fillColor, strokeColor, strokeWith)
 }
 

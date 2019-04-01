@@ -35,7 +35,9 @@ public class ChildZonesParcelConverterTest {
 
     @Test
     public void testChildZonesParcelConverter() {
-        LowEmissionZone lowEmissionZone = new LowEmissionZoneBuilder().setName("LowEmissionZone1").build();
+        LowEmissionZone lowEmissionZone = new LowEmissionZoneBuilder()
+                .setDisplayName("LowEmissionZone1")
+                .build();
         ParentZone parentZone = new ParentZone("ParentZone1", singletonList(lowEmissionZone));
         Parcelable parcelable = Parcels.wrap(parentZone);
         assertThat((ParentZone) Parcels.unwrap(parcelable)).isEqualTo(parentZone);

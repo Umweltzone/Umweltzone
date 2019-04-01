@@ -4,7 +4,7 @@
         "displayName" : "Aachen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_aachen",
             "displayName" : "Aachen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2016-02-01",
@@ -34,7 +34,7 @@
         "displayName" : "Augsburg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_augsburg",
             "displayName" : "Augsburg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2016-06-01",
@@ -64,7 +64,7 @@
         "displayName" : "Balingen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_balingen",
             "displayName" : "Balingen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2017-04-01",
@@ -94,7 +94,7 @@
         "displayName" : "Berlin",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_berlin",
             "displayName" : "Berlin",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2010-01-01",
@@ -124,7 +124,7 @@
         "displayName" : "Bonn",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_bonn",
             "displayName" : "Bonn",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -154,7 +154,7 @@
         "displayName" : "Bremen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_bremen",
             "displayName" : "Bremen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2011-07-01",
@@ -184,7 +184,7 @@
         "displayName" : "Darmstadt",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_darmstadt",
             "displayName" : "Darmstadt",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-11-01",
@@ -214,7 +214,7 @@
         "displayName" : "Dinslaken",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_dinslaken",
             "displayName" : "Dinslaken",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-10-01",
@@ -244,7 +244,7 @@
         "displayName" : "Düsseldorf",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_duesseldorf",
             "displayName" : "Düsseldorf",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -274,7 +274,7 @@
         "displayName" : "Erfurt",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_erfurt",
             "displayName" : "Erfurt",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-10-01",
@@ -304,7 +304,7 @@
         "displayName" : "Eschweiler",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_eschweiler",
             "displayName" : "Eschweiler",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2016-06-01",
@@ -334,7 +334,7 @@
         "displayName" : "Frankfurt am Main",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_frankfurt_main",
             "displayName" : "Frankfurt am Main",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-01-01",
@@ -364,7 +364,7 @@
         "displayName" : "Freiburg im Breisgau",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_freiburg_breisgau",
             "displayName" : "Freiburg im Breisgau",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -394,7 +394,7 @@
         "displayName" : "Hagen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_hagen",
             "displayName" : "Hagen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -424,7 +424,7 @@
         "displayName" : "Halle (Saale)",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_halle",
             "displayName" : "Halle (Saale)",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -454,7 +454,7 @@
         "displayName" : "Hannover",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_hannover",
             "displayName" : "Hannover",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2010-01-01",
@@ -484,7 +484,7 @@
         "displayName" : "Heidelberg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_heidelberg",
             "displayName" : "Heidelberg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -514,7 +514,7 @@
         "displayName" : "Heidenheim an der Brenz",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_heidenheim",
             "displayName" : "Heidenheim an der Brenz",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -544,7 +544,7 @@
         "displayName" : "Heilbronn",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_heilbronn",
             "displayName" : "Heilbronn",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -578,7 +578,7 @@
         "displayName" : "Herrenberg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_herrenberg",
             "displayName" : "Herrenberg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -608,7 +608,7 @@
         "displayName" : "Ilsfeld",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_ilsfeld",
             "displayName" : "Ilsfeld",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -638,7 +638,7 @@
         "displayName" : "Karlsruhe",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_karlsruhe",
             "displayName" : "Karlsruhe",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -668,7 +668,7 @@
         "displayName" : "Köln",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_cologne",
             "displayName" : "Köln",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -698,7 +698,7 @@
         "displayName" : "Krefeld",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_krefeld",
             "displayName" : "Krefeld",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-07-01",
@@ -728,7 +728,7 @@
         "displayName" : "Langenfeld",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_langenfeld",
             "displayName" : "Langenfeld",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -758,7 +758,7 @@
         "displayName" : "Leipzig",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_leipzig",
             "displayName" : "Leipzig",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2011-03-01",
@@ -788,7 +788,7 @@
         "displayName" : "Leonberg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_leonberg",
             "displayName" : "Leonberg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-12-02",
@@ -818,7 +818,7 @@
         "displayName" : "Limburg an der Lahn",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_limburg",
             "displayName" : "Limburg an der Lahn",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2018-01-31",
@@ -848,7 +848,7 @@
         "displayName" : "Ludwigsburg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_ludwigsburg",
             "displayName" : "Ludwigsburg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -878,7 +878,7 @@
         "displayName" : "Magdeburg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_magdeburg",
             "displayName" : "Magdeburg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -908,7 +908,7 @@
         "displayName" : "Mainz",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_mainz",
             "displayName" : "Mainz",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-02-01",
@@ -938,7 +938,7 @@
         "displayName" : "Mannheim",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_mannheim",
             "displayName" : "Mannheim",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -968,7 +968,7 @@
         "displayName" : "Marburg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_marburg",
             "displayName" : "Marburg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2016-04-01",
@@ -998,7 +998,7 @@
         "displayName" : "Mönchengladbach",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_moenchengladbach",
             "displayName" : "Mönchengladbach",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -1028,7 +1028,7 @@
         "displayName" : "Mühlacker",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_muehlacker",
             "displayName" : "Mühlacker",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1058,7 +1058,7 @@
         "displayName" : "München",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_munich",
             "displayName" : "München",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-10-01",
@@ -1088,7 +1088,7 @@
         "displayName" : "Münster",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_muenster",
             "displayName" : "Münster",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-01-01",
@@ -1118,7 +1118,7 @@
         "displayName" : "Neuss",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_neuss",
             "displayName" : "Neuss",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -1148,7 +1148,7 @@
         "displayName" : "Neu-Ulm",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_neuulm",
             "displayName" : "Neu-Ulm",
             "zoneNumber" : 3,
             "zoneNumberSince" : "2012-11-05",
@@ -1178,7 +1178,7 @@
         "displayName" : "Offenbach",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_offenbach",
             "displayName" : "Offenbach",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-01-01",
@@ -1208,7 +1208,7 @@
         "displayName" : "Osnabrück",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_osnabrueck",
             "displayName" : "Osnabrück",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-01-03",
@@ -1238,7 +1238,7 @@
         "displayName" : "Overath",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_overath",
             "displayName" : "Overath",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2017-10-01",
@@ -1268,7 +1268,7 @@
         "displayName" : "Pfinztal",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_pfinztal",
             "displayName" : "Pfinztal",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1298,7 +1298,7 @@
         "displayName" : "Pforzheim",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_pforzheim",
             "displayName" : "Pforzheim",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1328,7 +1328,7 @@
         "displayName" : "Regensburg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_regensburg",
             "displayName" : "Regensburg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2018-01-15",
@@ -1365,7 +1365,7 @@
         "displayName" : "Remscheid",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_remscheid",
             "displayName" : "Remscheid",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -1395,7 +1395,7 @@
         "displayName" : "Reutlingen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_reutlingen",
             "displayName" : "Reutlingen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1425,7 +1425,7 @@
         "displayName" : "Ruhrgebiet",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_ruhrregion",
             "displayName" : "Ruhrgebiet",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",
@@ -1469,7 +1469,7 @@
         "displayName" : "Schramberg",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_schramberg",
             "displayName" : "Schramberg",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-01-01",
@@ -1499,7 +1499,7 @@
         "displayName" : "Schwäbisch Gmünd",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_schwaebisch_gmuend",
             "displayName" : "Schwäbisch Gmünd",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1529,7 +1529,7 @@
         "displayName" : "Siegen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_siegen",
             "displayName" : "Siegen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-01-01",
@@ -1559,7 +1559,7 @@
         "displayName" : "Stuttgart",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_stuttgart",
             "displayName" : "Stuttgart",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2012-01-01",
@@ -1589,7 +1589,7 @@
         "displayName" : "Tübingen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_tuebingen",
             "displayName" : "Tübingen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2015-01-01",
@@ -1619,7 +1619,7 @@
         "displayName" : "Ulm",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_ulm",
             "displayName" : "Ulm",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1649,7 +1649,7 @@
         "displayName" : "Urbach",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_urbach",
             "displayName" : "Urbach",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-01-01",
@@ -1679,7 +1679,7 @@
         "displayName" : "Wendlingen",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_wendlingen",
             "displayName" : "Wendlingen",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-04-02",
@@ -1709,7 +1709,7 @@
         "displayName" : "Wiesbaden",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_wiesbaden",
             "displayName" : "Wiesbaden",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2013-02-01",
@@ -1744,7 +1744,7 @@
         "displayName" : "Wuppertal",
         "childZones" : [{
             "type" : "low-emission-zone",
-            "name" : "",
+            "fileName" : "lez_wuppertal",
             "displayName" : "Wuppertal",
             "zoneNumber" : 4,
             "zoneNumberSince" : "2014-07-01",

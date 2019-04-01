@@ -17,6 +17,8 @@
 
 package de.avpptr.umweltzone.models;
 
+import android.support.annotation.NonNull;
+
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
@@ -25,6 +27,9 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
         @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
 })
 public interface ChildZone {
+
+    @NonNull
+    String getFileName();
 
     int getZoneNumber();
 

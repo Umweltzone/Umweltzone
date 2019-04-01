@@ -17,6 +17,8 @@
 
 package de.avpptr.umweltzone.models;
 
+import android.support.annotation.NonNull;
+
 import org.parceler.Parcel;
 
 import java.util.Date;
@@ -27,7 +29,7 @@ import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
 @Parcel
 public class LowEmissionZone implements ChildZone {
 
-    public String name;
+    public String fileName;
 
     public String displayName;
 
@@ -54,6 +56,12 @@ public class LowEmissionZone implements ChildZone {
         return geometrySource != null && geometryUpdatedAt != null;
     }
 
+    @NonNull
+    @Override
+    public String getFileName() {
+        return fileName;
+    }
+
     @Override
     public int getZoneNumber() {
         return zoneNumber;
@@ -75,7 +83,7 @@ public class LowEmissionZone implements ChildZone {
         if (abroadLicensedVehicleZoneNumber != zone.abroadLicensedVehicleZoneNumber) {
             return false;
         }
-        if (name != null ? !name.equals(zone.name) : zone.name != null) {
+        if (fileName != null ? !fileName.equals(zone.fileName) : zone.fileName != null) {
             return false;
         }
         if (displayName != null ? !displayName.equals(zone.displayName) : zone.displayName != null) {
@@ -101,7 +109,7 @@ public class LowEmissionZone implements ChildZone {
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = fileName != null ? fileName.hashCode() : 0;
         result = 31 * result + (displayName != null ? displayName.hashCode() : 0);
         result = 31 * result + zoneNumber;
         result = 31 * result + (zoneNumberSince != null ? zoneNumberSince.hashCode() : 0);
@@ -117,7 +125,7 @@ public class LowEmissionZone implements ChildZone {
     @Override
     public String toString() {
         return "LowEmissionZone{" +
-                "name='" + name + '\'' +
+                "fileName='" + fileName + '\'' +
                 ", displayName='" + displayName + '\'' +
                 ", zoneNumber=" + zoneNumber +
                 ", zoneNumberSince=" + zoneNumberSince +

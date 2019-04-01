@@ -25,7 +25,7 @@ import de.avpptr.umweltzone.models.LowEmissionZone;
 
 public class LowEmissionZoneBuilder {
 
-    private String mName;
+    public String mFileName;
 
     private String mDisplayName;
 
@@ -47,8 +47,8 @@ public class LowEmissionZoneBuilder {
 
     private Date mGeometryUpdatedAt;
 
-    public LowEmissionZoneBuilder setName(String name) {
-        mName = name;
+    public LowEmissionZoneBuilder setFileName(String fileName) {
+        mFileName = fileName;
         return this;
     }
 
@@ -101,7 +101,7 @@ public class LowEmissionZoneBuilder {
 
     public LowEmissionZone build() {
         LowEmissionZone zone = new LowEmissionZone();
-        zone.name = mName;
+        zone.fileName = mFileName;
         zone.displayName = mDisplayName;
         zone.zoneNumber = mZoneNumber;
         zone.zoneNumberSince = mZoneNumberSince;

@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.annotation.RawRes;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.util.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -85,20 +86,15 @@ public abstract class ContentProvider {
     }
 
     @NonNull
-    public static List<Circuit> getCircuits(final Context context, final String zoneName) {
-        String keyForZone = generateKeyForZoneWith(zoneName);
-        List<Circuit> circuits = CIRCUITS_CACHE.get(keyForZone);
+    public static List<Circuit> getCircuits(@NonNull final Context context, @NonNull final String zoneFileName) {
+        List<Circuit> circuits = CIRCUITS_CACHE.get(zoneFileName);
         if (circuits == null) {
-            circuits = getContent(context, keyForZone, Circuit.class);
+            circuits = getContent(context, zoneFileName, Circuit.class);
             if (!circuits.isEmpty()) {
-                CIRCUITS_CACHE.put(keyForZone, circuits);
+                CIRCUITS_CACHE.put(zoneFileName, circuits);
             }
         }
         return circuits;
-    }
-
-    private static String generateKeyForZoneWith(String zoneName) {
-        return "lez_" + zoneName;
     }
 
     @NonNull
@@ -140,6 +136,7 @@ public abstract class ContentProvider {
         return Collections.EMPTY_LIST;
     }
 
+    @VisibleForTesting
     @RawRes
     static Integer getResourceId(Context context, String fileName, String folderName) {
         String resourceKey = getFilePath(folderName, fileName);

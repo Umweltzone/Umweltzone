@@ -43,18 +43,24 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(AndroidJUnit4.class)
 public class ContentProviderTest {
 
-    private static final String[] ZONES_WITH_COORDINATES = {"aachen", "augsburg", "balingen",
-            "berlin", "bonn", "bremen", "darmstadt", "dinslaken", "duesseldorf",
-            "erfurt", "eschweiler", "frankfurt_main", "freiburg_breisgau", "hagen",
-            "halle", "hannover", "heidelberg", "heidenheim", "heilbronn", "herrenberg",
-            "ilsfeld", "karlsruhe", "cologne", "krefeld", "langenfeld", "leipzig",
-            "leonberg", "limburg", "ludwigsburg", "magdeburg", "mainz", "mannheim", "marburg",
-            "moenchengladbach", "muehlacker", "munich", "muenster", "neuss", "neuulm",
-            "offenbach", "osnabrueck", "overath", "pfinztal", "pforzheim", "remscheid",
-            "reutlingen", "ruhrregion", "schramberg", "schwaebisch_gmuend", "siegen",
-            "stuttgart", "tuebingen", "ulm", "urbach", "wendlingen", "wuppertal"};
+    private static final String[] ZONE_FILE_NAMES_WITH_COORDINATES = {
+            "lez_aachen", "lez_augsburg", "lez_balingen", "lez_berlin", "lez_bonn", "lez_bremen",
+            "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_erfurt", "lez_eschweiler",
+            "lez_frankfurt_main", "lez_freiburg_breisgau", "lez_hagen", "lez_halle", "lez_hannover",
+            "lez_heidelberg", "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
+            "lez_karlsruhe", "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
+            "lez_leonberg", "lez_limburg", "lez_ludwigsburg", "lez_magdeburg", "lez_mainz",
+            "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
+            "lez_muenster", "lez_neuss", "lez_neuulm", "lez_offenbach", "lez_osnabrueck",
+            "lez_overath", "lez_pfinztal", "lez_pforzheim", "lez_remscheid", "lez_reutlingen",
+            "lez_ruhrregion", "lez_schramberg", "lez_schwaebisch_gmuend", "lez_siegen",
+            "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
+            "lez_wuppertal"
+    };
 
-    private static final String[] ZONES_WITHOUT_COORDINATES = {"regensburg", "wiesbaden"};
+    private static final String[] ZONE_FILE_NAMES_WITHOUT_COORDINATES = {
+            "lez_regensburg", "lez_wiesbaden"
+    };
 
     private Context mContext;
 
@@ -66,10 +72,10 @@ public class ContentProviderTest {
     @Test
     public void testGetCircuits_failsWhenCoordinatesAreMissing() {
         String expectedErrorMessage;
-        for (String zoneName : ZONES_WITHOUT_COORDINATES) {
-            expectedErrorMessage = "Resource for file path 'raw/lez_" + zoneName + "' not found.";
+        for (String zoneFileName : ZONE_FILE_NAMES_WITHOUT_COORDINATES) {
+            expectedErrorMessage = "Resource for file path 'raw/" + zoneFileName + "' not found.";
             try {
-                getCircuits(zoneName);
+                getCircuits(zoneFileName);
                 fail();
             } catch (Exception e) {
                 assertThat(e.getMessage()).isEqualTo(expectedErrorMessage);
@@ -79,8 +85,8 @@ public class ContentProviderTest {
 
     @Test
     public void testGetCircuits_worksAtAll() {
-        for (String zoneName : ZONES_WITH_COORDINATES) {
-            assertThat(getCircuits(zoneName))
+        for (String zoneFileName : ZONE_FILE_NAMES_WITH_COORDINATES) {
+            assertThat(getCircuits(zoneFileName))
                     .isNotNull()
                     .isNotEmpty();
         }
@@ -88,24 +94,24 @@ public class ContentProviderTest {
 
     @Test
     public void testGetCircuits_usesCaches() {
-        for (String zoneName : ZONES_WITH_COORDINATES) {
-            List<Circuit> circuits = getCircuits(zoneName);
-            assertThat(circuits).isSameAs(getCircuits(zoneName));
+        for (String zoneFileName : ZONE_FILE_NAMES_WITH_COORDINATES) {
+            List<Circuit> circuits = getCircuits(zoneFileName);
+            assertThat(circuits).isSameAs(getCircuits(zoneFileName));
         }
     }
 
     @Test
     public void testGetResourceId_worksAtAll() {
-        for (String zoneName : ZONES_WITH_COORDINATES) {
-            assertThat(getZoneJsonResourceId(zoneName)).isNotNull();
+        for (String zoneFileName : ZONE_FILE_NAMES_WITH_COORDINATES) {
+            assertThat(getZoneJsonResourceId(zoneFileName)).isNotNull();
         }
     }
 
     @Test
     public void testGetResourceId_usesCaches() {
-        for (String zoneName : ZONES_WITH_COORDINATES) {
-            @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneName);
-            assertThat(zoneJsonResourceId).isSameAs(getZoneJsonResourceId(zoneName));
+        for (String zoneFileName : ZONE_FILE_NAMES_WITH_COORDINATES) {
+            @RawRes Integer zoneJsonResourceId = getZoneJsonResourceId(zoneFileName);
+            assertThat(zoneJsonResourceId).isSameAs(getZoneJsonResourceId(zoneFileName));
         }
     }
 
@@ -183,14 +189,13 @@ public class ContentProviderTest {
     }
 
     @NonNull
-    private List<Circuit> getCircuits(@NonNull String zoneName) {
-        return ContentProvider.getCircuits(mContext, zoneName);
+    private List<Circuit> getCircuits(@NonNull String zoneFileName) {
+        return ContentProvider.getCircuits(mContext, zoneFileName);
     }
 
     @RawRes
-    private Integer getZoneJsonResourceId(@NonNull String zoneName) {
-        String fileName = "lez_" + zoneName;
-        return ContentProvider.getResourceId(mContext, fileName, "raw");
+    private Integer getZoneJsonResourceId(@NonNull String zoneFileName) {
+        return ContentProvider.getResourceId(mContext, zoneFileName, "raw");
     }
 
 }

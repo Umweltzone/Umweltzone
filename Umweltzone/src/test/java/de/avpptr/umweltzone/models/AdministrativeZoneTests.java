@@ -27,11 +27,11 @@ import java.util.Date;
 import java.util.List;
 
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers;
+import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
 import de.avpptr.umweltzone.utils.BoundingBox;
-import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 import de.avpptr.umweltzone.utils.DateHelper;
 import de.avpptr.umweltzone.utils.GeoPoint;
-import de.avpptr.umweltzone.utils.AdministrativeZoneBuilder;
+import de.avpptr.umweltzone.utils.LowEmissionZoneBuilder;
 
 import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -67,7 +67,7 @@ public class AdministrativeZoneTests {
         Date date = DateHelper.getDate(2016, 4, 1);
         return singletonList(
                 new LowEmissionZoneBuilder()
-                        .setName("berlin1")
+                        .setFileName("lez_berlin")
                         .setDisplayName("Berlin 1")
                         .setZoneNumber(LowEmissionZoneNumbers.GREEN)
                         .setZoneNumberSince(date)
