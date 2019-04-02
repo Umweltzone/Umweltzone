@@ -129,8 +129,12 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     implementation "com.android.support:design:$androidSupportVersion"
     implementation "com.android.support:preference-v7:$androidSupportVersion"
-    implementation "com.google.android.gms:play-services-base:$playServicesVersion"
-    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
+    implementation("com.google.android.gms:play-services-base:$playServicesVersion") {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    implementation("com.google.android.gms:play-services-maps:$playServicesVersion") {
+        exclude group: "com.android.support", module: "support-v4"
+    }
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     implementation "com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion"
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
