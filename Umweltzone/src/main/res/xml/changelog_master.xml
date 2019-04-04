@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2018  Tobias Preuss
+  Copyright (C) 2019  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -19,14 +19,14 @@
         version="3.5.0"
         versioncode="305000">
         <change>
-            Android: The app is now optimized for Android 25 (Nougat).
+            Android: The app is now optimized for Android 7.1 (Nougat).
         </change>
     </release>
     <release
         version="3.4.0"
         versioncode="304000">
         <change>
-            Android: The app is now optimized for Android 24 (Nougat).
+            Android: The app is now optimized for Android 7.0 (Nougat).
         </change>
         <change>
             Update: The zone data for Ludwigsburg has changed.
@@ -59,7 +59,7 @@
             Update: The zone data for Mainz is now officially provided by the city.
         </change>
         <change>
-            Android: The app is now optimized for Android 23 (Marshmallow) which
+            Android: The app is now optimized for Android 6.0 (Marshmallow) which
             requires users to grant permission before the "my location" feature
             can be used. The app shows a notice to do so if it is installed for
             the first time.

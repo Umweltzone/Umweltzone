@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2018  Tobias Preuss
+  Copyright (C) 2019  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -19,14 +19,14 @@
         version="3.5.0"
         versioncode="305000">
         <change>
-            Android: Die App ist jetzt für Android 25 (Nougat) optimiert.
+            Android: Die App ist jetzt für Android 7.1 (Nougat) optimiert.
         </change>
     </release>
     <release
         version="3.4.0"
         versioncode="304000">
         <change>
-            Android: Die App ist jetzt für Android 24 (Nougat) optimiert.
+            Android: Die App ist jetzt für Android 7.0 (Nougat) optimiert.
         </change>
         <change>
             Aktualisierung: Die Zonendaten für Ludwigsburg haben sich geändert.
@@ -61,7 +61,7 @@
             von der Stadt zur Verfügung gestellt.
         </change>
         <change>
-            Android: Die App ist jetzt für Android 23 (Marshmallow) optimiert.
+            Android: Die App ist jetzt für Android 6.0 (Marshmallow) optimiert.
             Nutzer müssen zuerst zustimmen, bevor die eigene Position auf der
             Karte angezeigt wird. Die App zeigt einen Hinweis dafür an, wenn
             sie zum ersten Mal installiert wird.
