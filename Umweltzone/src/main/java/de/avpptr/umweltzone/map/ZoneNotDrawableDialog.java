@@ -83,7 +83,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         // Prepare layout
         LayoutInflater inflater = activity.getLayoutInflater();
         View zoneNotDrawableView = inflater.inflate(R.layout.fragment_zone_not_drawable, null);
-        TextView noticeTextView = (TextView) zoneNotDrawableView
+        TextView noticeTextView = zoneNotDrawableView
                 .findViewById(R.id.zone_not_drawable_notice);
         Spanned noticeSpanned = Html.fromHtml(getString(
                 R.string.zone_not_drawable_notice,

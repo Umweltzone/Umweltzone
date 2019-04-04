@@ -158,9 +158,9 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
         }
         if (layout != null) {
-            mMapView = (MapView) layout.findViewById(R.id.map_view);
+            mMapView = layout.findViewById(R.id.map_view);
             mMapView.onCreate(mapViewBundle);
-            mMyLocationActivationView = (Button) layout.findViewById(R.id.map_my_location_activation);
+            mMyLocationActivationView = layout.findViewById(R.id.map_my_location_activation);
             mMyLocationActivationView.setOnClickListener(MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER);
         }
         return layout;

@@ -47,7 +47,7 @@ public abstract class ViewHelper {
             final Activity activity,
             int textViewId,
             final String text) {
-        TextView textView = (TextView) activity.findViewById(textViewId);
+        TextView textView = activity.findViewById(textViewId);
         textView.setText(text);
     }
 
@@ -55,7 +55,7 @@ public abstract class ViewHelper {
             final View view,
             int textViewId,
             final String text) {
-        TextView textView = (TextView) view.findViewById(textViewId);
+        TextView textView = view.findViewById(textViewId);
         textView.setText(text);
     }
 
@@ -66,7 +66,7 @@ public abstract class ViewHelper {
             final String url,
             final TrackingPoint trackingPoint,
             final String trackingString) {
-        TextView textView = (TextView) view.findViewById(textViewId);
+        TextView textView = view.findViewById(textViewId);
         setupTextViewExtended(view.getContext(), textView,
                 StringHelper.spannedLinkForString(title, url),
                 url,
@@ -81,7 +81,7 @@ public abstract class ViewHelper {
             final TrackingPoint trackingPoint,
             final String trackingString) {
 
-        TextView textView = (TextView) activity.findViewById(textViewId);
+        TextView textView = activity.findViewById(textViewId);
         String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
@@ -97,7 +97,7 @@ public abstract class ViewHelper {
             final TrackingPoint trackingPoint,
             final String trackingString) {
 
-        TextView textView = (TextView) activity.findViewById(textViewId);
+        TextView textView = activity.findViewById(textViewId);
         final String tempUrl = activity.getString(urlResourceId);
         final String url = tempUrl.contains("@") ? "mailto:" + tempUrl : tempUrl;
         final String title = activity.getString(titleResourceId);
