@@ -5,6 +5,7 @@ apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
 apply plugin: "kotlin-kapt"
+apply plugin: "com.google.android.gms.strict-version-matcher-plugin"
 
 repositories {
     google()
@@ -43,12 +44,12 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 25
+        minSdkVersion 14
+        targetSdkVersion 26
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
@@ -98,10 +99,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    lintOptions {
-        ignore "ExpiredTargetSdkVersion"
-    }
 }
 
 tasks.withType(Test) {
@@ -129,8 +126,12 @@ dependencies {
     implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
     implementation "com.android.support:design:$androidSupportVersion"
     implementation "com.android.support:preference-v7:$androidSupportVersion"
-    implementation "com.google.android.gms:play-services-base:$playServicesVersion"
-    implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
+    implementation("com.google.android.gms:play-services-base:$playServicesVersion") {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    implementation("com.google.android.gms:play-services-maps:$playServicesVersion") {
+        exclude group: "com.android.support", module: "support-v4"
+    }
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
     implementation "com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion"
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"

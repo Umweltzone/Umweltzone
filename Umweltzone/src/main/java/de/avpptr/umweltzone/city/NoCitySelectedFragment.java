@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ public class NoCitySelectedFragment extends BaseFragment {
 
     private void setUpViews(final Activity activity) {
         // Select zone button
-        Button showOnMapButton = (Button) activity.findViewById(R.id.no_city_selected_select_zone);
+        Button showOnMapButton = activity.findViewById(R.id.no_city_selected_select_zone);
         showOnMapButton.setOnClickListener(view -> {
             Intent intent = IntentHelper.getCitiesIntent(activity);
             startActivity(intent);

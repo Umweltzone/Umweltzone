@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ public class FaqActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faq);
-        ExpandableListView faqsList = (ExpandableListView) findViewById(R.id.faq_list);
+        ExpandableListView faqsList = findViewById(R.id.faq_list);
         List<Faq> faqs = ContentProvider.getFaqs(this);
         faqsList.setAdapter(new FaqsAdapter(this, faqs));
 

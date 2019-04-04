@@ -97,11 +97,11 @@ public class CityInfoFragment extends BaseFragment {
         LowEmissionZone lowEmissionZone = (LowEmissionZone) administrativeZone.childZones.get(0);
 
         // Title
-        TextView titleTextView = (TextView) activity.findViewById(R.id.city_info_title);
+        TextView titleTextView = activity.findViewById(R.id.city_info_title);
         titleTextView.setText(lowEmissionZone.displayName);
 
         // Zone status image
-        TextView zoneStatus = (TextView) activity.findViewById(R.id.city_info_zone_status);
+        TextView zoneStatus = activity.findViewById(R.id.city_info_zone_status);
         int zoneStatusId = LowEmissionZoneNumberConverter
                 .getStatusDrawable(lowEmissionZone.zoneNumber);
         if (zoneStatusId == Resources.INVALID_RESOURCE_ID) {
@@ -113,27 +113,27 @@ public class CityInfoFragment extends BaseFragment {
 
         // List of cities
         TextView listOfCitiesTextView =
-                (TextView) activity.findViewById(R.id.city_info_list_of_cities);
+                activity.findViewById(R.id.city_info_list_of_cities);
         String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
 
         // Zone number since or as of
         TextView zoneNumberSinceTextView =
-                (TextView) activity.findViewById(R.id.city_info_zone_number_since);
+                activity.findViewById(R.id.city_info_zone_number_since);
         String zoneNumberSinceText =
                 StringHelper.getZoneNumberSinceAsOfText(activity, lowEmissionZone);
         zoneNumberSinceTextView.setText(zoneNumberSinceText);
 
         // Next zone number as of
         TextView nextZoneNumberAsOfTextView =
-                (TextView) activity.findViewById(R.id.city_info_next_zone_number_as_of);
+                activity.findViewById(R.id.city_info_next_zone_number_as_of);
         String nextZoneNumberAsOfText =
                 StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(nextZoneNumberAsOfTextView, nextZoneNumberAsOfText);
 
         // Abroad licenced vehicle zone number info
         TextView abroadLicensedVehicleZoneNumberTextView =
-                (TextView) activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
+                activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
                 StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
         ViewHelper.setTextOrHideView(
@@ -141,7 +141,7 @@ public class CityInfoFragment extends BaseFragment {
                 abroadLicensedVehicleZoneNumberText);
 
         // Show on map button
-        Button showOnMapButton = (Button) activity.findViewById(R.id.city_info_show_on_map);
+        Button showOnMapButton = activity.findViewById(R.id.city_info_show_on_map);
         showOnMapButton.setOnClickListener(view -> {
             mTracking.track(TrackingPoint.CityInfoShowOnMapClick, administrativeZone.name);
             Umweltzone.centerZoneRequested = true;
@@ -157,7 +157,7 @@ public class CityInfoFragment extends BaseFragment {
                 administrativeZone.name);
 
         // Badge online
-        TextView badgeOnlineTextView = (TextView) activity.findViewById(
+        TextView badgeOnlineTextView = activity.findViewById(
                 R.id.city_info_badge_online);
         final String urlBadgeOnline = administrativeZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
@@ -173,14 +173,14 @@ public class CityInfoFragment extends BaseFragment {
         }
 
         // Geometry updated at
-        TextView geometryUpdatedAtTextView = (TextView) activity
+        TextView geometryUpdatedAtTextView = activity
                 .findViewById(R.id.city_info_geometry_updated_at);
         String geometryUpdatedAtText = StringHelper
                 .getGeometryUpdatedAtText(activity, lowEmissionZone.geometryUpdatedAt);
         ViewHelper.setTextOrHideView(geometryUpdatedAtTextView, geometryUpdatedAtText);
 
         // Geometry source
-        TextView geometrySourceTextView = (TextView) activity
+        TextView geometrySourceTextView = activity
                 .findViewById(R.id.city_info_geometry_source);
         String geometrySourceText = StringHelper
                 .getGeometrySourceText(activity, lowEmissionZone.geometrySource);

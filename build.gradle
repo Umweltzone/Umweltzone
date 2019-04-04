@@ -8,7 +8,7 @@ buildscript {
         proguardGradlePluginVersion = "6.0.3"
 
         // Libraries
-        androidSupportVersion = "25.4.0"
+        androidSupportVersion = "26.0.2"
         assertjAndroidVersion = "1.2.0"
         ckChangelogVersion = "1.2.2"
         constraintLayoutVersion = "1.1.3"
@@ -17,9 +17,10 @@ buildscript {
         junitVersion = "4.12"
         kotlinVersion = "1.3.21"
         parcelerVersion = "1.1.12"
-        playServicesVersion = "10.0.1"
+        playServicesVersion = "12.0.1"
         rulesVersion = "1.0.2"
-        snackengagePlayrateVersion = "0.15"
+        snackengagePlayrateVersion = "0.18"
+        strictVersionMatcherPluginVersion = "1.0.2"
         typedPreferencesVersion = "2.1.0"
     }
 
@@ -31,6 +32,7 @@ buildscript {
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
+        classpath "com.google.android.gms:strict-version-matcher-plugin:$strictVersionMatcherPluginVersion"
         classpath "net.sf.proguard:proguard-gradle:$proguardGradlePluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }

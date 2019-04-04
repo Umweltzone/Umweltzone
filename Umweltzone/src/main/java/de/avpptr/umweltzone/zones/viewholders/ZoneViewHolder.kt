@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,29 +17,20 @@
 
 package de.avpptr.umweltzone.zones.viewholders
 
-import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
-import android.os.Build
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
 import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 
-abstract class ZoneViewHolder<in T: ZoneViewModel>(view: View) : RecyclerView.ViewHolder(view) {
+abstract class ZoneViewHolder<in T : ZoneViewModel>(view: View) : RecyclerView.ViewHolder(view) {
 
     abstract fun bind(viewModel: T)
 
     protected fun TextView.setBadge(zoneShapeView: GradientDrawable, viewModel: BadgeViewModel) {
         this.text = viewModel.text
-        val sdk = Build.VERSION.SDK_INT
-        if (sdk < Build.VERSION_CODES.HONEYCOMB) {
-            // Replaces the round badge with a colored square.
-            val colorDrawable = ColorDrawable(viewModel.backgroundColor)
-            this.setBackgroundDrawable(colorDrawable)
-        } else {
-            zoneShapeView.setColor(viewModel.backgroundColor)
-        }
+        zoneShapeView.setColor(viewModel.backgroundColor)
     }
 
 }
