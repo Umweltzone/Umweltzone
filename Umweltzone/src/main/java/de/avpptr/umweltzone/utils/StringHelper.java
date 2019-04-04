@@ -83,7 +83,7 @@ public class StringHelper {
         if (colorStringResourceId == Resources.INVALID_RESOURCE_ID) {
             Log.e("Next zone number '" + nextZoneNumber +
                     "' cannot be converted into color text fragment.");
-            return null;
+            return "";
         }
         return getZoneNumberInfoString(context,
                 R.string.city_info_next_zone_number_as_of,
@@ -104,7 +104,7 @@ public class StringHelper {
             Log.e("Abroad licensed vehicle zone number '" +
                     zone.abroadLicensedVehicleZoneNumber +
                     "' cannot be converted into color text fragment.");
-            return null;
+            return "";
         }
         return getZoneNumberInfoString(context,
                 R.string.city_info_abroad_licensed_vehicle_zone_info,
