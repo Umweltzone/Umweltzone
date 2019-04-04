@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2013  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -39,6 +39,6 @@ public class Faq {
     }
 
     public String toStringShort() {
-        return String.valueOf(position) + "_" + label;
+        return position + "_" + label;
     }
 }
