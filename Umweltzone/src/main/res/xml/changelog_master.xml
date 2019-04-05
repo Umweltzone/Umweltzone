@@ -16,6 +16,38 @@
 -->
 <changelog>
     <release
+        version="3.6.0"
+        versioncode="306000">
+        <change>
+            Update: The zone data for Augsburg has changed.
+        </change>
+        <change>
+            Update: New app icon complying with the icon specifications
+            of Android 7 and newer.
+        </change>
+        <change>
+            New: The map view including the tilt angle is completely
+            restored on device rotation.
+        </change>
+        <change>
+            New: Each zone circuit is colored with its corresponding badge color.
+        </change>
+        <change>
+            Bugfix: The formatting of the share message text is fixed.
+        </change>
+        <change>
+            Android: The app is now optimized for Android 8.0 (Oreo).
+        </change>
+        <change>
+            Android: Now the lowest, supported version is Android 4.0
+            (Ice Cream Sandwich) due to updated restrictions applied by Google.
+        </change>
+        <change>
+            Many internal refactorings are ongoing with the objective
+            to show Diesel prohibition zones soon.
+        </change>
+    </release>
+    <release
         version="3.5.0"
         versioncode="305000">
         <change>

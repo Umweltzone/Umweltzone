@@ -1,5 +1,40 @@
 # Umweltzone changelog
 
+## [v.3.6.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.6.0)
+
+* Published: 2019-04-05
+
+### Features, improvements and maintenance
+
+* Fix JSON file., [41b23](https://bitbucket.org/tbsprs/umweltzone/commits/41b2359838132a570076f32462f83074b479f2a3)
+* Remove compatibility workaround for Honeycomb., [5d359](https://bitbucket.org/tbsprs/umweltzone/commits/5d3599e83cf98fbf04bf63ec42f7cbffeba587fe)
+* Apply customization for v-11 to main styles and colors., [e9cd3](https://bitbucket.org/tbsprs/umweltzone/commits/e9cd308b39e61f58912f0d8c10bc9ba13575a94a)
+* Use adaptive launcher icon., [f8c13](https://bitbucket.org/tbsprs/umweltzone/commits/f8c135fa9bcfb0e947ec4ae866e25e396e8feb0f)
+* Update zone data for Augsburg (provided by the city)., [80533](https://bitbucket.org/tbsprs/umweltzone/commits/80533ef7bbb4396e72876e3b99a4231ea0f040cc)
+* Load zone circuit based on the file name of the child zone., [c31f7](https://bitbucket.org/tbsprs/umweltzone/commits/c31f72a66255e2984d761cd1b147f2500c42e5a6)
+* Draw each zone circuit with its associated fill color., [d978e](https://bitbucket.org/tbsprs/umweltzone/commits/d978ee36f2f8c231524d7f7b9653b2e86d44af02)
+* Introduce the ChildZone interface to allow polymorphic child zones., [be46d](https://bitbucket.org/tbsprs/umweltzone/commits/be46d414698358434b6019b00539d5e2ddbc998e)
+* Fix display names for various child zones., [306af](https://bitbucket.org/tbsprs/umweltzone/commits/306af7b234911cd0bf9f2c9e9409296ac3dec346)
+* Completely restore the map view on rotation as chosen by the user., [066cb](https://bitbucket.org/tbsprs/umweltzone/commits/066cb0fa2789b583c184dccb07c29593b637f41e)
+* Fix formatting of share message text., [1d12a](https://bitbucket.org/tbsprs/umweltzone/commits/1d12a306d5fe9b97e7296301140c3fc859e64ae6)
+* Fix dynamic text prefix being displayed dependent on the current date., [04b4d](https://bitbucket.org/tbsprs/umweltzone/commits/04b4d8ad283406c1693bf47ad56e41c1fcbdcbf5)
+
+
+### Libraries, build tools, SDK
+
+* Use strict-version-matcher-plugin v.1.0.2., [d8904](https://bitbucket.org/tbsprs/umweltzone/commits/d8904088cb8d10dddb38b1086690c411378cd369)
+* Use play-services v.12.0.1., [f0885](https://bitbucket.org/tbsprs/umweltzone/commits/f0885fc45c7095c2a2f2d74276d59b62e42a163c)
+* Use snackengage-playrate v.0.18., [a5199](https://bitbucket.org/tbsprs/umweltzone/commits/a5199ce7764a3417c684d7e16c9396a3aefd785e)
+* Use targetSdkVersion 26, compileSdkVersion 26 and Google support library v.26.0.2., [b0982](https://bitbucket.org/tbsprs/umweltzone/commits/b0982e2472e8250383f6938a6f738baf7cd766be)
+* Use Gradle wrapper v.4.10.3., [06cc5](https://bitbucket.org/tbsprs/umweltzone/commits/06cc50c4c037de1a5685fb8371d0be3ad2169e43)
+* Simplify Travis CI configuration., [57e82](https://bitbucket.org/tbsprs/umweltzone/commits/57e821d98044819c438e8044cd62f7f6c5293297)
+* Use Android plugin for Gradle v.3.3.2., [dfc7a](https://bitbucket.org/tbsprs/umweltzone/commits/dfc7a6f1fe5224675962e41f44cf4f0248a48959)
+* Trust jcenter the least., [207d0](https://bitbucket.org/tbsprs/umweltzone/commits/207d08d3116a5ef1582e51b0d57e1cd74a1e641f)
+* Use Kotlin 1.3.21., [7b0b6](https://bitbucket.org/tbsprs/umweltzone/commits/7b0b6698ac242248a74548df6f0fc85514876100)
+* Use parceler v.1.1.12., [51045](https://bitbucket.org/tbsprs/umweltzone/commits/51045abcffb2354ff2405f03ad0e4941d4430239)
+* Use gradle-versions-plugin v.0.21.0., [485f5](https://bitbucket.org/tbsprs/umweltzone/commits/485f58e33d971fa8a09f006f6a24590d3dbe06bc)
+
+
 ## [v.3.5.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.5.0)
 
 * Published: 2018-10-31

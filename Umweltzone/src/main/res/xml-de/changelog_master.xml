@@ -16,6 +16,39 @@
 -->
 <changelog>
     <release
+        version="3.6.0"
+        versioncode="306000">
+        <change>
+            Aktualisierung: Die Zonendaten für Augsburg haben sich geändert.
+        </change>
+        <change>
+            Aktualisierung: Das neue App-Symbol entspricht den geänderten
+            Anforderungen von Android 7 und neuer.
+        </change>
+        <change>
+            Neu: Beim Drehen des Geräts bleibt die Kartenposition inklusive
+            Neigungswinkel erhalten.
+        </change>
+        <change>
+            Neu: Jede Zone wird in der Farbe der jeweiligen Plakette eingefärbt.
+        </change>
+        <change>
+            Bugfix: Die Formatierung des Texts der Teilen-Funktion ist korrgiert.
+        </change>
+        <change>
+            Android: Die App ist jetzt für Android 8.0 (Oreo) optimiert.
+        </change>
+        <change>
+            Android: Die niedrigste, unterstützte Version ist jetzt Android 4.0
+            (Ice Cream Sandwich), entsprechend den aktualisierten Auflagen
+            von Google.
+        </change>
+        <change>
+            Viele interne Umbauarbeiten sind im Gange, um in Kürze auch
+            Dieselfahrverbote anzeigen zu können.
+        </change>
+    </release>
+    <release
         version="3.5.0"
         versioncode="305000">
         <change>
