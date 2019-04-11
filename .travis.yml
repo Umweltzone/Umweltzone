@@ -16,6 +16,7 @@ before_script:
   - echo "org.gradle.daemon=false" >> gradle.properties
   - android-wait-for-emulator
   - adb shell input keyevent 82
+  - cat gradle.properties
 
 install:
   - ./gradlew clean assembleDebug testDebug assembleAndroidTest --stacktrace -PdisablePreDex
