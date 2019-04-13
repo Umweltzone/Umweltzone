@@ -20,7 +20,7 @@ buildscript {
         playServicesVersion = "12.0.1"
         rulesVersion = "1.0.2"
         snackengagePlayrateVersion = "0.18"
-        strictVersionMatcherPluginVersion = "1.0.2"
+        strictVersionMatcherPluginVersion = "1.1.0"
         typedPreferencesVersion = "2.1.0"
     }
 
