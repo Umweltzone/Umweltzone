@@ -27,7 +27,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -347,10 +346,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
         String title = administrativeZone.displayName;
-        ActionBar actionBar = activity.getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setSubtitle(title);
-        }
+        updateSubTitle(title);
     }
 
     private class OnCameraIdleListener implements GoogleMap.OnCameraIdleListener {
