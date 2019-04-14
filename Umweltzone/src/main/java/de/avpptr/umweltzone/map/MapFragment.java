@@ -27,7 +27,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,6 +51,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
+import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -302,8 +302,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void setMyLocationActivationViewVisibility(boolean isVisible) {
-        int visibility = isVisible ? View.VISIBLE : View.GONE;
-        mMyLocationActivationView.setVisibility(visibility);
+        ViewExtensions.setVisible(mMyLocationActivationView, isVisible);
     }
 
     @SuppressLint("MissingPermission")
@@ -347,10 +346,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
         String title = administrativeZone.displayName;
-        ActionBar actionBar = activity.getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setSubtitle(title);
-        }
+        updateSubTitle(title);
     }
 
     private class OnCameraIdleListener implements GoogleMap.OnCameraIdleListener {
