@@ -34,6 +34,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.extensions.TextViewExtensions;
 import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
@@ -115,7 +116,7 @@ public class CityInfoFragment extends BaseFragment {
         TextView listOfCitiesTextView =
                 activity.findViewById(R.id.city_info_list_of_cities);
         String listOfCitiesText = StringHelper.getListOfCitiesText(activity, lowEmissionZone);
-        ViewHelper.setTextOrHideView(listOfCitiesTextView, listOfCitiesText);
+        TextViewExtensions.setTextOrHide(listOfCitiesTextView, listOfCitiesText);
 
         // Zone number since or as of
         TextView zoneNumberSinceTextView =
@@ -129,14 +130,14 @@ public class CityInfoFragment extends BaseFragment {
                 activity.findViewById(R.id.city_info_next_zone_number_as_of);
         String nextZoneNumberAsOfText =
                 StringHelper.getNextZoneNumberAsOfText(activity, lowEmissionZone);
-        ViewHelper.setTextOrHideView(nextZoneNumberAsOfTextView, nextZoneNumberAsOfText);
+        TextViewExtensions.setTextOrHide(nextZoneNumberAsOfTextView, nextZoneNumberAsOfText);
 
         // Abroad licenced vehicle zone number info
         TextView abroadLicensedVehicleZoneNumberTextView =
                 activity.findViewById(R.id.city_info_abroad_licensed_vehicle_zone_info);
         String abroadLicensedVehicleZoneNumberText =
                 StringHelper.getAbroadLicensedVehicleZoneNumberText(activity, lowEmissionZone);
-        ViewHelper.setTextOrHideView(
+        TextViewExtensions.setTextOrHide(
                 abroadLicensedVehicleZoneNumberTextView,
                 abroadLicensedVehicleZoneNumberText);
 
@@ -177,14 +178,14 @@ public class CityInfoFragment extends BaseFragment {
                 .findViewById(R.id.city_info_geometry_updated_at);
         String geometryUpdatedAtText = StringHelper
                 .getGeometryUpdatedAtText(activity, lowEmissionZone.geometryUpdatedAt);
-        ViewHelper.setTextOrHideView(geometryUpdatedAtTextView, geometryUpdatedAtText);
+        TextViewExtensions.setTextOrHide(geometryUpdatedAtTextView, geometryUpdatedAtText);
 
         // Geometry source
         TextView geometrySourceTextView = activity
                 .findViewById(R.id.city_info_geometry_source);
         String geometrySourceText = StringHelper
                 .getGeometrySourceText(activity, lowEmissionZone.geometrySource);
-        ViewHelper.setTextOrHideView(geometrySourceTextView, geometrySourceText);
+        TextViewExtensions.setTextOrHide(geometrySourceTextView, geometrySourceText);
     }
 
 }

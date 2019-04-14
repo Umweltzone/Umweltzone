@@ -21,7 +21,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
 import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
@@ -31,17 +30,6 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 
 public abstract class ViewHelper {
-
-    public static void setTextOrHideView(
-            @NonNull final TextView textView,
-            @NonNull final String text) {
-        if (text.isEmpty()) {
-            textView.setVisibility(View.GONE);
-        } else {
-            textView.setVisibility(View.VISIBLE);
-            textView.setText(text);
-        }
-    }
 
     public static void setupTextViewSimple(
             final Activity activity,
