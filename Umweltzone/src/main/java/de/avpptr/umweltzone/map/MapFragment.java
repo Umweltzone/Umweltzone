@@ -51,6 +51,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
+import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
@@ -301,8 +302,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void setMyLocationActivationViewVisibility(boolean isVisible) {
-        int visibility = isVisible ? View.VISIBLE : View.GONE;
-        mMyLocationActivationView.setVisibility(visibility);
+        ViewExtensions.setVisible(mMyLocationActivationView, isVisible);
     }
 
     @SuppressLint("MissingPermission")

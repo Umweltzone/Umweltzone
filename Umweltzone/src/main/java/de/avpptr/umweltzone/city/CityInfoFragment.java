@@ -23,7 +23,6 @@ import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -35,6 +34,7 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.contract.Resources;
+import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
@@ -105,9 +105,9 @@ public class CityInfoFragment extends BaseFragment {
         int zoneStatusId = LowEmissionZoneNumberConverter
                 .getStatusDrawable(lowEmissionZone.zoneNumber);
         if (zoneStatusId == Resources.INVALID_RESOURCE_ID) {
-            zoneStatus.setVisibility(View.GONE);
+            ViewExtensions.setVisible(zoneStatus, false);
         } else {
-            zoneStatus.setVisibility(View.VISIBLE);
+            ViewExtensions.setVisible(zoneStatus, true);
             zoneStatus.setBackgroundResource(zoneStatusId);
         }
 
@@ -161,9 +161,9 @@ public class CityInfoFragment extends BaseFragment {
                 R.id.city_info_badge_online);
         final String urlBadgeOnline = administrativeZone.urlBadgeOnline;
         if (TextUtils.isEmpty(urlBadgeOnline)) {
-            badgeOnlineTextView.setVisibility(View.GONE);
+            ViewExtensions.setVisible(badgeOnlineTextView, false);
         } else {
-            badgeOnlineTextView.setVisibility(View.VISIBLE);
+            ViewExtensions.setVisible(badgeOnlineTextView, true);
             ViewHelper.setupTextViewExtended(activity,
                     R.id.city_info_badge_online,
                     R.string.city_info_badge_online_title,
