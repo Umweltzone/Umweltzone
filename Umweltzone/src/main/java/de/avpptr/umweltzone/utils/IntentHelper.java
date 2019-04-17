@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.VisibleForTesting;
 import android.support.v4.app.ShareCompat;
 
 import org.parceler.Parcels;
@@ -105,7 +106,8 @@ public class IntentHelper {
         return getIntent(context, FaqActivity.class);
     }
 
-    private static Intent getIntent(Context context, Class<?> clazz) {
+    @VisibleForTesting
+    public static Intent getIntent(Context context, Class<?> clazz) {
         final Intent intent = new Intent(context, clazz);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         return intent;
