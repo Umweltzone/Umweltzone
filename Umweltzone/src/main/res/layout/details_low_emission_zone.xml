@@ -127,6 +127,22 @@
             app:layout_constraintTop_toBottomOf="@+id/detailsLezNextZoneNumberAsOfView"
             tools:text="@string/city_info_abroad_licensed_vehicle_zone_info" />
 
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toTopOf="@+id/detailsLezGeometrySourceView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsLezAbroadLicensedVehicleZoneInfoView" />
+
         <TextView
             android:id="@+id/detailsLezGeometrySourceView"
             style="@style/ZoneInfo.Content"
@@ -158,22 +174,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/detailsLezGeometrySourceView"
             tools:text="@string/city_info_geometry_updated_at_text" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezGeometrySourceView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezAbroadLicensedVehicleZoneInfoView" />
 
     </android.support.constraint.ConstraintLayout>
 
