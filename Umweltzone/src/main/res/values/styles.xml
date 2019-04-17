@@ -112,7 +112,7 @@
     <style name="TextView.Base.Small" parent="@android:style/TextAppearance.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">left</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:textSize">@dimen/body_text_size</item>
     </style>
@@ -201,7 +201,7 @@
 
     <style name="NoCitySelected.SelectZone" parent="Button.Base" />
 
-    <!-- CityInfoFragment -->
+    <!-- DetailsFragment formerly CityInfoFragment -->
 
     <style name="ZoneInfo.ShowZoneOnMap" parent="Button.Base">
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
@@ -214,6 +214,11 @@
         <item name="android:gravity">bottom|center_horizontal</item>
         <item name="android:padding">@dimen/big_spacer</item>
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
+    </style>
+
+    <style name="ZoneInfo.SectionTitle" parent="ZoneInfo.Content">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/appinfo_text_content_foreground</item>
     </style>
 
     <style name="ZoneInfo.Content" parent="TextView.Base.Small">

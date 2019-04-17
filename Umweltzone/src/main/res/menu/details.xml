@@ -15,19 +15,19 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:umweltzone="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_cities"
+        android:icon="@drawable/ic_action_view_as_list_dark"
+        android:orderInCategory="100"
+        android:title="@string/action_cities"
+        umweltzone:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_faq"
+        android:icon="@drawable/ic_action_help_dark"
+        android:orderInCategory="102"
+        android:title="@string/action_faq"
+        umweltzone:showAsAction="ifRoom" />
 
-    <!--
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
-    -->
-    <dimen name="activity_horizontal_margin">128dp</dimen>
-
-    <!-- Details -->
-    <dimen name="details_content_padding">@dimen/large_spacer</dimen>
-    <dimen name="details_margin_horizontal">@dimen/long_spacer</dimen>
-
-    <!-- Zones -->
-    <dimen name="zones_margin_horizontal">@dimen/long_spacer</dimen>
-
-</resources>
+</menu>

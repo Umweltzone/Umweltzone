@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.city;
+package de.avpptr.umweltzone.details;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -46,19 +46,19 @@ import static org.hamcrest.Matchers.allOf;
 @RunWith(AndroidJUnit4.class)
 public class NoCitySelectedFragmentTest {
 
-    private Context mContext;
+    private Context context;
 
     @Rule
-    public final ActivityTestRule mActivityRule =
-            new ActivityTestRule<>(CityInfoActivity.class, true, false);
+    public final ActivityTestRule activityRule =
+            new ActivityTestRule<>(DetailsActivity.class, true, false);
 
     @Before
     public void setUp() {
-        mContext = InstrumentationRegistry.getTargetContext();
+        context = InstrumentationRegistry.getTargetContext();
     }
 
     @Test
-    public void renderCityInfo() {
+    public void renderDetails() {
         launchActivity();
 
         onView(allOf(
@@ -80,7 +80,7 @@ public class NoCitySelectedFragmentTest {
     }
 
     private void launchActivity() {
-        mActivityRule.launchActivity(IntentHelper.getCityInfoIntent(mContext, null));
+        activityRule.launchActivity(IntentHelper.getDetailsIntent(context, null));
     }
 
 }

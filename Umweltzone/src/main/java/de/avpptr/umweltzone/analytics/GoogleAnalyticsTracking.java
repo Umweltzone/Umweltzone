@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -60,9 +60,6 @@ public class GoogleAnalyticsTracking implements Tracking {
                 break;
             case CityListItemClick:
                 trackEvent("city_list_action", "list_item_click", "city_list_" + parameter);
-                break;
-            case CityInfoShowOnMapClick:
-                trackEvent("city_info_action", "button_push", "show_on_map_" + parameter);
                 break;
             case CityInfoFurtherInfoClick:
                 trackEvent("city_info_action", "url_click", "further_info_" + parameter);

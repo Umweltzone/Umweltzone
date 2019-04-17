@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2018  Tobias Preuss
+  Copyright (C) 2019  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -62,7 +62,7 @@
             android:name=".zones.ZonesActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".city.CityInfoActivity"
+            android:name=".details.DetailsActivity"
             android:label="@string/city_info_activity_title" />
         <activity
             android:name=".feedback.FeedbackActivity"

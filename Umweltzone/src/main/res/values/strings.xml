@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2018  Tobias Preuss
+  Copyright (C) 2019  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -258,8 +258,11 @@
     </string>
 
 
-    <!-- CityInfoFragment -->
+    <!-- DetailsActivity formerly CityInfoFragment -->
     <string name="city_info_activity_title">City info</string>
+
+    <string name="city_info_section_title_lez">Details about the low emission zone</string>
+    <string name="city_info_section_title_other">Further information</string>
 
     <string name="city_info_zone_status">free</string>
     <string name="city_info_zone_number_as_of">
@@ -303,7 +306,6 @@
         <xliff:g example="Recklinghausen" id="last_city">%2$s</xliff:g>.
     </string>
 
-    <string name="city_info_show_on_map">Show zone on map</string>
     <string name="city_info_further_information">Further information online</string>
     <string name="city_info_badge_online_title">Online sticker application form</string>
 

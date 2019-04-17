@@ -28,9 +28,9 @@ import org.parceler.Parcels;
 
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.about.AboutActivity;
-import de.avpptr.umweltzone.city.CityInfoActivity;
-import de.avpptr.umweltzone.city.CityInfoFragment;
 import de.avpptr.umweltzone.contract.BundleKeys;
+import de.avpptr.umweltzone.details.DetailsActivity;
+import de.avpptr.umweltzone.details.DetailsFragment;
 import de.avpptr.umweltzone.faqs.FaqActivity;
 import de.avpptr.umweltzone.feedback.FeedbackActivity;
 import de.avpptr.umweltzone.map.MainActivity;
@@ -77,10 +77,10 @@ public class IntentHelper {
         return intent;
     }
 
-    public static Intent getCityInfoIntent(@NonNull Context context,
-                                           @NonNull AdministrativeZone administrativeZone) {
-        Intent intent = getIntent(context, CityInfoActivity.class);
-        intent.putExtra(CityInfoFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE,
+    public static Intent getDetailsIntent(@NonNull Context context,
+                                          @NonNull AdministrativeZone administrativeZone) {
+        Intent intent = getIntent(context, DetailsActivity.class);
+        intent.putExtra(DetailsFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE,
                 Parcels.wrap(administrativeZone));
         return intent;
     }
