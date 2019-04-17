@@ -30,7 +30,7 @@ var @receiver:NonNull TextView.textOrHide: CharSequence
     @NonNull
     get() = this.text
     set(@NonNull value) {
-        if (text.isEmpty()) {
+        if (value.isEmpty()) {
             isVisible = false
         } else {
             isVisible = true
