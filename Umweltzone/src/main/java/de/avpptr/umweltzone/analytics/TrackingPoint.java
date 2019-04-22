@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,7 +21,6 @@ public enum TrackingPoint {
     ActivityStart("activity_start"),
     ActivityStop("activity_stop"),
     CityListItemClick("city_list"),
-    CityInfoShowOnMapClick("city_info_show_on_map_click"),
     CityInfoFurtherInfoClick("city_info_further_info_click"),
     CityInfoBadgeOnlineClick("city_info_badge_online_click"),
     FaqItemClick("faq_item_click"),

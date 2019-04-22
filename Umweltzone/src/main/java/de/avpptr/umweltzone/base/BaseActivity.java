@@ -79,7 +79,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 return true;
             case R.id.action_city_info:
                 AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(this);
-                startActivity(IntentHelper.getCityInfoIntent(this, administrativeZone));
+                startActivity(IntentHelper.getDetailsIntent(this, administrativeZone));
                 return true;
             case R.id.action_faq:
                 startActivity(IntentHelper.getFaqsIntent(this));

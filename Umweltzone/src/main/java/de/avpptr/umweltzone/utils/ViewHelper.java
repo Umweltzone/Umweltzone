@@ -63,6 +63,21 @@ public abstract class ViewHelper {
 
     public static void setupTextViewExtended(
             final Activity activity,
+            final TextView textView,
+            int titleResourceId,
+            final String url,
+            final TrackingPoint trackingPoint,
+            final String trackingString) {
+
+        String title = activity.getString(titleResourceId);
+        setupTextViewExtended(activity, textView,
+                StringHelper.spannedLinkForString(title, url),
+                url,
+                trackingPoint, trackingString);
+    }
+
+    public static void setupTextViewExtended(
+            final Activity activity,
             int textViewId,
             int titleResourceId,
             final String url,

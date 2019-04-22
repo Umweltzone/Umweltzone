@@ -15,19 +15,9 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<resources>
-
-    <!--
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
-    -->
-    <dimen name="activity_horizontal_margin">128dp</dimen>
-
-    <!-- Details -->
-    <dimen name="details_content_padding">@dimen/large_spacer</dimen>
-    <dimen name="details_margin_horizontal">@dimen/long_spacer</dimen>
-
-    <!-- Zones -->
-    <dimen name="zones_margin_horizontal">@dimen/long_spacer</dimen>
-
-</resources>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout="@layout/fragment_zone_details" />

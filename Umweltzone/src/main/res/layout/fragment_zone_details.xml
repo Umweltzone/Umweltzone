@@ -19,26 +19,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".details.NoCitySelectedFragment">
+    tools:context=".details.DetailsFragment">
 
     <LinearLayout
+        android:id="@+id/zoneDetailsView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_marginStart="@dimen/details_margin_horizontal"
+        android:layout_marginLeft="@dimen/details_margin_horizontal"
+        android:layout_marginTop="@dimen/details_margin_vertical"
+        android:layout_marginEnd="@dimen/details_margin_horizontal"
+        android:layout_marginRight="@dimen/details_margin_horizontal"
+        android:layout_marginBottom="@dimen/details_margin_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/big_spacer"
+        tools:background="@android:color/holo_blue_light"
+        tools:minHeight="444dp">
 
-        <TextView
-            style="@style/NoCitySelected.Title"
-            android:text="@string/no_city_selected_title" />
-
-        <TextView
-            style="@style/NoCitySelected.StatusDesc"
-            android:text="@string/no_city_selected_status_desc" />
-
-        <Button
-            android:id="@+id/no_city_selected_select_zone"
-            style="@style/NoCitySelected.SelectZone"
-            android:text="@string/no_city_selected_select_zone" />
+        <!-- Child views are added at runtime. -->
 
     </LinearLayout>
+
 </ScrollView>
