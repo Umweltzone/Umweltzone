@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/johnjohndoe/Umweltzone.svg?branch=master)](https://travis-ci.org/johnjohndoe/Umweltzone) 
+[![Build Status](https://travis-ci.org/Umweltzone/Umweltzone.svg?branch=master)](https://travis-ci.org/Umweltzone/Umweltzone)
 [![GPL license][gpl-license-badge]][gpl-license-link]
 
 # Umweltzone

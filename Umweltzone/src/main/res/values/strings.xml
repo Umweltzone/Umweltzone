@@ -187,7 +187,7 @@
     </string>
     <string name="appinfo_sourcecode_url_title">Application source code</string>
     <string name="appinfo_sourcecode_url" translatable="false">
-        http://bitbucket.org/tbsprs/umweltzone
+        https://https://github.com/Umweltzone/Umweltzone
     </string>
 
     <!-- AboutActivity / License -->
