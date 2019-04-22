@@ -16,6 +16,19 @@
 -->
 <changelog>
     <release
+        version="3.7.0"
+        versioncode="307000">
+        <change>
+            Aktualisierung: Der Stadtinfos-Bildschirm hat ein neues Aussehen
+            bekommen, mit dem es zukünftig möglich sein wird, die Informationen
+            mehrerer Zonen anzuzeigen, bspw. Umweltzone und Dieselfahrverbotszone.
+        </change>
+        <change>
+            Weiterhin sind interne Umbauarbeiten im Gange, um in Kürze auch
+            Dieselfahrverbote anzeigen zu können.
+        </change>
+    </release>
+    <release
         version="3.6.0"
         versioncode="306000">
         <change>

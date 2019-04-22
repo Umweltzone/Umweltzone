@@ -1,5 +1,28 @@
 # Umweltzone changelog
 
+## [v.3.7.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.7.0)
+
+* Published: 2019-04-22
+
+### Features, improvements and maintenance
+
+* Update URLs to reflect the new project location., [0974e](https://bitbucket.org/tbsprs/umweltzone/commits/0974e5442c47c76d0acc458b299441af021b62ba)
+* Convert DetailsFragmentTest to Kotlin., [8753d](https://bitbucket.org/tbsprs/umweltzone/commits/8753d43d0c5029cf7888753c0a4b6f5f63445bc8)
+* Convert NoCitySelectedFragmentTest to Kotlin., [6d1dc](https://bitbucket.org/tbsprs/umweltzone/commits/6d1dc56d5c32a7fdaf44139d451076fed648f10c)
+* Revise zone details screen., [036f3](https://bitbucket.org/tbsprs/umweltzone/commits/036f374ac812dc9dc89f0cdbe1713c972715088e)
+* Use TextView.textOrHide extension property., [8bb42](https://bitbucket.org/tbsprs/umweltzone/commits/8bb423455eb613d9480efaefc098ae1b574d397e)
+* Use View.isVisible extension property., [7f99d](https://bitbucket.org/tbsprs/umweltzone/commits/7f99db5bbfa3a07b80bc9d766d29563d41e40836)
+
+
+### Libraries, build tools, SDK
+
+* Use play-services v.16.1.0., [ee47a](https://bitbucket.org/tbsprs/umweltzone/commits/ee47acb88de44a171086be74de68f9c1949edf47)
+* Use Gradle wrapper v.5.4., [c8bc4](https://bitbucket.org/tbsprs/umweltzone/commits/c8bc495d399a1cffc351a6cb19d9557d954d9194)
+* Use jackson-databind v.2.9.8., [4f757](https://bitbucket.org/tbsprs/umweltzone/commits/4f757d5ce69a0012822f8c17a912417a05e923b0)
+* Use Kotlin 1.3.30., [de38d](https://bitbucket.org/tbsprs/umweltzone/commits/de38dee6c7627d3b7b87edc423707d0fedbe7917)
+* Use strict-version-matcher-plugin v.1.1.0., [e191d](https://bitbucket.org/tbsprs/umweltzone/commits/e191d10e17ad4dec3ad16c304db034a03db4bcfd)
+
+
 ## [v.3.6.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.6.0)
 
 * Published: 2019-04-05

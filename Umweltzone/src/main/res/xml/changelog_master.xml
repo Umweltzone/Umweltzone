@@ -16,6 +16,19 @@
 -->
 <changelog>
     <release
+        version="3.7.0"
+        versioncode="307000">
+        <change>
+            Update: The new layout of the city info screen is prepared
+            to display information of multiple zones such as a low emission
+            zone and a Diesel prohibition zone.
+        </change>
+        <change>
+            Still internal refactorings are ongoing with the objective
+            to show Diesel prohibition zones soon.
+        </change>
+    </release>
+    <release
         version="3.6.0"
         versioncode="306000">
         <change>
