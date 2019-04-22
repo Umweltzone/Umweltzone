@@ -141,7 +141,7 @@
         versioncode="300000">
         <change>
             Android: Die niedrigste, unterstützte Version ist jetzt Android 2.3
-            (Gingerbread), um die zukünfigte Weiterentwicklung der App zu ermöglichen.
+            (Gingerbread), um die zukünftige Weiterentwicklung der App zu ermöglichen.
         </change>
         <change>
             Neu: Seit dem 01.10.2017 hat Overath eine Umweltzone. Die Beantwortung
@@ -215,7 +215,7 @@
             Die Liste der verwendeten Bibliotheken ist jetzt alphabetisch sortiert.
         </change>
         <change>
-            Aktualisierung: Teile des zugrundliegenden Codes wurden umgeschrieben,
+            Aktualisierung: Teile des zugrundeliegenden Codes wurden umgeschrieben,
             um automatische Tests nutzen zu können.
         </change>
     </release>

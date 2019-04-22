@@ -19,7 +19,6 @@
 * Fix formatting of share message text., [1d12a](https://bitbucket.org/tbsprs/umweltzone/commits/1d12a306d5fe9b97e7296301140c3fc859e64ae6)
 * Fix dynamic text prefix being displayed dependent on the current date., [04b4d](https://bitbucket.org/tbsprs/umweltzone/commits/04b4d8ad283406c1693bf47ad56e41c1fcbdcbf5)
 
-
 ### Libraries, build tools, SDK
 
 * Use strict-version-matcher-plugin v.1.0.2., [d8904](https://bitbucket.org/tbsprs/umweltzone/commits/d8904088cb8d10dddb38b1086690c411378cd369)
