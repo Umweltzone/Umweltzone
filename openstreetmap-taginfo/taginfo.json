@@ -1,12 +1,12 @@
 {
     "data_format": 1,
-    "data_url": "https://raw.githubusercontent.com/johnjohndoe/Umweltzone/master/openstreetmap-taginfo/taginfo.json",
+    "data_url": "https://raw.githubusercontent.com/Umweltzone/Umweltzone/master/openstreetmap-taginfo/taginfo.json",
     "data_updated": "20180915T100000Z",
     "project": {
         "name": "Umweltzone",
         "description": "Low emission zone information for German cities.",
         "project_url": "https://play.google.com/store/apps/details?id=de.avpptr.umweltzone",
-        "icon_url": "https://raw.githubusercontent.com/johnjohndoe/Umweltzone/master/openstreetmap-taginfo/icon-16x16.png",
+        "icon_url": "https://raw.githubusercontent.com/Umweltzone/Umweltzone/master/openstreetmap-taginfo/icon-16x16.png",
         "contact_name": "Tobias Preuss",
         "contact_email": "umweltzone.android@googlemail.com"
     },
