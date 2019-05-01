@@ -23,9 +23,14 @@ android:
 before_script:
   - echo ANDROID_API_LEVEL=$ANDROID_API_LEVEL
   - echo ANDROID_BUILD_TOOLS_VERSION=$ANDROID_BUILD_TOOLS_VERSION
+  - android-wait-for-emulator
+  - adb shell input keyevent 82
+
+install:
+  - ./gradlew clean assembleDebug testDebug assembleAndroidTest --stacktrace -PdisablePreDex
 
 script:
-  - ./gradlew clean testDebug assembleDebug -PdisablePreDex
+  - ./gradlew testDebug connectedCheck --stacktrace -PdisablePreDex
 
 before_cache:
   - rm -f  $TRAVIS_BUILD_DIR/.gradle/caches/modules-2/modules-2.lock
@@ -42,3 +47,17 @@ before_install:
   - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
   # Make Gradle wrapper executable.
   - chmod +x gradlew
+  # Silence warning.
+  - mkdir -p ~/.android
+  - touch ~/.android/repositories.cfg
+  # Install SDK license so Android Gradle plugin can install deps.
+  - mkdir "$ANDROID_HOME/licenses" || true
+  # Accept licenses before installing components, no need to echo y for each component
+  - yes | sdkmanager --licenses
+  # Install the rest of tools (e.g., avdmanager)
+  - sdkmanager tools
+  # Install the system image
+  - sdkmanager "system-images;android-22;default;armeabi-v7a"
+  # Create and start emulator for the script. Meant to race the install task.
+  - echo no | avdmanager create avd --force -n test -k "system-images;android-22;default;armeabi-v7a"
+  - $ANDROID_HOME/emulator/emulator -avd test -no-audio -no-window &
