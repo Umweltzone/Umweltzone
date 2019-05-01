@@ -8,12 +8,6 @@ notifications:
   email: true
 
 before_script:
-  # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
-  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
-  # Disable parallel execution of Gradle tasks.
-  - echo "org.gradle.parallel=false" >> gradle.properties
-  # Disable Gradle daemon.
-  - echo "org.gradle.daemon=false" >> gradle.properties
   - android-wait-for-emulator
   - adb shell input keyevent 82
   - cat gradle.properties
@@ -35,6 +29,13 @@ cache:
     - $TRAVIS_BUILD_DIR/.android/build-cache
 
 before_install:
+  # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
+  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
+  # Disable parallel execution of Gradle tasks.
+  - echo "org.gradle.parallel=false" >> gradle.properties
+  # Disable Gradle daemon.
+  - echo "org.gradle.daemon=false" >> gradle.properties
+  # Make Gradle wrapper executable.
   - chmod +x gradlew
   # Install SDK license so Android Gradle plugin can install deps.
   - mkdir "$ANDROID_HOME/licenses" || true
