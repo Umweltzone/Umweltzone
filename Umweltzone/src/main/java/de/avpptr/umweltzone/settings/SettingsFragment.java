@@ -34,7 +34,7 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.settings);
 
-        Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
+        Umweltzone application = (Umweltzone) requireActivity().getApplicationContext();
         PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         findPreference(getString(R.string.settings_key_google_analytics))
                 .setOnPreferenceChangeListener((preference, isEnabled) -> {

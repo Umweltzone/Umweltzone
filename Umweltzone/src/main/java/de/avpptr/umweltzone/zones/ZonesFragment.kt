@@ -37,7 +37,8 @@ class ZonesFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        administrativeZones = ContentProvider.getAdministrativeZones(activity)
+        val context = requireContext()
+        administrativeZones = ContentProvider.getAdministrativeZones(context)
         val zoneViewModels = administrativeZones.toZoneViewModels(context)
         administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick, ::onItemViewInflationError)
     }
@@ -47,7 +48,7 @@ class ZonesFragment : BaseFragment() {
         val zone = administrativeZones.single { it.displayName == zoneViewModel.name }
         mTracking.track(TrackingPoint.CityListItemClick, zone.name)
         storeSelectedLocation(zone)
-        val intent = IntentHelper.getNewMapIntent(activity)
+        val intent = IntentHelper.getNewMapIntent(requireContext())
         Umweltzone.centerZoneRequested = true
         startActivity(intent)
     }
@@ -59,7 +60,7 @@ class ZonesFragment : BaseFragment() {
     private fun storeSelectedLocation(zone: AdministrativeZone) =
             preferencesHelper.storeAdministrativeZone(zone)
 
-    private val preferencesHelper by lazy { (activity.applicationContext as Umweltzone).preferencesHelper }
+    private val preferencesHelper by lazy { (requireContext().applicationContext as Umweltzone).preferencesHelper }
 
     companion object {
 

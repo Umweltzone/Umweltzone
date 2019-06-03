@@ -107,7 +107,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
+        FragmentActivity activity = requireActivity();
+        final Umweltzone application = (Umweltzone) activity.getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();
         mMapReadyDelegate = new MapReadyDelegate(
                 mPreferencesHelper,
@@ -116,7 +117,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
                     Umweltzone.centerZoneRequested = centerZoneRequested;
                     return null;
                 },
-                () -> AdministrativeZone.getDefaultAdministrativeZone(getActivity()),
+                () -> AdministrativeZone.getDefaultAdministrativeZone(activity),
                 new MapReadyDelegate.Listener() {
 
                     @Override
@@ -149,7 +150,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater,
+    public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View layout = super.onCreateView(inflater, container, savedInstanceState);
@@ -186,7 +187,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         Bundle mapViewBundle = outState.getBundle(MAP_VIEW_BUNDLE_KEY);
         if (mapViewBundle == null) {
@@ -219,7 +220,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             mTracking.trackError(TrackingPoint.MapIsNullError, null);
             throw new IllegalStateException("Map is null");
         } else {
-            CameraUpdate zoneBounds = CameraUpdateHelper.getCameraUpdate(getActivity(), latLngBounds);
+            CameraUpdate zoneBounds = CameraUpdateHelper.getCameraUpdate(requireActivity(), latLngBounds);
             mMap.moveCamera(zoneBounds);
         }
     }
@@ -230,7 +231,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void setUpMapIfNeeded() {
         if (mMap == null) {
-            FragmentActivity activity = getActivity();
+            FragmentActivity activity = requireActivity();
             Context context = activity.getApplicationContext();
             int connectionResult = GoogleApiAvailability.getInstance()
                     .isGooglePlayServicesAvailable(context);
@@ -311,7 +312,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void drawPolygonOverlay() {
-        Activity activity = getActivity();
+        Activity activity = requireActivity();
         String cityName = mPreferencesHelper.restoreLastKnownLocationAsString();
         if (cityName == null || cityName.length() < 1) {
             return;
@@ -321,7 +322,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void showZoneNotDrawableDialog() {
-        FragmentActivity activity = getActivity();
+        FragmentActivity activity = requireActivity();
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         Fragment fragment = fragmentManager
                 .findFragmentByTag(ZoneNotDrawableDialog.FRAGMENT_TAG);
@@ -343,7 +344,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void updateSubTitle() {
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        AppCompatActivity activity = (AppCompatActivity) requireActivity();
         AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(activity);
         String title = administrativeZone.displayName;
         updateSubTitle(title);

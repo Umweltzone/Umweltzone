@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.map;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.WindowManager;
@@ -43,7 +44,7 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initFragment(new MapFragment(), MapFragment.FRAGMENT_TAG);
         mActionBar.setDisplayHomeAsUpEnabled(false);

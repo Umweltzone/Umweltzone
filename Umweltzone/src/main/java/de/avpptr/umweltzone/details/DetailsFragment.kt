@@ -63,7 +63,7 @@ class DetailsFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         if (activity != null && administrativeZone != null) {
-            updateDetails(activity, administrativeZone!!)
+            updateDetails(activity!!, administrativeZone!!)
             updateSubTitle(administrativeZone!!.displayName)
         }
     }
@@ -126,6 +126,7 @@ class DetailsFragment : BaseFragment() {
     private fun updateOtherDetails(rootView: View, model: OtherDetailsViewModel) {
         val furtherInformationView = rootView.findViewById(R.id.detailsOtherFurtherInformationView) as TextView
         val badgeOnlineView = rootView.findViewById(R.id.detailsOtherBadgeOnlineView) as TextView
+        val activity = requireActivity()
         return with(model) {
             ViewHelper.setupTextViewExtended(activity,
                     furtherInformationView,

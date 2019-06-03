@@ -71,7 +71,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final FragmentActivity activity = getActivity();
+        final FragmentActivity activity = requireActivity();
         Bundle extras = getArguments();
         Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE);
         final AdministrativeZone administrativeZone = Parcels.unwrap(parcelable);
