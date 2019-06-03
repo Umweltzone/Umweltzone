@@ -105,7 +105,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final Umweltzone application = (Umweltzone) getActivity().getApplicationContext();
         mPreferencesHelper = application.getPreferencesHelper();
