@@ -105,9 +105,6 @@ public class GoogleAnalyticsTracking implements Tracking {
             case MapIsNullError:
             case ParsingZonesFromJSONFailedError:
             case CityRowCouldNotBeInflatedError:
-                errorIsFatal = true;
-                eventDescription += ", " + parameter;
-                break;
             case ResourceNotFoundError:
                 errorIsFatal = true;
                 eventDescription += ", " + parameter;
