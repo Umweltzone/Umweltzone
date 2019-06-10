@@ -30,7 +30,7 @@ class NoCitySelectedFragment : BaseFragment() {
 
     override fun onResume() {
         super.onResume()
-        setUpViews(activity)
+        setUpViews(requireActivity())
     }
 
     private fun setUpViews(activity: Activity) {

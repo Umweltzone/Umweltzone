@@ -42,7 +42,7 @@ class MyLocationPermission {
     }
 
     boolean isGranted() {
-        return checkSelfPermission(fragment.getActivity(), ACCESS_COARSE_LOCATION) == PERMISSION_GRANTED;
+        return checkSelfPermission(fragment.requireActivity(), ACCESS_COARSE_LOCATION) == PERMISSION_GRANTED;
     }
 
     void request() {

@@ -43,14 +43,14 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(
-            LayoutInflater inflater,
+            @NonNull LayoutInflater inflater,
             @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
         return inflater.inflate(getLayoutResource(), container, false);
     }
 
     protected void updateSubTitle(@NonNull String title) {
-        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        AppCompatActivity activity = (AppCompatActivity) requireActivity();
         ActionBar actionBar = activity.getSupportActionBar();
         if (actionBar != null) {
             actionBar.setSubtitle(title);

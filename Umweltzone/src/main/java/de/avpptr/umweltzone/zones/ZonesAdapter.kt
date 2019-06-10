@@ -32,6 +32,7 @@ class ZonesAdapter(
         private val onItemClick: (view: View) -> Unit,
         private val onItemViewInflationError: (viewType: Int) -> Unit
 
+// TODO Replace with ListAdapter https://developer.android.com/topic/libraries/support-library/revisions#27-1-0
 ) : RecyclerView.Adapter<ZoneViewHolder<ZoneViewModel>>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ZoneViewHolder<ZoneViewModel> {
