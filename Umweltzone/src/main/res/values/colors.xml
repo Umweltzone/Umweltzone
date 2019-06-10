@@ -63,7 +63,6 @@
     <color name="city_zone_2">#D81B15</color>
     <color name="city_zone_3">#E5CC15</color>
     <color name="city_zone_4">#108434</color>
-    <color name="city_zone_badge_default_fill_color">#888888</color>
     <color name="city_zone_badge_default_stroke_color">@android:color/black</color>
     <color name="city_zone_badge_text">@android:color/black</color>
 

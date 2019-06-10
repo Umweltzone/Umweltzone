@@ -18,13 +18,14 @@
 package de.avpptr.umweltzone.zones;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import de.avpptr.umweltzone.base.BaseActivity;
 
 public class ZonesActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initFragment(new ZonesFragment(), ZonesFragment.FRAGMENT_TAG);
     }

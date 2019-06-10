@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.settings;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.Menu;
 
 import de.avpptr.umweltzone.base.BaseActivity;
@@ -25,7 +26,7 @@ import de.avpptr.umweltzone.base.BaseActivity;
 public class SettingsActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initFragment(new SettingsFragment(), SettingsFragment.FRAGMENT_TAG);
     }
