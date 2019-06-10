@@ -104,11 +104,6 @@
         <item name="android:layout_marginBottom">@dimen/large_spacer</item>
     </style>
 
-    <style name="VerticalSpacerLarge">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/large_spacer</item>
-    </style>
-
     <style name="TextView.Base.Small" parent="@android:style/TextAppearance.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -202,12 +197,6 @@
     <style name="NoCitySelected.SelectZone" parent="Button.Base" />
 
     <!-- DetailsFragment formerly CityInfoFragment -->
-
-    <style name="ZoneInfo.ShowZoneOnMap" parent="Button.Base">
-        <item name="android:layout_marginBottom">@dimen/large_spacer</item>
-    </style>
-
-    <style name="ZoneInfo.Title" parent="TextView.Title" />
 
     <style name="ZoneInfo.ZoneStatus" parent="TextView.Base.Medium">
         <item name="android:textSize">18sp</item>
