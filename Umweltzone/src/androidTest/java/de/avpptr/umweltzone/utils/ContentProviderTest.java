@@ -57,7 +57,8 @@ public class ContentProviderTest {
             "lez_ruhrregion", "lez_schramberg", "lez_schwaebisch_gmuend", "lez_siegen",
             "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",
-            "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse"
+            "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse",
+            "dpz_berlin"
     };
 
     private static final String[] ZONE_FILE_NAMES_WITHOUT_COORDINATES = {

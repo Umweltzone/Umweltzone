@@ -93,6 +93,20 @@
         "name" : "berlin",
         "displayName" : "Berlin",
         "childZones" : [{
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "dpz_berlin",
+            "displayName" : "Berlin",
+            "zoneNumber" : "6",
+            "zoneNumberForResidentsSince" : null,
+            "zoneNumberForNonResidentsSince" : "2019-08-01",
+            "prohibitedVehicles" : [
+                "HGV",
+                "CAR"
+            ],
+            "isCongruentWithLowEmissionZone" : false,
+            "geometrySource" : "Senatsverwaltung für Umwelt, Verkehr und Klimaschutz, Berlin",
+            "geometryUpdatedAt" : "2019-08-01"
+        }, {
             "type" : "low-emission-zone",
             "fileName" : "lez_berlin",
             "displayName" : "Berlin",
