@@ -1,5 +1,33 @@
 # Umweltzone changelog
 
+## [v.4.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.4.0.0)
+
+* Published: 2019-08-31
+
+### Features, improvements and maintenance
+
+* Address Diesel prohibition zones in "About" screen texts and README.md., [bcff1](https://bitbucket.org/tbsprs/umweltzone/commits/bcff10097445d0a57fb0acb7b0a77f2266f7c161)
+* Add zone data for Berlin's Diesel prohibition zones (incl. coordinates)., [87a97](https://bitbucket.org/tbsprs/umweltzone/commits/87a9761b27233942b8d0dabe258e832d41926917)
+* Enhance visual perception of Diesel prohibition zones., [c3a09](https://bitbucket.org/tbsprs/umweltzone/commits/c3a0981e007ac506146f3670080b47b36bab1189)
+* Introduce DieselProhibitionZone., [21c8d](https://bitbucket.org/tbsprs/umweltzone/commits/21c8de372bd69c068536016abc194251f90af16c)
+* Introduce RoadSign view to zone details screen., [c32b3](https://bitbucket.org/tbsprs/umweltzone/commits/c32b32e1afdff5af635237d90618dcb591e79343)
+* Fix source code URL in "About" screen., [03030](https://bitbucket.org/tbsprs/umweltzone/commits/0303011b94b05d2a909c4028358e0cd8d91749eb)
+* Fix horizontal alignment of "About" screen texts., [73b13](https://bitbucket.org/tbsprs/umweltzone/commits/73b13a88f070e2b596f87a325388cca1667df91d)
+
+### Libraries, build tools, SDK
+
+* Use Android plugin for Gradle v.3.5.0., [a784a](https://bitbucket.org/tbsprs/umweltzone/commits/a784a2b4ffc740cae180af5a8519c611fface39f)
+* Use Gradle wrapper v.5.6.1., [e4d9f](https://bitbucket.org/tbsprs/umweltzone/commits/e4d9f33a8a19930234760ee94069f8471b63ca2d)
+* Use Kotlin v.1.3.50., [2f5c5](https://bitbucket.org/tbsprs/umweltzone/commits/2f5c5fb508f1cf322c6018900761b0703325ac99)
+* Use kotlin-stdlib-jdk8 v.1.3.31., [062c2](https://bitbucket.org/tbsprs/umweltzone/commits/062c29cbdc4be693d45b13ac505f703f1f9683c9)
+* Use gradle-versions-plugin v.0.23.0., [74eb28](https://bitbucket.org/tbsprs/umweltzone/commits/74eb288b76d5b6d915f43a56c79e9c62e38ec5f5)
+* Use snackengage-playrate v.0.19., [33bcd](https://bitbucket.org/tbsprs/umweltzone/commits/33bcd9ffadce32077bd0bddb069fd64a49fb4d2d)
+* Use targetSdkVersion 27, compileSdkVersion 27 and Google support library v.27.1.1., [46093](https://bitbucket.org/tbsprs/umweltzone/commits/460933e727abc24b28bf37cfadd4a9fd9f2e4639)
+* Use jackson-databind v.2.9.9., [9c9e3](https://bitbucket.org/tbsprs/umweltzone/commits/9c9e35ae93911fa2b7ca174edfc8d35f4cf264b8)
+* Use proguard-gradle v.6.1.1., [c9353](https://bitbucket.org/tbsprs/umweltzone/commits/c93532cd721c833b92529564e98090423ce5e5a6)
+* Update release candidate filter of the gradle-versions-plugin., [0d5e0](https://bitbucket.org/tbsprs/umweltzone/commits/0d5e0e13c03b62c898fff82005aa86f8777637ee)
+
+
 ## [v.3.7.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.3.7.0)
 
 * Published: 2019-04-22

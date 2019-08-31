@@ -16,6 +16,26 @@
 -->
 <changelog>
     <release
+        version="4.0.0"
+        versioncode="400000">
+        <change>
+            New: Introduce Diesel prohibition zones for Berlin, Hamburg and Stuttgart.
+            Relevant detail information is shown on the city info screen.
+        </change>
+        <change>
+            Update: Revise "About" screen texts to address Diesel prohibition zones.
+        </change>
+        <change>
+            Android: The app is now optimized for Android 8.1 (Oreo).
+        </change>
+        <change>
+            Bugfix: Correct broken source code link in "About" screen.
+        </change>
+        <change>
+            Bugfix: Correctly center "About" screen texts horizontally.
+        </change>
+    </release>
+    <release
         version="3.7.0"
         versioncode="307000">
         <change>

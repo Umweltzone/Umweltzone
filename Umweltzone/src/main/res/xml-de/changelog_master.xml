@@ -16,6 +16,27 @@
 -->
 <changelog>
     <release
+        version="4.0.0"
+        versioncode="400000">
+        <change>
+            Neu: Erstmalig werden Dieselfahrverbote für Berlin, Hamburg und Stuttgart dargestellt.
+            Die relevanten Detailinformationen sind auf dem Stadtinfos-Bildschirm zu finden.
+        </change>
+        <change>
+            Aktualisierung: Die Texte auf dem "Über"-Bildschirm sind überarbeitet,
+            so dass nun auch Dieselfahrverbote erwähnt werden.
+        </change>
+        <change>
+            Android: Die App ist jetzt für Android 8.1 (Oreo) optimiert.
+        </change>
+        <change>
+            Bugfix: Der fehlerhafte Link zum Quellcode der App auf dem "Über"-Bildschirm ist repariert.
+        </change>
+        <change>
+            Bugfix: Die zentrierte Ausrichtung des Texts auf dem "Über"-Bildschirm ist korrigiert.
+        </change>
+    </release>
+    <release
         version="3.7.0"
         versioncode="307000">
         <change>
