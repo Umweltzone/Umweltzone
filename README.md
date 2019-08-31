@@ -92,14 +92,13 @@ $ ./gradlew clean connectedAndroidTest
 * [Fünfunddreißigste Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes][immissionsschutzgesetz-link]
 
 
-## Authors
+## Author
 
 * [Tobias Preuss](https://bitbucket.org/tbsprs)
-* [Peter Vasil](https://github.com/ptrv)
-
 
 ## Contributors
 
+* [Peter Vasil](https://github.com/ptrv)
 * [cketti](https://github.com/cketti)
 * [daus-salar](https://bitbucket.com/daus-salar)
 
