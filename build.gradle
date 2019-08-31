@@ -5,6 +5,7 @@ buildscript {
         // Plugins
         androidGradlePluginVersion = "3.3.2"
         gradleVersionsPluginVersion = "0.21.0"
+        gradleVersionsPluginVersion = "0.23.0"
         proguardGradlePluginVersion = "6.1.1"
 
         // Libraries
@@ -15,7 +16,7 @@ buildscript {
         espressoVersion = "3.0.2"
         jacksonVersion = "2.9.9"
         junitVersion = "4.12"
-        kotlinVersion = "1.3.31"
+        kotlinVersion = "1.3.50"
         parcelerVersion = "1.1.12"
         playServicesVersion = "16.1.0"
         rulesVersion = "1.0.2"
