@@ -215,6 +215,10 @@
         <item name="android:gravity">left</item>
     </style>
 
+    <style name="ZoneInfo.Content.Emphasized" parent="ZoneInfo.Content">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <!-- FaqActivity -->
 
     <style name="Faq.ExpandableListView" parent="Base.Widget.AppCompat.ListView">

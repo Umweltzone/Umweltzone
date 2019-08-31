@@ -64,6 +64,7 @@ android {
         String sharedTestDir = "src/sharedTest/java"
         androidTest {
             java.srcDirs += sharedTestDir
+            kotlin.srcDirs += sharedTestDir
         }
         test {
             java.srcDirs += sharedTestDir
@@ -132,6 +133,7 @@ dependencies {
     implementation "com.github.ligi.snackengage:snackengage-playrate:$snackengagePlayrateVersion"
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
+    implementation "info.metadude.kotlin.library.roadsigns:roadsigns:$roadSignsVersion"
     implementation "org.parceler:parceler-api:$parcelerVersion"
     kapt "org.parceler:parceler:$parcelerVersion"
     implementation files("libs/libGoogleAnalyticsServices.jar")

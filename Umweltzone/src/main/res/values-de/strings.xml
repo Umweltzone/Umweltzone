@@ -29,7 +29,7 @@
 
     <!-- Share intent -->
     <string name="share_intent_message">
-        <![CDATA[Kennst du schon Umweltzone? Diese Android-App enthält alle Informationen über Umweltzonen in Deutschland.
+        <![CDATA[Kennst du schon Umweltzone? Diese Android-App enthält alle Informationen über Umweltzonen und Dieselfahrverbote in Deutschland.
         \nHier kostenlos herunterladen: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
@@ -48,7 +48,7 @@
     </string>
     <string name="about_activity_title">Über</string>
     <string name="appinfo_subtitle">
-        Eine Android App für Umweltzonen in Deutschland
+        Eine Android App für Umweltzonen und Dieselfahrverbote in Deutschland
     </string>
 
     <!-- AboutActivity / Copyright -->
@@ -60,35 +60,42 @@
     <!-- AboutActivity / Description -->
     <string name="appinfo_description_title">Beschreibung</string>
     <string name="appinfo_description_content">
-        Diese Anwendung informiert über den Verlauf von Umweltzonen und führt
-        weiterführende Daten und Fakten zum Thema auf. Die Umweltzonen dürfen
+        Diese Anwendung informiert über Umweltzonen und Dieselfahrverbote und führt
+        weiterführende Daten und Fakten zu diesen Themen auf. Die Umweltzonen dürfen
         nur von Fahrzeugen befahren werden, die mit einer entsprechenden Plakette
-        (Schadstoffgruppe) gekennzeichnet sind. Ausgesprochenes Ziel dieser
-        Beschränkung ist es, die Luftqualität zu verbessern. Die Belastung
+        (Schadstoffgruppe) gekennzeichnet sind. Dieselfahrverbote gelten für Fahrzeuge,
+        die bestimmte Diesel-Abgasnormen nicht erfüllen. Ausgesprochenes Ziel dieser
+        Beschränkungen ist es, die Luftqualität zu verbessern. Die Belastung
         durch Feinstaub soll reduziert und somit die Gesundheit der Bevölkerung
-        geschützt werden. &#8212; Neben der Karte und der Umweltzonen-Liste bietet
-        die Detailansicht weiterführende Informationen zur ausgewählten Zone.
+        geschützt werden. &#8212; Neben der Karte und der Städte-Liste bietet
+        die Detailansicht weiterführende Informationen zur ausgewählten Stadt.
         Eine Auswahl von häufig gestellten Fragen ist über den Menüpunkt
-        &#8220;FAQ&#8221; erreichbar. Für weitere Themen wird an verschiedenen
+        &#8220;FAQ&#8221; erreichbar. Für weitere Themen wird an passenden
         Stellen auf Informationsangebote im Internet verwiesen.
     </string>
 
     <!-- AboutActivity / Disclaimer -->
-    <string name="appinfo_disclaimer_title">Daten und Qualität</string>
+    <string name="appinfo_disclaimer_title">Daten, Qualität und Aktualisierung</string>
     <string name="appinfo_disclaimer_content">
         Die Daten und Koordinaten der Umweltzonen wurden, soweit vorhanden,
         in digitaler Form von offiziellen Stellen übernommen. Eine primäre
         Quelle ist weiterhin OpenStreetMap. Dort können die Geodaten vieler
         Umweltzonen abgerufen werden. Außerdem wurden einige der Daten und
-        Koordinaten der Umweltzonen manuell erstellt. Grundlage sind die
-        offiziellen Publikationen des Umweltbundesamts.
+        Koordinaten der Umweltzonen und Dieselfahrverbote manuell erstellt.
+        Grundlage sind auch die offiziellen Publikationen des Umweltbundesamts.
         Da der Verlauf der Umweltzone von den Behörden meist nur als analoge Grafik
         (eingescanntes Kartenmaterial) veröffentlicht wird, kann die Genauigkeit
         der in der Anwendung dargestellten Zonengrenze von der Realität
-        abweichen. Bedingt durch die unterschiedliche Herkunft, Qualität sowie
-        den manuellen Digitalisierungsprozess können wir nicht für die korrekte
-        Darstellung garantieren und keine Haftung und etwaige Kosten oder
-        Strafen übernehmen.
+        abweichen.
+        Leider informieren die Städte nicht automatisiert über Änderungen der
+        Umweltzonen und Dieselfahrverbote. Die Aktualisierung der Zonendaten ist
+        ein manueller Prozess. Wir sind darauf angewiesen, dass freundlicher
+        Nutzer_innen, wie Du, uns auf neue Regelungen aufmerksam machen.
+        Bedingt durch die unterschiedliche Herkunft, Qualität, den manuellen
+        Digitalisierungsprozess sowie die nicht-automatisierte Aktualsierung
+        können wir nicht für die korrekte Darstellung garantieren und keine
+        Haftung und etwaige Kosten oder Strafen übernehmen. Daher empfehlen wir
+        die Strassenschilder vor Ort immer zu beachten.
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Umweltbundesamt</string>
 
@@ -172,6 +179,7 @@
     <string name="city_info_activity_title">Stadtinfos</string>
 
     <string name="city_info_section_title_lez">Details zur Umweltzone</string>
+    <string name="city_info_section_title_dpz">Details zum Dieselfahrverbot</string>
     <string name="city_info_section_title_other">Sonstige Informationen</string>
 
     <string name="city_info_zone_status">frei</string>
@@ -231,6 +239,39 @@
     <string name="city_info_geometry_updated_at_text">
         Letzte Aktualisierung der
         Zonengeometrie: <xliff:g example="6. September 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Nur Fahrzeuge, die mindestens der Diesel-Abgasnorm
+        Euro <xliff:g example="6" id="number">%1$d</xliff:g> entsprechen,
+        dürfen in die Dieselfahrverbotszone fahren.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        Für Anwohner gilt die Regelung seit dem <xliff:g example="31. May 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        Für Auswärtige gilt die Regelung seit dem <xliff:g example="31. May 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        Diese Bestimmung gilt für <xliff:g example="PKWs und LKWs" id="vehicles">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">
+        PKWs
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">
+        LKWs
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">
+        PKWs und LKWs
+    </string>
+
+    <string name="city_info_is_congruent_with_lez">
+        Diese Zone is deckungsgleich mit der Umweltzone.
     </string>
 
     <!-- NoCitySelectedFragment -->

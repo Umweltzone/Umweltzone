@@ -6,13 +6,12 @@
 This application enables people to look up the areas of cities
 which are restricted for being used by cars limited by their
 specific emission profile. The app shows the outline of the low emission
-zones and provides additional information about dates or special
-regulations such as for vehicles registered abroad. Moreover, the
-user can use the FAQs to read about emission groups, fine particles,
+zones and Diesel prohibition zones and provides additional information
+about dates or special regulations such as for vehicles registered abroad.
+Moreover, users can use the FAQs to read about emission groups, fine particles,
 stickers for cars or motorbikes, punishments, exception permits and
-many more. Further, there are several links included
-pointing to external websites which serve more information to
-read through.
+many more. Further, there are several links included pointing to external
+websites which serve more information to read through.
 
 
 [![Available for Android at Google Play][google-play-badge]][google-play-link]
@@ -20,7 +19,8 @@ read through.
 
 ## Screenshot
 
-The map screen of the app shows the outline of the low-emission zone
+The map screen of the app shows the outline of the low emission zone
+and Diesel prohibitions zones
 
 ![Umweltzone][app-screenshot]
 

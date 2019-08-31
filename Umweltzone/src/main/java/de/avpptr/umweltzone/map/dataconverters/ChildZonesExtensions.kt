@@ -26,9 +26,19 @@ import de.avpptr.umweltzone.extensions.getColorCompat
 import de.avpptr.umweltzone.map.viewmodels.CircuitViewModel
 import de.avpptr.umweltzone.models.ChildZone
 import de.avpptr.umweltzone.models.Circuit
+import de.avpptr.umweltzone.models.DieselProhibitionZone
+import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.ContentProvider
 import de.avpptr.umweltzone.utils.GeoPoint
 import de.avpptr.umweltzone.utils.shapeFillColor
+
+/**
+ * Returns a list of child zones which are sorted in order to render
+ * DieselProhibitionZone elements on top of LowEmissionZone elements
+ * to enhance visual perception.
+ */
+val List<ChildZone>.visuallySorted: List<ChildZone>
+    get() = sortedBy { it is DieselProhibitionZone }
 
 fun List<ChildZone>.toCircuitViewModels(context: Context): List<CircuitViewModel> {
     val strokeColor = context.getColorCompat(R.color.shape_stroke_color)

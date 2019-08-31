@@ -20,26 +20,18 @@
 package de.avpptr.umweltzone.utils
 
 import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
 import android.support.annotation.StringRes
-
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
 import de.avpptr.umweltzone.contract.Resources
-
-val @receiver:LowEmissionZoneNumbers.Color Int.statusDrawable
-    @DrawableRes get() = when (this) {
-        LowEmissionZoneNumbers.RED -> R.drawable.umweltzone_status_2
-        LowEmissionZoneNumbers.YELLOW -> R.drawable.umweltzone_status_3
-        LowEmissionZoneNumbers.GREEN -> R.drawable.umweltzone_status_4
-        else -> Resources.INVALID_RESOURCE_ID
-    }
 
 val @receiver:LowEmissionZoneNumbers.Color Int.color
     @ColorRes get() = when (this) {
         LowEmissionZoneNumbers.RED -> R.color.city_zone_2
         LowEmissionZoneNumbers.YELLOW -> R.color.city_zone_3
         LowEmissionZoneNumbers.GREEN -> R.color.city_zone_4
+        LowEmissionZoneNumbers.LIGHT_BLUE -> R.color.city_zone_5
+        LowEmissionZoneNumbers.DARK_BLUE -> R.color.city_zone_6
         else -> R.color.city_zone_none
     }
 
@@ -56,5 +48,7 @@ val @receiver:LowEmissionZoneNumbers.Color Int.shapeFillColor
         LowEmissionZoneNumbers.RED -> R.color.shape_fill_color_zone_2
         LowEmissionZoneNumbers.YELLOW -> R.color.shape_fill_color_zone_3
         LowEmissionZoneNumbers.GREEN -> R.color.shape_fill_color_zone_4
+        LowEmissionZoneNumbers.LIGHT_BLUE -> R.color.shape_fill_color_zone_5
+        LowEmissionZoneNumbers.DARK_BLUE -> R.color.shape_fill_color_zone_6
         else -> throw IllegalStateException("Unknown zone number: $this.")
     }

@@ -31,7 +31,7 @@
 
     <!-- Share intent -->
     <string name="share_intent_message">
-        <![CDATA[Try out Umweltzone - the Android app which has all information about low emission zones in Germany.
+        <![CDATA[Try out Umweltzone - the Android app which has all information about low emission zones and Diesel prohibition zones in Germany.
         \nGet it here for free: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
@@ -50,7 +50,7 @@
     </string>
     <string name="about_activity_title">About</string>
     <string name="appinfo_subtitle">
-        An Android app for low emission zones (german: Umweltzonen) in Germany
+        An Android app for low emission zones (german: Umweltzonen) and Diesel prohibition zones in Germany
     </string>
 
     <!-- AboutActivity / Copyright -->
@@ -62,34 +62,40 @@
     <!-- AboutActivity / Description -->
     <string name="appinfo_description_title">Description</string>
     <string name="appinfo_description_content">
-        This application shows the location of low emission zones (LEZ) and
-        provides further facts concerning the topic. Driving into an LEZ is
-        restricted to vehicles which are tagged with a specific sticker.
-        The sticker corresponds with the emission level of the vehicle. The aim
-        of the entry restriction is to increase the air quality within cities.
+        This application shows the location of low emission zones (LEZ) and Diesel
+        prohibition zones (DPZ) and provides further facts concerning the topics.
+        Driving into an LEZ is restricted to vehicles which are tagged with a
+        specific sticker. The sticker corresponds with the emission level of the
+        vehicle. Vehicles which do not comply with a certain Diesel exhaust emission
+        standard are restricted to enter a DPZ. The aim of the entry restrictions is
+        to increase the air quality within cities.
         Fine particles must be reduced to preserve citizen&#8217;s health. &#8212;
-        In addition to the map and a list of low emission zones there is a
-        detail view which contains individual information for the selected zone.
+        In addition to the map and a list of cities there is a detail screen which
+        contains individual information for the selected city.
         Frequently asked questions can be found via the
         &#8220;FAQ&#8221; menu item. Moreover, there are links to websites which
-        provide more information about LEZ and related topics.
+        provide more information about LEZ, DPZ and related topics.
     </string>
 
     <!-- AboutActivity / Disclaimer -->
-    <string name="appinfo_disclaimer_title">Data and quality</string>
+    <string name="appinfo_disclaimer_title">Data, quality and updates</string>
     <string name="appinfo_disclaimer_content">
         Wherever data and coordinates of the zones were available in digital
-        format they were taken from the website of the cities or governments.
+        format they were retrieved directly from cities or governments.
         Further, OpenStreetMap was an important source since a number of
         low emission zones can be found there. In addition, some zones have
         been manually digitalized based on the official publications of the
         Federal Environment Agency.
         Due to the fact that many authorities publish low resolution graphics
-        of scanned maps it cannot be guaranteed that zone border exactly matches
-        the path in reality. Zone data and coordinates vary by their source,
-        quality and precision in the digitalization process. For that reason
-        we do not guarantee for a perfect visualization and are not liable for
-        costs or punishments.
+        of scanned maps it cannot be guaranteed that the zone borders exactly
+        match the path in reality. Zone data and coordinates vary by their source,
+        quality and precision in the digitalization process.
+        Additionally, there is no automatism to be informed about changes done
+        by the cities. Zone data is updated manually and highly depends on the
+        feedback of friendly users like you.
+        For these reasons we do not guarantee for a perfect visualization and
+        we are not liable for costs or punishments. We strongly suggest to always
+        rely on the road sign in the particular cities.
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Federal Environment Agency</string>
     <string name="appinfo_references_url_umweltbundesamt" translatable="false">
@@ -154,6 +160,12 @@
     </string>
     <string name="appinfo_references_url_parceler" translatable="false">
         http://parceler.org
+    </string>
+    <string name="appinfo_references_name_road_signs" translatable="false">
+        Road signs
+    </string>
+    <string name="appinfo_references_url_road_signs" translatable="false">
+        https://github.com/Umweltzone/roadsigns
     </string>
     <string name="appinfo_references_name_snack_engage" translatable="false">
         SnackEngage
@@ -262,6 +274,7 @@
     <string name="city_info_activity_title">City info</string>
 
     <string name="city_info_section_title_lez">Details about the low emission zone</string>
+    <string name="city_info_section_title_dpz">Details about the diesel prohibition zone</string>
     <string name="city_info_section_title_other">Further information</string>
 
     <string name="city_info_zone_status">free</string>
@@ -319,6 +332,39 @@
     <string name="city_info_geometry_updated_at_text">
         Last update of the zone
         geometry: <xliff:g example="Sep 6, 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Only vehicles which at least comply with the Diesel exhaust emission standard
+        Euro <xliff:g example="6" id="number">%1$d</xliff:g> are allowed to
+        drive into the Diesel prohibition zone.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        For residents this regulation applies as of <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        For non residents this regulation applies as of <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        This provision applies to <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">
+        cars
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">
+        heavy goods vehicles
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">
+        cars and heavy goods vehicles
+    </string>
+
+    <string name="city_info_is_congruent_with_lez">
+        This zone is congruent with the low emission zone.
     </string>
 
     <!-- NoCitySelectedFragment -->

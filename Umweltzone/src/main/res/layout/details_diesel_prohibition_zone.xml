@@ -29,7 +29,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/detailsLezSectionTitleView"
+            android:id="@+id/detailsDpzSectionTitleView"
             style="@style/ZoneInfo.SectionTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -39,31 +39,47 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/city_info_section_title_lez"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezRoadSignView"
+            android:text="@string/city_info_section_title_dpz"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzRoadSignView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <info.metadude.kotlin.library.roadsigns.RoadSign
-            android:id="@+id/detailsLezRoadSignView"
+            android:id="@+id/detailsDpzRoadSignView"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezListOfCitiesView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzDisplayNameView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezSectionTitleView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzSectionTitleView"
             tools:layout_height="100dp"
             tools:layout_width="100dp" />
 
         <TextView
-            android:id="@+id/detailsLezListOfCitiesView"
+            android:id="@+id/detailsDpzDisplayNameView"
+            style="@style/ZoneInfo.Content.Emphasized"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzAllowedEmissionStandardInDpzView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzRoadSignView"
+            tools:text="Stresemannstraße, Hamburg" />
+
+        <TextView
+            android:id="@+id/detailsDpzAllowedEmissionStandardInDpzView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -72,14 +88,14 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezZoneNumberSinceView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzIsCongruentWithLowEmissionZoneView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezRoadSignView"
-            tools:text="@string/city_info_list_of_cities" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzDisplayNameView"
+            tools:text="@string/city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone" />
 
         <TextView
-            android:id="@+id/detailsLezZoneNumberSinceView"
+            android:id="@+id/detailsDpzIsCongruentWithLowEmissionZoneView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -88,14 +104,15 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezNextZoneNumberAsOfView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzZoneNumberForResidentsSinceView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezListOfCitiesView"
-            tools:text="@string/city_info_zone_number_since" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzAllowedEmissionStandardInDpzView"
+            tools:text="@string/city_info_is_congruent_with_lez" />
 
         <TextView
-            android:id="@+id/detailsLezNextZoneNumberAsOfView"
+            android:id="@+id/detailsDpzZoneNumberForResidentsSinceView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -104,14 +121,32 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezAbroadLicensedVehicleZoneInfoView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzZoneNumberForNonResidentsSinceView"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezZoneNumberSinceView"
-            tools:text="@string/city_info_next_zone_number_as_of" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzIsCongruentWithLowEmissionZoneView"
+            tools:text="@string/city_info_zone_number_for_residents_since" />
 
         <TextView
-            android:id="@+id/detailsLezAbroadLicensedVehicleZoneInfoView"
+            android:id="@+id/detailsDpzZoneNumberForNonResidentsSinceView"
+            style="@style/ZoneInfo.Content"
+            android:layout_width="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzProhibitedVehiclesView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzZoneNumberForResidentsSinceView"
+            tools:text="@string/city_info_zone_number_for_non_residents_since" />
+
+        <TextView
+            android:id="@+id/detailsDpzProhibitedVehiclesView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -123,8 +158,8 @@
             app:layout_constraintBottom_toTopOf="@+id/divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezNextZoneNumberAsOfView"
-            tools:text="@string/city_info_abroad_licensed_vehicle_zone_info" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzZoneNumberForNonResidentsSinceView"
+            tools:text="@string/city_info_provision_applies_to_vehicles" />
 
         <View
             android:id="@+id/divider"
@@ -137,13 +172,13 @@
             android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezGeometrySourceView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzGeometrySourceView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezAbroadLicensedVehicleZoneInfoView" />
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzProhibitedVehiclesView" />
 
         <TextView
-            android:id="@+id/detailsLezGeometrySourceView"
+            android:id="@+id/detailsDpzGeometrySourceView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -152,14 +187,14 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginBottom="4dp"
-            app:layout_constraintBottom_toTopOf="@+id/detailsLezGeometryUpdatedAtView"
+            app:layout_constraintBottom_toTopOf="@+id/detailsDpzGeometryUpdatedAtView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider"
             tools:text="@string/city_info_geometry_source_text" />
 
         <TextView
-            android:id="@+id/detailsLezGeometryUpdatedAtView"
+            android:id="@+id/detailsDpzGeometryUpdatedAtView"
             style="@style/ZoneInfo.Content"
             android:layout_width="0dp"
             android:layout_marginStart="8dp"
@@ -171,7 +206,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detailsLezGeometrySourceView"
+            app:layout_constraintTop_toBottomOf="@+id/detailsDpzGeometrySourceView"
             tools:text="@string/city_info_geometry_updated_at_text" />
 
     </android.support.constraint.ConstraintLayout>

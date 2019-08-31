@@ -21,7 +21,6 @@ package de.avpptr.umweltzone.extensions
 
 import android.support.annotation.NonNull
 import android.widget.TextView
-import de.avpptr.umweltzone.contract.Resources
 
 /**
  * Returns the text this TextView is displaying.
@@ -36,20 +35,5 @@ var @receiver:NonNull TextView.textOrHide: CharSequence
         } else {
             isVisible = true
             this.text = value
-        }
-    }
-/**
- * Set the background resource to be displayed or hides the view if the resource is invalid.
- * The getter is not implemented.
- */
-var @receiver:NonNull TextView.setBackgroundResourceOrHide: Int
-    @NonNull
-    get() = throw NotImplementedError()
-    set(@NonNull value) {
-        if (value == Resources.INVALID_RESOURCE_ID) {
-            isVisible = false
-        } else {
-            isVisible = true
-            this.setBackgroundResource(value)
         }
     }

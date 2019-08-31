@@ -96,8 +96,11 @@ class DetailsFragmentTest {
 
         onView(withId(R.id.detailsLezRoadSignView))
                 .perform(scrollTo())
-                .check(matches(withText(R.string.city_info_zone_status)))
                 .check(matches(isDisplayed()))
+
+        onView(withId(R.id.genericRoadSignView))
+                .perform(scrollTo())
+                .check(matches(withContentDescription(R.string.environmental_badges_content_description_green)))
 
         onView(withId(R.id.detailsLezListOfCitiesView))
                 .check(matches(withEffectiveVisibility(Visibility.GONE)))
@@ -226,7 +229,9 @@ class DetailsFragmentTest {
 
     @Test
     fun renderDetailsWithNoRestriction() {
-        val lowEmissionZone = LowEmissionZoneBuilder().build()
+        val lowEmissionZone = LowEmissionZoneBuilder()
+                .setZoneNumber(LowEmissionZoneNumbers.NONE)
+                .build()
         val zone = AdministrativeZoneBuilder()
                 .setName("bremen")
                 .setUrlUmweltPlaketteDe("http://mandatory.url")
@@ -238,6 +243,8 @@ class DetailsFragmentTest {
 
         val zoneNumberNoneText = context.getString(
                 R.string.city_info_zone_number_none)
+        onView(withId(R.id.detailsLezRoadSignView))
+                .check(matches(not(isDisplayed())))
         onView(withId(R.id.detailsLezZoneNumberSinceView))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))

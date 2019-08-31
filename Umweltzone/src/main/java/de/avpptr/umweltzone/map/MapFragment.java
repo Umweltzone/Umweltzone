@@ -45,6 +45,8 @@ import com.google.android.gms.maps.model.LatLngBounds;
 
 import org.ligi.tracedroid.logging.Log;
 
+import java.util.List;
+
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
@@ -54,6 +56,7 @@ import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
+import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.CameraUpdateHelper;
 import de.avpptr.umweltzone.utils.ConnectionResultHelper;
@@ -318,7 +321,8 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             return;
         }
         AdministrativeZone zone = ContentProvider.getAdministrativeZoneByName(activity, cityName);
-        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(zone.childZones, activity));
+        List<ChildZone> childZones = ChildZonesExtensions.getVisuallySorted(zone.childZones);
+        mMapDrawer.drawPolygons(ChildZonesExtensions.toCircuitViewModels(childZones, activity));
     }
 
     private void showZoneNotDrawableDialog() {

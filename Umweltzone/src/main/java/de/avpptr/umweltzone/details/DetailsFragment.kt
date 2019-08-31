@@ -32,15 +32,18 @@ import de.avpptr.umweltzone.analytics.TrackingPoint
 import de.avpptr.umweltzone.base.BaseFragment
 import de.avpptr.umweltzone.details.dataconverters.toDetailsViewModel
 import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
+import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.LezDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.OtherDetailsViewModel
 import de.avpptr.umweltzone.extensions.isVisible
-import de.avpptr.umweltzone.extensions.setBackgroundResourceOrHide
 import de.avpptr.umweltzone.extensions.textOrHide
+import de.avpptr.umweltzone.extensions.typeOrHide
 import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.models.ChildZone
+import de.avpptr.umweltzone.models.DieselProhibitionZone
 import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.ViewHelper
+import info.metadude.kotlin.library.roadsigns.RoadSign
 import org.parceler.Parcels
 
 class DetailsFragment : BaseFragment() {
@@ -78,12 +81,19 @@ class DetailsFragment : BaseFragment() {
     private fun updateChildZoneDetails(activity: Activity, childZone: ChildZone) {
         when (childZone) {
             is LowEmissionZone -> addLowEmissionZoneDetails(childZone.toDetailsViewModel(activity))
+            is DieselProhibitionZone -> addDieselProhibitionZoneDetails(childZone.toDetailsViewModel(activity))
         }
     }
 
     private fun addLowEmissionZoneDetails(viewModel: LezDetailsViewModel) {
         val detailsView = layoutInflater.inflate(R.layout.details_low_emission_zone)
         updateLezDetails(detailsView, viewModel)
+        zoneDetailsView.addChildView(detailsView)
+    }
+
+    private fun addDieselProhibitionZoneDetails(viewModel: DpzDetailsViewModel) {
+        val detailsView = layoutInflater.inflate(R.layout.details_diesel_prohibition_zone)
+        updateDpzDetails(detailsView, viewModel)
         zoneDetailsView.addChildView(detailsView)
     }
 
@@ -105,7 +115,7 @@ class DetailsFragment : BaseFragment() {
             addView(view, LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT))
 
     private fun updateLezDetails(rootView: View, model: LezDetailsViewModel) {
-        val roadSignView = rootView.findViewById(R.id.detailsLezRoadSignView) as TextView
+        val roadSignView = rootView.findViewById(R.id.detailsLezRoadSignView) as RoadSign
         val listOfCitiesView = rootView.findViewById(R.id.detailsLezListOfCitiesView) as TextView
         val zoneNumberSinceView = rootView.findViewById(R.id.detailsLezZoneNumberSinceView) as TextView
         val nextZoneNumberAsOfView = rootView.findViewById(R.id.detailsLezNextZoneNumberAsOfView) as TextView
@@ -113,13 +123,36 @@ class DetailsFragment : BaseFragment() {
         val geometryUpdatedAtView = rootView.findViewById(R.id.detailsLezGeometryUpdatedAtView) as TextView
         val geometrySourceView = rootView.findViewById(R.id.detailsLezGeometrySourceView) as TextView
         return with(model) {
-            roadSignView.setBackgroundResourceOrHide = zoneStatusId
+            roadSignView.typeOrHide = roadSignType
             listOfCitiesView.textOrHide = listOfCitiesText
             zoneNumberSinceView.textOrHide = zoneNumberSinceText
             nextZoneNumberAsOfView.textOrHide = nextZoneNumberAsOfText
             abroadLicensedVehicleZoneInfoView.textOrHide = abroadLicensedVehicleZoneNumberText
             geometryUpdatedAtView.textOrHide = geometryUpdatedAtText
             geometrySourceView.textOrHide = geometrySourceText
+        }
+    }
+
+    private fun updateDpzDetails(rootView: View, model: DpzDetailsViewModel) {
+        val displayNameView = rootView.findViewById(R.id.detailsDpzDisplayNameView) as TextView
+        val roadSignView = rootView.findViewById(R.id.detailsDpzRoadSignView) as RoadSign
+        val allowedEmissionStandardInDpzView = rootView.findViewById(R.id.detailsDpzAllowedEmissionStandardInDpzView) as TextView
+        val isCongruentWithLowEmissionZoneView = rootView.findViewById(R.id.detailsDpzIsCongruentWithLowEmissionZoneView) as TextView
+        val zoneNumberForResidentsSinceView = rootView.findViewById(R.id.detailsDpzZoneNumberForResidentsSinceView) as TextView
+        val zoneNumberForNonResidentsSinceView = rootView.findViewById(R.id.detailsDpzZoneNumberForNonResidentsSinceView) as TextView
+        val prohibitedVehiclesView = rootView.findViewById(R.id.detailsDpzProhibitedVehiclesView) as TextView
+        val geometrySourceView = rootView.findViewById(R.id.detailsDpzGeometrySourceView) as TextView
+        val geometryUpdatedAtView = rootView.findViewById(R.id.detailsDpzGeometryUpdatedAtView) as TextView
+        return with(model) {
+            displayNameView.textOrHide = displayName
+            roadSignView.typeOrHide = roadSignType
+            allowedEmissionStandardInDpzView.textOrHide = allowedEmissionStandardInDpz
+            isCongruentWithLowEmissionZoneView.textOrHide = isCongruentWithLowEmissionZone
+            zoneNumberForResidentsSinceView.textOrHide = zoneNumberForResidentsSince
+            zoneNumberForNonResidentsSinceView.textOrHide = zoneNumberForNonResidentsSince
+            prohibitedVehiclesView.textOrHide = prohibitedVehicles
+            geometrySourceView.textOrHide = geometrySource
+            geometryUpdatedAtView.textOrHide = geometryUpdatedAt
         }
     }
 

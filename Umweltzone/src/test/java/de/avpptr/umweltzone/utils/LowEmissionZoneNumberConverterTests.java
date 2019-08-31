@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -36,18 +36,6 @@ public class LowEmissionZoneNumberConverterTests {
     int INVALID_COLOR = 1;
 
     @Test
-    public void testGetStatusDrawable() {
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(INVALID_COLOR))
-                .isEqualTo(Resources.INVALID_RESOURCE_ID);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.RED))
-                .isEqualTo(R.drawable.umweltzone_status_2);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.YELLOW))
-                .isEqualTo(R.drawable.umweltzone_status_3);
-        assertThat(LowEmissionZoneNumberConverter.getStatusDrawable(LowEmissionZoneNumbers.GREEN))
-                .isEqualTo(R.drawable.umweltzone_status_4);
-    }
-
-    @Test
     public void testGetColor() {
         assertThat(LowEmissionZoneNumberConverter.getColor(INVALID_COLOR))
                 .isEqualTo(R.color.city_zone_none);
@@ -57,6 +45,10 @@ public class LowEmissionZoneNumberConverterTests {
                 .isEqualTo(R.color.city_zone_3);
         assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.GREEN))
                 .isEqualTo(R.color.city_zone_4);
+        assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.LIGHT_BLUE))
+                .isEqualTo(R.color.city_zone_5);
+        assertThat(LowEmissionZoneNumberConverter.getColor(LowEmissionZoneNumbers.DARK_BLUE))
+                .isEqualTo(R.color.city_zone_6);
     }
 
     @Test
@@ -85,6 +77,10 @@ public class LowEmissionZoneNumberConverterTests {
                 .isEqualTo(R.color.shape_fill_color_zone_3);
         assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.GREEN))
                 .isEqualTo(R.color.shape_fill_color_zone_4);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.LIGHT_BLUE))
+                .isEqualTo(R.color.shape_fill_color_zone_5);
+        assertThat(LowEmissionZoneNumberConverter.getShapeFillColor(LowEmissionZoneNumbers.DARK_BLUE))
+                .isEqualTo(R.color.shape_fill_color_zone_6);
     }
 
 }

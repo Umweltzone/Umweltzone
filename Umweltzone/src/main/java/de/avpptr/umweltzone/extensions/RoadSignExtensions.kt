@@ -1,3 +1,5 @@
+@file:JvmName("RoadSignExtensions")
+
 /*
  *  Copyright (C) 2019  Tobias Preuss
  *
@@ -15,25 +17,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package de.avpptr.umweltzone.models;
+package de.avpptr.umweltzone.extensions
 
-import android.support.annotation.NonNull;
+import android.support.annotation.NonNull
+import info.metadude.kotlin.library.roadsigns.RoadSign
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = DieselProhibitionZone.class, name = "diesel-prohibition-zone"),
-        @JsonSubTypes.Type(value = LowEmissionZone.class, name = "low-emission-zone")
-})
-public interface ChildZone {
-
+/**
+ * Returns the type this RoadSign is displaying.
+ * Sets the type to be displayed or hides this view if the type is [RoadSign.Type.None].
+ */
+var @receiver:NonNull RoadSign.typeOrHide: RoadSign.Type
     @NonNull
-    String getFileName();
-
-    int getZoneNumber();
-
-    boolean containsGeometryInformation();
-
-}
+    get() = this.type
+    set(@NonNull value) {
+        if (RoadSign.Type.None == value) {
+            isVisible = false
+        } else {
+            isVisible = true
+            this.type = value
+        }
+    }

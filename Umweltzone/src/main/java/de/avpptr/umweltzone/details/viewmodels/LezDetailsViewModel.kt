@@ -17,10 +17,10 @@
 
 package de.avpptr.umweltzone.details.viewmodels
 
-import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
+import info.metadude.kotlin.library.roadsigns.RoadSign
 
 data class LezDetailsViewModel(
-        @LowEmissionZoneNumbers.Color val zoneStatusId: Int,
+        val roadSignType: RoadSign.Type,
         val listOfCitiesText: String,
         val zoneNumberSinceText: String,
         val nextZoneNumberAsOfText: String,
