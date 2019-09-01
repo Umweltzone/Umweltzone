@@ -2,7 +2,7 @@ buildscript {
     ext {
         // Plugins
         androidGradlePluginVersion = "3.5.0"
-        gradleVersionsPluginVersion = "0.23.0"
+        gradleVersionsPluginVersion = "0.25.0"
         proguardGradlePluginVersion = "6.1.1"
         strictVersionMatcherPluginVersion = "1.1.0"
 
@@ -40,13 +40,15 @@ buildscript {
 apply plugin: "com.github.ben-manes.versions"
 
 dependencyUpdates.resolutionStrategy {
-    componentSelection { rules ->
-        rules.all { ComponentSelection selection ->
-            boolean rejected = ["alpha", "beta", "rc", "cr", "m", "preview", "b", "ea"].any { qualifier ->
-                selection.candidate.version ==~ /(?i).*[.-]$qualifier[.\d-+]*/
+    componentSelection {
+        all {
+            def isNonStable = { String version ->
+                ["alpha", "beta", "rc", "cr", "m", "preview", "b", "ea"].any { qualifier ->
+                    version ==~ /(?i).*[.-]$qualifier[.\d-+]*/
+                }
             }
-            if (rejected) {
-                selection.reject("Release candidate")
+            if (isNonStable(candidate.version) && !isNonStable(currentVersion)) {
+                reject("Release candidate")
             }
         }
     }
