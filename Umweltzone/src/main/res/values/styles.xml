@@ -37,11 +37,11 @@
     <!-- Settings -->
 
     <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay">
-        <item name="checkBoxPreferenceStyle">@style/AppPreference.CheckBoxPreference</item>
+        <item name="switchPreferenceStyle">@style/AppPreference.SwitchPreference</item>
         <item name="preferenceStyle">@style/AppPreference.Preference</item>
     </style>
 
-    <style name="AppPreference.CheckBoxPreference" parent="@style/Preference.CheckBoxPreference">
+    <style name="AppPreference.SwitchPreference" parent="@style/Preference.SwitchPreference">
         <item name="android:layout">@layout/settings_item</item>
     </style>
 

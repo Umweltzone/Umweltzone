@@ -17,30 +17,32 @@
   ~ MODIFIED:
   ~
   ~ This file is a copy of
-  ~ com.android.support:preference-v7-24.2.1 -> res/layout/preference.xml
-  ~ The android:id/summary attributes have been modified to support long text.
+  ~ com.android.support:preference-v7-27.1.1 -> res/layout/preference.xml
+  ~ The android:id/title and the android:id/summary attributes have been
+  ~ modified to support long text.
   ~
   -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:gravity="center_vertical"
     android:paddingEnd="?android:attr/scrollbarSize"
-    android:background="@android:drawable/list_selector_background"
+    android:background="?android:attr/selectableItemBackground"
     android:focusable="true" >
 
     <FrameLayout
         android:id="@+id/icon_frame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <ImageView
+        <android.support.v7.internal.widget.PreferenceImageView
             android:id="@android:id/icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            />
+            app:maxWidth="48dp"
+            app:maxHeight="48dp" />
     </FrameLayout>
 
     <RelativeLayout
@@ -55,10 +57,8 @@
         <TextView android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:singleLine="false"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="?android:attr/textColorPrimary"
-            android:ellipsize="marquee"
             android:fadingEdge="horizontal" />
 
         <TextView android:id="@android:id/summary"
