@@ -19,7 +19,7 @@
 
     <android.support.v7.preference.PreferenceCategory android:title="@string/settings_category_title_data_privacy">
 
-        <android.support.v7.preference.CheckBoxPreference
+        <android.support.v14.preference.SwitchPreference
             android:defaultValue="@string/settings_default_value_google_analytics"
             android:key="@string/settings_key_google_analytics"
             android:summary="@string/settings_summary_google_analytics"
