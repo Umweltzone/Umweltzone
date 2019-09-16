@@ -385,8 +385,8 @@
             "nextZoneNumberAsOf" : "",
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-06-09",
+            "geometrySource" : "Stadt Freiburg",
+            "geometryUpdatedAt" : "2019-09-11",
             "listOfCities" : []
         }],
         "contactEmails" : null,
