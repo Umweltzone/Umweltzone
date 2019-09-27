@@ -21,13 +21,13 @@
 
     <!--Action Bar items-->
     <string name="action_cities">Cities</string>
-    <string name="action_city_info">@string/city_info_activity_title</string>
-    <string name="action_faq">@string/faq_activity_title</string>
-    <string name="action_feedback">@string/feedback_activity_title</string>
+    <string name="action_city_info" translatable="false">@string/city_info_activity_title</string>
+    <string name="action_faq" translatable="false">@string/faq_activity_title</string>
+    <string name="action_feedback" translatable="false">@string/feedback_activity_title</string>
     <string name="action_share_app">Share this app &#8230;</string>
     <string name="action_changelog">Version information</string>
-    <string name="action_settings">@string/settings_activity_title</string>
-    <string name="action_about">@string/about_activity_title</string>
+    <string name="action_settings" translatable="false">@string/settings_activity_title</string>
+    <string name="action_about" translatable="false">@string/about_activity_title</string>
 
     <!-- Share intent -->
     <string name="share_intent_message">
@@ -454,19 +454,19 @@
         It would be helpful if you could submit a crash report
         so the source of the problem can be identified.
     </string>
-    <string name="trace_droid_button_title_send">
+    <string name="trace_droid_button_title_send" translatable="false">
         @string/zone_not_drawable_open_email
     </string>
-    <string name="trace_droid_no_email_app">
+    <string name="trace_droid_no_email_app" translatable="false">
         @string/zone_not_drawable_no_email_app
     </string>
     <string name="trace_droid_button_title_no">
         No
     </string>
-    <string name="trace_droid_button_title_later">
+    <string name="trace_droid_button_title_later" translatable="false">
         @string/zone_not_drawable_later
     </string>
-    <string name="trace_droid_app_chooser_title">
+    <string name="trace_droid_app_chooser_title" translatable="false">
         @string/zone_not_drawable_app_chooser_title
     </string>
 
