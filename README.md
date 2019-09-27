@@ -33,10 +33,8 @@ Android 4.0 (Ice Cream Sandwich) and newer versions are supported.
 
 ## Feedback
 
-Users can leave their feature request on a special website which not
-only allows to post own wishes but also to vote on ideas of others.
-
-* [http://umweltzone.uservoice.com][uservoice-link]
+Users are welcome to send their feature requests via email or create a
+new issue in the [issue tracker][github-issue-tracker] of this project.
 
 
 ## Configuration
@@ -115,8 +113,8 @@ This content is licensed, if not stated otherwise, under a
 
 [google-play-badge]: google-play-badge.png
 [google-play-link]: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+[github-issue-tracker]: https://github.com/Umweltzone/Umweltzone/issues
 [app-screenshot]: screenshot.png
-[uservoice-link]: http://umweltzone.uservoice.com
 [immissionsschutzgesetz-link]: http://de.wikipedia.org/wiki/Verordnung_zum_Erlass_und_zur_%C3%84nderung_von_Vorschriften_%C3%BCber_die_Kennzeichnung_emissionsarmer_Kraftfahrzeuge#Feinstaubplakette
 [gpl-license-link]: http://www.gnu.org/licenses/gpl-3.0.txt
 [cc-by-sa-link]: http://creativecommons.org/licenses/by-sa/3.0/

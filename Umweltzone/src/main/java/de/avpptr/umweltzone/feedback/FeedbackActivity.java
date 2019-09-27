@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2015  Tobias Preuss
+ *  Copyright (C) 2019  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -34,10 +34,6 @@ public class FeedbackActivity extends BaseActivity {
         setContentView(R.layout.activity_feedback);
 
         ViewHelper.setupTextViewSimple(this, R.id.buildVersion, "v." + getBuildVersionName());
-
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_user_voice,
-                R.string.appinfo_uservoice_url_title,
-                R.string.appinfo_uservoice_url, TrackingPoint.UserVoiceClick, null);
 
         ViewHelper.setupTextViewExtended(this, R.id.app_info_contact_email,
                 R.string.appinfo_contact_email,
