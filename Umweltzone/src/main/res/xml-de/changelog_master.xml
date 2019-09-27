@@ -16,6 +16,17 @@
 -->
 <changelog>
     <release
+        version="4.1.0"
+        versioncode="401000">
+        <change>
+            Aktualisierung: Die Zonendaten für Freiburg im Breisgau haben sich geändert.
+        </change>
+        <change>
+            Entfernt: Der UserVoice-Abschnitt auf dem "Feedback"-Bildschirm ist weg.
+            Darüber haben nur sehr wenige Nutzer_innen Feedback geschickt.
+        </change>
+    </release>
+    <release
         version="4.0.0"
         versioncode="400000">
         <change>

@@ -1,5 +1,23 @@
 # Umweltzone changelog
 
+## [v.4.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.4.1.0)
+
+* Published: 2019-09-27
+
+### Features, improvements and maintenance
+
+* RIP UserVoice., [a4851](https://bitbucket.org/tbsprs/umweltzone/commits/a4851a1380de3662abd26af9a1c9f223f642b08e)
+* Avoid duplicating non-translatable strings across translation files., [9589a](https://bitbucket.org/tbsprs/umweltzone/commits/9589a5061e6ebabcbf492bad17a86e582972f0e1)
+* Mark config strings as not translatable., [c5e67](https://bitbucket.org/tbsprs/umweltzone/commits/c5e67f38cc3d809c9f9f15e68f8cd3d664d4dc97)
+* Update zone data for Freiburg im Breisgau (provided by the city)., [9399b](https://bitbucket.org/tbsprs/umweltzone/commits/9399bb0da14a31e0183152b5434c86229664d84d)
+* Use SwitchPreference instead of CheckBoxPreference., [5944c](https://bitbucket.org/tbsprs/umweltzone/commits/5944c7e035140632bccbfda124ba68efa1293e96)
+
+### Libraries, build tools, SDK
+
+* Use Gradle wrapper v.5.6.2., [6abb4](https://bitbucket.org/tbsprs/umweltzone/commits/6abb46fc1393ebb329d4e41562cbb9f4c1632f95)
+* Use gradle-versions-plugin v.0.25., [30b79](https://bitbucket.org/tbsprs/umweltzone/commits/30b79809995223532acd552bdbb958c2653797c3)
+
+
 ## [v.4.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.4.0.0)
 
 * Published: 2019-08-31

@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+        version="4.1.0"
+        versioncode="401000">
+        <change>
+            Update: The zone data for Freiburg im Breisgau has changed.
+        </change>
+        <change>
+            Gone: Remove the UserVoice feedback section. Almost no one submitted feedback there.
+        </change>
+    </release>
+    <release
         version="4.0.0"
         versioncode="400000">
         <change>
