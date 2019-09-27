@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -122,6 +122,7 @@ public class LowEmissionZone implements ChildZone {
         return result;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "LowEmissionZone{" +

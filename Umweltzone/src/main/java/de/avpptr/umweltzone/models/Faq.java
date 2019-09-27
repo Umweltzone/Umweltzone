@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,6 +17,8 @@
 
 package de.avpptr.umweltzone.models;
 
+import android.support.annotation.NonNull;
+
 public class Faq {
 
     public int position;
@@ -29,6 +31,7 @@ public class Faq {
 
     public String label;
 
+    @NonNull
     @Override
     public String toString() {
         return "Position: " + position +

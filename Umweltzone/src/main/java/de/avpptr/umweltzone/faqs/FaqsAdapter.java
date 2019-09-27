@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.faqs;
 
 import android.content.Context;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,8 +83,7 @@ class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     private View getNewView(int resourceId) {
-        LayoutInflater inflater = (LayoutInflater) mContext
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = ContextCompat.getSystemService(mContext, LayoutInflater.class);
         return inflater.inflate(resourceId, null);
     }
 
