@@ -18,7 +18,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
 
     <!-- TraceDroid -->
-    <string name="config_trace_droid_email_address">
+    <string name="config_trace_droid_email_address" translatable="false">
         ENTER_TRACEDROID_EMAIL_ADDRESS_HERE
     </string>
 
@@ -27,7 +27,7 @@
     </integer>
 
     <!-- Contact e-mail address -->
-    <string name="config_contact_email_address">
+    <string name="config_contact_email_address" translatable="false">
         ENTER_CONTACT_EMAIL_ADDRESS_HERE
     </string>
 
@@ -37,7 +37,7 @@
     </string>
 
     <!-- Default zone -->
-    <string name="config_default_zone_name">
+    <string name="config_default_zone_name" translatable="false">
         Berlin
     </string>
 
