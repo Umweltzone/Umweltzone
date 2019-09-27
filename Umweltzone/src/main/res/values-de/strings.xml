@@ -150,15 +150,6 @@
         kann an folgende Adresse gerichtet werden:
     </string>
 
-    <!-- FeedbackActivity / Contact / Uservoice -->
-    <string name="appinfo_uservoice_content">
-        Zusätzlich können eigene Ideen auf unserer UserVoice-Seite
-        eingetragen werden. Auf der Seite kann man auch jeden anderen
-        Eintrag bewerten. Dadurch sehen wir gleich, was die Mehrzahl
-        der Nutzer gerne möchte.
-    </string>
-    <string name="appinfo_uservoice_url_title">UserVoice Webseite</string>
-
     <!-- FeedbackActivity / Rating -->
     <string name="appinfo_rating_title">Bewerten</string>
     <string name="appinfo_rating_content">

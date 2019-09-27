@@ -245,18 +245,6 @@
         @string/config_contact_email_address
     </string>
 
-    <!-- FeedbackActivity / Contact / Uservoice -->
-    <string name="appinfo_uservoice_title" translatable="false">UserVoice</string>
-    <string name="appinfo_uservoice_content">
-        Own ideas also can be posted on our UserVoice website. Posts of
-        other people can be rated which allows us to see which improvements
-        the majority of users want.
-    </string>
-    <string name="appinfo_uservoice_url_title">UserVoice website</string>
-    <string name="appinfo_uservoice_url" translatable="false">
-        http://umweltzone.uservoice.com
-    </string>
-
     <!-- FeedbackActivity / Rating -->
     <string name="appinfo_rating_title">Rating</string>
     <string name="appinfo_rating_content">
