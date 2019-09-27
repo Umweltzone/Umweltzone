@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2016  Tobias Preuss, Peter Vasil
+  Copyright (C) 2019  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@
         Overwrites ckChangeLog internal settings for all languages.
         Will be removed when this application will be localized.
     -->
-    <string name="changelog_full_title">@string/action_changelog</string>
     <string name="changelog_title">Das ist neu</string>
     <string name="changelog_show_full">Mehr &#8230;</string>
 
