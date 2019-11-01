@@ -63,11 +63,7 @@ public abstract class ContentProvider {
 
     @NonNull
     public static List<Faq> getFaqs(@NonNull final Context context) {
-        // Do not accidentally compare with Locale.GERMAN
-        if (Locale.getDefault().equals(Locale.GERMANY)) {
-            return getContent(context, "faqs_de", Faq.class);
-        }
-        return getContent(context, "faqs_en", Faq.class);
+        return getContent(context, "faqs", Faq.class);
     }
 
     @NonNull
