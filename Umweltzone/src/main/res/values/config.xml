@@ -31,8 +31,8 @@
         ENTER_CONTACT_EMAIL_ADDRESS_HERE
     </string>
 
-    <!-- Date format used in .json files/response -->
-    <string name="config_zone_number_since_date_format">
+    <!-- Date pattern used in zones_de.json file. -->
+    <string name="config_zone_data_date_pattern">
         yyyy-MM-dd
     </string>
 

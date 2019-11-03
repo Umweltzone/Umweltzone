@@ -115,7 +115,7 @@ public abstract class ContentProvider {
         module.addDeserializer(Circuit.class, new CircuitDeserializer());
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.registerModule(module);
-        String datePattern = context.getString(R.string.config_zone_number_since_date_format);
+        String datePattern = context.getString(R.string.config_zone_data_date_pattern);
         objectMapper.setDateFormat(DateFormats.getDateFormat(datePattern));
         try {
             TypeFactory typeFactory = objectMapper.getTypeFactory();
