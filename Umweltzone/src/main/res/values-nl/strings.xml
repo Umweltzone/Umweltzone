@@ -351,9 +351,9 @@
     <string name="settings_category_title_data_privacy">Data privacy</string>
     <string name="settings_title_google_analytics">Stuur geanonimiseerde gebruiksstatistieken</string>
     <string name="settings_summary_google_analytics">
-        Hiermee kunnen gebruiksstatistieken en crashrapporten naar Google Analytics worden verzonden. Deze
-        geanonimiseerde gegevens worden door de ontwikkelaar van de Umweltzone-app gebruikt om het programma te analyseren
-        fouten en om de app continu te verbeteren.
+        Hiermee kunnen gebruiksstatistieken en crashrapporten naar Google Analytics worden
+        verzonden. Deze geanonimiseerde gegevens worden door de ontwikkelaar van de Umweltzone-app
+        gebruikt om het programma te analyseren fouten en om de app continu te verbeteren.
     </string>
     <string name="settings_title_data_privacy_statement_de">
         Privacy verklaring &#8230;
