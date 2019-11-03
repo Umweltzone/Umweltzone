@@ -1,0 +1,107 @@
+[
+    {
+        "position" : 1,
+        "question" : "Wat is fijn stof? Wat zijn fijne deeltjes?",
+        "answer" : "Fijne deeltjes zijn eenvoudigweg fijn stof, met andere woorden vaste partikels in de atmosfeer kleiner dan 15µm. Emissiereductiedoelen in de Europese Unie zijn gebaseerd op de richtlijnen die werden vastgelegd in de National Air Quality Standard for Particulate Matter (kortweg PM Standaard) van het Amerikaanse Environmental Protection Agency (EPA), geïntroduceerd in 1987. In het eerste ontwerp van de Amerikaanse richtlijn werd de PM10 standaard bepaald, welke sinds 2005 dienst doet als de drempelwaarde in de Europese Unie. In tegenstelling tot de vaker aangehaalde definities, is PM10 geen strikte definitie van de emissies met een aerodynamische diameter van 10 micron, maar wel een poging om het uitstootgedrag van de bovenste luchtwegen na te bootsen: deeltjes met een aerodynamische diameter van minder dan 1 micron maken er volledig deel van uit. Van de grotere deeltjes wordt een bepaald percentage opgenomen wat afneemt naarmate de grootte van het deeltje toeneemt, tot uiteindelijk 0% bij 15 micron. Technisch komt dit overeen met de toepassing van een zogenaamde wegingsfunctie (in vakjargon een verdelende curve of verdelende functie) op de emissies. (In de praktijk gebeurt dit door een toegang van selectieve grootte in de meetinstrumenten). De naam PM10 wordt afgeleid uit de vorm van de wegingsfunctie, omdat precies de helft van de deeltjes in beschouwing genomen wordt in de weging bij 10 micron. Verdere informatie over deze materie kan je vinden op Wikipedia (https://nl.wikipedia.org/wiki/Fijnstof)",
+        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#10",
+        "label" : "wat_is_fijn_stof"
+    },
+    {
+        "position" : 2,
+        "question" : "Waarom is fijn stof schadelijk?",
+        "answer" : "Er bestaan geen onschadelijk concentraties van fijn stof. Voor de bevolking van de Europese Unie leidt de totale uitstoot van partikels in de atmosfeer tot een gemiddelde daling van de levensverwachting met één jaar. De drempelwaarden die de EU vastlegde zijn min of meer arbitrair en volgen eerder politieke dan wetenschappelijke logica. Effecten van fijnstof pollutie zijn, bij voorbeeld, een toename in de ernst van allergiesymptomen, een stijging van het aantal astma aanvallen, symptomen van de luchtwegen en longkankers en een toegenomen risico op middenoorontstekingen bij kinderen. Daarnaast veronderstelt men effecten op het cardiovasculair systeem (bv myocardisch infarct). De omvang van de impact van partikels op de luchtwegen varieert daarnaast ook met de toxiciteit van de deeltjes, onderandere bij lood, vanadium, berrylium en kwik, en de grootte van de deeltjes: hoe kleiner het deeltje, des te dieper het in de longen kan doordringen.",
+        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#11",
+        "label" : "waarom_is_stof_schadelijk"
+    },
+    {
+        "position" : 3,
+        "question" : "Hoe worden milieuvignets toegewezen",
+        "answer" : "Toewijzing van milieuvignets werd wettelijk bepaald volgens bepaalde criteria. Aan dieselwagens zonder roetfilter wordt, afhankelijk van de leeftijd van het voertuig, een rood of geel vignet toegewezen. Nieuwere voertuigen met diesel roetfilters krijgen meestal een groen vignet. Benzinevoertuigen met een reglementaire kalalisator (G-Cat) krijgen zonder uitzondering een groen vignet. Dit is de reden waarom erg oude voertuigen ook een groen vignet kunnen behalen. Deze laatste categorie omvat vooral benzinemotoren met een reglementaire katalisator. Benzinevoertuigen zonder reglementaire katalysator krijgen ofwel een groen vignet of helemaal geen vignet. Dus alle benzinevoertuigen krijgen ofwel een groen vignet, ofwel geen vignet. Om na te kijken welk vignet je voertuig zou moeten ontvangen, kan je de internetpagina van DEKRA raadplegen.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "hoe_worden_milieuvignets_toegewezen"
+    },
+    {
+        "position" : 4,
+        "question" : "Hoe lang zijn milieuvignets geldig?",
+        "answer" : "Het milieuvignet wordt gekoppeld aan de nummerplaat van de wagen wat betekent dat vernieuwing enkel nodig is wanneer een wijziging van de nummerplaat gebeurt (bvb. bij relocatie, verkoop)",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "hoe_lang_zijn_milieuvignets_geldig"
+    },
+    {
+        "position" : 5,
+        "question" : "Heb ik een milieuvignet nodig voor mijn motorfiets?",
+        "answer" : "Neen, voertuigen met twee of drie wielen zijn uitgesloten.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "heb_ik_een_milieuvignet_nodig_voor_mijn_motorfiets"
+    },
+    {
+        "position" : 6,
+        "question" : "Wat is een lage emissiezone?",
+        "answer" : "Een lage emissiezone is een speciaal gemarkeerde zone in een stad waarbinnen voertuigen met hoge uitstootwaarden niet toegelaten zijn. Dieselvoertuigen en vrachtwagens zijn voornamelijk geïmpacteerd. Controle gebeurt door het monitoren van de vereiste vignets.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "wat_is_een_lage_emissiezone"
+    },
+    {
+        "position" : 7,
+        "question" : "Hoe herken ik een lage emissiezone?",
+        "answer" : "Lage emissiezones worden gemarkeerd met gepaste verkeersborden (zie afbeeldingen rechts), welke het begin en einde van de zone aangeven. Daarnaast wordt getoond welke vignetten er vereist zijn (rood, geel of groen). Wat velen niet weten: Deze zones zijn ook van toepassing voor voertuigen met een buitenlandse nummerplaat.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "hoe_herken_ik_een_lage_emissiezone"
+    },
+    {
+        "position" : 8,
+        "question" : "Wat is het nut van lage emissiezones?",
+        "answer" : "Alle voertuigen genereren partikeldeeltjes die kunnen leiden tot een toename van astma en longziekten. Door de invoer van lage emissiezones willen we dit vermijden in stedelijke gebieden.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "wat_is_het_nut_van_lage_emissiezones"
+    },
+    {
+        "position" : 9,
+        "question" : "Voor wie gelden de lage emissiezones?",
+        "answer" : "De wet stelt: Voor alle personenwagens en commerciële voertuigen, ongeacht het type aandrijving (interne verbrandingsmotoren - benzine, diesel of gas, elektrisch aangedreven voertuigen). Het voornaamste doel van het milieuvignet is bijdragen aan een reductie van vervuiling in stedelijke gebieden.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "voor_wie_gelden_lage_emissiezones"
+    },
+    {
+        "position" : 10,
+        "question" : "Welk milieuvignet voor mijn voertuig?",
+        "answer" : "De toewijzing van een milieuvignet gebeurt op basis van de gegevens in de registratiedocumenten van het voertuig. Dit resulteert in een zogenaamd Vervuilings Sleutel Nummer. Je kan het registratiedocument van je voertuig ontcijferen door de online test van DEKRA uit te voeren.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "welk_milieuvignet_voor_mijn_voertuig"
+    },
+    {
+        "position" : 11,
+        "question" : "Boetes voor rijden zonder milieuvignet.",
+        "answer" : "De boete voor niet-conformiteit bedraagt 80 Euro, maar geen punt in Flensburg (geldig sinds mei 2014).",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "boetes_voor_rijden_zonder_milieuvignet"
+    },
+    {
+        "position" : 12,
+        "question" : "Hoe zit het met uitzonderingsvergunningen?",
+        "answer" : "Elke stad heeft zijn eigen uitzonderingen. Deze worden uitgelegd in de speciale lage emissiezone pagina's op onze website. Als er hier geen uitzondering staat, zijn normaalgezien de standaard uitzonderingen plus andere speciale gevallen van toepassing. Bezoek ons Kantoor voor Omgeving en Transport ter plaatse om de meest recente en accurate informatie te verkrijgen. In regel dient een formulier te worden ingevuld en moet men bijkomend bewijs voorleggen (zoals een certificaat van niet-aanpassing of niet-upgrade) om een uitzondering voor een specifieke zone te verkrijgen. Uitzonderingen zijn gewoonlijk tijdsgebonden en komen niet altijd overeen met geldigheid van huidige nummerplaatdetails. Uitzonderingen zijn gewoonlijk geldig van enkele dagen tot een jaar. Een vergunning kost tussen 10 en 300 Euro afhankelijk van de locatie en geldigheidsduur.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "hoe_zit_het_met_uitzonderingsvergunningen"
+    },
+    {
+        "position" : 13,
+        "question" : "Hebben buitenlandse voertuigen een milieuvignet nodig?",
+        "answer" : "Ja. Elk voertuig wat niet specifiek uitgesloten is volgens de regelgeving omtrent milieuvignets heeft een vignet nodig - effectief alle voertuigen die in het buitenland geregistreerd werden.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "hebben_buitenlandse_voertuigen_een_milieuvignet_nodig"
+    },
+    {
+        "position" : 14,
+        "question" : "Waar breng ik het vignet aan?",
+        "answer" : "Er zijn geen wettelijke richtlijnen die precies bepalen waar het vignet aangebracht moet worden. We raden aan het vignet in de rechter benedenhoek van de voorruit aan te brengen, aan de passagierszijde. Zo kan het vignet onmiddellijk herkend worden door officieren van het kantoor voor openbare aangelegenheden of andere stads- en gemeentediensten.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "waar_breng_ik_het_vignet_aan"
+    },
+    {
+        "position" : 15,
+        "question" : "Heeft elke stad zijn eigen milieuvignet?",
+        "answer" : "Neen. Een vignet is geldig voor alle lage emissiezones. Het vignet is niet locatiegebonden.",
+        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "label" : "heeft_elke_stad_zijn_eigen_milieuvignet"
+    }
+]
