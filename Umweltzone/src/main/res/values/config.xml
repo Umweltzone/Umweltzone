@@ -32,7 +32,7 @@
     </string>
 
     <!-- Date pattern used in zones_de.json file. -->
-    <string name="config_zone_data_date_pattern">
+    <string name="config_zone_data_date_pattern" translatable="false">
         yyyy-MM-dd
     </string>
 
