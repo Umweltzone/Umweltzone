@@ -96,9 +96,11 @@ $ ./gradlew clean connectedAndroidTest
 
 ## Contributors
 
-* [Peter Vasil](https://github.com/ptrv)
 * [cketti](https://github.com/cketti)
 * [daus-salar](https://bitbucket.com/daus-salar)
+* [Peter Vasil](https://github.com/ptrv)
+* [Pieter Jan Geutjens](https://github.com/pjgeutjens)
+* [Sjors van Mierlo](https://github.com/spmvanmierlo)
 
 
 ## License
