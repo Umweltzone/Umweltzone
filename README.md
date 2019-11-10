@@ -29,6 +29,7 @@ and Diesel prohibitions zones
 
 The app is translated into multiple languages:
 
+- Danish (FAQs missing)
 - Dutch
 - English
 - German
