@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,7 @@
 package de.avpptr.umweltzone.details.dataconverters
 
 import android.content.Context
-import android.support.annotation.VisibleForTesting
+import androidx.annotation.VisibleForTesting
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
 import de.avpptr.umweltzone.models.DieselProhibitionZone

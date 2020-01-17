@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2020  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,9 +18,10 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.annotation.RawRes;
-import android.support.test.runner.AndroidJUnit4;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RawRes;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -37,9 +38,9 @@ import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.models.LowEmissionZone;
 import kotlin.NotImplementedError;
 
-import static android.support.test.InstrumentationRegistry.getInstrumentation;
-import static junit.framework.Assert.fail;
+import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.fail;
 
 @RunWith(AndroidJUnit4.class)
 public class ContentProviderTest {

@@ -24,6 +24,7 @@ before_script:
   - echo ANDROID_API_LEVEL=$ANDROID_API_LEVEL
   - echo ANDROID_BUILD_TOOLS_VERSION=$ANDROID_BUILD_TOOLS_VERSION
   # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
+  - echo >> gradle.properties
   - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
 
 script:

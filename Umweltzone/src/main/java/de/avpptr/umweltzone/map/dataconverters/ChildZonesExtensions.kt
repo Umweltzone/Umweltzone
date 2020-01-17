@@ -20,7 +20,7 @@
 package de.avpptr.umweltzone.map.dataconverters
 
 import android.content.Context
-import android.support.annotation.ColorInt
+import androidx.annotation.ColorInt
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.extensions.getColorCompat
 import de.avpptr.umweltzone.map.viewmodels.CircuitViewModel

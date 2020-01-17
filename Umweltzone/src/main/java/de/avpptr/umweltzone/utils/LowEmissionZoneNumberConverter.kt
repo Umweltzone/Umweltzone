@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@
 
 package de.avpptr.umweltzone.utils
 
-import android.support.annotation.ColorRes
-import android.support.annotation.StringRes
+import androidx.annotation.ColorRes
+import androidx.annotation.StringRes
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
 import de.avpptr.umweltzone.contract.Resources

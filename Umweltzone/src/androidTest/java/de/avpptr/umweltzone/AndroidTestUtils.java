@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2016  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,13 +21,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.support.annotation.NonNull;
-import android.support.test.InstrumentationRegistry;
+
+import androidx.annotation.NonNull;
+import androidx.test.platform.app.InstrumentationRegistry;
 
 public class AndroidTestUtils {
 
     public static void rotateScreen(@NonNull Activity activity) {
-        Context context = InstrumentationRegistry.getTargetContext();
+        Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
         int currentOrientation = context.getResources().getConfiguration().orientation;
         int newOrientation = (currentOrientation == Configuration.ORIENTATION_PORTRAIT)
                 ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE

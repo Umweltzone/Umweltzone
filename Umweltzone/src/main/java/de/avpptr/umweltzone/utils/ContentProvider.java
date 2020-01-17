@@ -19,10 +19,11 @@ package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.support.annotation.NonNull;
-import android.support.annotation.RawRes;
-import android.support.annotation.VisibleForTesting;
-import android.support.v4.util.LruCache;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RawRes;
+import androidx.annotation.VisibleForTesting;
+import androidx.collection.LruCache;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;

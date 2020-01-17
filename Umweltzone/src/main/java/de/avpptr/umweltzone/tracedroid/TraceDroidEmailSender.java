@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  ligi, Tobias Preuss
+ *  Copyright (C) 2020  ligi, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,8 +19,9 @@ package de.avpptr.umweltzone.tracedroid;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 
 import org.ligi.tracedroid.TraceDroid;
 import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;

@@ -17,7 +17,7 @@
 
 package de.avpptr.umweltzone.models;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import org.parceler.Parcel;
 

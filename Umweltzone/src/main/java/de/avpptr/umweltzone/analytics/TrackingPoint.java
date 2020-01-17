@@ -17,7 +17,7 @@
 
 package de.avpptr.umweltzone.analytics;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 public enum TrackingPoint {
     ActivityStart("activity_start"),
