@@ -15,17 +15,23 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
   -->
 
-<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.preference.PreferenceCategory android:title="@string/settings_category_title_data_privacy">
+    <androidx.preference.PreferenceCategory
+        android:title="@string/settings_category_title_data_privacy"
+        app:iconSpaceReserved="false">
 
         <androidx.preference.SwitchPreference
             android:defaultValue="@string/settings_default_value_google_analytics"
             android:key="@string/settings_key_google_analytics"
             android:summary="@string/settings_summary_google_analytics"
-            android:title="@string/settings_title_google_analytics" />
+            android:title="@string/settings_title_google_analytics"
+            app:iconSpaceReserved="false" />
 
-        <androidx.preference.Preference android:title="@string/settings_title_data_privacy_statement_de">
+        <androidx.preference.Preference
+            android:title="@string/settings_title_data_privacy_statement_de"
+            app:iconSpaceReserved="false">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://github.com/Umweltzone/Umweltzone/blob/master/DATA-PRIVACY-DE.md" />
