@@ -1,7 +1,7 @@
 @file:JvmName("ChildZonesExtensions")
 
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -27,7 +27,6 @@ import de.avpptr.umweltzone.map.viewmodels.CircuitViewModel
 import de.avpptr.umweltzone.models.ChildZone
 import de.avpptr.umweltzone.models.Circuit
 import de.avpptr.umweltzone.models.DieselProhibitionZone
-import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.ContentProvider
 import de.avpptr.umweltzone.utils.GeoPoint
 import de.avpptr.umweltzone.utils.shapeFillColor
