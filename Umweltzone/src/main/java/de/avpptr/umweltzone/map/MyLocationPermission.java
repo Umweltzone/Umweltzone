@@ -33,7 +33,7 @@ class MyLocationPermission {
 
     private final Fragment fragment;
     private final Tracking tracking;
-    private final String ACCESS_COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
+    private final static String ACCESS_COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private final String[] permissions = {ACCESS_COARSE_LOCATION};
 
     MyLocationPermission(@NonNull Fragment fragment, Tracking tracking) {
