@@ -65,7 +65,7 @@ public class PreferencesHelper {
         String googleAnalyticsPreferenceKey = context.getString(R.string.settings_key_google_analytics);
         String googleAnalyticsDefaultValueString = context.getString(
                 R.string.settings_default_value_google_analytics);
-        boolean googleAnalyticsDefaultValue = Boolean.valueOf(googleAnalyticsDefaultValueString);
+        boolean googleAnalyticsDefaultValue = Boolean.parseBoolean(googleAnalyticsDefaultValueString);
         mGoogleAnalyticsIsEnabledPreference = new BooleanPreference(
                 sharedPreferences, googleAnalyticsPreferenceKey, googleAnalyticsDefaultValue);
         mMyLocationPermissionIsPermanentlyDeclinedPreference = new BooleanPreference(
