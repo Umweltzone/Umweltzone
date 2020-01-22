@@ -128,7 +128,7 @@ public abstract class ContentProvider {
             e.printStackTrace();
         }
         Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
-        return Collections.EMPTY_LIST;
+        return Collections.emptyList();
     }
 
     @VisibleForTesting
