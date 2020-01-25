@@ -17,7 +17,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/aachen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/aachen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.750172,
@@ -47,7 +47,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/augsburg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/augsburg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.352110,
@@ -77,7 +77,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/balingen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/balingen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.213670,
@@ -121,7 +121,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/berlin.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/berlin.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.464504,
@@ -151,7 +151,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/bonn.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/bonn.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.704257,
@@ -181,7 +181,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/bremen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/bremen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 53.055835,
@@ -211,7 +211,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/darmstadt.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/darmstadt.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.801157,
@@ -241,7 +241,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/dinslaken.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/dinslaken.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.539118,
@@ -271,7 +271,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/duesseldorf.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/duesseldorf.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.168374,
@@ -301,7 +301,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/erfurt.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/erfurt.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.956582,
@@ -331,7 +331,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.813235,
@@ -361,7 +361,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/frankfurt-am-main.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/frankfurt-am-main.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.055418,
@@ -391,7 +391,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/freiburg-im-breisgau.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/freiburg-im-breisgau.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 47.973486,
@@ -421,7 +421,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hagen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/hagen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.339934,
@@ -451,7 +451,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/halle-an-der-saale.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/halle-an-der-saale.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.477952,
@@ -496,7 +496,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hamburg-blau.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/hamburg-blau.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 53.555447,
@@ -526,7 +526,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/hannover.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/hannover.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.336039,
@@ -556,7 +556,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heidelberg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/heidelberg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.368,
@@ -586,7 +586,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heidenheim.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/heidenheim.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.650845,
@@ -620,7 +620,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/heilbronn.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/heilbronn.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.1081,
@@ -650,7 +650,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/herrenberg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/herrenberg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.584744,
@@ -680,7 +680,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ilsfeld.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/ilsfeld.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.048605,
@@ -710,7 +710,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/karlsruhe.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/karlsruhe.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.992871,
@@ -740,7 +740,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/koeln.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/koeln.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.892475,
@@ -770,7 +770,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/krefeld.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/krefeld.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.312202,
@@ -800,7 +800,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/langenfeld.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/langenfeld.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.117037,
@@ -830,7 +830,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/leipzig.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/leipzig.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.256458,
@@ -860,7 +860,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/leonberg-hemmingen-und-umgebung.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/leonberg-hemmingen-und-umgebung.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.741741,
@@ -890,7 +890,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/limburg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/limburg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.370866,
@@ -920,7 +920,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ludwigsburg-und-umgebung.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/ludwigsburg-und-umgebung.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.846367,
@@ -950,7 +950,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/magdeburg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/magdeburg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.112531,
@@ -980,7 +980,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/mainz.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/mainz.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.964709,
@@ -1010,7 +1010,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/mannheim.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/mannheim.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 49.473601,
@@ -1040,7 +1040,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/marburg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/marburg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.789068,
@@ -1070,7 +1070,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/moenchengladbach.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/moenchengladbach.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.141438,
@@ -1100,7 +1100,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muehlacker.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/muehlacker.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.945481,
@@ -1130,7 +1130,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muenchen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/muenchen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.104701,
@@ -1160,7 +1160,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/muenster.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/muenster.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.952674,
@@ -1190,7 +1190,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/neuss.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/neuss.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.187841,
@@ -1220,7 +1220,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/neu-ulm.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/neu-ulm.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.385776,
@@ -1250,7 +1250,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/offenbach.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/offenbach.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.064644,
@@ -1280,7 +1280,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/osnabrueck.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/osnabrueck.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 52.244407,
@@ -1310,7 +1310,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/overath.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/overath.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.928498,
@@ -1340,7 +1340,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/pfinztal.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/pfinztal.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.952200,
@@ -1370,7 +1370,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/pforzheim.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/pforzheim.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.885610,
@@ -1407,7 +1407,7 @@
             "pressestelle@regensburg.de"
         ],
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/regensburg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/regensburg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.967496,
@@ -1437,7 +1437,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/remscheid.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/remscheid.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.175884,
@@ -1467,7 +1467,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/reutlingen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/reutlingen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.412679,
@@ -1511,7 +1511,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ruhrgebiet.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/ruhrgebiet.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.332849,
@@ -1541,7 +1541,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/schramberg.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/schramberg.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.206869,
@@ -1571,7 +1571,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/schwaebisch-gmuend.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/schwaebisch-gmuend.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.782110,
@@ -1601,7 +1601,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/siegen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/siegen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.863838,
@@ -1642,7 +1642,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/stuttgart.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/stuttgart.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.696175,
@@ -1672,7 +1672,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/tuebingen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/tuebingen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.450584,
@@ -1702,7 +1702,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/ulm.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/ulm.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.373231,
@@ -1732,7 +1732,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/urbach.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/urbach.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.803810,
@@ -1762,7 +1762,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/wendlingen.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/wendlingen.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 48.660775,
@@ -1797,7 +1797,7 @@
             "umweltberatung@wiesbaden.de"
         ],
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/wiesbaden.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/wiesbaden.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 50.033733,
@@ -1827,7 +1827,7 @@
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/info-zur-deutschen-umwelt-plakette/umweltzonen-in-deutschland/deutsche-umweltzonen/wuppertal.html",
+        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/wuppertal.html",
         "boundingBox" : {
             "southWest" : {
                 "latitude" : 51.224868,
