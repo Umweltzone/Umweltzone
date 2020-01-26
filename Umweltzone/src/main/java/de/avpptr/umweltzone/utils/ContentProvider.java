@@ -100,7 +100,6 @@ public abstract class ContentProvider {
         return getContent(context, fileName, "raw", contentType);
     }
 
-    @SuppressWarnings("unchecked") // for Collections.EMPTY_LIST
     @NonNull
     private static <T> List<T> getContent(
             final Context context,
