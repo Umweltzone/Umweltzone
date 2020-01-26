@@ -735,7 +735,7 @@
             "abroadLicensedVehicleZoneNumber" : 4,
             "abroadLicensedVehicleZoneNumberUntil" : "",
             "geometrySource" : "Stadt Köln",
-            "geometryUpdatedAt" : "2013-10-14",
+            "geometryUpdatedAt" : "2019-08-01",
             "listOfCities" : []
         }],
         "contactEmails" : null,
@@ -743,12 +743,12 @@
         "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/koeln.html",
         "boundingBox" : {
             "southWest" : {
-                "latitude" : 50.892475,
-                "longitude" : 6.808446
+                "latitude" : 50.892664,
+                "longitude" : 6.809448
             },
             "northEast" : {
-                "latitude" : 51.000023,
-                "longitude" : 7.033452
+                "latitude" : 50.999809,
+                "longitude" : 7.098447
             }
         }
     },
