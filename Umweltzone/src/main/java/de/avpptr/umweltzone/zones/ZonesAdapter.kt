@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,10 +17,10 @@
 
 package de.avpptr.umweltzone.zones
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import de.avpptr.umweltzone.zones.viewholders.OneZoneViewHolder
 import de.avpptr.umweltzone.zones.viewholders.TwoZonesViewHolder
 import de.avpptr.umweltzone.zones.viewholders.ZoneViewHolder

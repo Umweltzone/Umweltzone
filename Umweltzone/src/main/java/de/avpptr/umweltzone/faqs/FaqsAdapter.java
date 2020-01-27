@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,6 +22,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+
+import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
@@ -82,8 +84,7 @@ class FaqsAdapter extends BaseExpandableListAdapter {
     }
 
     private View getNewView(int resourceId) {
-        LayoutInflater inflater = (LayoutInflater) mContext
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = ContextCompat.getSystemService(mContext, LayoutInflater.class);
         return inflater.inflate(resourceId, null);
     }
 

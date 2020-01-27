@@ -137,11 +137,11 @@
     <string name="appinfo_references_url_google_play_services" translatable="false">
         http://developer.android.com/google/play-services
     </string>
-    <string name="appinfo_references_name_google_support_library" translatable="false">
-        Google Support Library
+    <string name="appinfo_references_name_google_androidx_library" translatable="false">
+        Google AndroidX library
     </string>
-    <string name="appinfo_references_url_google_support_library" translatable="false">
-        https://developer.android.com/topic/libraries/support-library/features
+    <string name="appinfo_references_url_google_androidx_library" translatable="false">
+        https://developer.android.com/jetpack/androidx
     </string>
     <string name="appinfo_references_name_jackson" translatable="false">
         Jackson JSON processor

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,6 +16,8 @@
  */
 
 package de.avpptr.umweltzone.analytics;
+
+import androidx.annotation.NonNull;
 
 public enum TrackingPoint {
     ActivityStart("activity_start"),
@@ -48,6 +50,7 @@ public enum TrackingPoint {
         mMessage = message;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return mMessage;

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,8 @@
 package de.avpptr.umweltzone.settings;
 
 import android.os.Bundle;
-import android.support.v7.preference.PreferenceFragmentCompat;
+
+import androidx.preference.PreferenceFragmentCompat;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;

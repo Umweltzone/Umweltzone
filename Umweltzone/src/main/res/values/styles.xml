@@ -36,26 +36,12 @@
 
     <!-- Settings -->
 
-    <style name="AppPreferenceTheme" parent="@style/PreferenceThemeOverlay">
-        <item name="switchPreferenceStyle">@style/AppPreference.SwitchPreference</item>
-        <item name="preferenceStyle">@style/AppPreference.Preference</item>
-    </style>
-
-    <style name="AppPreference.SwitchPreference" parent="@style/Preference.SwitchPreference">
-        <item name="android:layout">@layout/settings_item</item>
-    </style>
-
-    <style name="AppPreference.Preference" parent="@style/Preference">
-        <item name="android:layout">@layout/settings_item</item>
-    </style>
-
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:textColorLink">@color/button_web_text_color_link</item>
         <item name="android:lineSpacingMultiplier">@dimen/text_line_spacing</item>
         <item name="alertDialogTheme">@style/AppDialog</item>
-        <item name="preferenceTheme">@style/AppPreferenceTheme</item>
     </style>
 
     <style name="AppDialog" parent="Theme.AppCompat.Light.Dialog.Alert">

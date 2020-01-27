@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@ package de.avpptr.umweltzone.zones.viewholders
 
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
-import android.support.annotation.LayoutRes
 import android.view.View
+import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 import kotlinx.android.synthetic.main.zones_list_item_two_zones.view.*

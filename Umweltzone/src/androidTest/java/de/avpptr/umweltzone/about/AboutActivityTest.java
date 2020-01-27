@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,9 +17,9 @@
 
 package de.avpptr.umweltzone.about;
 
-import android.support.test.filters.LargeTest;
-import android.support.test.rule.ActivityTestRule;
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.filters.LargeTest;
+import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,12 +28,12 @@ import org.junit.runner.RunWith;
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.action.ViewActions.scrollTo;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
+import static androidx.test.espresso.Espresso.onView;
+import static androidx.test.espresso.action.ViewActions.scrollTo;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
+import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
@@ -90,10 +90,10 @@ public class AboutActivityTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.appinfo_references_name_google_analytics)));
-        onView(withId(R.id.app_info_google_support_library))
+        onView(withId(R.id.app_info_google_androidx_library))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_google_support_library)));
+                .check(matches(withText(R.string.appinfo_references_name_google_androidx_library)));
         onView(withId(R.id.app_info_google_play_services))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))

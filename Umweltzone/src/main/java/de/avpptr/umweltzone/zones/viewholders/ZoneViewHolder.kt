@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,9 +18,9 @@
 package de.avpptr.umweltzone.zones.viewholders
 
 import android.graphics.drawable.GradientDrawable
-import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import de.avpptr.umweltzone.zones.viewmodels.BadgeViewModel
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 

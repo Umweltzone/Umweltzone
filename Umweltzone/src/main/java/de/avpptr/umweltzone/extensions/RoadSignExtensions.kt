@@ -1,7 +1,7 @@
 @file:JvmName("RoadSignExtensions")
 
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@
 
 package de.avpptr.umweltzone.extensions
 
-import android.support.annotation.NonNull
+import androidx.annotation.NonNull
 import info.metadude.kotlin.library.roadsigns.RoadSign
 
 /**

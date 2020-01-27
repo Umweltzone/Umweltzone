@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,12 +20,12 @@ package de.avpptr.umweltzone.details
 import android.app.Activity
 import android.os.Bundle
 import android.os.Parcelable
-import android.support.annotation.LayoutRes
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
+import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.analytics.TrackingPoint

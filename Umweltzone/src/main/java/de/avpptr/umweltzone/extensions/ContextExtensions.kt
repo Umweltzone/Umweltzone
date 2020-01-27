@@ -1,7 +1,7 @@
 @file:JvmName("ContextExtensions")
 
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,9 +20,9 @@
 package de.avpptr.umweltzone.extensions
 
 import android.content.Context
-import android.support.annotation.ColorRes
-import android.support.annotation.NonNull
-import android.support.v4.content.ContextCompat
+import androidx.annotation.ColorRes
+import androidx.annotation.NonNull
+import androidx.core.content.ContextCompat
 
 fun @receiver:NonNull Context.getColorCompat(@ColorRes id: Int) =
         ContextCompat.getColor(this, id)
