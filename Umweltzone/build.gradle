@@ -14,8 +14,8 @@ repositories {
     jcenter()
 }
 
-def versionMajor = 4
-def versionMinor = 1
+def versionMajor = 5
+def versionMinor = 0
 def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 

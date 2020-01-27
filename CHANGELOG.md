@@ -1,5 +1,36 @@
 # Umweltzone changelog
 
+## [v.5.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.0.0)
+
+* Published: 2020-01-27
+
+### Features, improvements and maintenance
+
+* Update "Libraries" section in "About" screen., [1e9fa](https://bitbucket.org/tbsprs/umweltzone/commits/1e9fa1ac3f7c47983ee85b53d659df2bc36fc606)
+* Update zone data for Köln (provided by the city)., [8e0f9](https://bitbucket.org/tbsprs/umweltzone/commits/8e0f90c1e249718202cc9cc8956c23010046cd13)
+* Fix external URLs for umwelt-plakette.de., [65b9c](https://bitbucket.org/tbsprs/umweltzone/commits/65b9c681c2fd5f5cc296177347986984365d9563)
+* Add Danish translation, without FAQs. (Thanks to [Valar Markhulis](https://github.com/ValarMarkhulis))., [dc950](https://bitbucket.org/tbsprs/umweltzone/commits/dc950e02015481dbd0126d4d294b53dccc5aa714)
+* Add Polish translation, without FAQs. (Thanks to [Tomasz Skowroński](https://github.com/hexmind))., [a4f7a](https://bitbucket.org/tbsprs/umweltzone/commits/a4f7a7f6730de8faed7436819a72f67662b8cc33)
+* Add Dutch translation for FAQs. (Thanks to [Pieter Jan Geutjens](https://github.com/pjgeutjens)), [96660](https://bitbucket.org/tbsprs/umweltzone/commits/9666054e68cfa76b14ab1779c9ca5c983f6e6d6a)
+* Automatically load the language-specific FAQs file., [80376](https://bitbucket.org/tbsprs/umweltzone/commits/80376ddabf60db90ad5e7d59811fc781f9c7c9c5)
+* Add Dutch translation, without FAQs. (Thanks to [Sjors van Mierlo](https://github.com/spmvanmierlo).), [6e809](https://bitbucket.org/tbsprs/umweltzone/commits/6e809a871cb6587d8a27a13f744ca670921921cc)
+
+### Libraries, build tools, SDK
+
+* Use roadsigns v.3.0.0., [4660b](https://bitbucket.org/tbsprs/umweltzone/commits/4660bc544f9c98154ed132167ecefee371e65386)
+* Use snackengage-playrate v.0.23., [1d0c8](https://bitbucket.org/tbsprs/umweltzone/commits/1d0c84b248a261817cf6bf8dfe9a24e91737a5cb)
+* Rely on androidx.preference library to render settings correctly., [714d4](https://bitbucket.org/tbsprs/umweltzone/commits/714d47558ae7e5949e9d4813bc04f479b3654fe9)
+* Migrate project to AndroidX., [0fdc1](https://bitbucket.org/tbsprs/umweltzone/commits/0fdc1af5606cccfeee4b3597a8dcff5f084ec067)
+* Use targetSdkVersion 28, compileSdkVersion 28 and Google support library v.28.0.0., [23e4f](https://bitbucket.org/tbsprs/umweltzone/commits/23e4f0efa45361036999d09990ef4ba190409757)
+* Use build tools v.29.0.2., [fcbb2](https://bitbucket.org/tbsprs/umweltzone/commits/fcbb2201996fdbaa7537e7b7d33a7da5ddbb37b1)
+* Use junit v.4.13., [400a1](https://bitbucket.org/tbsprs/umweltzone/commits/400a1fa552bd1df0dd97edcd6583af2492207d57)
+* Use proguard-gradle v.6.2.2., [f6e07](https://bitbucket.org/tbsprs/umweltzone/commits/f6e07f7a23a1b603621ca7cb7597561b272bf815)
+* Use Kotlin 1.3.61., [ce85a](https://bitbucket.org/tbsprs/umweltzone/commits/ce85a91d95c6dae0df55c2d01185ec5b205d1b2f)
+* Use Android plugin for Gradle v.3.5.3., [6c237](https://bitbucket.org/tbsprs/umweltzone/commits/6c2370a9ab5cd891ceaa0754f9dd1d34b984ad49)
+* Use gradle-versions-plugin v.0.27., [29ead](https://bitbucket.org/tbsprs/umweltzone/commits/29eadb1309d6868e3d8be9f0311c353c62521787)
+* Use Gradle wrapper v.6.1., [3237a](https://bitbucket.org/tbsprs/umweltzone/commits/3237ae6955a0adfefd8d52cbea1a62896b36ceb7)
+
+
 ## [v.4.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.4.1.0)
 
 * Published: 2019-09-27
