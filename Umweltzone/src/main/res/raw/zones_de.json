@@ -1214,8 +1214,8 @@
             "nextZoneNumberAsOf" : "",
             "abroadLicensedVehicleZoneNumber" : 3,
             "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-06-14",
+            "geometrySource" : "Stadt Neu-Ulm, Geoinformation und Vermessung",
+            "geometryUpdatedAt" : "2019-06-11",
             "listOfCities" : []
         }],
         "contactEmails" : null,
