@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -37,6 +37,9 @@ val ChildZone.roadSignType: RoadSign.Type
         zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_hamburg_stresemannstrasse" ->
             RoadSign.Type.DieselProhibition.HgvsFreeUntilEuroVOpenForResidentsHamburg
         zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_berlin" ->
+            RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5VOpenForResidentsBerlin
+        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_darmstadt" ->
+            // TODO Show Darmstadt specific sign instead of Berlin sign
             RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5VOpenForResidentsBerlin
 
         else -> throw IllegalStateException("Unknown combination of zone number: '$zoneNumber' and file name: '$fileName'.")

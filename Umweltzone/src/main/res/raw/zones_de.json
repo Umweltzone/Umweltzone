@@ -197,6 +197,20 @@
         "name" : "darmstadt",
         "displayName" : "Darmstadt",
         "childZones" : [{
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "dpz_darmstadt",
+            "displayName" : "Darmstadt",
+            "zoneNumber" : "6",
+            "zoneNumberForResidentsSince" : null,
+            "zoneNumberForNonResidentsSince" : "2019-06-01",
+            "prohibitedVehicles" : [
+                "HGV",
+                "CAR"
+            ],
+            "isCongruentWithLowEmissionZone" : false,
+            "geometrySource" : "Stadt Darmstadt, Vermessungsamt",
+            "geometryUpdatedAt" : "2020-01-30"
+        },{
             "type" : "low-emission-zone",
             "fileName" : "lez_darmstadt",
             "displayName" : "Darmstadt",
