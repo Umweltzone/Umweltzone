@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.details
 
 import android.content.Context
+import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -27,7 +28,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.rule.ActivityTestRule
 import de.avpptr.umweltzone.AndroidTestUtils
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.details.dataconverters.allowedEmissionStandardInDpzText
@@ -43,7 +43,6 @@ import de.avpptr.umweltzone.utils.DateHelper
 import de.avpptr.umweltzone.utils.IntentHelper
 import de.avpptr.umweltzone.utils.StringHelper
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.*
@@ -53,11 +52,6 @@ import java.util.*
 class DieselProhibitionsZoneDetailsFragmentTest {
 
     private lateinit var context: Context
-
-    @Suppress("RedundantVisibilityModifier")
-    @Rule
-    @JvmField
-    public val activityRule: ActivityTestRule<*> = ActivityTestRule(DetailsActivity::class.java, true, false)
 
     @Before
     fun setUp() {
@@ -321,9 +315,11 @@ class DieselProhibitionsZoneDetailsFragmentTest {
             }
 
     private fun launchActivity(zone: AdministrativeZone) {
-        activityRule.launchActivity(IntentHelper.getDetailsIntent(context, zone))
-        // Rotate to verify fragment is re-used
-        AndroidTestUtils.rotateScreen(activityRule.activity)
+        val scenario = ActivityScenario.launch<DetailsActivity>(IntentHelper.getDetailsIntent(context, zone))
+        scenario.onActivity {
+            // Rotate to verify fragment is re-used
+            AndroidTestUtils.rotateScreen(it)
+        }
     }
 
     private fun dateOf(year: Int, month: Int, day: Int): Date = DateHelper.getDate(year, month, day)

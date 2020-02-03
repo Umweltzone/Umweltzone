@@ -18,8 +18,8 @@
 package de.avpptr.umweltzone.about;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+import androidx.test.ext.junit.rules.ActivityScenarioRule;
 import androidx.test.filters.LargeTest;
-import androidx.test.rule.ActivityTestRule;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -40,8 +40,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 public class AboutActivityTest {
 
     @Rule
-    public ActivityTestRule mActivityRule =
-            new ActivityTestRule<>(AboutActivity.class);
+    public ActivityScenarioRule<AboutActivity> rule = new ActivityScenarioRule<>(AboutActivity.class);
 
     @Test
     public void renderBuildInformation() {

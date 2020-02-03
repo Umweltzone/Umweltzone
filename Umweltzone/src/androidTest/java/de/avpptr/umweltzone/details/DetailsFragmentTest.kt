@@ -20,6 +20,7 @@ package de.avpptr.umweltzone.details
 import android.content.Context
 import android.view.View
 import androidx.annotation.StringRes
+import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -33,7 +34,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.rule.ActivityTestRule
 import de.avpptr.umweltzone.AndroidTestUtils
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.contract.LowEmissionZoneNumbers
@@ -42,7 +42,6 @@ import de.avpptr.umweltzone.models.ChildZone
 import de.avpptr.umweltzone.utils.*
 import org.hamcrest.Matchers.not
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.util.*
@@ -52,10 +51,6 @@ import java.util.*
 class DetailsFragmentTest {
 
     private lateinit var context: Context
-
-    @Suppress("BooleanLiteralArgument")
-    @get:Rule
-    val activityRule: ActivityTestRule<*> = ActivityTestRule(DetailsActivity::class.java, true, false)
 
     @Before
     fun setUp() {
@@ -290,9 +285,11 @@ class DetailsFragmentTest {
     }
 
     private fun launchActivity(zone: AdministrativeZone) {
-        activityRule.launchActivity(IntentHelper.getDetailsIntent(context, zone))
-        // Rotate to verify fragment is re-used
-        AndroidTestUtils.rotateScreen(activityRule.activity)
+        val scenario = ActivityScenario.launch<DetailsActivity>(IntentHelper.getDetailsIntent(context, zone))
+        scenario.onActivity {
+            // Rotate to verify fragment is re-used
+            AndroidTestUtils.rotateScreen(it)
+        }
     }
 
 }
