@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+        version="5.1.0"
+        versioncode="501000">
+        <change>
+            Neu: Dieselfahrverbote für Darmstadt werden angezeigt.
+        </change>
+        <change>
+            Aktualisierung: Die Zonendaten für Neu-Ulm haben sich geändert.
+        </change>
+    </release>
+    <release
         version="5.0.0"
         versioncode="500000">
         <change>

@@ -1,5 +1,22 @@
 # Umweltzone changelog
 
+## [v.5.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.1.0)
+
+* Published: 2020-02-05
+
+### Features, improvements and maintenance
+
+* Remove unneeded custom test runner., [3e7ca](https://bitbucket.org/tbsprs/umweltzone/commits/3e7ca4cbea9cd9ff451cd5d103813a93013e99e8)
+* Fix instrumentation tests which launch an Activity., [ae5e6](https://bitbucket.org/tbsprs/umweltzone/commits/ae5e6215be3b42b6bc859c3089fb46506921647a)
+* Add Diesel prohibition zones for Darmstadt (provided by the city)., [3b8b9](https://bitbucket.org/tbsprs/umweltzone/commits/3b8b9ed0fa878d1604d59fe853e47387f94dfa82)
+* Update zone data for Neu-Ulm (provided by the city)., [d27bd](https://bitbucket.org/tbsprs/umweltzone/commits/d27bdcf14ab12c3d94284f64b6d3f94917cb6812)
+
+### Libraries, build tools, SDK
+
+* Use Gradle wrapper v.6.1.1., [189d1](https://bitbucket.org/tbsprs/umweltzone/commits/189d1f7ba4415642d6c2b013c620cb178da468a5)
+* Use snackengage-playrate v.0.24., [cb8ca](https://bitbucket.org/tbsprs/umweltzone/commits/cb8ca30498ca8456322586a93885ca363bc32031)
+
+
 ## [v.5.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.0.0)
 
 * Published: 2020-01-27

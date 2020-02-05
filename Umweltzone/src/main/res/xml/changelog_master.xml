@@ -16,6 +16,16 @@
 -->
 <changelog>
     <release
+        version="5.1.0"
+        versioncode="501000">
+        <change>
+            New: Add Diesel prohibition zones for Darmstadt
+        </change>
+        <change>
+            Update: The zone data for Neu-Ulm has changed.
+        </change>
+    </release>
+    <release
         version="5.0.0"
         versioncode="500000">
         <change>
