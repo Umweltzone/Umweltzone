@@ -20,6 +20,7 @@ package de.avpptr.umweltzone.details
 import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
+import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.scrollTo
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -28,27 +29,18 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.rule.ActivityTestRule
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.utils.IntentHelper
 import org.hamcrest.Matchers.allOf
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
 
 @SmallTest
-@RunWith(AndroidJUnit4::class)
 class NoCitySelectedFragmentTest {
 
     private lateinit var context: Context
-
-    @Suppress("BooleanLiteralArgument")
-    @get:Rule
-    val activityRule: ActivityTestRule<*> = ActivityTestRule(DetailsActivity::class.java, true, false)
 
     @Before
     fun setUp() {
@@ -78,7 +70,7 @@ class NoCitySelectedFragmentTest {
     }
 
     private fun launchActivity() {
-        activityRule.launchActivity(IntentHelper.getIntent(context, DetailsActivity::class.java))
+        ActivityScenario.launch<DetailsActivity>(IntentHelper.getIntent(context, DetailsActivity::class.java))
     }
 
 }
