@@ -31,7 +31,6 @@ import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import de.avpptr.umweltzone.AndroidTestUtils
@@ -43,11 +42,9 @@ import de.avpptr.umweltzone.utils.*
 import org.hamcrest.Matchers.not
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 import java.util.*
 
 @LargeTest
-@RunWith(AndroidJUnit4::class)
 class DetailsFragmentTest {
 
     private lateinit var context: Context

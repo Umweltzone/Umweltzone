@@ -21,11 +21,9 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RawRes;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import java.util.List;
 
@@ -42,7 +40,6 @@ import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentat
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 
-@RunWith(AndroidJUnit4.class)
 public class ContentProviderTest {
 
     private static final String[] ZONE_FILE_NAMES_WITH_COORDINATES = {

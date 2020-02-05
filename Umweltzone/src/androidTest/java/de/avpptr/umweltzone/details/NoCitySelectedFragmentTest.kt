@@ -29,7 +29,6 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withParent
 import androidx.test.espresso.matcher.ViewMatchers.withText
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.SmallTest
 import androidx.test.platform.app.InstrumentationRegistry
 import de.avpptr.umweltzone.R
@@ -37,10 +36,8 @@ import de.avpptr.umweltzone.utils.IntentHelper
 import org.hamcrest.Matchers.allOf
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 
 @SmallTest
-@RunWith(AndroidJUnit4::class)
 class NoCitySelectedFragmentTest {
 
     private lateinit var context: Context

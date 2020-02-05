@@ -25,7 +25,6 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.platform.app.InstrumentationRegistry
 import de.avpptr.umweltzone.AndroidTestUtils
@@ -44,11 +43,9 @@ import de.avpptr.umweltzone.utils.IntentHelper
 import de.avpptr.umweltzone.utils.StringHelper
 import org.junit.Before
 import org.junit.Test
-import org.junit.runner.RunWith
 import java.util.*
 
 @LargeTest
-@RunWith(AndroidJUnit4::class)
 class DieselProhibitionsZoneDetailsFragmentTest {
 
     private lateinit var context: Context
