@@ -1,5 +1,25 @@
 # Umweltzone changelog
 
+## [v.5.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.2.0)
+
+* Published: 2020-03-06
+
+### Features, improvements and maintenance
+
+* Update Diesel prohibition zones for Darmstadt., [22174](https://bitbucket.org/tbsprs/umweltzone/commits/221748806dfbda7717a10e885b596006779cdfce)
+
+### Libraries, build tools, SDK
+
+* Use Gradle wrapper v.6.2.2., [87678](https://bitbucket.org/tbsprs/umweltzone/commits/876785b33f5b6451acc1fb792b24a0ad8d68d5e5)
+* Use Kotlin 1.3.70., [79075](https://bitbucket.org/tbsprs/umweltzone/commits/7907598392d67cb967754225aae043d9d7af18dd)
+* Use build tools v.29.0.3., [b31e8](https://bitbucket.org/tbsprs/umweltzone/commits/b31e8051b97e41d74409a7c919b42ff0221144dd)
+* Use jackson-databind v.2.10.3., [dceb0](https://bitbucket.org/tbsprs/umweltzone/commits/dceb01c76571246494d29292da18bac6307b58de)
+* Use material v.1.1.0., [93551](https://bitbucket.org/tbsprs/umweltzone/commits/93551b1dfc1a245df3282c01daa7523b646e2d4d)
+* Use parceler v.1.1.13., [e363b](https://bitbucket.org/tbsprs/umweltzone/commits/e363b724a8bcc887d653074b4216496e7405eda4)
+* Use strict-version-matcher-plugin v.1.2.1., [d590d](https://bitbucket.org/tbsprs/umweltzone/commits/d590d88d965e69510cf34e4cca9868c53a86797b)
+* Use gradle-versions-plugin v.0.28., [e3955](https://bitbucket.org/tbsprs/umweltzone/commits/e3955810577096ca0a597db0f12cedda0720d208)
+
+
 ## [v.5.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.1.0)
 
 * Published: 2020-02-05

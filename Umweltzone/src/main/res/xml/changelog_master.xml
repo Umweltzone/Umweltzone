@@ -16,6 +16,14 @@
 -->
 <changelog>
     <release
+        version="5.2.0"
+        versioncode="502000">
+        <change>
+            Update: Individual information for both Diesel
+            prohibition zones in Darmstadt. Road signs updated.
+        </change>
+    </release>
+    <release
         version="5.1.0"
         versioncode="501000">
         <change>

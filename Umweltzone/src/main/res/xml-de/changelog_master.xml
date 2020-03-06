@@ -16,6 +16,15 @@
 -->
 <changelog>
     <release
+        version="5.2.0"
+        versioncode="502000">
+        <change>
+            Aktualisierung: Für jede der beiden Dieselfahrverbotszonen in
+            Darmstadt werden separate Informationen angezeigt.
+            Strassenschilder ausgetauscht.
+        </change>
+    </release>
+    <release
         version="5.1.0"
         versioncode="501000">
         <change>
