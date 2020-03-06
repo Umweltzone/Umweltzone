@@ -22,6 +22,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import de.avpptr.umweltzone.zones.viewholders.OneZoneViewHolder
+import de.avpptr.umweltzone.zones.viewholders.ThreeZonesViewHolder
 import de.avpptr.umweltzone.zones.viewholders.TwoZonesViewHolder
 import de.avpptr.umweltzone.zones.viewholders.ZoneViewHolder
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
@@ -46,6 +47,10 @@ class ZonesAdapter(
             ChildZonesCount.TWO.value -> {
                 val itemView = inflater.inflate(TwoZonesViewHolder.layout, parent, false)
                 TwoZonesViewHolder(itemView, onItemClick)
+            }
+            ChildZonesCount.THREE.value -> {
+                val itemView = inflater.inflate(ThreeZonesViewHolder.layout, parent, false)
+                ThreeZonesViewHolder(itemView, onItemClick)
             }
             else -> {
                 onItemViewInflationError.invoke(viewType)
