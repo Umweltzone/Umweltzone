@@ -12,6 +12,7 @@ repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
     jcenter()
+    mavenLocal()
 }
 
 def versionMajor = 5
@@ -45,7 +46,7 @@ allprojects {
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 14
