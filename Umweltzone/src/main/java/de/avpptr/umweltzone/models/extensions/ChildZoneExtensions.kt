@@ -38,9 +38,10 @@ val ChildZone.roadSignType: RoadSign.Type
             RoadSign.Type.DieselProhibition.HgvsFreeUntilEuroVOpenForResidentsHamburg
         zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_berlin" ->
             RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5VOpenForResidentsBerlin
-        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_darmstadt" ->
-            // TODO Show Darmstadt specific sign instead of Berlin sign
-            RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5VOpenForResidentsBerlin
+        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_darmstadt_huegelstrasse" ->
+            RoadSign.Type.DieselProhibition.CarsFreeUntilEuro5PetrolUntilEuro2Darmstadt
+        zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_darmstadt_heinrichstrasse" ->
+            RoadSign.Type.DieselProhibition.HgvsCarsFreeUntilEuro5VPetrolUntilEuro2Darmstadt
 
         else -> throw IllegalStateException("Unknown combination of zone number: '$zoneNumber' and file name: '$fileName'.")
     }

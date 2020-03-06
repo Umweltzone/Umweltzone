@@ -56,7 +56,7 @@ public class ContentProviderTest {
             "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",
             "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse",
-            "dpz_berlin", "dpz_darmstadt"
+            "dpz_berlin", "dpz_darmstadt_huegelstrasse", "dpz_darmstadt_heinrichstrasse"
     };
 
     private static final String[] ZONE_FILE_NAMES_WITHOUT_COORDINATES = {

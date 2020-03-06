@@ -41,6 +41,15 @@ fun AdministrativeZone.toZoneViewModel(context: Context): ZoneViewModel = when (
                 badge2ViewModel = childZones[1].toBadgeViewModel(context)
         )
     }
+    ChildZonesCount.THREE.value -> {
+        ZoneViewModel.ThreeZonesViewModel(
+                name = displayName,
+                nameTextColor = getTextColor(context),
+                badge1ViewModel = childZones[0].toBadgeViewModel(context),
+                badge2ViewModel = childZones[1].toBadgeViewModel(context),
+                badge3ViewModel = childZones[2].toBadgeViewModel(context)
+        )
+    }
     else -> error("Unknown child zones size: ${childZones.size}")
 }
 
