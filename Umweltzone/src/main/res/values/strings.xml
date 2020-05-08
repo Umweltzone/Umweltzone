@@ -129,7 +129,7 @@
         Android Testing Support Library
     </string>
     <string name="appinfo_references_url_android_testing_support_library" translatable="false">
-        https://google.github.io/android-testing-support-library/
+        https://android.github.io/android-test/
     </string>
     <string name="appinfo_references_name_google_play_services" translatable="false">
         Google Play Services
@@ -147,7 +147,7 @@
         Jackson JSON processor
     </string>
     <string name="appinfo_references_url_jackson" translatable="false">
-        http://jackson.codehaus.org
+        https://github.com/FasterXML/jackson
     </string>
     <string name="appinfo_references_name_google_analytics" translatable="false">
         Google Analytics
