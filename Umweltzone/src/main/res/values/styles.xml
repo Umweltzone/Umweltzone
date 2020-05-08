@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2019  Tobias Preuss
+  Copyright (C) 2020  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -147,6 +147,7 @@
 
     <style name="AppInfo.WebLink" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
+        <item name="android:gravity">start</item>
     </style>
 
     <style name="AppInfo.SubTitle" parent="TextView.Base.Small">
