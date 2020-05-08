@@ -24,7 +24,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.annotation.ContentView;
 import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -50,6 +52,13 @@ public abstract class BaseActivity extends AppCompatActivity {
     public BaseActivity() {
         super();
         mTracking = Umweltzone.getTracker();
+    }
+
+    @ContentView
+    public BaseActivity(@LayoutRes int contentLayoutId) {
+        // This constructor is annotated with @ContentView
+        super(contentLayoutId);
+        this.mTracking = Umweltzone.getTracker();
     }
 
     @Override

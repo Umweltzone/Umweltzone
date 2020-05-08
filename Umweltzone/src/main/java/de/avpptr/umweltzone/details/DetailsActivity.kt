@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,11 +25,10 @@ import de.avpptr.umweltzone.base.BaseActivity
 import de.avpptr.umweltzone.models.AdministrativeZone
 import org.parceler.Parcels
 
-class DetailsActivity : BaseActivity() {
+class DetailsActivity : BaseActivity(R.layout.activity_details) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details)
         initFragment()
     }
 

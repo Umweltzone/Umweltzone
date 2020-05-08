@@ -33,10 +33,13 @@ import de.avpptr.umweltzone.utils.ContentProvider;
 
 public class FaqActivity extends BaseActivity {
 
+    public FaqActivity() {
+        super(R.layout.activity_faq);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faq);
         ExpandableListView faqsList = findViewById(R.id.faq_list);
         List<Faq> faqs = ContentProvider.getFaqs(this);
         faqsList.setAdapter(new FaqsAdapter(this, faqs));
