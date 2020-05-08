@@ -9,8 +9,6 @@ LINE_TERMINATOR = "\n"
 OUTPUT_FILE = "urls.txt"
 
 
-valid_urls = []
-
 def extract_urls(current_urls, file_name, url_key):
     print("Extracting URLs from %s ..." % file_name)
     with open(file_name) as f:
