@@ -3,105 +3,105 @@
         "position" : 1,
         "question" : "What is fine dust? What are fine particulates?",
         "answer" : "Fine particulates are nothing more than fine dust, in other words solid particles in the atmosphere smaller than 15 µm. Emission reduction targets in the European Union adhere to the guidelines laid down in the US Environmental Protection Agency’s (EPA) National Air Quality Standard for Particulate Matter (in short PM Standard), introduced in 1987. In the first draft of the American guideline the Standard PM10 was defined, which since 2005 has served as the threshold value in the European Union. Unlike the commonly cited definitions, PM10 is not a sharp definition of the emissions with an aerodynamic diameter of 10 microns, but rather an attempt to replicate the secretion behavior of the upper airways: particles with an aerodynamic diameter of less than 1 micron are fully included, a certain percentage of larger particles will be considered which will decrease with increasing particle size, and eventually reaches 0% at 15 microns. Technically, this corresponds to the application of a so-called weighting function (in specialist jargon a separating curve or separator function) on the emissions (in practice, this is achieved by a size-selective inlet to the measuring instruments) . From the shape of this weighting function the PM10 name is derived, because at 10 microns exactly half of the particles are taken into consideration in the weighting. Further information on particulate matter can be found at Wikipedia (http://en.wikipedia.org/wiki/Particulates)",
-        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#10",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_fine_dust"
     },
     {
         "position" : 2,
         "question" : "Why is dust harmful?",
         "answer" : "There are no harmless fine dust concentrations. For the population of the European Union an average reduction in life expectancy of one year results due to total particulate emission. The threshold limits defined by the EU ​​are more or less arbitrary and follow what is deemed politically feasible rather than what is regarded as scientifically relevant. Among the effects of fine particle pollution are, for example, an increase in the severity of allergy symptoms, a rise in asthma attacks, respiratory symptoms and lung cancer, as well as an increased risk of middle ear infections in children. In addition effects on the cardiovascular system (eg, myocardial infarct) are assumed. The extent of the impact of particles on the respiratory tract depends, in addition, to the toxicity of the particles, caused amongst others by lead, vanadium, beryllium, and mercury, and the size of the particles themselves: The smaller a particle, the deeper it can penetrate onto the lungs.",
-        "sourceUrl" : "http://www.umwelt-plakette.de/haeufige_fragen.php#11",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "why_is_dust_harmful"
     },
     {
         "position" : 3,
         "question" : "How are environmental stickers allocated/assigned",
         "answer" : "Allocation of environmental protection stickers is regulated by law according to certain criteria. Diesel vehicles without particle filters, depending on the vehicles’ age, are allocated a red or yellow environment sticker. Newer vehicles with diesel particle filter are allocated for the most part a green sticker. Gasoline/petrol powered vehicles with regulated catalytic converters (G-Cat) are, without exception, assigned a green environmental sticker, which is why it can happen that very old vehicles can also obtain a green sticker. These are for the main part petrol engines with regulated catalytic converters.  Petrol powered vehicles without regulated catalytic converter are allocated either a green sticker or no sticker at all. So with petrol powered vehicles either a green sticker or no sticker is allocated. To check which environmental sticker your vehicle should be allocate, please consult the DEKRA internet page.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_are_environmental_stickers_allocated"
     },
     {
         "position" : 4,
         "question" : "How long are the environmental stickers valid?",
         "answer" : "The environmental sticker is affixed to the license plate of the car which means that a renewal is only necessary when a change of number plate becomes necessary (e.g. relocation, sale).",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_long_are_the_environmental_stickers_valid"
     },
     {
         "position" : 5,
         "question" : "Do I need an environmental sticker for my motor bike?",
         "answer" : "No, two- or three-wheeled vehicles are exempt.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_I_need_an_environmental_sticker_for_my_motor_bike"
     },
     {
         "position" : 6,
         "question" : "What is a low emission zone?",
         "answer" : "A low emission zone is a specially marked area in a city in which vehicles with high vehicle emission values are forbidden from entering. Diesel vehicles and trucks especially are affected. Control is effected by monitoring the required stickers.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_a_low_emission_zone"
     },
     {
         "position" : 7,
         "question" : "How do I recognize a low emission zone?",
         "answer" : "Low emission zones are marked by appropriate traffic signs (see picture at right), which indicate the beginning and the end of the emission control zone, in addition is shown which stickers are required (red, yellow or green). What many do not know: These zones also apply to vehicles with foreign number plates.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_do_i_recognize_a_low_emission_zone"
     },
     {
         "position" : 8,
         "question" : "What is the use of low emission zones?",
         "answer" : "All vehicles generate particulate matter which can lead to an increase in asthma and pulmonary diseases. Through the introduction of low emission zones, this is hoped to be prevented in metropolitan areas.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_use_of_low_emission_zones?"
     },
     {
         "position" : 9,
         "question" : "For whom are low emission zones valid?",
         "answer" : "The law states: For all passenger cars and commercial vehicles, regardless of propulsion type (internal combustion engines - petrol, diesel or gas, additionally electrically propelled). The environmental sticker aims principally at contributing to a reduction of pollutants in metropolitan areas.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "for_whom_are_low_emission_zones_valid"
     },
     {
         "position" : 10,
         "question" : "Which environmental sticker for my vehicle?",
         "answer" : "The allocation of an environmental sticker will be based on the data entered in the vehicle documents. This results in a so-called Pollutant  Key Number. You can decrypt your vehicle registration document by carrying out the DEKRA online test.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "which_environmental_sticker_for_my_vehicle"
     },
     {
         "position" : 11,
         "question" : "Penalties for driving without environmental stickers.",
         "answer" : "The penalty for non-compliance is a 80 Euro fine but no point in Flensburg (valid since May 2014).",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "penalties_for_driving_without_environmental_stickers"
     },
     {
         "position" : 12,
         "question" : "What is the situation with exception permits?",
         "answer" : "Every city has its own exemptions These are explained in the special low emission zone pages on our website. If there are none specified there, then normally the standard exceptions plus other special cases apply. Visit your respective Office for Environment and Transport to obtain the most recent and accurate information. As a rule a form must be completed and additional evidence (such as a certificate of non-retrofitting or non-upgrade) provided in order to obtain an exemption for the specific  zone. Exemptions are usually time limited and do not always correspond to the validity of current  license plate details. Exemptions are usually valid from a few days up to a year. A permit can cost from 10 to 300 Euros depending on location and duration.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_situation_with_exception_permits"
     },
     {
         "position" : 13,
         "question" : "Do foreign vehicles require an emission sticker?",
         "answer" : "Yes. Any vehicle which is not specifically exempt  according to the environmental sticker regulations requires a sticker – in effect all vehicles registered abroad.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_foreign_vehicles_require_an_emission_sticker"
     },
     {
         "position" : 14,
         "question" : "Where do I stick the sticker?",
         "answer" : "There are no clear statutory guidelines which state exactly where the sticker is to be placed. We recommend placing the sticker in the lower right corner of the window on the front passenger side. Thus, the sticker can be recognized immediately by officers of the public affairs office or other municipal departments.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "where_do_i_stick_the_sticker"
     },
     {
         "position" : 15,
         "question" : "Does every city need a different environment sticker?",
         "answer" : "No. One sticker is valid for all low emission zones. The stickers are not bound to any specific location.",
-        "sourceUrl" : "http://plakette24.de/information/umweltplakette.php",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "does_every_city_need_a_different_environment_sticker"
     }
 ]
