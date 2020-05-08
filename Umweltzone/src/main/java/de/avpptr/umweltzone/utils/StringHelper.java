@@ -18,7 +18,6 @@
 package de.avpptr.umweltzone.utils;
 
 import android.content.Context;
-import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
 
@@ -26,6 +25,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.annotation.VisibleForTesting;
+import androidx.core.text.HtmlCompat;
 
 import org.ligi.tracedroid.logging.Log;
 
@@ -171,7 +171,7 @@ public class StringHelper {
     public static Spanned spannedLinkForString(
             final String title,
             final String url) {
-        return Html.fromHtml(linkifiedString(title, url));
+        return HtmlCompat.fromHtml(linkifiedString(title, url), HtmlCompat.FROM_HTML_MODE_LEGACY);
     }
 
     @NonNull

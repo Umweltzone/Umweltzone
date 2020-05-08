@@ -21,7 +21,6 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -31,6 +30,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
 
@@ -86,10 +86,10 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         View zoneNotDrawableView = inflater.inflate(R.layout.fragment_zone_not_drawable, null);
         TextView noticeTextView = zoneNotDrawableView
                 .findViewById(R.id.zone_not_drawable_notice);
-        Spanned noticeSpanned = Html.fromHtml(getString(
+        Spanned noticeSpanned = HtmlCompat.fromHtml(getString(
                 R.string.zone_not_drawable_notice,
                 zoneDisplayName,
-                zoneDisplayName));
+                zoneDisplayName), HtmlCompat.FROM_HTML_MODE_LEGACY);
         noticeTextView.setText(noticeSpanned, TextView.BufferType.SPANNABLE);
 
         final String[] toRecipients = getToRecipients(administrativeZone.contactEmails);
