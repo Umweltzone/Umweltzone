@@ -18,6 +18,7 @@
 package de.avpptr.umweltzone.map;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -68,7 +69,11 @@ public class MainActivity extends BaseActivity {
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
+            setShowWhenLocked(true);
+        } else {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        }
     }
 
     @Override
