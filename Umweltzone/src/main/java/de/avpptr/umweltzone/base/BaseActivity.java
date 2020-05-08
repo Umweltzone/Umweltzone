@@ -48,6 +48,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected final Tracking mTracking;
 
     public BaseActivity() {
+        super();
         mTracking = Umweltzone.getTracker();
     }
 
