@@ -30,10 +30,13 @@ import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class AboutActivity extends BaseActivity {
 
+    public AboutActivity() {
+        super(R.layout.activity_about);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
 
         ViewHelper.setupTextViewSimple(this,
                 R.id.buildVersion, "v." + getBuildVersionName());

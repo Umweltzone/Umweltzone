@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2019  Tobias Preuss
+  Copyright (C) 2020  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -101,7 +101,7 @@
     <style name="TextView.Base.Medium" parent="@android:style/TextAppearance.Medium">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">start</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:textSize">@dimen/headline_text_size</item>
     </style>
@@ -147,6 +147,7 @@
 
     <style name="AppInfo.WebLink" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
+        <item name="android:gravity">start</item>
     </style>
 
     <style name="AppInfo.SubTitle" parent="TextView.Base.Small">
@@ -198,7 +199,7 @@
 
     <style name="ZoneInfo.Content" parent="TextView.Base.Small">
         <item name="android:layout_marginBottom">@dimen/big_spacer</item>
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">start</item>
     </style>
 
     <style name="ZoneInfo.Content.Emphasized" parent="ZoneInfo.Content">
@@ -222,7 +223,7 @@
     </style>
 
     <style name="Faq.Content.Answer" parent="TextView.Base.Small">
-        <item name="android:gravity">left</item>
+        <item name="android:gravity">start</item>
         <item name="android:textColor">@color/faq_answer_foreground</item>
     </style>
 

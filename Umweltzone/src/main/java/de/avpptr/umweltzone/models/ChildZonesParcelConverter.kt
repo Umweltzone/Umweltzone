@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -29,8 +29,8 @@ class ChildZonesParcelConverter : ArrayListParcelConverter<ChildZone>() {
         parcel.writeParcelable(Parcels.wrap(input), NO_FLAGS)
     }
 
-    override fun itemFromParcel(parcel: Parcel): ChildZone = Parcels.unwrap<ChildZone>(
-            parcel.readParcelable<Parcelable>(ChildZone::class.java.classLoader))
+    override fun itemFromParcel(parcel: Parcel): ChildZone = Parcels.unwrap(
+            parcel.readParcelable(ChildZone::class.java.classLoader))
 
     companion object {
         private const val NO_FLAGS = 0

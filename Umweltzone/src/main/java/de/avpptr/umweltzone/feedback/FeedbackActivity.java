@@ -29,10 +29,13 @@ import de.avpptr.umweltzone.utils.ViewHelper;
 
 public class FeedbackActivity extends BaseActivity {
 
+    public FeedbackActivity() {
+        super(R.layout.activity_feedback);
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
 
         ViewHelper.setupTextViewSimple(this, R.id.buildVersion, "v." + getBuildVersionName());
 
