@@ -16,6 +16,27 @@
 -->
 <changelog>
     <release
+        version="5.3.0"
+        versioncode="503000">
+        <change>
+            Android: The app is now optimized for Android 10.
+        </change>
+        <change>
+            Update: Fix text alignment in "Further information"
+            section in "City info" screen.
+        </change>
+        <change>
+            Update: Update link for "Online sticker application" for Berlin.
+        </change>
+        <change>
+            Update: Fix broken source links in "FAQ" screen.
+        </change>
+        <change>
+            Update: Fix two broken links which point to software
+            libraries used by the app.
+        </change>
+    </release>
+    <release
         version="5.2.0"
         versioncode="502000">
         <change>

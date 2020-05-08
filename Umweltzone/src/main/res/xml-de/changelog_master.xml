@@ -16,6 +16,27 @@
 -->
 <changelog>
     <release
+        version="5.3.0"
+        versioncode="503000">
+        <change>
+            Android: Die App ist jetzt für Android 10 optimiert.
+        </change>
+        <change>
+            Bugfix: Textausrichtung im "Sonstige Informationen"-Bereich
+            im "Stadtinfos"-Bildschirm korrigiert.
+        </change>
+        <change>
+            Aktualisierung: "Online-Antrag Feinstaubplakette"-Link aktualisiert.
+        </change>
+        <change>
+            Bugfix: Defekte Quellenlinks in "FAQ"-Bildschirm repariert.
+        </change>
+        <change>
+            Bugfix: Zwei defekte Links repariert, die auf von der App
+            genutzte Software-Bibliotheken verweisen.
+        </change>
+    </release>
+    <release
         version="5.2.0"
         versioncode="502000">
         <change>

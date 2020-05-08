@@ -1,5 +1,34 @@
 # Umweltzone changelog
 
+## [v.5.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.3.0)
+
+* Published: 2020-05-08
+
+### Features, improvements and maintenance
+
+* Fix broken URLs pointing to used software libraries., [a94fd](https://bitbucket.org/tbsprs/umweltzone/commits/a94fdb81590f45b087f500864e2fe7d9f89b17ab)
+* Always use "https" in web links., [82233](https://bitbucket.org/tbsprs/umweltzone/commits/822333870561ad149db7619e14ce596271f43790)
+* Fix broken source URLs in FAQs screen., [e01cd](https://bitbucket.org/tbsprs/umweltzone/commits/e01cd708e6eec6488b5ce46ea2c5484bc8be9a62)
+* Update badge online URL for Berlin., [96426](https://bitbucket.org/tbsprs/umweltzone/commits/964261ec287160e9f3254315768d729e812b5f42)
+* Replace deprecated `PreferenceManager`., [fe25b](https://bitbucket.org/tbsprs/umweltzone/commits/fe25b5d77c0caeec0a26b1cbcbc648b47d44f973)
+* Use new `Activity#setShowWhenLocked` method to show map on lock screen., [1898e](https://bitbucket.org/tbsprs/umweltzone/commits/1898e97a451d3c2ae5e15de848984e4fc3c8202f)
+* Replace deprecated `Html#fromHtml` with `HtmlCompat#fromHtml`., [3c051](https://bitbucket.org/tbsprs/umweltzone/commits/3c051fda90aa601a34dd5ac80b9fde1a3f4341e8)
+* Improve right-to-left (RTL) layout support., [709fb](https://bitbucket.org/tbsprs/umweltzone/commits/709fb0d1681468323f88797be7d90dee2e8c410b)
+* Fix horizontal alignment of web links in "Further information online" section., [68e62](https://bitbucket.org/tbsprs/umweltzone/commits/68e622cf6a201949717629926b48874aae6653f8)
+* Use new layoutId `AppCompatActivity` constructor., [c78b9](https://bitbucket.org/tbsprs/umweltzone/commits/c78b9eaed32d168f34d78c0577ad0102cae84a2b)
+* Always invoke `super()` in primary constructor., [43cda](https://bitbucket.org/tbsprs/umweltzone/commits/43cda5cdc74df6b39d5726fd82d87336e1730a20)
+
+### Libraries, build tools, SDK
+
+* Use targetSdkVersion 29 and compileSdkVersion 29., [1cbde](https://bitbucket.org/tbsprs/umweltzone/commits/1cbde9ae52fd48b3cc6ccba4ad11bacd0b6f8cae)
+* Use Gradle wrapper v.6.4., [31a29](https://bitbucket.org/tbsprs/umweltzone/commits/31a29cdb04fec2139f06c3ed9b6c82ee9d8582d1)
+* Use Android plugin for Gradle v.3.6.3., [8ed88](https://bitbucket.org/tbsprs/umweltzone/commits/8ed882d68b8db9fbea43241e6975b74122b7625c)
+* Use jackson 2.11.0., [65925](https://bitbucket.org/tbsprs/umweltzone/commits/65925fddc4da1240af09c6c63a0662f30a9aef4e)
+* Use play-services-base v.17.2.1., [b0d2b](https://bitbucket.org/tbsprs/umweltzone/commits/b0d2bc37243957f8984bdfa2345cc70c73337835)
+* Use preference v.1.1.1., [782c0](https://bitbucket.org/tbsprs/umweltzone/commits/782c09e7d718fdaed4edf2fca8769021687508d6)
+* Use Kotlin 1.3.72., [8245d](https://bitbucket.org/tbsprs/umweltzone/commits/8245dbe3f36335432e110b180b9c4636aa3719c4)
+
+
 ## [v.5.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.2.0)
 
 * Published: 2020-03-06
