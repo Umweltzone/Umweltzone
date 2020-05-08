@@ -99,7 +99,7 @@
     </string>
     <string name="appinfo_references_name_umweltbundesamt">Federal Environment Agency</string>
     <string name="appinfo_references_url_umweltbundesamt" translatable="false">
-        http://www.umweltbundesamt.de
+        https://www.umweltbundesamt.de
     </string>
 
     <!-- AboutActivity / Graphics -->
@@ -111,7 +111,7 @@
         Wikimedia Commons
     </string>
     <string name="appinfo_references_url_wikimedia_commons" translatable="false">
-        http://commons.wikimedia.org
+        https://commons.wikimedia.org
     </string>
 
     <!-- AboutActivity / Texts -->
@@ -135,7 +135,7 @@
         Google Play Services
     </string>
     <string name="appinfo_references_url_google_play_services" translatable="false">
-        http://developer.android.com/google/play-services
+        https://developer.android.com/google/play-services
     </string>
     <string name="appinfo_references_name_google_androidx_library" translatable="false">
         Google AndroidX library
@@ -153,7 +153,7 @@
         Google Analytics
     </string>
     <string name="appinfo_references_url_google_analytics" translatable="false">
-        http://developers.google.com/analytics/devguides/collection/android/
+        https://developers.google.com/analytics/devguides/collection/android/
     </string>
     <string name="appinfo_references_name_parceler" translatable="false">
         Parceler
@@ -177,19 +177,19 @@
         TraceDroid
     </string>
     <string name="appinfo_references_url_trace_droid" translatable="false">
-        http://github.com/ligi/tracedroid
+        https://github.com/ligi/tracedroid
     </string>
     <string name="appinfo_references_name_ckchangelog" translatable="false">
         ckChangeLog
     </string>
     <string name="appinfo_references_url_ckchangelog" translatable="false">
-        http://github.com/cketti/ckChangeLog
+        https://github.com/cketti/ckChangeLog
     </string>
     <string name="appinfo_references_name_typed_preferences" translatable="false">
         Typed Preferences
     </string>
     <string name="appinfo_references_url_typed_preferences" translatable="false">
-        http://github.com/johnjohndoe/TypedPreferences
+        https://github.com/johnjohndoe/TypedPreferences
     </string>
 
     <!-- AboutActivity / Sourcecode -->
@@ -213,19 +213,19 @@
     </string>
     <string name="appinfo_license_url_title_gpl">GPLv3 License</string>
     <string name="appinfo_license_url_gpl" translatable="false">
-        http://www.gnu.org/licenses/gpl-3.0.txt
+        https://www.gnu.org/licenses/gpl-3.0.txt
     </string>
     <string name="appinfo_license_url_title_odbl" translatable="false">
         Open Database Licence
     </string>
     <string name="appinfo_license_url_odbl" translatable="false">
-        http://opendatacommons.org/licenses/odbl/1.0/
+        https://opendatacommons.org/licenses/odbl/1.0/
     </string>
     <string name="appinfo_license_url_title_creative_commons">
         Creative Commons License
     </string>
     <string name="appinfo_license_url_creative_commons" translatable="false">
-        http://creativecommons.org/licenses/by/3.0/deed
+        https://creativecommons.org/licenses/by/3.0/deed
     </string>
 
     <!-- AboutActivity / Build Info -->
@@ -254,7 +254,7 @@
         Umweltzone in the Google Play Store
     </string>
     <string name="appinfo_rating_url" translatable="false">
-        http://play.google.com/store/apps/details?id=de.avpptr.umweltzone
+        https://play.google.com/store/apps/details?id=de.avpptr.umweltzone
     </string>
 
 
@@ -430,7 +430,7 @@
         Mit freundlichen Grüßen</p>
 
         <p>___<br />
-        [1]: <a href="http://play.google.com/store/apps/details?id=de.avpptr.umweltzone">http://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
+        [1]: <a href="https://play.google.com/store/apps/details?id=de.avpptr.umweltzone">https://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
     </string>
 
     <!-- TraceDroid -->
