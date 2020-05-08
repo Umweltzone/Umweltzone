@@ -21,7 +21,7 @@ buildscript {
         parcelerVersion = "1.1.13"
         playServicesBaseVersion = "17.1.0"
         playServicesMapsVersion = "17.0.0"
-        preferenceVersion = "1.1.0"
+        preferenceVersion = "1.1.1"
         roadSignsVersion = "3.1.0"
         snackengagePlayrateVersion = "0.24"
         testExtJunitVersion = "1.1.1"
