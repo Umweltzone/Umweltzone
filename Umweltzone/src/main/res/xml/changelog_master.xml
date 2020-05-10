@@ -22,17 +22,17 @@
             Android: The app is now optimized for Android 10.
         </change>
         <change>
-            Update: Fix text alignment in "Further information"
+            Bugfix: Fix text alignment in "Further information"
             section in "City info" screen.
         </change>
         <change>
-            Update: Update link for "Online sticker application" for Berlin.
+            Update: New link for "Online sticker application" for Berlin.
         </change>
         <change>
-            Update: Fix broken source links in "FAQ" screen.
+            Bugfix: Fix broken source links in "FAQ" screen.
         </change>
         <change>
-            Update: Fix two broken links which point to software
+            Bugfix: Fix two broken links which point to software
             libraries used by the app.
         </change>
     </release>
