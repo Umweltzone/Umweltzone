@@ -16,6 +16,13 @@
 -->
 <changelog>
     <release
+        version="5.3.1"
+        versioncode="503100">
+        <change>
+            Bugfix: Prevent crash on Android 5 when showing the version information.
+        </change>
+    </release>
+    <release
         version="5.3.0"
         versioncode="503000">
         <change>

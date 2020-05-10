@@ -1,5 +1,14 @@
 # Umweltzone changelog
 
+## [v.5.3.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.3.1)
+
+* Published: 2020-05-10
+
+### Features, improvements and maintenance
+
+* Prevent crash caused by AppCompat 1.1.0 on Android 5.0.2 when showing the changelog., [fe129](https://bitbucket.org/tbsprs/umweltzone/commits/fe1291da3f5f4cdea96a05880bbab11b7235f5ed)
+
+
 ## [v.5.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.3.0)
 
 * Published: 2020-05-08
