@@ -20,9 +20,11 @@ package de.avpptr.umweltzone.base;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.ContentView;
 import androidx.annotation.IdRes;
@@ -171,13 +173,32 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void showChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
         if (changeLog.isFirstRun() && !isFinishing()) {
-            changeLog.getLogDialog().show();
+            // TODO Remove once androidx.appcompat:appcompat:1.2.0 is available
+            // Workaround for Android 5. See https://github.com/cketti/ckChangeLog/issues/57
+            try {
+                changeLog.getLogDialog().show();
+            } catch (Resources.NotFoundException e) {
+                showErrorToast();
+                e.printStackTrace();
+            }
         }
     }
 
     private void showFullChangeLogDialog() {
         final ChangeLog changeLog = new ChangeLog(this);
-        changeLog.getFullLogDialog().show();
+        // TODO Remove once androidx.appcompat:appcompat:1.2.0 is available
+        // Workaround for Android 5. See https://github.com/cketti/ckChangeLog/issues/57
+        try {
+            changeLog.getFullLogDialog().show();
+        } catch (Resources.NotFoundException e) {
+            showErrorToast();
+            e.printStackTrace();
+        }
+    }
+
+    private void showErrorToast() {
+        String message = getString(R.string.changelog_error_resource_not_android_5);
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
 }

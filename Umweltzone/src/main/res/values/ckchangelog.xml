@@ -27,4 +27,12 @@
     <string name="changelog_version_format">
         Version <xliff:g id="version_name">%s</xliff:g>
     </string>
+
+    <!--
+    TODO Remove once androidx.appcompat:appcompat:1.2.0 is available
+    Workaround for Android 5. See https://github.com/cketti/ckChangeLog/issues/57
+    -->
+    <string name="changelog_error_resource_not_android_5">
+        Error showing version information
+    </string>
 </resources>
