@@ -179,6 +179,12 @@
     <string name="appinfo_references_url_trace_droid" translatable="false">
         https://github.com/ligi/tracedroid
     </string>
+    <string name="appinfo_references_name_better_link_movement_method" translatable="false">
+        BetterLinkMovementMethod
+    </string>
+    <string name="appinfo_references_url_better_link_movement_method" translatable="false">
+        https://github.com/saket/Better-Link-Movement-Method
+    </string>
     <string name="appinfo_references_name_ckchangelog" translatable="false">
         ckChangeLog
     </string>
