@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -85,8 +85,10 @@ public abstract class ViewHelper {
             final String trackingString) {
 
         TextView textView = activity.findViewById(textViewId);
-        final String tempUrl = activity.getString(urlResourceId);
-        final String url = tempUrl.contains("@") ? "mailto:" + tempUrl : tempUrl;
+        String url = activity.getString(urlResourceId);
+        if (LinkMovementMethodCompat.shouldUseLegacyLinkMovementMethod()) {
+            url = url.contains("@") ? "mailto:" + url : url;
+        }
         final String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
@@ -102,6 +104,7 @@ public abstract class ViewHelper {
             final TrackingPoint trackingPoint,
             final String trackingString) {
         textView.setText(text, TextView.BufferType.SPANNABLE);
+        textView.setMovementMethod(LinkMovementMethodCompat.getInstance());
         final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
