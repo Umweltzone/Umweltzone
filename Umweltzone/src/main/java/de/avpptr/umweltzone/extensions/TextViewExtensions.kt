@@ -21,6 +21,7 @@ package de.avpptr.umweltzone.extensions
 
 import android.widget.TextView
 import androidx.annotation.NonNull
+import androidx.core.view.isVisible
 
 /**
  * Returns the text this TextView is displaying.

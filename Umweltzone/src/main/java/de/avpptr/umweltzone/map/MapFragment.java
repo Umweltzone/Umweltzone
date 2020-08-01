@@ -30,6 +30,7 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.ViewKt;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
@@ -54,7 +55,6 @@ import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
-import de.avpptr.umweltzone.extensions.ViewExtensions;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
@@ -307,7 +307,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     private void setMyLocationActivationViewVisibility(boolean isVisible) {
-        ViewExtensions.setVisible(mMyLocationActivationView, isVisible);
+        ViewKt.setVisible(mMyLocationActivationView, isVisible);
     }
 
     @SuppressLint("MissingPermission")
