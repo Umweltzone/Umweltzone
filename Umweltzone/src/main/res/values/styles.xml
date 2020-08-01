@@ -122,6 +122,7 @@
     <style name="TextView.Email" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
         <item name="android:textColorLink">@color/email_text_color_link</item>
+        <item name="android:textColorHighlight">@color/text_link_pressed_background</item>
     </style>
 
     <!-- Generic styles for application information -->
@@ -148,6 +149,7 @@
     <style name="AppInfo.WebLink" parent="TextView.Base.Small">
         <item name="android:layout_marginTop">@dimen/medium_spacer</item>
         <item name="android:gravity">start</item>
+        <item name="android:textColorHighlight">@color/text_link_pressed_background</item>
     </style>
 
     <style name="AppInfo.SubTitle" parent="TextView.Base.Small">
@@ -215,7 +217,9 @@
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
     </style>
 
-    <style name="Faq.Content.SourceUrl" parent="TextView.Base.Small" />
+    <style name="Faq.Content.SourceUrl" parent="TextView.Base.Small">
+        <item name="android:textColorHighlight">@color/text_link_pressed_background</item>
+    </style>
 
     <style name="Faq.Content.Question" parent="TextView.Base.Medium">
         <item name="android:textColor">@color/faq_question_foreground</item>
