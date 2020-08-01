@@ -1,5 +1,27 @@
 # Umweltzone changelog
 
+## [v.5.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.4.0)
+
+* Published: 2020-08-01
+
+### Features, improvements and maintenance
+
+* Use extension functions provided by "core-ktx"., [7b455](https://bitbucket.org/tbsprs/umweltzone/commits/7b4551414d032915aafc2188f1deb954464fe780)
+* Improve naming for text link color resources., [4af77](https://bitbucket.org/tbsprs/umweltzone/commits/4af77e658db264edf86c48a880bc4f41fc2b79f1)
+* Enhance visual touch feedback of links of all kinds., [6fad1](https://bitbucket.org/tbsprs/umweltzone/commits/6fad1343daf4549c98856efd605d2e4121028885)
+* Remove by now unneeded minSdkVersion override for Support Library 23.4.0., [81c69](https://bitbucket.org/tbsprs/umweltzone/commits/81c697e1071cc0462d582cb797bae5b2ff1b906b)
+* Remove deprecated "sudo" flag., [036fd](https://bitbucket.org/tbsprs/umweltzone/commits/036fdb97f8184cbc95d53ac701ccd9f72fb2ad0a)
+
+### Libraries, build tools, SDK
+
+* Use jackson 2.11.1., [dff2f](https://bitbucket.org/tbsprs/umweltzone/commits/dff2fbcdac2212c9bc8ef427aea491e1b0ec7657)
+* Use Android plugin for Gradle v.4.0.1., [d7db7](https://bitbucket.org/tbsprs/umweltzone/commits/d7db7c9eff5c56099f18b2e2cab7f39fe97cea00)
+* Use Gradle wrapper v.6.5.1., [ebfe7](https://bitbucket.org/tbsprs/umweltzone/commits/ebfe7cbcdcd328317fd1531263cdd973361f27de)
+* Use gradle-versions-plugin v.0.29., [82790](https://bitbucket.org/tbsprs/umweltzone/commits/8279047b0b07921c6112884eb15d1ef8bfad4262)
+* Use snackengage-playrate v.0.25., [a047b](https://bitbucket.org/tbsprs/umweltzone/commits/a047bc11a7bc96c9b9ad01a9d6382fb7d24172b8)
+* Use play-services-base v.17.3.0., [ac579](https://bitbucket.org/tbsprs/umweltzone/commits/ac579769f7d61b7b9636ee9ca720fc2a83421e49)
+
+
 ## [v.5.3.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.3.1)
 
 * Published: 2020-05-10

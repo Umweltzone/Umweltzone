@@ -16,6 +16,14 @@
 -->
 <changelog>
     <release
+        version="5.4.0"
+        versioncode="504000">
+        <change>
+            New: To improve usability web and email links provide
+            visual feedback when being selected.
+        </change>
+    </release>
+    <release
         version="5.3.1"
         versioncode="503100">
         <change>
