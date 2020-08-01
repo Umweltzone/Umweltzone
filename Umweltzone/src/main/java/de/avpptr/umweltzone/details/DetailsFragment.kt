@@ -26,6 +26,8 @@ import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
 import androidx.annotation.LayoutRes
+import androidx.core.os.bundleOf
+import androidx.core.view.isVisible
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.analytics.TrackingPoint
@@ -35,7 +37,6 @@ import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.LezDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.OtherDetailsViewModel
-import de.avpptr.umweltzone.extensions.isVisible
 import de.avpptr.umweltzone.extensions.textOrHide
 import de.avpptr.umweltzone.extensions.typeOrHide
 import de.avpptr.umweltzone.models.AdministrativeZone
@@ -191,9 +192,10 @@ class DetailsFragment : BaseFragment() {
         @JvmStatic
         fun newInstance(administrativeZone: AdministrativeZone): DetailsFragment {
             val fragment = DetailsFragment()
-            val extras = Bundle()
             val parcelable = Parcels.wrap(administrativeZone)
-            extras.putParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE, parcelable)
+            val extras = bundleOf(
+                    BUNDLE_KEY_ADMINISTRATIVE_ZONE to parcelable
+            )
             fragment.arguments = extras
             return fragment
         }

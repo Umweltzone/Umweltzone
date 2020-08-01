@@ -100,6 +100,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
 }
 
 tasks.withType(Test) {
@@ -127,6 +131,7 @@ dependencies {
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"
     implementation "androidx.preference:preference:$preferenceVersion"
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
     implementation "com.google.android.gms:play-services-base:$playServicesBaseVersion"
     implementation "com.google.android.gms:play-services-maps:$playServicesMapsVersion"
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
