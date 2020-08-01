@@ -20,6 +20,7 @@
 package de.avpptr.umweltzone.extensions
 
 import androidx.annotation.NonNull
+import androidx.core.view.isVisible
 import info.metadude.kotlin.library.roadsigns.RoadSign
 
 /**
