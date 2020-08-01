@@ -91,6 +91,10 @@ public class AboutActivity extends BaseActivity {
                 R.string.appinfo_references_name_trace_droid,
                 R.string.appinfo_references_url_trace_droid,
                 TrackingPoint.AboutItemClick, "trace_droid_library");
+        ViewHelper.setupTextViewExtended(this, R.id.app_info_better_link_movement_method,
+                R.string.appinfo_references_name_better_link_movement_method,
+                R.string.appinfo_references_url_better_link_movement_method,
+                TrackingPoint.AboutItemClick, "better_link_movement_method_library");
         ViewHelper.setupTextViewExtended(this, R.id.app_info_ckchangelog,
                 R.string.appinfo_references_name_ckchangelog,
                 R.string.appinfo_references_url_ckchangelog,

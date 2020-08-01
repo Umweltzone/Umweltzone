@@ -32,6 +32,11 @@
         android:text="@string/appinfo_references_libraries_content" />
 
     <TextView
+        android:id="@+id/app_info_better_link_movement_method"
+        style="@style/AppInfo.WebLink"
+        tools:text="@string/appinfo_references_url_better_link_movement_method" />
+
+    <TextView
         android:id="@+id/app_info_ckchangelog"
         style="@style/AppInfo.WebLink"
         tools:text="@string/appinfo_references_url_ckchangelog" />
