@@ -235,9 +235,15 @@
     <string name="zone_not_drawable_notice">
         <![CDATA[&#8230; s&#229; <b>milj&#248; zonen i %1$s</b> kan blive vist ogs&#229;.<br />
         <br />
-        Problemet er at %2$s ikke offentlig&#248;re geo-koordinaterne (Breddegrad og l&#230;ngdegrad ) som beskriver positionen af milj&#248; zoner i en <b>passende (maskin-l&#230;sbar) fil format</b>. Den &#248;nskede information kan ikke afl&#230;ses fra et billede, en PDF eller hjemmesider. Af denne grund er det ikke muligt at vise den pr&#230;cise lokation og form af milj&#248; zonen.<br />
+        Problemet er at %2$s ikke offentlig&#248;re geo-koordinaterne (Breddegrad
+        og l&#230;ngdegrad) som beskriver positionen af milj&#248; zoner i en
+        <b>passende (maskin-l&#230;sbar) fil format</b>. Den &#248;nskede information
+        kan ikke afl&#230;ses fra et billede, en PDF eller hjemmesider. Af denne grund
+        er det ikke muligt at vise den pr&#230;cise lokation og form af milj&#248; zonen.<br />
         <br />
-        Men du kan hj&#230;lpe med at &#230;ndre dette med en <b>personlig email</b>. Beskeden er allerede lavet. Du skal bare tilf&#248;je dit navn i bunden og s&#229; burde den v&#230;re klar til at blive sendt.]]>
+        Men du kan hj&#230;lpe med at &#230;ndre dette med en <b>personlig email</b>.
+        Beskeden er allerede lavet. Du skal bare tilf&#248;je dit navn i bunden og
+        s&#229; burde den v&#230;re klar til at blive sendt.]]>
     </string>
     <string name="zone_not_drawable_later">M&#229;ske senere</string>
     <string name="zone_not_drawable_open_email">&#229;ben email</string>
@@ -257,11 +263,11 @@
         som et brugbart alternativ eller tilfjøelse til andre eksiterende tilbud som
         tilbyder lignende information omkring byer.<br />
         <br />
-        Desværre kan <b>miljøzonen af %1$s</b> ikke vises. Dette er fordi geo-koordinaterne som beskriver
-        denne lokation ikke er blevet udgivet. Derfor vil jeg personligt spørge jer om det var
-        muligt for jer, at tilbyde/udgive geo-koordinaterne under en <b>gratis license</b>. For at kunne
-        bruge denne data i applikationen er følgende <b>maskin-læsbar fil formater</b> brugbare:
-        ESRI Shapefiles, CSV, GeoJSON.<br />
+        Desværre kan <b>miljøzonen af %1$s</b> ikke vises. Dette er fordi geo-koordinaterne
+        som beskriver denne lokation ikke er blevet udgivet. Derfor vil jeg personligt spørge
+        jer om det var muligt for jer, at tilbyde/udgive geo-koordinaterne under en <b>gratis
+        license</b>. For at kunne bruge denne data i applikationen er følgende <b>maskin-læsbar
+        fil formater</b> brugbare: ESRI Shapefiles, CSV, GeoJSON.<br />
         <br />
         Kærlig hilsen</p>
         <p>----<br />
