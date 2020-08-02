@@ -270,7 +270,7 @@
        <![CDATA[&#8230; zodat de <b>lage-emissiezone van %1$s</b> kan ook worden weergegeven
         <br />
         <br />
-        Het probleem is dat% 2 $ s de geo-coördinaten (breedtegraad) niet publiceert
+        Het probleem is dat %2$s de geo-coördinaten (breedtegraad) niet publiceert
         en lengtewaarden) die de locatie van de lage-emissiezone in beschrijven
         een <b> geschikt (machineleesbaar) bestandsformaat </b>. De benodigde informatie kan niet
         worden geëxtraheerd uit een afbeelding, een PDF of webpagina&#8217;s. Om deze reden is het niet
@@ -297,7 +297,7 @@
         individuele voorschriften in veel steden. Ik beschouw deze applicatie als nuttig
         aanvulling op het bestaande aanbod van informatie van de steden.<br />
         <br />
-        Helaas kan de <b> lage-emissiezone van% 1 $ s </b> niet worden weergegeven. Dit is
+        Helaas kan de <b> lage-emissiezone van %1$s </b> niet worden weergegeven. Dit is
         omdat de geo-coördinaten die de locatie beschrijven niet zijn geweest
         gepubliceerd. Daarom wil ik u persoonlijk vragen om de
         geo-coördinaten onder een <b> gratis licentie </b>. Om de gegevensverwerking te vergemakkelijken
