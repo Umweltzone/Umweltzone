@@ -261,15 +261,18 @@
         Pomóż teraz &#8230;
     </string>
     <string name="zone_not_drawable_notice">
-        <![CDATA[&#8230; tak aby <b>strefa niskiej emisji %1$s</b> mogła być także wyświetlana.<br />
+        <![CDATA[&#8230; tak aby <b>strefa niskiej emisji %1$s</b> mogła być także
+        wyświetlana.<br />
         <br />
-        Problem polega na tym, że %2$s nie udostępnia koordynatów (szerokość i długości geograficznej)
-        które opisują lokalizację strefy niskiej emisji w <b>odpowiednim (dla maszyny) formacie</b>.
-        Potrzebnych informacji nie można wyodrębnić z obrazu, pliku PDF ani ze stron internetowych.
-        Z tego powodu nie jest możliwe dokładne odwzorowanie położenia i kształtu strefy niskiej emisji.<br />
+        Problem polega na tym, że %2$s nie udostępnia koordynatów (szerokość i długości
+        geograficznej) które opisują lokalizację strefy niskiej emisji w <b>odpowiednim
+        (dla maszyny) formacie</b>. Potrzebnych informacji nie można wyodrębnić z obrazu,
+        pliku PDF ani ze stron internetowych. Z tego powodu nie jest możliwe dokładne
+        odwzorowanie położenia i kształtu strefy niskiej emisji.<br />
         <br />
-        Możesz jednak pomóc zmienić tę sytuację za pomocą <b> wiadomości e-mail </b>.
-        Wiadomość została już zredagowana. Po prostu dodaj swoje imię na dole i od razu możesz ją wysłać.]]>
+        Możesz jednak pomóc zmienić tę sytuację za pomocą <b>wiadomości e-mail</b>.
+        Wiadomość została już zredagowana. Po prostu dodaj swoje imię na dole i od razu
+        możesz ją wysłać.]]>
     </string>
     <string name="zone_not_drawable_later">Może później</string>
     <string name="zone_not_drawable_open_email">Otwórz klient e-mail</string>
@@ -278,21 +281,22 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Otwórz szkic z &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Aplikacja androidowa Umweltzone - integracja z
+        Aplikacja androidowa Umweltzone / integracja z
         <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
     </string>
     <string name="zone_not_drawable_email_html_message">
-        <![CDATA[<p>Szanowni Państwo.
+        <![CDATA[<p>Szanowni Państwo.<br />
         <br />
         Korzystam z bezpłatnej i otwartej aplikacji &quot;Umweltzone&quot; [1]
         co pozwala mi otrzymywać informacje o lokalizacji stref niskiej emisji
         i indywidualnych regulacjach obowiązujących w różnych miastach.
-        Uważam tę aplikację za przydatne uzupełnienie innych informacji o miastach. <br />
+        Uważam tę aplikację za przydatne uzupełnienie innych informacji o miastach.<br />
         <br />
         Niestety <b>strefa niskiej emisji %1$s</b> nie może być wyrenderowana.
-        Jest tak, ponieważ współrzędne geograficzne opisujące jej lokalizację nie zostały opublikowane.
-        Dlatego chciałbym osobiście prosić o udostępnienie współrzędnych geograficznych na zasadach
-        <b>wolnej licencji</b>. Następujące <b>formaty plików do odczytu maszynowego</b> są odpowiednie:
+        Jest tak, ponieważ współrzędne geograficzne opisujące jej lokalizację nie
+        zostały opublikowane. Dlatego chciałbym osobiście prosić o udostępnienie
+        współrzędnych geograficznych na zasadach <b>wolnej licencji</b>. Następujące
+        <b>formaty plików do odczytu maszynowego</b> są odpowiednie:
         ESRI Shapefiles, CSV, GeoJSON.<br />
         <br />
         Z poważaniem</p>

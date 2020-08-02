@@ -270,15 +270,16 @@
        <![CDATA[&#8230; zodat de <b>lage-emissiezone van %1$s</b> kan ook worden weergegeven
         <br />
         <br />
-        Het probleem is dat% 2 $ s de geo-coördinaten (breedtegraad) niet publiceert
-        en lengtewaarden) die de locatie van de lage-emissiezone in beschrijven
-        een <b> geschikt (machineleesbaar) bestandsformaat </b>. De benodigde informatie kan niet
-        worden geëxtraheerd uit een afbeelding, een PDF of webpagina&#8217;s. Om deze reden is het niet
-        mogelijk om de exacte locatie en vorm van de zone met lage emissie weer te geven.<br />
+        Het probleem is dat %2$s de geo-coördinaten (breedtegraad) niet publiceert
+        en lengtewaarden) die de locatie van de lage-emissiezone in beschrijven
+        een <b> geschikt (machineleesbaar) bestandsformaat </b>. De benodigde
+        informatie kan nietworden geëxtraheerd uit een afbeelding, een PDF of
+        webpagina&#8217;s. Om deze reden is het niet mogelijk om de exacte locatie
+        en vorm van de zone met lage emissie weer te geven.<br />
         <br />
         Maar u kunt helpen om deze situatie te veranderen met een <b> persoonlijke e-mail </b>.
-        Het bericht is al samengesteld. Voeg onderaan uw naam toe
-        en je bent klaar om het te verzenden.]]>
+        Het bericht is al samengesteld. Voeg onderaan uw naam toe en je bent klaar
+        om het te verzenden.]]>
     </string>
     <string name="zone_not_drawable_later">Later</string>
     <string name="zone_not_drawable_open_email">Open e-mail</string>
@@ -287,26 +288,28 @@
     </string>
     <string name="zone_not_drawable_app_chooser_title">Open concept met &#8230;</string>
     <string name="zone_not_drawable_email_subject">
-        Umweltzone Android App - Umweltzone <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
+        Umweltzone Android App / Umweltzone <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
     </string>
     <string name="zone_not_drawable_email_html_message">
-        <![CDATA[<p>Geachte Meneer of Mevrouw, <br />
+        <![CDATA[<p>Geachte Meneer of Mevrouw,<br />
         <br />
         Ik gebruik de gratis en open source applicatie &quot;Umweltzone&quot; [1]
-        waardoor ik op de hoogte kan worden gebracht van de locatie van zones met lage emissies en
-        individuele voorschriften in veel steden. Ik beschouw deze applicatie als nuttig
-        aanvulling op het bestaande aanbod van informatie van de steden.<br />
+        waardoor ik op de hoogte kan worden gebracht van de locatie van zones met
+        lage emissies en individuele voorschriften in veel steden. Ik beschouw deze
+        applicatie als nuttig aanvulling op het bestaande aanbod van informatie
+        van de steden.<br />
         <br />
-        Helaas kan de <b> lage-emissiezone van% 1 $ s </b> niet worden weergegeven. Dit is
-        omdat de geo-coördinaten die de locatie beschrijven niet zijn geweest
-        gepubliceerd. Daarom wil ik u persoonlijk vragen om de
-        geo-coördinaten onder een <b> gratis licentie </b>. Om de gegevensverwerking te vergemakkelijken
-        de volgende <b> machineleesbare bestandsindelingen </b> zijn geschikt:
-        ESRI Shapefiles, CSV, GeoJSON.<br />
+        Helaas kan de <b> lage-emissiezone van %1$s </b> niet worden weergegeven.
+        Dit is omdat de geo-coördinaten die de locatie beschrijven niet zijn geweest
+        gepubliceerd. Daarom wil ik u persoonlijk vragen om de geo-coördinaten
+        onder een <b> gratis licentie </b>. Om de gegevensverwerking te vergemakkelijken
+        de volgende <b> machineleesbare bestandsindelingen </b> zijn geschikt:
+        ESRI Shapefiles, CSV, GeoJSON.<br />
         <br />
         Met vriendelijke groet,</p>
-
-        <![CDATA[<p>Sehr geehrte Damen und Herren,<br />
+        <p>----<br />
+        <br />
+        <p>Sehr geehrte Damen und Herren,<br />
         <br />
         ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],
         mit der ich mich über den Verlauf von Umweltzonen und individuelle
