@@ -16,6 +16,24 @@
 -->
 <changelog>
     <release
+        version="5.4.1"
+        versioncode="504100">
+        <change>
+            Bugfix: Fehler behoben, der beim Auswählen von Regensburg
+            oder Wiesbaden zum Absturz führte. Betrifft nur Geräte,
+            dessen Systemsprache auf Niederländisch eingestellt ist.
+        </change>
+        <change>
+            Bugfix: Fehlenden deutschen E-Mail-Text ergänzt. Betrifft
+            nur Geräte, dessen Systemsprache auf Niederländisch eingestellt ist.
+        </change>
+        <change>
+            Aktualisierung: Texte (Dialog, E-Mail) für Regensburg und
+            Wiesbaden sind jetzt in allen unterstützten Sprachen leserlich
+            formatiert.
+        </change>
+    </release>
+    <release
         version="5.4.0"
         versioncode="504000">
         <change>

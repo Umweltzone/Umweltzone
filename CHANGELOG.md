@@ -1,5 +1,19 @@
 # Umweltzone changelog
 
+## [v.5.4.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.4.1)
+
+* Published: 2020-08-02
+
+### Features, improvements and maintenance
+
+* Change separator in email subject text., [6c21a](https://bitbucket.org/tbsprs/umweltzone/commits/6c21ae7ec1b8717c7a6d455353f5a98eb61568b0)
+* Improve code readability by reformatting CDATA string resources., [2f20a](https://bitbucket.org/tbsprs/umweltzone/commits/2f20ad5a14b865b8c44b55a4f4a609bddd01b930)
+* Add missing empty line (DA, EN, PL locales)., [fea24](https://bitbucket.org/tbsprs/umweltzone/commits/fea24e88981e0ffd1264128356a3fc208c4eb84a)
+* Improve formatting of "zone not drawable" texts (NL locale)., [7917b](https://bitbucket.org/tbsprs/umweltzone/commits/7917b8285e7e3131d806af52437b7b66c65a2ddb)
+* Fix missing German email text part (NL locale)., [e1133](https://bitbucket.org/tbsprs/umweltzone/commits/e11334e135f9130f52bebe7ab5a9a017154b6130)
+* Fix crash when selecting a city without zone data (NL locale)., [d0637](https://bitbucket.org/tbsprs/umweltzone/commits/d0637bf53f00466f58d4aaa6ad1d6a5041394f35)
+
+
 ## [v.5.4.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.4.0)
 
 * Published: 2020-08-01

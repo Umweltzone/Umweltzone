@@ -16,6 +16,23 @@
 -->
 <changelog>
     <release
+        version="5.4.1"
+        versioncode="504100">
+        <change>
+            Bugfix: Resolved error which caused the app to crash when selecting
+            either Regensburg or Wiesbaden. This affects only devices which have
+            their system language set to Dutch.
+        </change>
+        <change>
+            Bugfix: Add missing German e-mail text. This affects only devices
+            which have their system language set to Dutch.
+        </change>
+        <change>
+            Update: Texts (dialog, e-mail) for Regensburg and Wiesbaden are now
+            formatted readable for all supported languages.
+        </change>
+    </release>
+    <release
         version="5.4.0"
         versioncode="504000">
         <change>
