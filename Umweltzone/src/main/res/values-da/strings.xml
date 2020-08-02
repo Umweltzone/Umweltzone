@@ -249,7 +249,7 @@
         Umweltzone Android App - Integration <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
     </string>
     <string name="zone_not_drawable_email_html_message">
-        <![CDATA[<p> Kære modtager,
+        <![CDATA[<p> Kære modtager,<br />
         <br />
         Jeg bruger den gratis og open source applikation &quot;Umweltzone&quot; [1]
         som gør det muligt for mig, at få information omkring miljø zoner og andet

@@ -401,7 +401,7 @@
         Umweltzone Android App - Integration <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
     </string>
     <string name="zone_not_drawable_email_html_message">
-        <![CDATA[<p>Dear Sir or Madam.
+        <![CDATA[<p>Dear Sir or Madam.<br />
         <br />
         I am using the free and open source application &quot;Umweltzone&quot; [1]
         which allows me to get informed about the location of low emission zones and
