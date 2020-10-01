@@ -4,7 +4,7 @@ buildscript {
         androidGradlePluginVersion = "4.0.1"
         gradleVersionsPluginVersion = "0.29.0"
         proguardGradlePluginVersion = "6.2.2"
-        strictVersionMatcherPluginVersion = "1.2.1"
+        strictVersionMatcherPluginVersion = "1.2.2"
 
         // Libraries
         annotationVersion = "1.1.0"
