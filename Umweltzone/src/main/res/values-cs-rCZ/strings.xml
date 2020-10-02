@@ -31,12 +31,12 @@
     <string name="action_share_app">Sdílejte tuto aplikaci</string>
     <string name="action_cities">Města</string>
     <string name="changelog_show_full">Více ...</string>
-    <string name="changelog_title">Toto je nové</string>
+    <string name="changelog_title">Nově přidáno</string>
     <string name="changelog_error_resource_not_android_5">Chyba v zobrazení informacích o verzi</string>
     <string name="action_changelog">Informace o verzi</string>
     <string name="appinfo_references_name_umweltbundesamt">Federální agentura pro životní prostředí</string>
     <string name="appinfo_build_info_version_code">Kód verze</string>
-    <string name="city_info_section_title_lez">Podrobnosti o oblastech s nízkými emisemi</string>
+    <string name="city_info_section_title_lez">Podrobnosti o nízkoemisních zónách</string>
     <string name="appinfo_build_info_title">Informace o kompilaci</string>
     <string name="appinfo_build_info_time">Čas kompilace</string>
     <string name="appinfo_build_info_hash">Build hash</string>
@@ -47,6 +47,52 @@
     <string name="zone_not_drawable_app_chooser_title">"Otevřít návrh "</string>
     <string name="snack_engage_beta_testing_title">Superuživatel</string>
     <string name="settings_category_title_data_privacy">Ochrana osobních údajů</string>
-    <string name="settings_title_google_analytics">Odesílat anonymní statistiku o používání</string>
+    <string name="settings_title_google_analytics">Odeslat anonymní statistiku o používání</string>
     <string name="city_info_badge_online_title">Online formulář žádosti o emisní plaketu</string>
-</resources>
+    <string name="changelog_version_format">Verze</string>
+    <string name="settings_summary_google_analytics">Povolit zasílání statistik využití a zpráv o selhání do Google Analytics. Tato anonymizovaná data používá vývojář aplikace Umweltzone k analýze chyb programu a k neustálému vylepšování aplikace.</string>
+    <string name="settings_title_data_privacy_statement_de">Prohlášení o ochraně osobních údajů</string>
+    <string name="trace_droid_button_title_no">Ne</string>
+    <string name="trace_droid_dialog_message">Byl zjištěn problém s Umweltzone. K identifikování zdroje problému by bylo užitečné, kdybyste odeslali zprávu o selhání.</string>
+    <string name="trace_droid_dialog_title">"Odeslat zprávu o selhání Umweltzone &#8230;   "</string>
+    <string name="zone_not_drawable_email_subject">Umweltzone Android Aplikace / Integrace</string>
+    <string name="zone_not_drawable_no_email_app">"Není nainstalována kompatibilní e-mailová aplikace. "</string>
+    <string name="no_city_selected_status_desc">Podrobné informace o oblasti nemohou být zobrazeny. Prosím, nejprve vyberte oblast.</string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">auta a těžká nákladní vozidla</string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">těžká nákladní vozidla</string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">auta</string>
+    <string name="city_info_geometry_updated_at_date_format">MMM d, yyyy</string>
+    <string name="city_info_list_of_cities">Tato oblast obsahuje následující města nebo městské části:</string>
+    <string name="map_my_location_activation_hint">Klepnutím zde k nastavte vyhledávání polohy, aby se vaše poloha mohla zobrazit na mapě.</string>
+    <string name="appinfo_application_logo_description">Logo  &#8220;Umweltzone&#8221; aplikace</string>
+    <string name="appinfo_subtitle">Android aplikace pro nízkoemisní oblasti (německy: Umweltzonen) a oblasti se zákazem dieselů v Německu</string>
+    <string name="appinfo_copyright_content">"    (&#169;) Tobias Preuss, 2013 &#8211; 2020"</string>
+    <string name="city_info_zone_number_as_of">Od <xliff:g example="Oct 1, 2099" id="date">%1$s</xliff:g> pouze vozidla <xliff:g example="with a green" id="with_colors">%2$s</xliff:g>emisní plaketou smí vjet do nízkoemisní zóny.</string>
+    <string name="city_info_zone_number_since">Od <xliff:g example="Oct 1, 2099" id="date">%1$s</xliff:g> pouze vozidla <xliff:g example="with a green" id="with_colors">%2$s</xliff:g>emisní plaketou smí vjet do nízkoemisní zóny.</string>
+    <string name="city_info_zone_number_since_text_fragment_green">se zelenou</string>
+    <string name="city_info_zone_number_since_text_fragment_yellow">se žlutou nebo s zelenou</string>
+    <string name="city_info_zone_number_since_text_fragment_red">s červenou, žlutou nebo se zelenou</string>
+    <string name="city_info_zone_number_none">Do nízkoemisní zóny mohou vjet vozidla všech emisních tříd.</string>
+    <string name="city_info_next_zone_number_as_of">Od  <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> pouze vozidla <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> emisní plaketou smí vjet do nízkoemisní zóny.</string>
+    <string name="appinfo_rating_url_title">Umweltzone v Obchodě Google Play</string>
+    <string name="appinfo_rating_content">Rádi obdržíme vaše pozitivní hodnocení v Obchodě Google Play.</string>
+    <string name="appinfo_license_url_title_creative_commons">Licence Creative Common</string>
+    <string name="zone_not_drawable_title">Pomozte nyní.</string>
+    <string name="city_info_is_congruent_with_lez">Tato oblast se shoduje s nízkoemisní zónou.</string>
+    <string name="appinfo_sourcecode_content">Zdrojový kód aplikace je přístupný online.</string>
+    <string name="city_info_provision_applies_to_vehicles">"Toto opatření se vztahuje na <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.   "</string>
+    <string name="share_intent_message"><![CDATA[Vyzkoušejte Umweltzone - aplikaci pro Android s všemi informacemi o nízkoemisních zónách a oblastech se zákazem dieselů v Německu \n Stahujte zdarma: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]></string>
+    <string name="appinfo_contact_content">Všechny druhy zpětné vazby jako návrhy na vylepšení, chybové hlášení nebo žádosti o fuknce lze zaslat na následující adresu:</string>
+    <string name="city_info_geometry_updated_at_text">"Poslední aktualizace oblasti: <xliff:g example="Sep 6, 2014" id="updatedAt">%1$s</xliff:g>     "</string>
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">Do oblastí zakazujících diesely mohou vjet vozidla, která splňují alespoň emisní normu Euro <xliff:g example="6" id="number">%1$d</xliff:g>.</string>
+    <string name="city_info_zone_number_for_residents_since">"Pro obyvatele toto nařízení platí od <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.    "</string>
+    <string name="city_info_zone_number_for_non_residents_since">"Toto nařízení platí pro nerezidenty od <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.     "</string>
+    <string name="city_info_abroad_licensed_vehicle_zone_info">Vozidla registrovaná v zahraničí mohou vjet do nízkoemisní zóny do  <xliff:g example="Jan 31, 2016" id="date">%1$s</xliff:g>  <xliff:g example="with a yellow or a green" id="with_colors">%2$s</xliff:g> plaketou</string>
+    <string name="appinfo_license_content">Zdrojový kód aplikace Umweltzone je licencován dle GPLv3 Licence. Zeměpisné souřadnice získané z OpenStreetMap jsou licencovány na základě Open Database Licence.</string>
+    <string name="appinfo_description_content">Tato aplikace zobrazuje polohu nízkoemisních zón (LEZ) a oblastí se zákazem dieselů (DPZ), a obsahuje další fakta týkající se těchto témat. Vjezd do LEZ je omezen na vozidla s konkrétní emisní plaketou. Plaketa  odpovídá emisní úrovni vozidla. Vozy, které nesplňují určitou emisní normu dieselových motorů nemohou vjet do DPZ. Cílem těchto omezení je zlepšení městské kvality vzduchu. Jemné částice musí být redukovány z důvodu zachování &#8217;zdraví &#8212; obyvatel. Kromě mapy a seznamu měst tato aplikace obsahuje podrobnou obrazovku s jednotlivými informacemi pro vybrané město. V menu (&#8220;FAQ&#8221;) lze nalézt často kladené otázky. Krom toho Umweltzone obsahuje odkazy na stránky s dalšími informacemi o LEZ, DPZ a dalších podobných tématech.</string>
+    <string name="appinfo_references_libraries_content">Aplikace využívá těchto softwarových knihoven.</string>
+    <string name="zone_not_drawable_notice">"   <![CDATA[&#8230; aby<b> nízkoemisní zóna %1$s</b> mohla být zobrazena. Problém je, že %2$s nedodává zeměpisné souřadnice (hodnoty zeměpisné šírky a délky) popisující polohu nízkoemisní zóny v strojově čitelném formátu. Potřebné informace nelze získat z obrázku, pdf souboru či webové stránky. Z tohoto důvodu není možné zobrazit přesnou polohu a tvar nízkoemisní zóny. <br />         <br />  Tuto situaci můžete změnit skrz <b> e-mail </b> Obsah e-mailu je předpřipraven, jen přidejte své jméno na konec a odešlete. ]]>     "</string>
+    <string name="appinfo_references_texts_content">"Je-li text převzat odjinud, je vždy ozdrojován. "</string>
+    <string name="appinfo_references_graphics_content">Grafika jako logo a plakety jsou z Wikimedia Commons.</string>
+    <string name="appinfo_disclaimer_content">Jsou-li data a souřadnice zón jsou k dispozici v digitalním formátu, pak jsou získána přímo od oficiálních orgánů. Dalším důležitým zdrojem jsou OpenStreetMap, neboť obsahují další data o nízkoemisních zónách. Některé oblasti byly ručně digitalizovány na základě oficiálních podkladů federálních agentur pro životní prostředí. Vzhledem k tomu, že mnoho úřadů publikuje mapy v nízké kvalitě, nelze zaručit, že zobrazené hranice zón odpovídají přesně skutečnosti. Data a souřadnice zón se liší dle kvality jejich zdroje a přesnosti digitalizace. Dále neexistuje žádný systém, který by automaticky informoval o změnách. Data o zónách se aktualizují ručně a jsou velmi závislé na zpětných vazbách od našich přívětivých uživatelů. Z těchto důvodů nemůžeme zaručit dokonalou vizualizaci a nenese zodpovědnost za jakékoliv ztráty a škody. Důrazně doporučujeme se spoléhat na dopravní značení v konkrétních městech.</string>
+    <string name="zone_not_drawable_email_html_message">"     <![CDATA[<p>Vážená paní / Vážený pane, používám opensourcovou aplikaci &quot;Umweltzone&quot; [1], díky které mohu být informován o polohách nizkoemisních zón a jednotlivých omezeních v mnoha městech. Myslím si, že je tato aplikace užitečným dodatkem k existujícícm informacem v daných městech. <br />         <br />   Bohužel, <b>nízkoemisní zóna %1$s</b> nemůže být zobrazena. Je to kvůli tomu, že geometrické souřadnice, které tuto oblast popisují, nebyly publikovány. Rád bych vás osobně požádal o  zveřejnění těchto dat pod  <b>otevřenou licencí</b>. Pro zlepšení zpracování dat by byly nejvhodnější následující  <b> strojově čitelné formáty</b>:  ESRI Shapefiles, CSV, GeoJSON.<br />         <br />  S pozdravem</p>         <p>----<br />         <br />         Sehr geehrte Damen und Herren,<br />         <br />         ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],         mit der ich mich über den Verlauf von Umweltzonen und individuelle         Regelungen in verschiedenen Städten auf meinem Android-Gerät         informieren kann. Ich betrachte diese Anwendung als nützliche         Erweiterung zum bestehenden Informationsangebot vieler Städte.<br />         <br />         Leider kann die <b>Umweltzone %1$s</b> nicht dargestellt werden. Es fehlen         die Geokoordinaten des Umweltzonenumrings. Daher möchte ich Sie hiermit         persönlich bitten, die Koordinaten unter einer <b>freien Lizenz</b> zu         veröffentlichen. Um eine Weiterverarbeitung zu ermöglichen, eignen         sich folgenden <b>maschinenlesbare Dateiformate</b>:         ESRI Shapefiles, CSV, GeoJSON.<br />         <br />         Mit freundlichen Grüßen</p>          <p>___<br />         [1]: <a href="https://play.google.com/store/apps/details?id=de.avpptr.umweltzone">https://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>   "</string>
