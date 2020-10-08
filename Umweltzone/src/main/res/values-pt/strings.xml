@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2020  Romero Silva
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--Action Bar items-->
+    <string name="action_cities">Cidades</string>
+    <string name="action_share_app">Compartilhe esse app &#8230;</string>
+    <string name="action_changelog">Informações de versão</string>
+
+    <!-- Share intent -->
+    <string name="share_intent_message">
+        <![CDATA[Experimente o Umweltzone - o aplicativo Android que possui todas as informações sobre zonas de baixa emissão e zonas de proibição de Diesel na Alemanha.
+        \nBaixe-o gratuitamente aqui: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+    </string>
+
+    <!-- Map -->
+    <string name="map_my_location_activation_hint">
+        Toque aqui para ativar a busca por localização e exibir a sua posição no mapa.
+    </string>
+
+    <!-- FeedbackActivity -->
+    <string name="feedback_activity_title">Feedback</string>
+
+    <!-- AboutActivity -->
+    <string name="appinfo_application_logo_description">
+        Logo da aplicação &#8220;Umweltzone&#8221;
+    </string>
+    <string name="about_activity_title">Sobre</string>
+    <string name="appinfo_subtitle">
+        Um app Android para zonas de baixa emissão (Em Alemão: Umweltzonen) e zonas de proibição de Diesel na Alemanha
+    </string>
+
+    <!-- AboutActivity / Copyright -->
+    <string name="appinfo_copyright_title">Ideação e concretização</string>
+    <string name="appinfo_copyright_content">
+        (&#169;) Tobias Preuss, 2013 &#8211; 2020
+    </string>
+
+    <!-- AboutActivity / Description -->
+    <string name="appinfo_description_title">Descrição</string>
+
+    <string name="appinfo_description_content">
+        Este aplicativo mostra a localização de zonas de baixa emissão (ZBE),
+        zonas de proibição de Diesel (ZPD) e fornece informações sobre ambos os assuntos.
+        A entrada em um ZBE é restrita a veículos marcados com um adesivo específico.
+        O adesivo corresponde ao nível de emissão do veículo. Os veículos que não atendem
+        a uma determinada norma de emissão de gases de Diesel estão restritos a entrar em uma ZPD.
+        O objetivo das restrições de entrada é o de aumentar a qualidade do ar nas cidades.
+        As partículas finas devem ser reduzidas para preservar a saúde do cidadão. &#8212;
+        Além do mapa e da lista de cidades, há uma tela detalhada que contém informações individuais
+        da cidade selecionada. As perguntas mais frequentes podem ser encontradas no item &#8220;FAQ&#8221; do menu.
+        Além disso, existem links para sites que fornecem mais informações sobre ZBE, ZPD e mais assuntos relacionados.
+    </string>
+
+
+    <!-- AboutActivity / Disclaimer -->
+    <string name="appinfo_disclaimer_title">Dados, qualidade e atualizações</string>
+    <string name="appinfo_disclaimer_content">
+        Os dados e as coordenadas das zonas disponíveis em formato digital foram adquiridos diretamente das cidades ou governos.
+        O OpenStreetMap também foi uma fonte importante, uma vez que várias zonas de baixa emissão puderam ser encontradas por lá.
+        Além deles, algumas zonas foram digitalizadas manualmente com base nas publicações oficiais da Agência Ambiental Federal.
+        Devido ao fato de que muitas autoridades publicam gráficos de baixa resolução de mapas digitalizados, não se tem a garantia
+        de que as fronteiras da zona correspondem precisamente à realidade. Os dados e coordenadas da zona variam de acordo com sua fonte,
+        qualidade e precisão no processo de digitalização. Além disso, não há uma automação na informação sobre as alterações feitas
+        pelas cidades. Os dados da zona são atualizados manualmente e dependem muito do feedback de usuários amigáveis como você.
+        Por estes motivos não garantimos uma visualização perfeita e não nos responsabilizamos por custos ou punições.
+        Recomendamos fortemente que você sempre se atente às placas de sinalização das cidades.
+    </string>
+    <string name="appinfo_references_name_umweltbundesamt">Agência Federal do Meio Ambiente</string>
+
+    <!-- AboutActivity / Graphics -->
+    <string name="appinfo_references_graphics_title">Gráficos</string>
+
+    <string name="appinfo_references_graphics_content">
+        Todos os gráficos, como a logo por exemplo, são retirados da Wikimedia Commons
+    </string>
+
+    <!-- AboutActivity / Texts -->
+    <string name="appinfo_references_texts_title">Textos</string>
+    <string name="appinfo_references_texts_content">
+        Todo texto retirado de outro lugar tem sua fonte referenciada.
+    </string>
+
+    <!-- AboutActivity / Libraries -->
+    <string name="appinfo_references_libraries_title">Bibliotecas</string>
+    <string name="appinfo_references_libraries_content">
+        As seguintes bibliotecas são utilizadas no aplicativo.
+    </string>
+
+    <!-- AboutActivity / Sourcecode -->
+    <string name="appinfo_sourcecode_title">Código-fonte</string>
+    <string name="appinfo_sourcecode_content">O código-fonte da aplicação está disponível online.</string>
+    <string name="appinfo_sourcecode_url_title">Código-fonte da aplicação</string>
+
+    <!-- AboutActivity / License -->
+    <string name="appinfo_license_title">Licenças</string>
+
+    <string name="appinfo_license_content">
+        O código-fonte do aplicativo Umweltzone é licenciado sob a licença GPLv3.
+        As coordenadas geométricas retiradas do OpenStreetMap são licenciadas sob a
+        Licença Open Database (ODbL) v1.0. Outras coordenadas geométricas são licenciadas e
+        definidas pelas fontes de dados mencionadas. Imagens e textos são licenciados sob
+        a Licença Creative Commons Attribution 3.0 Unported.
+    </string>
+    <string name="appinfo_license_url_title_gpl">Licença GPLv3</string>
+    <string name="appinfo_license_url_title_creative_commons">Licença Creative Commons</string>
+
+    <!-- AboutActivity / Build Info -->
+    <string name="appinfo_build_info_title">Informações da Build</string>
+    <string name="appinfo_build_info_time">Data da Build</string>
+    <string name="appinfo_build_info_version_code">Versão do código</string>
+    <string name="appinfo_build_info_hash">Hash da Build</string>
+
+    <!-- FeedbackActivity / Contact -->
+    <string name="appinfo_contact_title">Contato</string>
+    <string name="appinfo_contact_content">
+        Todos os tipos de feedback, como ideias de melhoria, relatos de erros
+        ou até mesmo solicitações de novas funcionalidades podem ser enviadas para o seguinte endereço:
+    </string>
+
+    <!-- FeedbackActivity / Rating -->
+    <string name="appinfo_rating_title">Avaliação</string>
+    <string name="appinfo_rating_content">
+        Nós ficaríamos muito felizes em receber sua avaliação positiva na Google PlayStore.
+    </string>
+    <string name="appinfo_rating_url_title">Avalie o Umweltzone na Google Play Store</string>
+
+    <!-- DetailsActivity formerly CityInfoFragment -->
+    <string name="city_info_activity_title">Informações da cidade</string>
+    <string name="city_info_section_title_lez">Detalhes sobre as zonas de baixa emissão</string>
+    <string name="city_info_section_title_dpz">Detalhes sobre as zonas de proibição de diesel</string>
+    <string name="city_info_section_title_other">Mais informações</string>
+    <string name="city_info_zone_status">disponível</string>
+
+    <string name="city_info_zone_number_as_of">
+        A partir de <xliff:g example="1 de Out de 2099" id="date">%1$s</xliff:g> apenas veículos com um adesivo
+        <xliff:g example="na cor verde" id="with_colors">%2$s</xliff:g> têm permissão
+        para transitar em zonas de baixa emissão.
+    </string>
+    <string name="city_info_zone_number_since">
+        Desde <xliff:g example="1 de Fev de 2016" id="date">%1$s</xliff:g> apenas
+        veículos com adesivos <xliff:g example="na cor verde" id="with_colors">%2$s</xliff:g> têm permissão
+        para transitar em zonas de baixa emissão.
+    </string>
+
+    <string name="city_info_zone_number_since_date_format">d/MM/YYYY</string>
+    <string name="city_info_zone_number_since_text_fragment_green">na cor verde</string>
+    <string name="city_info_zone_number_since_text_fragment_yellow">na cor amarelo ou verde</string>
+    <string name="city_info_zone_number_since_text_fragment_red">na cor vermelho, amarelo ou verde</string>
+    <string name="city_info_zone_number_none">Veículos de todas as classes de emissão têm permissão para transitar na zona de baixa emissão.</string>
+
+    <string name="city_info_next_zone_number_as_of">
+        A partir de <xliff:g example="1 de Fev de 2016" id="date">%1$s</xliff:g> apenas
+        veículos com adesivos <xliff:g example="na cor verde" id="with_colors">%2$s</xliff:g> têm permissão
+        para transitar em zonas de baixa emissão.
+    </string>
+    <string name="city_info_abroad_licensed_vehicle_zone_info">
+        Os veículos registrados no exterior têm permissão para transitar na zona de baixa emissão
+        até<xliff:g example="31 de Jan de 2016" id="date">%1$s</xliff:g> com um adesivo
+        <xliff:g example="na cor amarelo ou verde" id="with_colors">%2$s</xliff:g>.
+    </string>
+    <string name="city_info_list_of_cities">
+        A zona abrange as seguintes cidades ou
+        distritos: <xliff:g example="Bochum, Castrop-Rauxel, Essen" id="cities">%1$s</xliff:g> e
+        <xliff:g example="Recklinghausen" id="last_city">%2$s</xliff:g>.
+    </string>
+
+    <string name="city_info_further_information">Mais informações online</string>
+    <string name="city_info_badge_online_title">Formulário de inscrição para adquirir os adesivos</string>
+
+    <string name="city_info_geometry_source_text">Fonte das coordenadas geométricas:
+        <xliff:g example="Geoportal Berlin / Umweltzone Berlin" id="geometrySource">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_geometry_updated_at_date_format">
+        d/MM/YYYY
+    </string>
+    <string name="city_info_geometry_updated_at_text">
+        Última atualização da geometria da zona: <xliff:g example="6 de Set de 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Apenas veículos que cumprem, pelo menos, com as normas de emissão de gases de Diesel
+        Euro <xliff:g example="6" id="number">%1$d</xliff:g> têm permissão para
+        transitar na zona de proibição de Diesel.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        Para residentes, este regulamento se aplica a partir de <xliff:g example="31 de Mai de 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        Para não residentes, este regulamento se aplica a partir de <xliff:g example="31 de Mai de 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        Esta disposição se aplica a <xliff:g example="carros e veículos de mercadorias pesados" id="vehicles">%1$s</xliff:g>.
+    </string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">carros</string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">veículos de mercadorias pesadas</string>
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">carros e veículos de mercadorias pesadas</string>
+    <string name="city_info_is_congruent_with_lez">Essa zona é congruente com a zona de baixa emissão.</string>
+
+    <!-- NoCitySelectedFragment -->
+    <string name="no_city_selected_title">Informações da cidade</string>
+    <string name="no_city_selected_status_desc">
+        Informaçoes detalhadas sobre a zona não puderam ser exibidas.
+        Por favor, selecione uma zona antes.
+    </string>
+    <string name="no_city_selected_select_zone">Selecione uma zona</string>
+
+    <!-- FaqActivity -->
+    <string name="faq_activity_title">FAQ</string>
+    <string name="faq_source_url_title_text">Fonte</string>
+
+    <!-- ZoneNotDrawableDialog -->
+    <string name="zone_not_drawable_title">
+        Ajude agora &#8230;
+    </string>
+
+    <string name="zone_not_drawable_notice">
+    <![CDATA[&#8230; para que a <b> zona de baixa emissão de %1$s</b>
+    também possa ser exibida.<br/>
+    <br/>
+    O problema é que %2$s não publica as geo-coordenadas (valores de latitude
+    e longitude) que descrevem a localização da zona de baixa emissão em um
+    <b> formato de arquivo adequado (legível para computadores) </b>. As informações
+    necessárias não podem ser extraídas de uma imagem, PDF ou páginas da web. Por este
+    motivo, não é possível apresentar a localização exata nem o formato da zona de baixa emissão.<br/>
+    <br/>
+    Mas você pode ajudar a mudar essa situação com um <b> e-mail pessoal</b>.
+    A mensagem já foi criada. Basta adicionar seu nome na parte inferior e você estará pronto para enviá-lo.]]>
+    </string>
+
+    <string name="zone_not_drawable_later">Talvez depois</string>
+    <string name="zone_not_drawable_open_email">Abrir e-mail</string>
+    <string name="zone_not_drawable_no_email_app">
+        Nenhum aplicativo de email compatível instalado.
+    </string>
+
+    <string name="zone_not_drawable_app_chooser_title">Abrir com &#8230;</string>
+    <string name="zone_not_drawable_email_subject">
+        Android App Umweltzone / Integração <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
+    </string>
+    <string name="zone_not_drawable_email_html_message">
+        <![CDATA[<p>Querido(a) Senhor(a).<br/>
+        <br/>
+        Estou usando o &quot;Umweltzone&quot; [1], um aplicativo gratuito e de código aberto
+        que me deixa informado sobre a localização de zonas de baixa emissão e regulamentos
+        específicos em muitas cidades. Considero esta aplicação um complemento útil à oferta de
+        informação existente nas cidades.<br/>
+        <br/>
+        Infelizmente, não foi possível renderizar a <b>zona de baixa emissão de %1$s</b>.
+        Isso ocorre porque as geo-coordenadas que descrevem a sua localização não foram publicadas.
+        Portanto, gostaria de lhe pedir pessoalmente que libere as geo-coordenadas sob uma <b>licença gratuita</b>.
+        Para facilitar o processamento de dados, os seguintes <b>formatos de arquivo</b> são adequados:
+        ESRI Shapefiles, CSV, GeoJSON.<br/>
+        <br/>
+        Atenciosamente</p>
+        <p>----<br />
+        <br/>
+        Sehr geehrte Damen und Herren,<br/>
+        <br/>
+        ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],
+        mit der ich mich über den Verlauf von Umweltzonen und individuelle
+        Regelungen in verschiedenen Städten auf meinem Android-Gerät
+        informieren kann. Ich betrachte diese Anwendung als nützliche
+        Erweiterung zum bestehenden Informationsangebot vieler Städte.<br />
+        <br/>
+        Leider kann die <b>Umweltzone %1$s</b> nicht dargestellt werden. Es fehlen
+        die Geokoordinaten des Umweltzonenumrings. Daher möchte ich Sie hiermit
+        persönlich bitten, die Koordinaten unter einer <b>freien Lizenz</b> zu
+        veröffentlichen. Um eine Weiterverarbeitung zu ermöglichen, eignen
+        sich folgenden <b>maschinenlesbare Dateiformate</b>:
+        ESRI Shapefiles, CSV, GeoJSON.<br/>
+        <br/>
+        Mit freundlichen Grüßen</p>
+
+        <p>___<br/>
+        [1]: <a href="https://play.google.com/store/apps/details?id=de.avpptr.umweltzone">https://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
+    </string>
+
+    <!-- TraceDroid -->
+    <string name="trace_droid_dialog_title">
+        Enviar relatório de falhas do Umweltzone &#8230;
+    </string>
+    <string name="trace_droid_dialog_message">
+        Foi detectado um problema com o Umweltzone.
+        Ficaríamos muito gratos se você pudesse enviar um relatório de falhas
+        para que a origem do problema pudesse ser identificada.
+    </string>
+    <string name="trace_droid_button_title_no">Não</string>
+
+    <!-- SnackEngage -->
+    <string name="snack_engage_rate_title">Tudo bem?</string>
+    <string name="snack_engage_rate_action">Por favor, avalie o app</string>
+    <string name="snack_engage_beta_testing_title">Usuário avançado?</string>
+    <string name="snack_engage_beta_testing_action">Torne-se um testador beta</string>
+
+    <!-- Settings -->
+    <string name="settings_activity_title">Configurações</string>
+    <string name="settings_category_title_data_privacy">Privacidade dos dados</string>
+    <string name="settings_title_google_analytics">Envie informações anônimas para análises estatísticas</string>
+    <string name="settings_summary_google_analytics">
+        Permitir a transmissão de estatísticas de uso e relatórios de falhas para o Google Analytics. Esses
+        dados são anônimos e usados pelo desenvolvedor do Umweltzone para investigar os
+        erros e assim, melhorar continuamente o aplicativo.
+    </string>
+
+    <string name="settings_title_data_privacy_statement_de">
+        Declaração de privacidade de dados (Em Alemão) &#8230;
+    </string>
+
+</resources>
