@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  Copyright (C) 2020 Fredrik Henricsson
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!--Action Bar items-->
+    <string name="action_cities">Städer</string>
+    <string name="action_share_app">Dela denna app &#8230;</string>
+    <string name="action_changelog">Versionsinformation</string>
+
+    <!-- Share intent -->
+    <string name="share_intent_message">
+        <![CDATA[Prova Umweltzone - Android-appen som har all information om miljözoner och dieselfria zoner i Tyskland.
+        \nHämta den gratis här: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+    </string>
+
+    <!-- Map -->
+    <string name="map_my_location_activation_hint">
+        Tryck här för att ställa in positionsuppslag för att visa din egen position på kartan.
+    </string>
+
+    <!-- FeedbackActivity -->
+    <string name="feedback_activity_title">Feedback</string>
+
+    <!-- AboutActivity -->
+    <string name="appinfo_application_logo_description">
+        Logo för appen &#8220;Umweltzone&#8221;
+    </string>
+    <string name="about_activity_title">Om</string>
+    <string name="appinfo_subtitle">
+        En Android-app som visar miljözoner (tyska: Umweltzonen) och dieselfria zoner i Tyskland
+    </string>
+
+    <!-- AboutActivity / Copyright -->
+    <string name="appinfo_copyright_title">Idé och erkännande</string>
+    <string name="appinfo_copyright_content">
+        (&#169;) Tobias Preuss, 2013 &#8211; 2020
+    </string>
+
+    <!-- AboutActivity / Description -->
+    <string name="appinfo_description_title">Beskrivning</string>
+    <string name="appinfo_description_content">
+        Denna applikation visar positioner för miljözoner (LEZ) och dieselfria zoner (DPZ), samt
+        tillhandahåller ytterligare fakta om dessa ämnen. Körning i en miljözon (LEZ) är begränsad
+        till fordon som har ett särskilt klistermärke. Klistermärket är kopplat till fordonets
+        utsläppsklass. Dieselfordon som inte når upp till en viss utsläppsstandard är förbjudna
+        att köra in i dieselfria zoner (DPZ). Målet med restriktionerna är att öka luftkvaliteten
+        inne i städerna.
+        Andelen små partiklar behöver reduceras för att bevara medborgarnas hälsa.
+        Utöver kartan och en lista med städer finns det en detaljerad sida som innehåller
+        individuell information för den valda staden.
+        Vanliga frågor kan hittas via menyn &#8220;FAQ&#8221;. Utöver detta finns där länkar till
+        webbsidor som tillhandahåller mer information om LEZ, DPS och relaterade ämnen.
+    </string>
+
+    <!-- AboutActivity / Disclaimer -->
+    <string name="appinfo_disclaimer_title">Data, kvalitet och uppdateringar</string>
+    <string name="appinfo_disclaimer_content">
+        När data och koordinater för zonerna fanns tillgängliga i digitalt format, hämtades de
+        direkt ifrån städer eller myndigheter.
+        Utöver detta var OpenStreetMap en viktig källa eftersom ett antal miljözoner är listade
+        där. Vissa zoner har manuellt digitaliserats baserat på officiella publiceringar från
+        den federala miljömyndigheten.
+        Eftersom många myndigheter publicerar scannade kartor i låg upplösning så kan det inte
+        garanteras att zongränserna matchar verkligheten exakt. Zondata och koordinater varierar
+        baserat på källan, kvaliteten och precisionen i digitaliseringsprocessen.
+        Utöver detta finns det ingen automatisering för att bli informerad om ändringar gjorda
+        av städerna. Zondata uppdateras manuellt och beror i stor grad på feedback från vänliga
+        användare som du.
+        Av dessa anledningar kan vi inte garantera en perfekt visualisering och är inte ansvariga
+        för kostnader och straff. Vi rekommenderar starkt att alltid vara uppmärksam på vägskyltar
+        i respektive stad.
+    </string>
+    <string name="appinfo_references_name_umweltbundesamt">Federala Miljömyndigheten</string>
+
+    <!-- AboutActivity / Graphics -->
+    <string name="appinfo_references_graphics_title">Grafik</string>
+    <string name="appinfo_references_graphics_content">
+        Grafik såsom logon och märken är tagna från Wikimedia Commons.
+    </string>
+
+    <!-- AboutActivity / Texts -->
+    <string name="appinfo_references_texts_title">Texter</string>
+    <string name="appinfo_references_texts_content">
+        En källhänvisning ges när texten är tagen från någon annanstans.
+    </string>
+
+    <!-- AboutActivity / Libraries -->
+    <string name="appinfo_references_libraries_title">Bibliotek</string>
+    <string name="appinfo_references_libraries_content">
+        Följande mjukvarubibliotek används i applikationen.
+    </string>
+
+    <!-- AboutActivity / Sourcecode -->
+    <string name="appinfo_sourcecode_title">Källkod</string>
+    <string name="appinfo_sourcecode_content">
+        Källkoden för applikationen finns tillgänglig online.
+    </string>
+    <string name="appinfo_sourcecode_url_title">Applikationens källkod</string>
+
+    <!-- AboutActivity / License -->
+    <string name="appinfo_license_title">Licenser</string>
+    <string name="appinfo_license_content">
+        Källkoden för applikationen Umweltzone är licensierad under GPLv3.
+        De geometriska koordinaterna tagna från OpenStreetMap är licensierade under
+        Open Database License (ODbL) v1.0. Andra geometriska koordinater är licensierade enligt
+        de nämnda datakällorna. Bilder och texter är licensierade under licensen
+        Creative Commons Attribution 3.0 Unported License.
+    </string>
+    <string name="appinfo_license_url_title_gpl">GPLv3 Licens</string>
+    <string name="appinfo_license_url_title_creative_commons">
+        Creative Commons Licens
+    </string>
+
+    <!-- AboutActivity / Build Info -->
+    <string name="appinfo_build_info_title">Bygginformation</string>
+    <string name="appinfo_build_info_time">Byggtid</string>
+    <string name="appinfo_build_info_version_code">Version</string>
+    <string name="appinfo_build_info_hash">Bygghash</string>
+
+
+    <!-- FeedbackActivity / Contact -->
+    <string name="appinfo_contact_title">Kontakta oss</string>
+    <string name="appinfo_contact_content">
+        Alla sorters feedback som förbättringsförslag, felrapporter och förslag på features kan
+        skickas till följande adress:
+    </string>
+
+    <!-- FeedbackActivity / Rating -->
+    <string name="appinfo_rating_title">Betyg</string>
+    <string name="appinfo_rating_content">
+        Vi skulle vara väldigt glada för ett positivt betyg i Google Play-butiken.
+    </string>
+    <string name="appinfo_rating_url_title">
+        Umweltzone i Google Play-butiken
+    </string>
+
+
+    <!-- DetailsActivity formerly CityInfoFragment -->
+    <string name="city_info_activity_title">Stadsinformation</string>
+
+    <string name="city_info_section_title_lez">Detaljer om miljözonen</string>
+    <string name="city_info_section_title_dpz">Detaljer om den dieselfria zonen</string>
+    <string name="city_info_section_title_other">Ytterligare information</string>
+
+    <string name="city_info_zone_status">gratis</string>
+    <string name="city_info_zone_number_as_of">
+        Sedan den <xliff:g example="Oct 1, 2099" id="date">%1$s</xliff:g> tillåts endast
+        fordon med <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> klistermärke
+        att köra in i miljözonen.
+    </string>
+    <string name="city_info_zone_number_since">
+        Sedan den <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> tillåts endast
+        fordon med <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> klistermärke
+        att köra in i miljözonen.
+    </string>
+    <string name="city_info_zone_number_since_date_format">d MMMM yyyy</string>
+    <string name="city_info_zone_number_since_text_fragment_green">
+        med ett grönt
+    </string>
+    <string name="city_info_zone_number_since_text_fragment_yellow">
+        med ett gult eller grönt
+    </string>
+    <string name="city_info_zone_number_since_text_fragment_red">
+        med ett rött, gult eller grönt
+    </string>
+    <string name="city_info_zone_number_none">
+        Fordon av alla utsläppklasser tillåts köra in i miljözonen.
+    </string>
+    <string name="city_info_next_zone_number_as_of">
+        Sedan den <xliff:g example="Feb 1, 2016" id="date">%1$s</xliff:g> tillåts endast
+        fordon med <xliff:g example="with a green" id="with_colors">%2$s</xliff:g> klistermärke
+        att köra in i miljözonen.
+    </string>
+    <string name="city_info_abroad_licensed_vehicle_zone_info">
+        Fordon som är registrerade utomlands tillåts att köra in i miljözonen
+        till den <xliff:g example="Jan 31, 2016" id="date">%1$s</xliff:g>
+        <xliff:g example="with a yellow or a green" id="with_colors">%2$s</xliff:g> klistermärke.
+    </string>
+
+    <string name="city_info_list_of_cities">
+        Den här zonen innehåller följande städer eller
+        stadsdelar: <xliff:g example="Bochum, Castrop-Rauxel, Essen" id="cities">%1$s</xliff:g> och
+        <xliff:g example="Recklinghausen" id="last_city">%2$s</xliff:g>.
+    </string>
+
+    <string name="city_info_further_information">Ytterligare information online</string>
+    <string name="city_info_badge_online_title">Ansökningsformulär för klistermärke online</string>
+
+    <string name="city_info_geometry_source_text">Källa för
+        geometriska koordinater: <xliff:g example="Geoportal Berlin / Umweltzone Berlin" id="geometrySource">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_geometry_updated_at_date_format">
+        d MMMM yyyy
+    </string>
+    <string name="city_info_geometry_updated_at_text">
+        Senaste uppdatering av zonens geometri:
+        <xliff:g example="Sep 6, 2014" id="updatedAt">%1$s</xliff:g>
+    </string>
+
+    <string name="city_info_allowed_exhaust_emission_standard_in_diesel_prohibition_zone">
+        Endast fordon som klarar kraven för miljöklass Euro
+        <xliff:g example="6" id="number">%1$d</xliff:g> tillåts att köra
+        in i den dieselfria zonen.
+    </string>
+    <string name="city_info_zone_number_for_residents_since">
+        För boende gäller dessa regler från och med den <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_zone_number_for_non_residents_since">
+        För icke boende gäller dessa regler från och med den <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles">
+        Denna bestämmelse gäller för <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars">
+        bilar
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_hgvs">
+        tunga fraktfordon
+    </string>
+
+    <string name="city_info_provision_applies_to_vehicles_fragment_cars_and_hgvs">
+        bilar och tunga fraktfordon
+    </string>
+
+    <string name="city_info_is_congruent_with_lez">
+        Denna zonen överensstämmer med miljözonen.
+    </string>
+
+    <!-- NoCitySelectedFragment -->
+    <string name="no_city_selected_title">Stadsinfo</string>
+    <string name="no_city_selected_status_desc">
+        Detaljerad information om zonen kan inte visas.
+        Var vänlig och välj en zon först.
+    </string>
+    <string name="no_city_selected_select_zone">Välj en zon</string>
+
+    <!-- FaqActivity -->
+    <string name="faq_activity_title">FAQ</string>
+    <string name="faq_source_url_title_text">Källa</string>
+
+    <!-- ZoneNotDrawableDialog -->
+    <string name="zone_not_drawable_title">
+        Hjälp nu &#8230;
+    </string>
+    <string name="zone_not_drawable_notice">
+        <![CDATA[&#8230; så att <b>miljözonen för %1$s</b> kan visas också. <br />
+        <br />
+        Problemet är att %2$s inte publicerar geo-koordinater (värden för latitud och longitud)
+        som beskriver platsen för miljözonen på ett <b>lämpligt (maskinläsbart) filformat</b>.
+        Den önskade informationen kan inte extraheras från en bild, en PDF eller webbsidor.
+        Av denna anledning är det inte möjligt att visa den exakta platsen och formen för denna
+        miljözon. <br />
+        <br />
+        Men du kan hjälpa till att förändra detta med ett <b>personligt email</b>.
+        Detta meddelande har redan skapats. Bara lägg till ditt namn på slutet när du är redo att
+        skicka iväg det.]]>
+    </string>
+    <string name="zone_not_drawable_later">Kanske senare</string>
+    <string name="zone_not_drawable_open_email">Öppna email</string>
+    <string name="zone_not_drawable_no_email_app">
+        Ingen kompatibel emailapp installerad.
+    </string>
+    <string name="zone_not_drawable_app_chooser_title">Öppna utkast med &#8230;</string>
+    <string name="zone_not_drawable_email_subject">
+        Umweltzone Android App / Integration <xliff:g example="Wiesbaden" id="zoneName">%1$s</xliff:g>
+    </string>
+    <string name="zone_not_drawable_email_html_message">
+        <![CDATA[<p>Kära mottagare.<br />
+        <br />
+        Jag använder applikationen &quot;Umweltzone&quot; [1] som är gratis och open source, och
+        som låter mig bli informerad om var miljözoner finns samt olika bestämmelser i många olika
+        städer.
+        Jag tycker att denna applikationen är ett användbart tillskott till den befintliga information
+        om olika städer.
+        <br />
+        <br />
+        Tyvärr kan inte <b>miljözonen för %1$s</b> visas. Detta beror på att
+        geo-koordinaterna som beskriver denna platsen inte har blivit publicerade.
+        Därför skulle jag personligen be dig att släppa dessa geo-koordinater under en <b>gratis licens</b>.
+        För att underlätta behandlingen av data är följande <b>maskinläsliga filformat</b> lämpliga
+        ESRI Shapefiles, CSV, GeoJSON.<br />
+        <br />
+        Vänliga hälsningar</p>
+        <p>----<br />
+        <br />
+        Sehr geehrte Damen und Herren,<br />
+        <br />
+        ich nutze die kostenfreie und quelloffene Anwendung &quot;Umweltzone&quot; [1],
+        mit der ich mich über den Verlauf von Umweltzonen und individuelle
+        Regelungen in verschiedenen Städten auf meinem Android-Gerät
+        informieren kann. Ich betrachte diese Anwendung als nützliche
+        Erweiterung zum bestehenden Informationsangebot vieler Städte.<br />
+        <br />
+        Leider kann die <b>Umweltzone %1$s</b> nicht dargestellt werden. Es fehlen
+        die Geokoordinaten des Umweltzonenumrings. Daher möchte ich Sie hiermit
+        persönlich bitten, die Koordinaten unter einer <b>freien Lizenz</b> zu
+        veröffentlichen. Um eine Weiterverarbeitung zu ermöglichen, eignen
+        sich folgenden <b>maschinenlesbare Dateiformate</b>:
+        ESRI Shapefiles, CSV, GeoJSON.<br />
+        <br />
+        Mit freundlichen Grüßen</p>
+
+        <p>___<br />
+        [1]: <a href="https://play.google.com/store/apps/details?id=de.avpptr.umweltzone">https://play.google.com/store/apps/details?id=de.avpptr.umweltzone</a></p>]]>
+    </string>
+
+    <!-- TraceDroid -->
+    <string name="trace_droid_dialog_title">
+        Skicka Umweltzone kraschrapport &#8230;
+    </string>
+    <string name="trace_droid_dialog_message">
+        Ett problem med appen Umweltzone har upptäckts.
+        Det skulle vara hjälpsamt om du kunde skicka in en kraschrapport så att källan till
+        problemet kan hittas.
+    </string>
+    <string name="trace_droid_button_title_no">
+        Nej
+    </string>
+
+    <!-- SnackEngage -->
+    <string name="snack_engage_rate_title">Är allt bra?</string>
+    <string name="snack_engage_rate_action">Var snäll och betygsätt appen</string>
+    <string name="snack_engage_beta_testing_title">Power user?</string>
+    <string name="snack_engage_beta_testing_action">Bli en betatestare</string>
+
+    <!-- Settings -->
+    <string name="settings_activity_title">Inställningar</string>
+    <string name="settings_category_title_data_privacy">Dataintegritet</string>
+    <string name="settings_title_google_analytics">Skicka anonymiserad användarstatistik</string>
+    <string name="settings_summary_google_analytics">
+        Tillåter att användarstatistik och kraschrapporter skickas till Google Analytics.
+        Denna anonymiserade data används av utvecklaren av appen Umweltzone för att analysera
+        programfel och fortlöpande förbättra appen.
+    </string>
+    <string name="settings_title_data_privacy_statement_de">
+        Förklaring av dataintegritet (Tyska) &#8230;
+    </string>
+
+</resources>
