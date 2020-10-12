@@ -54,8 +54,8 @@ android {
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
-        buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
-        buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
+        resValue("string", "build_time", "\"${buildTime()}\"")
+        resValue("string", "git_sha", "\"${gitSha()}\"")
         archivesBaseName = "Umweltzone-$versionName"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

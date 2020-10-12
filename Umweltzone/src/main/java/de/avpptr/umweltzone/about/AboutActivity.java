@@ -40,12 +40,14 @@ public class AboutActivity extends BaseActivity {
 
         ViewHelper.setupTextViewSimple(this,
                 R.id.buildVersion, "v." + getBuildVersionName());
+        String buildTimeValue = getString(R.string.build_time);
         ViewHelper.setupTextViewSimple(this,
-                R.id.buildTime, BuildConfig.BUILD_TIME);
+                R.id.buildTime, buildTimeValue);
         ViewHelper.setupTextViewSimple(this,
                 R.id.buildVersionCode, "" + BuildConfig.BUILD_VERSION_CODE);
+        String buildHashValue = getString(R.string.git_sha);
         ViewHelper.setupTextViewSimple(this,
-                R.id.buildHash, BuildConfig.GIT_SHA);
+                R.id.buildHash, buildHashValue);
 
         ViewHelper.setupTextViewExtended(this, R.id.app_info_environment_agency,
                 R.string.appinfo_references_name_umweltbundesamt,
