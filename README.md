@@ -113,8 +113,10 @@ $ ./gradlew clean connectedAndroidTest
 
 * [cketti](https://github.com/cketti)
 * [daus-salar](https://bitbucket.com/daus-salar)
+* [Larissa Yasin](https://github.com/larissayasin)
 * [Peter Vasil](https://github.com/ptrv)
 * [Pieter Jan Geutjens](https://github.com/pjgeutjens)
+* [Romero Silva](https://github.com/romeroclaudino)
 * [Sjors van Mierlo](https://github.com/spmvanmierlo)
 * [Tomasz Skowroński](https://github.com/hexmind)
 * [Valar Markhulis](https://github.com/ValarMarkhulis)
