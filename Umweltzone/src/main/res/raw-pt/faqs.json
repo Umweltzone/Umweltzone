@@ -1,0 +1,107 @@
+[
+  {
+    "position" : 1,
+    "question" : "O que é poeira fina? O que são particulas finas?",
+    "answer" : "Partículas finas nada mais são do que poeira fina, ou seja, partículas sólidas na atmosfera menores que 15 µm. As metas de redução de emissões na União Europeia (UE) seguem as diretrizes estabelecidas no Padrão Nacional de Qualidade do Ar para Matérias Particuladas da Agência de Proteção Ambiental dos EUA (APA) (em resumo, Padrão PM), introduzido em 1987. O Padrão PM10 foi definido no primeiro esboço da diretriz americana e desde 2005, tem servido como valor limite na UE. Ao contrário das definições geralmente citadas, o PM10 não é uma definição precisa das emissões com diâmetro aerodinâmico de 10 mícrons, mas sim uma tentativa de replicar o comportamento de secreção das vias aéreas superiores: partículas com um diâmetro aerodinâmico de menos de 1 mícron estão totalmente incluídas, uma certa porcentagem de partículas maiores será considerada, a qual diminuirá com o aumento do tamanho da partícula e, eventualmente, chegará a 0% nos 15 mícrons. Tecnicamente, isso corresponde à aplicação de uma função de ponderação (no jargão especializado, uma curva de separação ou função de separação) nas emissões (na prática, isso é obtido por uma entrada seletiva de tamanho para os instrumentos de medição). A partir do formato dessa função de ponderação é que o nome PM10 é derivado, porque a 10 mícrons, exatamente a metade das partículas são levadas em consideração na ponderação. Mais informações sobre partículas podem ser encontradas na Wikipedia (http://en.wikipedia.org/wiki/Particulates)",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "what_is_fine_dust"
+  },
+  {
+    "position" : 2,
+    "question" : "Por que a poeira é prejudicial?",
+    "answer" : "Não há concentrações de poeira fina que sejam inofensivas. Para a população da União Europeia (UE), a emissão de total de partículas resulta numa redução média de um ano em sua expectativa de vida. Os limites definidos pela UE são mais ou menos arbitrários e seguem o que é consideravelmente viável, mas não o que é considerado cientificamente relevante. Entre os efeitos da poluição por partículas finas estão, por exemplo, um aumento na gravidade dos sintomas de alergia, um aumento das crises de asma, sintomas respiratórios e câncer de pulmão, assim como um aumento do risco de infecções do ouvido médio em crianças. Além disso, efeitos sobre o sistema cardiovascular (por exemplo, infarto do miocárdio) são pressupostos. A extensão do impacto das partículas no trato respiratório depende, além disso, da toxicidade das partículas, causada entre outros por chumbo, vanádio, berílio e mercúrio, e do tamanho das próprias partículas: Quanto menor a partícula, mais profundamente pode penetrar nos pulmões.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "why_is_dust_harmful"
+  },
+  {
+    "position" : 3,
+    "question" : "Como os adesivos ambientais são distribuídos?",
+    "answer" : "A distribuição de adesivos de proteção ambiental é regulamentada por lei de acordo com determinados critérios. Veículos a diesel sem filtros de partículas, dependendo da idade dos veículos, recebem um adesivo ambiental vermelho ou amarelo. Os veículos mais novos contendo filtro de partículas de diesel recebem, em sua maioria, um adesivo verde. Veículos movidos a gasolina com conversores catalíticos regulados recebem, sem exceção, um adesivo ambiental verde, por isso pode acontecer de veículos muito antigos também obterem um adesivo verde. Trata-se principalmente de motores a gasolina com conversores catalíticos regulados. Veículos movidos a gasolina sem conversor catalítico regulado recebem um adesivo verde ou nenhum adesivo. Sendo assim, veículos movidos a gasolina, recebem um adesivo verde ou nenhum adesivo. Para verificar qual adesivo ambiental seu veículo deve receber, consulte a página da DEKRA na internet.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "how_are_environmental_stickers_allocated"
+  },
+  {
+    "position" : 4,
+    "question" : "Por quanto tempo os adesivos ambientais são válidos?",
+    "answer" : "O adesivo ambiental é fixado na placa do carro, o que significa que a renovação só é necessária quando há uma mudança de placa (por exemplo, relocação, venda).",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "how_long_are_the_environmental_stickers_valid"
+  },
+  {
+    "position" : 5,
+    "question" : "Preciso de um adesivo ambiental para minha moto?",
+    "answer" : "Não, veículos de duas ou três rodas estão isentos.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "do_I_need_an_environmental_sticker_for_my_motor_bike"
+  },
+  {
+    "position" : 6,
+    "question" : "O que é uma zona de baixa emissão?",
+    "answer" : "Uma zona de baixa emissão é uma área especialmente marcada em uma cidade na qual veículos com altos valores de emissão são proibidos de entrar. Veículos a diesel e caminhões são especialmente afetados. O controle é feito com a monitoração dos adesivos ambientais.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "what_is_a_low_emission_zone"
+  },
+  {
+    "position" : 7,
+    "question" : "Como faço para identificar uma zona de baixa emissão?",
+    "answer" : "As zonas de baixa emissão são marcadas por sinais de trânsito apropriados (veja a imagem à direita), que indicam o início e o fim da zona de controle de emissões, além disso também é mostrado quais adesivos são necessários (vermelho, amarelo ou verde). O que muitos não sabem: Estas zonas também se aplicam a veículos com matrículas estrangeiras.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "how_do_i_recognize_a_low_emission_zone"
+  },
+  {
+    "position" : 8,
+    "question" : "Qual é a utilidade de zonas de baixa emissão?",
+    "answer" : "Todos os veículos geram partículas que podem levar ao aumento da asma e doenças pulmonares. Com a introdução de zonas de baixa emissão, espera-se que isso seja evitado em áreas metropolitanas.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "what_is_the_use_of_low_emission_zones?"
+  },
+  {
+    "position" : 9,
+    "question" : "Para quem são válidas as zonas de baixa emissão?",
+    "answer" : "A lei estabelece: Para todos os automóveis de passageiros e veículos comerciais, independentemente do tipo de propulsão (motores de combustão interna - gasolina, diesel ou gás, adicionalmente com propulsão elétrica). O adesivo ambiental visa principalmente contribuir para a redução de poluentes nas áreas metropolitanas.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "for_whom_are_low_emission_zones_valid"
+  },
+  {
+    "position" : 10,
+    "question" : "Qual adesivo ambiental apropriado para o meu veículo?",
+    "answer" : "A atribuição de um adesivo ambiental tomará como base os dados introduzidos na documentação do veículo. Isso resulta em um chamado Número-chave do Poluente. Você pode descriptografar o documento de registro do seu veículo realizando o teste online DEKRA.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "which_environmental_sticker_for_my_vehicle"
+  },
+  {
+    "position" : 11,
+    "question" : "Quais são as penalidades por dirigir sem adesivos ambientais?",
+    "answer" : "A penalidade por não conformidade consiste em uma multa de 80 euros e pontos na carteira, mas somente em Flensburg, os pontos não se aplicam então se paga apenas o valor da multai (válida desde maio de 2014).",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "penalties_for_driving_without_environmental_stickers"
+  },
+  {
+    "position" : 12,
+    "question" : "E no que se refere a exceções?",
+    "answer" : "Cada cidade tem suas próprias exceções. Elas são explicadas nas páginas especiais sobre zonas de baixa emissão em nosso site. Se não houver nenhuma especificação por lá, então normalmente as exceções padrão além de outros casos especiais se aplicam. Visite o Escritório de Meio Ambiente e Transporte específico para obter informações mais recentes e precisas. Como regra, de se preencher um formulário e fornecer evidências adicionais (como um certificado de não retrofit ou não atualização) para obter uma isenção para a zona específica. As isenções são geralmente limitadas por tempo e nem sempre correspondem à validade dos detalhes da placa de carro atual. As isenções são geralmente válidas em intervalos que vão de alguns dias até um ano. A licença pode custar de 10 a 300 euros, dependendo da localização e da duração.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "what_is_the_situation_with_exception_permits"
+  },
+  {
+    "position" : 13,
+    "question" : "Os veículos estrangeiros são obrigados a ter um adesivo de emissão?",
+    "answer" : "Sim. Qualquer veículo que não esteja especificamente isento de acordo com os regulamentos de adesivos ambientais exige um adesivo - na verdade, todos os veículos registrados no exterior.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "do_foreign_vehicles_require_an_emission_sticker"
+  },
+  {
+    "position" : 14,
+    "question" : "Onde coloco o adesivo?",
+    "answer" : "Não há diretrizes legais claras que determinem exatamente onde o adesivo deve ser colocado. Recomendamos colocar o adesivo no canto inferior direito da janela do lado do passageiro dianteiro. Assim, ele pode ser identificado imediatamente pelos funcionários da corregedoria ou de outras secretarias municipais.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "where_do_i_stick_the_sticker"
+  },
+  {
+    "position" : 15,
+    "question" : "Cada cidade precisa de um adesivo ambiental diferente?",
+    "answer" : "Não. Apenas um adesivo já é válido para todas as zonas de baixa emissão. Os adesivos não estão vinculados a nenhum local específico.",
+    "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+    "label" : "does_every_city_need_a_different_environment_sticker"
+  }
+]
