@@ -32,6 +32,7 @@ The app is translated into multiple languages:
 - Danish (FAQs missing)
 - Dutch
 - English
+- French (FAQs missing)
 - German
 - Polish (FAQs missing)
 - Portuguese
