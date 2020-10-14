@@ -118,6 +118,7 @@ $ ./gradlew clean connectedAndroidTest
 * [daus-salar](https://bitbucket.com/daus-salar)
 * [Fredrik Henricsson](https://github.com/fejd)
 * [Larissa Yasin](https://github.com/larissayasin)
+* [Laure Runser](https://github.com/laurerunser)
 * [Peter Vasil](https://github.com/ptrv)
 * [Pieter Jan Geutjens](https://github.com/pjgeutjens)
 * [Romero Silva](https://github.com/romeroclaudino)
