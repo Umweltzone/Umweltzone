@@ -36,6 +36,7 @@ The app is translated into multiple languages:
 - German
 - Polish (FAQs missing)
 - Portuguese
+- Spanish (FAQs missing)
 - Swedish (FAQs missing)
 
 If you are native speaker of any of these languages feel very much invited to
