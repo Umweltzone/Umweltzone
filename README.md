@@ -29,15 +29,15 @@ and Diesel prohibitions zones
 
 The app is translated into multiple languages:
 
-- Danish (FAQs missing)
-- Dutch
-- English
-- French (FAQs missing)
-- German
-- Polish (FAQs missing)
-- Portuguese
-- Spanish
-- Swedish (FAQs missing)
+- Danish (FAQs missing) 🇩🇰
+- Dutch 🇳🇱
+- English 🇺🇸
+- French (FAQs missing) 🇫🇷
+- German 🇩🇪
+- Polish (FAQs missing) 🇵🇱
+- Portuguese 🇵🇹
+- Spanish 🇪🇸
+- Swedish (FAQs missing) 🇸🇪
 
 If you are native speaker of any of these languages feel very much invited to
 improve or complete the translation. New languages are also welcome - please
