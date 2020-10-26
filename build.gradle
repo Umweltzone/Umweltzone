@@ -2,6 +2,7 @@ buildscript {
     ext {
         // Plugins
         androidGradlePluginVersion = "4.1.0"
+        dexcountGradlePluginVersion = "2.0.0"
         gradleVersionsPluginVersion = "0.33.0"
         proguardGradlePluginVersion = "6.2.2"
         strictVersionMatcherPluginVersion = "1.2.1"
@@ -36,6 +37,7 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
+        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$dexcountGradlePluginVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
         classpath "com.google.android.gms:strict-version-matcher-plugin:$strictVersionMatcherPluginVersion"
         classpath "net.sf.proguard:proguard-gradle:$proguardGradlePluginVersion"
