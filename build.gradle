@@ -24,7 +24,7 @@ buildscript {
         playServicesMapsVersion = "17.0.0"
         preferenceVersion = "1.1.1"
         roadSignsVersion = "3.1.0"
-        snackengagePlayrateVersion = "0.25"
+        snackengagePlayrateVersion = "0.26"
         testExtJunitVersion = "1.1.2"
         testRulesVersion = "1.3.0"
         typedPreferencesVersion = "2.1.0"
