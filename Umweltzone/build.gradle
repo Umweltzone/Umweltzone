@@ -6,6 +6,7 @@ apply plugin: "kotlin-android"
 apply plugin: "kotlin-android-extensions"
 apply plugin: "kotlin-kapt"
 apply plugin: "com.google.android.gms.strict-version-matcher-plugin"
+apply plugin: "com.getkeepsafe.dexcount"
 
 repositories {
     google()
