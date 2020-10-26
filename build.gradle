@@ -5,7 +5,7 @@ buildscript {
         dexcountGradlePluginVersion = "2.0.0"
         gradleVersionsPluginVersion = "0.33.0"
         proguardGradlePluginVersion = "6.2.2"
-        strictVersionMatcherPluginVersion = "1.2.1"
+        strictVersionMatcherPluginVersion = "1.2.2"
 
         // Libraries
         annotationVersion = "1.1.0"
