@@ -1,0 +1,107 @@
+[
+    {
+        "position" : 1,
+        "question" : "Vad är fint damm? Vad är luftburna partiklar?",
+        "answer" : "Luftburna partiklar är inget annat än fint damm, med andra ord fasta partiklar i atmosfären som är mindre än 15 µm. Utsläppsmålen i den Europeiska unionen följer riktlinjerna som lades fram i National Air Quality Standard for Particulate Matter (förkortad PM Standard) av USAs federala miljöskyddsmyndighet (EPA), och introducerades 1987. I det första utkastet av den amerikanska riktlinjen definierades standarden PM10, vilket sedan 2005 har använts som ett gränsvärde inom EU. Till skillnad från vanligt citerade definitioner så är PM10 inte en skarp definition av utsläpp med en aerodynamisk diameter på 10 mikroner, utan ett försök att replikera utsöndringsbeteendet i de övre luftvägarna: partiklar med en aerodynamisk diameter på mindre än 1 mikron är inkluderade, en viss procent av större partiklar tas med i beräkningarna vilket kommer att minska med ökande partikelstorlek, för att slutligen nå 0% vid 15 mikroner. Tekniskt sett motsvarar detta appliceringen av en så kallad viktfunktion (i specialistjargong, en separeringskurva eller separeringsfunktion) över utsläppen (i praktiken nås detta genom att använda ett storleksselektivt inlopp till mätinstrumenten) . Namnet PM10 kan härledas till formen på viktfunktionen, eftersom precis hälften av partiklarna tas med i beräkningen av viktningen vid 10 mikroner. Ytterligare information om partiklar finns på Wikipedia (http://en.wikipedia.org/wiki/Particulates)",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "what_is_fine_dust"
+    },
+    {
+        "position" : 2,
+        "question" : "Varför är fint damm skadligt?",
+        "answer" : "Det finns inga ofarliga koncentrationer av fint damm. För befolkningen i den Europeiska unionen resulterar det sammanlagda partikelutsläppet i en genomsnittlig minskning av förväntad livslängd med ett år. Gränsvärdena definierade av EU är mer eller mindre godtyckliga och följer vad som bedöms vara politiskt genomförbart snarare än vad som är vetenskapligt relevant. Bland effekterna av utsläpp av luftburna partiklar finns till exempel en ökning av allvarliga allergisymptom, astmaattacker, andningsbesvär och lungcancer, men även en ökad risk för infektion i mellanörat hos barn. Ytterligare effekter på det kardiovaskulära systemet, exempelvis hjärtinfarkt, kan antas. Omfattningen av partiklarnas påverkan på luftvägarna beror även på giftigheten i partiklarna, vilka består bland annat av bly, vanadin, beryllium och kvicksilver, samt partiklarnas storlek: Ju mindre partikeln är, desto djupare kan den penetrera in i lungorna.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "why_is_dust_harmful"
+    },
+    {
+        "position" : 3,
+        "question" : "Hur tilldelas eller fördelas miljömärken?",
+        "answer" : "Fördelning av miljömärken regleras i lag enligt särskilda kriterier. Dieselfordon utan partikelfilter, beroende på fordonets ålder, tilldelas ett rött eller gult miljömärke. Nyare fordon utan dieselpartikelfilter tilldelas för det mesta ett grönt miljömärke. Bensindrivna fordon med katalysator (G-Cat) tilldelas, utan undantag, ett grönt miljömärke, vilket innebär att även mycket gamla fordon kan få ett grönt märke. Dessa är för det mesta bensinmotorer med katalysator. Bensindrivna fordon utan katalysator tilldelas antingen ett grönt märke eller inget alls. För att summera så tilldelas bensindrivna fordon antingen ett grönt märke eller inget alls. För att se vilket miljömärke ditt fordon bör tilldelas, se DEKRAs webbsida.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "how_are_environmental_stickers_allocated"
+    },
+    {
+        "position" : 4,
+        "question" : "Hur länge är miljömärken giltiga?",
+        "answer" : "Miljömärket fästs vid fordonets nummerplåt, vilket innebär att förnyelse endast är nödvändigt när ett byte av nummerplåt görs, exempelvis vid försäljning.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "how_long_are_the_environmental_stickers_valid"
+    },
+    {
+        "position" : 5,
+        "question" : "Behöver jag ett miljömärke för min motorcykel?",
+        "answer" : "Nej, två- och trehjuliga fordon är undantagna.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "do_I_need_an_environmental_sticker_for_my_motor_bike"
+    },
+    {
+        "position" : 6,
+        "question" : "Vad är en miljözon?",
+        "answer" : "En miljözon är en särskilt markerad del av en stad där fordon med höga utsläppsnivåer är förbjudna. Dieselfordon och lastbilar är särskilt påverkade. Kontrollen utförs genom övervakning av nödvändiga miljömärken.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "what_is_a_low_emission_zone"
+    },
+    {
+        "position" : 7,
+        "question" : "Hur känner jag igen en miljözon?",
+        "answer" : "Miljözoner är markerade med lämpliga trafikskyltar (se bilden till höger), vilka indikerar början och slut på en utsläppskontrollzon, samt visar vilka miljömärken som krävs (röda, gula eller gröna). Vad många inte vet: Dessa zoner gäller även fordon med utländska nummerplåtar.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "how_do_i_recognize_a_low_emission_zone"
+    },
+    {
+        "position" : 8,
+        "question" : "Vad är nyttan med miljözoner?",
+        "answer" : "Alla fordon genererar partiklar, vilka kan leda till en ökning av astma och lungsjukdomar. Genom att införa miljözoner hoppas man kunna motverka detta i storstadsområden.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "what_is_the_use_of_low_emission_zones?"
+    },
+    {
+        "position" : 9,
+        "question" : "För vem gäller miljözoner?",
+        "answer" : "Lagen anger: För alla personbilar och kommersiella fordon, oavsett drivmedel (förbränningsmotor - bensin, diesel eller gas, samt elektrisk). Miljömärket ämnar främst till att bidra till en reducering av föroreningar i storstadsområden.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "for_whom_are_low_emission_zones_valid"
+    },
+    {
+        "position" : 10,
+        "question" : "Vilket miljömärke gäller för min bil?",
+        "answer" : "Tilldelning av ett miljömärke baseras på data i fordonsdokumentet. Resultatet är ett så kallat Pollutant Key Number. Du kan avkoda ditt registreringsdokument för fordonet genom att göra DEKRAs onlinetest.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "which_environmental_sticker_for_my_vehicle"
+    },
+    {
+        "position" : 11,
+        "question" : "Böter för att köra utan miljömärke.",
+        "answer" : "Straffet för att köra utan miljömärke är 80 Euro i böter, förutom Flensburg (gäller sedan maj 2014).",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "penalties_for_driving_without_environmental_stickers"
+    },
+    {
+        "position" : 12,
+        "question" : "Vad gäller för undantagstillstånd?",
+        "answer" : "Varje stad har sina egna undantag. Dessa beskrivs i vår särskilda webbsida för miljözoner. Om inga finns nämnda där så gäller normalt standardundantagen samt speciella undantag. Besök ditt närmaste miljö- och transportkontor för att få tillgång till den senaste om mest tillförlitliga informationen. I regel måste ett formulär samt ytterligare bevisning (såsom ett certifikat som styrker att ingen eftermontering eller uppgradering har gjorts) tillhandahållas för att få ett undantag för en specifik zon. Undantag är vanligtvis tidsbegränsade och överensstämmer inte alltid med giltigheten för nuvarande nummerplåtar. Undantag är vanligtvis giltiga från några dagar upp till ett år. Ett tillstånd kan kosta från 10 till 300 Euros beroende på plats och längd.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "what_is_the_situation_with_exception_permits"
+    },
+    {
+        "position" : 13,
+        "question" : "Behöver utländska fordon ett miljömärke?",
+        "answer" : "Ja. Alla fordon vilka inte är speciellt undantagna enligt reglerna för miljömärken behöver ha ett miljömärke - i själva verket gäller det alla fordon som är registrerade utomlands.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "do_foreign_vehicles_require_an_emission_sticker"
+    },
+    {
+        "position" : 14,
+        "question" : "Var fäster jag miljömärket?",
+        "answer" : "Det finns inga klara lagstadgade riktlinjer som specificerar exakt var miljömärket ska placeras. Vi rekommenderar att miljömärket placeras i nedre högra hörnet av fönstret på passagerarsidan. På så vis kan miljömärket genast kännas igen av tjänstemän från relevanta kommunala avdelningar.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "where_do_i_stick_the_sticker"
+    },
+    {
+        "position" : 15,
+        "question" : "Behöver varje stad ha olika miljömärken?",
+        "answer" : "Nej. Ett miljömärke är giltigt för alla miljözoner. Dessa miljömärken är inte bundna till specifika platser.",
+        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "label" : "does_every_city_need_a_different_environment_sticker"
+    }
+]
