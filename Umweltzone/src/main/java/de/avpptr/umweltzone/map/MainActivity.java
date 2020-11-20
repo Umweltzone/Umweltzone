@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.WindowManager;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import org.ligi.snackengage.SnackEngage;
@@ -135,15 +136,21 @@ public class MainActivity extends BaseActivity {
         preferencesHelper.storeCityNameFrankfurtInPreferencesFixed(true);
     }
 
-    // Remove "bochum" as the last selected city name
-    // and reset the map location
-    // The city name has been removed since it is contained in "ruhrgebiet".
+    // "bochum" has been removed since it is contained in "ruhrgebiet".
     private void migrateBochumRemoval() {
-        final Umweltzone application = (Umweltzone) getApplication();
-        final PreferencesHelper preferencesHelper = application.getPreferencesHelper();
+        migrateZoneRemoval("bochum");
+    }
+
+    /**
+     * Removes the given {@code removedZoneName} as the last selected zone name and
+     * resets the map location to the default setting.
+     */
+    private void migrateZoneRemoval(@NonNull String removedZoneName) {
+        Umweltzone application = (Umweltzone) getApplication();
+        PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         if (preferencesHelper.storesLastKnownLocationAsString()) {
-            final String cityName = preferencesHelper.restoreLastKnownLocationAsString();
-            if (cityName.equals("bochum")) {
+            String lastZoneName = preferencesHelper.restoreLastKnownLocationAsString();
+            if (lastZoneName.equals(removedZoneName)) {
                 // Reset to default low emission zone.
                 preferencesHelper.deleteLastKnownLocation();
             }
