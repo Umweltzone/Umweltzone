@@ -54,6 +54,7 @@ public class MainActivity extends BaseActivity {
         migrateNewZonesAddedInVersion250();
         migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
+        migrateBalingenRemoval();
         showChangeLogDialog();
         initUserEngagement();
     }
@@ -139,6 +140,11 @@ public class MainActivity extends BaseActivity {
     // "bochum" has been removed since it is contained in "ruhrgebiet".
     private void migrateBochumRemoval() {
         migrateZoneRemoval("bochum");
+    }
+
+    // "balingen" has been removed because it was discontinued as of 01.11.2020.
+    private void migrateBalingenRemoval() {
+        migrateZoneRemoval("balingen");
     }
 
     /**
