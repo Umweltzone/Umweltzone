@@ -16,6 +16,37 @@
 -->
 <changelog>
     <release
+        version="6.0.0"
+        versioncode="600000">
+        <change>
+            Gone: Remove low emission zone of Balingen which was abolished
+            as of November 1, 2020.
+        </change>
+        <change>
+            New: Add French translation. Thanks Laure Runser and Quentin Brault.
+        </change>
+        <change>
+            New: Add Portuguese translation. Thanks Larissa Yasin, Romero Silva
+            and Thiago de Oliveira Pires.
+        </change>
+        <change>
+            New: Add Spanish translation. Thanks Natalie Stroud and Kevin Esaa.
+        </change>
+        <change>
+            New: Add Swedish translation. Thanks Fredrik Henricsson.
+        </change>
+        <change>
+            Update: Extended translations for accessibility use-cases.
+            Thanks Lars Næsbye Christensen and Tomasz Skowroński.
+        </change>
+        <change>
+            Update: Remove unreachable email recipients for Regensburg.
+        </change>
+        <change>
+            Gone: Remove already dysfunctional Google Analytics.
+        </change>
+    </release>
+    <release
         version="5.4.1"
         versioncode="504100">
         <change>

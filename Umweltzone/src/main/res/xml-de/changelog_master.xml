@@ -16,6 +16,36 @@
 -->
 <changelog>
     <release
+        version="6.0.0"
+        versioncode="600000">
+        <change>
+            Entfernt: Umweltzone Balingen entfällt. Sie wurde zum 1. November 2020 aufgehoben.
+        </change>
+        <change>
+            Neu: Französische Übersetzung hinzugefügt. Danke Laure Runser and Quentin Brault.
+        </change>
+        <change>
+            Neu: Portugiesische Übersetzung hinzugefügt. Danke Larissa Yasin,
+            Romero Silva und Thiago de Oliveira Pires.
+        </change>
+        <change>
+            Neu: Schwedische Übersetzung hinzugefügt. Danke Fredrik Henricsson.
+        </change>
+        <change>
+            Neu: Spanische Übersetzung hinzugefügt. Danke Natalie Stroud und Kevin Esaa.
+        </change>
+        <change>
+            Aktualisierung: Übersetzung für barrierefreie Nutzung erweitert.
+            Danke Lars Næsbye Christensen und Tomasz Skowroński.
+        </change>
+        <change>
+            Aktualisierung: Ungültige E-Mail-Empfänger für Regensburg entfernt.
+        </change>
+        <change>
+            Entfernt: Google Analytics ausgebaut, weil nicht mehr funktionsfähig.
+        </change>
+    </release>
+    <release
         version="5.4.1"
         versioncode="504100">
         <change>

@@ -1,5 +1,43 @@
 # Umweltzone changelog
 
+## [v.6.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.6.0.0)
+
+* Published: 2020-11-29
+
+### Features, improvements and maintenance
+
+* Add Python script to generate CHANGELOG content., [a22a6](https://bitbucket.org/tbsprs/umweltzone/commits/a22a672ca6f040f0e16de0ae9007d4446ae62e3d)
+* Remove low emission zone of Balingen., [cea13](https://bitbucket.org/tbsprs/umweltzone/commits/cea137ae2523472c658cf1085c8250969297a928)
+* Remove already dysfunctional tracking., [a53fa](https://bitbucket.org/tbsprs/umweltzone/commits/a53fa5a8329a24aeab9341f5e65e65c827ed976f)
+* Complete Swedish translation, [6e9f2](https://bitbucket.org/tbsprs/umweltzone/commits/6e9f2bfc3ee84a661e7ea1b81470f42394a1d834)
+* Remove unreachable email recipients for Regensburg., [537fa](https://bitbucket.org/tbsprs/umweltzone/commits/537fa30bae89887e21a68f8e53e0bdac25373449)
+* Translate FAQs to Spanish., [3037f](https://bitbucket.org/tbsprs/umweltzone/commits/3037f1ae6197d3edce1baa366365aab618e9f6b1)
+* Translate strings values to Spanish., [6b8cf](https://bitbucket.org/tbsprs/umweltzone/commits/6b8cffb73b9972cb30e494452e7b4574d18fc0ed)
+* Add French translation., [fe985](https://bitbucket.org/tbsprs/umweltzone/commits/fe9850dad962775f51a9bddb64636d8027f31bdc)
+* Add Swedish translation., [2ebc5](https://bitbucket.org/tbsprs/umweltzone/commits/2ebc5f6b5d70d309c467a890fee791619730e4dd)
+* Add Portuguese translation of the FAQs., [4df08](https://bitbucket.org/tbsprs/umweltzone/commits/4df0819b6ecec7fca5264fed074f35a9001d86ab)
+* Add Portuguese translation., [b7e27](https://bitbucket.org/tbsprs/umweltzone/commits/b7e27c7657482641e03399665d97802ebe12f838)
+
+### Libraries, build tools, SDK
+
+* Use roadsigns v.4.0.0., [381b5](https://bitbucket.org/tbsprs/umweltzone/commits/381b5fc2be990afda00f3e7c2bd23e6087faf9c9)
+* Use Gradle wrapper v.6.7.1., [ba085](https://bitbucket.org/tbsprs/umweltzone/commits/ba08582663cf533603f3b7f7b0f68d39996f0784)
+* Use Android plugin for Gradle v.4.1.1., [f8c86](https://bitbucket.org/tbsprs/umweltzone/commits/f8c86c8302e63f2700027f67983144335e2c3347)
+* Use gradle-versions-plugin v.0.36., [bbfcd](https://bitbucket.org/tbsprs/umweltzone/commits/bbfcd85887981bd1daa113696a9778bd649f38f0)
+* Use Kotlin v.1.4.20., [0da97](https://bitbucket.org/tbsprs/umweltzone/commits/0da972a7b52497fd4921376a539be9969e00075d)
+* Use constraintlayout v.2.0.4., [647d8](https://bitbucket.org/tbsprs/umweltzone/commits/647d8b35fb497fe9769f07c44d192fe3fbc1ae52)
+* Use material v.1.2.1., [0360d](https://bitbucket.org/tbsprs/umweltzone/commits/0360d3b4434fecec33d513cd6bc5d2750c493f49)
+* Use snackengage-playrate v.0.26., [c5b37](https://bitbucket.org/tbsprs/umweltzone/commits/c5b37d28fb1feb66dfb8b5192bbb5fc87fb92642)
+* Use jackson 2.11.3., [77c8f](https://bitbucket.org/tbsprs/umweltzone/commits/77c8f08c1c8f3a89f61cd053def45489a1d907bc)
+* Use play-services-base v.17.5.0., [af618](https://bitbucket.org/tbsprs/umweltzone/commits/af618fe4433392ff1523cc00489f62c2710bbffa)
+* Use strict-version-matcher-plugin v.1.2.2., [f5596](https://bitbucket.org/tbsprs/umweltzone/commits/f5596812c10e6c15cf6061d60d93adbfe2b69bc0)
+* Use androidx.core:core-ktx:1.3.2., [30052](https://bitbucket.org/tbsprs/umweltzone/commits/30052ab672e17cbab97cbb25d754db33afe825f2)
+* Use androidx.test v.1.3.0., [ea7b4](https://bitbucket.org/tbsprs/umweltzone/commits/ea7b44699829bd339daf0c645453732382f0452b)
+* Use junit v.4.13.1., [cb8d3](https://bitbucket.org/tbsprs/umweltzone/commits/cb8d38b033487aaf52acfbcf71ef114fdba4f8dc)
+* Use dexcount-gradle-plugin v.2.0.0., [bd606](https://bitbucket.org/tbsprs/umweltzone/commits/bd606d1c47a000ad408639313eb0f51310ad0de4)
+* Decrease build time., [6f6ce](https://bitbucket.org/tbsprs/umweltzone/commits/6f6ce1ffec51c1ecb97569663c87def12b3386f7)
+
+
 ## [v.5.4.1](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.5.4.1)
 
 * Published: 2020-08-02
