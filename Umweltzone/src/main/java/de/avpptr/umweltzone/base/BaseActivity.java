@@ -38,9 +38,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.cketti.library.changelog.ChangeLog;
@@ -49,18 +46,14 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     protected ActionBar mActionBar;
 
-    protected final Tracking mTracking;
-
     public BaseActivity() {
         super();
-        mTracking = Umweltzone.getTracker();
     }
 
     @ContentView
     public BaseActivity(@LayoutRes int contentLayoutId) {
         // This constructor is annotated with @ContentView
         super(contentLayoutId);
-        this.mTracking = Umweltzone.getTracker();
     }
 
     @Override
@@ -105,7 +98,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 Intent shareIntent = IntentHelper.getShareIntent(this);
                 if (shareIntent.resolveActivity(getPackageManager()) != null) {
                     startActivity(shareIntent);
-                    mTracking.track(TrackingPoint.ShareAppClick, this.getClass().getSimpleName());
                 }
                 return true;
             case R.id.action_changelog:
@@ -145,18 +137,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 .add(containerViewId, fragment, fragmentTag)
                 .disallowAddToBackStack()
                 .commit();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mTracking.track(TrackingPoint.ActivityStart, this);
-    }
-
-    @Override
-    public void onStop() {
-        mTracking.track(TrackingPoint.ActivityStop, this);
-        super.onStop();
     }
 
     protected String getBuildVersionName() {

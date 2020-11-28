@@ -26,9 +26,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
-
 public abstract class ViewHelper {
 
     public static void setupTextViewSimple(
@@ -51,38 +48,35 @@ public abstract class ViewHelper {
             final View view,
             int textViewId,
             final String title,
-            final String url,
-            final TrackingPoint trackingPoint,
-            final String trackingString) {
+            final String url
+    ) {
         TextView textView = view.findViewById(textViewId);
         setupTextViewExtended(view.getContext(), textView,
                 StringHelper.spannedLinkForString(title, url),
-                url,
-                trackingPoint, trackingString);
+                url
+        );
     }
 
     public static void setupTextViewExtended(
             final Activity activity,
             final TextView textView,
             int titleResourceId,
-            final String url,
-            final TrackingPoint trackingPoint,
-            final String trackingString) {
+            final String url
+    ) {
 
         String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
-                url,
-                trackingPoint, trackingString);
+                url
+        );
     }
 
     public static void setupTextViewExtended(
             final Activity activity,
             int textViewId,
             int titleResourceId,
-            int urlResourceId,
-            final TrackingPoint trackingPoint,
-            final String trackingString) {
+            int urlResourceId
+    ) {
 
         TextView textView = activity.findViewById(textViewId);
         String url = activity.getString(urlResourceId);
@@ -92,17 +86,16 @@ public abstract class ViewHelper {
         final String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
-                url,
-                trackingPoint, trackingString);
+                url
+        );
     }
 
     private static void setupTextViewExtended(
             final Context context,
             TextView textView,
             final Spanned text,
-            final String url,
-            final TrackingPoint trackingPoint,
-            final String trackingString) {
+            final String url
+    ) {
         textView.setText(text, TextView.BufferType.SPANNABLE);
         textView.setMovementMethod(LinkMovementMethodCompat.getInstance());
         final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
@@ -111,7 +104,6 @@ public abstract class ViewHelper {
             public void onClick(View v) {
                 if (intent.resolveActivity(context.getPackageManager()) != null) {
                     context.startActivity(intent);
-                    Umweltzone.getTracker().track(trackingPoint, trackingString);
                 } else {
                     // TODO Present error to the user
                     Log.e(getClass().getName(),

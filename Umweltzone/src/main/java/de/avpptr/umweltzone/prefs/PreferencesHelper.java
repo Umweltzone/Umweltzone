@@ -24,7 +24,6 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.maps.model.CameraPosition;
 
-import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.contract.Preferences;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.BoundingBox;
@@ -45,12 +44,10 @@ public class PreferencesHelper {
 
     private final BooleanPreference mDidParseZoneDataAfterUpdate250Preference;
 
-    private final BooleanPreference mGoogleAnalyticsIsEnabledPreference;
-
     private final BooleanPreference mMyLocationPermissionIsPermanentlyDeclinedPreference;
 
 
-    public PreferencesHelper(@NonNull SharedPreferences sharedPreferences, @NonNull Context context) {
+    public PreferencesHelper(@NonNull SharedPreferences sharedPreferences) {
         mCityNamePreference = new StringPreference(
                 sharedPreferences, Preferences.KEY_CITY_NAME);
         mCameraPositionPreference = new CameraPositionPreference(
@@ -63,12 +60,6 @@ public class PreferencesHelper {
                 sharedPreferences, Preferences.KEY_CITY_NAME_FRANKFURT_IN_PREFERENCES_FIXED);
         mDidParseZoneDataAfterUpdate250Preference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_DID_PARSE_ZONE_DATA_AFTER_UPDATE_250);
-        String googleAnalyticsPreferenceKey = context.getString(R.string.settings_key_google_analytics);
-        String googleAnalyticsDefaultValueString = context.getString(
-                R.string.settings_default_value_google_analytics);
-        boolean googleAnalyticsDefaultValue = Boolean.parseBoolean(googleAnalyticsDefaultValueString);
-        mGoogleAnalyticsIsEnabledPreference = new BooleanPreference(
-                sharedPreferences, googleAnalyticsPreferenceKey, googleAnalyticsDefaultValue);
         mMyLocationPermissionIsPermanentlyDeclinedPreference = new BooleanPreference(
                 sharedPreferences, Preferences.KEY_MY_LOCATION_PERMISSION_IS_PERMANENTLY_DECLINED);
     }
@@ -165,16 +156,6 @@ public class PreferencesHelper {
 
     public boolean restoreDidParseZoneDataAfterUpdate250() {
         return mDidParseZoneDataAfterUpdate250Preference.get();
-    }
-
-    // Google Analytics
-
-    public void storeGoogleAnalyticsIsEnabled(boolean flag) {
-        mGoogleAnalyticsIsEnabledPreference.set(flag);
-    }
-
-    public boolean restoreGoogleAnalyticsIsEnabled() {
-        return mGoogleAnalyticsIsEnabledPreference.get();
     }
 
     // My location permission

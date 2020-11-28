@@ -23,8 +23,6 @@ import androidx.preference.PreferenceFragmentCompat;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class SettingsFragment extends PreferenceFragmentCompat {
 
@@ -34,15 +32,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.settings);
-
-        Umweltzone application = (Umweltzone) requireActivity().getApplicationContext();
-        PreferencesHelper preferencesHelper = application.getPreferencesHelper();
-        findPreference(getString(R.string.settings_key_google_analytics))
-                .setOnPreferenceChangeListener((preference, isEnabled) -> {
-                    preferencesHelper.storeGoogleAnalyticsIsEnabled((boolean) isEnabled);
-                    application.initTracking();
-                    return true;
-                });
     }
 
 }

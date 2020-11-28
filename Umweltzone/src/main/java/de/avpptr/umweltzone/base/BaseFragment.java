@@ -28,16 +28,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
-
 public abstract class BaseFragment extends Fragment {
-
-    protected final Tracking mTracking;
-
-    public BaseFragment() {
-        mTracking = Umweltzone.getTracker();
-    }
 
     protected abstract int getLayoutResource();
 

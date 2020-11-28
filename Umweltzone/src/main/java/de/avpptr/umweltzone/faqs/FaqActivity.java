@@ -26,7 +26,6 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ContentProvider;
@@ -43,17 +42,6 @@ public class FaqActivity extends BaseActivity {
         ExpandableListView faqsList = findViewById(R.id.faq_list);
         List<Faq> faqs = ContentProvider.getFaqs(this);
         faqsList.setAdapter(new FaqsAdapter(this, faqs));
-
-        faqsList.setOnGroupClickListener((parent, view, groupPosition, id) -> {
-            if (!parent.isGroupExpanded(groupPosition)) {
-                FaqsAdapter faqsAdapter = (FaqsAdapter) parent.getExpandableListAdapter();
-                if (faqsAdapter != null) {
-                    String itemDescription = faqsAdapter.getFaqDescription(groupPosition);
-                    mTracking.track(TrackingPoint.FaqItemClick, itemDescription);
-                }
-            }
-            return false;
-        });
     }
 
     @Override

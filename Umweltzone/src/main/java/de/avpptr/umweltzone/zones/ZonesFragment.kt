@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,7 +22,6 @@ import android.view.View
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.Umweltzone
-import de.avpptr.umweltzone.analytics.TrackingPoint
 import de.avpptr.umweltzone.base.BaseFragment
 import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.utils.ContentProvider
@@ -40,21 +39,16 @@ class ZonesFragment : BaseFragment() {
         val context = requireContext()
         administrativeZones = ContentProvider.getAdministrativeZones(context)
         val zoneViewModels = administrativeZones.toZoneViewModels(context)
-        administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick, ::onItemViewInflationError)
+        administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick)
     }
 
     private fun onItemClick(view: View) {
         val zoneViewModel = view.tag as ZoneViewModel
         val zone = administrativeZones.single { it.displayName == zoneViewModel.name }
-        mTracking.track(TrackingPoint.CityListItemClick, zone.name)
         storeSelectedLocation(zone)
         val intent = IntentHelper.getNewMapIntent(requireContext())
         Umweltzone.centerZoneRequested = true
         startActivity(intent)
-    }
-
-    private fun onItemViewInflationError(viewType: Int) {
-        mTracking.trackError(TrackingPoint.CityRowCouldNotBeInflatedError, "view type: $viewType")
     }
 
     private fun storeSelectedLocation(zone: AdministrativeZone) =

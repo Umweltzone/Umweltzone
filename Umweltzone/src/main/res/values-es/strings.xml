@@ -354,13 +354,6 @@
     <string name="settings_activity_title">Configuraciones</string>
     <string name="settings_category_title_data_privacy">Privacidad de datos</string>
 
-    <string name="settings_title_google_analytics">Enviar estadisticas de uso de forma anónima</string>
-    <string name="settings_summary_google_analytics">
-        Permitir enviar estadisticas de uso y reportes de fallos mediante Google Analytics.
-        Estos se envian de forma anónima para ser usados por el desarrollador de la aplicación
-        Umweltzone para analizar errores y mejorar continuamente la misma.
-    </string>
-
     <string name="settings_title_data_privacy_statement_de">
         Declaración de privacidad de datos (en Alemán) &#8230;
     </string>

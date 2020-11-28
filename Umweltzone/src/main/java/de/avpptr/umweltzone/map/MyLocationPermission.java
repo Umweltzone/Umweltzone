@@ -22,9 +22,6 @@ import android.Manifest;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
-
 import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 import static androidx.core.content.ContextCompat.checkSelfPermission;
 
@@ -33,13 +30,11 @@ class MyLocationPermission {
     static final int ACCESS_LOCATION_REQUEST_CODE = 1337;
 
     private final Fragment fragment;
-    private final Tracking tracking;
     private final static String ACCESS_COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private final String[] permissions = {ACCESS_COARSE_LOCATION};
 
-    MyLocationPermission(@NonNull Fragment fragment, Tracking tracking) {
+    MyLocationPermission(@NonNull Fragment fragment) {
         this.fragment = fragment;
-        this.tracking = tracking;
     }
 
     boolean isGranted() {
@@ -47,7 +42,6 @@ class MyLocationPermission {
     }
 
     void request() {
-        tracking.track(TrackingPoint.RequestPermission, "ACCESS_COARSE_LOCATION");
         fragment.requestPermissions(permissions, ACCESS_LOCATION_REQUEST_CODE);
     }
 
@@ -56,9 +50,7 @@ class MyLocationPermission {
     }
 
     boolean isGranted(@NonNull int[] grantResults) {
-        boolean isGranted = grantResults.length > 0 && grantResults[0] == PERMISSION_GRANTED;
-        tracking.track(TrackingPoint.PermissionResult, "ACCESS_COARSE_LOCATION_" + isGranted);
-        return isGranted;
+        return grantResults.length > 0 && grantResults[0] == PERMISSION_GRANTED;
     }
 
 }

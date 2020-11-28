@@ -18,21 +18,15 @@
 package de.avpptr.umweltzone;
 
 import android.app.Application;
-import android.content.Context;
 import android.content.SharedPreferences;
 
 import androidx.preference.PreferenceManager;
 
 import org.ligi.tracedroid.TraceDroid;
 
-import de.avpptr.umweltzone.analytics.GoogleAnalyticsTracking;
-import de.avpptr.umweltzone.analytics.NoTracking;
-import de.avpptr.umweltzone.analytics.Tracking;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
 public class Umweltzone extends Application {
-
-    private static Tracking mTracking;
 
     private PreferencesHelper mPreferencesHelper;
 
@@ -40,36 +34,14 @@ public class Umweltzone extends Application {
 
     public void onCreate() {
         super.onCreate();
-        initTracking();
         TraceDroid.init(this);
-    }
-
-    public void initTracking() {
-        mTracking = getTracking(getApplicationContext());
-    }
-
-    private Tracking getTracking(Context context) {
-        if (BuildConfig.DEBUG) {
-            return new NoTracking();
-        } else {
-            boolean isEnabled = getPreferencesHelper().restoreGoogleAnalyticsIsEnabled();
-            if (isEnabled) {
-                return new GoogleAnalyticsTracking(context);
-            } else {
-                return new NoTracking();
-            }
-        }
-    }
-
-    public static Tracking getTracker() {
-        return mTracking;
     }
 
     public PreferencesHelper getPreferencesHelper() {
         if (mPreferencesHelper == null) {
             SharedPreferences sharedPreferences = PreferenceManager
                     .getDefaultSharedPreferences(this);
-            mPreferencesHelper = new PreferencesHelper(sharedPreferences, this);
+            mPreferencesHelper = new PreferencesHelper(sharedPreferences);
         }
         return mPreferencesHelper;
     }

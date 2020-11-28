@@ -30,7 +30,6 @@ import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
-import de.avpptr.umweltzone.analytics.TrackingPoint
 import de.avpptr.umweltzone.base.BaseFragment
 import de.avpptr.umweltzone.details.dataconverters.toDetailsViewModel
 import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
@@ -165,9 +164,7 @@ class DetailsFragment : BaseFragment() {
             ViewHelper.setupTextViewExtended(activity,
                     furtherInformationView,
                     R.string.city_info_further_information,
-                    furtherInformation,
-                    TrackingPoint.CityInfoFurtherInfoClick,
-                    zoneName)
+                    furtherInformation)
 
             if (urlBadgeOnline.isEmpty()) {
                 badgeOnlineView.isVisible = false
@@ -176,9 +173,7 @@ class DetailsFragment : BaseFragment() {
                 ViewHelper.setupTextViewExtended(activity,
                         badgeOnlineView,
                         R.string.city_info_badge_online_title,
-                        urlBadgeOnline,
-                        TrackingPoint.CityInfoBadgeOnlineClick,
-                        zoneName)
+                        urlBadgeOnline)
             }
         }
     }

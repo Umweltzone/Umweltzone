@@ -22,13 +22,6 @@
         android:title="@string/settings_category_title_data_privacy"
         app:iconSpaceReserved="false">
 
-        <androidx.preference.SwitchPreference
-            android:defaultValue="@string/settings_default_value_google_analytics"
-            android:key="@string/settings_key_google_analytics"
-            android:summary="@string/settings_summary_google_analytics"
-            android:title="@string/settings_title_google_analytics"
-            app:iconSpaceReserved="false" />
-
         <androidx.preference.Preference
             android:title="@string/settings_title_data_privacy_statement_de"
             app:iconSpaceReserved="false">

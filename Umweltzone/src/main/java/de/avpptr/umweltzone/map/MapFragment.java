@@ -52,15 +52,12 @@ import java.util.List;
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseFragment;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 import de.avpptr.umweltzone.utils.CameraUpdateHelper;
-import de.avpptr.umweltzone.utils.ConnectionResultHelper;
 import de.avpptr.umweltzone.utils.ContentProvider;
 
 public class MapFragment extends BaseFragment implements OnMapReadyCallback {
@@ -84,8 +81,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private final GoogleMap.OnCameraIdleListener mOnCameraIdleListener;
 
-    private final Tracking mTracking;
-
     private PreferencesHelper mPreferencesHelper;
 
     private MapReadyDelegate mMapReadyDelegate;
@@ -94,7 +89,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     public MapFragment() {
         this.mOnCameraIdleListener = new OnCameraIdleListener();
-        mTracking = Umweltzone.getTracker();
     }
 
     @Override
@@ -105,7 +99,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        myLocationPermission = new MyLocationPermission(this, mTracking);
+        myLocationPermission = new MyLocationPermission(this);
     }
 
     @Override
@@ -221,7 +215,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void zoomToBounds(@NonNull LatLngBounds latLngBounds) {
         if (mMap == null) {
-            mTracking.trackError(TrackingPoint.MapIsNullError, null);
             throw new IllegalStateException("Map is null");
         } else {
             CameraUpdate zoneBounds = CameraUpdateHelper.getCameraUpdate(requireActivity(), latLngBounds);
@@ -240,11 +233,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
             int connectionResult = GoogleApiAvailability.getInstance()
                     .isGooglePlayServicesAvailable(context);
             if (connectionResult != ConnectionResult.SUCCESS) {
-                final String connectionResultString =
-                        ConnectionResultHelper.connectionResultToString(connectionResult);
-                mTracking.trackError(
-                        TrackingPoint.GooglePlayServicesNotAvailableError,
-                        connectionResultString);
                 showGooglePlayServicesErrorDialog(activity, connectionResult);
             } else {
                 mMapView.getMapAsync(this);
