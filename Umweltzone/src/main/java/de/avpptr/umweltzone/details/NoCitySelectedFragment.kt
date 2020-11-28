@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2020  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,19 +18,35 @@
 package de.avpptr.umweltzone.details
 
 import android.app.Activity
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.base.BaseFragment
+import de.avpptr.umweltzone.databinding.FragmentNoCitySelectedBinding
 import de.avpptr.umweltzone.utils.IntentHelper
 
 class NoCitySelectedFragment : BaseFragment() {
 
-    override fun getLayoutResource() = R.layout.fragment_no_city_selected
+    private var volatileBinding: FragmentNoCitySelectedBinding? = null
+    private val binding get() = volatileBinding!!
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        volatileBinding = FragmentNoCitySelectedBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
 
     override fun onResume() {
         super.onResume()
         setUpViews(requireActivity())
+    }
+
+    override fun onDestroyView() {
+        volatileBinding = null
+        super.onDestroyView()
     }
 
     private fun setUpViews(activity: Activity) {

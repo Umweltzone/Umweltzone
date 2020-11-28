@@ -22,8 +22,8 @@ import android.graphics.drawable.LayerDrawable
 import android.view.View
 import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.R
+import de.avpptr.umweltzone.databinding.ZonesListItemOneZoneBinding
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
-import kotlinx.android.synthetic.main.zones_list_item_one_zone.view.*
 
 class OneZoneViewHolder(
 
@@ -32,19 +32,20 @@ class OneZoneViewHolder(
 
 ) : ZoneViewHolder<ZoneViewModel.OneZoneViewModel>(view) {
 
+    private val binding = ZonesListItemOneZoneBinding.bind(view)
     private val zoneShapeView: GradientDrawable
 
     init {
-        val badgeBackground = view.zoneOneZoneBadgeView.background as LayerDrawable
+        val badgeBackground = binding.zoneOneZoneBadgeView.background as LayerDrawable
         zoneShapeView = badgeBackground.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
     }
 
     override fun bind(viewModel: ZoneViewModel.OneZoneViewModel) = with(view) {
         tag = viewModel
         setOnClickListener(onItemClick)
-        zoneOneZoneNameView.text = viewModel.name
-        zoneOneZoneNameView.setTextColor(viewModel.nameTextColor)
-        zoneOneZoneBadgeView.setBadge(zoneShapeView, viewModel.badgeViewModel)
+        binding.zoneOneZoneNameView.text = viewModel.name
+        binding.zoneOneZoneNameView.setTextColor(viewModel.nameTextColor)
+        binding.zoneOneZoneBadgeView.setBadge(zoneShapeView, viewModel.badgeViewModel)
     }
 
     companion object {

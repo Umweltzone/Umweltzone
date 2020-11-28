@@ -22,6 +22,7 @@ import android.os.Bundle
 import android.os.Parcelable
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import android.widget.TextView
@@ -31,6 +32,7 @@ import androidx.core.view.isVisible
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.base.BaseFragment
+import de.avpptr.umweltzone.databinding.FragmentZoneDetailsBinding
 import de.avpptr.umweltzone.details.dataconverters.toDetailsViewModel
 import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
@@ -48,11 +50,12 @@ import org.parceler.Parcels
 
 class DetailsFragment : BaseFragment() {
 
-    private val zoneDetailsView by lazy { view?.findViewById(R.id.zoneDetailsView) as LinearLayout }
+    private var volatileBinding: FragmentZoneDetailsBinding? = null
+    private val binding get() = volatileBinding!!
+
+    private val zoneDetailsView by lazy { binding.zoneDetailsView }
 
     private var administrativeZone: AdministrativeZone? = null
-
-    public override fun getLayoutResource() = R.layout.fragment_zone_details
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,12 +66,22 @@ class DetailsFragment : BaseFragment() {
         }
     }
 
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
+        volatileBinding = FragmentZoneDetailsBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
     override fun onResume() {
         super.onResume()
         if (activity != null && administrativeZone != null) {
             updateDetails(activity!!, administrativeZone!!)
             updateSubTitle(administrativeZone!!.displayName)
         }
+    }
+
+    override fun onDestroyView() {
+        volatileBinding = null
+        super.onDestroyView()
     }
 
     private fun updateDetails(activity: Activity, zone: AdministrativeZone) {
