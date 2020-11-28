@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -50,9 +50,9 @@ import org.ligi.tracedroid.logging.Log;
 import java.util.List;
 
 import de.avpptr.umweltzone.BuildConfig;
-import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.base.BaseFragment;
+import de.avpptr.umweltzone.databinding.FragmentMapBinding;
 import de.avpptr.umweltzone.map.dataconverters.ChildZonesExtensions;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.ChildZone;
@@ -70,6 +70,9 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private final View.OnClickListener MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER =
             view -> requestMyLocationActivation();
+
+    @Nullable
+    private FragmentMapBinding volatileBinding;
 
     private Button mMyLocationActivationView;
 
@@ -89,11 +92,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     public MapFragment() {
         this.mOnCameraIdleListener = new OnCameraIdleListener();
-    }
-
-    @Override
-    protected int getLayoutResource() {
-        return R.layout.fragment_map;
     }
 
     @Override
@@ -151,18 +149,18 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View layout = super.onCreateView(inflater, container, savedInstanceState);
+        volatileBinding = FragmentMapBinding.inflate(inflater, container, false);
         Bundle mapViewBundle = null;
         if (savedInstanceState != null) {
             mapViewBundle = savedInstanceState.getBundle(MAP_VIEW_BUNDLE_KEY);
         }
-        if (layout != null) {
-            mMapView = layout.findViewById(R.id.map_view);
+        if (volatileBinding != null) {
+            mMapView = volatileBinding.mapView;
             mMapView.onCreate(mapViewBundle);
-            mMyLocationActivationView = layout.findViewById(R.id.map_my_location_activation);
+            mMyLocationActivationView = volatileBinding.mapMyLocationActivation;
             mMyLocationActivationView.setOnClickListener(MY_LOCATION_ACTIVATION_ON_CLICK_LISTENER);
         }
-        return layout;
+        return volatileBinding.getRoot();
     }
 
     @Override
@@ -203,6 +201,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     @Override
     public void onDestroy() {
+        volatileBinding = null;
         mMapView.onDestroy();
         super.onDestroy();
     }

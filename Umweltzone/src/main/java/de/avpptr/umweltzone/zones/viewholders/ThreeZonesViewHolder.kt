@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,8 +22,8 @@ import android.graphics.drawable.LayerDrawable
 import android.view.View
 import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.R
+import de.avpptr.umweltzone.databinding.ZonesListItemThreeZonesBinding
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
-import kotlinx.android.synthetic.main.zones_list_item_three_zones.view.*
 
 class ThreeZonesViewHolder(
 
@@ -32,27 +32,28 @@ class ThreeZonesViewHolder(
 
 ) : ZoneViewHolder<ZoneViewModel.ThreeZonesViewModel>(view) {
 
+    private val binding = ZonesListItemThreeZonesBinding.bind(view)
     private val zoneShape1View: GradientDrawable
     private val zoneShape2View: GradientDrawable
     private val zoneShape3View: GradientDrawable
 
     init {
-        val badge1Background = view.zoneThreeZonesBadge1View.background as LayerDrawable
+        val badge1Background = binding.zoneThreeZonesBadge1View.background as LayerDrawable
         zoneShape1View = badge1Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
-        val badge2Background = view.zoneThreeZonesBadge2View.background as LayerDrawable
+        val badge2Background = binding.zoneThreeZonesBadge2View.background as LayerDrawable
         zoneShape2View = badge2Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
-        val badge3Background = view.zoneThreeZonesBadge3View.background as LayerDrawable
+        val badge3Background = binding.zoneThreeZonesBadge3View.background as LayerDrawable
         zoneShape3View = badge3Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
     }
 
     override fun bind(viewModel: ZoneViewModel.ThreeZonesViewModel) = with(view) {
         tag = viewModel
         setOnClickListener(onItemClick)
-        zoneThreeZonesNameView.text = viewModel.name
-        zoneThreeZonesNameView.setTextColor(viewModel.nameTextColor)
-        zoneThreeZonesBadge1View.setBadge(zoneShape1View, viewModel.badge1ViewModel)
-        zoneThreeZonesBadge2View.setBadge(zoneShape2View, viewModel.badge2ViewModel)
-        zoneThreeZonesBadge3View.setBadge(zoneShape3View, viewModel.badge3ViewModel)
+        binding.zoneThreeZonesNameView.text = viewModel.name
+        binding.zoneThreeZonesNameView.setTextColor(viewModel.nameTextColor)
+        binding.zoneThreeZonesBadge1View.setBadge(zoneShape1View, viewModel.badge1ViewModel)
+        binding.zoneThreeZonesBadge2View.setBadge(zoneShape2View, viewModel.badge2ViewModel)
+        binding.zoneThreeZonesBadge3View.setBadge(zoneShape3View, viewModel.badge3ViewModel)
     }
 
     companion object {

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -31,6 +31,7 @@ import androidx.core.view.isVisible
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.base.BaseFragment
+import de.avpptr.umweltzone.databinding.FragmentZoneDetailsBinding
 import de.avpptr.umweltzone.details.dataconverters.toDetailsViewModel
 import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
@@ -43,16 +44,17 @@ import de.avpptr.umweltzone.models.ChildZone
 import de.avpptr.umweltzone.models.DieselProhibitionZone
 import de.avpptr.umweltzone.models.LowEmissionZone
 import de.avpptr.umweltzone.utils.ViewHelper
+import de.avpptr.umweltzone.utils.autoCleanable
 import info.metadude.kotlin.library.roadsigns.RoadSign
 import org.parceler.Parcels
 
-class DetailsFragment : BaseFragment() {
+class DetailsFragment : BaseFragment(R.layout.fragment_zone_details) {
 
-    private val zoneDetailsView by lazy { view?.findViewById(R.id.zoneDetailsView) as LinearLayout }
+    private var binding by autoCleanable(FragmentZoneDetailsBinding::bind)
+
+    private val zoneDetailsView by lazy { binding.zoneDetailsView }
 
     private var administrativeZone: AdministrativeZone? = null
-
-    public override fun getLayoutResource() = R.layout.fragment_zone_details
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

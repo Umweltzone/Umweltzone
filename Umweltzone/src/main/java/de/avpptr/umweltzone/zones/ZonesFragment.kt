@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,23 +23,24 @@ import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.Umweltzone
 import de.avpptr.umweltzone.base.BaseFragment
+import de.avpptr.umweltzone.databinding.FragmentZonesBinding
 import de.avpptr.umweltzone.models.AdministrativeZone
 import de.avpptr.umweltzone.utils.ContentProvider
 import de.avpptr.umweltzone.utils.IntentHelper
+import de.avpptr.umweltzone.utils.autoCleanable
 import de.avpptr.umweltzone.zones.dataconverters.toZoneViewModels
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
-import kotlinx.android.synthetic.main.fragment_zones.*
 
-class ZonesFragment : BaseFragment() {
+class ZonesFragment : BaseFragment(R.layout.fragment_zones) {
 
-    override fun getLayoutResource(): Int = R.layout.fragment_zones
+    private var binding by autoCleanable(FragmentZonesBinding::bind)
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val context = requireContext()
         administrativeZones = ContentProvider.getAdministrativeZones(context)
         val zoneViewModels = administrativeZones.toZoneViewModels(context)
-        administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick)
+        binding.administrativeZonesView.adapter = ZonesAdapter(zoneViewModels, ::onItemClick)
     }
 
     private fun onItemClick(view: View) {

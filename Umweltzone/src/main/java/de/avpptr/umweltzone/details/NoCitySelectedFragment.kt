@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,15 +18,22 @@
 package de.avpptr.umweltzone.details
 
 import android.app.Activity
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import de.avpptr.umweltzone.BuildConfig
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.base.BaseFragment
+import de.avpptr.umweltzone.databinding.FragmentNoCitySelectedBinding
 import de.avpptr.umweltzone.utils.IntentHelper
+import de.avpptr.umweltzone.utils.autoCleanable
 
-class NoCitySelectedFragment : BaseFragment() {
+class NoCitySelectedFragment : BaseFragment(R.layout.fragment_no_city_selected) {
 
-    override fun getLayoutResource() = R.layout.fragment_no_city_selected
+    @Suppress("unused")
+    private var binding by autoCleanable(FragmentNoCitySelectedBinding::bind)
 
     override fun onResume() {
         super.onResume()
