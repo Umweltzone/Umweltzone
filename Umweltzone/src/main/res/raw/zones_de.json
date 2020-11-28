@@ -60,36 +60,6 @@
         }
     },
     {
-        "name" : "balingen",
-        "displayName" : "Balingen",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_balingen",
-            "displayName" : "Balingen",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2017-04-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg",
-            "geometryUpdatedAt" : "2017-10-20",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.umwelt-plakette.de/de/deutsche-umweltzonen/balingen.html",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.213670,
-                "longitude" : 8.767912
-            },
-            "northEast" : {
-                "latitude" : 48.326580,
-                "longitude" : 8.947274
-            }
-        }
-    },
-    {
         "name" : "berlin",
         "displayName" : "Berlin",
         "childZones" : [{
