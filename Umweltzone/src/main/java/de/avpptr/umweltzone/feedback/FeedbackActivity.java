@@ -23,7 +23,6 @@ import android.view.Menu;
 import androidx.annotation.Nullable;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.base.BaseActivity;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
@@ -41,11 +40,11 @@ public class FeedbackActivity extends BaseActivity {
 
         ViewHelper.setupTextViewExtended(this, R.id.app_info_contact_email,
                 R.string.appinfo_contact_email,
-                R.string.appinfo_contact_email, TrackingPoint.SupportMailClick, null);
+                R.string.appinfo_contact_email);
 
         ViewHelper.setupTextViewExtended(this, R.id.app_info_rating,
                 R.string.appinfo_rating_url_title,
-                R.string.appinfo_rating_url, TrackingPoint.RatingClick, null);
+                R.string.appinfo_rating_url);
 
     }
 

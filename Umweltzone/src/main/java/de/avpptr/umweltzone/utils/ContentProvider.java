@@ -38,8 +38,6 @@ import java.util.Collections;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.models.Circuit;
 import de.avpptr.umweltzone.models.CircuitDeserializer;
@@ -75,7 +73,6 @@ public abstract class ContentProvider {
     public static List<AdministrativeZone> getAdministrativeZones(@NonNull final Context context) {
         List<AdministrativeZone> zones = getContent(context, "zones_de", AdministrativeZone.class);
         if (zones.isEmpty()) {
-            Umweltzone.getTracker().trackError(TrackingPoint.ParsingZonesFromJSONFailedError, null);
             throw new IllegalStateException("Parsing zones from JSON failed.");
         }
         return zones;
@@ -123,8 +120,6 @@ public abstract class ContentProvider {
             return objectMapper.readValue(inputStream, collectionType);
         } catch (IOException e) {
             // TODO Aware that app will crash when JSON is mis-structured.
-            String filePath = getFilePath(folderName, fileName);
-            Umweltzone.getTracker().trackError(TrackingPoint.ResourceNotFoundError, filePath);
             e.printStackTrace();
         }
         Log.e(ContentProvider.class.getName(), "Failure parsing zone data for: " + fileName);
@@ -151,9 +146,6 @@ public abstract class ContentProvider {
         int rawResourceId = resources.getIdentifier(fileName, folderName, context.getPackageName());
         if (rawResourceId == de.avpptr.umweltzone.contract.Resources.INVALID_RESOURCE_ID) {
             String filePath = getFilePath(folderName, fileName);
-            Umweltzone.getTracker().trackError(
-                    TrackingPoint.ResourceNotFoundError,
-                    filePath);
             throw new IllegalStateException(
                     "Resource for file path '" + filePath + "' not found.");
         }

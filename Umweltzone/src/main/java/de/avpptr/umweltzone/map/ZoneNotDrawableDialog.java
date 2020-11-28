@@ -40,16 +40,11 @@ import java.util.List;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.Umweltzone;
-import de.avpptr.umweltzone.analytics.Tracking;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
 
 public class ZoneNotDrawableDialog extends DialogFragment {
-
-    private final Tracking mTracking;
 
     public static final String FRAGMENT_TAG = BuildConfig.APPLICATION_ID + "." +
             ZoneNotDrawableDialog.class.getSimpleName();
@@ -63,10 +58,6 @@ public class ZoneNotDrawableDialog extends DialogFragment {
         extras.putParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE, Parcels.wrap(administrativeZone));
         dialog.setArguments(extras);
         return dialog;
-    }
-
-    public ZoneNotDrawableDialog() {
-        mTracking = Umweltzone.getTracker();
     }
 
     @NonNull
@@ -106,8 +97,6 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                             getEmailSubject(zoneDisplayName),
                             getEmailMessage(zoneDisplayName)
                     );
-                    mTracking.track(TrackingPoint.ZoneNotDrawableOpenEmailClick,
-                            administrativeZone.name);
                     if (intent.resolveActivity(activity.getPackageManager()) != null) {
                         startActivity(Intent.createChooser(intent, getString(
                                 R.string.zone_not_drawable_app_chooser_title)));
@@ -118,8 +107,6 @@ public class ZoneNotDrawableDialog extends DialogFragment {
                 })
                 .setNegativeButton(R.string.zone_not_drawable_later, (dialog, whichButton) -> {
                     // Nothing to do here
-                    mTracking.track(TrackingPoint.ZoneNotDrawableLaterClick,
-                            administrativeZone.name);
                 });
         return builder.create();
     }

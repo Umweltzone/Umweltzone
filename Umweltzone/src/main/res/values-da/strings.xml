@@ -315,10 +315,6 @@
     <!-- Settings -->
     <string name="settings_activity_title">Indstillinger</string>
     <string name="settings_category_title_data_privacy">Databeskyttelse</string>
-    <string name="settings_title_google_analytics">Send anonymiseret brugsm&#248;nster statistik </string>
-    <string name="settings_summary_google_analytics">
-        Tillad at send brugsm&#248;nster statistik og &#34;crash report&#34; til Google Analytics. Dette anonymiseret data bliver brugt af udviklere af Umweltzone appen til at analysere program fejl og l&#248;bende forbedre appen.
-    </string>
     <string name="settings_title_data_privacy_statement_de">
         Databeskyttelses erkl&#230;ring (Tysk) &#8230;
     </string>

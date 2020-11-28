@@ -344,12 +344,6 @@
     <!-- Settings -->
     <string name="settings_activity_title">Ustawienia</string>
     <string name="settings_category_title_data_privacy">Prywatność danych</string>
-    <string name="settings_title_google_analytics">Wysyłaj anonimowe statystyki użytkowania</string>
-    <string name="settings_summary_google_analytics">
-        Zezwól na przesyłanie statystyki użytkowania i raportów o awariach do Google Analytics.
-        Z tych anonimowych danych może skorzystać twórca aplikacji Umweltzone
-        aby analizować błędy programu i stale ulepszać aplikację.
-    </string>
     <string name="settings_title_data_privacy_statement_de">
         Oświadczenie o ochronie danych (po niemiecku) &#8230;
     </string>

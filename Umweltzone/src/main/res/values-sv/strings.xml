@@ -346,12 +346,6 @@
     <!-- Settings -->
     <string name="settings_activity_title">Inställningar</string>
     <string name="settings_category_title_data_privacy">Dataintegritet</string>
-    <string name="settings_title_google_analytics">Skicka anonymiserad användarstatistik</string>
-    <string name="settings_summary_google_analytics">
-        Tillåter att användarstatistik och kraschrapporter skickas till Google Analytics.
-        Denna anonymiserade data används av utvecklaren av appen Umweltzone för att analysera
-        programfel och fortlöpande förbättra appen.
-    </string>
     <string name="settings_title_data_privacy_statement_de">
         Förklaring av dataintegritet (Tyska) &#8230;
     </string>

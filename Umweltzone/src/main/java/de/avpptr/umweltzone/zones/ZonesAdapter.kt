@@ -30,8 +30,7 @@ import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
 class ZonesAdapter(
 
         private val zones: List<ZoneViewModel>,
-        private val onItemClick: (view: View) -> Unit,
-        private val onItemViewInflationError: (viewType: Int) -> Unit
+        private val onItemClick: (view: View) -> Unit
 
 // TODO Replace with ListAdapter https://developer.android.com/topic/libraries/support-library/revisions#27-1-0
 ) : RecyclerView.Adapter<ZoneViewHolder<ZoneViewModel>>() {
@@ -53,7 +52,6 @@ class ZonesAdapter(
                 ThreeZonesViewHolder(itemView, onItemClick)
             }
             else -> {
-                onItemViewInflationError.invoke(viewType)
                 error("Unknown view type: $viewType")
             }
         } as ZoneViewHolder<ZoneViewModel>

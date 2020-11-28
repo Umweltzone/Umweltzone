@@ -28,7 +28,6 @@ import androidx.core.content.ContextCompat;
 import java.util.List;
 
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.analytics.TrackingPoint;
 import de.avpptr.umweltzone.models.Faq;
 import de.avpptr.umweltzone.utils.ViewHelper;
 
@@ -114,8 +113,6 @@ class FaqsAdapter extends BaseExpandableListAdapter {
             ViewGroup parent) {
         final FaqAnswer faqAnswer = (FaqAnswer) getChild(groupPosition, childPosition);
 
-        final String itemDescription = getFaqDescription(groupPosition);
-
         if (convertView == null) {
             convertView = getNewView(R.layout.faq_list_item);
         }
@@ -128,9 +125,8 @@ class FaqsAdapter extends BaseExpandableListAdapter {
                 convertView,
                 R.id.faq_source_url,
                 sourceUrlTitle,
-                sourceUrlText,
-                TrackingPoint.FaqSourceUrlClick,
-                itemDescription);
+                sourceUrlText
+        );
 
         return convertView;
     }
@@ -147,7 +143,4 @@ class FaqsAdapter extends BaseExpandableListAdapter {
         String sourceUrl;
     }
 
-    public String getFaqDescription(int position) {
-        return mFaqs.get(position).toStringShort();
-    }
 }
