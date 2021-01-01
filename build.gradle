@@ -17,7 +17,7 @@ buildscript {
         espressoVersion = "3.3.0"
         jacksonVersion = "2.11.3"
         junitVersion = "4.13.1"
-        kotlinVersion = "1.4.20"
+        kotlinVersion = "1.4.21-2"
         materialVersion = "1.2.1"
         parcelerVersion = "1.1.13"
         playServicesBaseVersion = "17.5.0"
