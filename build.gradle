@@ -8,7 +8,7 @@ buildscript {
         strictVersionMatcherPluginVersion = "1.2.2"
 
         // Libraries
-        annotationVersion = "1.1.0"
+        annotationVersion = "1.2.0"
         assertjAndroidVersion = "1.2.0"
         cardViewVersion = "1.0.0"
         ckChangelogVersion = "1.2.2"
