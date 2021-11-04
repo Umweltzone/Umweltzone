@@ -14,7 +14,7 @@ buildscript {
         constraintLayoutVersion = "2.1.1"
         coreKtxVersion = "1.6.0" // compileSdk 31 is required by 1.7.0
         espressoVersion = "3.4.0"
-        jacksonVersion = "2.12.3"
+        jacksonVersion = "2.13.0"
         junitVersion = "4.13.2"
         kotlinVersion = "1.5.31"
         materialVersion = "1.4.0"
