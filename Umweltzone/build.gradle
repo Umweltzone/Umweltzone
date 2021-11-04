@@ -12,7 +12,6 @@ repositories {
     google()
     mavenCentral()
     maven { url "https://jitpack.io" }
-    jcenter()
 }
 
 def versionMajor = 6
