@@ -18,6 +18,7 @@ buildscript {
         junitVersion = "4.13.2"
         kotlinVersion = "1.4.32"
         materialVersion = "1.4.0"
+        multidexVersion = "2.0.1"
         parcelerVersion = "1.1.13"
         playServicesBaseVersion = "17.6.0"
         playServicesMapsVersion = "17.0.1" // minSdk 19 is required by 18.0.0
