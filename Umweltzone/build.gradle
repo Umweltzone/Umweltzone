@@ -148,19 +148,11 @@ dependencies {
     implementation "com.github.ligi:tracedroid:$tracedroidVersion"
 
     // Integration tests
-    androidTestImplementation "androidx.annotation:annotation:$annotationVersion"
     androidTestImplementation("com.squareup.assertj:assertj-android:$assertjAndroidVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
-    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
-    androidTestImplementation("androidx.test:rules:$testRulesVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
-    androidTestImplementation("androidx.test.ext:junit:$testExtJunitVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.ext:junit:$testExtJunitVersion"
 
     // Unit tests
     testImplementation "junit:junit:$junitVersion"
