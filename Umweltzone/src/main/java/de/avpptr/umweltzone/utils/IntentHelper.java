@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -48,7 +48,7 @@ public class IntentHelper {
             @Nullable String[] bccRecipient,
             @NonNull String subject,
             @NonNull String message) {
-        ShareCompat.IntentBuilder builder = ShareCompat.IntentBuilder.from(activity);
+        ShareCompat.IntentBuilder builder = new ShareCompat.IntentBuilder(activity);
         builder.setEmailTo(toRecipients);
         if (bccRecipient != null) {
             builder.setEmailBcc(bccRecipient);
@@ -61,7 +61,7 @@ public class IntentHelper {
 
     public static Intent getShareIntent(@NonNull Activity activity) {
         String message = activity.getString(R.string.share_intent_message);
-        return ShareCompat.IntentBuilder.from(activity)
+        return new ShareCompat.IntentBuilder(activity)
                 .setType("text/plain")
                 .setText(message)
                 .getIntent();
