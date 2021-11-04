@@ -44,12 +44,12 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdk 30
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 30
+        minSdk 14
+        targetSdk 30
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
