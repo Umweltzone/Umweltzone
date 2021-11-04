@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2020  Tobias Preuss
+  Copyright (C) 2021  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -35,11 +35,6 @@
         android:glEsVersion="0x00020000"
         android:required="true" />
     <!-- End of copy. -->
-
-    <!--
-    Force minSdkVersion 14 for me.saket:better-link-movement-method, see LinkMovementMethodCompat.
-    -->
-    <uses-sdk tools:overrideLibrary="me.saket.bettermovementmethod" />
 
     <application
         android:name=".Umweltzone"
