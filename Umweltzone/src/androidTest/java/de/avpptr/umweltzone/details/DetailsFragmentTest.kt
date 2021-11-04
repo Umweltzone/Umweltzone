@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,7 +18,6 @@
 package de.avpptr.umweltzone.details
 
 import android.content.Context
-import android.view.View
 import androidx.annotation.StringRes
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
@@ -102,7 +101,7 @@ class DetailsFragmentTest {
 
         onView(withId(R.id.detailsLezListOfCitiesView))
                 .check(matches(withEffectiveVisibility(Visibility.GONE)))
-                .check(matches(not<View>(isDisplayed())))
+                .check(matches(not(isDisplayed())))
 
         @StringRes val zoneNumberSinceAsOf = StringHelper.getZoneNumberSinceAsOfResourceId(zoneNumberSinceDate)
         val zoneNumberSinceText = context.getString(
@@ -116,7 +115,7 @@ class DetailsFragmentTest {
 
         onView(withId(R.id.detailsLezNextZoneNumberAsOfView))
                 .check(matches(withEffectiveVisibility(Visibility.GONE)))
-                .check(matches(not<View>(isDisplayed())))
+                .check(matches(not(isDisplayed())))
 
         val abroadLicensedVehicleZoneInfoText = context.getString(
                 R.string.city_info_abroad_licensed_vehicle_zone_info,

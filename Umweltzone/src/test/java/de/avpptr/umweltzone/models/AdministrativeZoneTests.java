@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2019  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -57,7 +57,7 @@ public class AdministrativeZoneTests {
                 .setUrlUmweltPlaketteDe("http://umwelt-plakette.de/umweltzone%20berlin.php")
                 .setUrlBadgeOnline(
                         "https://www.berlin.de/labo/kfz/dienstleistungen/feinstaubplakette.shop.php")
-                .setContactEmails(new ArrayList<String>() {{
+                .setContactEmails(new ArrayList<>() {{
                     add("john.doe@example.com");
                     add("anna.mae@example.com");
                 }})
@@ -75,7 +75,7 @@ public class AdministrativeZoneTests {
                 .setNextZoneNumberAsOf(null)
                 .setAbroadLicensedVehicleZoneNumber(LowEmissionZoneNumbers.GREEN)
                 .setAbroadLicensedVehicleZoneNumberUntil(date)
-                .setListOfCities(new ArrayList<String>(3) {{
+                .setListOfCities(new ArrayList<>(3) {{
                     add("Bochum");
                     add("Bottrop");
                     add("Castrop-Rauxel");
