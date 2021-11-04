@@ -145,7 +145,7 @@ dependencies {
     implementation "me.saket:better-link-movement-method:2.2.0" // minSdkVersion 16, see AndroidManifest
     implementation "org.parceler:parceler-api:$parcelerVersion"
     kapt "org.parceler:parceler:$parcelerVersion"
-    implementation files("libs/TraceDroid-1.1.jar")
+    implementation "com.github.ligi:tracedroid:$tracedroidVersion"
 
     // Integration tests
     androidTestImplementation "androidx.annotation:annotation:$annotationVersion"
