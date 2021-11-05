@@ -4,7 +4,6 @@ buildscript {
         androidGradlePluginVersion = "7.0.3"
         dexcountGradlePluginVersion = "3.0.1"
         gradleVersionsPluginVersion = "0.39.0"
-        proguardGradlePluginVersion = "6.2.2"
         strictVersionMatcherPluginVersion = "1.2.2"
 
         // Libraries
@@ -40,7 +39,6 @@ buildscript {
         classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$dexcountGradlePluginVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
         classpath "com.google.android.gms:strict-version-matcher-plugin:$strictVersionMatcherPluginVersion"
-        classpath "net.sf.proguard:proguard-gradle:$proguardGradlePluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     }
 }
