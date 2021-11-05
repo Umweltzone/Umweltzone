@@ -1,4 +1,50 @@
+
 # Umweltzone changelog
+
+## [v.7.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.0.0)
+
+* Published: 2021-11-05
+
+### Features, improvements and maintenance
+
+* Use property access syntax., [6e76d](https://bitbucket.org/tbsprs/umweltzone/commits/6e76df80cac1826d362a0e9b7c7326fbbfcc4e73)
+* Infer type., [30f7d](https://bitbucket.org/tbsprs/umweltzone/commits/30f7dc1eb5f95fd7d5f330804574ed5f43dabacd)
+* Remove unused imports., [ad41e](https://bitbucket.org/tbsprs/umweltzone/commits/ad41e8b0a37230c06f4e34ca1f0e550d88a89845)
+* Fix external URLs for green-zones.eu., [5ddfe](https://bitbucket.org/tbsprs/umweltzone/commits/5ddfedf4cfe9f7ef7f0116d32d076dd7fae9b7a2)
+* Quote input to prevent injection., [9399e](https://bitbucket.org/tbsprs/umweltzone/commits/9399e78518c9ce54cdca7ea37fe67d5f8576c6f8)
+
+### Libraries, build tools, SDK
+
+* Use R8 instead of ProGuard., [01edb](https://bitbucket.org/tbsprs/umweltzone/commits/01edb3080978aefb63381963ba6af5976be7af38)
+* Use jackson 2.13.0., [ef3b7](https://bitbucket.org/tbsprs/umweltzone/commits/ef3b7a802acad0aac943c350ff143ad968ba3a34)
+* Use constraintlayout v.2.1.1., [aa4e3](https://bitbucket.org/tbsprs/umweltzone/commits/aa4e3a46f9d3e17224e350dd6e9febbf53555e0b)
+* Use Kotlin v.1.5.31., [85dfd](https://bitbucket.org/tbsprs/umweltzone/commits/85dfdeb707d228234062928e601a5c62fc876b12)
+* Ensure that the project still builds when dependencies will be updated., [8165b](https://bitbucket.org/tbsprs/umweltzone/commits/8165bebe813fdd37b8164b59e8ef1626162d603f)
+* Drop support for Android 4.3.1 Jelly Bean (API 18) and below., [abbaa](https://bitbucket.org/tbsprs/umweltzone/commits/abbaafc4f0f89a3559dbbe10e693450a0bc26e1d)
+* Use new DSL for SDK definitions., [2688d](https://bitbucket.org/tbsprs/umweltzone/commits/2688d14658d50ed8b961a794032779914509cfc5)
+* Use play-services-maps v.17.0.1., [ef07e](https://bitbucket.org/tbsprs/umweltzone/commits/ef07e5d4500b49e6bf740ea86d935cb952dee4e8)
+* Use androidx.test v.1.4.0 / espresso 3.4.0., [8955d](https://bitbucket.org/tbsprs/umweltzone/commits/8955de58bff4f79197d161aed5aac2d15fea7e61)
+* Use tracedroid v.3.1., [41c28](https://bitbucket.org/tbsprs/umweltzone/commits/41c28dcb6e16ecbbb9f471ed09ab4c200bfe28aa)
+* Use snackengage-playrate v.0.29., [c7666](https://bitbucket.org/tbsprs/umweltzone/commits/c766602b5846967e2a29f5f6a0bc96ae0f975f39)
+* Use material v.1.4.0., [04b6d](https://bitbucket.org/tbsprs/umweltzone/commits/04b6d2422d43f4b2f49bdeaf93ac0c10e40e735f)
+* Use androidx.core:core-ktx:1.6.0., [b8929](https://bitbucket.org/tbsprs/umweltzone/commits/b8929c888805aab89ade5154b7286069431103d1)
+* Use Android Gradle Plugin v.7.0.3, compile against Java 11., [62ed4](https://bitbucket.org/tbsprs/umweltzone/commits/62ed4dca83846f7f72ee98eb5d6041c87ae7e999)
+* Use targetSdkVersion 30 and compileSdkVersion 30., [a3f00](https://bitbucket.org/tbsprs/umweltzone/commits/a3f00797d8ac2910dbb2a697756ecb64fcfe0b21)
+* Use build tools v.30.0.3., [d9bc1](https://bitbucket.org/tbsprs/umweltzone/commits/d9bc160a0442c88a304575003b5f87531502a131)
+* Use dexcount-gradle-plugin v.3.0.1., [4fc23](https://bitbucket.org/tbsprs/umweltzone/commits/4fc234a912d8cd3fc225d07205e1b261a713891b)
+* Use gradle-versions-plugin v.0.39.0., [67380](https://bitbucket.org/tbsprs/umweltzone/commits/673800ff0c8cbd785587d5660ede6b9564e5bc1c)
+* Use Gradle wrapper v.7.2., [5e289](https://bitbucket.org/tbsprs/umweltzone/commits/5e289016cbf6644b4a9e51a541de59ebf34a82b4)
+* RIP jCenter., [85666](https://bitbucket.org/tbsprs/umweltzone/commits/856669bd3ed2eae18ba51556feb8fd5b70a6cb6c)
+* Update Travis CI configuration to prepare running with JDK 11., [56cb3](https://bitbucket.org/tbsprs/umweltzone/commits/56cb3c37e7ece4ac8f7bd967ff74339c5498c14a)
+* Migrate project to travis-ci.com., [cfe7d](https://bitbucket.org/tbsprs/umweltzone/commits/cfe7df2b85f4dec0b4076db8239d874c8b06d051)
+* Encapsulate gradle-versions-plugin configuration in its own file., [32087](https://bitbucket.org/tbsprs/umweltzone/commits/32087ce1ffa2c83ee3b80884b9388a1ba7a1f931)
+* Use roadsigns v.4.1.0., [413aa](https://bitbucket.org/tbsprs/umweltzone/commits/413aad6b6c33c39ac5677eddb409b996b3e1248c)
+* Use play-services-base v.17.6.0., [0151f](https://bitbucket.org/tbsprs/umweltzone/commits/0151f8ecd35f1307beac601cf76218e8674fe2b7)
+* Use annotation v.1.2.0., [63df9](https://bitbucket.org/tbsprs/umweltzone/commits/63df9c681250e9038c8e78e66041a9878259de91)
+* Use junit v.4.13.2., [26874](https://bitbucket.org/tbsprs/umweltzone/commits/26874b8b32c0d1e79dccbb322d040ff7c67e815a)
+* Link Liberapay team in this repository., [d1cc9](https://bitbucket.org/tbsprs/umweltzone/commits/d1cc9e7aae9af8a44e64803a61359f45e79077a2)
+* Link Patreon profile in this repository., [07e25](https://bitbucket.org/tbsprs/umweltzone/commits/07e252f13895adc97c713b27a33960265c869d2e)
+
 
 ## [v.6.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.6.0.0)
 

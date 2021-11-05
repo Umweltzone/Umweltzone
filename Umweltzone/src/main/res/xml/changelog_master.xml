@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2020  Tobias Preuss
+  Copyright (C) 2021  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,20 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="7.0.0"
+        versioncode="700000">
+        <change>
+            Android: The app is now optimized for Android 11.
+        </change>
+        <change>
+            Android: Now the lowest, supported version is Android 4.4
+            (Kit Kat) due to updated restrictions applied by used libraries.
+        </change>
+        <change>
+            Bugfix: Fix web links pointing to "Further information online".
+        </change>
+    </release>
     <release
         version="6.0.0"
         versioncode="600000">
