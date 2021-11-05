@@ -12,7 +12,6 @@ repositories {
     google()
     mavenCentral()
     maven { url "https://jitpack.io" }
-    jcenter()
 }
 
 def versionMajor = 6
@@ -45,14 +44,15 @@ allprojects {
 }
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdk 30
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 29
+        minSdk 19
+        targetSdk 30
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        multiDexEnabled true
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
         resValue("string", "build_time", "\"${buildTime()}\"")
@@ -97,13 +97,17 @@ android {
         pickFirst "META-INF/NOTICE.txt"
     }
 
+    lintOptions {
+        checkDependencies true
+    }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = JavaVersion.VERSION_11
     }
 }
 
@@ -127,6 +131,7 @@ configurations {
 }
 
 dependencies {
+    implementation "androidx.multidex:multidex:$multidexVersion"
     implementation "androidx.cardview:cardview:$cardViewVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"
@@ -142,22 +147,14 @@ dependencies {
     implementation "me.saket:better-link-movement-method:2.2.0" // minSdkVersion 16, see AndroidManifest
     implementation "org.parceler:parceler-api:$parcelerVersion"
     kapt "org.parceler:parceler:$parcelerVersion"
-    implementation files("libs/TraceDroid-1.1.jar")
+    implementation "com.github.ligi:tracedroid:$tracedroidVersion"
 
     // Integration tests
-    androidTestImplementation "androidx.annotation:annotation:$annotationVersion"
     androidTestImplementation("com.squareup.assertj:assertj-android:$assertjAndroidVersion") {
         exclude group: "com.android.support", module: "support-annotations"
     }
-    androidTestImplementation("androidx.test.espresso:espresso-core:$espressoVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
-    androidTestImplementation("androidx.test:rules:$testRulesVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
-    androidTestImplementation("androidx.test.ext:junit:$testExtJunitVersion") {
-        exclude group: "com.android.support", module: "support-annotations"
-    }
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.ext:junit:$testExtJunitVersion"
 
     // Unit tests
     testImplementation "junit:junit:$junitVersion"

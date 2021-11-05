@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -25,6 +25,8 @@ import android.text.Spanned;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import me.saket.bettermovementmethod.BetterLinkMovementMethod;
 
 public abstract class ViewHelper {
 
@@ -80,9 +82,6 @@ public abstract class ViewHelper {
 
         TextView textView = activity.findViewById(textViewId);
         String url = activity.getString(urlResourceId);
-        if (LinkMovementMethodCompat.shouldUseLegacyLinkMovementMethod()) {
-            url = url.contains("@") ? "mailto:" + url : url;
-        }
         final String title = activity.getString(titleResourceId);
         setupTextViewExtended(activity, textView,
                 StringHelper.spannedLinkForString(title, url),
@@ -97,7 +96,7 @@ public abstract class ViewHelper {
             final String url
     ) {
         textView.setText(text, TextView.BufferType.SPANNABLE);
-        textView.setMovementMethod(LinkMovementMethodCompat.getInstance());
+        textView.setMovementMethod(BetterLinkMovementMethod.getInstance());
         final Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         textView.setOnClickListener(new View.OnClickListener() {
             @Override

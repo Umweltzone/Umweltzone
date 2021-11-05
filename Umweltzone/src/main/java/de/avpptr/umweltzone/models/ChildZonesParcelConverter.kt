@@ -18,7 +18,6 @@
 package de.avpptr.umweltzone.models
 
 import android.os.Parcel
-import android.os.Parcelable
 
 import org.parceler.Parcels
 import org.parceler.converter.ArrayListParcelConverter

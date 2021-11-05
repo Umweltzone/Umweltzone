@@ -17,7 +17,6 @@
 
 package de.avpptr.umweltzone.prefs;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;

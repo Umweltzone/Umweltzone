@@ -1,15 +1,15 @@
-dist: trusty
+dist: focal
 
 language: java
 
-jdk: openjdk8
+jdk: openjdk11
 
 env:
   global:
     # Android command line tools, check for updates here https://developer.android.com/studio/#command-tools
     - COMMAND_LINE_TOOLS_VERSION=7583922
     - ANDROID_HOME=$HOME/android-sdk
-    - TARGET_SDK_VERSION=`grep -H targetSdkVersion Umweltzone/build.gradle | grep -Po "\d+"`
+    - TARGET_SDK_VERSION=`grep -H targetSdk Umweltzone/build.gradle | grep -Po "\d+"`
     - BUILD_TOOLS_VERSION=`grep -H buildToolsVersion Umweltzone/build.gradle | grep -Po "\d+.\d+.\d+"`
 
 branches:
