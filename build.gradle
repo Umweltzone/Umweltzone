@@ -19,8 +19,8 @@ buildscript {
         materialVersion = "1.4.0"
         multidexVersion = "2.0.1"
         parcelerVersion = "1.1.13"
-        playServicesBaseVersion = "17.6.0"
-        playServicesMapsVersion = "17.0.1" // minSdk 19 is required by 18.0.0
+        playServicesBaseVersion = "18.0.0"
+        playServicesMapsVersion = "18.0.1"
         preferenceVersion = "1.1.1"
         roadSignsVersion = "4.2.0"
         snackengagePlayrateVersion = "0.29"
