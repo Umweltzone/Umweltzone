@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -29,6 +29,8 @@ import static de.avpptr.umweltzone.models.extensions.LatitudeExtensions.MIN_LATI
 import static de.avpptr.umweltzone.models.extensions.LatitudeExtensions.isValidLatitude;
 import static de.avpptr.umweltzone.models.extensions.LongitudeExtensions.MIN_LONGITUDE;
 import static de.avpptr.umweltzone.models.extensions.LongitudeExtensions.isValidLongitude;
+
+import androidx.annotation.NonNull;
 
 @Parcel
 public final class GeoPoint {
@@ -121,6 +123,7 @@ public final class GeoPoint {
         return result;
     }
 
+    @NonNull
     @Override
     public String toString() {
         if (isValid()) {

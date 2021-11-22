@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -250,7 +250,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         mMapDrawer = new MapDrawer(mMap);
         mMap.setOnCameraIdleListener(mOnCameraIdleListener);
