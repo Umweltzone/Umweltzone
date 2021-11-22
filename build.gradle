@@ -10,7 +10,7 @@ buildscript {
         assertjAndroidVersion = "1.2.0"
         cardViewVersion = "1.0.0"
         ckChangelogVersion = "1.2.2"
-        constraintLayoutVersion = "2.1.1"
+        constraintLayoutVersion = "2.1.2"
         coreKtxVersion = "1.6.0" // compileSdk 31 is required by 1.7.0
         espressoVersion = "3.4.0"
         jacksonVersion = "2.13.0"
