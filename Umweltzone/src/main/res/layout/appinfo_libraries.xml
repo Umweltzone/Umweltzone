@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2020  Tobias Preuss
+  Copyright (C) 2021  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -45,11 +45,6 @@
         android:id="@+id/app_info_android_testing_support_library"
         style="@style/AppInfo.WebLink"
         tools:text="@string/appinfo_references_url_android_testing_support_library" />
-
-    <TextView
-        android:id="@+id/app_info_google_analytics"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_google_analytics" />
 
     <TextView
         android:id="@+id/app_info_google_androidx_library"

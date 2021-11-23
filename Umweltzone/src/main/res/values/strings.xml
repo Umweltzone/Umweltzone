@@ -149,12 +149,6 @@
     <string name="appinfo_references_url_jackson" translatable="false">
         https://github.com/FasterXML/jackson
     </string>
-    <string name="appinfo_references_name_google_analytics" translatable="false">
-        Google Analytics
-    </string>
-    <string name="appinfo_references_url_google_analytics" translatable="false">
-        https://developers.google.com/analytics/devguides/collection/android/
-    </string>
     <string name="appinfo_references_name_parceler" translatable="false">
         Parceler
     </string>
@@ -476,5 +470,6 @@
     <string name="settings_title_data_privacy_statement_de">
         Data privacy statement (German) &#8230;
     </string>
+
 
 </resources>
