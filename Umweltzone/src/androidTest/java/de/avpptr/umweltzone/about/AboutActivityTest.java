@@ -82,10 +82,6 @@ public class AboutActivityTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withText(R.string.appinfo_references_name_ckchangelog)));
-        onView(withId(R.id.app_info_google_analytics))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_google_analytics)));
         onView(withId(R.id.app_info_google_androidx_library))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))

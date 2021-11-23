@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2021  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -66,9 +66,6 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.app_info_jackson,
                 R.string.appinfo_references_name_jackson,
                 R.string.appinfo_references_url_jackson);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_google_analytics,
-                R.string.appinfo_references_name_google_analytics,
-                R.string.appinfo_references_url_google_analytics);
         ViewHelper.setupTextViewExtended(this, R.id.app_info_parceler,
                 R.string.appinfo_references_name_parceler,
                 R.string.appinfo_references_url_parceler);

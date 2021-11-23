@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2021  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -78,7 +78,7 @@ public class ContentProviderTest {
             try {
                 getCircuits(zoneFileName);
                 fail();
-            } catch (Exception e) {
+            } catch (IllegalStateException e) {
                 assertThat(e.getMessage()).isEqualTo(expectedErrorMessage);
             }
         }
