@@ -59,12 +59,12 @@ public class IntentHelper {
         return builder.getIntent();
     }
 
-    public static Intent getShareIntent(@NonNull Activity activity) {
+    public static Intent getChooserShareIntent(@NonNull Activity activity) {
         String message = activity.getString(R.string.share_intent_message);
         return new ShareCompat.IntentBuilder(activity)
                 .setType("text/plain")
                 .setText(message)
-                .getIntent();
+                .createChooserIntent();
     }
 
     public static Intent getNewMapIntent(@NonNull Context context) {
