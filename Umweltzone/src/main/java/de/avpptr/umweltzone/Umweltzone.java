@@ -17,16 +17,25 @@
 
 package de.avpptr.umweltzone;
 
+import static com.google.android.gms.maps.MapsInitializer.Renderer.LATEST;
+
 import android.content.SharedPreferences;
 
+import androidx.annotation.NonNull;
 import androidx.multidex.MultiDexApplication;
 import androidx.preference.PreferenceManager;
 
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapsSdkInitializedCallback;
+
 import org.ligi.tracedroid.TraceDroid;
+import org.ligi.tracedroid.logging.Log;
 
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
-public class Umweltzone extends MultiDexApplication {
+public class Umweltzone extends MultiDexApplication implements OnMapsSdkInitializedCallback {
+
+    private static final String LOG_TAG = "Umweltzone";
 
     private PreferencesHelper mPreferencesHelper;
 
@@ -35,6 +44,7 @@ public class Umweltzone extends MultiDexApplication {
     public void onCreate() {
         super.onCreate();
         TraceDroid.init(this);
+        MapsInitializer.initialize(this, LATEST, this);
     }
 
     public PreferencesHelper getPreferencesHelper() {
@@ -45,4 +55,17 @@ public class Umweltzone extends MultiDexApplication {
         }
         return mPreferencesHelper;
     }
+
+    @Override
+    public void onMapsSdkInitialized(@NonNull MapsInitializer.Renderer renderer) {
+        switch (renderer) {
+            case LATEST:
+                Log.d(LOG_TAG, "The latest version of the renderer is used.");
+                break;
+            case LEGACY:
+                Log.d(LOG_TAG, "The legacy version of the renderer is used.");
+                break;
+        }
+    }
+
 }

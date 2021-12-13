@@ -44,12 +44,12 @@ allprojects {
 }
 
 android {
-    compileSdk 30
-    buildToolsVersion "30.0.3"
+    compileSdk 31
+    buildToolsVersion "32.0.0"
 
     defaultConfig {
         minSdk 19
-        targetSdk 30
+        targetSdk 31
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         multiDexEnabled true
@@ -144,7 +144,7 @@ dependencies {
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
     implementation "info.metadude.kotlin.library.roadsigns:roadsigns:$roadSignsVersion"
-    implementation "me.saket:better-link-movement-method:2.2.0" // minSdkVersion 16, see AndroidManifest
+    implementation "me.saket:better-link-movement-method:2.2.0"
     implementation "org.parceler:parceler-api:$parcelerVersion"
     kapt "org.parceler:parceler:$parcelerVersion"
     implementation "com.github.ligi:tracedroid:$tracedroidVersion"
