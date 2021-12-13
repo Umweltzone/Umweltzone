@@ -16,6 +16,28 @@
 -->
 <changelog>
     <release
+        version="7.1.0"
+        versioncode="701000">
+        <change>
+            Android: Die App ist jetzt für Android 12 optimiert.
+        </change>
+        <change>
+            Neu: Eine neue Zeichenroutine für die Hintergrundkarte wird verwendet,
+            wenn diese auf dem Gerät verfügbar ist.
+        </change>
+        <change>
+            Neu: Die vom Android-System zur Verfügung gestellte Nutzeroberfläche
+            wird beim Aufruf des "Teilen"-Menüeintrags verwendet.
+        </change>
+        <change>
+            Aktualisierung: Die Internetlinks im "Über"-Bildschirm sind aktualisiert.
+        </change>
+        <change>
+            Aktualisierung: Die überholten Verweise auf Google Analytics im
+            "Über"-Bildschirm sind entfernt.
+        </change>
+    </release>
+    <release
         version="7.0.0"
         versioncode="700000">
         <change>

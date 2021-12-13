@@ -1,5 +1,33 @@
-
 # Umweltzone changelog
+
+## [v.7.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.1.0)
+
+* Published: 2021-12-13
+
+### Features, improvements and maintenance
+
+* Fix typo in German changelog for version 7.0.0., [33c6d](https://bitbucket.org/tbsprs/umweltzone/commits/33c6da36818029e6d2ca9d209200af1838611559)
+* Use system's share UI when sharing the app., [d47ad](https://bitbucket.org/tbsprs/umweltzone/commits/d47ad54606ae5f37c6b39234860c95900905db6b)
+* Opt-in to use new map renderer if available., [39330](https://bitbucket.org/tbsprs/umweltzone/commits/3933075b50f2554654517d7de4a903f3ec9a1680)
+* Remove outdated comment., [7b092](https://bitbucket.org/tbsprs/umweltzone/commits/7b09258f0f529aee551481645e611c47bd3432d2)
+* Remove outdated reference to Google Analytics., [2141f](https://bitbucket.org/tbsprs/umweltzone/commits/2141f3cfce73069927b98d27091ccea98074634e)
+* Update URLs in about screen., [a7f50](https://bitbucket.org/tbsprs/umweltzone/commits/a7f5069ad2a02b9eb8ea59663ba60b8ae98684da)
+* Prevent accidentally ignoring important exceptions., [72d98](https://bitbucket.org/tbsprs/umweltzone/commits/72d983a104c07e24e354d5a3fca03de06c5e0d36)
+* Annotate nullability., [3dc8e](https://bitbucket.org/tbsprs/umweltzone/commits/3dc8e729ac9a8db702043a9300b18cda827b19e9)
+
+### Libraries, build tools, SDK
+
+* Use Android Gradle Plugin v.7.0.4., [d7376](https://bitbucket.org/tbsprs/umweltzone/commits/d7376aae7f11a94ef167fe654177011e4fec9772)
+* Use androidx.core:core-ktx:1.7.0., [d123c](https://bitbucket.org/tbsprs/umweltzone/commits/d123cdd065c6c29637f3b83eb66dc4231f232c07)
+* Use targetSdk 31 and compileSdk 31 (Android 12)., [9f325](https://bitbucket.org/tbsprs/umweltzone/commits/9f325d542f85b8826356a80c5eadff3c4c7704d6)
+* Use build tools v.32.0.0., [d4418](https://bitbucket.org/tbsprs/umweltzone/commits/d44180cfa47e55e5886192442aef8efc8cc33161)
+* Use play-services-maps v.18.0.1 + play-services-base v.18.0.0., [05706](https://bitbucket.org/tbsprs/umweltzone/commits/05706fe1cf61155cccf43b31ebdb08f2f43a1702)
+* Use kotlin v.1.6.0., [de0cb](https://bitbucket.org/tbsprs/umweltzone/commits/de0cb51b2e8126d0b3145347665e4e5dbe7ca30b)
+* Use Gradle wrapper v.7.3.1., [fe49a](https://bitbucket.org/tbsprs/umweltzone/commits/fe49adf4d4014aab59dbfdddce9c167d3fdb8e36)
+* Use constraintlayout v.2.1.2., [60536](https://bitbucket.org/tbsprs/umweltzone/commits/6053698e086eb7b2a1bf075b4a0cbb5ca00dfe6a)
+* Use roadsigns v.4.2.0., [460a5](https://bitbucket.org/tbsprs/umweltzone/commits/460a5f5d4502e1426f1405262f10a09b6ab58c38)
+* Upgrade to GitHub-native Dependabot, [11fa2](https://bitbucket.org/tbsprs/umweltzone/commits/11fa2a3b1232446dfe5c5a04d644868ca7e22b65)
+
 
 ## [v.7.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.0.0)
 

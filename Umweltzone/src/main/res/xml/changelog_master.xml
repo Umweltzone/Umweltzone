@@ -16,6 +16,26 @@
 -->
 <changelog>
     <release
+        version="7.1.0"
+        versioncode="701000">
+        <change>
+            Android: The app is now optimized for Android 12.
+        </change>
+        <change>
+            New: A new renderer for the map background layer is used if available on the device.
+        </change>
+        <change>
+            New: Use the Android system share UI when sharing the app via the respective
+            overflow menu item.
+        </change>
+        <change>
+            Update: Web links in the "About" screen are updated.
+        </change>
+        <change>
+            Update: Outdated links regarding Google Analytics in the "About" screen are removed.
+        </change>
+    </release>
+    <release
         version="7.0.0"
         versioncode="700000">
         <change>
