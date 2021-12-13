@@ -144,7 +144,7 @@ dependencies {
     implementation "de.cketti.library.changelog:ckchangelog:$ckChangelogVersion"
     implementation "info.metadude.android:typed-preferences:$typedPreferencesVersion"
     implementation "info.metadude.kotlin.library.roadsigns:roadsigns:$roadSignsVersion"
-    implementation "me.saket:better-link-movement-method:2.2.0" // minSdkVersion 16, see AndroidManifest
+    implementation "me.saket:better-link-movement-method:2.2.0"
     implementation "org.parceler:parceler-api:$parcelerVersion"
     kapt "org.parceler:parceler:$parcelerVersion"
     implementation "com.github.ligi:tracedroid:$tracedroidVersion"
