@@ -19,7 +19,7 @@
         version="7.0.0"
         versioncode="700000">
         <change>
-            Android: Die App ist jetzt für Android 10 optimiert.
+            Android: Die App ist jetzt für Android 11 optimiert.
         </change>
         <change>
             Android: Die niedrigste, unterstützte Version ist jetzt Android 4.4
