@@ -34,7 +34,7 @@ The app is translated into multiple languages:
 - English 🇺🇸
 - French (FAQs missing) 🇫🇷
 - German 🇩🇪
-- Polish (FAQs missing) 🇵🇱
+- Polish 🇵🇱
 - Portuguese 🇵🇹
 - Spanish 🇪🇸
 - Swedish 🇸🇪
