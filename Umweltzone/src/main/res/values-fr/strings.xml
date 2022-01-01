@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2021  Laure Runser
+  Copyright (C) 2022  Laure Runser
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -31,7 +31,7 @@
         Une application Android à propos des zones à faible émissions (Umweltzonen en allemand)
         et des zones d&#8217;interdiction du diesel en Allemagne.</string>
     <string name="appinfo_copyright_title">Idée et réalisation</string>
-    <string name="appinfo_copyright_content">(&#169;) Tobias Preuss, 2013 &#8211; 2021</string>
+    <string name="appinfo_copyright_content">(&#169;) Tobias Preuss, 2013 &#8211; 2022</string>
     <string name="appinfo_description_title">Description</string>
     <string name="appinfo_description_content">
         Cette application montre l&#8217;emplacement des zones à faibles émissions (LEZ) et
