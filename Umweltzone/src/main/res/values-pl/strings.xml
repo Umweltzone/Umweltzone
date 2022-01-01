@@ -19,19 +19,19 @@
 
     <!--Action Bar items-->
     <string name="action_cities">Miasta</string>
-    <string name="action_share_app">Podziel się apką &#8230;</string>
+    <string name="action_share_app">Podziel się aplikacją &#8230;</string>
     <string name="action_changelog">Informacja o wersji</string>
 
     <!-- Share intent -->
     <string name="share_intent_message">
-        <![CDATA[Wypróbuj Umweltzone - aplikację na Androida z informacjami o strefach niskiej emisji
-        i strefach zakazu stosowania oleju napędowego w Niemczech.
-        \nZainstaluj za darmo: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
+        <![CDATA[Czy już znasz Umweltzone? Ta aplikacja dla Androida podaje informacje o strefach niskiej emisji oraz strefach zakazu wjazdu
+        pojazdów na olej napędowy w Niemczech.
+        \nPobierz za darmo: https://play.google.com/store/apps/details?id=de.avpptr.umweltzone]]>
     </string>
 
     <!-- Map -->
     <string name="map_my_location_activation_hint">
-        Dotknij aby skonfigurować jak twoje położenie ma być pokazywane na mapie.
+        Dotknij aby skonfigurować usługi lokalizacji aby twoje położenie było pokazywane na mapie.
     </string>
 
     <!-- FeedbackActivity -->
@@ -43,8 +43,7 @@
     </string>
     <string name="about_activity_title">O aplikacji</string>
     <string name="appinfo_subtitle">
-        Aplikacja na Androida z informacjami o strefach niskiej emisji (niem. Umweltzonen)
-        i strefach zakazu stosowania oleju napędowego w Niemczech.
+        Aplikacja na Androida z informacjami o strefach niskiej emisji (niem. Umweltzonen) i strefach zakazu wjazdu pojazdów na olej napędowy w Niemczech.
     </string>
 
     <!-- AboutActivity / Copyright -->
@@ -64,9 +63,9 @@
         Celem ograniczeń wjazdu jest poprawa jakości powietrza w miastach.
         Drobne cząstki muszą zostać zredukowane, aby zachować zdrowie obywateli. &#8212;
         Oprócz mapy i listy miast znaleźć można jeszcze szczegółowy ekran zawierający informacje dla wybranego miasta.
-        Często zadawane pytania można znaleźć w
-        &#8220;FAQ&#8221;. Ponadto są też linki do stron internetowych,
-        które zawierają więcej informacji o LEZ, DPZ i powiązanych tematach.
+        Często zadawane pytania można znaleźć w &#8220;FAQ&#8221;.
+        Ponadto znajdziesz też linki do stron internetowych, które zawierają
+        więcej informacji o LEZ, DPZ i powiązanych tematach.
     </string>
 
     <!-- AboutActivity / Disclaimer -->
@@ -89,7 +88,7 @@
     <!-- AboutActivity / Graphics -->
     <string name="appinfo_references_graphics_title">Grafiki</string>
     <string name="appinfo_references_graphics_content">
-        Grafiki logo i plakietek pochodzą z Wikimedia Commons.
+        Grafiki takie jak logo i plakietki pochodzą z Wikimedia Commons.
     </string>
 
     <!-- AboutActivity / Texts -->
@@ -126,14 +125,14 @@
     <string name="appinfo_build_info_title">Informacje o kompilacji</string>
     <string name="appinfo_build_info_time">Czas kompilacji</string>
     <string name="appinfo_build_info_version_code">Kod wersji</string>
-    <string name="appinfo_build_info_hash">Kod kompilacji</string>
+    <string name="appinfo_build_info_hash">Hash kompilacji</string>
 
     <!-- FeedbackActivity / Contact -->
     <string name="appinfo_contact_title">Kontakt</string>
     <string name="appinfo_contact_content">
-        Informacja zwrotna każdego typu, jak pomysł na ulepszenie,
-        zgłoszenie błędu lub zapotrzebowania na nową funkcje,
-        może być wysłana na następujący adres:
+        Informacja zwrotna każdego typu, taka jak pomysł na ulepszenie,
+        zgłoszenie błędu lub zapotrzebowanie na nową funkcje może być
+        wysłana na następujący adres:
     </string>
 
     <!-- FeedbackActivity / Rating -->
@@ -217,15 +216,15 @@
         mogą wjeżdżać do strefy zakazu używania oleju napędowego.
     </string>
     <string name="city_info_zone_number_for_residents_since">
-        W przypadku mieszkańców niniejsze rozporządzenie obowiązuje od dnia <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+        W przypadku mieszkańców ten wymóg obowiązuje od dnia <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
     </string>
 
     <string name="city_info_zone_number_for_non_residents_since">
-        W przypadku nierezydentów niniejsze rozporządzenie stosuje się od dnia <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
+        W przypadku nierezydentów ten wymóg stosuje się od dnia <xliff:g example="May 31, 2018" id="date">%1$s</xliff:g>.
     </string>
 
     <string name="city_info_provision_applies_to_vehicles">
-        Przepis ten dotyczy <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.
+        Ten wymóg dotyczy <xliff:g example="cars and heavy goods vehicles" id="vehicles">%1$s</xliff:g>.
     </string>
 
     <string name="city_info_provision_applies_to_vehicles_fragment_cars">
@@ -241,7 +240,7 @@
     </string>
 
     <string name="city_info_is_congruent_with_lez">
-        Strefa ta jest zgodna ze strefą niskiej emisji.
+        Ta strefa jest zgodna ze strefą niskiej emisji.
     </string>
 
     <!-- NoCitySelectedFragment -->
@@ -325,11 +324,12 @@
 
     <!-- TraceDroid -->
     <string name="trace_droid_dialog_title">
-        Wyślij do Umweltzone raport o awarii &#8230;
+        Wyślij do Umweltzone raport o błędzie &#8230;
     </string>
     <string name="trace_droid_dialog_message">
         Wykryto problem z aplikacją Umweltzone.
-        Pomocne byłoby przesłanie raportu o awarii, aby można było zidentyfikować źródło problemu.
+        Pomocne byłoby przesłanie raportu o awarii,
+        aby można było zidentyfikować źródło problemu.
     </string>
     <string name="trace_droid_button_title_no">
         Nie
@@ -339,7 +339,7 @@
     <string name="snack_engage_rate_title">Wszystko w porządku?</string>
     <string name="snack_engage_rate_action">Oceń proszę aplikację</string>
     <string name="snack_engage_beta_testing_title">Użytkownik zaawansowany?</string>
-    <string name="snack_engage_beta_testing_action">Zostań beta testerem</string>
+    <string name="snack_engage_beta_testing_action">Zostań betatesterem</string>
 
     <!-- Settings -->
     <string name="settings_activity_title">Ustawienia</string>
