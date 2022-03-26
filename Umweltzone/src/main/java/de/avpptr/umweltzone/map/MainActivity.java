@@ -34,6 +34,9 @@ import org.ligi.snackengage.snacks.BaseSnack;
 import org.ligi.snackengage.snacks.DefaultRateSnack;
 import org.ligi.snackengage.snacks.GooglePlayOpenBetaTestSnack;
 
+import java.util.Arrays;
+import java.util.List;
+
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.Umweltzone;
 import de.avpptr.umweltzone.base.BaseActivity;
@@ -52,9 +55,8 @@ public class MainActivity extends BaseActivity {
         mActionBar.setHomeButtonEnabled(false);
         showTraceDroidDialog();
         migrateNewZonesAddedInVersion250();
-        migrateBochumRemoval();
         migrateCityNameFrankfurtInPreferences();
-        migrateBalingenRemoval();
+        migrateZonesRemoval();
         showChangeLogDialog();
         initUserEngagement();
     }
@@ -137,28 +139,30 @@ public class MainActivity extends BaseActivity {
         preferencesHelper.storeCityNameFrankfurtInPreferencesFixed(true);
     }
 
-    // "bochum" has been removed since it is contained in "ruhrgebiet".
-    private void migrateBochumRemoval() {
-        migrateZoneRemoval("bochum");
-    }
-
-    // "balingen" has been removed because it was discontinued as of 01.11.2020.
-    private void migrateBalingenRemoval() {
-        migrateZoneRemoval("balingen");
+    private void migrateZonesRemoval() {
+        List<String> zoneNames = Arrays.asList(
+                // "bochum" has been removed since it is contained in "ruhrgebiet".
+                "bochum",
+                // "balingen" has been removed because it was discontinued as of 01.11.2020.
+                "balingen"
+        );
+        migrateZonesRemoval(zoneNames);
     }
 
     /**
-     * Removes the given {@code removedZoneName} as the last selected zone name and
+     * Removes the given {@code removedZoneNames} as the last selected zone name and
      * resets the map location to the default setting.
      */
-    private void migrateZoneRemoval(@NonNull String removedZoneName) {
+    private void migrateZonesRemoval(@NonNull List<String> removedZoneNames) {
         Umweltzone application = (Umweltzone) getApplication();
         PreferencesHelper preferencesHelper = application.getPreferencesHelper();
         if (preferencesHelper.storesLastKnownLocationAsString()) {
             String lastZoneName = preferencesHelper.restoreLastKnownLocationAsString();
-            if (lastZoneName.equals(removedZoneName)) {
-                // Reset to default low emission zone.
-                preferencesHelper.deleteLastKnownLocation();
+            for (String removedZoneName : removedZoneNames) {
+                if (lastZoneName.equals(removedZoneName)) {
+                    // Reset to default low emission zone.
+                    preferencesHelper.deleteLastKnownLocation();
+                }
             }
         }
     }
