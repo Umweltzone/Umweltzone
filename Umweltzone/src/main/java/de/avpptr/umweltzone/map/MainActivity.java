@@ -144,7 +144,9 @@ public class MainActivity extends BaseActivity {
                 // "bochum" has been removed since it is contained in "ruhrgebiet".
                 "bochum",
                 // "balingen" has been removed because it was discontinued as of 01.11.2020.
-                "balingen"
+                "balingen",
+                // "erfurt" has been removed because it was discontinued as of 07.05.2021
+                "erfurt"
         );
         migrateZonesRemoval(zoneNames);
     }

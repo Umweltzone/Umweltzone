@@ -46,11 +46,6 @@
       "color": "@color/city_zone_3"
     },
     {
-      "name": "Erfurt",
-      "zoneNumber": 4,
-      "color": "@color/city_zone_4"
-    },
-    {
       "name": "Eschweiler",
       "zoneNumber": 2,
       "color": "@color/city_zone_2"
