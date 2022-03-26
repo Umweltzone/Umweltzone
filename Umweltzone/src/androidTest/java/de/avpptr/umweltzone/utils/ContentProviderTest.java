@@ -44,7 +44,7 @@ public class ContentProviderTest {
 
     private static final String[] ZONE_FILE_NAMES_WITH_COORDINATES = {
             "lez_aachen", "lez_augsburg", "lez_berlin", "lez_bonn", "lez_bremen",
-            "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_erfurt", "lez_eschweiler",
+            "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_eschweiler",
             "lez_frankfurt_main", "lez_freiburg_breisgau", "lez_hagen", "lez_halle", "lez_hannover",
             "lez_heidelberg", "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
             "lez_karlsruhe", "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",

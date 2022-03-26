@@ -281,36 +281,6 @@
         }
     },
     {
-        "name" : "erfurt",
-        "displayName" : "Erfurt",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_erfurt",
-            "displayName" : "Erfurt",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2012-10-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Tiefbau- und Verkehrsamt, Erfurt",
-            "geometryUpdatedAt" : "2015-01-28",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/erfurt",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 50.956582,
-                "longitude" : 10.996269
-            },
-            "northEast" : {
-                "latitude" : 51.011862,
-                "longitude" : 11.064444
-            }
-        }
-    },
-    {
         "name" : "eschweiler",
         "displayName" : "Eschweiler",
         "childZones" : [{
