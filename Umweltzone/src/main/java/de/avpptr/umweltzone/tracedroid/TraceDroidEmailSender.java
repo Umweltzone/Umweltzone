@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  ligi, Tobias Preuss
+ *  Copyright (C) 2022  ligi, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -26,6 +26,8 @@ import androidx.appcompat.app.AlertDialog;
 import org.ligi.tracedroid.TraceDroid;
 import org.ligi.tracedroid.collecting.TraceDroidMetaInfo;
 
+import java.io.File;
+
 import de.avpptr.umweltzone.R;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
@@ -36,7 +38,8 @@ import de.avpptr.umweltzone.utils.SnackBarHelper;
 public abstract class TraceDroidEmailSender {
 
     public static boolean sendStackTraces(@NonNull final Activity context) {
-        if (TraceDroid.getStackTraceFiles().length < 1) {
+        File[] stackTraceFiles = TraceDroid.getStackTraceFiles();
+        if (stackTraceFiles == null || stackTraceFiles.length < 1) {
             return false;
         }
 
