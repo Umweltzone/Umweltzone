@@ -1,5 +1,32 @@
 # Umweltzone changelog
 
+## [v.7.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.2.0)
+
+* Published: 2022-03-30
+
+### Features, improvements and maintenance
+
+* Remove low emission zone of Erfurt., [22f56](https://bitbucket.org/tbsprs/umweltzone/commits/22f56516b5ead9c9ef47c6bf3be176e8723e2277)
+* Avoid redundant Preferences lookup., [6fa6d](https://bitbucket.org/tbsprs/umweltzone/commits/6fa6d446d6166a8b34d1ed0a9d81d8b637cce343)
+* Prevent crash when sending stack trace., [f1075](https://bitbucket.org/tbsprs/umweltzone/commits/f10750735612714f6118fef0444e36eb7b32b6e2)
+* Remove already unused tracking settings., [aeb5b](https://bitbucket.org/tbsprs/umweltzone/commits/aeb5b5d5327ca84fc871663bb0d21e427806eb65)
+* Update Polish translation (including FAQ), [a5b2b](https://bitbucket.org/tbsprs/umweltzone/commits/a5b2ba297042c084ce5be86faf2e8d2127c76d08)
+
+### Libraries, build tools, SDK
+
+* Use jackson 2.13.2.2., [502b9](https://bitbucket.org/tbsprs/umweltzone/commits/502b9b7a926252a60e0a36de45dbb560d44e6f93)
+* Use roadsigns v.4.3.0., [00b82](https://bitbucket.org/tbsprs/umweltzone/commits/00b82c40a26a62baa7e72b442d2816718d79a0b0)
+* Use Android Gradle Plugin v.7.1.2., [0fe4b](https://bitbucket.org/tbsprs/umweltzone/commits/0fe4b5bf67bae57bbe9344fb703466751594bff8)
+* Use kotlin v.1.6.10., [529e1](https://bitbucket.org/tbsprs/umweltzone/commits/529e1873ab1a56096dc0436541bb36e478aca40f)
+* Use play-services-maps v.18.0.2 + play-services-base v.18.0.1., [2c6bc](https://bitbucket.org/tbsprs/umweltzone/commits/2c6bc19060322e6bf2c5cbc8db4024ef61e23a2f)
+* Use material v.1.5.0., [1ca40](https://bitbucket.org/tbsprs/umweltzone/commits/1ca40cf6a81ef8e3be2fb30ecadb0ee6cf486022)
+* Use preference v.1.2.0., [46893](https://bitbucket.org/tbsprs/umweltzone/commits/4689370b748f9d3b6626ebb8bf223693abdd7d98)
+* Use constraintlayout v.2.1.3., [1399e](https://bitbucket.org/tbsprs/umweltzone/commits/1399e9853ab0f3072389e0b24003201da6a8b276)
+* Use Gradle wrapper v.7.4.1., [15cc5](https://bitbucket.org/tbsprs/umweltzone/commits/15cc53cb30c03144c25ac57bc6ef8bca3b4e0fcc)
+* Use dexcount-gradle-plugin v.3.1.0., [6bd5b](https://bitbucket.org/tbsprs/umweltzone/commits/6bd5bb87eab14adcad6b09ac87a4a9335e6f4a34)
+* Use gradle-versions-plugin v.0.42.0., [e4fa8](https://bitbucket.org/tbsprs/umweltzone/commits/e4fa802b52bc7358f7c83df1917c1f712957e79e)
+
+
 ## [v.7.1.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.1.0)
 
 * Published: 2021-12-13

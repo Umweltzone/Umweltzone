@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2021  Tobias Preuss
+  Copyright (C) 2022  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,19 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="7.2.0"
+        versioncode="702000">
+        <change>
+            Aktualisierung: Polnische Übersetzung (inklusive FAQs). Danke rotrot.
+        </change>
+        <change>
+            Neu: Umweltzone Erfurt entfernt, da diese nicht fortbesteht. Danke Andreas M.
+        </change>
+        <change>
+            Neu: Absturz beim Senden von Diagnose-Daten verhindert.
+        </change>
+    </release>
     <release
         version="7.1.0"
         versioncode="701000">
