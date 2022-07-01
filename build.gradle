@@ -19,7 +19,7 @@ buildscript {
         materialVersion = "1.5.0"
         multidexVersion = "2.0.1"
         parcelerVersion = "1.1.13"
-        playServicesBaseVersion = "18.0.1"
+        playServicesBaseVersion = "18.1.0"
         playServicesMapsVersion = "18.0.2"
         preferenceVersion = "1.2.0"
         roadSignsVersion = "4.3.0"
