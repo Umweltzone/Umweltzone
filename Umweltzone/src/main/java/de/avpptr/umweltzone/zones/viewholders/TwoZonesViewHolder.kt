@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2022  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,40 +20,28 @@ package de.avpptr.umweltzone.zones.viewholders
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.view.View
-import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.R
+import de.avpptr.umweltzone.databinding.ZonesListItemTwoZonesBinding
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
-import kotlinx.android.synthetic.main.zones_list_item_two_zones.view.*
 
 class TwoZonesViewHolder(
 
-        val view: View,
+        private val binding: ZonesListItemTwoZonesBinding,
         private val onItemClick: (view: View) -> Unit
 
-) : ZoneViewHolder<ZoneViewModel.TwoZonesViewModel>(view) {
+) : ZoneViewHolder<ZoneViewModel.TwoZonesViewModel>(binding.root) {
 
-    private val zoneShape1View: GradientDrawable
-    private val zoneShape2View: GradientDrawable
-
-    init {
-        val badge1Background = view.zoneTwoZonesBadge1View.background as LayerDrawable
-        zoneShape1View = badge1Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
-        val badge2Background = view.zoneTwoZonesBadge2View.background as LayerDrawable
-        zoneShape2View = badge2Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
-    }
-
-    override fun bind(viewModel: ZoneViewModel.TwoZonesViewModel) = with(view) {
-        tag = viewModel
-        setOnClickListener(onItemClick)
+    override fun bind(viewModel: ZoneViewModel.TwoZonesViewModel) = with(binding) {
+        val badge1Background = zoneTwoZonesBadge1View.background as LayerDrawable
+        val zoneShape1View = badge1Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
+        val badge2Background = zoneTwoZonesBadge2View.background as LayerDrawable
+        val zoneShape2View = badge2Background.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
+        root.tag = viewModel
+        root.setOnClickListener(onItemClick)
         zoneTwoZonesNameView.text = viewModel.name
         zoneTwoZonesNameView.setTextColor(viewModel.nameTextColor)
         zoneTwoZonesBadge1View.setBadge(zoneShape1View, viewModel.badge1ViewModel)
         zoneTwoZonesBadge2View.setBadge(zoneShape2View, viewModel.badge2ViewModel)
-    }
-
-    companion object {
-        @LayoutRes
-        const val layout = R.layout.zones_list_item_two_zones
     }
 
 }

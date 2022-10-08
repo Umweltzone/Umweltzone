@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2022  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import de.avpptr.umweltzone.databinding.ZonesListItemOneZoneBinding
+import de.avpptr.umweltzone.databinding.ZonesListItemThreeZonesBinding
+import de.avpptr.umweltzone.databinding.ZonesListItemTwoZonesBinding
 import de.avpptr.umweltzone.zones.viewholders.OneZoneViewHolder
 import de.avpptr.umweltzone.zones.viewholders.ThreeZonesViewHolder
 import de.avpptr.umweltzone.zones.viewholders.TwoZonesViewHolder
@@ -40,16 +43,16 @@ class ZonesAdapter(
         @Suppress("UNCHECKED_CAST")
         return when (viewType) {
             ChildZonesCount.ONE.value -> {
-                val itemView = inflater.inflate(OneZoneViewHolder.layout, parent, false)
-                OneZoneViewHolder(itemView, onItemClick)
+                val binding = ZonesListItemOneZoneBinding.inflate(inflater, parent, false)
+                OneZoneViewHolder(binding, onItemClick)
             }
             ChildZonesCount.TWO.value -> {
-                val itemView = inflater.inflate(TwoZonesViewHolder.layout, parent, false)
-                TwoZonesViewHolder(itemView, onItemClick)
+                val binding = ZonesListItemTwoZonesBinding.inflate(inflater, parent, false)
+                TwoZonesViewHolder(binding, onItemClick)
             }
             ChildZonesCount.THREE.value -> {
-                val itemView = inflater.inflate(ThreeZonesViewHolder.layout, parent, false)
-                ThreeZonesViewHolder(itemView, onItemClick)
+                val binding = ZonesListItemThreeZonesBinding.inflate(inflater, parent, false)
+                ThreeZonesViewHolder(binding, onItemClick)
             }
             else -> {
                 error("Unknown view type: $viewType")
