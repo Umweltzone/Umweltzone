@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2022  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,36 +20,25 @@ package de.avpptr.umweltzone.zones.viewholders
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.LayerDrawable
 import android.view.View
-import androidx.annotation.LayoutRes
 import de.avpptr.umweltzone.R
+import de.avpptr.umweltzone.databinding.ZonesListItemOneZoneBinding
 import de.avpptr.umweltzone.zones.viewmodels.ZoneViewModel
-import kotlinx.android.synthetic.main.zones_list_item_one_zone.view.*
 
 class OneZoneViewHolder(
 
-        val view: View,
+        private val binding: ZonesListItemOneZoneBinding,
         private val onItemClick: (view: View) -> Unit
 
-) : ZoneViewHolder<ZoneViewModel.OneZoneViewModel>(view) {
+) : ZoneViewHolder<ZoneViewModel.OneZoneViewModel>(binding.root) {
 
-    private val zoneShapeView: GradientDrawable
-
-    init {
-        val badgeBackground = view.zoneOneZoneBadgeView.background as LayerDrawable
-        zoneShapeView = badgeBackground.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
-    }
-
-    override fun bind(viewModel: ZoneViewModel.OneZoneViewModel) = with(view) {
-        tag = viewModel
-        setOnClickListener(onItemClick)
+    override fun bind(viewModel: ZoneViewModel.OneZoneViewModel) = with(binding) {
+        val badgeBackground = zoneOneZoneBadgeView.background as LayerDrawable
+        val zoneShapeView = badgeBackground.findDrawableByLayerId(R.id.zone_shape) as GradientDrawable
+        root.tag = viewModel
+        root.setOnClickListener(onItemClick)
         zoneOneZoneNameView.text = viewModel.name
         zoneOneZoneNameView.setTextColor(viewModel.nameTextColor)
         zoneOneZoneBadgeView.setBadge(zoneShapeView, viewModel.badgeViewModel)
-    }
-
-    companion object {
-        @LayoutRes
-        const val layout = R.layout.zones_list_item_one_zone
     }
 
 }
