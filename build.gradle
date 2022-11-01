@@ -3,7 +3,7 @@ buildscript {
         // Plugins
         androidGradlePluginVersion = "7.1.2"
         dexcountGradlePluginVersion = "3.1.0"
-        gradleVersionsPluginVersion = "0.42.0"
+        gradleVersionsPluginVersion = "0.43.0"
         strictVersionMatcherPluginVersion = "1.2.2"
 
         // Libraries
