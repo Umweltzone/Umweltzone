@@ -35,7 +35,7 @@ static def buildTime() {
 
 allprojects {
     gradle.projectsEvaluated {
-        tasks.withType(JavaCompile) {
+        tasks.withType(JavaCompile).configureEach {
             // Verbose Lint output
             options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
         }
@@ -118,7 +118,7 @@ android {
     }
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
     testLogging {
         events TestLogEvent.FAILED,
                 TestLogEvent.PASSED,
