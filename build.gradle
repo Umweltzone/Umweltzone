@@ -4,7 +4,7 @@ buildscript {
         androidGradlePluginVersion = "7.1.2"
         dexcountGradlePluginVersion = "4.0.0"
         gradleVersionsPluginVersion = "0.46.0"
-        strictVersionMatcherPluginVersion = "1.2.2"
+        strictVersionMatcherPluginVersion = "1.2.4"
 
         // Libraries
         assertjAndroidVersion = "1.2.0"
