@@ -19,8 +19,8 @@ buildscript {
         materialVersion = "1.6.1" // compileSdk 32 is required as of 1.7.0
         multidexVersion = "2.0.1"
         parcelerVersion = "1.1.13"
-        playServicesBaseVersion = "18.0.1"
-        playServicesMapsVersion = "18.0.2"
+        playServicesBaseVersion = "18.2.0"
+        playServicesMapsVersion = "18.1.0"
         preferenceVersion = "1.2.0"
         roadSignsVersion = "4.3.0"
         snackengagePlayrateVersion = "0.30"
