@@ -94,10 +94,14 @@ android {
     }
 
     packagingOptions {
-        pickFirst "META-INF/LICENSE"
-        pickFirst "META-INF/LICENSE.txt"
-        pickFirst "META-INF/NOTICE"
-        pickFirst "META-INF/NOTICE.txt"
+        resources {
+            pickFirsts += [
+                    'META-INF/LICENSE',
+                    'META-INF/LICENSE.txt',
+                    'META-INF/NOTICE',
+                    'META-INF/NOTICE.txt'
+            ]
+        }
     }
 
     lint {
