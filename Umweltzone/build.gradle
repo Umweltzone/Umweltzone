@@ -100,7 +100,7 @@ android {
         pickFirst "META-INF/NOTICE.txt"
     }
 
-    lintOptions {
+    lint {
         checkDependencies true
     }
 
