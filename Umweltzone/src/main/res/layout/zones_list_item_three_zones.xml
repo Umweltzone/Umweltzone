@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2020  Tobias Preuss
+  Copyright (C) 2023  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -53,10 +53,8 @@
             android:id="@+id/zoneThreeZonesBadge1View"
             style="@style/ZoneBadge"
             android:layout_marginStart="@dimen/big_spacer"
-            android:layout_marginLeft="@dimen/big_spacer"
             android:layout_marginTop="@dimen/big_spacer"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/big_spacer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -69,10 +67,8 @@
             android:id="@+id/zoneThreeZonesBadge2View"
             style="@style/ZoneBadge"
             android:layout_marginStart="@dimen/big_spacer"
-            android:layout_marginLeft="@dimen/big_spacer"
             android:layout_marginTop="@dimen/big_spacer"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="@dimen/big_spacer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -85,10 +81,8 @@
             android:id="@+id/zoneThreeZonesBadge3View"
             style="@style/ZoneBadge"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="@dimen/big_spacer"
             android:layout_marginEnd="@dimen/big_spacer"
-            android:layout_marginRight="@dimen/big_spacer"
             android:layout_marginBottom="@dimen/big_spacer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"

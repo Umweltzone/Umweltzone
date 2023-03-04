@@ -35,7 +35,7 @@ static def buildTime() {
 
 allprojects {
     gradle.projectsEvaluated {
-        tasks.withType(JavaCompile) {
+        tasks.withType(JavaCompile).configureEach {
             // Verbose Lint output
             options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
         }
@@ -44,7 +44,7 @@ allprojects {
 
 android {
     compileSdk 31
-    buildToolsVersion "32.0.0"
+    buildToolsVersion "33.0.2"
 
     defaultConfig {
         minSdk 19
@@ -94,13 +94,17 @@ android {
     }
 
     packagingOptions {
-        pickFirst "META-INF/LICENSE"
-        pickFirst "META-INF/LICENSE.txt"
-        pickFirst "META-INF/NOTICE"
-        pickFirst "META-INF/NOTICE.txt"
+        resources {
+            pickFirsts += [
+                    'META-INF/LICENSE',
+                    'META-INF/LICENSE.txt',
+                    'META-INF/NOTICE',
+                    'META-INF/NOTICE.txt'
+            ]
+        }
     }
 
-    lintOptions {
+    lint {
         checkDependencies true
     }
 
@@ -114,7 +118,7 @@ android {
     }
 }
 
-tasks.withType(Test) {
+tasks.withType(Test).configureEach {
     testLogging {
         events TestLogEvent.FAILED,
                 TestLogEvent.PASSED,
