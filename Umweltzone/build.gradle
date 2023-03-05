@@ -43,12 +43,12 @@ allprojects {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
     buildToolsVersion "33.0.2"
 
     defaultConfig {
         minSdk 19
-        targetSdk 31
+        targetSdk 33
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
         multiDexEnabled true

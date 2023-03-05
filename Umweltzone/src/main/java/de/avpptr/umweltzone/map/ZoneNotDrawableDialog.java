@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2023  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -40,6 +40,7 @@ import java.util.List;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
+import de.avpptr.umweltzone.extensions.ParcelableCompat;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
@@ -65,7 +66,7 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final FragmentActivity activity = requireActivity();
         Bundle extras = getArguments();
-        Parcelable parcelable = extras.getParcelable(BUNDLE_KEY_ADMINISTRATIVE_ZONE);
+        Parcelable parcelable = ParcelableCompat.getParcelableCompat(extras, BUNDLE_KEY_ADMINISTRATIVE_ZONE);
         final AdministrativeZone administrativeZone = Parcels.unwrap(parcelable);
         if (administrativeZone == null) {
             throw new NullPointerException("Recent low emission zone is null.");

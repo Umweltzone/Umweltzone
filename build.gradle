@@ -11,12 +11,12 @@ buildscript {
         cardViewVersion = "1.0.0"
         ckChangelogVersion = "1.2.2"
         constraintLayoutVersion = "2.1.4"
-        coreKtxVersion = "1.8.0" // compileSdk 33 is required as of 1.9.0
+        coreKtxVersion = "1.9.0"
         espressoVersion = "3.5.1"
         jacksonVersion = "2.13.5" // minSdk 26 is required as of 2.14
         junitVersion = "4.13.2"
         kotlinVersion = "1.8.10"
-        materialVersion = "1.6.1" // compileSdk 32 is required as of 1.7.0
+        materialVersion = "1.6.1" // compileSdk 32 is required as of 1.7.0, potential lifecycle-viewmodel-ktx conflict, see: https://issuetracker.google.com/issues/238425626
         multidexVersion = "2.0.1"
         parcelerVersion = "1.1.13"
         playServicesBaseVersion = "18.2.0"

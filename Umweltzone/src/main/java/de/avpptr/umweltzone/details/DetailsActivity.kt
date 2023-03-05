@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2023  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ import android.os.Parcelable
 import android.view.Menu
 import de.avpptr.umweltzone.R
 import de.avpptr.umweltzone.base.BaseActivity
+import de.avpptr.umweltzone.extensions.parcelable
 import de.avpptr.umweltzone.models.AdministrativeZone
 import org.parceler.Parcels
 
@@ -40,7 +41,7 @@ class DetailsActivity : BaseActivity(R.layout.activity_details) {
 
     private fun initFragment() {
         val intent = intent ?: throw AssertionError("Intent cannot be null.")
-        val parcelable = intent.getParcelableExtra<Parcelable>(DetailsFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE)
+        val parcelable = intent.parcelable<Parcelable>(DetailsFragment.BUNDLE_KEY_ADMINISTRATIVE_ZONE)
         if (parcelable == null) {
             addNoCitySelectedFragment()
         } else {

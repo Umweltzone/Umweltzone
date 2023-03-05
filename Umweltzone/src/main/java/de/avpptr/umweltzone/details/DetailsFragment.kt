@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2023  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -36,6 +36,7 @@ import de.avpptr.umweltzone.details.dataconverters.toOtherDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.DpzDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.LezDetailsViewModel
 import de.avpptr.umweltzone.details.viewmodels.OtherDetailsViewModel
+import de.avpptr.umweltzone.extensions.parcelable
 import de.avpptr.umweltzone.extensions.textOrHide
 import de.avpptr.umweltzone.extensions.typeOrHide
 import de.avpptr.umweltzone.models.AdministrativeZone
@@ -58,7 +59,7 @@ class DetailsFragment : BaseFragment() {
         super.onCreate(savedInstanceState)
         val extras = arguments
         if (extras != null) {
-            val parcelable = extras.getParcelable<Parcelable>(BUNDLE_KEY_ADMINISTRATIVE_ZONE)
+            val parcelable = extras.parcelable<Parcelable>(BUNDLE_KEY_ADMINISTRATIVE_ZONE)
             administrativeZone = Parcels.unwrap<AdministrativeZone>(parcelable)
         }
     }
