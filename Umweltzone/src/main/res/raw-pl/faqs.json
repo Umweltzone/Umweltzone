@@ -3,105 +3,90 @@
         "position" : 1,
         "question" : "Czym jest zanieczyszczenie? Czym są cząstki stałe?",
         "answer" : "Cząstki stałe są niczym innym niż pyłem, czyli cząstkami w atmosferze mniejszymi niż 15 µm. Redukcja emisji w Unii Europejskiej usiłuje nawiązywać do wytycznych Amerykańskiej Agencji Ochrony Środowiska (EPA) zawartych w narodowym standardzie jakości powietrza dla cząsteczek stałych (w skrócie: standardzie PM), wprowadzonym w 1987 roku. W pierwszym szkicu regulacji amerykańskie wytyczne zdefiniowały standard PM10, który od 2005 roku służył jako próg w Unii Europejskiej. W przeciwieństwie do powszechnie cytowanych definicji PM10 nie jest ścisłą definicją emisji ze średnicą dziesięciu mikronów, lecz raczej próbą replikacji wyższych warstw dróg oddechowych: cząsteczki o średnicy mniejszej niż mikron są w nim uwzględnione, uwzględnia się także pewien udział większych cząsteczek (im większe, tym mniejszy), aż do 0% o rozmiarze 15 mikronów. Technicznie odpowiada to zastosowaniu średniej ważonej emisji (w rzeczywistości realizowane jest to poprzez odpowiednie filtry w instrumentach pomiarowych). Od kształtu tej funkcji uzyskano nazwę PM10, ponieważ przy dziesięciu mikronach dokładnie połowa cząsteczek jest uwzględniona. Dalsze informacje o cząstkach stałych mogą być uzyskane z Wikipedii (http://en.wikipedia.org/wiki/Particulates)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_fine_dust"
     },
     {
         "position" : 2,
         "question" : "Dlaczego zanieczyszczenie jest szkodliwe?",
         "answer" : "Nie ma koncentracji zanieczyszczenia, która nie jest szkodliwa. Dla społeczeństwa Unii Europejskiej przyjmuje się skrócenie czasu życia o rok z powodu zanieczyszczenia powietrza. Poziomy zdefiniowane przez Unię Europejską ​​są mniej lub bardziej arbitralne i uważane są mniej lub bardziej za politycznie możliwe do spełnienia niż wynikające z wiedzy naukowej. Pośród skutków zanieczyszczenia wymieniane są między innymi: większe ryzyko alergii, nasilenie ataków astmatycznych, problemy z oddychaniem, rak płuc, ponadto zapalenia ucha środkowego u dzieci. W dodatku pewnym ryzykiem są zagrożenia dla układu krwionośnego. Wpływ cząsteczek na układ oddechowy zależy także od ich toksyczności (ołów, wanad, beryl, rtęć) i rozmiaru: im mniejsza cząsteczka, tym większa szansa na penetrację układu oddechowego.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "why_is_dust_harmful"
     },
     {
         "position" : 3,
         "question" : "W jaki sposób przypisywane są naklejki środowiskowe?",
         "answer" : "Przydział naklejek regulowany jest prawnie zgodnie z pewnymi kryteriami Pojazdy z silnikiem diesla bez filtra cząstek, w zależności od wieku pojazdu uzyskują czerwoną albo żółtą naklejkę. Nowsze samochody z filtrem czastek stałych najczęściej uzyskują zieloną naklejkę. Silniki benzynowe z katalizatorem otrzymują bez wyjątku zieloną naklejkę. Dlatego też może się zdarzyć, że stare samochody rzeczywiście taką naklejkę posiadają. Pojazdy z silnikiem benzynowym bez katalizatora otrzymują zieloną naklejkę lub żadnej. Aby sprawdzić jaka naklejka będzie przydzielona danemu pojazdowi, sprawdź stronę DEKRA.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_are_environmental_stickers_allocated"
     },
     {
         "position" : 4,
         "question" : "Jak długo ważne są naklejki środowiskowe?",
         "answer" : "Naklejki są powiązane z tablicami rejestracyjnymi pojazdu, co oznacza, że ich ponowne pozyskanie jest konieczne tylko w przypadku zmiany numeru rejestracyjnego (np. przy sprzedaży, zmianie lokalizacji)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_long_are_the_environmental_stickers_valid"
     },
     {
         "position" : 5,
         "question" : "Czy potrzebuję naklejki dla mojego motocykla?",
         "answer" : "Nie, pojazdy dwu- i trójkołowe nie podlegają obowiązkowi posiadania naklejek.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_I_need_an_environmental_sticker_for_my_motor_bike"
     },
     {
         "position" : 6,
         "question" : "Czym jest strefa niskiej emisji?",
         "answer" : "A low emission zone is a specially marked area in a city in which vehicles with high vehicle emission values are forbidden from entering. Diesel vehicles and trucks especially are affected. Control is effected by monitoring the required stickers.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_a_low_emission_zone"
     },
     {
         "position" : 7,
         "question" : "W jaki sposób rozpoznam strefę niskiej emisji?",
         "answer" : "Strefy niskiej emisji oznaczone są odpowiednimi znakami drogowymi (zobacz zdjęcie po prawej), które oznaczają początek i koniec strefy kontroli emisji. Dodatkowo pojazane jest jakie naklejki są wymagane (czerwone, żółte lub zielone). Czego wielu nie wie, to to, że strefy te także obowiązują pojazdy z zagranicy.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_do_i_recognize_a_low_emission_zone"
     },
     {
         "position" : 8,
         "question" : "Jaki jest cel stref niskiej emisji?",
         "answer" : "Wszystkie pojazdy generują cząstki, które mogą prowadzić do zwiększenia ryzyka astmy lub innych chorób dróg oddechowych. Dzięki wprowadzeniu stref niskiej emisji liczy się na zmniejszenie ryzyka w strefach zamieszkania.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_use_of_low_emission_zones?"
     },
     {
         "position" : 9,
         "question" : "Kogo obowiązują strefy niskiej emisji?",
         "answer" : "Prawo mówi: wszystkie samochody osobowe i komercyjne, niezależnie od rodzaju napędu (benzyna, diesel, gaz, dodatkowo zasilane elektrycznie). Naklejka przede wszystkim ma doprowadzić do redukcji emisji w strefach zamieszkania.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "for_whom_are_low_emission_zones_valid"
     },
     {
         "position" : 10,
         "question" : "Jakiej naklejki potrzebuję dla mojego pojazdu?",
         "answer" : "Typ naklejki wynika z danych zawartych w dokumentach pojazdu. To skutkuje tzw. numerem zasadniczym emisji. Możesz przeanalizować swój dokument rejestracyjny wykorzystując test na stronie DEKRA.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "which_environmental_sticker_for_my_vehicle"
     },
     {
         "position" : 11,
         "question" : "Kary za przemieszczanie się bez naklejek.",
-        "answer" : "Kara za niedostosowanie się do wymogów wynosi 80 Euro, jednak nie we Flensburgu (od maja 2014 roku).",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "answer" : "Kara za niedostosowanie się do wymogów wynosi 100 Euro, jednak nie we Flensburgu (od listopad 2021 roku).",
         "label" : "penalties_for_driving_without_environmental_stickers"
     },
     {
         "position" : 12,
         "question" : "Jaka jest sytuacja z pozwoleniami na wyjątki?",
         "answer" : "Każde miasto ma swoje wyjątki. Przedstawione są one na specjalnej stronie poświęconej niskim emisjom. Jeśli nie ma tam dodatkowych informacji, obowiązują standardowe wyłączeni. Odwiedź odpowiednią witrynę Biura Środowiska i Transportu aby uzyskać najbardziej aktualną i precyzyjną informację. Co do zasady, należy wypełnić stosowny formularz i dodatkowe potwierdzenia konieczne są aby zdobyć pozwolenie na wyjątek do wjazdu do konkretnej strefy. Wyjątki są typowo ograniczone czasowo i nie zawsze odpowiadają ważności tablic rejestracyjnych. Wyjątki zą na ogół ważne od kilku dni do roku. Takie pozwolenie może kosztować od 10 do 300 Euro w zależności od lokalizacji i czasu obowiązywania.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_situation_with_exception_permits"
     },
     {
         "position" : 13,
         "question" : "Czy pojazdy zza granicy wymagają naklejek?",
         "answer" : "Tak. Żaden pojazd nie jest wykluczony z obowiązujących regulacji w zakresie naklejek, także pojazdy zagraniczne.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_foreign_vehicles_require_an_emission_sticker"
     },
     {
         "position" : 14,
         "question" : "Gdzie mam przykleić naklejkę?",
         "answer" : "Nie ma żadnych oficjalnych wytycznych co do miejsca umieszczenia naklejki. Rekomendujemy przykleić ją w dolnym prawym rogu przedniej szyby - od strony pasażera. Dzięki temu naklejka może być natychmiast dostrzeżona przez osoby zajmujące się weryfikacją.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "where_do_i_stick_the_sticker"
     },
     {
         "position" : 15,
         "question" : "Czy każde miasto potrzebuje innej naklejki środowiskowej?",
         "answer" : "Nie. Jedna naklejka jest obowiązująca we wszystkich strefach niskiej emisji. Naklejki nie są powiązane z żadną konkretną lokacją.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "does_every_city_need_a_different_environment_sticker"
     }
 ]

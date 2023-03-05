@@ -506,36 +506,6 @@
         }
     },
     {
-        "name" : "heidelberg",
-        "displayName" : "Heidelberg",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_heidelberg",
-            "displayName" : "Heidelberg",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-08-05",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/heidelberg",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 49.368,
-                "longitude" : 8.667917
-            },
-            "northEast" : {
-                "latitude" : 49.4425,
-                "longitude" : 8.717991
-            }
-        }
-    },
-    {
         "name" : "heidenheim",
         "displayName" : "Heidenheim an der Brenz",
         "childZones" : [{
@@ -656,36 +626,6 @@
             "northEast" : {
                 "latitude" : 49.061221,
                 "longitude" : 9.255589
-            }
-        }
-    },
-    {
-        "name" : "karlsruhe",
-        "displayName" : "Karlsruhe",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_karlsruhe",
-            "displayName" : "Karlsruhe",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Stadt Karlsruhe, Umwelt- und Arbeitsschutz",
-            "geometryUpdatedAt" : "2015-02-20",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/karlsruhe",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.992871,
-                "longitude" : 8.353277
-            },
-            "northEast" : {
-                "latitude" : 49.024043,
-                "longitude" : 8.424083
             }
         }
     },
@@ -1485,36 +1425,6 @@
             "northEast" : {
                 "latitude" : 51.634730,
                 "longitude" : 7.527284
-            }
-        }
-    },
-    {
-        "name" : "schramberg",
-        "displayName" : "Schramberg",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_schramberg",
-            "displayName" : "Schramberg",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2015-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-10-12",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/schramberg",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.206869,
-                "longitude" : 8.371802
-            },
-            "northEast" : {
-                "latitude" : 48.238550,
-                "longitude" : 8.416522
             }
         }
     },

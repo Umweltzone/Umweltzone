@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2021  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2023  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -46,13 +46,13 @@ public class ContentProviderTest {
             "lez_aachen", "lez_augsburg", "lez_berlin", "lez_bonn", "lez_bremen",
             "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_eschweiler",
             "lez_frankfurt_main", "lez_freiburg_breisgau", "lez_hagen", "lez_halle", "lez_hannover",
-            "lez_heidelberg", "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
-            "lez_karlsruhe", "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
+            "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
+            "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
             "lez_leonberg", "lez_limburg", "lez_ludwigsburg", "lez_magdeburg", "lez_mainz",
             "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
             "lez_muenster", "lez_neuss", "lez_neuulm", "lez_offenbach", "lez_osnabrueck",
             "lez_overath", "lez_pfinztal", "lez_pforzheim", "lez_remscheid", "lez_reutlingen",
-            "lez_ruhrregion", "lez_schramberg", "lez_schwaebisch_gmuend", "lez_siegen",
+            "lez_ruhrregion", "lez_schwaebisch_gmuend", "lez_siegen",
             "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",
             "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse",
@@ -145,7 +145,6 @@ public class ContentProviderTest {
         assertThat(faq.question).isNotNull().isNotEmpty();
         assertThat(faq.answer).isNotNull().isNotEmpty();
         assertThat(faq.label).isNotNull().isNotEmpty();
-        assertThat(faq.sourceUrl).isNotNull().isNotEmpty();
     }
 
     private void testAdministrativeZone(@NonNull AdministrativeZone administrativeZone) {

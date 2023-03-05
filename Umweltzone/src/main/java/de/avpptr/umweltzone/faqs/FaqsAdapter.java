@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2023  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -60,10 +60,8 @@ class FaqsAdapter extends BaseExpandableListAdapter {
     @Override
     public Object getChild(final int groupPosition, int childPosition) {
         final String faqAnswer = mFaqs.get(groupPosition).answer;
-        final String faqSourceUrl = mFaqs.get(groupPosition).sourceUrl;
         return new FaqAnswer() {{
             text = faqAnswer;
-            sourceUrl = faqSourceUrl;
         }};
     }
 
@@ -119,15 +117,6 @@ class FaqsAdapter extends BaseExpandableListAdapter {
         final String childText = faqAnswer.text;
         ViewHelper.setupTextViewSimple(convertView, R.id.faq_answer, childText);
 
-        final String sourceUrlText = faqAnswer.sourceUrl;
-        final String sourceUrlTitle = mContext.getString(R.string.faq_source_url_title_text);
-        ViewHelper.setupTextViewExtended(
-                convertView,
-                R.id.faq_source_url,
-                sourceUrlTitle,
-                sourceUrlText
-        );
-
         return convertView;
     }
 
@@ -140,7 +129,6 @@ class FaqsAdapter extends BaseExpandableListAdapter {
 
         String text;
 
-        String sourceUrl;
     }
 
 }

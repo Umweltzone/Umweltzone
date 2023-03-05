@@ -3,105 +3,90 @@
         "position" : 1,
         "question" : "¿Qué es el polvo fino y qué son las partículas finas?",
         "answer" : "Las partículas finas no son más que polvo fino, es decir, partículas sólidas en la atmósfera de menos de 15 micrometros (µm). Los objetivos de reducción de emisiones en la Unión Europea se adhieren a las pautas establecidas en la establecidas en la Norma Nacional de Calidad del Aire para las Partículas (Quality Standard for Particulate Matter ó PM) de la Agencia de Protección Ambiental de los Estados Unidos (US Environmental Protection Agency’s ó EPA), introducida en 1987. En el primer borrador de la directriz estadounidense se definió el Estándar PM10 que desde 2005 ha servido como valor umbral en la Unión Europea. A diferencia de las definiciones comúnmente citadas, el estándar PM10 no es una definición precisa de las emisiones con un diámetro aerodinámico de 10 µm, sino más bien un intento de replicar el comportamiento de la secreción de las vías respiratorias superiores: las partículas con un diámetro aerodinámico de menos de un 1 µm están totalmente incluidas, se considerará que un cierto porcentaje de partículas más grandes disminuirá con el aumento del tamaño de las misma y eventualmente alcanzará el 0% por cada 15 µm, Técnicamente, esto corresponde a la aplicación de la llamada función de ponderación (en la jerga de los especialistas una curva de separación o función de separación) sobre las emisiones (en la práctica, esto se logra mediante una entrada selectiva por tamaño a los instrumentos de medición). De la forma de esta función de ponderación se deriva el nombre del estándar PM10, porque a 10 µm se tiene en cuenta exactamente la mitad de las partículas en la ponderación. Puede encontrar más información sobre las partículas en Wikipedia (https://es.wikipedia.org/wiki/Part%C3%ADculas_en_suspensi%C3%B3n)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_fine_dust"
     },
     {
         "position" : 2,
         "question" : "¿Por qué es el polvo dañino",
         "answer" : "No hay concentraciones inofensivas de polvo fino. Para la población de la Unión Europea, se produce en promedio una reducción de un año en la esperanza de vida a raiz de la emisión de partículas. Los límites de exposición definidos por la Unión Europea son más o menos arbitrarios y siguen lo que se considera políticamente factible en lugar de lo que se considera científicamente relevante. Entre los ejemplos de los efectos por la contaminación por partículas finas se encuentran, incremento de la severidad de los síntomas por alergias, aumento de la posibilidad de ataques de asma, problemas respiratorios y cáncer de pulmón, así como un incremento en el riesgo de infecciones del oído medio en niños. Además, se suponen efectos en el sistema cardiovascular (por ejemplo, infarto de miocardio). El alcance del impacto de las partículas en las vías respiratorias depende, entre otras cosas, de la toxicidad de las mismas, entre ellas las causadas por plomo, vanadio, berilio y mercurio, y del tamaño de las misma partículas en si misma: Las partículas más pequeñas puede penetrar más profundamente dentro de los pulmones.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "why_is_dust_harmful"
     },
     {
         "position" : 3,
         "question" : "¿Cómo son asignadas las etiquetas ambientales?",
         "answer" : "La asignación de las etiquetas para la protección del ambiental está regulada por ciertos criterios establecidos legalmente. Los vehículos a diésel sin filtros de partículas, dependiendo de su antigüedad, son marcados con etiquetas ambientales de color amarillo o rojo. Los vehículos más nuevos a diésel con filtro de partículas son asignados con etiquetas de color verde la mayoría de las veces. Los vehículos a gasolina con convertidores catalíticos regulados (G-Cat) son, sin ninguna excepción asignados con una etiqueta ambiental color verde; Por eso es que puede suceder que vehículos bastante antiguos también puedan obtener una etiqueta de color verde. Estos son principalmente para motores a gasolina con convertidores catalíticos regulados. Los vehículos a gasolina sin convertidores catalíticos regulados son asignados con una etiqueta de color verde o sin ninguna etiqueta. Es decir, con los vehículos a gasolina se asigna una etiqueta de color verde o no se asigna ninguna. Para comprobar que etiqueta ambiental se debe asignar a su vehículo, por favor consulte a través de internet la página de DEKRA.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_are_environmental_stickers_allocated"
     },
     {
         "position" : 4,
         "question" : "¿Por cuanto tiempo son las etiquetas ambientales válidas?",
         "answer" : "La etiqueta ambiental está pegada en la matrícula del vehículo, lo que significa que una renovación solo es necesaria con un cambio de matrícula (ejemplo: por reubicación ó por venta)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_long_are_the_environmental_stickers_valid"
     },
     {
         "position" : 5,
         "question" : "¿Necesito uno etiqueta ambiental para mi motocicleta?",
         "answer" : "No, lo vehiculos con dos o tres ruedas están exentos.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_I_need_an_environmental_sticker_for_my_motor_bike"
     },
     {
         "position" : 6,
         "question" : "¿Qué es una zona de baja emisión?",
         "answer" : "Una zona de baja emisión, es un área especialmente delimitada en una ciudad en la se prohibe la entrada a los vehículos con altos valores de emisión. Camiones de carga y vehículos a diésel están especialmente afectados. El control se realiza mediante la supervisión de las etiquetas que se requieren.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_a_low_emission_zone"
     },
     {
         "position" : 7,
         "question" : "¿Cómo hago para recocer una zona de baja emisión",
         "answer" : "Las zonas de baja emisión se identifican con las señales de tráfico adecuadas (ver la imagen a la derecha), que indican el comienzo y el final de una zona en control de emisiones, además se muestra cual color de etiqueta es necesario para circular (rojas, amarillas o verdes). Muchos no saben que, estas zonas también aplican a los vehículos con matrícula extranjera.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "how_do_i_recognize_a_low_emission_zone"
     },
     {
         "position" : 8,
         "question" : "¿Para qué sirven las zonas de baja emisión",
         "answer" : "Todos los vehículos generan partículas que pueden provocar un aumento del asma y de otras enfermedades pulmonares. Mediante la introducción de zonas de baja emisión, se espera prevenir esto en las áreas metropolitanas.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_use_of_low_emission_zones?"
     },
     {
         "position" : 9,
         "question" : "¿Para quiénes son validas las zonas de baja emisión?",
         "answer" : "De acuerdo a la ley: Para todos los carros de pasajeros y vehículos comerciales, independientemente del tipo de propulsión (motores de combustión interna - gasolina, diesel o gas, adicionalmente propulsados eléctricamente). La etiqueta ambiental tiene como principal objetivo contribuir a la reducción de los contaminantes en las áreas metropolitanas.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "for_whom_are_low_emission_zones_valid"
     },
     {
         "position" : 10,
         "question" : "¿Cuál etiqueta ambiental le corresponde a mi vehículo?",
         "answer" : "La asignación de una etiqueta ambiental se basará en los datos introducidos en los documentos del vehículo. Esto resulta en lo que llama el Registro de Contaminante (en inglés Pollutant Key Number). Puede descifrar el documento de matriculación de su vehículo realizando la prueba en la página web de DEKRA.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "which_environmental_sticker_for_my_vehicle"
     },
     {
         "position" : 11,
         "question" : "Sanciones por conducir sin etiqueta ambiental.",
-        "answer" : "La sanción por el incumplimiento es una multa de 80 Euros, pero no aplica en Flensburg (Válido desde Mayo del 2014).",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "answer" : "La sanción por el incumplimiento es una multa de 100 Euros, pero no aplica en Flensburg (Válido desde Noviembre del 2021).",
         "label" : "penalties_for_driving_without_environmental_stickers"
     },
     {
         "position" : 12,
         "question" : "¿Cuál es la situación de los permisos de excepción?",
         "answer" : "Cada ciudad tiene sus propias excepciones; Estas se explican en las páginas de las zonas de baja emisión especiales de nuestro sitio web. Si no especifica, entonces se aplican las excepciones estándares que normalmente se emplean allí más otros casos especiales. Visita tu respectiva Oficina de Ambiente y Transporte para obtener la información más reciente y precisa. Como regla, se debe completar un formulario y proporcionar evidencia adicional (como un certificado de no actualización) para obtener una excepción para la zona específica. Las excepciones normalmente tienen un límite de tiempo y no siempre corresponde a la validez de los datos de la matrícula actual. Las excepciones son válidas desde unos días hasta un año. Un permiso puede costar desde 10 a 300 Euros dependiendo de la duración y la ubicación.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "what_is_the_situation_with_exception_permits"
     },
     {
         "position" : 13,
         "question" : "¿Los vehículos extranjeros requieren de una etiqueta de emisión?",
         "answer" : "Sí. Cualquier vehículo que no esté específicamente exento de acuerdo con las regulaciones de etiquetas ambientales requieren una etiqueta; En consecuencia, todos los vehículos registrados en el extranjero.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "do_foreign_vehicles_require_an_emission_sticker"
     },
     {
         "position" : 14,
         "question" : "¿Dónde tengo que pegar la etiqueta?",
         "answer" : "No hay un reglamento que indique exactamente donde se debe pegar la etiqueta. Recomendamos pegarla en la parte inferior derecha de la ventana del pasajero de adelante. Así, la etiqueta puede ser reconocida inmediatamente por funcionarios de la oficina de asuntos públicos ú otros departamentos municipales.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "where_do_i_stick_the_sticker"
     },
     {
         "position" : 15,
         "question" : "¿Se necesita una etiqueta ambiental diferente para cada ciudad?",
         "answer" : "No. Una única etiqueta es válida para todas las zonas de baja emisión. Las etiquetas no están limitadas a una ubicación específica.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "does_every_city_need_a_different_environment_sticker"
     }
 ]

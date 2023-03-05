@@ -3,105 +3,90 @@
         "position" : 1,
         "question" : "Was ist Feinstaub?",
         "answer" : "Feinstaub ist nichts anderes als feiner Staub, also feste Partikel in der Atmosphäre die kleiner als 15 µm sind. Für die Emissionsreduktionsziele der europäischen Union erfolgt die Definition des Feinstaubs gemäß den im Jahre 1987 eingeführten National Air Quality Standard for Particulate Matter (kurz als PM-Standard bezeichnet) der US-amerikanischen Umweltschutzbehörde EPA (Environmental Protection Agency). In der ersten Fassung der amerikanischen Richtlinie wurde der Standard PM10 definiert, für den seit Anfang 2005 auch in der EU ein Grenzwert einzuhalten ist. Im Gegensatz zu der üblicherweise genannten Definition stellt PM10 keine scharfe Aufteilung der Immissionen bei einem aerodynamischen Durchmesser von 10 Mikrometern (10 µm) dar; vielmehr wurde versucht, das Abscheideverhalten der oberen Atemwege nachzubilden: Partikel mit einem aerodynamischen Durchmesser von weniger als 1 µm werden vollständig einbezogen, bei größeren Partikeln wird ein gewisser Prozentsatz gewertet, der mit zunehmender Partikelgröße abnimmt und bei ca. 15 µm schließlich 0 % erreicht. Technisch gesehen entspricht dies der Anwendung einer Gewichtungsfunktion (in der Fachsprache Trennkurve bzw. Trennfunktion) auf die Immissionen (in der Praxis wird dies durch einen größenselektiven Einlass an den Messgeräten erreicht). Aus dem Verlauf dieser Gewichtungsfunktion leitet sich letztendlich auch die Bezeichnung PM10 ab, da bei ca. 10 µm genau die Hälfte der Partikel in die Gewichtung eingehen. Weitere Informationen zum Thema Feinstaub finden Sie bei Wikipedia (http://de.wikipedia.org/wiki/Feinstaub)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "was_ist_feinstaub"
     },
     {
         "position" : 2,
         "question" : "Wieso ist Feinstaub schädlich?",
         "answer" : "Es gibt keine unschädliche Feinstaubkonzentration. Für die Bevölkerung der europäischen Union ergibt sich im Durchschnitt eine um mindestens ein Jahr reduzierte Lebens-erwartung durch die Gesamtfeinstaubbelastung. Die von der EU festgelegten Grenzwerte sind mehr oder weniger willkürlich gegriffen und folgen eher dem als politisch machbar Erachteten, als wissenschaftlich relevanten Informationen. Zu den Auswirkungen von Feinstaub gehören die Verstärkung von Allergiesymptomen, die Zunahme von asthmatischen Anfällen, Atemwegsbeschwerden und Lungenkrebs, sowie ein gesteigertes Risiko von Mittelohrentzündungen bei Kindern. Daneben werden auch Auswirkungen auf Herz-Kreislauf-Erkrankungen (z.B. Herzinfarkt) angenommen. Das Ausmaß der Auswirkung von Partikeln auf die Atemwege hängt, neben der Toxizität der Partikel u.a. Blei, Vanadium, Beryllium und Quecksilber, auch von der Größe der Partikel ab: je kleiner ein Partikel ist, desto tiefer kann es in die Lunge eindringen.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "wieso_ist_feinstaub_schaedlich"
     },
     {
         "position" : 3,
         "question" : "Wie geschieht die Zuordnung einer Umweltplakette?",
         "answer" : "Die Zuteilung der Umweltplaketten ist gesetzlich an bestimmte Kriterien gerichtet. Diesel-Fahrzeuge ohne Partikelfilter erhalten je nach alter des Fahrzeuges eine rote bzw. gelbe Umweltplakette. Neuere Fahrzeuge mit Diesel-Partikelfilter erhalten meisst eine grüne Umweltplakette. Benziner mit geregeltem Katalysator (G-Kat) erhalten immer eine grüne Umweltplakette. Deshalb kann es auch vorkommen das sehr alte Fahrzeuge eine grüne Umweltplakette erhalten. Diese sind meisst Benziner mit geregeltem Katalysator. Benziner ohne geregeltem Katalysator erhalten entweder eine grüne oder gar keine Umweltplakette. Bei Benzinern gibt es also entweder grün, oder gar keine. Falls Sie selber prüfen möchten, was für eine Umweltplakette Ihr Fahrzeug erhält, können Sie dies auf der Seite der DEKRA machen.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "zuordnung_umweltplakette"
     },
     {
         "position" : 4,
         "question" : "Wie lange gilt die Umweltplakette?",
         "answer" : "Die Umweltplakette ist an das Kennzeichen des Autos gebunden. Das bedeutet, dass eine Erneuerung nur bei änderung des Kennzeichens nötig ist. (z.B. Umzug, Verkauf).",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "geltungsdauer_umweltplakette"
     },
     {
         "position" : 5,
         "question" : "Brauche ich eine Umweltplakette für mein Motorrad?",
         "answer" : "Nein, zwei, bzw. dreirädrige Fahrzeuge sind von der Umweltplkakettenpflicht befreit.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "umweltplakette_fuer_motorrad_noetig"
     },
     {
         "position" : 6,
         "question" : "Was ist eine Umweltzone?",
         "answer" : "Die Umweltzone ist ein speziell ausgeschildertes Gebiet in einer Stadt, in welchem Fahrzeugen mit hohen Fahrzeugemissionswerten das fahren verboten wird. Davon sind besonders Dieselfahrzeuge und LKWs betroffen. Durch die Plakettenpflicht wird dies überwacht.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "was_ist_eine_umweltzone"
     },
     {
         "position" : 7,
         "question" : "Wie erkenne ich eine Umweltzone?",
         "answer" : "Die Umweltzonen werden in den dafür nötigen Zonen durch Schilder gekennzeichnet (siehe Abbildung rechts), welche Sie auf den Anfang und das Ende der Umweltzone, sowie die dort gültigen Plaketten (rot, gelb oder grün) hinweisen. Was viele nicht wissen: Diese Zonen gelten auch für Fahrzeuge mit ausländischen Kennzeichen.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "umweltzone_erkennen"
     },
     {
         "position" : 8,
         "question" : "Was bringen die Umweltzonen?",
         "answer" : "Jedes Fahrzeug verursacht Feinstaub was zur Zunahme von Asthma- und Lungenerkrankungen führen kann. Durch die Einführung der Umweltzonen soll dies in den Ballungszentren verhindert werden.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "warum_umweltzone"
     },
     {
         "position" : 9,
         "question" : "Für wen gelten die Umweltzonen?",
         "answer" : "Das Gesetz besagt: Für alle Personenkraftwagen und Nutzfahrzeuge, unabhängig von der Antriebsart (mit Verbrennungsmotoren - Benzin, Diesel oder Gas - und mit Elektroantrieb). Die Umweltplakette soll vor allem in den Städten zu einer Verringerung der Schadstoffe beitragen.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "geltungsbereich_umweltplakette"
     },
     {
         "position" : 10,
         "question" : "Welche Umweltplakette ist für mein Fahrzeug?",
         "answer" : "Die Zuordnung der Umweltplakette wird aufgrund der in den Fahrzeugpapieren eingetragenen Schadstoff-Schlüssel-nummern erfolgen. Wie Sie Ihren Fahrzeugschein entschlüsseln können erfahren bei der onlineprüfung der DEKRA.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "welche_umweltplakette_fuer_mein_pkw"
     },
     {
         "position" : 11,
         "question" : "Strafen die ohne Umweltplakette drohen",
-        "answer" : "Die Strafe bei Nichtbeachtung beträgt 80 Euro, dafür keinen Punkt in Flensburg. (seit Mai 2014)",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
+        "answer" : "Die Strafe bei Nichtbeachtung beträgt 100 Euro, dafür keinen Punkt in Flensburg. (seit November 2021)",
         "label" : "strafe_ohne_umweltplakette"
     },
     {
         "position" : 12,
         "question" : "Wie sieht es mit Ausnahmegenehmigungen aus?",
         "answer" : "Jede Stadt hat Ihre eigenen Ausnahmeregelungen. Diese sind in unseren speziellen Umweltzonen-Bereichen auf unserer Homepage erläutert. Falls wir dort keine angegeben haben, gelten meisst die Standardausnahmeregeln und noch einige mehr. Um genaue Informationen zu erlangen ist ein Besuch beim jeweiligen Amt für Umwelt und Verkehr von nöten. Dort muss im Regelfall ein Formular und einige Nachweise (wie z.B. nicht Nachrüstbarkeitsbescheinigung) erbracht werden um eine Ausnahmegenehmigung für die jeweilge Umweltzone zu erhalten. Ausnahmegenehmigungen sind jedoch Zeitlich begrenzt und nicht für immer in Verbindung mit dem aktuellen Kennzeichen gültig. Ausnahmegenehmigungen sind meisst von einigen Tagen bis max. einem Jahr gültig. So eine Genehmigung kann von 10 - 300 Euro (abhängig von Stadt und Dauer) kosten.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "ausnahme_regelungen"
     },
     {
         "position" : 13,
         "question" : "Brauchen ausländische Fahrzeuge Umweltplaketten?",
         "answer" : "Ja, jedes Fahrzeug welches nicht laut der Kennzeichnungsverordnung von der Umweltplakettenpflicht befreit ist, benötigt eine Umweltplakette. somit auch im Ausland zugelassene Fahrzeuge.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "umweltplakette_auslaendische_fahrzeuge"
     },
     {
         "position" : 14,
         "question" : "Wohin muss ich die Umweltplakette kleben?",
         "answer" : "Es gibt keinen klare Gesetzlichen Richtlinien die besagen, wo genau die Umweltplakette hingeklebt werden soll. Wir raten jedem Kunden dazu, diese in die rechte untere Ecke der Beifahrerseite (vorne) zu kleben. Somit können die Beamten des Ordnungsamtes oder anderer Dienststellen des Staates diese sofort erkennen.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "umweltplakette_wohin_kleben"
     },
     {
         "position" : 15,
         "question" : "Braucht jede Stadt eine andere Umweltplakette?",
         "answer" : "Nein, eine reicht für alle Umweltzonen aus. Die Plakette ist nicht Ortsgebunden.",
-        "sourceUrl" : "https://plakette24.de/pages/umweltplakette-faq",
         "label" : "braucht_jede_stadt_andere_umweltplakette"
     }
 ]

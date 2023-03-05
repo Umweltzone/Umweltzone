@@ -215,10 +215,6 @@
         <item name="android:dividerHeight">@dimen/tiny_spacer</item>
     </style>
 
-    <style name="Faq.Content.SourceUrl" parent="TextView.Base.Small">
-        <item name="android:textColorHighlight">@color/text_link_pressed_background</item>
-    </style>
-
     <style name="Faq.Content.Question" parent="TextView.Base.Medium">
         <item name="android:textColor">@color/faq_question_foreground</item>
         <item name="android:paddingLeft">@dimen/huge_spacer</item>
