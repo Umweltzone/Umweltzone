@@ -16,8 +16,7 @@
   -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="de.avpptr.umweltzone">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <supports-screens android:anyDensity="true" />
 
