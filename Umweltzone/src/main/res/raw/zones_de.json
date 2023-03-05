@@ -630,36 +630,6 @@
         }
     },
     {
-        "name" : "karlsruhe",
-        "displayName" : "Karlsruhe",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_karlsruhe",
-            "displayName" : "Karlsruhe",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Stadt Karlsruhe, Umwelt- und Arbeitsschutz",
-            "geometryUpdatedAt" : "2015-02-20",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/karlsruhe",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.992871,
-                "longitude" : 8.353277
-            },
-            "northEast" : {
-                "latitude" : 49.024043,
-                "longitude" : 8.424083
-            }
-        }
-    },
-    {
         "name" : "cologne",
         "displayName" : "Köln",
         "childZones" : [{

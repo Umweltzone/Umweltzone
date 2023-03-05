@@ -47,7 +47,7 @@ public class ContentProviderTest {
             "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_eschweiler",
             "lez_frankfurt_main", "lez_freiburg_breisgau", "lez_hagen", "lez_halle", "lez_hannover",
             "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
-            "lez_karlsruhe", "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
+            "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
             "lez_leonberg", "lez_limburg", "lez_ludwigsburg", "lez_magdeburg", "lez_mainz",
             "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
             "lez_muenster", "lez_neuss", "lez_neuulm", "lez_offenbach", "lez_osnabrueck",

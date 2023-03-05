@@ -148,7 +148,9 @@ public class MainActivity extends BaseActivity {
                 // "erfurt" has been removed because it was discontinued as of 07.05.2021
                 "erfurt",
                 // "heidelberg" has been removed because it was discontinued as of 01.03.2023
-                "heidelberg"
+                "heidelberg",
+                // "karlsruhe" has been removed because it was discontinued as of 01.03.2023
+                "karlsruhe"
         );
         migrateZonesRemoval(zoneNames);
     }
