@@ -260,7 +260,6 @@
 
     <!-- FaqActivity -->
     <string name="faq_activity_title">FAQ</string>
-    <string name="faq_source_url_title_text">Bron</string>
 
     <!-- ZoneNotDrawableDialog -->
     <string name="zone_not_drawable_title">

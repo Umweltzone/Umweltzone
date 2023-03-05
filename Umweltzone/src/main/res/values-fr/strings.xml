@@ -146,7 +146,6 @@
     <string name="no_city_selected_status_desc">Les informations détaillées sur la zone ne peuvent pas être affichées. Merci de sélectionner une zone.</string>
     <string name="no_city_selected_select_zone">Sélectionnez une zone</string>
     <string name="faq_activity_title">FAQ</string>
-    <string name="faq_source_url_title_text">Source</string>
     <string name="zone_not_drawable_title">Aidez nous maintenant &#8230;</string>
     <string name="zone_not_drawable_notice">
         <![CDATA[&#8230; pour que les <b>zones à faibles émissions de %1$s</b> puissent être affichées aussi.<br /><br />

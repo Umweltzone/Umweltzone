@@ -145,7 +145,6 @@ public class ContentProviderTest {
         assertThat(faq.question).isNotNull().isNotEmpty();
         assertThat(faq.answer).isNotNull().isNotEmpty();
         assertThat(faq.label).isNotNull().isNotEmpty();
-        assertThat(faq.sourceUrl).isNotNull().isNotEmpty();
     }
 
     private void testAdministrativeZone(@NonNull AdministrativeZone administrativeZone) {

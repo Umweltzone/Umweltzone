@@ -259,7 +259,6 @@
 
     <!-- FaqActivity -->
     <string name="faq_activity_title">Preguntas freguentes</string>
-    <string name="faq_source_url_title_text">Fuente</string>
 
     <!-- ZoneNotDrawableDialog -->
     <string name="zone_not_drawable_title">
