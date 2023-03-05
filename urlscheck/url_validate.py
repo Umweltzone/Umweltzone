@@ -2,7 +2,6 @@
 
 import csv
 import human_curl as hurl
-import numpy as np
 
 
 INPUT_FILE = "urls.txt"
