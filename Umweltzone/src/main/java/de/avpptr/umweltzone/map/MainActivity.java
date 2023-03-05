@@ -151,6 +151,8 @@ public class MainActivity extends BaseActivity {
                 "heidelberg",
                 // "karlsruhe" has been removed because it was discontinued as of 01.03.2023
                 "karlsruhe",
+                // "pfinztal" has been removed because it was discontinued as of 01.03.2023
+                "pfinztal",
                 // "schramberg" has been removed because it was discontinued as of 01.03.2023
                 "schramberg"
         );

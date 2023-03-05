@@ -1230,36 +1230,6 @@
         }
     },
     {
-        "name" : "pfinztal",
-        "displayName" : "Pfinztal",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_pfinztal",
-            "displayName" : "Pfinztal",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Gemeindeverwaltung Pfinztal, Fachbereich IV - Bauen und Planen",
-            "geometryUpdatedAt" : "2015-01-16",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/pfinztal",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.952200,
-                "longitude" : 8.500020
-            },
-            "northEast" : {
-                "latitude" : 49.031648,
-                "longitude" : 8.599817
-            }
-        }
-    },
-    {
         "name" : "pforzheim",
         "displayName" : "Pforzheim",
         "childZones" : [{
