@@ -1429,36 +1429,6 @@
         }
     },
     {
-        "name" : "schramberg",
-        "displayName" : "Schramberg",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_schramberg",
-            "displayName" : "Schramberg",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2015-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-10-12",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/schramberg",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.206869,
-                "longitude" : 8.371802
-            },
-            "northEast" : {
-                "latitude" : 48.238550,
-                "longitude" : 8.416522
-            }
-        }
-    },
-    {
         "name" : "schwaebisch_gmuend",
         "displayName" : "Schwäbisch Gmünd",
         "childZones" : [{
