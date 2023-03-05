@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2021  Lars Sadau, Tobias Preuss
+ *  Copyright (C) 2023  Lars Sadau, Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -46,7 +46,7 @@ public class ContentProviderTest {
             "lez_aachen", "lez_augsburg", "lez_berlin", "lez_bonn", "lez_bremen",
             "lez_darmstadt", "lez_dinslaken", "lez_duesseldorf", "lez_eschweiler",
             "lez_frankfurt_main", "lez_freiburg_breisgau", "lez_hagen", "lez_halle", "lez_hannover",
-            "lez_heidelberg", "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
+            "lez_heidenheim", "lez_heilbronn", "lez_herrenberg", "lez_ilsfeld",
             "lez_karlsruhe", "lez_cologne", "lez_krefeld", "lez_langenfeld", "lez_leipzig",
             "lez_leonberg", "lez_limburg", "lez_ludwigsburg", "lez_magdeburg", "lez_mainz",
             "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
