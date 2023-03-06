@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2022  Tobias Preuss
+  Copyright (C) 2023  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,25 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="7.3.0"
+        versioncode="703000">
+        <change>
+            Android: Die App ist jetzt für Android 13 optimiert.
+        </change>
+        <change>
+            Neu: Umweltzonen Heidelberg, Karlsruhe, Schramberg und Pfinztal entfernt, da diese nicht fortbestehen. Danke Peter G.
+        </change>
+        <change>
+            Neu: Die Sprache der App kann unabhängig von der Systemsprache eingestellt werden, wenn Android 13 oder neuer verwendet wird.
+        </change>
+        <change>
+            Aktualisierung: Das Bußgeld wurde von 80€ auf 100€ geändert. Siehe FAQs. Danke Seckin D.
+        </change>
+        <change>
+            Aktualisierung: Die Quellenverweise in den FAQs wurden entfernt, weil die zugehörige Webseite eingestellt wurde.
+        </change>
+    </release>
     <release
         version="7.2.0"
         versioncode="702000">

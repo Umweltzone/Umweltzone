@@ -1,5 +1,46 @@
 # Umweltzone changelog
 
+## [v.7.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.3.0)
+
+* Published: 2023-03-06
+
+### Features, improvements and maintenance
+
+* Remove low emission zone of Pfinztal., [e5922](https://bitbucket.org/tbsprs/umweltzone/commits/e5922d966afec2c161dcf88722569dc12e1dda2f)
+* Remove "source" from FAQs since "plakette24.de" does no longer exist., [adaaa](https://bitbucket.org/tbsprs/umweltzone/commits/adaaae421273a2eb40e3655a9fe7279929008380)
+* Remove low emission zone of Schramberg., [8a188](https://bitbucket.org/tbsprs/umweltzone/commits/8a18834dcb2e91341c3ad77d7f43ee51561f4344)
+* Remove low emission zone of Karlsruhe., [022ee](https://bitbucket.org/tbsprs/umweltzone/commits/022eeba53723defe24210493295803a662c328b2)
+* Remove low emission zone of Heidelberg., [c74c2](https://bitbucket.org/tbsprs/umweltzone/commits/c74c22e5a50debbc13740aced2c2293319e62d6b)
+* Update penalty amount in FAQs., [7e1b7](https://bitbucket.org/tbsprs/umweltzone/commits/7e1b7c41233ececb42df6d9f4d407eb2f3656306)
+* Support per-app language preferences., [e1e2d](https://bitbucket.org/tbsprs/umweltzone/commits/e1e2d56134e16739cbc5df5f00022e138048a0c7)
+
+### Libraries, build tools, SDK
+
+* Use roadsigns v.4.4.0., [67385](https://bitbucket.org/tbsprs/umweltzone/commits/67385ba2d78738a1a8698b070cd61c01c99a28a6)
+* Ease identifying which development version is running., [ff6fc](https://bitbucket.org/tbsprs/umweltzone/commits/ff6fc532a9928ffa76dee4331064af4405fb5b90)
+* Replace deprecated "package" attribute with "namespace" declaration., [b402a](https://bitbucket.org/tbsprs/umweltzone/commits/b402a05e787ddf0d0d7923785030028161a31eba)
+* Document "lifecycle-viewmodel-ktx" build error., [ae0b1](https://bitbucket.org/tbsprs/umweltzone/commits/ae0b184cd9e47a824ea5421a57367988f36ea4e8)
+* Use androidx.core:core-ktx:1.9.0., [21ae8](https://bitbucket.org/tbsprs/umweltzone/commits/21ae8227d1c32b53087577c3b074faec45aa2f7d)
+* Use targetSdk 33 and compileSdk 33 (Android 13)., [c0d6d](https://bitbucket.org/tbsprs/umweltzone/commits/c0d6d37d8bd4c0c36f61e297822589df71f2a66c)
+* Use kotlin v.1.8.10., [3913c](https://bitbucket.org/tbsprs/umweltzone/commits/3913c4850bc880096091ebe1122d81d2ae585fc8)
+* Use Android Gradle Plugin v.7.4.2., [38568](https://bitbucket.org/tbsprs/umweltzone/commits/385681a8ddcfd358e0bc8423bd225908da9a75b5)
+* Use jackson 2.13.5., [38542](https://bitbucket.org/tbsprs/umweltzone/commits/38542a7f2b08f4abdda5538a600cedfc13738662)
+* Use play-services-maps v.18.1.0 + play-services-base v.18.2.0., [e0e50](https://bitbucket.org/tbsprs/umweltzone/commits/e0e50f69ee1916120432ead7d505e132753c7c01)
+* Use snackengage-playrate v.0.30., [f5910](https://bitbucket.org/tbsprs/umweltzone/commits/f59106b86d5632cfbe09d3e0203b074006b0e93b)
+* Use material 1.6.1., [72d65](https://bitbucket.org/tbsprs/umweltzone/commits/72d652187687a2b18d80dadafcdf8fb74857aca9)
+* Use constraintlayout v.2.1.4., [a0d2f](https://bitbucket.org/tbsprs/umweltzone/commits/a0d2f00815d1cfe6f5fc1e51688420ddf3321a12)
+* Use Espresso 3.5.1 & JUnit Extensions 1.1.5., [549c5](https://bitbucket.org/tbsprs/umweltzone/commits/549c5b7e616e031868d815bb78faad2decd21478)
+* Use strict-version-matcher-plugin v.1.2.4., [177cc](https://bitbucket.org/tbsprs/umweltzone/commits/177cc31c7587450c14cd0d5e48a38b066eba3cf8)
+* Use dexcount-gradle-plugin v.4.0.0., [541c2](https://bitbucket.org/tbsprs/umweltzone/commits/541c2431a610b64252cb6c2b903f14620173eca3)
+* Use gradle-versions-plugin v.0.46.0., [32a96](https://bitbucket.org/tbsprs/umweltzone/commits/32a964c57d74dcb2963d3c78b2eddf220f25a08f)
+* Use build tools v.33.0.2., [6b313](https://bitbucket.org/tbsprs/umweltzone/commits/6b313b13ad241ce030d160590f8e80f4dda6c7d1)
+* Use Gradle wrapper v.7.6.1., [c5a69](https://bitbucket.org/tbsprs/umweltzone/commits/c5a69e53f92000d09f9988baa80a4eab748a8c98)
+* Avoid unnecessary task configuration., [cb195](https://bitbucket.org/tbsprs/umweltzone/commits/cb1955403d797a4a7bb623bd3ed37c6f2adfd40e)
+* Migrate "packagingOptions" DSL properties to sub-blocks., [88384](https://bitbucket.org/tbsprs/umweltzone/commits/883841c53c66e3f550289987d5ce4fb9640b914c)
+* Replace deprecated "lintOptions" with "lint" DSL., [ca04b](https://bitbucket.org/tbsprs/umweltzone/commits/ca04ba09b4a1fb692c57faf98baa9531c7a9b6e4)
+* Replace Kotlin synthetics with view binding, [39be8](https://bitbucket.org/tbsprs/umweltzone/commits/39be8013f24e27c4c89acc7912ce149f27a24e11)
+
+
 ## [v.7.2.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.2.0)
 
 * Published: 2022-03-30

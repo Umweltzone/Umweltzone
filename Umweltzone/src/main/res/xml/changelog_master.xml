@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2022  Tobias Preuss
+  Copyright (C) 2023  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,25 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="7.3.0"
+        versioncode="703000">
+        <change>
+            Android: The app is now optimized for Android 13.
+        </change>
+        <change>
+            New: Remove low emission zone of Heidelberg, Karlsruhe, Schramberg and Pfinztal which have been discontinued. Thanks Peter G.
+        </change>
+        <change>
+            New: The language of the app can be configured independently from the system language if you run Android 13 or newer.
+        </change>
+        <change>
+            Update: The penalty amount has changed from 80€ to 100€. See FAQs. Thanks Seckin D.
+        </change>
+        <change>
+            Update: The source references in the FAQs have been removed because the related website has been discontinued.
+        </change>
+    </release>
     <release
         version="7.2.0"
         versioncode="702000">
