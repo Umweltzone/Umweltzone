@@ -30,6 +30,8 @@ val ChildZone.roadSignType: RoadSign.Type
         zoneNumber == LowEmissionZoneNumbers.YELLOW -> RoadSign.Type.EnvironmentalBadge.YellowGreen
         zoneNumber == LowEmissionZoneNumbers.GREEN -> RoadSign.Type.EnvironmentalBadge.Green
 
+        zoneNumber == LowEmissionZoneNumbers.LIGHT_BLUE && fileName == "lez_munich" ->
+            RoadSign.Type.DieselProhibition.FreeAsOfEuro5VExceptDeliveryVehiclesStuttgart // reuse Stuttgart
         zoneNumber == LowEmissionZoneNumbers.LIGHT_BLUE && fileName == "lez_stuttgart" ->
             RoadSign.Type.DieselProhibition.FreeAsOfEuro5VExceptDeliveryVehiclesStuttgart
         zoneNumber == LowEmissionZoneNumbers.DARK_BLUE && fileName == "dpz_hamburg_max_brauer_allee" ->
