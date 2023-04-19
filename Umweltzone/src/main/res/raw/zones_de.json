@@ -1034,6 +1034,17 @@
             "geometrySource" : "Stadt München",
             "geometryUpdatedAt" : "2013-10-14",
             "listOfCities" : []
+        }, {
+            "type" : "diesel-prohibition-zone",
+            "fileName" : "lez_munich",
+            "displayName" : "",
+            "zoneNumber" : "5",
+            "zoneNumberForResidentsSince" : "2023-02-01",
+            "zoneNumberForNonResidentsSince" : "2023-02-01",
+            "prohibitedVehicles" : [],
+            "isCongruentWithLowEmissionZone" : true,
+            "geometrySource" : "Stadt Stuttgart",
+            "geometryUpdatedAt" : "2013-10-14"
         }],
         "contactEmails" : null,
         "urlBadgeOnline" : "",
