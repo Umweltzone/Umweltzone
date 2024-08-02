@@ -1,7 +1,7 @@
 @file:JvmName("CameraUpdateHelper")
 
 /*
- *  Copyright (C) 2018  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ package de.avpptr.umweltzone.utils
 
 import android.app.Activity
 import android.util.DisplayMetrics
+import androidx.core.content.ContextCompat
 
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -30,7 +31,7 @@ private const val PADDING = 50
 
 fun getCameraUpdate(activity: Activity, latLngBounds: LatLngBounds): CameraUpdate {
     val displayMetrics = DisplayMetrics()
-    activity.windowManager.defaultDisplay.getMetrics(displayMetrics)
+    ContextCompat.getDisplayOrDefault(activity).getMetrics(displayMetrics)
     val height = displayMetrics.heightPixels
     val width = displayMetrics.widthPixels
     var padding = PADDING

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2023  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -30,6 +30,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.os.BundleCompat;
 import androidx.core.text.HtmlCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentActivity;
@@ -40,7 +41,6 @@ import java.util.List;
 
 import de.avpptr.umweltzone.BuildConfig;
 import de.avpptr.umweltzone.R;
-import de.avpptr.umweltzone.extensions.ParcelableCompat;
 import de.avpptr.umweltzone.models.AdministrativeZone;
 import de.avpptr.umweltzone.utils.IntentHelper;
 import de.avpptr.umweltzone.utils.SnackBarHelper;
@@ -65,8 +65,8 @@ public class ZoneNotDrawableDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final FragmentActivity activity = requireActivity();
-        Bundle extras = getArguments();
-        Parcelable parcelable = ParcelableCompat.getParcelableCompat(extras, BUNDLE_KEY_ADMINISTRATIVE_ZONE);
+        Bundle extras = requireArguments();
+        Parcelable parcelable = BundleCompat.getParcelable(extras, BUNDLE_KEY_ADMINISTRATIVE_ZONE, Parcelable.class);
         final AdministrativeZone administrativeZone = Parcels.unwrap(parcelable);
         if (administrativeZone == null) {
             throw new NullPointerException("Recent low emission zone is null.");
