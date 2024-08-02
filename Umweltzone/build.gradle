@@ -49,7 +49,7 @@ android {
     namespace "de.avpptr.umweltzone"
 
     compileSdk 33
-    buildToolsVersion "33.0.2"
+    buildToolsVersion "35.0.0"
 
     defaultConfig {
         minSdk 21
