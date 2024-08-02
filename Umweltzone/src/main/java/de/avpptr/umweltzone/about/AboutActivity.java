@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2021  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -38,7 +38,7 @@ public class AboutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         ViewHelper.setupTextViewSimple(this,
-                R.id.buildVersion, "v." + getBuildVersionName());
+                R.id.buildVersion, "v." + BuildConfig.VERSION_NAME);
         String buildTimeValue = getString(R.string.build_time);
         ViewHelper.setupTextViewSimple(this,
                 R.id.buildTime, buildTimeValue);

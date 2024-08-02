@@ -18,8 +18,6 @@
 package de.avpptr.umweltzone.base;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
@@ -133,17 +131,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 .add(containerViewId, fragment, fragmentTag)
                 .disallowAddToBackStack()
                 .commit();
-    }
-
-    protected String getBuildVersionName() {
-        final PackageManager packageManager = getPackageManager();
-        try {
-            assert packageManager != null;
-            final PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);
-            return packageInfo.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            throw new IllegalStateException(e.getMessage());
-        }
     }
 
     protected void showChangeLogDialog() {
