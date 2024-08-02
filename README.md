@@ -47,7 +47,7 @@ reach out by [creating a new issue][github-issue-tracker].
 ## Android versions
 
 The application is designed to work both on smartphones and on tablets.
-Android 4.4 (Kit Kat) and newer versions are supported.
+Android 5.0 (Lollipop) and newer versions are supported.
 
 
 ## Feedback

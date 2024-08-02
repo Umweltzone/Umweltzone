@@ -53,11 +53,10 @@ android {
     buildToolsVersion "33.0.2"
 
     defaultConfig {
-        minSdk 19
+        minSdk 21
         targetSdk 33
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        multiDexEnabled true
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
         resValue("string", "build_time", "\"${buildTime()}\"")
@@ -145,7 +144,6 @@ configurations {
 }
 
 dependencies {
-    implementation "androidx.multidex:multidex:$multidexVersion"
     implementation "androidx.cardview:cardview:$cardViewVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"
