@@ -44,6 +44,7 @@ import de.avpptr.umweltzone.utils.StringHelper
 import org.junit.Before
 import org.junit.Test
 import java.util.*
+import info.metadude.kotlin.library.roadsigns.R as RoadSignsR
 
 @LargeTest
 class DieselProhibitionsZoneDetailsFragmentTest {
@@ -79,7 +80,7 @@ class DieselProhibitionsZoneDetailsFragmentTest {
         launchActivity(defaultAdministrativeZone)
 
         assertSectionTitleTextIsDisplayed()
-        assertRoadSignIsDisplayed(context.getString(R.string.diesel_prohibition_cars_free_until_euro_5_v_open_for_residents))
+        assertRoadSignIsDisplayed(context.getString(RoadSignsR.string.diesel_prohibition_cars_free_until_euro_5_v_open_for_residents))
         assertDisplayNameTextIsDisplayed(defaultDieselProhibitionZone.displayName)
         assertAllowedEmissionStandardInDpzTextIsDisplayed(defaultDieselProhibitionZone)
         assertIsCongruentWithLowEmissionZoneTextIsDisplayed()
@@ -105,7 +106,7 @@ class DieselProhibitionsZoneDetailsFragmentTest {
         }
 
         launchActivity(getAdministrativeZone(dieselProhibitionZone))
-        assertRoadSignIsDisplayed(context.getString(R.string.diesel_prohibition_hgvs_free_until_euro_v_open_for_residents_hamburg))
+        assertRoadSignIsDisplayed(context.getString(RoadSignsR.string.diesel_prohibition_hgvs_free_until_euro_v_open_for_residents_hamburg))
     }
 
     @Test
@@ -215,7 +216,7 @@ class DieselProhibitionsZoneDetailsFragmentTest {
         launchActivity(getAdministrativeZone(dieselProhibitionZone, "stuttgart"))
         assertSectionTitleTextIsDisplayed()
         assertDisplayNameTextIsNotDisplayed()
-        assertRoadSignIsDisplayed(context.getString(R.string.diesel_prohibition_free_as_of_euro_5_v_except_delivery_vehicles_stuttgart))
+        assertRoadSignIsDisplayed(context.getString(RoadSignsR.string.diesel_prohibition_free_as_of_euro_5_v_except_delivery_vehicles_stuttgart))
         assertAllowedEmissionStandardInDpzTextIsDisplayed(dieselProhibitionZone)
         assertIsCongruentWithLowEmissionZoneTextIsNotDisplayed()
         assertZoneNumberForResidentsSinceTextIsNotDisplayed()
@@ -230,7 +231,7 @@ class DieselProhibitionsZoneDetailsFragmentTest {
     }
 
     private fun assertRoadSignIsDisplayed(roadSignDescription: String) {
-        onView(withId(R.id.genericRoadSignView))
+        onView(withId(RoadSignsR.id.genericRoadSignView))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
                 .check(matches(withContentDescription(roadSignDescription)))

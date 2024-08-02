@@ -1,7 +1,7 @@
 buildscript {
     ext {
         // Plugins
-        androidGradlePluginVersion = "7.4.2"
+        androidGradlePluginVersion = "8.5.2"
         gradleVersionsPluginVersion = "0.51.0"
         strictVersionMatcherPluginVersion = "1.2.4"
 
@@ -14,7 +14,7 @@ buildscript {
         espressoVersion = "3.5.1"
         jacksonVersion = "2.13.5" // minSdk 26 is required as of 2.14
         junitVersion = "4.13.2"
-        kotlinVersion = "1.8.10"
+        kotlinVersion = "1.9.25"
         materialVersion = "1.6.1" // compileSdk 32 is required as of 1.7.0, potential lifecycle-viewmodel-ktx conflict, see: https://issuetracker.google.com/issues/238425626
         parcelerVersion = "1.1.13"
         playServicesBaseVersion = "18.2.0"
