@@ -476,36 +476,6 @@
         }
     },
     {
-        "name" : "hannover",
-        "displayName" : "Hannover",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_hannover",
-            "displayName" : "Hannover",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2010-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/hannover",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 52.336039,
-                "longitude" : 9.686785
-            },
-            "northEast" : {
-                "latitude" : 52.414181,
-                "longitude" : 9.793166
-            }
-        }
-    },
-    {
         "name" : "heidenheim",
         "displayName" : "Heidenheim an der Brenz",
         "childZones" : [{

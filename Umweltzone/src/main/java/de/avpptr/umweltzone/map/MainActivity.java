@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2023  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -147,6 +147,8 @@ public class MainActivity extends BaseActivity {
                 "balingen",
                 // "erfurt" has been removed because it was discontinued as of 07.05.2021
                 "erfurt",
+                // "hannover" has been removed because it was discontinued as of 22.02.2024
+                "hannover",
                 // "heidelberg" has been removed because it was discontinued as of 01.03.2023
                 "heidelberg",
                 // "karlsruhe" has been removed because it was discontinued as of 01.03.2023
