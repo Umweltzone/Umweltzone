@@ -51,7 +51,7 @@ public class ContentProviderTest {
             "lez_leonberg", "lez_limburg", "lez_ludwigsburg", "lez_magdeburg", "lez_mainz",
             "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
             "lez_muenster", "lez_neuss", "lez_neuulm", "lez_offenbach", "lez_osnabrueck",
-            "lez_overath", "lez_pforzheim", "lez_remscheid", "lez_reutlingen",
+            "lez_overath", "lez_pforzheim", "lez_remscheid",
             "lez_ruhrregion", "lez_schwaebisch_gmuend", "lez_siegen",
             "lez_stuttgart", "lez_tuebingen", "lez_ulm", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",

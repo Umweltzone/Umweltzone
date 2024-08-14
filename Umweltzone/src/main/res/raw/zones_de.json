@@ -1306,36 +1306,6 @@
         }
     },
     {
-        "name" : "reutlingen",
-        "displayName" : "Reutlingen",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_reutlingen",
-            "displayName" : "Reutlingen",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-02-06",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/reutlingen",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.412679,
-                "longitude" : 9.114866
-            },
-            "northEast" : {
-                "latitude" : 48.578614,
-                "longitude" : 9.327436
-            }
-        }
-    },
-    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "childZones" : [{
