@@ -160,7 +160,9 @@ public class MainActivity extends BaseActivity {
                 // "schramberg" has been removed because it was discontinued as of 01.03.2023
                 "schramberg",
                 // "tuebingen" has been removed because it was discontinued as of 04.06.2024
-                "tuebingen"
+                "tuebingen",
+                // "ulm" has been removed because it was discontinued as of 04.06.2024
+                "ulm"
         );
         migrateZonesRemoval(zoneNames);
     }

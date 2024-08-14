@@ -53,7 +53,7 @@ public class ContentProviderTest {
             "lez_muenster", "lez_neuss", "lez_neuulm", "lez_offenbach", "lez_osnabrueck",
             "lez_overath", "lez_pforzheim", "lez_remscheid",
             "lez_ruhrregion", "lez_schwaebisch_gmuend", "lez_siegen",
-            "lez_stuttgart", "lez_ulm", "lez_urbach", "lez_wendlingen",
+            "lez_stuttgart", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",
             "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse",
             "dpz_berlin", "dpz_darmstadt_huegelstrasse", "dpz_darmstadt_heinrichstrasse"

@@ -1451,36 +1451,6 @@
         }
     },
     {
-        "name" : "ulm",
-        "displayName" : "Ulm",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_ulm",
-            "displayName" : "Ulm",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/ulm",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.373231,
-                "longitude" : 9.933629
-            },
-            "northEast" : {
-                "latitude" : 48.436947,
-                "longitude" : 10.037466
-            }
-        }
-    },
-    {
         "name" : "urbach",
         "displayName" : "Urbach",
         "childZones" : [{
