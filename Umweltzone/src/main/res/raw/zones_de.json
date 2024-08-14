@@ -1091,36 +1091,6 @@
         }
     },
     {
-        "name" : "neuulm",
-        "displayName" : "Neu-Ulm",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_neuulm",
-            "displayName" : "Neu-Ulm",
-            "zoneNumber" : 3,
-            "zoneNumberSince" : "2012-11-05",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 3,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Stadt Neu-Ulm, Geoinformation und Vermessung",
-            "geometryUpdatedAt" : "2019-06-11",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/neu-ulm",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.385776,
-                "longitude" : 9.988370
-            },
-            "northEast" : {
-                "latitude" : 48.400408,
-                "longitude" : 10.027063
-            }
-        }
-    },
-    {
         "name" : "offenbach",
         "displayName" : "Offenbach",
         "childZones" : [{
