@@ -1451,36 +1451,6 @@
         }
     },
     {
-        "name" : "tuebingen",
-        "displayName" : "Tübingen",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_tuebingen",
-            "displayName" : "Tübingen",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2015-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Landesamt für Geoinformation und Landentwicklung, Baden-Württemberg, www.lgl-bw.de",
-            "geometryUpdatedAt" : "2015-01-01",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/tuebingen",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.450584,
-                "longitude" : 8.964478
-            },
-            "northEast" : {
-                "latitude" : 48.593713,
-                "longitude" : 9.131075
-            }
-        }
-    },
-    {
         "name" : "ulm",
         "displayName" : "Ulm",
         "childZones" : [{
