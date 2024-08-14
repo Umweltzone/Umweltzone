@@ -161,6 +161,8 @@ public class MainActivity extends BaseActivity {
                 "reutlingen",
                 // "schramberg" has been removed because it was discontinued as of 01.03.2023
                 "schramberg",
+                // "schwaebisch_gmuend" has been removed because it was discontinued as of 01.05.2023
+                "schwaebisch_gmuend",
                 // "tuebingen" has been removed because it was discontinued as of 04.06.2024
                 "tuebingen",
                 // "ulm" has been removed because it was discontinued as of 04.06.2024

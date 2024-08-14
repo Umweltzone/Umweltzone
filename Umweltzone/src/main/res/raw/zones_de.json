@@ -1320,36 +1320,6 @@
         }
     },
     {
-        "name" : "schwaebisch_gmuend",
-        "displayName" : "Schwäbisch Gmünd",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_schwaebisch_gmuend",
-            "displayName" : "Schwäbisch Gmünd",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/schwaebisch-gmuend",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.782110,
-                "longitude" : 9.763678
-            },
-            "northEast" : {
-                "latitude" : 48.809672,
-                "longitude" : 9.835066
-            }
-        }
-    },
-    {
         "name" : "siegen",
         "displayName" : "Siegen",
         "childZones" : [{

@@ -52,7 +52,7 @@ public class ContentProviderTest {
             "lez_mannheim", "lez_marburg", "lez_moenchengladbach", "lez_muehlacker", "lez_munich",
             "lez_muenster", "lez_neuss", "lez_offenbach", "lez_osnabrueck",
             "lez_overath", "lez_pforzheim", "lez_remscheid",
-            "lez_ruhrregion", "lez_schwaebisch_gmuend", "lez_siegen",
+            "lez_ruhrregion", "lez_siegen",
             "lez_stuttgart", "lez_urbach", "lez_wendlingen",
             "lez_wuppertal",
             "dpz_hamburg_max_brauer_allee", "dpz_hamburg_stresemannstrasse",
