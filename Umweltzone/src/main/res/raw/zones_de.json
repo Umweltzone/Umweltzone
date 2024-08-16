@@ -476,36 +476,6 @@
         }
     },
     {
-        "name" : "hannover",
-        "displayName" : "Hannover",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_hannover",
-            "displayName" : "Hannover",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2010-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2013-12-17",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/hannover",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 52.336039,
-                "longitude" : 9.686785
-            },
-            "northEast" : {
-                "latitude" : 52.414181,
-                "longitude" : 9.793166
-            }
-        }
-    },
-    {
         "name" : "heidenheim",
         "displayName" : "Heidenheim an der Brenz",
         "childZones" : [{
@@ -1121,36 +1091,6 @@
         }
     },
     {
-        "name" : "neuulm",
-        "displayName" : "Neu-Ulm",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_neuulm",
-            "displayName" : "Neu-Ulm",
-            "zoneNumber" : 3,
-            "zoneNumberSince" : "2012-11-05",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 3,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Stadt Neu-Ulm, Geoinformation und Vermessung",
-            "geometryUpdatedAt" : "2019-06-11",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/neu-ulm",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.385776,
-                "longitude" : 9.988370
-            },
-            "northEast" : {
-                "latitude" : 48.400408,
-                "longitude" : 10.027063
-            }
-        }
-    },
-    {
         "name" : "offenbach",
         "displayName" : "Offenbach",
         "childZones" : [{
@@ -1336,36 +1276,6 @@
         }
     },
     {
-        "name" : "reutlingen",
-        "displayName" : "Reutlingen",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_reutlingen",
-            "displayName" : "Reutlingen",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2015-02-06",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/reutlingen",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.412679,
-                "longitude" : 9.114866
-            },
-            "northEast" : {
-                "latitude" : 48.578614,
-                "longitude" : 9.327436
-            }
-        }
-    },
-    {
         "name" : "ruhrregion",
         "displayName" : "Ruhrgebiet",
         "childZones" : [{
@@ -1406,36 +1316,6 @@
             "northEast" : {
                 "latitude" : 51.634730,
                 "longitude" : 7.527284
-            }
-        }
-    },
-    {
-        "name" : "schwaebisch_gmuend",
-        "displayName" : "Schwäbisch Gmünd",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_schwaebisch_gmuend",
-            "displayName" : "Schwäbisch Gmünd",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Regierungspräsidium Stuttgart",
-            "geometryUpdatedAt" : "2015-01-15",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/schwaebisch-gmuend",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.782110,
-                "longitude" : 9.763678
-            },
-            "northEast" : {
-                "latitude" : 48.809672,
-                "longitude" : 9.835066
             }
         }
     },
@@ -1507,66 +1387,6 @@
             "northEast" : {
                 "latitude" : 48.858391,
                 "longitude" : 9.307480
-            }
-        }
-    },
-    {
-        "name" : "tuebingen",
-        "displayName" : "Tübingen",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_tuebingen",
-            "displayName" : "Tübingen",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2015-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "Landesamt für Geoinformation und Landentwicklung, Baden-Württemberg, www.lgl-bw.de",
-            "geometryUpdatedAt" : "2015-01-01",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/tuebingen",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.450584,
-                "longitude" : 8.964478
-            },
-            "northEast" : {
-                "latitude" : 48.593713,
-                "longitude" : 9.131075
-            }
-        }
-    },
-    {
-        "name" : "ulm",
-        "displayName" : "Ulm",
-        "childZones" : [{
-            "type" : "low-emission-zone",
-            "fileName" : "lez_ulm",
-            "displayName" : "Ulm",
-            "zoneNumber" : 4,
-            "zoneNumberSince" : "2013-01-01",
-            "nextZoneNumberAsOf" : "",
-            "abroadLicensedVehicleZoneNumber" : 4,
-            "abroadLicensedVehicleZoneNumberUntil" : "",
-            "geometrySource" : "OpenStreetMap",
-            "geometryUpdatedAt" : "2014-02-12",
-            "listOfCities" : []
-        }],
-        "contactEmails" : null,
-        "urlBadgeOnline" : "",
-        "urlUmweltPlaketteDe" : "https://www.green-zones.eu/de/umweltzonen/deutschland/ulm",
-        "boundingBox" : {
-            "southWest" : {
-                "latitude" : 48.373231,
-                "longitude" : 9.933629
-            },
-            "northEast" : {
-                "latitude" : 48.436947,
-                "longitude" : 10.037466
             }
         }
     },
