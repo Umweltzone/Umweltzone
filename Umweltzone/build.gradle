@@ -83,7 +83,6 @@ android {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-DEBUG"
-            zipAlignEnabled true
             resValue("string", "git_sha", "\"${gitSha()} - ${gitBranchName()}\"")
         }
         release {
