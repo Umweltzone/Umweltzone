@@ -1,9 +1,8 @@
 buildscript {
     ext {
         // Plugins
-        androidGradlePluginVersion = "7.4.2"
-        dexcountGradlePluginVersion = "4.0.0"
-        gradleVersionsPluginVersion = "0.46.0"
+        androidGradlePluginVersion = "8.5.2"
+        gradleVersionsPluginVersion = "0.51.0"
         strictVersionMatcherPluginVersion = "1.2.4"
 
         // Libraries
@@ -11,20 +10,19 @@ buildscript {
         cardViewVersion = "1.0.0"
         ckChangelogVersion = "1.2.2"
         constraintLayoutVersion = "2.1.4"
-        coreKtxVersion = "1.9.0"
-        espressoVersion = "3.5.1"
+        coreKtxVersion = "1.13.1"
+        espressoVersion = "3.6.1"
         jacksonVersion = "2.13.5" // minSdk 26 is required as of 2.14
         junitVersion = "4.13.2"
-        kotlinVersion = "1.8.10"
-        materialVersion = "1.6.1" // compileSdk 32 is required as of 1.7.0, potential lifecycle-viewmodel-ktx conflict, see: https://issuetracker.google.com/issues/238425626
-        multidexVersion = "2.0.1"
+        kotlinVersion = "1.9.25"
+        materialVersion = "1.12.0"
         parcelerVersion = "1.1.13"
-        playServicesBaseVersion = "18.2.0"
-        playServicesMapsVersion = "18.1.0"
-        preferenceVersion = "1.2.0"
+        playServicesBaseVersion = "18.5.0"
+        playServicesMapsVersion = "19.0.0"
+        preferenceVersion = "1.2.1"
         roadSignsVersion = "4.4.0"
         snackengagePlayrateVersion = "0.30"
-        testExtJunitVersion = "1.1.5"
+        testExtJunitVersion = "1.2.1"
         tracedroidVersion = "3.1"
         typedPreferencesVersion = "2.1.0"
     }
@@ -36,7 +34,6 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$androidGradlePluginVersion"
-        classpath "com.getkeepsafe.dexcount:dexcount-gradle-plugin:$dexcountGradlePluginVersion"
         classpath "com.github.ben-manes:gradle-versions-plugin:$gradleVersionsPluginVersion"
         classpath "com.google.android.gms:strict-version-matcher-plugin:$strictVersionMatcherPluginVersion"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"

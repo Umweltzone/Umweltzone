@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2021  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -19,10 +19,10 @@ package de.avpptr.umweltzone;
 
 import static com.google.android.gms.maps.MapsInitializer.Renderer.LATEST;
 
+import android.app.Application;
 import android.content.SharedPreferences;
 
 import androidx.annotation.NonNull;
-import androidx.multidex.MultiDexApplication;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.gms.maps.MapsInitializer;
@@ -33,7 +33,7 @@ import org.ligi.tracedroid.logging.Log;
 
 import de.avpptr.umweltzone.prefs.PreferencesHelper;
 
-public class Umweltzone extends MultiDexApplication implements OnMapsSdkInitializedCallback {
+public class Umweltzone extends Application implements OnMapsSdkInitializedCallback {
 
     private static final String LOG_TAG = "Umweltzone";
 

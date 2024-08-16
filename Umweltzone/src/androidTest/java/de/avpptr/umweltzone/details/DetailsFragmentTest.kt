@@ -42,6 +42,7 @@ import org.hamcrest.Matchers.not
 import org.junit.Before
 import org.junit.Test
 import java.util.*
+import info.metadude.kotlin.library.roadsigns.R as RoadSignsR
 
 @LargeTest
 class DetailsFragmentTest {
@@ -95,9 +96,9 @@ class DetailsFragmentTest {
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
 
-        onView(withId(R.id.genericRoadSignView))
+        onView(withId(RoadSignsR.id.genericRoadSignView))
                 .perform(scrollTo())
-                .check(matches(withContentDescription(R.string.environmental_badges_content_description_green)))
+                .check(matches(withContentDescription(RoadSignsR.string.environmental_badges_content_description_green)))
 
         onView(withId(R.id.detailsLezListOfCitiesView))
                 .check(matches(withEffectiveVisibility(Visibility.GONE)))

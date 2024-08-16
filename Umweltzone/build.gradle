@@ -5,7 +5,6 @@ apply plugin: "com.android.application"
 apply plugin: "kotlin-android"
 apply plugin: "kotlin-kapt"
 apply plugin: "com.google.android.gms.strict-version-matcher-plugin"
-apply plugin: "com.getkeepsafe.dexcount"
 
 repositories {
     google()
@@ -49,15 +48,14 @@ allprojects {
 android {
     namespace "de.avpptr.umweltzone"
 
-    compileSdk 33
-    buildToolsVersion "33.0.2"
+    compileSdk 34
+    buildToolsVersion "35.0.0"
 
     defaultConfig {
-        minSdk 19
-        targetSdk 33
+        minSdk 21
+        targetSdk 34
         versionCode versionMajor * 100000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
         versionName "${versionMajor}.${versionMinor}.${versionPatch}"
-        multiDexEnabled true
         buildConfigField "String", "BUILD_VERSION", "\"${versionName}\""
         buildConfigField "int", "BUILD_VERSION_CODE", "${versionCode}"
         resValue("string", "build_time", "\"${buildTime()}\"")
@@ -85,7 +83,6 @@ android {
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-DEBUG"
-            zipAlignEnabled true
             resValue("string", "git_sha", "\"${gitSha()} - ${gitBranchName()}\"")
         }
         release {
@@ -97,6 +94,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
 
@@ -116,12 +114,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11
+        jvmTarget = JavaVersion.VERSION_17
     }
 }
 
@@ -145,7 +143,6 @@ configurations {
 }
 
 dependencies {
-    implementation "androidx.multidex:multidex:$multidexVersion"
     implementation "androidx.cardview:cardview:$cardViewVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "com.google.android.material:material:$materialVersion"

@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020  Tobias Preuss
+ *  Copyright (C) 2024  Tobias Preuss
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -18,8 +18,6 @@
 package de.avpptr.umweltzone.base;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
@@ -75,42 +73,40 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home: {
-                Intent intent = IntentHelper.getHomeIntent(this);
-                startActivityIfNeeded(intent, 0);
-                return true;
-            }
-            case R.id.action_cities:
-                startActivity(IntentHelper.getCitiesIntent(this));
-                return true;
-            case R.id.action_city_info:
-                AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(this);
-                startActivity(IntentHelper.getDetailsIntent(this, administrativeZone));
-                return true;
-            case R.id.action_faq:
-                startActivity(IntentHelper.getFaqsIntent(this));
-                return true;
-            case R.id.action_feedback:
-                startActivity(IntentHelper.getFeedbackIntent(this));
-                return true;
-            case R.id.action_share_app:
-                Intent chooserShareIntent = IntentHelper.getChooserShareIntent(this);
-                startActivity(chooserShareIntent);
-                return true;
-            case R.id.action_changelog:
-                showFullChangeLogDialog();
-                return true;
-            case R.id.action_settings:
-                startActivity(IntentHelper.getSettingsIntent(this));
-                return true;
-            case R.id.action_about:
-                Intent intent = IntentHelper.getAboutIntent(this);
-                startActivity(intent);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int itemId = item.getItemId();
+        if (itemId == android.R.id.home) {
+            Intent intent = IntentHelper.getHomeIntent(this);
+            startActivityIfNeeded(intent, 0);
+            return true;
+        } else if (itemId == R.id.action_cities) {
+            startActivity(IntentHelper.getCitiesIntent(this));
+            return true;
+        } else if (itemId == R.id.action_city_info) {
+            AdministrativeZone administrativeZone = AdministrativeZone.getRecentAdministrativeZone(this);
+            startActivity(IntentHelper.getDetailsIntent(this, administrativeZone));
+            return true;
+        } else if (itemId == R.id.action_faq) {
+            startActivity(IntentHelper.getFaqsIntent(this));
+            return true;
+        } else if (itemId == R.id.action_feedback) {
+            startActivity(IntentHelper.getFeedbackIntent(this));
+            return true;
+        } else if (itemId == R.id.action_share_app) {
+            Intent chooserShareIntent = IntentHelper.getChooserShareIntent(this);
+            startActivity(chooserShareIntent);
+            return true;
+        } else if (itemId == R.id.action_changelog) {
+            showFullChangeLogDialog();
+            return true;
+        } else if (itemId == R.id.action_settings) {
+            startActivity(IntentHelper.getSettingsIntent(this));
+            return true;
+        } else if (itemId == R.id.action_about) {
+            Intent intent = IntentHelper.getAboutIntent(this);
+            startActivity(intent);
+            return true;
         }
+        return super.onOptionsItemSelected(item);
     }
 
     protected void initFragment(Fragment fragment, String fragmentTag) {
@@ -135,17 +131,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 .add(containerViewId, fragment, fragmentTag)
                 .disallowAddToBackStack()
                 .commit();
-    }
-
-    protected String getBuildVersionName() {
-        final PackageManager packageManager = getPackageManager();
-        try {
-            assert packageManager != null;
-            final PackageInfo packageInfo = packageManager.getPackageInfo(getPackageName(), 0);
-            return packageInfo.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            throw new IllegalStateException(e.getMessage());
-        }
     }
 
     protected void showChangeLogDialog() {

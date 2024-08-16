@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2023 Fredrik Henricsson
+  Copyright (C) 2024 Fredrik Henricsson
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -48,7 +48,7 @@
     <!-- AboutActivity / Copyright -->
     <string name="appinfo_copyright_title">Idé och erkännande</string>
     <string name="appinfo_copyright_content">
-        (&#169;) Tobias Preuss, 2013 &#8211; 2023
+        (&#169;) Tobias Preuss, 2013 &#8211; 2024
     </string>
 
     <!-- AboutActivity / Description -->

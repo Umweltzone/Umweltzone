@@ -1,8 +1,8 @@
-dist: focal
+dist: jammy
 
 language: java
 
-jdk: openjdk11
+jdk: openjdk17
 
 env:
   global:
@@ -53,7 +53,7 @@ before_script:
   - chmod +x gradlew
 
   # Reduce memory usage / avoid OutOfMemoryError with Gradle 4.10.3
-  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxPermSize=768m" >> gradle.properties
+  - echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxMetaspaceSize=768m" >> gradle.properties
 
 script:
   - ./gradlew clean testDebug assembleDebug -PdisablePreDex
