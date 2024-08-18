@@ -12,8 +12,8 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-def versionMajor = 7
-def versionMinor = 3
+def versionMajor = 8
+def versionMinor = 0
 def versionPatch = 0
 def versionBuild = 0 // bump for dogfood builds, public betas, etc.
 

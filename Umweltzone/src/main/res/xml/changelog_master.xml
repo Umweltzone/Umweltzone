@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-  Copyright (C) 2023  Tobias Preuss
+  Copyright (C) 2024  Tobias Preuss
 
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -15,6 +15,26 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <changelog>
+    <release
+        version="8.0.0"
+        versioncode="800000">
+        <change>
+            Android: The app is now optimized for Android 14.
+        </change>
+        <change>
+            Android: Now the lowest, supported version is Android 5.0
+            (Lollipop) due to updated restrictions applied by used libraries.
+        </change>
+        <change>
+            New: Add Diesel prohibition zone for Munich (matches low emission
+            zone). Thanks Heinz J. and Hans-Jürgen G.
+        </change>
+        <change>
+            New: Remove low emission zones of Schwäbisch Gmünd, Neu-Ulm, Ulm,
+            Tübingen, Reutlingen and Hannover which have been discontinued.
+            Thanks Andreas H., Hans-Peter K. and Klothilde R.
+        </change>
+    </release>
     <release
         version="7.3.0"
         versioncode="703000">

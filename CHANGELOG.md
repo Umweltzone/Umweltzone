@@ -1,5 +1,38 @@
 # Umweltzone changelog
 
+## [v.8.0.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.8.0.0)
+
+* Published: 2024-08-18
+
+### Features, improvements and maintenance
+
+* Remove low emission zone of Schwäbisch Gmünd., [fd016](https://bitbucket.org/tbsprs/umweltzone/commits/fd016bc3eee54d72f73f4ae57881c752e411674c)
+* Remove low emission zone of Neu-Ulm., [1ca5e](https://bitbucket.org/tbsprs/umweltzone/commits/1ca5ec2593fe2875940f7aca6555d05dc065839b)
+* Remove low emission zone of Ulm., [3edfc](https://bitbucket.org/tbsprs/umweltzone/commits/3edfc9fea5cf9aa7d206ca1d1f7ad6be07bbf497)
+* Remove low emission zone of Tübingen., [6bf65](https://bitbucket.org/tbsprs/umweltzone/commits/6bf65f2101ec467c7a8c77de36f559fbc8b5b134)
+* Remove low emission zone of Reutlingen., [8d5da](https://bitbucket.org/tbsprs/umweltzone/commits/8d5da7fa26ebf814291cb09d6a9328a460694ddd)
+* Remove low emission zone of Hannover., [98115](https://bitbucket.org/tbsprs/umweltzone/commits/98115827796acd0c9e7a4b7d26fd12a1d8c57986)
+* Add Diesel prohibition zone for Munich (matches low emission zone)., [147f3](https://bitbucket.org/tbsprs/umweltzone/commits/147f330d9b1a7a67ae8b73cea3488ff2460eeb8f)
+
+### Libraries, build tools, SDK
+
+* Use material:1.12.0., [62f26](https://bitbucket.org/tbsprs/umweltzone/commits/62f2677f4601c65c2ae9644ff2af28f46a141dd1)
+* Use core-ktx:1.13.1., [9db7a](https://bitbucket.org/tbsprs/umweltzone/commits/9db7a892bffc9eb27e03c1d38de81ff105e40999)
+* Use play-services-maps:19.0.0 & play-services-base:18.5.0., [0dd78](https://bitbucket.org/tbsprs/umweltzone/commits/0dd7858626a39b2feb742ff0f79ded0b2f2cb641)
+* Use Espresso 3.6.1 & JUnit Extensions 1.2.1., [89bfc](https://bitbucket.org/tbsprs/umweltzone/commits/89bfc7718e0db75c0528344ad40beb621e85c8ad)
+* Remove redundant `zipAlignEnabled` configuration., [8639a](https://bitbucket.org/tbsprs/umweltzone/commits/8639a365927550ba01a336903b81902d6f527d16)
+* Use targetSdk 33 and compileSdk 34 (Android 14)., [2a5d0](https://bitbucket.org/tbsprs/umweltzone/commits/2a5d07509a1746d51b1d331d2d2d2b57f9004853)
+* Use build tools 35.0.0., [de30e](https://bitbucket.org/tbsprs/umweltzone/commits/de30ec62a2ff49fa01e92185440f285775183fa6)
+* Use preference:1.2.1., [d6d35](https://bitbucket.org/tbsprs/umweltzone/commits/d6d35950f6be58d899e08be56a7ce0105b617444)
+* Use gradle-versions-plugin:0.51.0., [16492](https://bitbucket.org/tbsprs/umweltzone/commits/16492786853d9fe150f163f33558eda69a71a115)
+* Remove no longer needed dexcount-gradle-plugin., [fb749](https://bitbucket.org/tbsprs/umweltzone/commits/fb749e0bbc2b5685dc08a0829db93b18da088839)
+* Drop support for Android 4.4* Kit Kat (API 20) and below., [cc9b2](https://bitbucket.org/tbsprs/umweltzone/commits/cc9b22ac60d686f3a88111c33a68dfa83ffae7e9)
+* Simplify deriving build version name., [25a00](https://bitbucket.org/tbsprs/umweltzone/commits/25a00ab94bc3392d4b4f4e7336eef9a1fcbbb7ca)
+* Use constant expression to address non-final fields in R classes., [66d1f](https://bitbucket.org/tbsprs/umweltzone/commits/66d1f02acf7c3c983724288eee6179368717ecb4)
+* Remove inapplicable Google Analytics section from data privacy statement., [668ca](https://bitbucket.org/tbsprs/umweltzone/commits/668ca4f0706f801efe133ee7d8555716c4e65240)
+* Update copyright year., [c8321](https://bitbucket.org/tbsprs/umweltzone/commits/c832110abe28c163a1008bb39d5e6dddae1390b6)
+
+
 ## [v.7.3.0](https://bitbucket.org/tbsprs/umweltzone/commits/tag/v.7.3.0)
 
 * Published: 2023-03-06
