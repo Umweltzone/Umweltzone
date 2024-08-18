@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import csv
-import human_curl as hurl
+import requests
 
 
 INPUT_FILE = "urls.txt"
@@ -28,11 +28,11 @@ def validate_urls(url_result, current_urls):
 def validate_url(url_result, url):
     print("Validating %s" % url)
     try:
-        r = hurl.get(url)
+        r = requests.get(url)
         if r.status_code != HTTP_OK:
             valid_url = r.headers.get("location")
             url_result.append([r.status_code, url, valid_url])
-    except hurl.CurlError as e:
+    except requests.RequestException as e:
         print("Error: %s" % e)
 
 
