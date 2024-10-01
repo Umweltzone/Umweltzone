@@ -1,7 +1,7 @@
 buildscript {
     ext {
         // Plugins
-        androidGradlePluginVersion = "8.5.2"
+        androidGradlePluginVersion = "8.6.1"
         gradleVersionsPluginVersion = "0.51.0"
         strictVersionMatcherPluginVersion = "1.2.4"
 
