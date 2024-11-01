@@ -9,7 +9,7 @@ buildscript {
         assertjAndroidVersion = "1.2.0"
         cardViewVersion = "1.0.0"
         ckChangelogVersion = "1.2.2"
-        constraintLayoutVersion = "2.1.4"
+        constraintLayoutVersion = "2.2.0"
         coreKtxVersion = "1.13.1"
         espressoVersion = "3.6.1"
         jacksonVersion = "2.13.5" // minSdk 26 is required as of 2.14
