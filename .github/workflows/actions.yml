@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches-ignore:
+      - '**-v**'
+  pull_request:
+    branches-ignore:
+      - '**-v**'
+
+env:
+  ANDROID_HOME: $HOME/android-sdk
+  COMMAND_LINE_TOOLS_VERSION: 7583922
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+      
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      
+      - name: Get SDK versions
+        id: get-sdk-version
+        run: |
+          TARGET_SDK_VERSION=$(grep 'targetSdk' Umweltzone/build.gradle | grep -oE '[0-9]+')
+          BUILD_TOOLS_VERSION=$(grep 'buildToolsVersion' Umweltzone/build.gradle | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          echo "targetSdkVersion=$TARGET_SDK_VERSION" >> $GITHUB_OUTPUT
+          echo "buildToolsVersion=$BUILD_TOOLS_VERSION" >> $GITHUB_OUTPUT
+      
+      - name: Install Android SDK components
+        run: |
+          sdkmanager "platform-tools" "build-tools;${{ steps.get-sdk-version.outputs.buildToolsVersion }}" "platforms;android-${{ steps.get-sdk-version.outputs.targetSdkVersion }}"
+      
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+      
+      - name: Increase Gradle memory
+        run: echo "org.gradle.jvmargs=-Xmx2048m -Xms512m -XX:MaxMetaspaceSize=768m" >> ../gradle.properties
+      
+      - name: Run tests and build
+        run: ./gradlew clean testDebug assembleDebug -PdisablePreDex
