@@ -104,6 +104,7 @@
     <string name="appinfo_references_libraries_content">
         Las siguientes librerías de software son usadas en esta aplicación.
     </string>
+    <string name="appinfo_view_libraries_button">Ver librerías</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Código fuente</string>

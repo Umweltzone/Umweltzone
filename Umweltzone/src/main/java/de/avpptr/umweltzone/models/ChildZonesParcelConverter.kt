@@ -17,7 +17,9 @@
 
 package de.avpptr.umweltzone.models
 
+import android.os.Build
 import android.os.Parcel
+import android.os.Parcelable
 
 import org.parceler.Parcels
 import org.parceler.converter.ArrayListParcelConverter
@@ -29,7 +31,16 @@ class ChildZonesParcelConverter : ArrayListParcelConverter<ChildZone>() {
     }
 
     override fun itemFromParcel(parcel: Parcel): ChildZone = Parcels.unwrap(
-            parcel.readParcelable(ChildZone::class.java.classLoader))
+            readParcelableCompat(parcel, ChildZone::class.java.classLoader))
+
+    @Suppress("DEPRECATION", "UNCHECKED_CAST")
+    private fun <T : Parcelable> readParcelableCompat(parcel: Parcel, classLoader: ClassLoader?): T? {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            parcel.readParcelable(classLoader, Parcelable::class.java) as T?
+        } else {
+            parcel.readParcelable(classLoader)
+        }
+    }
 
     companion object {
         private const val NO_FLAGS = 0

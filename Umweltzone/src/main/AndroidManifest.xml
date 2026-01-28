@@ -67,6 +67,9 @@
             android:name=".about.AboutActivity"
             android:label="@string/about_activity_title" />
         <activity
+            android:name=".about.LibrariesActivity"
+            android:label="@string/appinfo_references_libraries_title" />
+        <activity
             android:name=".faqs.FaqActivity"
             android:label="@string/faq_activity_title" />
         <activity

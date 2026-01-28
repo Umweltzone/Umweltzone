@@ -20,8 +20,8 @@
 package de.avpptr.umweltzone.utils
 
 import android.app.Activity
+import android.os.Build
 import android.util.DisplayMetrics
-import androidx.core.content.ContextCompat
 
 import com.google.android.gms.maps.CameraUpdate
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -30,13 +30,23 @@ import com.google.android.gms.maps.model.LatLngBounds
 private const val PADDING = 50
 
 fun getCameraUpdate(activity: Activity, latLngBounds: LatLngBounds): CameraUpdate {
-    val displayMetrics = DisplayMetrics()
-    ContextCompat.getDisplayOrDefault(activity).getMetrics(displayMetrics)
-    val height = displayMetrics.heightPixels
-    val width = displayMetrics.widthPixels
+    val (width, height) = getDisplaySize(activity)
     var padding = PADDING
     if (width > height) {
         padding *= 2
     }
     return CameraUpdateFactory.newLatLngBounds(latLngBounds, width, height, padding)
+}
+
+@Suppress("DEPRECATION")
+private fun getDisplaySize(activity: Activity): Pair<Int, Int> {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        val windowMetrics = activity.windowManager.currentWindowMetrics
+        val bounds = windowMetrics.bounds
+        Pair(bounds.width(), bounds.height())
+    } else {
+        val displayMetrics = DisplayMetrics()
+        activity.windowManager.defaultDisplay.getMetrics(displayMetrics)
+        Pair(displayMetrics.widthPixels, displayMetrics.heightPixels)
+    }
 }

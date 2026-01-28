@@ -102,6 +102,7 @@
     <string name="appinfo_references_libraries_content">
         W aplikacji używane są następujące biblioteki oprogramowania.
     </string>
+    <string name="appinfo_view_libraries_button">Zobacz biblioteki</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Kod źródłowy</string>
