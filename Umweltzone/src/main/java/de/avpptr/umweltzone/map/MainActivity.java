@@ -68,23 +68,26 @@ public class MainActivity extends BaseActivity {
         return true;
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O) {
             setShowWhenLocked(true);
         } else {
+            // FLAG_SHOW_WHEN_LOCKED is deprecated but required for API <= 26
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         }
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void startActivityForResult(Intent intent, int requestCode) {
+        // Overridden to catch NullPointerException from Google Play Services
+        // http://stackoverflow.com/a/20905954/356895
         try {
             super.startActivityForResult(intent, requestCode);
         } catch (NullPointerException e) {
-            // Avoid crash when Google Play Services are not present
-            // http://stackoverflow.com/a/20905954/356895
             e.printStackTrace();
         }
     }

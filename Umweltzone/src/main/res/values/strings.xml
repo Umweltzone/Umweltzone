@@ -125,72 +125,7 @@
     <string name="appinfo_references_libraries_content">
         The following software libraries are used within the application.
     </string>
-    <string name="appinfo_references_name_android_testing_support_library" translatable="false">
-        Android Testing Support Library
-    </string>
-    <string name="appinfo_references_url_android_testing_support_library" translatable="false">
-        https://android.github.io/android-test/
-    </string>
-    <string name="appinfo_references_name_google_play_services" translatable="false">
-        Google Play Services
-    </string>
-    <string name="appinfo_references_url_google_play_services" translatable="false">
-        https://developers.google.com/android/guides/overview
-    </string>
-    <string name="appinfo_references_name_google_androidx_library" translatable="false">
-        Google AndroidX library
-    </string>
-    <string name="appinfo_references_url_google_androidx_library" translatable="false">
-        https://developer.android.com/jetpack/androidx
-    </string>
-    <string name="appinfo_references_name_jackson" translatable="false">
-        Jackson JSON processor
-    </string>
-    <string name="appinfo_references_url_jackson" translatable="false">
-        https://github.com/FasterXML/jackson
-    </string>
-    <string name="appinfo_references_name_parceler" translatable="false">
-        Parceler
-    </string>
-    <string name="appinfo_references_url_parceler" translatable="false">
-        http://parceler.org
-    </string>
-    <string name="appinfo_references_name_road_signs" translatable="false">
-        Road signs
-    </string>
-    <string name="appinfo_references_url_road_signs" translatable="false">
-        https://github.com/Umweltzone/roadsigns
-    </string>
-    <string name="appinfo_references_name_snack_engage" translatable="false">
-        SnackEngage
-    </string>
-    <string name="appinfo_references_url_snack_engage" translatable="false">
-        https://github.com/ligi/SnackEngage
-    </string>
-    <string name="appinfo_references_name_trace_droid" translatable="false">
-        TraceDroid
-    </string>
-    <string name="appinfo_references_url_trace_droid" translatable="false">
-        https://github.com/ligi/tracedroid
-    </string>
-    <string name="appinfo_references_name_better_link_movement_method" translatable="false">
-        BetterLinkMovementMethod
-    </string>
-    <string name="appinfo_references_url_better_link_movement_method" translatable="false">
-        https://github.com/saket/Better-Link-Movement-Method
-    </string>
-    <string name="appinfo_references_name_ckchangelog" translatable="false">
-        ckChangeLog
-    </string>
-    <string name="appinfo_references_url_ckchangelog" translatable="false">
-        https://github.com/cketti/ckChangeLog
-    </string>
-    <string name="appinfo_references_name_typed_preferences" translatable="false">
-        Typed Preferences
-    </string>
-    <string name="appinfo_references_url_typed_preferences" translatable="false">
-        https://github.com/johnjohndoe/TypedPreferences
-    </string>
+    <string name="appinfo_view_libraries_button">View libraries</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Source code</string>

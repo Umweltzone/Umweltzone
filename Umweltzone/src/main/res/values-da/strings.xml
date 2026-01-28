@@ -86,6 +86,7 @@
     <string name="appinfo_references_libraries_content">
         F&#248;lgende software biblioteker bliver brugt i denne applikation.
     </string>
+    <string name="appinfo_view_libraries_button">Vis biblioteker</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Kilde kode</string>

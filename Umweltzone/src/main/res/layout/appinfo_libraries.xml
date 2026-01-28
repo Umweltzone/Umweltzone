@@ -31,59 +31,12 @@
         style="@style/AppInfo.TextContent"
         android:text="@string/appinfo_references_libraries_content" />
 
-    <TextView
-        android:id="@+id/app_info_better_link_movement_method"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_better_link_movement_method" />
-
-    <TextView
-        android:id="@+id/app_info_ckchangelog"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_ckchangelog" />
-
-    <TextView
-        android:id="@+id/app_info_android_testing_support_library"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_android_testing_support_library" />
-
-    <TextView
-        android:id="@+id/app_info_google_androidx_library"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_google_androidx_library" />
-
-    <TextView
-        android:id="@+id/app_info_google_play_services"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_google_play_services" />
-
-    <TextView
-        android:id="@+id/app_info_jackson"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_jackson" />
-
-    <TextView
-        android:id="@+id/app_info_parceler"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_parceler" />
-
-    <TextView
-        android:id="@+id/app_info_road_signs"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_road_signs" />
-
-    <TextView
-        android:id="@+id/app_info_snack_engage"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_snack_engage" />
-
-    <TextView
-        android:id="@+id/app_info_trace_droid"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_trace_droid" />
-
-    <TextView
-        android:id="@+id/app_info_typed_preferences"
-        style="@style/AppInfo.WebLink"
-        tools:text="@string/appinfo_references_url_typed_preferences" />
+    <Button
+        android:id="@+id/app_info_view_libraries_button"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_spacer"
+        android:text="@string/appinfo_view_libraries_button" />
 
 </merge>

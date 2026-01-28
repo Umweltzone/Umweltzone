@@ -108,6 +108,7 @@
     <string name="appinfo_references_libraries_content">
         De volgende software-bibliotheken worden binnen de toepassing gebruikt.
     </string>
+    <string name="appinfo_view_libraries_button">Bekijk bibliotheken</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Broncode</string>

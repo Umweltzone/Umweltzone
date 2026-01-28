@@ -114,6 +114,7 @@
         Im Folgenden wird auf Software-Projekte verwiesen, die in
         der Anwendung genutzt werden.
     </string>
+    <string name="appinfo_view_libraries_button">Bibliotheken anzeigen</string>
 
     <!-- AboutActivity / Sourcecode -->
     <string name="appinfo_sourcecode_title">Quellcode</string>

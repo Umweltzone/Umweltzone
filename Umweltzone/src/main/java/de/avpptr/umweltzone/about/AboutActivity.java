@@ -54,39 +54,11 @@ public class AboutActivity extends BaseActivity {
         ViewHelper.setupTextViewExtended(this, R.id.app_info_wikimedia_commons,
                 R.string.appinfo_references_name_wikimedia_commons,
                 R.string.appinfo_references_url_wikimedia_commons);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_android_testing_support_library,
-                R.string.appinfo_references_name_android_testing_support_library,
-                R.string.appinfo_references_url_android_testing_support_library);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_google_play_services,
-                R.string.appinfo_references_name_google_play_services,
-                R.string.appinfo_references_url_google_play_services);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_google_androidx_library,
-                R.string.appinfo_references_name_google_androidx_library,
-                R.string.appinfo_references_url_google_androidx_library);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_jackson,
-                R.string.appinfo_references_name_jackson,
-                R.string.appinfo_references_url_jackson);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_parceler,
-                R.string.appinfo_references_name_parceler,
-                R.string.appinfo_references_url_parceler);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_road_signs,
-                R.string.appinfo_references_name_road_signs,
-                R.string.appinfo_references_url_road_signs);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_snack_engage,
-                R.string.appinfo_references_name_snack_engage,
-                R.string.appinfo_references_url_snack_engage);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_trace_droid,
-                R.string.appinfo_references_name_trace_droid,
-                R.string.appinfo_references_url_trace_droid);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_better_link_movement_method,
-                R.string.appinfo_references_name_better_link_movement_method,
-                R.string.appinfo_references_url_better_link_movement_method);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_ckchangelog,
-                R.string.appinfo_references_name_ckchangelog,
-                R.string.appinfo_references_url_ckchangelog);
-        ViewHelper.setupTextViewExtended(this, R.id.app_info_typed_preferences,
-                R.string.appinfo_references_name_typed_preferences,
-                R.string.appinfo_references_url_typed_preferences);
+
+        findViewById(R.id.app_info_view_libraries_button).setOnClickListener(v ->
+                LibrariesActivity.Companion.start(this)
+        );
+
         ViewHelper.setupTextViewExtended(this, R.id.app_info_gpl,
                 R.string.appinfo_license_url_title_gpl,
                 R.string.appinfo_license_url_gpl);

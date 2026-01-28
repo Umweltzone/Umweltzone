@@ -19,6 +19,7 @@ package de.avpptr.umweltzone.map;
 
 import android.Manifest;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
@@ -27,14 +28,13 @@ import static androidx.core.content.ContextCompat.checkSelfPermission;
 
 class MyLocationPermission {
 
-    static final int ACCESS_LOCATION_REQUEST_CODE = 1337;
-
     private final Fragment fragment;
+    private final ActivityResultLauncher<String> permissionLauncher;
     private final static String ACCESS_COARSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
-    private final String[] permissions = {ACCESS_COARSE_LOCATION};
 
-    MyLocationPermission(@NonNull Fragment fragment) {
+    MyLocationPermission(@NonNull Fragment fragment, @NonNull ActivityResultLauncher<String> permissionLauncher) {
         this.fragment = fragment;
+        this.permissionLauncher = permissionLauncher;
     }
 
     boolean isGranted() {
@@ -42,15 +42,11 @@ class MyLocationPermission {
     }
 
     void request() {
-        fragment.requestPermissions(permissions, ACCESS_LOCATION_REQUEST_CODE);
+        permissionLauncher.launch(ACCESS_COARSE_LOCATION);
     }
 
     boolean canShowRationale() {
         return fragment.shouldShowRequestPermissionRationale(ACCESS_COARSE_LOCATION);
-    }
-
-    boolean isGranted(@NonNull int[] grantResults) {
-        return grantResults.length > 0 && grantResults[0] == PERMISSION_GRANTED;
     }
 
 }

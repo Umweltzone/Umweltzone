@@ -71,6 +71,7 @@
     <string name="appinfo_references_texts_content">Les références sont données lorsqu&#8217;un text est tiré d&#8217;une publication externe.</string>
     <string name="appinfo_references_libraries_title">Bibliothèques</string>
     <string name="appinfo_references_libraries_content">Les bibliothèques d&#8217;application suivantes ont été utilisées dans cette application</string>
+    <string name="appinfo_view_libraries_button">Voir les bibliothèques</string>
     <string name="appinfo_sourcecode_title">Code source</string>
     <string name="appinfo_sourcecode_content">Le code source de cette application est disponible en ligne.</string>
     <string name="appinfo_sourcecode_url_title">Code source de l&#8217;application</string>

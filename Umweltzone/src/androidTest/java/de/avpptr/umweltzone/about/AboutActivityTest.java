@@ -73,43 +73,11 @@ public class AboutActivityTest {
     }
 
     @Test
-    public void renderLibraries() {
-        onView(withId(R.id.app_info_android_testing_support_library))
+    public void renderViewLibrariesButton() {
+        onView(withId(R.id.app_info_view_libraries_button))
                 .perform(scrollTo())
                 .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_android_testing_support_library)));
-        onView(withId(R.id.app_info_ckchangelog))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_ckchangelog)));
-        onView(withId(R.id.app_info_google_androidx_library))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_google_androidx_library)));
-        onView(withId(R.id.app_info_google_play_services))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_google_play_services)));
-        onView(withId(R.id.app_info_jackson))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_jackson)));
-        onView(withId(R.id.app_info_parceler))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_parceler)));
-        onView(withId(R.id.app_info_snack_engage))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_snack_engage)));
-        onView(withId(R.id.app_info_trace_droid))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_trace_droid)));
-        onView(withId(R.id.app_info_typed_preferences))
-                .perform(scrollTo())
-                .check(matches(isDisplayed()))
-                .check(matches(withText(R.string.appinfo_references_name_typed_preferences)));
+                .check(matches(withText(R.string.appinfo_view_libraries_button)));
     }
 
     @Test

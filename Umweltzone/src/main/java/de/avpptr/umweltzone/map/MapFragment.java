@@ -27,6 +27,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -87,6 +89,21 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private MyLocationPermission myLocationPermission;
 
+    private final ActivityResultLauncher<String> permissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+                    setMyLocationActivationViewVisibility(false);
+                    setMyLocationViewVisibility(true);
+                } else {
+                    if (myLocationPermission.canShowRationale()) {
+                        setMyLocationActivationViewVisibility(true);
+                    } else {
+                        setMyLocationActivationViewVisibility(false);
+                        mPreferencesHelper.storeMyLocationPermissionIsPermanentlyDeclined(true);
+                    }
+                }
+            });
+
     public MapFragment() {
         this.mOnCameraIdleListener = new OnCameraIdleListener();
     }
@@ -99,7 +116,7 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-        myLocationPermission = new MyLocationPermission(this);
+        myLocationPermission = new MyLocationPermission(this, permissionLauncher);
     }
 
     @Override
@@ -270,28 +287,6 @@ public class MapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private void requestMyLocationActivation() {
         myLocationPermission.request();
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case MyLocationPermission.ACCESS_LOCATION_REQUEST_CODE: {
-                if (myLocationPermission.isGranted(grantResults)) {
-                    setMyLocationActivationViewVisibility(false);
-                    setMyLocationViewVisibility(true);
-                } else {
-                    if (myLocationPermission.canShowRationale()) {
-                        setMyLocationActivationViewVisibility(true);
-                    } else {
-                        setMyLocationActivationViewVisibility(false);
-                        mPreferencesHelper.storeMyLocationPermissionIsPermanentlyDeclined(true);
-                    }
-                }
-                break;
-            }
-            default:
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
     }
 
     private void setMyLocationActivationViewVisibility(boolean isVisible) {
